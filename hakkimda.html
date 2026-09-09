@@ -3,33 +3,73 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Ali Gazal projesinin amacı.">
+  <meta name="description" content="Ali Gazal projesinin amacı: fikirleri gerçek hayatta deneyip sonuçlarını açıkça paylaşmak.">
+  <meta name="theme-color" content="#0b0b0a">
   <title>Hakkında | Ali Gazal</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#icerik">İçeriğe geç</a>
+
   <header class="site-header">
-    <a class="brand" href="index.html">Ali Gazal</a>
-    <nav>
-      <a href="index.html">Ana Sayfa</a>
-      <a href="rehberler.html">Rehberler</a>
-      <a href="hakkimda.html">Hakkında</a>
-    </nav>
+    <div class="site-shell header-inner">
+      <a class="brand" href="index.html" aria-label="Ali Gazal ana sayfa">
+        <span class="brand-mark" aria-hidden="true">AG</span>
+        <span>Ali Gazal</span>
+      </a>
+      <nav aria-label="Ana menü">
+        <a href="index.html">Ana sayfa</a>
+        <a href="rehberler.html">Projeler</a>
+        <a href="hakkimda.html" aria-current="page">Hakkında</a>
+      </nav>
+    </div>
   </header>
 
-  <main class="page narrow">
-    <p class="eyebrow">PROJENİN AMACI</p>
-    <h1>Sadece anlatmak değil, denemek.</h1>
-    <p class="lead">
-      Buradaki amaç; kitaplardan, fikirlerden ve gerçek hayat deneylerinden
-      işe yarayan şeyleri bulmak, uygulamak ve sonuçları açıkça paylaşmak.
-    </p>
-    <p>
-      Videolar hikâyeyi ve deneyi anlatır. Bu site ise izleyenin aynı fikri
-      kendi hayatında uygulayabilmesi için ücretsiz rehberleri ve araçları toplar.
-    </p>
+  <main id="icerik" class="page site-shell narrow-page">
+    <header class="page-intro">
+      <p class="eyebrow">PROJENİN AMACI</p>
+      <h1>Sadece anlatmak değil, gerçekten denemek.</h1>
+      <p class="lead">
+        Ali Gazal kanalı; kitaplardaki ve kişisel gelişimdeki fikirlerin kâğıt üzerinde
+        güzel görünmesinden çok, gerçek hayatta ne kadar işe yaradığını araştıran
+        bir YouTube projesidir.
+      </p>
+    </header>
+
+    <section class="prose-section" aria-labelledby="neden">
+      <p class="eyebrow">NEDEN?</p>
+      <h2 id="neden">Bilmekle uygulamak aynı şey değil.</h2>
+      <p>
+        Bir kitap okumak veya güçlü bir fikir duymak kolay. Asıl mesele, o fikri
+        yorgunken, çalışırken, hata yaparken ve günlük hayat devam ederken
+        uygulayabilmek. Bu projeler tam olarak o aradaki mesafeyi inceliyor.
+      </p>
+    </section>
+
+    <section class="principles-panel" aria-labelledby="ilkeler">
+      <p class="eyebrow">YAYIN İLKELERİ</p>
+      <h2 id="ilkeler">Sonuç neyse, hikâye o.</h2>
+      <ul class="plain-list">
+        <li><span>01</span> Her proje tek ve anlaşılır bir soruyla başlar.</li>
+        <li><span>02</span> İşe yaramayan ve yarım kalan taraflar saklanmaz.</li>
+        <li><span>03</span> Video deneyin hikâyesini, site ise uygulanabilir rehberi taşır.</li>
+      </ul>
+    </section>
+
+    <section class="closing-panel">
+      <div>
+        <p class="eyebrow">İLK DOSYA</p>
+        <h2>Marcus Aurelius deneyiyle başla.</h2>
+      </div>
+      <a class="button primary" href="marcus-aurelius.html">Projeyi incele</a>
+    </section>
   </main>
 
-  <footer><p>© Ali Gazal.</p></footer>
+  <footer class="site-footer">
+    <div class="site-shell footer-inner">
+      <p>© 2026 Ali Gazal</p>
+      <a href="https://www.youtube.com/@aligazaltr" target="_blank" rel="noopener noreferrer">YouTube <span aria-hidden="true">↗</span></a>
+    </div>
+  </footer>
 </body>
 </html>

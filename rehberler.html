@@ -3,34 +3,69 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Ali Gazal ücretsiz uygulama rehberleri.">
-  <title>Rehberler | Ali Gazal</title>
+  <meta name="description" content="Ali Gazal'ın gerçek hayatta test ettiği fikirler, proje notları ve ücretsiz uygulama rehberleri.">
+  <meta name="theme-color" content="#0b0b0a">
+  <title>Projeler | Ali Gazal</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#icerik">İçeriğe geç</a>
+
   <header class="site-header">
-    <a class="brand" href="index.html">Ali Gazal</a>
-    <nav>
-      <a href="index.html">Ana Sayfa</a>
-      <a href="rehberler.html">Rehberler</a>
-      <a href="hakkimda.html">Hakkında</a>
-    </nav>
+    <div class="site-shell header-inner">
+      <a class="brand" href="index.html" aria-label="Ali Gazal ana sayfa">
+        <span class="brand-mark" aria-hidden="true">AG</span>
+        <span>Ali Gazal</span>
+      </a>
+      <nav aria-label="Ana menü">
+        <a href="index.html">Ana sayfa</a>
+        <a href="rehberler.html" aria-current="page">Projeler</a>
+        <a href="hakkimda.html">Hakkında</a>
+      </nav>
+    </div>
   </header>
 
-  <main class="page">
-    <p class="eyebrow">ÜCRETSİZ KAYNAKLAR</p>
-    <h1>Rehberler</h1>
-    <p class="lead">Videolardaki fikirleri kendi hayatında uygulamak için hazırlanmış araçlar.</p>
+  <main id="icerik" class="page site-shell">
+    <header class="page-intro">
+      <p class="eyebrow">DENEY ARŞİVİ</p>
+      <h1>Projeler ve rehberler</h1>
+      <p class="lead">
+        Her dosyada tek bir soru, gerçek uygulama notları ve aynı fikri
+        kendin denemen için ücretsiz bir yol haritası var.
+      </p>
+    </header>
 
-    <div class="card featured">
-      <div>
-        <h2>Marcus Aurelius — 7 Günlük Uygulama Rehberi</h2>
-        <p>7 ilke, günlük uygulama soruları ve takip sistemi.</p>
+    <section aria-labelledby="aktif-projeler">
+      <div class="section-heading split-heading compact-heading">
+        <h2 id="aktif-projeler">Aktif proje</h2>
+        <span class="archive-count">1 dosya</span>
       </div>
-      <span class="badge">Hazırlanıyor</span>
-    </div>
+
+      <article class="project-card archive-card">
+        <div class="project-index" aria-hidden="true">01</div>
+        <div class="project-copy">
+          <div class="project-meta">
+            <span>Kitap deneyi</span>
+            <span>Marcus Aurelius</span>
+          </div>
+          <h3>Marcus Aurelius’un ilkeleri gerçek hayatta işe yarıyor mu?</h3>
+          <p>
+            <em>Kendime Düşünceler</em> kitabından çıkan fikirleri gündelik hayatta
+            sınayan ilk proje. Sayfada doğrulanmış notlar ve kullanabileceğin
+            7 günlük deney sistemi bulunuyor.
+          </p>
+          <a class="card-link" href="marcus-aurelius.html">Proje ve rehberi incele <span aria-hidden="true">→</span></a>
+        </div>
+        <span class="status project-status">Hazırlanıyor</span>
+      </article>
+    </section>
   </main>
 
-  <footer><p>© Ali Gazal.</p></footer>
+  <footer class="site-footer">
+    <div class="site-shell footer-inner">
+      <p>© 2026 Ali Gazal</p>
+      <a href="https://www.youtube.com/@aligazaltr" target="_blank" rel="noopener noreferrer">YouTube <span aria-hidden="true">↗</span></a>
+    </div>
+  </footer>
 </body>
 </html>
