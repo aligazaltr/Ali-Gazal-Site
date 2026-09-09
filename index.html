@@ -3,69 +3,114 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Ali Gazal — fikirleri gerçek hayatta test ediyorum.">
+  <meta name="description" content="Ali Gazal; kitaplardaki, felsefedeki ve kişisel gelişimdeki fikirleri gerçek hayatta test ediyor, sonuçları ve ücretsiz rehberleri paylaşıyor.">
+  <meta name="theme-color" content="#0b0b0a">
   <title>Ali Gazal | Fikirleri gerçek hayatta test ediyorum</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <a class="skip-link" href="#icerik">İçeriğe geç</a>
+
   <header class="site-header">
-    <a class="brand" href="index.html">Ali Gazal</a>
-    <nav>
-      <a href="index.html">Ana Sayfa</a>
-      <a href="rehberler.html">Rehberler</a>
-      <a href="hakkimda.html">Hakkında</a>
-    </nav>
+    <div class="site-shell header-inner">
+      <a class="brand" href="index.html" aria-label="Ali Gazal ana sayfa">
+        <span class="brand-mark" aria-hidden="true">AG</span>
+        <span>Ali Gazal</span>
+      </a>
+      <nav aria-label="Ana menü">
+        <a href="index.html" aria-current="page">Ana sayfa</a>
+        <a href="rehberler.html">Projeler</a>
+        <a href="hakkimda.html">Hakkında</a>
+      </nav>
+    </div>
   </header>
 
-  <main>
-    <section class="hero">
-      <p class="eyebrow">FİKİR → DENEY → SONUÇ</p>
-      <h1>Fikirleri gerçek hayatta test ediyorum.</h1>
-      <p class="lead">
-        Kitaplardan, alışkanlıklardan ve hayat deneylerinden çıkan fikirleri
-        sadece anlatmıyorum; uygulayıp ne işe yaradığını gösteriyorum.
-      </p>
-      <div class="actions">
-        <a class="button primary" href="rehberler.html">Ücretsiz rehberlere bak</a>
-        <a class="button secondary" href="#" aria-disabled="true">YouTube yakında</a>
-      </div>
-    </section>
-
-    <section class="section">
-      <p class="eyebrow">İLK DENEY</p>
-      <div class="card featured">
-        <div>
-          <h2>Marcus Aurelius — 7 İlkeyi Gerçek Hayatta Deniyorum</h2>
-          <p>
-            Kendime Düşünceler’den seçilen 7 güçlü ilke, gerçek hayatta uygulama
-            notları ve 7 günlük ücretsiz takip sistemi.
-          </p>
+  <main id="icerik">
+    <section class="hero site-shell">
+      <div class="hero-copy">
+        <p class="eyebrow">KİTAPLAR · FELSEFE · GERÇEK DENEYLER</p>
+        <h1>Fikirleri sadece anlatmıyorum. <span class="accent">Hayatta test ediyorum.</span></h1>
+        <p class="lead">
+          Bir fikri seçiyorum, günlük hayatımda uyguluyorum ve işe yarayanla
+          yaramayanı olduğu gibi paylaşıyorum.
+        </p>
+        <div class="actions">
+          <a class="button primary" href="marcus-aurelius.html">İlk projeyi incele</a>
+          <a class="button secondary" href="https://www.youtube.com/@aligazaltr" target="_blank" rel="noopener noreferrer">YouTube kanalına git <span aria-hidden="true">↗</span></a>
         </div>
-        <span class="badge">Hazırlanıyor</span>
+      </div>
+
+      <aside class="field-note" aria-label="İlk proje özeti">
+        <div class="note-topline">
+          <span>DENEY DOSYASI</span>
+          <span>001</span>
+        </div>
+        <p class="note-label">İLK PROJE</p>
+        <h2>Marcus Aurelius’un ilkeleri gündelik hayatta işe yarıyor mu?</h2>
+        <div class="note-meta">
+          <span>Kitap deneyi</span>
+          <span class="status">Hazırlanıyor</span>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section site-shell" aria-labelledby="sistem-baslik">
+      <div class="section-heading">
+        <p class="eyebrow">YÖNTEM</p>
+        <h2 id="sistem-baslik">Her proje aynı üç sorudan geçiyor.</h2>
+      </div>
+      <div class="process-grid">
+        <article class="process-card">
+          <span class="step-number">01</span>
+          <h3>Fikir ne söylüyor?</h3>
+          <p>İddiayı kaynağından anlayıp tek ve ölçülebilir bir soruya indiriyorum.</p>
+        </article>
+        <article class="process-card">
+          <span class="step-number">02</span>
+          <h3>Gerçekte ne oluyor?</h3>
+          <p>Fikri belirli bir süre uyguluyor, zorlandığım anları ve değişimi kaydediyorum.</p>
+        </article>
+        <article class="process-card">
+          <span class="step-number">03</span>
+          <h3>Gerçekten işe yaradı mı?</h3>
+          <p>Abartmadan sonucu, eksikleri ve yeniden denesem neyi değiştireceğimi paylaşıyorum.</p>
+        </article>
       </div>
     </section>
 
-    <section class="section">
-      <p class="eyebrow">BU SİTE NE İÇİN?</p>
-      <div class="grid">
-        <article class="card">
-          <h3>İzle</h3>
-          <p>Videoda fikrin hikâyesini, deneyi ve sonucu gör.</p>
-        </article>
-        <article class="card">
-          <h3>Uygula</h3>
-          <p>Ücretsiz rehber ve çalışma sistemleriyle kendin dene.</p>
-        </article>
-        <article class="card">
-          <h3>Takip Et</h3>
-          <p>Sonuçlarını kaydet ve hangi fikrin gerçekten işe yaradığını gör.</p>
-        </article>
+    <section class="section site-shell" aria-labelledby="proje-baslik">
+      <div class="section-heading split-heading">
+        <div>
+          <p class="eyebrow">ŞİMDİKİ PROJE</p>
+          <h2 id="proje-baslik">İlk deney dosyası açıldı.</h2>
+        </div>
+        <a class="text-link" href="rehberler.html">Tüm projeler <span aria-hidden="true">→</span></a>
       </div>
+
+      <article class="project-card">
+        <div class="project-index" aria-hidden="true">01</div>
+        <div class="project-copy">
+          <div class="project-meta">
+            <span>Marcus Aurelius</span>
+            <span>Kitap deneyi</span>
+          </div>
+          <h3>İlkeleri okumak kolay. Peki onları yaşamak?</h3>
+          <p>
+            <em>Kendime Düşünceler</em> içinden seçilen fikirleri günlük hayatın
+            içinde sınayan deneyin amacı, doğrulanmış notları ve uygulama sistemi.
+          </p>
+          <a class="card-link" href="marcus-aurelius.html">Proje dosyasını aç <span aria-hidden="true">→</span></a>
+        </div>
+        <span class="status project-status">Hazırlanıyor</span>
+      </article>
     </section>
   </main>
 
-  <footer>
-    <p>© Ali Gazal. Bu site geliştirme aşamasındadır.</p>
+  <footer class="site-footer">
+    <div class="site-shell footer-inner">
+      <p>© 2026 Ali Gazal</p>
+      <a href="https://www.youtube.com/@aligazaltr" target="_blank" rel="noopener noreferrer">YouTube <span aria-hidden="true">↗</span></a>
+    </div>
   </footer>
 </body>
 </html>
