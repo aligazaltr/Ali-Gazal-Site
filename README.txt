@@ -6,7 +6,8 @@ YouTube kanalındaki gerçek hayat deneylerini destekleyen ücretsiz proje ve re
 Sayfalar:
 - index.html              Kanalın ana sayfası
 - rehberler.html          Proje ve rehber arşivi
-- marcus-aurelius.html    İlk proje dosyası ve 7 günlük takip şablonu
+- machiavelli.html        Aktif Machiavelli / Prens deney dosyası
+- marcus-aurelius.html    Eski proje adresi için güvenli yönlendirme
 - hakkimda.html           Kanalın amacı ve yayın ilkeleri
 - styles.css              Ortak görünüm ve mobil düzen
 
@@ -26,5 +27,6 @@ Bilinçli olarak eklenmeyenler:
 Yerelde açmak için index.html dosyasını tarayıcıda açmak yeterlidir.
 
 İçerik ilkesi:
-Kesinleşmemiş deney sonuçları yayımlanmış gibi gösterilmez. Marcus Aurelius
-sayfasındaki tam ilke listesi ve sonuç bölümü, gerçek kayıtlar netleşince eklenir.
+Kesinleşmemiş deney sonuçları yayımlanmış gibi gösterilmez. Machiavelli
+sayfasındaki üç davranış kuralı, sonuç ve video alanları yalnız doğrulanmış
+proje devri geldikçe güncellenir.
