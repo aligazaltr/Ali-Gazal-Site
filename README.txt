@@ -11,6 +11,7 @@ Sayfalar:
 - hakkimda.html           Kanalın amacı ve yayın ilkeleri
 - styles.css              Ortak görünüm ve mobil düzen
 - theme.js                Sistem temasını izler; elle seçimi yerel olarak saklar
+- project.js              Machiavelli paylaşımı; yerel menü veya bağlantı kopyalama
 - favicon.svg             Var olan AG işaretinin küçük sekme simgesi
 - 404.html                Bilinmeyen adresler için dönüş sayfası
 
@@ -43,6 +44,14 @@ Site Handoff Card (Machiavelli sayfasında güncellenecek üç alan):
 2. Sonuç: doğrulanmış kayıt sayısı, fırsat yok/kaçan günler, yayımlanabilir
    kanıt, başarısızlık, belirsizlik ve yorum sınırı.
 3. Video: nihai başlık, tam YouTube URL'si, yayın tarihi ve onaylı kapak.
+
+Onaylı kapak gelince index.html ve rehberler.html dosyalarındaki ilgili
+.project-card öğesinin ilk çocuğu olarak gerçek görseli ekle:
+<img class="project-cover" src="onayli-kapak.webp" width="1280" height="720"
+     alt="Gerçek kapağı betimleyen kısa metin" loading="lazy">
+16:9 görüntü stili hazırdır; kapak ve gerçek video URL'si gelmeden boş alan,
+oynatıcı veya video düğmesi gösterilmez. Video bağlantısı machiavelli.html
+dosyasındaki video durumuna dış bağlantı olarak eklenir.
 
 Kesin canlı alan adı bilinmeden canonical, sitemap veya sahte paylaşım
 görseli eklenmez. Sayfalarda başlık/açıklama ve metin tabanlı Open Graph var.

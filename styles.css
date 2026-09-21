@@ -32,7 +32,7 @@
   color-scheme: light;
   --bg: #f5f0e7;
   --bg-raised: #eee8dd;
-  --surface: #fffcf6;
+  --surface: #f3ede3;
   --surface-strong: #f6efe3;
   --text: #242019;
   --muted: #625d54;
@@ -60,7 +60,7 @@
     color-scheme: light;
     --bg: #f5f0e7;
     --bg-raised: #eee8dd;
-    --surface: #fffcf6;
+    --surface: #f3ede3;
     --surface-strong: #f6efe3;
     --text: #242019;
     --muted: #625d54;
@@ -558,6 +558,16 @@ nav a[aria-current="page"]::after {
   background: linear-gradient(120deg, var(--card-wash), transparent 38%), var(--surface);
 }
 
+/* An approved 16:9 cover can be placed first in a project card later. */
+.project-cover {
+  grid-column: 1 / -1;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+  object-fit: cover;
+  border-radius: var(--radius);
+}
+
 .project-index {
   color: var(--index);
   font-size: clamp(2.6rem, 5vw, 4.2rem);
@@ -693,6 +703,115 @@ nav a[aria-current="page"]::after {
   font-size: 0.9rem;
 }
 
+.breadcrumbs {
+  display: block;
+  margin-bottom: clamp(2rem, 5vw, 3rem);
+}
+
+.breadcrumbs ol {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem 0.65rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.breadcrumbs li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: var(--muted-strong);
+  font-size: 0.9rem;
+}
+
+.breadcrumbs li + li::before {
+  content: "›";
+  color: var(--orange);
+}
+
+.breadcrumbs a {
+  color: var(--muted-strong);
+}
+
+.breadcrumbs [aria-current="page"] {
+  color: var(--text);
+  font-weight: 750;
+}
+
+.page-toc {
+  display: block;
+  margin-bottom: clamp(3rem, 7vw, 5rem);
+  padding: 1rem 1.3rem;
+  border: 1px solid var(--line);
+  background: var(--bg-raised);
+}
+
+.page-toc strong {
+  color: var(--text);
+}
+
+.page-toc ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 1.4rem;
+  margin: 0.4rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.page-toc a {
+  color: var(--muted-strong);
+  text-decoration: underline;
+  text-decoration-color: var(--orange);
+  text-underline-offset: 0.2rem;
+}
+
+.page-toc a:hover,
+.breadcrumbs a:hover {
+  color: var(--orange);
+}
+
+.share-tools {
+  margin-bottom: clamp(3rem, 7vw, 5rem);
+}
+
+.share-tools button {
+  cursor: pointer;
+}
+
+.share-tools [role="status"]:empty,
+.share-tools [hidden] {
+  display: none;
+}
+
+.share-tools [role="status"],
+.share-tools [data-share-fallback] {
+  margin: 0.65rem 0 0;
+  color: var(--muted-strong);
+  overflow-wrap: anywhere;
+}
+
+.share-tools [data-share-fallback] a {
+  color: var(--orange);
+}
+
+.back-to-top {
+  min-height: 2.75rem;
+  display: inline-flex;
+  align-items: center;
+  margin-top: 3rem;
+  color: var(--muted-strong);
+  font-weight: 750;
+  text-decoration-color: var(--orange);
+  text-underline-offset: 0.25rem;
+}
+
+.back-to-top:hover {
+  color: var(--orange);
+}
+
 .project-hero {
   display: grid;
   grid-template-columns: minmax(0, 1.7fr) minmax(15rem, 0.65fr);
@@ -777,6 +896,7 @@ nav a[aria-current="page"]::after {
 }
 
 .article-section h2 {
+  scroll-margin-top: 2rem;
   max-width: 16ch;
   margin-bottom: 1.5rem;
   font-size: clamp(2rem, 4.3vw, 3.5rem);

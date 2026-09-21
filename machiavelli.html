@@ -11,6 +11,7 @@
   <meta property="og:description" content="Üç düşünceyi gerçek kararlarda sınayan deney sürüyor. Yöntem açık; sonuç henüz bilinmiyor.">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <script src="theme.js"></script>
+  <script src="project.js" defer></script>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -36,7 +37,13 @@
 
   <main id="icerik">
     <article class="project-page site-shell">
-      <a class="back-link" href="rehberler.html"><span aria-hidden="true">←</span> Tüm projeler</a>
+      <nav class="breadcrumbs" aria-label="Sayfa yolu">
+        <ol>
+          <li><a href="index.html">Ana sayfa</a></li>
+          <li><a href="rehberler.html">Projeler</a></li>
+          <li aria-current="page">Machiavelli</li>
+        </ol>
+      </nav>
 
       <header class="project-hero">
         <div class="project-hero-copy">
@@ -73,6 +80,23 @@
           nihai sonuç ve video bağlantısı henüz yok. Kayıtlar gözden geçirildikçe
           yalnızca yayımlanmaya uygun olanlar eklenecek.
         </p>
+      </div>
+
+      <nav class="page-toc" aria-labelledby="sayfa-icindekiler">
+        <strong id="sayfa-icindekiler">Bu sayfada</strong>
+        <ul>
+          <li><a href="#problem">Başlangıç sorunu</a></li>
+          <li><a href="#soru">Deney sorusu</a></li>
+          <li><a href="#kurallar">Kuralların durumu</a></li>
+          <li><a href="#protokol">Deney yöntemi</a></li>
+          <li><a href="#kaynaklar">Yorum sınırları</a></li>
+        </ul>
+      </nav>
+
+      <div class="share-tools">
+        <button class="button secondary" type="button" data-share-project hidden>Bu projeyi paylaş</button>
+        <p role="status" aria-live="polite" data-share-status></p>
+        <p data-share-fallback hidden>Bağlantıyı buradan seçip kopyalayabilirsin: <a data-share-url href="machiavelli.html">Proje bağlantısı</a></p>
       </div>
 
       <div class="article-layout">
@@ -189,6 +213,7 @@
           </div>
         </aside>
       </div>
+      <a class="back-to-top" href="#icerik">↑ Yukarı dön</a>
     </article>
   </main>
 
