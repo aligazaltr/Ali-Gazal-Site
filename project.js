@@ -6,9 +6,9 @@
   const status = document.querySelector('[data-share-status]');
   const fallback = document.querySelector('[data-share-fallback]');
   const link = document.querySelector('[data-share-url]');
-  // Use the actual canonical page path after Cloudflare's HTML redirect.
-  // This also removes tracking parameters and in-page fragments.
-  const url = new URL(window.location.pathname, window.location.href).href;
+  // Previews and URLs with query strings still share the verified live page.
+  const url = document.querySelector('link[rel="canonical"]')?.href
+    || new URL(window.location.pathname, window.location.href).href;
   link.href = url;
   link.textContent = url;
   button.hidden = false;

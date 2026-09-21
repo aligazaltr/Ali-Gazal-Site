@@ -55,8 +55,11 @@ Onaylı kapak gelince index.html ve rehberler.html dosyalarındaki ilgili
 oynatıcı veya video düğmesi gösterilmez. Video bağlantısı machiavelli.html
 dosyasındaki video durumuna dış bağlantı olarak eklenir.
 
-Kesin canlı alan adı bilinmeden canonical, sitemap veya sahte paylaşım
-görseli eklenmez. Sayfalarda başlık/açıklama ve metin tabanlı Open Graph var.
+Doğrulanmış varsayılan üretim adresi
+`https://ali-gazal-site.aliicerikmedya.workers.dev/`.
+Ana sayfa ve Machiavelli için canonical ve metin tabanlı Open Graph bu
+adrese bağlıdır. Onaylanmış sosyal paylaşım görseli yoktur; yeni bir özel
+alan adı bağlanırsa canonical ve Open Graph adresleri güncellenmelidir.
 
 Cloudflare Workers Builds bağlantısı önizleme dallarında
 `npx wrangler versions upload` kullanır. Wrangler yapılandırması kökteki
