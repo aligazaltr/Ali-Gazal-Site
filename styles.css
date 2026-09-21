@@ -12,8 +12,76 @@
   --orange: #ff861f;
   --orange-soft: rgba(255, 134, 31, 0.12);
   --orange-line: rgba(255, 134, 31, 0.36);
+  --button-bg: #ff861f;
+  --button-hover: #ffa148;
+  --button-text: #160b03;
+  --status-text: #ffad69;
+  --header-bg: rgba(11, 11, 10, 0.88);
+  --glow: rgba(255, 134, 31, 0.08);
+  --note-wash: rgba(255, 134, 31, 0.17);
+  --note-rule: rgba(255, 255, 255, 0.035);
+  --card-wash: rgba(255, 134, 31, 0.07);
+  --watermark: rgba(255, 134, 31, 0.07);
+  --index: rgba(255, 134, 31, 0.55);
   --shell: 72rem;
   --radius: 0.35rem;
+}
+
+/* A saved choice wins. With scripts disabled, the system preference still works. */
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg: #f5f0e7;
+  --bg-raised: #eee8dd;
+  --surface: #fffcf6;
+  --surface-strong: #f6efe3;
+  --text: #242019;
+  --muted: #625d54;
+  --muted-strong: #474138;
+  --line: rgba(53, 40, 23, 0.17);
+  --line-strong: rgba(53, 40, 23, 0.32);
+  --orange: #974000;
+  --orange-soft: rgba(161, 69, 0, 0.1);
+  --orange-line: rgba(151, 64, 0, 0.38);
+  --button-bg: #ff912f;
+  --button-hover: #ffac62;
+  --button-text: #241207;
+  --status-text: #813600;
+  --header-bg: rgba(245, 240, 231, 0.9);
+  --glow: rgba(255, 145, 47, 0.12);
+  --note-wash: rgba(255, 145, 47, 0.16);
+  --note-rule: rgba(36, 32, 25, 0.055);
+  --card-wash: rgba(255, 145, 47, 0.1);
+  --watermark: rgba(151, 64, 0, 0.1);
+  --index: rgba(151, 64, 0, 0.74);
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme]) {
+    color-scheme: light;
+    --bg: #f5f0e7;
+    --bg-raised: #eee8dd;
+    --surface: #fffcf6;
+    --surface-strong: #f6efe3;
+    --text: #242019;
+    --muted: #625d54;
+    --muted-strong: #474138;
+    --line: rgba(53, 40, 23, 0.17);
+    --line-strong: rgba(53, 40, 23, 0.32);
+    --orange: #974000;
+    --orange-soft: rgba(161, 69, 0, 0.1);
+    --orange-line: rgba(151, 64, 0, 0.38);
+    --button-bg: #ff912f;
+    --button-hover: #ffac62;
+    --button-text: #241207;
+    --status-text: #813600;
+    --header-bg: rgba(245, 240, 231, 0.9);
+    --glow: rgba(255, 145, 47, 0.12);
+    --note-wash: rgba(255, 145, 47, 0.16);
+    --note-rule: rgba(36, 32, 25, 0.055);
+    --card-wash: rgba(255, 145, 47, 0.1);
+    --watermark: rgba(151, 64, 0, 0.1);
+    --index: rgba(151, 64, 0, 0.74);
+  }
 }
 
 *,
@@ -27,10 +95,9 @@ html {
 }
 
 body {
-  min-width: 20rem;
   margin: 0;
   background:
-    radial-gradient(circle at 78% 8%, rgba(255, 134, 31, 0.08), transparent 29rem),
+    radial-gradient(circle at 78% 8%, var(--glow), transparent 29rem),
     var(--bg);
   color: var(--text);
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
@@ -79,8 +146,8 @@ p {
   padding: 0.65rem 0.9rem;
   transform: translateY(-180%);
   border-radius: var(--radius);
-  background: var(--orange);
-  color: #160b03;
+  background: var(--button-bg);
+  color: var(--button-text);
   font-weight: 800;
   text-decoration: none;
 }
@@ -96,16 +163,16 @@ p {
 
 .site-header {
   border-bottom: 1px solid var(--line);
-  background: rgba(11, 11, 10, 0.86);
+  background: var(--header-bg);
   backdrop-filter: blur(16px);
 }
 
 .header-inner {
   min-height: 4.75rem;
-  display: flex;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
-  justify-content: space-between;
-  gap: 2rem;
+  gap: clamp(1rem, 3vw, 2rem);
 }
 
 .brand {
@@ -135,11 +202,15 @@ p {
 nav {
   display: flex;
   align-items: center;
+  justify-self: end;
   gap: 1.75rem;
 }
 
 nav a {
   position: relative;
+  min-height: 2.75rem;
+  display: inline-flex;
+  align-items: center;
   padding-block: 0.35rem;
   color: var(--muted);
   font-size: 0.92rem;
@@ -160,6 +231,39 @@ nav a[aria-current="page"]::after {
   left: 0;
   height: 0.12rem;
   background: var(--orange);
+}
+
+.theme-toggle[hidden] {
+  display: none;
+}
+
+.theme-toggle {
+  min-height: 2.75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  padding: 0.45rem 0.7rem;
+  border: 1px solid var(--line-strong);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text);
+  font-family: inherit;
+  font-size: 0.82rem;
+  font-weight: 700;
+  line-height: 1.2;
+  cursor: pointer;
+}
+
+.theme-toggle:hover {
+  border-color: var(--orange-line);
+  background: var(--orange-soft);
+}
+
+.theme-icon {
+  color: var(--orange);
+  font-size: 1.15rem;
+  line-height: 1;
 }
 
 .hero {
@@ -234,17 +338,17 @@ nav a[aria-current="page"]::after {
 }
 
 .button.primary {
-  background: var(--orange);
-  color: #160b03;
+  background: var(--button-bg);
+  color: var(--button-text);
 }
 
 .button.primary:hover {
-  background: #ff9a43;
+  background: var(--button-hover);
 }
 
 .button.secondary {
   border-color: var(--line-strong);
-  background: rgba(255, 255, 255, 0.02);
+  background: var(--surface);
   color: var(--text);
 }
 
@@ -264,8 +368,8 @@ nav a[aria-current="page"]::after {
   border: 1px solid var(--orange-line);
   border-radius: var(--radius);
   background:
-    linear-gradient(135deg, rgba(255, 134, 31, 0.17), transparent 58%),
-    repeating-linear-gradient(0deg, transparent 0, transparent 2.9rem, rgba(255, 255, 255, 0.035) 3rem),
+    linear-gradient(135deg, var(--note-wash), transparent 58%),
+    repeating-linear-gradient(0deg, transparent 0, transparent 2.9rem, var(--note-rule) 3rem),
     var(--surface);
 }
 
@@ -274,7 +378,7 @@ nav a[aria-current="page"]::after {
   position: absolute;
   right: -0.45rem;
   bottom: 3.4rem;
-  color: rgba(255, 134, 31, 0.07);
+  color: var(--watermark);
   font-size: 5.2rem;
   font-weight: 950;
   letter-spacing: -0.08em;
@@ -337,7 +441,7 @@ nav a[aria-current="page"]::after {
   border: 1px solid var(--orange-line);
   border-radius: 999px;
   background: var(--orange-soft);
-  color: #ffad69;
+  color: var(--status-text);
   font-size: 0.74rem;
   font-weight: 850;
   letter-spacing: 0.04em;
@@ -390,6 +494,9 @@ nav a[aria-current="page"]::after {
 .text-link,
 .card-link,
 .back-link {
+  min-height: 2.75rem;
+  display: inline-flex;
+  align-items: center;
   color: var(--text);
   font-weight: 800;
   text-decoration-color: var(--orange);
@@ -448,11 +555,11 @@ nav a[aria-current="page"]::after {
   border: 1px solid var(--line);
   border-left: 0.2rem solid var(--orange);
   border-radius: var(--radius);
-  background: linear-gradient(120deg, rgba(255, 134, 31, 0.07), transparent 38%), var(--surface);
+  background: linear-gradient(120deg, var(--card-wash), transparent 38%), var(--surface);
 }
 
 .project-index {
-  color: rgba(255, 134, 31, 0.36);
+  color: var(--index);
   font-size: clamp(2.6rem, 5vw, 4.2rem);
   font-weight: 950;
   letter-spacing: -0.07em;
@@ -472,7 +579,6 @@ nav a[aria-current="page"]::after {
 }
 
 .card-link {
-  display: inline-block;
   margin-top: 1.4rem;
 }
 
@@ -581,7 +687,6 @@ nav a[aria-current="page"]::after {
 }
 
 .back-link {
-  display: inline-flex;
   gap: 0.5rem;
   margin-bottom: clamp(3rem, 7vw, 5rem);
   color: var(--muted-strong);
@@ -645,7 +750,7 @@ nav a[aria-current="page"]::after {
 }
 
 .truth-note strong {
-  color: #ffad69;
+  color: var(--status-text);
 }
 
 .truth-note p {
@@ -841,7 +946,6 @@ tbody th {
 }
 
 .aside-card .text-link {
-  display: inline-block;
   margin-top: 1.2rem;
 }
 
@@ -864,6 +968,9 @@ tbody th {
 }
 
 .footer-inner a {
+  min-height: 2.75rem;
+  display: inline-flex;
+  align-items: center;
   color: var(--muted-strong);
   font-weight: 750;
   text-decoration: none;
@@ -912,16 +1019,22 @@ tbody th {
 
   .header-inner {
     min-height: auto;
-    align-items: flex-start;
-    flex-direction: column;
-    gap: 0.85rem;
+    grid-template-columns: minmax(0, 1fr) auto;
+    gap: 0.75rem;
     padding-block: 1rem;
   }
 
   nav {
+    grid-column: 1 / -1;
+    grid-row: 2;
     width: 100%;
     justify-content: space-between;
     gap: 0.75rem;
+  }
+
+  .theme-toggle {
+    grid-column: 2;
+    grid-row: 1;
   }
 
   nav a {
@@ -931,7 +1044,8 @@ tbody th {
   .hero h1,
   .project-hero h1,
   .page-intro h1 {
-    font-size: clamp(2.75rem, 14vw, 4.2rem);
+    overflow-wrap: break-word;
+    font-size: clamp(2.35rem, 12vw, 4.2rem);
   }
 
   .actions,
@@ -988,8 +1102,16 @@ tbody th {
 }
 
 @media print {
-  :root {
+  :root,
+  :root[data-theme="light"],
+  :root[data-theme="dark"] {
     color-scheme: light;
+    --text: #111;
+    --muted: #333;
+    --muted-strong: #333;
+    --line: #bbb;
+    --surface: #fff;
+    --orange: #a44400;
   }
 
   body {
@@ -1000,11 +1122,7 @@ tbody th {
   .site-header,
   .site-footer,
   .back-link,
-  .print-button,
-  .article-aside,
-  .truth-note,
-  .project-hero,
-  .article-section:not(.guide-section):not(.reflection) {
+  .print-button {
     display: none;
   }
 
