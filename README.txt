@@ -61,5 +61,5 @@ görseli eklenmez. Sayfalarda başlık/açıklama ve metin tabanlı Open Graph v
 Cloudflare Workers Builds bağlantısı önizleme dallarında
 `npx wrangler versions upload` kullanır. Wrangler yapılandırması kökteki
 statik varlıkları mevcut `ali-gazal-site` Worker'ına yönlendirir ve eski
-`.html` URL'lerini korur. `.assetsignore` herkese açık olmayan depo ve
-belgelendirme dosyalarının dağıtıma girmesini önler.
+`.html` URL'lerini çalışan sayfalara yönlendirir. `.assetsignore` herkese
+açık olmayan depo ve belgelendirme dosyalarının dağıtıma girmesini önler.

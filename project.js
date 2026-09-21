@@ -6,8 +6,9 @@
   const status = document.querySelector('[data-share-status]');
   const fallback = document.querySelector('[data-share-fallback]');
   const link = document.querySelector('[data-share-url]');
-  // The file lives beside this page; discard query strings and fragments.
-  const url = new URL('machiavelli.html', document.baseURI).href;
+  // Use the actual canonical page path after Cloudflare's HTML redirect.
+  // This also removes tracking parameters and in-page fragments.
+  const url = new URL(window.location.pathname, window.location.href).href;
   link.href = url;
   link.textContent = url;
   button.hidden = false;
