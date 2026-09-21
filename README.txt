@@ -14,6 +14,8 @@ Sayfalar:
 - project.js              Machiavelli paylaşımı; yerel menü veya bağlantı kopyalama
 - favicon.svg             Var olan AG işaretinin küçük sekme simgesi
 - 404.html                Bilinmeyen adresler için dönüş sayfası
+- wrangler.jsonc          Bağlı Cloudflare Worker'a statik dosya dağıtımı
+- .assetsignore           Yalnızca site varlıklarını yükler; repo dosyaları dışarıda
 
 Tasarım:
 - Koyu/açık yüzeyler ve sıcak turuncu vurgu
@@ -55,3 +57,9 @@ dosyasındaki video durumuna dış bağlantı olarak eklenir.
 
 Kesin canlı alan adı bilinmeden canonical, sitemap veya sahte paylaşım
 görseli eklenmez. Sayfalarda başlık/açıklama ve metin tabanlı Open Graph var.
+
+Cloudflare Workers Builds bağlantısı önizleme dallarında
+`npx wrangler versions upload` kullanır. Wrangler yapılandırması kökteki
+statik varlıkları mevcut `ali-gazal-site` Worker'ına yönlendirir ve eski
+`.html` URL'lerini korur. `.assetsignore` herkese açık olmayan depo ve
+belgelendirme dosyalarının dağıtıma girmesini önler.
