@@ -47,6 +47,12 @@ Site Handoff Card (Machiavelli sayfasında güncellenecek üç alan):
    kanıt, başarısızlık, belirsizlik ve yorum sınırı.
 3. Video: nihai başlık, tam YouTube URL'si, yayın tarihi ve onaylı kapak.
 
+Machiavelli üç ilke ve ziyaretçi için 7 günlük takip rehberi kodda hazırdır.
+Deney/video yayımlanmadan görünmez: `project.js` içindeki tek görünürlük alanı
+`showSevenDayGuide: false` olarak tutulur. Doğrulanmış yayın devri geldiğinde
+bu değer `true` yapılınca rehber, iki içindekiler bağlantısı ve güncel kaynak
+notu birlikte açılır; bekleyen-kural açıklaması aynı anda gizlenir.
+
 Onaylı kapak gelince index.html ve rehberler.html dosyalarındaki ilgili
 .project-card öğesinin ilk çocuğu olarak gerçek görseli ekle:
 <img class="project-cover" src="onayli-kapak.webp" width="1280" height="720"

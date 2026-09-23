@@ -90,6 +90,10 @@
   box-sizing: border-box;
 }
 
+[hidden] {
+  display: none !important;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -803,6 +807,183 @@ p {
   color: var(--orange);
 }
 
+.seven-day-guide {
+  margin-bottom: clamp(5rem, 10vw, 8rem);
+}
+
+.guide-section {
+  padding-block: clamp(3.5rem, 7vw, 5.5rem);
+  border-top: 1px solid var(--line);
+}
+
+.guide-section:first-child {
+  padding-top: 0;
+  border-top: 0;
+}
+
+.guide-section > h2 {
+  scroll-margin-top: 2rem;
+  max-width: 18ch;
+  margin-bottom: 1.5rem;
+  font-size: clamp(2.3rem, 5vw, 4.5rem);
+  letter-spacing: -0.05em;
+  line-height: 1;
+}
+
+.guide-intro {
+  max-width: 52rem;
+  color: var(--muted-strong);
+  font-size: 1.08rem;
+}
+
+.principle-stack,
+.copy-stack {
+  display: grid;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.principle-card,
+.copy-card {
+  min-width: 0;
+  padding: clamp(1.25rem, 4vw, 2rem);
+  border: 1px solid var(--line);
+  background: linear-gradient(120deg, var(--card-wash), transparent 32%), var(--surface);
+}
+
+.principle-heading {
+  display: grid;
+  grid-template-columns: 3.5rem minmax(0, 1fr);
+  gap: 1rem;
+  align-items: baseline;
+  margin-bottom: 1.75rem;
+}
+
+.principle-heading span {
+  color: var(--index);
+  font-size: 1.5rem;
+  font-weight: 900;
+}
+
+.principle-heading h3 {
+  margin-bottom: 0;
+  font-size: clamp(1.55rem, 3.5vw, 2.4rem);
+  letter-spacing: -0.035em;
+}
+
+.principle-details {
+  margin: 0;
+}
+
+.principle-details > div {
+  display: grid;
+  grid-template-columns: minmax(9rem, 12rem) minmax(0, 1fr);
+  gap: 1rem 1.5rem;
+  padding-block: 1rem;
+  border-top: 1px solid var(--line);
+}
+
+.principle-details dt {
+  color: var(--text);
+  font-weight: 800;
+}
+
+.principle-details dd {
+  margin: 0;
+  color: var(--muted-strong);
+}
+
+.adaptation-note,
+.source-reference,
+.copy-help {
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.adaptation-note {
+  margin: 1.25rem 0 0;
+}
+
+.source-reference {
+  margin: 1.25rem 0 0;
+}
+
+.source-reference a {
+  color: var(--orange);
+  font-weight: 750;
+  overflow-wrap: anywhere;
+}
+
+.practice-guide {
+  margin-top: clamp(3.5rem, 7vw, 5.5rem);
+}
+
+.privacy-note,
+.ethics-note {
+  display: grid;
+  grid-template-columns: 8rem minmax(0, 1fr);
+  gap: 1rem;
+  margin-top: 2rem;
+  padding: 1.25rem;
+  border: 1px solid var(--orange-line);
+  border-left: 0.2rem solid var(--orange);
+  background: var(--orange-soft);
+}
+
+.privacy-note strong,
+.ethics-note strong {
+  color: var(--status-text);
+}
+
+.privacy-note p,
+.ethics-note p {
+  margin: 0;
+  color: var(--muted-strong);
+}
+
+.copy-card-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.copy-card-heading h3 {
+  margin-bottom: 0;
+  font-size: clamp(1.25rem, 3vw, 1.7rem);
+}
+
+.copy-card-heading button {
+  flex: 0 0 auto;
+  cursor: pointer;
+}
+
+.copy-status {
+  min-height: 1.65rem;
+  margin: 0.6rem 0 0;
+  color: var(--status-text);
+  font-size: 0.92rem;
+  font-weight: 750;
+}
+
+.copy-text {
+  max-height: 27rem;
+  margin: 0.75rem 0 0;
+  overflow: auto;
+  padding: 1.2rem;
+  border: 1px solid var(--line);
+  background: var(--bg-raised);
+  color: var(--text);
+  font: 0.88rem/1.65 ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  tab-size: 2;
+}
+
+.copy-help {
+  margin: 0.8rem 0 0;
+}
+
 .back-to-top {
   min-height: 2.75rem;
   display: inline-flex;
@@ -1200,6 +1381,21 @@ tbody th {
 
   .truth-note {
     grid-template-columns: 1fr;
+  }
+
+  .principle-details > div,
+  .privacy-note,
+  .ethics-note {
+    grid-template-columns: 1fr;
+  }
+
+  .copy-card-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .copy-card-heading .button {
+    width: 100%;
   }
 
   .quote-grid {
