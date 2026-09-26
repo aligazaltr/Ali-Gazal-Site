@@ -1,0 +1,11 @@
+# Only public site files in the repository root are uploaded.
+*
+!/*.html
+!/*.css
+!/*.js
+!/*.svg
+!/*.webp
+!/*.png
+!/*.jpg
+!/*.jpeg
+!/*.avif
