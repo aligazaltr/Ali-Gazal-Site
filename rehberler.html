@@ -6,11 +6,20 @@
   <meta name="description" content="Ali Gazal'ın güncel gerçek hayat deneyleri. Machiavelli / Prens projesinin durumu, yöntemi ve kanıt sınırları.">
   <meta name="theme-color" content="#0b0b0a">
   <title>Projeler | Ali Gazal</title>
+  <link rel="canonical" href="https://ali-gazal-site.aliicerikmedya.workers.dev/rehberler">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ali-gazal-site.aliicerikmedya.workers.dev/rehberler">
+  <meta property="og:site_name" content="Ali Gazal">
+  <meta property="og:locale" content="tr_TR">
   <meta property="og:title" content="Projeler | Ali Gazal">
   <meta property="og:description" content="Güncel gerçek hayat deneylerini ve hangi aşamada olduklarını incele.">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Projeler | Ali Gazal">
+  <meta name="twitter:description" content="Güncel gerçek hayat deneylerini ve hangi aşamada olduklarını incele.">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <script src="theme.js"></script>
+  <script src="site-data.js" defer></script>
+  <script src="site.js" defer></script>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -50,7 +59,7 @@
         <span class="archive-count">1 dosya</span>
       </div>
 
-      <article class="project-card archive-card">
+      <article class="project-card archive-card" data-project="machiavelli" data-project-cover>
         <div class="project-index" aria-hidden="true">01</div>
         <div class="project-copy">
           <div class="project-meta">
@@ -65,7 +74,7 @@
           </p>
           <a class="card-link" href="machiavelli.html">Proje ayrıntılarını incele <span aria-hidden="true">→</span></a>
         </div>
-        <span class="status project-status">Deney devam ediyor</span>
+        <span class="status project-status" data-project-field="statusLabel">Deney devam ediyor</span>
       </article>
     </section>
   </main>

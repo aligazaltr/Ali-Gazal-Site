@@ -1,74 +1,118 @@
-ALI GAZAL SİTESİ — TÜRKÇE İLK SÜRÜM
+ALİ GAZAL SİTESİ — DENEY DOSYALARI
 
 Amaç:
-YouTube kanalındaki gerçek hayat deneylerini destekleyen ücretsiz proje ve rehber merkezi.
+YouTube kanalındaki gerçek hayat deneylerini destekleyen ücretsiz proje ve
+rehber merkezi. Video hikâyeyi; site yöntem, durum ve doğrulanmış kanıt
+sınırlarını taşır.
 
-Sayfalar:
+Teknik yapı:
+- Statik HTML, CSS ve bağımlılıksız JavaScript
+- GitHub → Cloudflare Workers Builds yayın hattı
+- Koyu/açık tema ve sıcak turuncu marka dili
+- Telefon, tablet ve masaüstünde erişilebilir düzen
+- Framework, veritabanı, üyelik ve site içi video oynatıcı yok
+
+Ana dosyalar:
 - index.html              Kanalın ana sayfası
-- rehberler.html          Proje ve rehber arşivi
-- machiavelli.html        Aktif Machiavelli / Prens deney dosyası
-- marcus-aurelius.html    Eski proje adresi için güvenli yönlendirme
-- hakkimda.html           Kanalın amacı ve yayın ilkeleri
-- styles.css              Ortak görünüm ve mobil düzen
-- theme.js                Sistem temasını izler; elle seçimi yerel olarak saklar
-- project.js              Machiavelli paylaşımı; yerel menü veya bağlantı kopyalama
-- favicon.svg             Var olan AG işaretinin küçük sekme simgesi
+- rehberler.html          Proje arşivi
+- machiavelli.html        Aktif deney dosyası
+- marcus-aurelius.html    Arşivlenen eski adres için güvenli yönlendirme
+- hakkimda.html           Amaç ve yayın ilkeleri
 - 404.html                Bilinmeyen adresler için dönüş sayfası
-- wrangler.jsonc          Bağlı Cloudflare Worker'a statik dosya dağıtımı
-- .assetsignore           Yalnızca site varlıklarını yükler; repo dosyaları dışarıda
+- styles.css              Ortak tema, mobil düzen ve mikro hareketler
+- theme.js                Sistem teması ve saklanan kullanıcı tercihi
+- site-data.js            Tek merkezî, herkese açık proje/yayın verisi
+- site.js                 Ortak veri alanları, kapak ve okuma ilerlemesi
+- project.js              Aşama, paylaşım ve yayın kapılı proje araçları
+- scripts/check-site.js   Bağımlılıksız statik bütünlük denetimi
+- wrangler.jsonc          Cloudflare statik varlık dağıtımı
 
-Tasarım:
-- Koyu/açık yüzeyler ve sıcak turuncu vurgu
-- Kanalın "fikirleri hayatta test etme" kimliğine uygun deney dosyası yaklaşımı
-- Telefon ve bilgisayarda okunabilir statik yapı; JavaScript kapalıyken
-  sistem teması ve içerik çalışır, yalnızca manuel tema seçimi görünmez
+Yerel önizleme:
+  python3 -m http.server 8123
 
-Bilinçli olarak eklenmeyenler:
-- Üyelik veya kullanıcı hesabı
-- Ödeme ve premium içerik
-- Veritabanı
-- Arama ve filtreler
-- Çoklu dil
-- Karmaşık framework
+Kontrol:
+  node scripts/check-site.js
+  node --check site-data.js
+  node --check site.js
+  node --check project.js
+  node --check theme.js
 
-Yerelde açmak için index.html dosyasını tarayıcıda açmak yeterlidir.
-Alternatif: bu dizinde `python3 -m http.server 8123` çalıştırıp
-`http://localhost:8123/` adresini aç.
+MERKEZÎ PROJE VERİSİ
 
-İçerik ilkesi:
-Kesinleşmemiş deney sonuçları yayımlanmış gibi gösterilmez. Machiavelli
-sayfasındaki üç davranış kuralı, sonuç ve video alanları yalnız doğrulanmış
-proje devri geldikçe güncellenir.
+Yeni proje veya yayın güncellemesi site-data.js içindeki projects kaydından
+yönetilir. Arama arayüzü henüz yoktur; title, slug, summary, topics, status,
+phase, duration, source, publishedAt ve searchable alanları ileride arama ve
+filtreleme eklenebilmesi için şimdiden standartlaştırılmıştır.
 
-Site Handoff Card (Machiavelli sayfasında güncellenecek üç alan):
-1. Kurallar: her ilkenin kesin metni, Prens bölüm/kaynak bağlamı,
-   etik uyarlama, tetikleyici → davranış → kanıt.
-2. Sonuç: doğrulanmış kayıt sayısı, fırsat yok/kaçan günler, yayımlanabilir
-   kanıt, başarısızlık, belirsizlik ve yorum sınırı.
-3. Video: nihai başlık, tam YouTube URL'si, yayın tarihi ve onaylı kapak.
+Yayın kapıları:
+- Video published=false iken URL, başlık ve zaman kodu boş kalır.
+- Final kapak yoksa thumbnail.src ve thumbnail.alt boş kalır.
+- Sonuç published=false iken özet ve sınırlar boş kalır.
+- Kanıt Defteri, video zaman çizelgesi ve Kendin Dene kendi feature bayrakları
+  ile veri koşullarının ikisi de sağlanmadan görünmez.
+- Kapalı özelliklerin yayımlanmamış içeriği site-data.js veya HTML içine
+  konmaz. HTML hidden gerçek gizlilik sayılmaz.
+- Meta başlıkları crawler uyumluluğu için HTML'de statiktir; yayın devrinde
+  site-data.js ile birlikte güncellenir ve check-site.js ile URL'ler denetlenir.
 
-Machiavelli üç ilke ve ziyaretçi için 7 günlük takip rehberi kodda hazırdır.
-Deney/video yayımlanmadan görünmez: `project.js` içindeki tek görünürlük alanı
-`showSevenDayGuide: false` olarak tutulur. Doğrulanmış yayın devri geldiğinde
-bu değer `true` yapılınca rehber, iki içindekiler bağlantısı ve güncel kaynak
-notu birlikte açılır; bekleyen-kural açıklaması aynı anda gizlenir.
+DENEY AŞAMALARI
 
-Onaylı kapak gelince index.html ve rehberler.html dosyalarındaki ilgili
-.project-card öğesinin ilk çocuğu olarak gerçek görseli ekle:
-<img class="project-cover" src="onayli-kapak.webp" width="1280" height="720"
-     alt="Gerçek kapağı betimleyen kısa metin" loading="lazy">
-16:9 görüntü stili hazırdır; kapak ve gerçek video URL'si gelmeden boş alan,
-oynatıcı veya video düğmesi gösterilmez. Video bağlantısı machiavelli.html
-dosyasındaki video durumuna dış bağlantı olarak eklenir.
+site-data.js içindeki phase alanı şu değerlerden birini alır:
+- preparing  → Hazırlanıyor
+- testing    → Deneniyor
+- reviewing  → İnceleniyor
+- published  → Video yayında
 
-Doğrulanmış varsayılan üretim adresi
-`https://ali-gazal-site.aliicerikmedya.workers.dev/`.
-Ana sayfa ve Machiavelli için canonical ve metin tabanlı Open Graph bu
-adrese bağlıdır. Onaylanmış sosyal paylaşım görseli yoktur; yeni bir özel
-alan adı bağlanırsa canonical ve Open Graph adresleri güncellenmelidir.
+Machiavelli şu anda testing / Deneniyor durumundadır. Bu değer yalnız gerçek
+proje durumu değiştiğinde güncellenir; tarihe bakarak otomatik ilerletilmez.
 
-Cloudflare Workers Builds bağlantısı önizleme dallarında
-`npx wrangler versions upload` kullanır. Wrangler yapılandırması kökteki
-statik varlıkları mevcut `ali-gazal-site` Worker'ına yönlendirir ve eski
-`.html` URL'lerini çalışan sayfalara yönlendirir. `.assetsignore` herkese
-açık olmayan depo ve belgelendirme dosyalarının dağıtıma girmesini önler.
+GELECEK ARAÇLAR
+
+project.js içinde üç araç gerçek veri geldiğinde çalışacak biçimde hazırdır:
+
+1. Kendin Dene
+   - features.tryIt ve tryIt.enabled true olmalı.
+   - tryIt.rules ve tryIt.guide doğrulanmış kamuya açık metin içermeli.
+   - Kayıtlar ag:experiment:<slug>:v<sürüm> anahtarıyla yalnız tarayıcıda
+     saklanır; kullanıcı başlatmadan veri yazılmaz.
+
+2. Kanıt Defteri
+   - features.evidenceLedger ve evidence.published true olmalı.
+   - En az bir public kanıt kaydı bulunmalı.
+   - Kayıt; olay, kanıt türü, neyi desteklediği ve neyi kanıtlamadığı alanlarını
+     birlikte taşımalıdır.
+
+3. Video zaman çizelgesi
+   - features.videoTimeline ve video.published true olmalı.
+   - Gerçek YouTube URL'si ve doğrulanmış chapter saniyeleri bulunmalı.
+   - Bağlantılar site içi oynatıcıya değil, ilgili YouTube dakikasına gider.
+
+ONAYLI KAPAK VE PAYLAŞIM
+
+Final kapak geldiğinde site-data.js içindeki video.thumbnail alanına dosya,
+alternatif metin, genişlik ve yükseklik eklenir. Gerçek dosya repo kökünde
+optimize edilmiş biçimde bulunmalıdır. Aynı görsel sosyal paylaşım için
+kullanılacaksa index.html ve machiavelli.html içindeki statik Open Graph ve
+Twitter kart alanları gerçek üretim URL'siyle güncellenir. Var olmayan görsel
+og:image olarak yazılmaz.
+
+SITE HANDOFF CARD
+
+Video yayımlandığında aşağıdaki doğrulanmış bilgiler yeterlidir:
+- Proje slug'ı
+- Güncel aşama
+- Final video başlığı ve tam YouTube URL'si
+- Final kapak dosyası ve kısa alternatif metni
+- Yayın tarihi
+- Kamuya açık kesin ilkeler
+- Kendin Dene rehberi
+- Kısa nihai sonuç ve yorum sınırları
+- Kamuya açılabilecek kanıt kayıtları
+- Video bölümleri ve kesin zaman kodları
+- Açılacak özellikler: Kendin Dene / Kanıt Defteri / video zaman çizelgesi
+
+Doğrulanmış varsayılan üretim adresi:
+https://ali-gazal-site.aliicerikmedya.workers.dev/
+
+Özel alan adı bağlanırsa canonical ve Open Graph adresleri birlikte
+güncellenmelidir.
