@@ -129,16 +129,6 @@ body {
   }
 }
 
-@view-transition {
-  navigation: auto;
-}
-
-::view-transition-old(root),
-::view-transition-new(root) {
-  animation-duration: 220ms;
-  animation-timing-function: ease-out;
-}
-
 .reading-progress {
   --reading-progress: 0;
   position: fixed;
@@ -1886,10 +1876,6 @@ tbody th {
     animation: none;
   }
 
-  ::view-transition-old(root),
-  ::view-transition-new(root) {
-    animation-duration: 0.01ms;
-  }
 }
 
 @media print {
