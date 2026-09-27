@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ali-gazal-site.aliicerikmedya.workers.dev/sitemap.xml

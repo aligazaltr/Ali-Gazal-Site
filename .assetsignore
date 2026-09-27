@@ -9,3 +9,5 @@
 !/*.jpg
 !/*.jpeg
 !/*.avif
+!/robots.txt
+!/sitemap.xml

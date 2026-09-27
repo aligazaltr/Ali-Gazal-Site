@@ -20,10 +20,10 @@ const AG_SITE_DATA = (() => {
         slug: 'machiavelli',
         title: 'Machiavelli’nin üç düşüncesi davranışımı değiştirecek mi?',
         shortTitle: 'Machiavelli / Prens deneyi',
-        summary: 'Üç düşünce gerçek karar anlarında etik biçimde sınanıyor.',
+        summary: 'Üç düşünce yedi takvim günü boyunca gerçek karar anlarında etik biçimde sınandı; sonuç olumlu fakat kısmi.',
         status: 'active',
-        statusLabel: 'Deney devam ediyor',
-        phase: 'testing',
+        statusLabel: 'Deney tamamlandı · video hazırlanıyor',
+        phase: 'reviewing',
         dates: {
           plannedStart: '2026-09-21',
           plannedEnd: '2026-09-27',
@@ -38,30 +38,104 @@ const AG_SITE_DATA = (() => {
         duration: {
           value: 7,
           unit: 'gün',
-          label: '7 gün (planlanan)'
+          label: '7 gün · tamamlandı'
         },
+        completedAt: '2026-09-27',
+        lastUpdated: '2026-09-27',
         publishedAt: null,
         searchable: true,
+        principles: [
+          {
+            id: 'fiili-gercek',
+            title: 'Fiilî gerçeğe bak',
+            rule: 'Karardan önce istek/varsayım ile doğrulanabilir gerçeği ayır; davranışı gerçeğe göre seç.'
+          },
+          {
+            id: 'onceden-hazirlan',
+            title: 'Zorluk gelmeden hazırlan',
+            rule: 'Öngörülebilir zorluk görüldüğünde en fazla beş dakikalık somut hazırlık yap.'
+          },
+          {
+            id: 'yontemi-uyarla',
+            title: 'Amacı koru, yöntemi koşula uyarla',
+            rule: 'Planlanan yöntem tıkanır veya on dakika ilerleme sağlamazsa amacı yaz; on dakika içinde yöntemi değiştir.'
+          }
+        ],
         video: {
           published: false,
           url: '',
           title: '',
           thumbnail: {
-            src: '',
-            alt: '',
+            src: 'machiavelli-prens-7-gun-kapak.jpg',
+            alt: 'Ali Gazal ve Machiavelli’nin yer aldığı, “İşe yaradı mı?” ve “7 Gün” yazılı Machiavelli deneyi kapağı.',
             width: 1280,
             height: 720
           },
           chapters: []
         },
         result: {
-          published: false,
-          summary: '',
-          limitations: []
+          published: true,
+          summary: 'Deney olumlu fakat kısmi bir sonuç verdi. En güçlü kazanım, karar anında fiilî gerçeğe bakma filtresinin yerleşmesiydi. Diğer iki ilke de bazı kararları etkiledi; ancak belirlenen süre ve yazma şartları her olayda doğrulanmadığı için tam uygulama başarısı sayılmadı.',
+          limitations: [
+            'Olay anı görüntüsü veya bağımsız A sınıfı kanıt bulunmuyor.',
+            'Kayıtların çoğu aynı gün, biri geriye dönük öz-bildirime dayanıyor.',
+            'İkinci ilkenin beş dakika; üçüncü ilkenin yazılı amaç ve on dakika koşulları her olayda tam doğrulanmadı.',
+            'Bu, tek kişinin yedi takvim günlük sınırlı deneyidir; nedensellik veya herkes için geçerli fayda kanıtlamaz.',
+            '“7 gün” deney süresidir; kusursuz uygulama serisi değildir.'
+          ]
         },
         evidence: {
-          published: false,
-          entries: []
+          published: true,
+          entries: [
+            {
+              id: 'gun-2-plan-degisikligi',
+              public: true,
+              dayLabel: 'Gün 2 · 22 Eylül',
+              title: 'Plan, gerçek koşula göre değişti.',
+              summary: 'Günün planlanandan uzun sürmesi üzerine çalışma başlangıcı gerçek koşullara göre yeniden düzenlendi.',
+              principle: 'Fiilî gerçeğe bak.',
+              evidenceType: 'B — aynı gün öz-bildirim',
+              recordedAt: 'Aynı gün kaydedildi.',
+              supports: 'İlkenin karar sırasında bilinçli biçimde hatırlandığını ve planın gerçeğe göre değiştirildiğini destekler.',
+              doesNotProve: 'Değişikliğin uzun vadeli başarıya yol açtığını veya olayın bağımsız olarak doğrulandığını kanıtlamaz.'
+            },
+            {
+              id: 'gun-4-on-hazirlik',
+              public: true,
+              dayLabel: 'Gün 4 · 24 Eylül',
+              title: 'Ertesi sabahın zorluğuna karşı önceden hazırlık yapıldı.',
+              summary: 'Ertesi gün yaşanabilecek gecikme riskine karşı temel ihtiyaçlar önceki akşam hazırlandı; sabah planın sürmesine yardımcı oldu.',
+              principle: 'Zorluk gelmeden hazırlan.',
+              evidenceType: 'B — aynı gün öz-bildirim',
+              recordedAt: 'Aynı gün kaydedildi.',
+              supports: 'Önceden hazırlığın pratik fayda gösterdiğini ve ilkenin bilinçli hatırlandığını destekler.',
+              doesNotProve: 'Hazırlığın tam beş dakika içinde yapıldığını veya sonucun yalnızca bu ilke nedeniyle oluştuğunu kanıtlamaz.'
+            },
+            {
+              id: 'gun-5-erkene-alma',
+              public: true,
+              dayLabel: 'Gün 5 · 25 Eylül',
+              title: 'Yaklaşan yoğunluk görülünce önemli iş erkene çekildi.',
+              summary: 'Yaklaşan yoğun takvim öğrenilince önemli bir izin ve resmî görüşme işi aynı güne alınarak olası zorluktan önce hareket edildi.',
+              principle: 'Zorluk gelmeden hazırlan.',
+              evidenceType: 'C — geriye dönük öz-bildirim',
+              recordedAt: 'Sonradan kayda geçirildi.',
+              supports: 'İlkenin karar öncesinde akılda olduğuna ve zamanlama kararını etkilediğine dair öz-bildirimi destekler.',
+              doesNotProve: 'Kısa hazırlık adımının süresini, bütün olay ayrıntılarını veya bağımsız nedenselliği kanıtlamaz.'
+            },
+            {
+              id: 'gun-6-7-yontem-degisikligi',
+              public: true,
+              dayLabel: 'Gün 6–7 · 26–27 Eylül',
+              title: 'Kamera yöntemi tıkanınca kayıt yöntemi değiştirildi.',
+              summary: 'Sağlık ve ses koşulları ana çekime izin vermeyince proje bırakılmadı; aynı gün yazılı kayıtla kapatıldı ve prodüksiyon iyileşme sonrasına taşındı.',
+              principle: 'Amacı koru, yöntemi koşula uyarla. Gün 7’de fiilî gerçeğe bakma filtresi de kararın parçasıydı.',
+              evidenceType: 'B — aynı gün yazılı öz-bildirim',
+              recordedAt: 'Her iki gün de aynı gün yazılı olarak kaydedildi; olay videosu yok.',
+              supports: 'İlkenin yöntem değiştirirken bilinçli olduğunu ve projenin tamamen bırakılmadığını destekler.',
+              doesNotProve: 'Önceden yazılmış amaç ve on dakika içinde geçiş şartlarının eksiksiz uygulandığını veya yöntemin nihai video başarısını kanıtlamaz.'
+            }
+          ]
         },
         tryIt: {
           enabled: false,
@@ -71,14 +145,14 @@ const AG_SITE_DATA = (() => {
           guide: ''
         },
         features: {
-          evidenceLedger: false,
+          evidenceLedger: true,
           videoTimeline: false,
           tryIt: false
         },
         sharing: {
-          title: 'Machiavelli / Prens deneyi | Ali Gazal',
-          description: 'Üç düşünceyi gerçek kararlarda sınayan deney sürüyor. Yöntem açık; sonuç henüz bilinmiyor.',
-          image: ''
+          title: 'Machiavelli’nin üç düşüncesini 7 gün denedim | Ali Gazal',
+          description: 'Yedi günlük deney tamamlandı. En güçlü sonuç fiilî gerçeğe bakma ilkesiydi; diğer iki ilke etkili oldu ancak kurallar her olayda eksiksiz uygulanmadı. Video hazırlanıyor.',
+          image: 'machiavelli-prens-7-gun-kapak.jpg'
         }
       }
     }

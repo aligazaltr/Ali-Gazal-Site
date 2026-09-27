@@ -32,6 +32,7 @@
       image.width = Number(thumbnail.width) || 1280;
       image.height = Number(thumbnail.height) || 720;
       image.loading = container.dataset.coverPriority === 'high' ? 'eager' : 'lazy';
+      if (container.dataset.coverPriority === 'high') image.fetchPriority = 'high';
       image.decoding = 'async';
       container.prepend(image);
     });

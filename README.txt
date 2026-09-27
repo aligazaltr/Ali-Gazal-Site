@@ -63,8 +63,9 @@ site-data.js içindeki phase alanı şu değerlerden birini alır:
 - reviewing  → İnceleniyor
 - published  → Video yayında
 
-Machiavelli şu anda testing / Deneniyor durumundadır. Bu değer yalnız gerçek
-proje durumu değiştiğinde güncellenir; tarihe bakarak otomatik ilerletilmez.
+Machiavelli şu anda reviewing / İnceleniyor durumundadır. Deney 27 Eylül
+2026'da tamamlandı; video henüz yayımlanmadı. Bu değer yalnız gerçek proje
+durumu değiştiğinde güncellenir; tarihe bakarak otomatik ilerletilmez.
 
 GELECEK ARAÇLAR
 
@@ -89,27 +90,25 @@ project.js içinde üç araç gerçek veri geldiğinde çalışacak biçimde haz
 
 ONAYLI KAPAK VE PAYLAŞIM
 
-Final kapak geldiğinde site-data.js içindeki video.thumbnail alanına dosya,
-alternatif metin, genişlik ve yükseklik eklenir. Gerçek dosya repo kökünde
-optimize edilmiş biçimde bulunmalıdır. Aynı görsel sosyal paylaşım için
-kullanılacaksa index.html ve machiavelli.html içindeki statik Open Graph ve
-Twitter kart alanları gerçek üretim URL'siyle güncellenir. Var olmayan görsel
-og:image olarak yazılmaz.
+Machiavelli final kapağı site-data.js içindeki video.thumbnail alanından ana
+sayfa, proje arşivi ve proje sayfasına dağıtılır. Optimize edilmiş 1280×720
+JPEG repo kökündedir. Machiavelli sayfasının Open Graph ve Twitter kartları
+aynı gerçek üretim görsel URL'sini kullanır. Kapağın varlığı videonun
+yayımlandığı anlamına gelmez; video.published ayrı bir yayın kapısıdır.
 
 SITE HANDOFF CARD
 
 Video yayımlandığında aşağıdaki doğrulanmış bilgiler yeterlidir:
 - Proje slug'ı
-- Güncel aşama
 - Final video başlığı ve tam YouTube URL'si
-- Final kapak dosyası ve kısa alternatif metni
 - Yayın tarihi
-- Kamuya açık kesin ilkeler
 - Kendin Dene rehberi
-- Kısa nihai sonuç ve yorum sınırları
-- Kamuya açılabilecek kanıt kayıtları
 - Video bölümleri ve kesin zaman kodları
-- Açılacak özellikler: Kendin Dene / Kanıt Defteri / video zaman çizelgesi
+- Kendin Dene özelliğini açma onayı
+
+Final kapak, kamuya açık ilkeler, kısa sonuç ve Kanıt Defteri tamamlandı.
+Video yayımlandığında phase=published, video.published=true ve
+features.videoTimeline=true yalnız yukarıdaki gerçek verilerle açılır.
 
 Doğrulanmış varsayılan üretim adresi:
 https://ali-gazal-site.aliicerikmedya.workers.dev/

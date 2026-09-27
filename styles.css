@@ -479,7 +479,8 @@ p {
 }
 
 .status {
-  width: max-content;
+  width: fit-content;
+  max-width: 100%;
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
@@ -626,13 +627,13 @@ p {
   }
 }
 
-/* An approved 16:9 cover can be placed first in a project card later. */
 .project-cover {
   grid-column: 1 / -1;
   width: 100%;
   aspect-ratio: 16 / 9;
   height: auto;
   object-fit: cover;
+  border: 1px solid var(--line);
   border-radius: var(--radius);
 }
 
@@ -1085,6 +1086,28 @@ p {
   line-height: 0.96;
 }
 
+.project-feature-cover {
+  margin: 0 0 clamp(3.5rem, 8vw, 6rem);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: var(--shadow-raised);
+}
+
+.project-feature-cover .project-cover {
+  border: 0;
+  border-radius: 0;
+}
+
+.project-feature-cover figcaption {
+  padding: 0.7rem 1rem;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
 .project-facts {
   border-top: 1px solid var(--line-strong);
 }
@@ -1236,6 +1259,12 @@ p {
   color: var(--muted-strong);
 }
 
+.truth-note .last-updated {
+  grid-column: 2;
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+
 .article-layout {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 18rem;
@@ -1264,6 +1293,40 @@ p {
   max-width: 46rem;
   color: var(--muted-strong);
   font-size: 1.08rem;
+}
+
+.principle-list {
+  display: grid;
+  gap: 0.8rem;
+  margin: 2rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.principle-list li {
+  display: grid;
+  grid-template-columns: 3rem minmax(0, 1fr);
+  gap: 1rem;
+  padding: clamp(1.15rem, 3vw, 1.6rem);
+  border: 1px solid var(--line);
+  background: linear-gradient(120deg, var(--card-wash), transparent 40%), var(--surface);
+}
+
+.principle-list li > span {
+  color: var(--orange);
+  font-size: 0.78rem;
+  font-weight: 850;
+  letter-spacing: 0.08em;
+}
+
+.principle-list h3 {
+  margin-bottom: 0.45rem;
+  font-size: clamp(1.25rem, 2.6vw, 1.7rem);
+}
+
+.principle-list p {
+  margin-bottom: 0;
+  color: var(--muted-strong);
 }
 
 .quote-grid {
@@ -1795,6 +1858,10 @@ tbody th {
 
   .truth-note {
     grid-template-columns: 1fr;
+  }
+
+  .truth-note .last-updated {
+    grid-column: 1;
   }
 
   .phase-heading {
