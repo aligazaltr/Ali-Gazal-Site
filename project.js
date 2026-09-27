@@ -203,7 +203,7 @@
     const title = panel.querySelector('[data-result-title]');
     const summary = panel.querySelector('[data-result-summary]');
     const limitations = panel.querySelector('[data-result-limitations]');
-    if (title) title.textContent = 'Deneyin doğrulanmış sonucu';
+    if (title) title.textContent = 'Deneyin kısa sonucu';
     if (summary) summary.textContent = project.result.summary;
 
     if (limitations && Array.isArray(project.result.limitations) && project.result.limitations.length) {
