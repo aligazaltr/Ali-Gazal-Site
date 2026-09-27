@@ -202,14 +202,16 @@
 
     const title = panel.querySelector('[data-result-title]');
     const summary = panel.querySelector('[data-result-summary]');
+    const limitations = panel.querySelector('[data-result-limitations]');
     if (title) title.textContent = 'Deneyin doğrulanmış sonucu';
     if (summary) summary.textContent = project.result.summary;
 
-    if (Array.isArray(project.result.limitations) && project.result.limitations.length) {
+    if (limitations && Array.isArray(project.result.limitations) && project.result.limitations.length) {
+      limitations.replaceChildren();
       const heading = element('h3', 'result-limit-title', 'Yorum sınırları');
       const list = element('ul', 'question-list');
       project.result.limitations.forEach(item => list.append(element('li', '', item)));
-      panel.append(heading, list);
+      limitations.append(heading, list);
     }
   }
 
@@ -218,13 +220,15 @@
     const entries = project.evidence.entries.filter(entry => entry.public !== false);
     if (!mount || !project.features.evidenceLedger || !project.evidence.published || !entries.length) return;
 
-    const section = element('section', 'feature-panel evidence-ledger');
-    section.id = 'kanit-defteri';
-    section.setAttribute('aria-labelledby', 'kanit-defteri-baslik');
-    section.append(element('p', 'eyebrow', 'KANIT DEFTERİ'));
+    mount.className = 'feature-panel evidence-ledger';
+    mount.removeAttribute('aria-label');
+    mount.setAttribute('aria-labelledby', 'kanit-defteri-baslik');
+    mount.replaceChildren();
+    mount.append(element('p', 'eyebrow', 'KANIT DEFTERİ'));
     const heading = element('h2', '', 'Kayıt neyi gösteriyor, neyi göstermiyor?');
     heading.id = 'kanit-defteri-baslik';
-    section.append(heading);
+    mount.append(heading);
+    mount.append(element('p', 'feature-intro', 'B ve C etiketleri kayıt zamanını gösterir; olayların bağımsız olarak kanıtlandığı anlamına gelmez.'));
 
     const list = element('div', 'evidence-list');
     entries.forEach(entry => {
@@ -250,8 +254,7 @@
       list.append(card);
     });
 
-    section.append(list);
-    mount.append(section);
+    mount.append(list);
   }
 
   function secondsLabel(seconds) {

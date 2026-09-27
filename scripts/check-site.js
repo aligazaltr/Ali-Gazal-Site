@@ -28,6 +28,16 @@ function metaContent(html, attribute, value) {
   return html.match(pattern)?.[1] || html.match(reversed)?.[1] || '';
 }
 
+function textContent(html) {
+  return html
+    .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, ' ')
+    .replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, ' ')
+    .replace(/<[^>]+>/g, ' ')
+    .replace(/&nbsp;/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
 for (const file of htmlFiles) {
   const html = fs.readFileSync(path.join(root, file), 'utf8');
   const ids = [...html.matchAll(/\sid=["']([^"']+)["']/g)].map(match => match[1]);
@@ -77,6 +87,7 @@ for (const [file, expected] of Object.entries(canonicalExpectations)) {
 }
 
 const machiavelliHtml = fs.readFileSync(path.join(root, 'machiavelli.html'), 'utf8');
+const machiavelliText = textContent(machiavelliHtml);
 if (!machiavelliHtml.includes('data-project-phase')) fail('machiavelli.html: deney aşaması bileşeni eksik');
 if (!machiavelliHtml.includes('data-reading-progress')) fail('machiavelli.html: okuma ilerleme göstergesi eksik');
 if (!machiavelliHtml.includes('site-data.js') || !machiavelliHtml.includes('project.js')) {
@@ -84,6 +95,90 @@ if (!machiavelliHtml.includes('site-data.js') || !machiavelliHtml.includes('proj
 }
 if (/seven-day-guide|takip-promptu|gunluk-sablon/.test(machiavelliHtml)) {
   fail('machiavelli.html: henüz yayımlanmaması gereken eski rehber içeriği canlı HTML içinde bulundu');
+}
+
+const machiavelli = siteData.projects.machiavelli;
+if (machiavelli.phase !== 'reviewing') fail('machiavelli: güncel aşama reviewing / İnceleniyor olmalı');
+if (machiavelli.statusLabel !== 'Deney tamamlandı · video hazırlanıyor') {
+  fail('machiavelli: görünür durum metni güncel değil');
+}
+if (machiavelli.completedAt !== '2026-09-27' || machiavelli.lastUpdated !== '2026-09-27') {
+  fail('machiavelli: tamamlanma ve son güncelleme tarihleri eksik veya yanlış');
+}
+if (!Array.isArray(machiavelli.principles) || machiavelli.principles.length !== 3) {
+  fail('machiavelli: tam üç kamuya açık ilke gerekli');
+} else {
+  machiavelli.principles.forEach(principle => {
+    if (!principle.title || !principle.rule) fail('machiavelli: ilke başlığı veya davranış kuralı eksik');
+    if (!machiavelliText.includes(principle.title) || !machiavelliText.includes(principle.rule)) {
+      fail(`machiavelli.html: merkezî ilke statik içerikle eşleşmiyor (${principle.title || 'başlıksız'})`);
+    }
+  });
+}
+if (!machiavelli.result.published || !machiavelliText.includes(machiavelli.result.summary)) {
+  fail('machiavelli.html: yayımlanmış kısa sonuç merkezî veriyle eşleşmiyor');
+}
+if (!machiavelli.features.evidenceLedger || !machiavelli.evidence.published || machiavelli.evidence.entries.length !== 4) {
+  fail('machiavelli: Kanıt Defteri yalnız dört onaylı kayıtla açık olmalı');
+}
+if (machiavelli.video.published || machiavelli.video.url || machiavelli.video.title || machiavelli.video.chapters.length) {
+  fail('machiavelli: video yayımlanmadan video alanları kapalı ve boş kalmalı');
+}
+if (machiavelli.features.videoTimeline || machiavelli.features.tryIt || machiavelli.tryIt.enabled) {
+  fail('machiavelli: video zaman çizelgesi ve Kendin Dene bugün kapalı kalmalı');
+}
+
+const expectedImage = `${siteData.canonicalOrigin}/${machiavelli.video.thumbnail.src}`;
+const expectedMeta = {
+  'og:title': machiavelli.sharing.title,
+  'og:description': machiavelli.sharing.description,
+  'og:image': expectedImage,
+  'og:image:secure_url': expectedImage,
+  'og:image:type': 'image/jpeg',
+  'og:image:width': String(machiavelli.video.thumbnail.width),
+  'og:image:height': String(machiavelli.video.thumbnail.height),
+  'og:image:alt': machiavelli.video.thumbnail.alt
+};
+for (const [property, expected] of Object.entries(expectedMeta)) {
+  const actual = metaContent(machiavelliHtml, 'property', property);
+  if (actual !== expected) fail(`machiavelli.html: ${property} merkezî veriyle eşleşmiyor`);
+}
+if (metaContent(machiavelliHtml, 'name', 'twitter:card') !== 'summary_large_image') {
+  fail('machiavelli.html: twitter:card summary_large_image olmalı');
+}
+if (metaContent(machiavelliHtml, 'name', 'twitter:image') !== expectedImage) {
+  fail('machiavelli.html: twitter:image final kapakla eşleşmiyor');
+}
+if (metaContent(machiavelliHtml, 'name', 'twitter:image:alt') !== machiavelli.video.thumbnail.alt) {
+  fail('machiavelli.html: twitter:image:alt merkezî veriyle eşleşmiyor');
+}
+
+const thumbnailPath = path.join(root, machiavelli.video.thumbnail.src);
+if (fs.existsSync(thumbnailPath)) {
+  const thumbnail = fs.readFileSync(thumbnailPath);
+  if (thumbnail[0] !== 0xff || thumbnail[1] !== 0xd8 || thumbnail.at(-2) !== 0xff || thumbnail.at(-1) !== 0xd9) {
+    fail('machiavelli: final kapak geçerli JPEG imzası taşımıyor');
+  }
+  if (thumbnail.byteLength > 500 * 1024) fail('machiavelli: final kapak 500 KB sınırını aşıyor');
+}
+
+const robots = fs.readFileSync(path.join(root, 'robots.txt'), 'utf8');
+if (!robots.includes(`Sitemap: ${siteData.canonicalOrigin}/sitemap.xml`)) {
+  fail('robots.txt: gerçek sitemap adresi eksik');
+}
+const sitemap = fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8');
+[
+  `${siteData.canonicalOrigin}/`,
+  `${siteData.canonicalOrigin}/rehberler`,
+  `${siteData.canonicalOrigin}/hakkimda`,
+  `${siteData.canonicalOrigin}/machiavelli`
+].forEach(url => {
+  if (!sitemap.includes(`<loc>${url}</loc>`)) fail(`sitemap.xml: URL eksik (${url})`);
+});
+if (/404|marcus-aurelius/.test(sitemap)) fail('sitemap.xml: 404 veya Marcus yönlendirmesi eklenmemeli');
+const assetsIgnore = fs.readFileSync(path.join(root, '.assetsignore'), 'utf8');
+if (!assetsIgnore.includes('!/robots.txt') || !assetsIgnore.includes('!/sitemap.xml')) {
+  fail('.assetsignore: robots.txt ve sitemap.xml dağıtım izinleri eksik');
 }
 
 for (const project of Object.values(siteData.projects)) {
