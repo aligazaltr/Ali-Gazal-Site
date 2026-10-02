@@ -88,7 +88,8 @@
 
     const summary = document.querySelector('[data-phase-summary]');
     const current = siteData.phases[currentIndex];
-    if (summary) summary.textContent = `Güncel aşama: ${current.label}. Sonraki aşamalar tamamlanmış sayılmıyor.`;
+    if (summary) summary.textContent = project.display?.phaseSummary
+      || `Güncel aşama: ${current.label}. Sonraki aşamalar tamamlanmış sayılmıyor.`;
   }
 
   function setupShare() {
@@ -303,7 +304,7 @@
     });
 
     section.append(list);
-    mount.append(section);
+    mount.replaceChildren(section);
   }
 
   function localDateValue(date = new Date()) {

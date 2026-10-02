@@ -238,7 +238,7 @@ p {
   place-items: center;
   border-radius: 0.2rem;
   background: var(--orange);
-  color: #160b03;
+  color: var(--bg);
   font-size: 0.72rem;
   font-weight: 950;
   letter-spacing: -0.04em;
