@@ -30,9 +30,12 @@ function fileExists(reference) {
 
 function metaContent(html, attribute, value) {
   const escaped = value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-  const pattern = new RegExp(`<meta\\s+[^>]*${attribute}=["']${escaped}["'][^>]*content=["']([^"']*)["'][^>]*>`, 'i');
-  const reversed = new RegExp(`<meta\\s+[^>]*content=["']([^"']*)["'][^>]*${attribute}=["']${escaped}["'][^>]*>`, 'i');
-  return html.match(pattern)?.[1] || html.match(reversed)?.[1] || '';
+  const selector = new RegExp(`\\b${attribute}=["']${escaped}["']`, 'i');
+  const tag = [...html.matchAll(/<meta\b[^>]*>/gi)].find(match => selector.test(match[0]))?.[0];
+  const content = tag?.match(/\scontent=(?:"([^"]*)"|'([^']*)')/i);
+  return (content?.[1] ?? content?.[2] ?? '')
+    .replace(/&quot;/g, '"').replace(/&apos;/g, "'")
+    .replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&');
 }
 
 function textContent(html) {
