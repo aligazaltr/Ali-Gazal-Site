@@ -25,13 +25,16 @@ Ana dosyalar:
 - site.js                 Ortak veri alanları, kapak ve okuma ilerlemesi
 - project.js              Aşama, paylaşım ve yayın kapılı proje araçları
 - scripts/check-site.js   Bağımlılıksız statik bütünlük denetimi
+- scripts/sync-site.js    Merkezî veriyi statik HTML'ye aktarır
 - wrangler.jsonc          Cloudflare statik varlık dağıtımı
 
 Yerel önizleme:
   python3 -m http.server 8123
 
 Kontrol:
+  node scripts/sync-site.js --check
   node scripts/check-site.js
+  node --test scripts/test-publishing.js
   node --check site-data.js
   node --check site.js
   node --check project.js
@@ -52,8 +55,10 @@ Yayın kapıları:
   ile veri koşullarının ikisi de sağlanmadan görünmez.
 - Kapalı özelliklerin yayımlanmamış içeriği site-data.js veya HTML içine
   konmaz. HTML hidden gerçek gizlilik sayılmaz.
-- Meta başlıkları crawler uyumluluğu için HTML'de statiktir; yayın devrinde
-  site-data.js ile birlikte güncellenir ve check-site.js ile URL'ler denetlenir.
+- Projenin metin, aşama, kapak, video paneli ve paylaşım meta alanları
+  crawler ve JavaScript kapalı kullanım için HTML'de de bulunur.
+  site-data.js güncellendikten sonra node scripts/sync-site.js çalıştırılır.
+  check-site.js veri/HTML ayrışmasını reddeder. HTML'leri elle eşleştirme gerekmez.
 
 DENEY AŞAMALARI
 
@@ -102,13 +107,18 @@ Video yayımlandığında aşağıdaki doğrulanmış bilgiler yeterlidir:
 - Proje slug'ı
 - Final video başlığı ve tam YouTube URL'si
 - Yayın tarihi
+- Video süresi (saniye)
 - Kendin Dene rehberi
 - Video bölümleri ve kesin zaman kodları
 - Kendin Dene özelliğini açma onayı
 
 Final kapak, kamuya açık ilkeler, kısa sonuç ve Kanıt Defteri tamamlandı.
-Video yayımlandığında phase=published, video.published=true ve
-features.videoTimeline=true yalnız yukarıdaki gerçek verilerle açılır.
+Video yayımlandığında site-data.js içinde video.published=true, video.url,
+video.title, publishedAt, video.durationSeconds ve video.chapters güncellenir.
+Doğrulanmış bölümler varsa features.videoTimeline=true yapılır. Görünen yayın
+metinleri ve phase=published bu bayrağı izler; tarih otomatik yayın başlatmaz.
+Ardından node scripts/sync-site.js ve node scripts/check-site.js çalıştırılır.
+Kendin Dene ayrı onay ve gerçek rehber olmadan kapalı kalır.
 
 Doğrulanmış varsayılan üretim adresi:
 https://ali-gazal-site.aliicerikmedya.workers.dev/

@@ -44,6 +44,22 @@ const AG_SITE_DATA = (() => {
         lastUpdated: '2026-09-27',
         publishedAt: null,
         searchable: true,
+        seo: {
+          title: 'Machiavelli / Prens Deneyi: 7 Günlük Sonuç | Ali Gazal',
+          description: 'Yedi günlük deney tamamlandı. En güçlü sonuç fiilî gerçeğe bakma ilkesiydi; diğer iki ilke etkili oldu ancak kurallar her olayda eksiksiz uygulanmadı.'
+        },
+        display: {
+          homeHeading: 'Deney tamamlandı, video hazırlanıyor.',
+          homeCardHeading: 'Üç düşüncenin yedi günlük sonucu incelendi.',
+          homeCardState: 'Kısa sonuç ve kayıt sınırları yayımlandı; video henüz hazırlanıyor.',
+          homeSharingDescription: 'Gerçek hayat deneyleri, yöntem ve kanıt sınırları. Machiavelli / Prens deneyi tamamlandı; video hazırlanıyor.',
+          projectLeadState: 'Deney tamamlandı; video hazırlanıyor.',
+          coverCaption: 'Final video kapağı · Video henüz yayımlanmadı',
+          phaseSummary: 'Güncel aşama: İnceleniyor. Video henüz yayımlanmış sayılmıyor.',
+          truthState: 'Yedi takvim günlük deney tamamlandı. Aşağıdaki sonuç ve kayıtlar öz-bildirim sınırlarıyla yayımlandı; ayrıntılı hikâye videoya bırakıldı. Video henüz yayımlanmadı.',
+          videoPanelTitle: 'Video henüz yayımlanmadı.',
+          videoPanelDescription: 'Deney tamamlandı. Ana çekim ve kurgu sonrasında yalnızca gerçek YouTube bağlantısı eklenecek.'
+        },
         principles: [
           {
             id: 'fiili-gercek',
@@ -65,6 +81,7 @@ const AG_SITE_DATA = (() => {
           published: false,
           url: '',
           title: '',
+          durationSeconds: null,
           thumbnail: {
             src: 'machiavelli-prens-7-gun-kapak.jpg',
             alt: 'Ali Gazal ve Machiavelli’nin yer aldığı, “İşe yaradı mı?” ve “7 Gün” yazılı Machiavelli deneyi kapağı.',
@@ -157,6 +174,32 @@ const AG_SITE_DATA = (() => {
       }
     }
   };
+
+  // Publication copy follows the release flag, never the calendar. Keep the
+  // fallback HTML in sync with: node scripts/sync-site.js
+  Object.values(data.projects).forEach(project => {
+    if (project.video.published) {
+      project.phase = 'published';
+      project.statusLabel = 'Deney tamamlandı · video yayında';
+      project.seo.title = `${project.video.title} | Ali Gazal`;
+      project.sharing.title = project.seo.title;
+      Object.assign(project.display, {
+        homeHeading: 'Deney tamamlandı, video yayında.',
+        homeCardState: 'Kısa sonuç ve kayıt sınırları yayımlandı; deneyin hikâyesi YouTube’da.',
+        homeSharingDescription: 'Gerçek hayat deneyleri, yöntem ve kanıt sınırları. Machiavelli / Prens deneyinin videosu YouTube’da.',
+        projectLeadState: 'Deney tamamlandı; video YouTube’da yayımlandı.',
+        coverCaption: 'Final video kapağı · Video YouTube’da yayımlandı',
+        phaseSummary: 'Güncel aşama: Video yayında.',
+        truthState: 'Yedi takvim günlük deney tamamlandı. Aşağıdaki sonuç ve kayıtlar öz-bildirim sınırlarıyla yayımlandı; ayrıntılı hikâye YouTube videosunda.',
+        videoPanelTitle: project.video.title,
+        videoPanelDescription: 'Video YouTube’da yayımlandı. Deneyin hikâyesini kanaldaki videoda izleyebilirsin.'
+      });
+    }
+    project.seo.description += project.video.published
+      ? ' Video YouTube’da yayımlandı.'
+      : ' Video hazırlanıyor.';
+    project.sharing.description = project.seo.description;
+  });
 
   function deepFreeze(value) {
     if (!value || typeof value !== 'object' || Object.isFrozen(value)) return value;

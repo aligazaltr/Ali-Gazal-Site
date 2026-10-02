@@ -3,6 +3,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const siteData = require('../site-data.js');
+const { changedFiles, validVideo } = require('./sync-site.js');
 
 const root = path.resolve(__dirname, '..');
 const htmlFiles = fs.readdirSync(root).filter(file => file.endsWith('.html')).sort();
@@ -11,6 +12,12 @@ const notices = [];
 
 function fail(message) {
   errors.push(message);
+}
+
+try {
+  changedFiles().forEach(({ file }) => fail(`${file}: merkezî veriyle eşleşmiyor; node scripts/sync-site.js çalıştır`));
+} catch (error) {
+  fail(error.message);
 }
 
 function fileExists(reference) {
@@ -40,6 +47,8 @@ function textContent(html) {
 
 for (const file of htmlFiles) {
   const html = fs.readFileSync(path.join(root, file), 'utf8');
+  if (!html.includes('<html lang="tr"')) fail(`${file}: Türkçe sayfa dili eksik`);
+  if ((html.match(/<h1\b/g) || []).length !== 1) fail(`${file}: tek bir h1 gerekli`);
   const ids = [...html.matchAll(/\sid=["']([^"']+)["']/g)].map(match => match[1]);
   const duplicates = ids.filter((id, index) => ids.indexOf(id) !== index);
   [...new Set(duplicates)].forEach(id => fail(`${file}: yinelenen id="${id}"`));
@@ -73,7 +82,8 @@ for (const file of htmlFiles) {
 const canonicalExpectations = {
   'index.html': `${siteData.canonicalOrigin}/`,
   'rehberler.html': `${siteData.canonicalOrigin}/rehberler`,
-  'machiavelli.html': `${siteData.canonicalOrigin}/machiavelli`
+  'machiavelli.html': `${siteData.canonicalOrigin}/machiavelli`,
+  'hakkimda.html': `${siteData.canonicalOrigin}/hakkimda`
 };
 
 for (const [file, expected] of Object.entries(canonicalExpectations)) {
@@ -84,6 +94,12 @@ for (const [file, expected] of Object.entries(canonicalExpectations)) {
 
   const ogUrl = metaContent(html, 'property', 'og:url');
   if (ogUrl !== expected) fail(`${file}: og:url beklenen adresle eşleşmiyor (${ogUrl || 'eksik'})`);
+  ['og:title', 'og:description', 'og:site_name', 'og:locale'].forEach(property => {
+    if (!metaContent(html, 'property', property)) fail(`${file}: ${property} eksik`);
+  });
+  ['description', 'twitter:card', 'twitter:title', 'twitter:description'].forEach(name => {
+    if (!metaContent(html, 'name', name)) fail(`${file}: ${name} eksik`);
+  });
 }
 
 const machiavelliHtml = fs.readFileSync(path.join(root, 'machiavelli.html'), 'utf8');
@@ -98,11 +114,11 @@ if (/seven-day-guide|takip-promptu|gunluk-sablon/.test(machiavelliHtml)) {
 }
 
 const machiavelli = siteData.projects.machiavelli;
-if (machiavelli.phase !== 'reviewing') fail('machiavelli: güncel aşama reviewing / İnceleniyor olmalı');
-if (machiavelli.statusLabel !== 'Deney tamamlandı · video hazırlanıyor') {
+if (!machiavelli.video.published && machiavelli.phase !== 'reviewing') fail('machiavelli: video öncesi aşama reviewing / İnceleniyor olmalı');
+if (!machiavelli.video.published && machiavelli.statusLabel !== 'Deney tamamlandı · video hazırlanıyor') {
   fail('machiavelli: görünür durum metni güncel değil');
 }
-if (machiavelli.completedAt !== '2026-09-27' || machiavelli.lastUpdated !== '2026-09-27') {
+if (machiavelli.completedAt !== '2026-09-27' || !/^\d{4}-\d{2}-\d{2}$/.test(machiavelli.lastUpdated) || machiavelli.lastUpdated < machiavelli.completedAt) {
   fail('machiavelli: tamamlanma ve son güncelleme tarihleri eksik veya yanlış');
 }
 if (!Array.isArray(machiavelli.principles) || machiavelli.principles.length !== 3) {
@@ -121,11 +137,11 @@ if (!machiavelli.result.published || !machiavelliText.includes(machiavelli.resul
 if (!machiavelli.features.evidenceLedger || !machiavelli.evidence.published || machiavelli.evidence.entries.length !== 4) {
   fail('machiavelli: Kanıt Defteri yalnız dört onaylı kayıtla açık olmalı');
 }
-if (machiavelli.video.published || machiavelli.video.url || machiavelli.video.title || machiavelli.video.chapters.length) {
+if (!machiavelli.video.published && (machiavelli.video.url || machiavelli.video.title || machiavelli.video.chapters.length || machiavelli.publishedAt || machiavelli.video.durationSeconds)) {
   fail('machiavelli: video yayımlanmadan video alanları kapalı ve boş kalmalı');
 }
-if (machiavelli.features.videoTimeline || machiavelli.features.tryIt || machiavelli.tryIt.enabled) {
-  fail('machiavelli: video zaman çizelgesi ve Kendin Dene bugün kapalı kalmalı');
+if (!machiavelli.video.published && (machiavelli.features.videoTimeline || machiavelli.features.tryIt || machiavelli.tryIt.enabled)) {
+  fail('machiavelli: video öncesi zaman çizelgesi ve Kendin Dene kapalı kalmalı');
 }
 
 const expectedImage = `${siteData.canonicalOrigin}/${machiavelli.video.thumbnail.src}`;
@@ -192,12 +208,21 @@ for (const project of Object.values(siteData.projects)) {
     fail(`${project.id}: gelecekteki arama için topics/searchable alanları eksik`);
   }
   if (project.video.published) {
-    if (!/^https:\/\/(?:www\.|m\.)?youtube\.com\//.test(project.video.url) && !/^https:\/\/youtu\.be\//.test(project.video.url)) {
+    if (!validVideo(project.video)) {
       fail(`${project.id}: yayımlanmış video için geçerli YouTube URL'si gerekli`);
     }
     if (!project.video.title) fail(`${project.id}: yayımlanmış video başlığı eksik`);
-  } else if (project.video.url || project.video.title || project.video.chapters.length) {
-    fail(`${project.id}: video yayımlanmadan URL, başlık veya zaman kodu istemci verisine konmamalı`);
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(project.publishedAt || '')) fail(`${project.id}: yayın tarihi eksik`);
+    if (!Number.isInteger(project.video.durationSeconds) || project.video.durationSeconds <= 0) fail(`${project.id}: geçerli video süresi eksik`);
+    if (project.phase !== 'published') fail(`${project.id}: yayımlanmış video aşaması tutarsız`);
+    project.video.chapters.forEach((chapter, index, chapters) => {
+      if (!chapter.label || !Number.isInteger(chapter.seconds) || chapter.seconds < 0
+        || chapter.seconds >= project.video.durationSeconds || (index && chapter.seconds <= chapters[index - 1].seconds)) {
+        fail(`${project.id}: bölüm zamanları artmalı ve video süresi içinde kalmalı`);
+      }
+    });
+  } else if (project.video.url || project.video.title || project.video.chapters.length || project.publishedAt || project.video.durationSeconds) {
+    fail(`${project.id}: video yayımlanmadan URL, başlık, tarih, süre veya zaman kodu istemci verisine konmamalı`);
   }
   if (project.video.thumbnail.src) {
     if (!project.video.thumbnail.alt) fail(`${project.id}: kapak alternatif metni eksik`);

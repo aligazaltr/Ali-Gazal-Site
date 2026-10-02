@@ -15,7 +15,9 @@
     document.querySelectorAll('[data-project-field]').forEach(element => {
       const project = projectFor(element);
       const value = project && readPath(project, element.dataset.projectField);
-      if (typeof value === 'string' && value.trim()) element.textContent = value;
+      if ((typeof value === 'string' && value.trim()) || typeof value === 'number') {
+        element.textContent = String(value);
+      }
     });
   }
 
@@ -25,7 +27,7 @@
       const thumbnail = project?.video?.thumbnail;
       if (!thumbnail?.src || !thumbnail.alt) return;
 
-      const image = document.createElement('img');
+      const image = container.querySelector('.project-cover') || document.createElement('img');
       image.className = 'project-cover';
       image.src = thumbnail.src;
       image.alt = thumbnail.alt;
@@ -34,7 +36,7 @@
       image.loading = container.dataset.coverPriority === 'high' ? 'eager' : 'lazy';
       if (container.dataset.coverPriority === 'high') image.fetchPriority = 'high';
       image.decoding = 'async';
-      container.prepend(image);
+      if (!image.isConnected) container.prepend(image);
     });
   }
 
