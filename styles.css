@@ -438,31 +438,10 @@ p {
   background: var(--orange-soft);
 }
 
-.hero-dossier {
-  position: relative;
-  isolation: isolate;
-  min-width: 0;
-  padding: 1.1rem;
-  border: 1px solid var(--orange-line);
-  border-radius: var(--radius);
-  background: linear-gradient(150deg, var(--note-wash), transparent 60%), var(--surface);
-  box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.12);
-}
-.hero-dossier::before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  inset: 0.7rem -0.55rem -0.65rem 0.7rem;
-  border: 1px solid var(--line-strong);
-  border-radius: var(--radius);
-  background: var(--bg-raised);
-  transform: rotate(2deg);
-  pointer-events: none;
-}
-.hero-dossier .note-topline { padding: 0.15rem 0.15rem 0.95rem; font-size: 0.65rem; }
-.dossier-cover { display: block; margin-top: 1rem; border-radius: 0.2rem; }
+.hero-dossier { min-width: 0; }
+.dossier-cover { display: block; border-radius: 0.2rem; }
 .dossier-cover .project-cover { border-radius: 0.2rem; }
-.dossier-copy { padding: 1.3rem 0.3rem 0.35rem; }
+.dossier-copy { padding: 1.3rem 0 0; }
 .dossier-copy h2 { margin-bottom: 0.55rem; font-family: var(--literary); font-size: clamp(1.8rem, 3vw, 2.4rem); font-weight: 400; letter-spacing: -0.04em; line-height: 1.1; }
 .dossier-copy > p:not(.note-label) { margin-bottom: 0.85rem; color: var(--muted-strong); font-size: 0.95rem; }
 .dossier-copy .status { margin-top: 0.65rem; font-size: 0.72rem; letter-spacing: 0.035em; }
@@ -1892,8 +1871,6 @@ tbody th {
   .hero-copy .lead { font-size: 1rem; }
   .hero .actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: 1.25rem; }
   .hero .actions .button { padding-inline: 0.5rem; font-size: 0.85rem; }
-  .hero-dossier { padding: 0.8rem; }
-  .hero-dossier::before { inset: 0.5rem -0.25rem -0.5rem 0.5rem; transform: rotate(1deg); }
   .scroll-cue { margin-top: 0.5rem; }
   .project-hero h1 { font-size: clamp(2.1rem, 9vw, 3.3rem); }
 
