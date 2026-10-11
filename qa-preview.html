@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Görsel kalite kontrolü</title><style>
+body{margin:0;background:#ddd;font:14px system-ui;color:#111}header{padding:12px;display:flex;gap:12px;flex-wrap:wrap;align-items:center}h1{font-size:16px;margin:0}label{display:flex;gap:4px;align-items:center}button,select{font:inherit;min-height:36px}#stage{padding:16px;width:max-content}iframe{display:block;border:0;background:#fff;box-shadow:0 1px 12px #0002}pre{padding:12px;white-space:pre-wrap;max-width:1100px}#summary{font-weight:bold}
+</style></head><body><header><h1>Önizleme kontrolü</h1><label>Sayfa <select id="page"><option value="index.html">Ana sayfa</option><option value="machiavelli.html">Machiavelli</option><option value="rehberler.html">Projeler</option><option value="hakkimda.html">Hakkında</option><option value="marcus-aurelius.html">Marcus</option><option value="404.html">404</option></select></label><label>Genişlik <select id="width"><option>320</option><option>360</option><option>390</option><option>430</option><option>768</option><option selected>1440</option></select></label><label>Tema <select id="theme"><option value="dark">Koyu</option><option value="light">Açık</option></select></label><label>Mod <select id="mode"><option value="normal">Normal</option><option value="reduced">Azaltılmış hareket (JS simülasyonu)</option><option value="nojs">JavaScript kapalı</option></select></label><button id="show">Göster</button><button id="matrix">72 görünümü kontrol et</button><span id="summary" role="status"></span></header><div id="stage"></div><pre id="results"></pre>
+<script>
+const $=id=>document.getElementById(id);let results=[];
+async function show(page=$('page').value,width=+$('width').value,theme=$('theme').value,mode=$('mode').value){
+ localStorage.setItem('ag-theme',theme);const frame=document.createElement('iframe');frame.id='preview';frame.title='Site önizlemesi';frame.width=width;frame.height=1000;frame.setAttribute('sandbox',mode==='nojs'?'allow-same-origin':'allow-scripts allow-same-origin');
+ const loaded=new Promise(resolve=>frame.addEventListener('load',resolve,{once:true}));
+ if(mode==='reduced'){
+  const source=await (await fetch(page)).text();const base=new URL(page,location.href).href;
+  frame.srcdoc=source.replace('<head>',`<head><base ${"href"}="${base}"><script>const originalMatchMedia=window.matchMedia.bind(window);window.matchMedia=q=>q==='(prefers-reduced-motion: reduce)'?{matches:true,media:q,addEventListener(){},removeEventListener(){}}:originalMatchMedia(q);<\/script>`);
+ }else frame.src=page;
+ $('stage').replaceChildren(frame);await loaded;
+ const win=frame.contentWindow,doc=frame.contentDocument;
+ await Promise.all([...doc.images].map(img=>img.decode().catch(()=>{})));
+ await new Promise(resolve=>win.requestAnimationFrame(()=>win.requestAnimationFrame(resolve)));
+ const initialAnimations=doc.getAnimations().length;
+ await new Promise(resolve=>setTimeout(resolve,850));
+ const targets=[...doc.querySelectorAll('button:not([hidden]), .button, .site-header nav a, .card-link, .dossier-link')].filter(el=>el.getClientRects().length);
+ const report={page,width,theme:doc.documentElement.dataset.theme||'system',mode,overflow:doc.documentElement.scrollWidth>win.innerWidth+1,images:[...doc.images].every(img=>img.complete&&img.naturalWidth>0),h1:doc.querySelectorAll('h1').length,smallTargets:targets.filter(el=>el.getBoundingClientRect().height<43).map(el=>el.textContent.trim()),initialAnimations,remainingAnimations:doc.getAnimations().length,hiddenContent:[...doc.querySelectorAll('h1,h2,.project-cover')].some(el=>getComputedStyle(el).opacity==='0'),state:doc.querySelector('[data-project-field="statusLabel"]')?.textContent||null};
+ report.pass=!report.overflow&&report.images&&report.h1===1&&!report.smallTargets.length&&!report.hiddenContent&&!report.remainingAnimations;
+ $('summary').textContent=report.pass?'Kontrol geçti':'Kontrol hatası';$('results').textContent=JSON.stringify(report,null,2);return report;
+}
+$('show').onclick=()=>show().catch(error=>{$('results').textContent=String(error);});
+$('matrix').onclick=async()=>{results=[];$('matrix').disabled=true;try{for(const width of [320,360,390,430,768,1440])for(const theme of ['dark','light'])for(const page of ['index.html','machiavelli.html','rehberler.html','hakkimda.html','marcus-aurelius.html','404.html']){const r=await show(page,width,theme);results.push(r);$('summary').textContent=`${results.length}/72 — ${results.filter(x=>!x.pass).length} hata`;$('results').textContent=JSON.stringify(results,null,2);}}catch(error){$('results').textContent+=String(error);}finally{$('matrix').disabled=false;}};
+show();
+</script></body></html>

@@ -28,7 +28,10 @@ test('current HTML is stable and preserves the unpublished video gate', () => {
     const html = fs.readFileSync(path.join(root, file), 'utf8');
     assert.equal(renderHtml(html), html);
     assert.match(html, /Deney tamamlandı · video hazırlanıyor/);
-    assert.equal((html.match(/<img class="project-cover"/g) || []).length, 1);
+    assert.equal((html.match(/<img class="project-cover"/g) || []).length, file === 'index.html' ? 2 : 1);
+    if (file === 'index.html') {
+      assert.match(html, /class="dossier-cover"[^>]*data-cover-priority="high">\s*<!-- project-cover:start --><img[^>]*loading="eager" fetchpriority="high"/);
+    }
     assert.doesNotMatch(html, /href="https:\/\/(?:www\.)?youtube\.com\/watch/);
   }
 });
