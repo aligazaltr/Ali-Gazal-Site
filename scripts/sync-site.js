@@ -87,6 +87,22 @@ function renderHtml(html, data = siteData) {
       return `<li class="${state}"${attributes}${index === currentIndex ? ' aria-current="step"' : ''}>${contents}</li>`;
     });
 
+  // Public evidence remains readable without JavaScript, from the same registry.
+  const entries = project.features.evidenceLedger && project.evidence.published
+    ? project.evidence.entries.filter(entry => entry.public !== false) : [];
+  const cards = entries.map(entry => {
+    const details = [
+      ['İlgili ilke', entry.principle], ['Kayıt zamanı', entry.recordedAt],
+      ['Desteklediği', entry.supports], ['Kanıtlamadığı', entry.doesNotProve]
+    ].filter(([, value]) => value).map(([label, value]) =>
+      `<div><dt>${label}</dt><dd>${escape(value)}</dd></div>`).join('');
+    return `<article class="evidence-card"><div class="evidence-meta"><span>${escape(entry.dayLabel || entry.dateLabel || 'Kayıt')}</span><span class="evidence-type">${escape(entry.evidenceType)}</span></div><h3>${escape(entry.title)}</h3><p>${escape(entry.summary)}</p><dl class="evidence-details">${details}</dl></article>`;
+  }).join('\n            ');
+  html = html.replace(/<section\b[^>]*\bdata-evidence-ledger[^>]*>[\s\S]*?<\/section>/,
+    () => entries.length
+      ? `<section id="kanit-defteri" data-evidence-ledger class="feature-panel evidence-ledger" aria-labelledby="kanit-defteri-baslik">\n            <p class="eyebrow">KANIT DEFTERİ</p>\n            <h2 id="kanit-defteri-baslik">Kayıt neyi gösteriyor, neyi göstermiyor?</h2>\n            <p class="feature-intro">B ve C etiketleri kayıt zamanını gösterir; olayların bağımsız olarak kanıtlandığı anlamına gelmez.</p>\n            <div class="evidence-list">${cards}</div>\n          </section>`
+      : '<section id="kanit-defteri" data-evidence-ledger aria-label="Kanıt Defteri"></section>');
+
   const video = project.video;
   const videoLink = video.published
     ? `<a class="button primary" href="${escape(video.url)}" target="_blank" rel="noopener noreferrer">YouTube’da videoyu izle ↗</a>`

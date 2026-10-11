@@ -59,6 +59,20 @@ test('a release with a missing URL cannot generate public HTML', () => {
   assert.throws(() => renderHtml(fs.readFileSync(path.join(root, 'machiavelli.html'), 'utf8'), released), /yayın için/);
 });
 
+test('static evidence includes public records and respects publication gates', () => {
+  const source = fs.readFileSync(path.join(root, 'machiavelli.html'), 'utf8');
+  assert.equal((source.match(/class="evidence-card"/g) || []).length, 4);
+  for (const entry of data.projects.machiavelli.evidence.entries) {
+    assert.ok(source.includes(entry.title));
+    assert.ok(source.includes(entry.doesNotProve));
+  }
+  const fixture = JSON.parse(JSON.stringify(data));
+  fixture.projects.machiavelli.evidence.entries[0].public = false;
+  assert.equal((renderHtml(source, fixture).match(/class="evidence-card"/g) || []).length, 3);
+  fixture.projects.machiavelli.evidence.published = false;
+  assert.doesNotMatch(renderHtml(source, fixture), /class="evidence-card"/);
+});
+
 test('channel, foreign host and insecure URLs cannot pass as video links', () => {
   for (const url of ['https://www.youtube.com/@aligazaltr', 'https://youtube.com.evil.example/watch?v=TESTFIXTURE', 'http://youtu.be/TESTFIXTURE']) {
     assert.equal(Boolean(validVideo({ title: 'Test', url })), false);
