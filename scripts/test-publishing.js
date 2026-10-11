@@ -28,7 +28,10 @@ test('current HTML is stable and preserves the unpublished video gate', () => {
     const html = fs.readFileSync(path.join(root, file), 'utf8');
     assert.equal(renderHtml(html), html);
     assert.match(html, /Deney tamamlandı · video hazırlanıyor/);
-    assert.equal((html.match(/<img class="project-cover"/g) || []).length, 1);
+    assert.equal((html.match(/<img class="project-cover"/g) || []).length, file === 'index.html' ? 2 : 1);
+    if (file === 'index.html') {
+      assert.match(html, /class="dossier-cover"[^>]*data-cover-priority="high">\s*<!-- project-cover:start --><img[^>]*loading="eager" fetchpriority="high"/);
+    }
     assert.doesNotMatch(html, /href="https:\/\/(?:www\.)?youtube\.com\/watch/);
   }
 });
@@ -54,6 +57,20 @@ test('a release with a missing URL cannot generate public HTML', () => {
   const released = JSON.parse(JSON.stringify(releaseFixture()));
   released.projects.machiavelli.video.url = '';
   assert.throws(() => renderHtml(fs.readFileSync(path.join(root, 'machiavelli.html'), 'utf8'), released), /yayın için/);
+});
+
+test('static evidence includes public records and respects publication gates', () => {
+  const source = fs.readFileSync(path.join(root, 'machiavelli.html'), 'utf8');
+  assert.equal((source.match(/class="evidence-card"/g) || []).length, 4);
+  for (const entry of data.projects.machiavelli.evidence.entries) {
+    assert.ok(source.includes(entry.title));
+    assert.ok(source.includes(entry.doesNotProve));
+  }
+  const fixture = JSON.parse(JSON.stringify(data));
+  fixture.projects.machiavelli.evidence.entries[0].public = false;
+  assert.equal((renderHtml(source, fixture).match(/class="evidence-card"/g) || []).length, 3);
+  fixture.projects.machiavelli.evidence.published = false;
+  assert.doesNotMatch(renderHtml(source, fixture), /class="evidence-card"/);
 });
 
 test('channel, foreign host and insecure URLs cannot pass as video links', () => {
