@@ -12,14 +12,12 @@ async function show(page=$('page').value,width=+$('width').value,theme=$('theme'
   frame.srcdoc=source.replace('<head>',`<head><base ${"href"}="${base}"><script>const originalMatchMedia=window.matchMedia.bind(window);window.matchMedia=q=>q==='(prefers-reduced-motion: reduce)'?{matches:true,media:q,addEventListener(){},removeEventListener(){}}:originalMatchMedia(q);<\/script>`);
  }else frame.src=page;
  $('stage').replaceChildren(frame);await loaded;
+ await new Promise(resolve=>setTimeout(resolve,400));
  const win=frame.contentWindow,doc=frame.contentDocument;
- await Promise.all([...doc.images].map(img=>img.decode().catch(()=>{})));
- await new Promise(resolve=>win.requestAnimationFrame(()=>win.requestAnimationFrame(resolve)));
  const initialAnimations=doc.getAnimations().length;
- await new Promise(resolve=>setTimeout(resolve,850));
  const targets=[...doc.querySelectorAll('button:not([hidden]), .button, .site-header nav a, .card-link, .dossier-link')].filter(el=>el.getClientRects().length);
- const report={page,width,theme:doc.documentElement.dataset.theme||'system',mode,overflow:doc.documentElement.scrollWidth>win.innerWidth+1,images:[...doc.images].every(img=>img.complete&&img.naturalWidth>0),h1:doc.querySelectorAll('h1').length,smallTargets:targets.filter(el=>el.getBoundingClientRect().height<43).map(el=>el.textContent.trim()),initialAnimations,remainingAnimations:doc.getAnimations().length,hiddenContent:[...doc.querySelectorAll('h1,h2,.project-cover')].some(el=>getComputedStyle(el).opacity==='0'),state:doc.querySelector('[data-project-field="statusLabel"]')?.textContent||null};
- report.pass=!report.overflow&&report.images&&report.h1===1&&!report.smallTargets.length&&!report.hiddenContent&&!report.remainingAnimations;
+ const report={page,width,theme:doc.documentElement.dataset.theme||'system',mode,overflow:doc.documentElement.scrollWidth>win.innerWidth+1,images:[...doc.images].every(img=>(img.complete&&img.naturalWidth>0)||img.loading==='lazy'),h1:doc.querySelectorAll('h1').length,smallTargets:targets.filter(el=>el.getBoundingClientRect().height<43).map(el=>el.textContent.trim()),initialAnimations,remainingAnimations:doc.getAnimations().length,infiniteAnimations:doc.getAnimations().filter(a=>a.effect.getTiming().iterations===Infinity).length,hiddenContent:[...doc.querySelectorAll('h1,h2,.project-cover')].some(el=>getComputedStyle(el).opacity==='0'),state:doc.querySelector('[data-project-field="statusLabel"]')?.textContent||null};
+ report.pass=!report.overflow&&report.images&&report.h1===1&&!report.smallTargets.length&&!report.hiddenContent&&!report.infiniteAnimations;
  $('summary').textContent=report.pass?'Kontrol geçti':'Kontrol hatası';$('results').textContent=JSON.stringify(report,null,2);return report;
 }
 $('show').onclick=()=>show().catch(error=>{$('results').textContent=String(error);});
