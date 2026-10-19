@@ -4,6 +4,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const siteData = require('../site-data.js');
 const { changedFiles, validVideo } = require('./sync-site.js');
+const { changes: archiveChanges } = require('./build-archive.js');
 
 const root = path.resolve(__dirname, '..');
 const htmlFiles = fs.readdirSync(root).filter(file => file.endsWith('.html')).sort();
@@ -15,6 +16,7 @@ function fail(message) {
 }
 
 try {
+  archiveChanges().forEach(({ file }) => fail(`${file}: arşiv çıktısı güncel değil; node scripts/build-archive.js çalıştır`));
   changedFiles().forEach(({ file }) => fail(`${file}: merkezî veriyle eşleşmiyor; node scripts/sync-site.js çalıştır`));
 } catch (error) {
   fail(error.message);
@@ -86,6 +88,7 @@ const canonicalExpectations = {
   'index.html': `${siteData.canonicalOrigin}/`,
   'rehberler.html': `${siteData.canonicalOrigin}/rehberler`,
   'machiavelli.html': `${siteData.canonicalOrigin}/machiavelli`,
+  'dusunce-arsivi.html': `${siteData.canonicalOrigin}/dusunce-arsivi`,
   'hakkimda.html': `${siteData.canonicalOrigin}/hakkimda`
 };
 

@@ -43,7 +43,7 @@ Kontrol:
 MERKEZÎ PROJE VERİSİ
 
 Yeni proje veya yayın güncellemesi site-data.js içindeki projects kaydından
-yönetilir. Arama arayüzü henüz yoktur; title, slug, summary, topics, status,
+yönetilir. Proje aramasının ayrı arayüzü henüz yoktur; title, slug, summary, topics, status,
 phase, duration, source, publishedAt ve searchable alanları ileride arama ve
 filtreleme eklenebilmesi için şimdiden standartlaştırılmıştır.
 
@@ -125,3 +125,19 @@ https://ali-gazal-site.aliicerikmedya.workers.dev/
 
 Özel alan adı bağlanırsa canonical ve Open Graph adresleri birlikte
 güncellenmelidir.
+
+DÜŞÜNCE ARŞİVİ
+
+/dusunce-arsivi mevcut siteye bağlı tek bir arşiv bölümüdür. Yazar, kitap,
+alıntı ve özgün düşünce kayıtları content/archive.json içinde yönetilir.
+Başlangıç: 3 yazar, 3 kitap, 15 boş taslak; doğrulanmış alıntı henüz yok.
+Taslaklar web dağıtımına ve archive-data.js dosyasına alınmaz. Mevcut
+.assetsignore izin listesi korunmuştur. Video kaynağı site-data.js olarak kalır.
+
+İçerik güncellemesinden sonra:
+  node scripts/sync-site.js
+  node scripts/build-archive.js
+  node scripts/check-site.js
+  node --test scripts/test-*.js
+
+Veri modeli, içerik doğrulama ve yayın adımları: docs/dusunce-arsivi.md
