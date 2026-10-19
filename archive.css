@@ -82,6 +82,7 @@
 .archive-principle-grid h3 { font-family: var(--literary); font-size: 1.5rem; font-weight: 400; }
 .archive-principle-grid p { font-size: 0.88rem; color: var(--muted); line-height: 1.7; }
 .archive-project { display: grid; grid-template-columns: 1fr 16rem; align-items: center; gap: 2rem; border-top: 1px solid var(--line); padding-top: 2rem; }
+.archive-project-text { grid-template-columns: 1fr; }
 .archive-project h3 { font-size: 1.4rem; letter-spacing: -0.03em; }
 .archive-project p:not(.eyebrow) { color: var(--muted); font-size: 0.9rem; }
 .archive-project img, .archive-video img { width: 100%; height: auto; display: block; border-radius: 0.2rem; }

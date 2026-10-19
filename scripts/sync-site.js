@@ -35,11 +35,43 @@ function secondsLabel(seconds) {
   return hours ? `${hours}:${String(minutes).padStart(2, '0')}:${remainder}` : `${minutes}:${remainder}`;
 }
 
+const researchStates = { completed: 'Tamamlandı', 'in-progress': 'Devam ediyor', 'not-started': 'Henüz başlamadı' };
+function validateResearch(project) {
+  if (!project.research) return;
+  const stages = project.research.stages;
+  if (!Array.isArray(stages) || stages.length !== 4 || new Set(stages.map(stage => stage.id)).size !== 4
+    || stages.some(stage => !/^[a-z0-9-]+$/.test(stage.id) || !researchStates[stage.status] || !stage.title || !stage.description || !stage.goal)
+    || stages.filter(stage => stage.status === 'in-progress').length > 1) {
+    throw new Error(`${project.id}: dört geçerli araştırma aşaması gerekli`);
+  }
+  let unfinished = false;
+  for (const stage of stages) {
+    if (unfinished && stage.status !== 'not-started') throw new Error(`${project.id}: araştırma aşamaları sırayla ilerlemeli`);
+    if (stage.status !== 'completed') unfinished = true;
+  }
+  if ((project.video.productionStatus === 'preparing' || project.video.published) && !stages.every(stage => stage.status === 'completed')) {
+    throw new Error(`${project.id}: video hazırlığı öncesinde dört araştırma aşaması tamamlanmalı`);
+  }
+}
+
+function renderProjectPreview(project) {
+  if (!project) throw new Error('Önizleme için proje bulunamadı');
+  validateResearch(project);
+  const label = project.video.published ? 'VİDEO YAYINDA' : project.video.productionStatus === 'preparing' ? 'VİDEO HAZIRLIĞI' : 'SIRADAKİ PROJEMİZ';
+  return `<div class="research-preview" data-project="${escape(project.id)}"><div><p class="eyebrow">${label}</p><p class="research-source">${escape(project.shortTitle)}</p><h2 id="siradaki-proje">${escape(project.title)}</h2><p class="research-description">${escape(project.summary)}</p><a class="text-link" href="${escape(project.slug)}.html">Araştırma dosyasını incele <span aria-hidden="true">→</span></a></div><aside class="research-preview-state" aria-label="Projenin güncel durumu"><p class="eyebrow">ŞİMDİ NEREDEYİZ?</p><p class="research-current">${escape(project.display.currentStage)}</p><p>${escape(project.statusLabel)}</p><p>${escape(project.research.publicationLabel)}</p><small>${escape(project.duration.label)} · ${escape(project.display.experimentState)}</small></aside></div>`;
+}
+
+function renderResearchStages(project) {
+  validateResearch(project);
+  return project.research.stages.map((stage, i) => `<li class="research-stage is-${stage.status}" data-research-stage="${escape(stage.id)}"${stage.status === 'in-progress' ? ' aria-current="step"' : ''}><span class="research-number" aria-hidden="true">${String(i + 1).padStart(2, '0')}</span><div><h3>${escape(stage.title)}</h3><p>${escape(stage.description)}</p><p class="research-goal"><strong>Hedef:</strong> ${escape(stage.goal)}</p></div><span class="research-state">${researchStates[stage.status]}</span></li>`).join('\n');
+}
+
 function renderHtml(html, data = siteData) {
   const id = html.match(/<html\b[^>]*data-project="([^"]+)"/)?.[1];
   if (!id) return html;
   const project = data.projects[id];
   if (!project) throw new Error(`Bilinmeyen proje: ${id}`);
+  validateResearch(project);
   if (project.video.published && (!validVideo(project.video)
     || !/^\d{4}-\d{2}-\d{2}$/.test(project.publishedAt || '')
     || !Number.isInteger(project.video.durationSeconds) || project.video.durationSeconds <= 0)) {
@@ -119,8 +151,12 @@ function renderHtml(html, data = siteData) {
     }).join('');
     timeline = `<section class="feature-panel video-timeline" id="video-zaman-cizelgesi" aria-labelledby="video-zaman-cizelgesi-baslik"><p class="eyebrow">VİDEO ZAMAN ÇİZELGESİ</p><h2 id="video-zaman-cizelgesi-baslik">Doğrudan ilgili bölüme git.</h2><ol class="timeline-list">${links}</ol></section>`;
   }
-  return html.replace(/(<!-- video-timeline:start -->)[\s\S]*?(<!-- video-timeline:end -->)/,
+  html = html.replace(/(<!-- video-timeline:start -->)[\s\S]*?(<!-- video-timeline:end -->)/,
     (_, start, end) => `${start}${timeline}${end}`);
+  html = html.replace(/(<!-- project-preview:([a-z0-9-]+):start -->)[\s\S]*?(<!-- project-preview:\2:end -->)/g,
+    (_, start, id, end) => `${start}${renderProjectPreview(data.projects[id])}${end}`);
+  return html.replace(/(<!-- research-stages:start -->)[\s\S]*?(<!-- research-stages:end -->)/,
+    (_, start, end) => `${start}${renderResearchStages(project)}${end}`);
 }
 
 function changedFiles() {
@@ -147,4 +183,4 @@ if (require.main === module) {
   }
 }
 
-module.exports = { changedFiles, renderHtml, validVideo };
+module.exports = { changedFiles, renderHtml, validVideo, validateResearch };
