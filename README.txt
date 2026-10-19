@@ -36,7 +36,6 @@ Yerel önizleme:
 Kontrol:
   node scripts/sync-site.js --check
   node scripts/check-site.js
-  node --test scripts/test-publishing.js
   node --test scripts/test-*.js
   node --check site-data.js
   node --check site.js

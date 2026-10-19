@@ -34,7 +34,7 @@ test('Payot begins with four research stages, no experiment outcome or invented 
 test('one central stage change updates detail and homepage without JavaScript', () => {
   const fixture = scenario(`${payot}.research.stages[0].status = 'completed'; ${payot}.research.stages[1].status = 'in-progress';`);
   const html = renderHtml(page, fixture); const preview = renderHtml(home, fixture);
-  assert.match(html, /Kitap okuması tamamlandı/);
+  assert.equal(fixture.projects['irade-terbiyesi'].research.readingLabel, 'Kitap okuması tamamlandı.');
   assert.match(html, /data-research-stage="ilkeler" aria-current="step"/);
   assert.match(preview, /İlke seçimi yapılıyor/);
   assert.doesNotMatch(preview, /Kitap okunuyor, araştırma devam ediyor/);

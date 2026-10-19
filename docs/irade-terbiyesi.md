@@ -60,3 +60,23 @@ API, üyelik, ücretli servis veya JavaScript dosyası eklenmedi.
 Değişiklikler `feat/irade-terbiyesi-2026-10-19` dalında incelenir. Cloudflare dal
 önizlemesi üretim yayını değildir. Bu yeni entegrasyon için kullanıcı incelemesi
 ve birleştirme/yayın onayı beklenir; PR #9'un eski onayı yeni kapsamın onayı sayılmaz.
+
+
+## Doğrulama — 19 Ekim 2026
+
+- Mevcut 19 test ve beş araştırma testi: 24/24 geçti. Sırasız aşama ilerlemesi,
+  beşinci aşama veya araştırma bitmeden video hazırlığı/yayını reddediliyor.
+- Yeni sayfa, ana sayfa ve Düşünce Arşivi: 320/360/390/430/768/1440 px iframe
+  genişliği × iki tema = 36/36 düzen kontrolü. Yatay taşma ve 44 px altı
+  düğme/form/ana menü hedefi görülmedi. Masaüstü kaydırma çubuğu iframe'in
+  içerik genişliğinden 15 px alır; bu gerçek Android cihaz testi değildir.
+- Proje → filtrelenmiş beş Payot düşüncesi → proje gidiş dönüşü tarayıcıda denendi.
+- Proje paylaşımının bağlantı kopyalama yedeği gerçek panoya doğru canonical
+  URL'yi yazdı. Cihazın yerel paylaşım menüsü bu ortamda test edilmedi.
+- JavaScript izni olmayan iframe'de dört aşama ve durumları okunuyor; paylaşım
+  düğmesi gizli. Klavye odağında 2 px görünür çizgi doğrulandı.
+- Okuma ilerlemesi görünüyor. Yeni sayfada tema değişimi ve yenilemede korunması
+  denendi. Sayfaya yeni sürekli hareket veya ağır görsel eklenmedi; mevcut
+  azaltılmış hareket kuralları korundu. OS hareket ayarı doğrudan değiştirilmedi.
+- Statik üretim, metadata/canonical ve yerel bağlantı kontrolleri geçti.
+- Geçici QA sayfası son daldan çıkarıldı. Yeni özellik henüz üretime alınmadı.
