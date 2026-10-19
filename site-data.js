@@ -31,6 +31,8 @@ const AG_SITE_DATA = (() => {
         },
         topics: ['kitap', 'felsefe', 'kararlar', 'gerçek hayat deneyi'],
         source: {
+          authorId: 'machiavelli',
+          bookId: 'prens',
           author: 'Niccolò Machiavelli',
           title: 'Prens',
           label: 'Machiavelli · Prens'

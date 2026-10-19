@@ -1,0 +1,731 @@
+{
+  "schemaVersion": 1,
+  "authors": [
+    {
+      "id": "machiavelli",
+      "slug": "niccolo-machiavelli",
+      "name": "Niccolò Machiavelli",
+      "bio": "Prens’in yazarı.",
+      "image": ""
+    },
+    {
+      "id": "jules-payot",
+      "slug": "jules-payot",
+      "name": "Jules Payot",
+      "bio": "İrade Terbiyesi’nin yazarı.",
+      "image": ""
+    },
+    {
+      "id": "marcus-aurelius",
+      "slug": "marcus-aurelius",
+      "name": "Marcus Aurelius",
+      "bio": "Kendime Düşünceler’in yazarı.",
+      "image": ""
+    }
+  ],
+  "books": [
+    {
+      "id": "prens",
+      "slug": "prens",
+      "title": "Prens",
+      "originalTitle": "Il Principe",
+      "originalLanguage": "it",
+      "authorId": "machiavelli",
+      "focus": "Güç, kararlar ve gerçek hayat",
+      "edition": {
+        "translator": "",
+        "publisher": "",
+        "edition": "",
+        "year": null,
+        "isbn": ""
+      }
+    },
+    {
+      "id": "irade-terbiyesi",
+      "slug": "irade-terbiyesi",
+      "title": "İrade Terbiyesi",
+      "originalTitle": "L’Éducation de la volonté",
+      "originalLanguage": "fr",
+      "authorId": "jules-payot",
+      "focus": "İrade, dikkat ve çalışma",
+      "edition": {
+        "translator": "",
+        "publisher": "",
+        "edition": "",
+        "year": null,
+        "isbn": ""
+      }
+    },
+    {
+      "id": "kendime-dusunceler",
+      "slug": "kendime-dusunceler",
+      "title": "Kendime Düşünceler",
+      "originalTitle": "",
+      "originalLanguage": "grc",
+      "authorId": "marcus-aurelius",
+      "focus": "Yaşam, yargılar ve insan",
+      "edition": {
+        "translator": "",
+        "publisher": "",
+        "edition": "",
+        "year": null,
+        "isbn": ""
+      }
+    }
+  ],
+  "categories": [
+    {
+      "id": "irade-disiplin",
+      "name": "İrade ve Disiplin"
+    },
+    {
+      "id": "guc-siyaset",
+      "name": "Güç ve Siyaset"
+    },
+    {
+      "id": "felsefe-yasam",
+      "name": "Felsefe ve Yaşam"
+    },
+    {
+      "id": "basari-calisma",
+      "name": "Başarı ve Çalışma"
+    },
+    {
+      "id": "insan-psikolojisi",
+      "name": "İnsan Psikolojisi"
+    }
+  ],
+  "quotes": [
+    {
+      "id": "prens-01",
+      "slug": "prens-01",
+      "kind": "direct-quote",
+      "title": "",
+      "text": "",
+      "textLanguage": "tr",
+      "authorId": "machiavelli",
+      "bookId": "prens",
+      "categoryIds": [],
+      "tags": [],
+      "meaning": "",
+      "commentary": "",
+      "application": "",
+      "critique": "",
+      "source": {
+        "translator": "",
+        "publisher": "",
+        "edition": "",
+        "year": null,
+        "page": "",
+        "locator": "",
+        "url": "",
+        "language": "tr",
+        "originalText": ""
+      },
+      "verification": {
+        "status": "pending",
+        "checkedBy": "",
+        "checkedAt": null,
+        "evidence": ""
+      },
+      "rights": {
+        "status": "pending",
+        "basis": "",
+        "publicNote": ""
+      },
+      "videoRefs": [],
+      "status": "draft",
+      "publishedAt": null,
+      "editorialNote": "Birebir metin ve baskı kaynağı seçilmedi. Okuma özeti veya kişisel uyarlama doğrudan alıntı sayılmaz."
+    },
+    {
+      "id": "prens-02",
+      "slug": "prens-02",
+      "kind": "direct-quote",
+      "title": "",
+      "text": "",
+      "textLanguage": "tr",
+      "authorId": "machiavelli",
+      "bookId": "prens",
+      "categoryIds": [],
+      "tags": [],
+      "meaning": "",
+      "commentary": "",
+      "application": "",
+      "critique": "",
+      "source": {
+        "translator": "",
+        "publisher": "",
+        "edition": "",
+        "year": null,
+        "page": "",
+        "locator": "",
+        "url": "",
+        "language": "tr",
+        "originalText": ""
+      },
+      "verification": {
+        "status": "pending",
+        "checkedBy": "",
+        "checkedAt": null,
+        "evidence": ""
+      },
+      "rights": {
+        "status": "pending",
+        "basis": "",
+        "publicNote": ""
+      },
+      "videoRefs": [],
+      "status": "draft",
+      "publishedAt": null,
+      "editorialNote": "Birebir metin ve baskı kaynağı seçilmedi. Okuma özeti veya kişisel uyarlama doğrudan alıntı sayılmaz."
+    },
+    {
+      "id": "prens-03",
+      "slug": "prens-03",
+      "kind": "direct-quote",
+      "title": "",
+      "text": "",
+      "textLanguage": "tr",
+      "authorId": "machiavelli",
+      "bookId": "prens",
+      "categoryIds": [],
+      "tags": [],
+      "meaning": "",
+      "commentary": "",
+      "application": "",
+      "critique": "",
+      "source": {
+        "translator": "",
+        "publisher": "",
+        "edition": "",
+        "year": null,
+        "page": "",
+        "locator": "",
+        "url": "",
+        "language": "tr",
+        "originalText": ""
+      },
+      "verification": {
+        "status": "pending",
+        "checkedBy": "",
+        "checkedAt": null,
+        "evidence": ""
+      },
+      "rights": {
+        "status": "pending",
+        "basis": "",
+        "publicNote": ""
+      },
+      "videoRefs": [],
+      "status": "draft",
+      "publishedAt": null,
+      "editorialNote": "Birebir metin ve baskı kaynağı seçilmedi. Okuma özeti veya kişisel uyarlama doğrudan alıntı sayılmaz."
+    },
+    {
+      "id": "prens-04",
+      "slug": "prens-04",
+      "kind": "direct-quote",
+      "title": "",
+      "text": "",
+      "textLanguage": "tr",
+      "authorId": "machiavelli",
+      "bookId": "prens",
+      "categoryIds": [],
+      "tags": [],
+      "meaning": "",
+      "commentary": "",
+      "application": "",
+      "critique": "",
+      "source": {
+        "translator": "",
+        "publisher": "",
+        "edition": "",
+        "year": null,
+        "page": "",
+        "locator": "",
+        "url": "",
+        "language": "tr",
+        "originalText": ""
+      },
+      "verification": {
+        "status": "pending",
+        "checkedBy": "",
+        "checkedAt": null,
+        "evidence": ""
+      },
+      "rights": {
+        "status": "pending",
+        "basis": "",
+        "publicNote": ""
+      },
+      "videoRefs": [],
+      "status": "draft",
+      "publishedAt": null,
+      "editorialNote": "Birebir metin ve baskı kaynağı seçilmedi. Okuma özeti veya kişisel uyarlama doğrudan alıntı sayılmaz."
+    },
+    {
+      "id": "prens-05",
+      "slug": "prens-05",
+      "kind": "direct-quote",
+      "title": "",
+      "text": "",
+      "textLanguage": "tr",
+      "authorId": "machiavelli",
+      "bookId": "prens",
+      "categoryIds": [],
+      "tags": [],
+      "meaning": "",
+      "commentary": "",
+      "application": "",
+      "critique": "",
+      "source": {
+        "translator": "",
+        "publisher": "",
+        "edition": "",
+        "year": null,
+        "page": "",
+        "locator": "",
+        "url": "",
+        "language": "tr",
+        "originalText": ""
+      },
+      "verification": {
+        "status": "pending",
+        "checkedBy": "",
+        "checkedAt": null,
+        "evidence": ""
+      },
+      "rights": {
+        "status": "pending",
+        "basis": "",
+        "publicNote": ""
+      },
+      "videoRefs": [],
+      "status": "draft",
+      "publishedAt": null,
+      "editorialNote": "Birebir metin ve baskı kaynağı seçilmedi. Okuma özeti veya kişisel uyarlama doğrudan alıntı sayılmaz."
+    },
+    {
+      "id": "irade-terbiyesi-01",
+      "slug": "irade-terbiyesi-01",
+      "kind": "direct-quote",
+      "title": "",
+      "text": "",
+      "textLanguage": "tr",
+      "authorId": "jules-payot",
+      "bookId": "irade-terbiyesi",
+      "categoryIds": [],
+      "tags": [],
+      "meaning": "",
+      "commentary": "",
+      "application": "",
+      "critique": "",
+      "source": {
+        "translator": "",
+        "publisher": "",
+        "edition": "",
+        "year": null,
+        "page": "",
+        "locator": "",
+        "url": "",
+        "language": "tr",
+        "originalText": ""
+      },
+      "verification": {
+        "status": "pending",
+        "checkedBy": "",
+        "checkedAt": null,
+        "evidence": ""
+      },
+      "rights": {
+        "status": "pending",
+        "basis": "",
+        "publicNote": ""
+      },
+      "videoRefs": [],
+      "status": "draft",
+      "publishedAt": null,
+      "editorialNote": "Birebir metin ve baskı kaynağı seçilmedi. Okuma özeti veya kişisel uyarlama doğrudan alıntı sayılmaz."
+    },
+    {
+      "id": "irade-terbiyesi-02",
+      "slug": "irade-terbiyesi-02",
+      "kind": "direct-quote",
+      "title": "",
+      "text": "",
+      "textLanguage": "tr",
+      "authorId": "jules-payot",
+      "bookId": "irade-terbiyesi",
+      "categoryIds": [],
+      "tags": [],
+      "meaning": "",
+      "commentary": "",
+      "application": "",
+      "critique": "",
+      "source": {
+        "translator": "",
+        "publisher": "",
+        "edition": "",
+        "year": null,
+        "page": "",
+        "locator": "",
+        "url": "",
+        "language": "tr",
+        "originalText": ""
+      },
+      "verification": {
+        "status": "pending",
+        "checkedBy": "",
+        "checkedAt": null,
+        "evidence": ""
+      },
+      "rights": {
+        "status": "pending",
+        "basis": "",
+        "publicNote": ""
+      },
+      "videoRefs": [],
+      "status": "draft",
+      "publishedAt": null,
+      "editorialNote": "Birebir metin ve baskı kaynağı seçilmedi. Okuma özeti veya kişisel uyarlama doğrudan alıntı sayılmaz."
+    },
+    {
+      "id": "irade-terbiyesi-03",
+      "slug": "irade-terbiyesi-03",
+      "kind": "direct-quote",
+      "title": "",
+      "text": "",
+      "textLanguage": "tr",
+      "authorId": "jules-payot",
+      "bookId": "irade-terbiyesi",
+      "categoryIds": [],
+      "tags": [],
+      "meaning": "",
+      "commentary": "",
+      "application": "",
+      "critique": "",
+      "source": {
+        "translator": "",
+        "publisher": "",
+        "edition": "",
+        "year": null,
+        "page": "",
+        "locator": "",
+        "url": "",
+        "language": "tr",
+        "originalText": ""
+      },
+      "verification": {
+        "status": "pending",
+        "checkedBy": "",
+        "checkedAt": null,
+        "evidence": ""
+      },
+      "rights": {
+        "status": "pending",
+        "basis": "",
+        "publicNote": ""
+      },
+      "videoRefs": [],
+      "status": "draft",
+      "publishedAt": null,
+      "editorialNote": "Birebir metin ve baskı kaynağı seçilmedi. Okuma özeti veya kişisel uyarlama doğrudan alıntı sayılmaz."
+    },
+    {
+      "id": "irade-terbiyesi-04",
+      "slug": "irade-terbiyesi-04",
+      "kind": "direct-quote",
+      "title": "",
+      "text": "",
+      "textLanguage": "tr",
+      "authorId": "jules-payot",
+      "bookId": "irade-terbiyesi",
+      "categoryIds": [],
+      "tags": [],
+      "meaning": "",
+      "commentary": "",
+      "application": "",
+      "critique": "",
+      "source": {
+        "translator": "",
+        "publisher": "",
+        "edition": "",
+        "year": null,
+        "page": "",
+        "locator": "",
+        "url": "",
+        "language": "tr",
+        "originalText": ""
+      },
+      "verification": {
+        "status": "pending",
+        "checkedBy": "",
+        "checkedAt": null,
+        "evidence": ""
+      },
+      "rights": {
+        "status": "pending",
+        "basis": "",
+        "publicNote": ""
+      },
+      "videoRefs": [],
+      "status": "draft",
+      "publishedAt": null,
+      "editorialNote": "Birebir metin ve baskı kaynağı seçilmedi. Okuma özeti veya kişisel uyarlama doğrudan alıntı sayılmaz."
+    },
+    {
+      "id": "irade-terbiyesi-05",
+      "slug": "irade-terbiyesi-05",
+      "kind": "direct-quote",
+      "title": "",
+      "text": "",
+      "textLanguage": "tr",
+      "authorId": "jules-payot",
+      "bookId": "irade-terbiyesi",
+      "categoryIds": [],
+      "tags": [],
+      "meaning": "",
+      "commentary": "",
+      "application": "",
+      "critique": "",
+      "source": {
+        "translator": "",
+        "publisher": "",
+        "edition": "",
+        "year": null,
+        "page": "",
+        "locator": "",
+        "url": "",
+        "language": "tr",
+        "originalText": ""
+      },
+      "verification": {
+        "status": "pending",
+        "checkedBy": "",
+        "checkedAt": null,
+        "evidence": ""
+      },
+      "rights": {
+        "status": "pending",
+        "basis": "",
+        "publicNote": ""
+      },
+      "videoRefs": [],
+      "status": "draft",
+      "publishedAt": null,
+      "editorialNote": "Birebir metin ve baskı kaynağı seçilmedi. Okuma özeti veya kişisel uyarlama doğrudan alıntı sayılmaz."
+    },
+    {
+      "id": "kendime-dusunceler-01",
+      "slug": "kendime-dusunceler-01",
+      "kind": "direct-quote",
+      "title": "",
+      "text": "",
+      "textLanguage": "tr",
+      "authorId": "marcus-aurelius",
+      "bookId": "kendime-dusunceler",
+      "categoryIds": [],
+      "tags": [],
+      "meaning": "",
+      "commentary": "",
+      "application": "",
+      "critique": "",
+      "source": {
+        "translator": "",
+        "publisher": "",
+        "edition": "",
+        "year": null,
+        "page": "",
+        "locator": "",
+        "url": "",
+        "language": "tr",
+        "originalText": ""
+      },
+      "verification": {
+        "status": "pending",
+        "checkedBy": "",
+        "checkedAt": null,
+        "evidence": ""
+      },
+      "rights": {
+        "status": "pending",
+        "basis": "",
+        "publicNote": ""
+      },
+      "videoRefs": [],
+      "status": "draft",
+      "publishedAt": null,
+      "editorialNote": "Birebir metin ve baskı kaynağı seçilmedi. Okuma özeti veya kişisel uyarlama doğrudan alıntı sayılmaz."
+    },
+    {
+      "id": "kendime-dusunceler-02",
+      "slug": "kendime-dusunceler-02",
+      "kind": "direct-quote",
+      "title": "",
+      "text": "",
+      "textLanguage": "tr",
+      "authorId": "marcus-aurelius",
+      "bookId": "kendime-dusunceler",
+      "categoryIds": [],
+      "tags": [],
+      "meaning": "",
+      "commentary": "",
+      "application": "",
+      "critique": "",
+      "source": {
+        "translator": "",
+        "publisher": "",
+        "edition": "",
+        "year": null,
+        "page": "",
+        "locator": "",
+        "url": "",
+        "language": "tr",
+        "originalText": ""
+      },
+      "verification": {
+        "status": "pending",
+        "checkedBy": "",
+        "checkedAt": null,
+        "evidence": ""
+      },
+      "rights": {
+        "status": "pending",
+        "basis": "",
+        "publicNote": ""
+      },
+      "videoRefs": [],
+      "status": "draft",
+      "publishedAt": null,
+      "editorialNote": "Birebir metin ve baskı kaynağı seçilmedi. Okuma özeti veya kişisel uyarlama doğrudan alıntı sayılmaz."
+    },
+    {
+      "id": "kendime-dusunceler-03",
+      "slug": "kendime-dusunceler-03",
+      "kind": "direct-quote",
+      "title": "",
+      "text": "",
+      "textLanguage": "tr",
+      "authorId": "marcus-aurelius",
+      "bookId": "kendime-dusunceler",
+      "categoryIds": [],
+      "tags": [],
+      "meaning": "",
+      "commentary": "",
+      "application": "",
+      "critique": "",
+      "source": {
+        "translator": "",
+        "publisher": "",
+        "edition": "",
+        "year": null,
+        "page": "",
+        "locator": "",
+        "url": "",
+        "language": "tr",
+        "originalText": ""
+      },
+      "verification": {
+        "status": "pending",
+        "checkedBy": "",
+        "checkedAt": null,
+        "evidence": ""
+      },
+      "rights": {
+        "status": "pending",
+        "basis": "",
+        "publicNote": ""
+      },
+      "videoRefs": [],
+      "status": "draft",
+      "publishedAt": null,
+      "editorialNote": "Birebir metin ve baskı kaynağı seçilmedi. Okuma özeti veya kişisel uyarlama doğrudan alıntı sayılmaz."
+    },
+    {
+      "id": "kendime-dusunceler-04",
+      "slug": "kendime-dusunceler-04",
+      "kind": "direct-quote",
+      "title": "",
+      "text": "",
+      "textLanguage": "tr",
+      "authorId": "marcus-aurelius",
+      "bookId": "kendime-dusunceler",
+      "categoryIds": [],
+      "tags": [],
+      "meaning": "",
+      "commentary": "",
+      "application": "",
+      "critique": "",
+      "source": {
+        "translator": "",
+        "publisher": "",
+        "edition": "",
+        "year": null,
+        "page": "",
+        "locator": "",
+        "url": "",
+        "language": "tr",
+        "originalText": ""
+      },
+      "verification": {
+        "status": "pending",
+        "checkedBy": "",
+        "checkedAt": null,
+        "evidence": ""
+      },
+      "rights": {
+        "status": "pending",
+        "basis": "",
+        "publicNote": ""
+      },
+      "videoRefs": [],
+      "status": "draft",
+      "publishedAt": null,
+      "editorialNote": "Birebir metin ve baskı kaynağı seçilmedi. Okuma özeti veya kişisel uyarlama doğrudan alıntı sayılmaz."
+    },
+    {
+      "id": "kendime-dusunceler-05",
+      "slug": "kendime-dusunceler-05",
+      "kind": "direct-quote",
+      "title": "",
+      "text": "",
+      "textLanguage": "tr",
+      "authorId": "marcus-aurelius",
+      "bookId": "kendime-dusunceler",
+      "categoryIds": [],
+      "tags": [],
+      "meaning": "",
+      "commentary": "",
+      "application": "",
+      "critique": "",
+      "source": {
+        "translator": "",
+        "publisher": "",
+        "edition": "",
+        "year": null,
+        "page": "",
+        "locator": "",
+        "url": "",
+        "language": "tr",
+        "originalText": ""
+      },
+      "verification": {
+        "status": "pending",
+        "checkedBy": "",
+        "checkedAt": null,
+        "evidence": ""
+      },
+      "rights": {
+        "status": "pending",
+        "basis": "",
+        "publicNote": ""
+      },
+      "videoRefs": [],
+      "status": "draft",
+      "publishedAt": null,
+      "editorialNote": "Birebir metin ve baskı kaynağı seçilmedi. Okuma özeti veya kişisel uyarlama doğrudan alıntı sayılmaz."
+    }
+  ],
+  "originalInsights": []
+}
