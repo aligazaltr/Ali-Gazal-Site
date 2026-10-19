@@ -131,3 +131,24 @@ sayfaları, sosyal görsel üretimi, semantik arama ve kişiselleştirme bu sür
   hareket tercihi bu ortamda doğrudan test edilmedi. Boyut testleri tarayıcı
   iframe görünümüdür; gerçek cihaz testi yerine geçmez.
 - Gerçek yazarlara atfedilmeyen sentetik test sayfaları nihai daldan kaldırıldı.
+
+## İlk seçkinin yayın kontrolü — 19 Ekim 2026
+
+- 15 kaynak kontrollü serbest çeviri: her yazardan 5; her kayıtta kaynak pasajı,
+  konum, kısa anlam, ayrı yorum, uygulama önerisi ve eleştirel sınır bulunur.
+- 19/19 Node testi geçti. Çeviri kaynak pasajının güvenli HTML olarak gösterimi
+  ve paylaşımda tür etiketinin korunması ayrıca doğrulandı.
+- Gerçek içerikle 6 çerçeve genişliği × 2 tema × ayrıntılar kapalı/açık:
+  **24/24 düzen kontrolü**. Taşma veya küçük düğme/form hedefi bulunmadı.
+  İstenen çerçeve genişlikleri 320/360/390/430/768/1440 px;
+  masaüstü tarayıcı kaydırma çubuğu içerik genişliğinden 15 px alır.
+- Payot yazarı + kitabı + irade kategorisi + `DISIPLIN` araması 4 kayıt verdi.
+  Boş sonuç, filtre sıfırlama ve tekrar etmeyen rastgele seçim tarayıcıda denendi.
+- Gerçek panoya kopyalanan metinde yazar, eser, serbest çeviri etiketi, kaynak
+  sayfası/bölümü ve canonical bağlantı görüldü. Paylaşımın bağlantı kopyalama
+  yedeği doğru kaydı verdi. Fiziksel cihazın paylaşım menüsü test edilmedi.
+- JavaScript izni olmayan 390 px iframe içinde 15 metin ve 15 kaynak pasajı
+  bulundu; filtreler gizliydi, native ayrıntılar açılabiliyordu.
+- Uygulamaya ait konsol hatası görülmedi; tarayıcı eklentisinin kendi hata
+  kayıtları site hatası sayılmadı. Fiziksel Android testi yapılmadı.
+- Geçici düzen kontrol sayfası üretim birleştirmesinden önce kaldırıldı.
