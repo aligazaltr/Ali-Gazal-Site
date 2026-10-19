@@ -16,5 +16,7 @@
     <loc>https://ali-gazal-site.aliicerikmedya.workers.dev/machiavelli</loc>
     <lastmod>2026-09-27</lastmod>
   </url>
-  <!-- archive:sitemap:start --><!-- archive:sitemap:end -->
+  <!-- archive:sitemap:start -->
+  <url><loc>https://ali-gazal-site.aliicerikmedya.workers.dev/dusunce-arsivi</loc><lastmod>2026-10-19</lastmod></url>
+<!-- archive:sitemap:end -->
 </urlset>

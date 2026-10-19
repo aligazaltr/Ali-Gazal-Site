@@ -1,7 +1,8 @@
 # Düşünce Arşivi — ilk sürüm
 
 Mevcut statik siteye eklendi. Yeni servis, framework, veritabanı, API anahtarı
-veya ücretli bağımlılık yok. Üretim yayını kullanıcı onayını bekler.
+veya ücretli bağımlılık yok. Kullanıcı 19 Ekim 2026'da içeriklerin tamamlanmasını
+ve PR #9 üzerinden üretim yayınını açıkça onayladı.
 
 ## Veri akışı
 
@@ -21,14 +22,37 @@ okunur. Yayımlanmamış video veya doğrulanmamış zaman damgası bağlantıya
 
 ## İlk içerik durumu
 
-- Niccolò Machiavelli / Prens: 5 boş taslak.
-- Jules Payot / İrade Terbiyesi: 5 boş taslak.
-- Marcus Aurelius / Kendime Düşünceler: 5 boş taslak.
-- Yayımlanmış alıntı: 0. Mevcut okuma özetleri ve deney ilkeleri birebir alıntı değildir.
+- Niccolò Machiavelli / Prens: 5 kaynak kontrollü serbest çeviri; XV, XVIII, XXIII, XXV.
+- Jules Payot / İrade Terbiyesi: 5 kaynak kontrollü serbest çeviri; s. 8, 9, 11, 129, 137.
+- Marcus Aurelius / Kendime Düşünceler: 5 kaynak kontrollü serbest çeviri; V.1, VIII.47, V.20, X.16, XII.17.
+- Toplam 15 yayımlanmış düşünce. Hepsi `free-translation`; modern Türkçe baskılardan birebir alıntı değildir.
 - Marcus’un eski video adresi arşiv yönlendirmesi olarak kaldı; yeni video projesi açılmadı.
 
-Eksik çevirmen, baskı veya sayfa alanları tahmin edilmedi. Metinler kullanıcıyla
-birlikte kaynak baskıdan seçilecek. Dosyada yer ayrılması yayına izin vermez.
+Türkçe metinler ve editoryal yorumlar yapay zekâ desteğiyle hazırlandı. Özel günlük
+ayrıntıları veya doğrulanmamış kişisel anılar yayımlanmadı. Machiavelli'nin ilk üç
+düşüncesi mevcut deney kuralları ve açıkça belirtilen kısmi sonuçla ilişkilidir.
+Payot ve Marcus için yeni deney sonucu veya video bağlantısı üretilmedi.
+
+### Kaynaklar ve doğrulama
+
+- **Machiavelli:** [Wikisource, 1814 baskı transkripsiyonu](https://it.wikisource.org/wiki/Indice:Il_Principe.djvu).
+  Seçilen İtalyanca pasajlar ilgili bölüm metni ve bağlamıyla karşılaştırıldı.
+  Modern bir çeviri kullanılmadı; konum bölüm numarasıyla verildi.
+- **Payot:** [Wellcome Collection, b28050101](https://wellcomecollection.org/works/fbnfek8v).
+  OCR, beş basılı sayfanın taramasıyla tek tek karşılaştırıldı. İç kapak (tarama 7)
+  **Félix Alcan, Paris, 7. baskı, 1898** gösterir; katalogdaki 1897 yerine fiziksel
+  nüshadaki tarih kullanıldı. Sayfalar 8/9/11/129/137, taramalar 32/33/35/153/161.
+  Kurum nüshayı Public Domain Mark ile sunuyor. Kaynak kredisi: Wellcome Collection.
+- **Marcus:** [Project Gutenberg #15877](https://www.gutenberg.org/ebooks/15877),
+  George Long (1800–1879) İngilizce çevirisi. Kayıt dijital yayını 2005 olarak verir;
+  bu sayı özgün eserin veya basılı çevirinin tarihi gibi sunulmaz. Her pasaj kitap
+  ve madde numarasıyla doğrulandı. Türkçe çeviri İngilizce ara kaynaktan yapılmıştır.
+
+Kaynak kontrolü Codex tarafından 19 Ekim 2026'da yapıldı; insan editör veya
+akademik çeviri incelemesi yapılmış gibi gösterilmez. `source.originalText` kamuya
+açık kaynak pasajıdır ve ayrıntılarda kaynak diliyle gösterilir. Serbest çeviri
+etiketi kopyalanan/paylaşılan metinde de korunur. Modern Türkçe baskı eşleştirmesi
+bu seçkinin dayanağı değildir; ileride yapılırsa ayrıca baskı/çevirmen kontrolü gerekir.
 
 ## İçerik ekleme
 

@@ -99,632 +99,782 @@
     {
       "id": "prens-01",
       "slug": "prens-01",
-      "kind": "direct-quote",
-      "title": "",
-      "text": "",
+      "kind": "free-translation",
+      "title": "Fiilî gerçeğe bak",
+      "text": "Bir şeyin hayal edilen hâlinden çok, fiilî gerçeğinin peşinden gitmeyi daha uygun buldum.",
       "textLanguage": "tr",
       "authorId": "machiavelli",
       "bookId": "prens",
-      "categoryIds": [],
-      "tags": [],
-      "meaning": "",
-      "commentary": "",
-      "application": "",
-      "critique": "",
+      "categoryIds": [
+        "guc-siyaset",
+        "insan-psikolojisi"
+      ],
+      "tags": [
+        "fiilî gerçek",
+        "karar",
+        "varsayım",
+        "deney"
+      ],
+      "meaning": "Machiavelli, siyaseti nasıl olmasını istediğimiz üzerinden değil, insanların gerçekte nasıl davrandığı üzerinden inceler.",
+      "commentary": "Machiavelli deneyindeki ilk filtre bu ayrımdı: istek ve varsayımı doğrulanabilir koşullardan ayırmak. Yedi günlük kayıtlarda en güçlü kazanım bu filtre olarak değerlendirildi.",
+      "application": "Bir karar öncesinde iki kısa satır yaz: Ne olmasını istiyorum? Şu anda neyi doğrulayabiliyorum?",
+      "critique": "Olanı görmek, olan her şeyi doğru kabul etmek değildir. Siyasi metinden alınan bu yaklaşım, etik sınırları kaldıran bir izin olarak kullanılmamalı.",
       "source": {
-        "translator": "",
-        "publisher": "",
-        "edition": "",
-        "year": null,
+        "translator": "Düşünce Arşivi — yapay zekâ desteğiyle Türkçe serbest çeviri",
+        "publisher": "Wikisource (dijital metin)",
+        "edition": "1814 baskısının karşılaştırılmış transkripsiyonu",
+        "year": 1814,
+        "language": "it",
         "page": "",
-        "locator": "",
-        "url": "",
-        "language": "tr",
-        "originalText": ""
+        "locator": "Bölüm XV",
+        "url": "https://it.wikisource.org/wiki/Il_Principe/Capitolo_XV",
+        "originalText": "mi è parso più conveniente andare dietro alla verità effettuale della cosa, che all’immaginazione di essa"
       },
       "verification": {
-        "status": "pending",
-        "checkedBy": "",
-        "checkedAt": null,
-        "evidence": ""
+        "status": "verified",
+        "checkedBy": "Codex — kaynak metni karşılaştırması",
+        "checkedAt": "2026-10-19",
+        "evidence": "Codex, Bölüm XV içindeki İtalyanca pasajı ve bağlamını https://it.wikisource.org/wiki/Il_Principe/Capitolo_XV üzerinden karşılaştırdı; Türkçe metin serbest çeviri olarak yeniden yazıldı."
       },
       "rights": {
-        "status": "pending",
-        "basis": "",
-        "publicNote": ""
+        "status": "approved",
+        "basis": "Machiavelli’nin kamu malı İtalyanca eseri; 1814 baskı transkripsiyonu: https://it.wikisource.org/wiki/Indice:Il_Principe.djvu. Modern bir Türkçe çeviri kullanılmadı. Kısa pasaj bu arşiv için çevrildi; Wikisource kaynak bağlantısı korundu.",
+        "publicNote": "Türkçe metin, bu arşiv için yapay zekâ desteğiyle hazırlanmış serbest çeviridir; yayımlanmış bir Türkçe baskıdan alınmamıştır. Açıklama, yorum ve uygulama önerileri alıntıdan ayrıdır."
       },
-      "videoRefs": [],
-      "status": "draft",
-      "publishedAt": null,
-      "editorialNote": "Birebir metin ve baskı kaynağı seçilmedi. Okuma özeti veya kişisel uyarlama doğrudan alıntı sayılmaz."
+      "videoRefs": [
+        {
+          "projectId": "machiavelli",
+          "seconds": null,
+          "timestampVerified": false
+        }
+      ],
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "editorialNote": "Kaynak dilindeki kısa pasajdan bu arşiv için çevrildi. Yorumlar editoryaldir; yeni kişisel deneyim veya video yayın bilgisi eklenmedi."
     },
     {
       "id": "prens-02",
       "slug": "prens-02",
-      "kind": "direct-quote",
-      "title": "",
-      "text": "",
+      "kind": "free-translation",
+      "title": "Zorluk gelmeden hazırlan",
+      "text": "Sakin zamanlarda bentler ve setlerle önlem alınabilir; böylece nehir yeniden kabardığında su bir kanala yönelir ya da taşkın daha az yıkıcı olur.",
       "textLanguage": "tr",
       "authorId": "machiavelli",
       "bookId": "prens",
-      "categoryIds": [],
-      "tags": [],
-      "meaning": "",
-      "commentary": "",
-      "application": "",
-      "critique": "",
+      "categoryIds": [
+        "guc-siyaset",
+        "basari-calisma"
+      ],
+      "tags": [
+        "hazırlık",
+        "belirsizlik",
+        "risk",
+        "deney"
+      ],
+      "meaning": "Talih taşan bir nehre benzetilir. Her şeyi kontrol edemesek de sakin dönemde yapılan hazırlık, bir güçlüğün etkisini sınırlayabilir.",
+      "commentary": "Deneyde bu düşünce, öngörülebilir bir zorluk için en fazla beş dakikalık somut hazırlık kuralına dönüştürüldü. Hazırlığın yapıldığı kayıtlar var; beş dakika sınırı her olayda doğrulanmadı.",
+      "application": "Yarınki işin en olası aksamasını seç; gereken malzemeyi, kısa notu veya alternatif yolu önceden hazırla.",
+      "critique": "Hazırlık, sonucu garanti etmez. Her olasılığı kontrol etmeye çalışmak da hazırlığın kendisini ağır bir işe çevirebilir.",
       "source": {
-        "translator": "",
-        "publisher": "",
-        "edition": "",
-        "year": null,
+        "translator": "Düşünce Arşivi — yapay zekâ desteğiyle Türkçe serbest çeviri",
+        "publisher": "Wikisource (dijital metin)",
+        "edition": "1814 baskısının karşılaştırılmış transkripsiyonu",
+        "year": 1814,
+        "language": "it",
         "page": "",
-        "locator": "",
-        "url": "",
-        "language": "tr",
-        "originalText": ""
+        "locator": "Bölüm XXV · taşkın benzetmesi",
+        "url": "https://it.wikisource.org/wiki/Il_Principe/Capitolo_XXV",
+        "originalText": "e benchè sia così fatto, non resta però che gli uomini, quando sono tempi quieti, non vi possino fare provvedimenti e con ripari, e con argini, immodochè crescendo poi, o egli andrebbe per un canale, o l’impeto suo non sarebbe sì licenzioso, nè sì dannoso."
       },
       "verification": {
-        "status": "pending",
-        "checkedBy": "",
-        "checkedAt": null,
-        "evidence": ""
+        "status": "verified",
+        "checkedBy": "Codex — kaynak metni karşılaştırması",
+        "checkedAt": "2026-10-19",
+        "evidence": "Codex, Bölüm XXV · taşkın benzetmesi içindeki İtalyanca pasajı ve bağlamını https://it.wikisource.org/wiki/Il_Principe/Capitolo_XXV üzerinden karşılaştırdı; Türkçe metin serbest çeviri olarak yeniden yazıldı."
       },
       "rights": {
-        "status": "pending",
-        "basis": "",
-        "publicNote": ""
+        "status": "approved",
+        "basis": "Machiavelli’nin kamu malı İtalyanca eseri; 1814 baskı transkripsiyonu: https://it.wikisource.org/wiki/Indice:Il_Principe.djvu. Modern bir Türkçe çeviri kullanılmadı. Kısa pasaj bu arşiv için çevrildi; Wikisource kaynak bağlantısı korundu.",
+        "publicNote": "Türkçe metin, bu arşiv için yapay zekâ desteğiyle hazırlanmış serbest çeviridir; yayımlanmış bir Türkçe baskıdan alınmamıştır. Açıklama, yorum ve uygulama önerileri alıntıdan ayrıdır."
       },
-      "videoRefs": [],
-      "status": "draft",
-      "publishedAt": null,
-      "editorialNote": "Birebir metin ve baskı kaynağı seçilmedi. Okuma özeti veya kişisel uyarlama doğrudan alıntı sayılmaz."
+      "videoRefs": [
+        {
+          "projectId": "machiavelli",
+          "seconds": null,
+          "timestampVerified": false
+        }
+      ],
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "editorialNote": "Kaynak dilindeki kısa pasajdan bu arşiv için çevrildi. Yorumlar editoryaldir; yeni kişisel deneyim veya video yayın bilgisi eklenmedi."
     },
     {
       "id": "prens-03",
       "slug": "prens-03",
-      "kind": "direct-quote",
-      "title": "",
-      "text": "",
+      "kind": "free-translation",
+      "title": "Amacı koru, yöntemi koşula uyarla",
+      "text": "Davranış biçimi zamanın koşullarıyla uyuşan kişinin başarılı, koşullarla uyuşmayan kişinin ise başarısız olacağını düşünüyorum.",
       "textLanguage": "tr",
       "authorId": "machiavelli",
       "bookId": "prens",
-      "categoryIds": [],
-      "tags": [],
-      "meaning": "",
-      "commentary": "",
-      "application": "",
-      "critique": "",
+      "categoryIds": [
+        "guc-siyaset",
+        "basari-calisma"
+      ],
+      "tags": [
+        "uyum",
+        "esneklik",
+        "yöntem",
+        "deney"
+      ],
+      "meaning": "Bir dönemde işe yarayan davranış, koşullar değişince aynı sonucu vermeyebilir. Machiavelli yöntemin koşullarla ilişkisini vurgular.",
+      "commentary": "Deneyde amaç aynı tutulup tıkanan yöntemin değiştirilmesi denendi. Çekim yapılamadığında yazılı çalışmaya geçmek bunun bir örneğiydi; süre ve yazma şartları bütün olaylarda tam doğrulanmadı.",
+      "application": "Bir iş tıkandığında önce ulaşmak istediğin sonucu yaz. Sonra aynı amaca hizmet eden daha küçük veya farklı bir yol seç.",
+      "critique": "Yöntem değiştirmek, sonuç kötüleştiği her anda ilkeyi terk etmek değildir. Esneklik ile sorumluluktan kaçmayı ayırmak gerekir.",
       "source": {
-        "translator": "",
-        "publisher": "",
-        "edition": "",
-        "year": null,
+        "translator": "Düşünce Arşivi — yapay zekâ desteğiyle Türkçe serbest çeviri",
+        "publisher": "Wikisource (dijital metin)",
+        "edition": "1814 baskısının karşılaştırılmış transkripsiyonu",
+        "year": 1814,
+        "language": "it",
         "page": "",
-        "locator": "",
-        "url": "",
-        "language": "tr",
-        "originalText": ""
+        "locator": "Bölüm XXV · yöntem ve zamanın koşulları",
+        "url": "https://it.wikisource.org/wiki/Il_Principe/Capitolo_XXV",
+        "originalText": "Credo ancora, che sia felice quello, il modo del cui procedere suo si riscontra con la qualità de’ tempi, e similmente sia infelice quello, dal cui procedere si discordano i tempi."
       },
       "verification": {
-        "status": "pending",
-        "checkedBy": "",
-        "checkedAt": null,
-        "evidence": ""
+        "status": "verified",
+        "checkedBy": "Codex — kaynak metni karşılaştırması",
+        "checkedAt": "2026-10-19",
+        "evidence": "Codex, Bölüm XXV · yöntem ve zamanın koşulları içindeki İtalyanca pasajı ve bağlamını https://it.wikisource.org/wiki/Il_Principe/Capitolo_XXV üzerinden karşılaştırdı; Türkçe metin serbest çeviri olarak yeniden yazıldı."
       },
       "rights": {
-        "status": "pending",
-        "basis": "",
-        "publicNote": ""
+        "status": "approved",
+        "basis": "Machiavelli’nin kamu malı İtalyanca eseri; 1814 baskı transkripsiyonu: https://it.wikisource.org/wiki/Indice:Il_Principe.djvu. Modern bir Türkçe çeviri kullanılmadı. Kısa pasaj bu arşiv için çevrildi; Wikisource kaynak bağlantısı korundu.",
+        "publicNote": "Türkçe metin, bu arşiv için yapay zekâ desteğiyle hazırlanmış serbest çeviridir; yayımlanmış bir Türkçe baskıdan alınmamıştır. Açıklama, yorum ve uygulama önerileri alıntıdan ayrıdır."
       },
-      "videoRefs": [],
-      "status": "draft",
-      "publishedAt": null,
-      "editorialNote": "Birebir metin ve baskı kaynağı seçilmedi. Okuma özeti veya kişisel uyarlama doğrudan alıntı sayılmaz."
+      "videoRefs": [
+        {
+          "projectId": "machiavelli",
+          "seconds": null,
+          "timestampVerified": false
+        }
+      ],
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "editorialNote": "Kaynak dilindeki kısa pasajdan bu arşiv için çevrildi. Yorumlar editoryaldir; yeni kişisel deneyim veya video yayın bilgisi eklenmedi."
     },
     {
       "id": "prens-04",
       "slug": "prens-04",
-      "kind": "direct-quote",
-      "title": "",
-      "text": "",
+      "kind": "free-translation",
+      "title": "Görünüş ile gerçek arasındaki mesafe",
+      "text": "Herkes nasıl göründüğünü görür; pek az kişi gerçekte ne olduğunu deneyimleyerek bilir.",
       "textLanguage": "tr",
       "authorId": "machiavelli",
       "bookId": "prens",
-      "categoryIds": [],
-      "tags": [],
-      "meaning": "",
-      "commentary": "",
-      "application": "",
-      "critique": "",
+      "categoryIds": [
+        "guc-siyaset",
+        "insan-psikolojisi"
+      ],
+      "tags": [
+        "görünüş",
+        "itibar",
+        "kanıt",
+        "eleştirel düşünme"
+      ],
+      "meaning": "Pasaj, bir hükümdarın görünüşü ile davranışlarına yakından tanık olanların bilgisi arasındaki farkı anlatır.",
+      "commentary": "Bir sonucun güçlü sunulması, kanıtının güçlü olduğu anlamına gelmez. Deney günlüğünde iddiayı, gözlemi ve yorumu ayrı tutmak bu mesafeyi görünür kılar.",
+      "application": "Etkileyici bir iddiayla karşılaştığında sunumun yanına şu soruyu ekle: Hangi kayıt veya gözlem bunu destekliyor?",
+      "critique": "Bölüm, görünüşü siyasi çıkar için kullanmayı da savunur. Buradaki eleştirel okuma bu savunmayı onaylamaz; kanıt arama yönüne odaklanır.",
       "source": {
-        "translator": "",
-        "publisher": "",
-        "edition": "",
-        "year": null,
+        "translator": "Düşünce Arşivi — yapay zekâ desteğiyle Türkçe serbest çeviri",
+        "publisher": "Wikisource (dijital metin)",
+        "edition": "1814 baskısının karşılaştırılmış transkripsiyonu",
+        "year": 1814,
+        "language": "it",
         "page": "",
-        "locator": "",
-        "url": "",
-        "language": "tr",
-        "originalText": ""
+        "locator": "Bölüm XVIII",
+        "url": "https://it.wikisource.org/wiki/Il_Principe/Capitolo_XVIII",
+        "originalText": "Ognuno vede quel che tu pari; pochi sentono quel che tu sei"
       },
       "verification": {
-        "status": "pending",
-        "checkedBy": "",
-        "checkedAt": null,
-        "evidence": ""
+        "status": "verified",
+        "checkedBy": "Codex — kaynak metni karşılaştırması",
+        "checkedAt": "2026-10-19",
+        "evidence": "Codex, Bölüm XVIII içindeki İtalyanca pasajı ve bağlamını https://it.wikisource.org/wiki/Il_Principe/Capitolo_XVIII üzerinden karşılaştırdı; Türkçe metin serbest çeviri olarak yeniden yazıldı."
       },
       "rights": {
-        "status": "pending",
-        "basis": "",
-        "publicNote": ""
+        "status": "approved",
+        "basis": "Machiavelli’nin kamu malı İtalyanca eseri; 1814 baskı transkripsiyonu: https://it.wikisource.org/wiki/Indice:Il_Principe.djvu. Modern bir Türkçe çeviri kullanılmadı. Kısa pasaj bu arşiv için çevrildi; Wikisource kaynak bağlantısı korundu.",
+        "publicNote": "Türkçe metin, bu arşiv için yapay zekâ desteğiyle hazırlanmış serbest çeviridir; yayımlanmış bir Türkçe baskıdan alınmamıştır. Açıklama, yorum ve uygulama önerileri alıntıdan ayrıdır."
       },
-      "videoRefs": [],
-      "status": "draft",
-      "publishedAt": null,
-      "editorialNote": "Birebir metin ve baskı kaynağı seçilmedi. Okuma özeti veya kişisel uyarlama doğrudan alıntı sayılmaz."
+      "videoRefs": [
+        {
+          "projectId": "machiavelli",
+          "seconds": null,
+          "timestampVerified": false
+        }
+      ],
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "editorialNote": "Kaynak dilindeki kısa pasajdan bu arşiv için çevrildi. Yorumlar editoryaldir; yeni kişisel deneyim veya video yayın bilgisi eklenmedi."
     },
     {
       "id": "prens-05",
       "slug": "prens-05",
-      "kind": "direct-quote",
-      "title": "",
-      "text": "",
+      "kind": "free-translation",
+      "title": "Doğruyu söylemeye alan aç",
+      "text": "Dalkavukluktan korunmanın yolu, insanların sana gerçeği söyleyerek seni incitmeyeceklerini bilmeleridir.",
       "textLanguage": "tr",
       "authorId": "machiavelli",
       "bookId": "prens",
-      "categoryIds": [],
-      "tags": [],
-      "meaning": "",
-      "commentary": "",
-      "application": "",
-      "critique": "",
+      "categoryIds": [
+        "guc-siyaset",
+        "insan-psikolojisi"
+      ],
+      "tags": [
+        "geri bildirim",
+        "eleştiri",
+        "dürüstlük",
+        "dalkavukluk"
+      ],
+      "meaning": "Machiavelli, yöneticinin yalnızca hoşuna giden sözleri duymasını tehlikeli görür. Ancak bölümün devamında danışmanların ne zaman konuşacağını da sınırlar.",
+      "commentary": "Bir fikri test etmek, onu çürütebilecek geri bildirime de yer açmayı gerektirir. Bizim burada çıkardığımız öneri, eleştiriyi bastırmadan dinlemektir.",
+      "application": "Bir çalışmayı gösterirken yalnızca nasıl bulduklarını sorma; anlaşılmayan veya ikna etmeyen bir noktayı da iste.",
+      "critique": "Açık geri bildirim önerimiz, Machiavelli’nin sınırlı danışmanlık düzeniyle aynı şey değildir. Bu ayrım, metni bugüne taşırken korunmalı.",
       "source": {
-        "translator": "",
-        "publisher": "",
-        "edition": "",
-        "year": null,
+        "translator": "Düşünce Arşivi — yapay zekâ desteğiyle Türkçe serbest çeviri",
+        "publisher": "Wikisource (dijital metin)",
+        "edition": "1814 baskısının karşılaştırılmış transkripsiyonu",
+        "year": 1814,
+        "language": "it",
         "page": "",
-        "locator": "",
-        "url": "",
-        "language": "tr",
-        "originalText": ""
+        "locator": "Bölüm XXIII",
+        "url": "https://it.wikisource.org/wiki/Il_Principe/Capitolo_XXIII",
+        "originalText": "Perchè non ci è altro modo a guardarsi dalle adulazioni, se non che gli uomini intendino che non ti offendono a dirti il vero"
       },
       "verification": {
-        "status": "pending",
-        "checkedBy": "",
-        "checkedAt": null,
-        "evidence": ""
+        "status": "verified",
+        "checkedBy": "Codex — kaynak metni karşılaştırması",
+        "checkedAt": "2026-10-19",
+        "evidence": "Codex, Bölüm XXIII içindeki İtalyanca pasajı ve bağlamını https://it.wikisource.org/wiki/Il_Principe/Capitolo_XXIII üzerinden karşılaştırdı; Türkçe metin serbest çeviri olarak yeniden yazıldı."
       },
       "rights": {
-        "status": "pending",
-        "basis": "",
-        "publicNote": ""
+        "status": "approved",
+        "basis": "Machiavelli’nin kamu malı İtalyanca eseri; 1814 baskı transkripsiyonu: https://it.wikisource.org/wiki/Indice:Il_Principe.djvu. Modern bir Türkçe çeviri kullanılmadı. Kısa pasaj bu arşiv için çevrildi; Wikisource kaynak bağlantısı korundu.",
+        "publicNote": "Türkçe metin, bu arşiv için yapay zekâ desteğiyle hazırlanmış serbest çeviridir; yayımlanmış bir Türkçe baskıdan alınmamıştır. Açıklama, yorum ve uygulama önerileri alıntıdan ayrıdır."
       },
-      "videoRefs": [],
-      "status": "draft",
-      "publishedAt": null,
-      "editorialNote": "Birebir metin ve baskı kaynağı seçilmedi. Okuma özeti veya kişisel uyarlama doğrudan alıntı sayılmaz."
+      "videoRefs": [
+        {
+          "projectId": "machiavelli",
+          "seconds": null,
+          "timestampVerified": false
+        }
+      ],
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "editorialNote": "Kaynak dilindeki kısa pasajdan bu arşiv için çevrildi. Yorumlar editoryaldir; yeni kişisel deneyim veya video yayın bilgisi eklenmedi."
     },
     {
       "id": "irade-terbiyesi-01",
       "slug": "irade-terbiyesi-01",
-      "kind": "direct-quote",
-      "title": "",
-      "text": "",
+      "kind": "free-translation",
+      "title": "İradeye bir yön ver",
+      "text": "İradenin gücü, çabaların çokluğundan çok, zihnin bütün güçlerinin aynı amaca yönelmesinde kendini gösterir.",
       "textLanguage": "tr",
       "authorId": "jules-payot",
       "bookId": "irade-terbiyesi",
-      "categoryIds": [],
-      "tags": [],
-      "meaning": "",
-      "commentary": "",
-      "application": "",
-      "critique": "",
+      "categoryIds": [
+        "irade-disiplin",
+        "basari-calisma"
+      ],
+      "tags": [
+        "odak",
+        "dikkat",
+        "meşguliyet",
+        "disiplin"
+      ],
+      "meaning": "Payot, gün boyu meşgul olmayı bir amaca yönelik çalışma ile ayırır. Sürekliliğe, yönün sürekliliği de eşlik etmelidir.",
+      "commentary": "Bir günün dolu olması, önemli işin ilerlediğini tek başına göstermez. Çabayı değerlendirmek için harcanan zamanın yanında neyin değiştiğine de bakabiliriz.",
+      "application": "Çalışmaya başlamadan önce bu oturumun tek somut çıktısını yaz; sonunda yalnızca o çıktıyı kontrol et.",
+      "critique": "Tek hedefe odaklanma her işin yapısına uymaz. Farklı sorumluluklar arasında geçiş yapmak zorunda olmak, kişiyi iradesiz yapmaz.",
       "source": {
-        "translator": "",
-        "publisher": "",
-        "edition": "",
-        "year": null,
-        "page": "",
-        "locator": "",
-        "url": "",
-        "language": "tr",
-        "originalText": ""
+        "translator": "Düşünce Arşivi — yapay zekâ desteğiyle Türkçe serbest çeviri",
+        "publisher": "Félix Alcan, Paris",
+        "edition": "7. baskı; Wellcome Collection taraması, b28050101",
+        "year": 1898,
+        "language": "fr",
+        "page": "8",
+        "locator": "Kitap I · Bölüm I",
+        "url": "https://wellcomecollection.org/works/fbnfek8v/items?canvas=32&shouldScrollToCanvas=true",
+        "originalText": "Car l’énergie de la volonté se traduit moins par les efforts multiples que par l’orientation vers une même fin de toutes les puissances de l’esprit."
       },
       "verification": {
-        "status": "pending",
-        "checkedBy": "",
-        "checkedAt": null,
-        "evidence": ""
+        "status": "verified",
+        "checkedBy": "Codex — kaynak metni karşılaştırması",
+        "checkedAt": "2026-10-19",
+        "evidence": "Codex, OCR pasajını basılı s. 8 sayfa görüntüsüyle karşılaştırdı: https://wellcomecollection.org/works/fbnfek8v/items?canvas=32&shouldScrollToCanvas=true. Başlık sayfası (tarama 7) 7. baskı, Félix Alcan, Paris, 1898 gösteriyor; katalogdaki 1897 yerine tarama esas alındı. Türkçe metin bu Fransızca pasajdan serbest çevrildi."
       },
       "rights": {
-        "status": "pending",
-        "basis": "",
-        "publicNote": ""
+        "status": "approved",
+        "basis": "Jules Payot’nun 1898 Fransızca baskısı. Wellcome Collection öğeyi Public Domain Mark ile sunar: https://wellcomecollection.org/works/fbnfek8v. Modern Türkçe baskı veya çeviri kullanılmadı. Kaynak kredisi: Wellcome Collection.",
+        "publicNote": "Türkçe metin, bu arşiv için yapay zekâ desteğiyle hazırlanmış serbest çeviridir; yayımlanmış bir Türkçe baskıdan alınmamıştır. Açıklama, yorum ve uygulama önerileri alıntıdan ayrıdır."
       },
       "videoRefs": [],
-      "status": "draft",
-      "publishedAt": null,
-      "editorialNote": "Birebir metin ve baskı kaynağı seçilmedi. Okuma özeti veya kişisel uyarlama doğrudan alıntı sayılmaz."
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "editorialNote": "Kaynak dilindeki kısa pasajdan bu arşiv için çevrildi. Yorumlar editoryaldir; yeni kişisel deneyim veya video yayın bilgisi eklenmedi."
     },
     {
       "id": "irade-terbiyesi-02",
       "slug": "irade-terbiyesi-02",
-      "kind": "direct-quote",
-      "title": "",
-      "text": "",
+      "kind": "free-translation",
+      "title": "Biriktirmekten işlemeye geç",
+      "text": "Bir eser yaratmak, bulmak ve özgün biçimde düzenlemek başka; başkalarının yaptıklarını belleğe depolamak başkadır.",
       "textLanguage": "tr",
       "authorId": "jules-payot",
       "bookId": "irade-terbiyesi",
-      "categoryIds": [],
-      "tags": [],
-      "meaning": "",
-      "commentary": "",
-      "application": "",
-      "critique": "",
+      "categoryIds": [
+        "basari-calisma",
+        "felsefe-yasam"
+      ],
+      "tags": [
+        "öğrenme",
+        "ezber",
+        "anlama",
+        "okuma"
+      ],
+      "meaning": "Payot, öğrenilenleri hatırlamak ile onları düşünerek yeni bir düzene koymak arasındaki farkı gösterir.",
+      "commentary": "Okuduğumuz bir fikri kendi cümlemizle açıklamak, nerede işe yarayacağını ve nerede eksik kalacağını sormak, o fikirle çalışmanın bir yoludur.",
+      "application": "Bir sayfadan sonra kitabı kapat; ana düşünceyi iki cümlede anlat ve ona bir soru ekle.",
+      "critique": "Bellek ile anlamayı birbirine düşman görmek gerekmez. Bilgi birikimi üretime zemin olabilir; burada sorgulanan yalnızca depolamakla yetinmektir.",
       "source": {
-        "translator": "",
-        "publisher": "",
-        "edition": "",
-        "year": null,
-        "page": "",
-        "locator": "",
-        "url": "",
-        "language": "tr",
-        "originalText": ""
+        "translator": "Düşünce Arşivi — yapay zekâ desteğiyle Türkçe serbest çeviri",
+        "publisher": "Félix Alcan, Paris",
+        "edition": "7. baskı; Wellcome Collection taraması, b28050101",
+        "year": 1898,
+        "language": "fr",
+        "page": "9",
+        "locator": "Kitap I · Bölüm I",
+        "url": "https://wellcomecollection.org/works/fbnfek8v/items?canvas=33&shouldScrollToCanvas=true",
+        "originalText": "Autre chose, en effet, est la création d’une œuvre, le travail d’invention, de disposition originale, autre chose l’emmagasinement en la mémoire de ce qu’ont fait les autres."
       },
       "verification": {
-        "status": "pending",
-        "checkedBy": "",
-        "checkedAt": null,
-        "evidence": ""
+        "status": "verified",
+        "checkedBy": "Codex — kaynak metni karşılaştırması",
+        "checkedAt": "2026-10-19",
+        "evidence": "Codex, OCR pasajını basılı s. 9 sayfa görüntüsüyle karşılaştırdı: https://wellcomecollection.org/works/fbnfek8v/items?canvas=33&shouldScrollToCanvas=true. Başlık sayfası (tarama 7) 7. baskı, Félix Alcan, Paris, 1898 gösteriyor; katalogdaki 1897 yerine tarama esas alındı. Türkçe metin bu Fransızca pasajdan serbest çevrildi."
       },
       "rights": {
-        "status": "pending",
-        "basis": "",
-        "publicNote": ""
+        "status": "approved",
+        "basis": "Jules Payot’nun 1898 Fransızca baskısı. Wellcome Collection öğeyi Public Domain Mark ile sunar: https://wellcomecollection.org/works/fbnfek8v. Modern Türkçe baskı veya çeviri kullanılmadı. Kaynak kredisi: Wellcome Collection.",
+        "publicNote": "Türkçe metin, bu arşiv için yapay zekâ desteğiyle hazırlanmış serbest çeviridir; yayımlanmış bir Türkçe baskıdan alınmamıştır. Açıklama, yorum ve uygulama önerileri alıntıdan ayrıdır."
       },
       "videoRefs": [],
-      "status": "draft",
-      "publishedAt": null,
-      "editorialNote": "Birebir metin ve baskı kaynağı seçilmedi. Okuma özeti veya kişisel uyarlama doğrudan alıntı sayılmaz."
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "editorialNote": "Kaynak dilindeki kısa pasajdan bu arşiv için çevrildi. Yorumlar editoryaldir; yeni kişisel deneyim veya video yayın bilgisi eklenmedi."
     },
     {
       "id": "irade-terbiyesi-03",
       "slug": "irade-terbiyesi-03",
-      "kind": "direct-quote",
-      "title": "",
-      "text": "",
+      "kind": "free-translation",
+      "title": "Çalışmanın niteliğine bak",
+      "text": "Dahası, çalışmanın miktarı çoğu zaman niteliğine zarar verir.",
       "textLanguage": "tr",
       "authorId": "jules-payot",
       "bookId": "irade-terbiyesi",
-      "categoryIds": [],
-      "tags": [],
-      "meaning": "",
-      "commentary": "",
-      "application": "",
-      "critique": "",
+      "categoryIds": [
+        "basari-calisma",
+        "irade-disiplin"
+      ],
+      "tags": [
+        "kalite",
+        "çalışma",
+        "dinlenme",
+        "verim"
+      ],
+      "meaning": "Bu cümle, zihinsel çalışmada çok sayıda bilgi toplamanın özgün düşüncenin yerini tutamayacağı tartışması içinde geçer.",
+      "commentary": "İşi yalnızca saatle ölçmek eksik kalabilir. Açıklığın, doğruluğun veya tamamlanan bir parçanın ilerleme ölçüsü olması daha anlamlı olabilir.",
+      "application": "Oturum sonunda ne kadar çalıştığını kaydetmenin yanına, iyileştirdiğin tek bir noktayı yaz.",
+      "critique": "Bu tarihsel yargı, daha uzun çalışmanın her zaman zararlı olduğunu kanıtlamaz. İşin gerektirdiği süre, dinlenme ve koşullar birlikte düşünülmeli.",
       "source": {
-        "translator": "",
-        "publisher": "",
-        "edition": "",
-        "year": null,
-        "page": "",
-        "locator": "",
-        "url": "",
-        "language": "tr",
-        "originalText": ""
+        "translator": "Düşünce Arşivi — yapay zekâ desteğiyle Türkçe serbest çeviri",
+        "publisher": "Félix Alcan, Paris",
+        "edition": "7. baskı; Wellcome Collection taraması, b28050101",
+        "year": 1898,
+        "language": "fr",
+        "page": "11",
+        "locator": "Kitap I · Bölüm I",
+        "url": "https://wellcomecollection.org/works/fbnfek8v/items?canvas=35&shouldScrollToCanvas=true",
+        "originalText": "Bien plus, la quantité du travail est souvent nuisible à sa qualité."
       },
       "verification": {
-        "status": "pending",
-        "checkedBy": "",
-        "checkedAt": null,
-        "evidence": ""
+        "status": "verified",
+        "checkedBy": "Codex — kaynak metni karşılaştırması",
+        "checkedAt": "2026-10-19",
+        "evidence": "Codex, OCR pasajını basılı s. 11 sayfa görüntüsüyle karşılaştırdı: https://wellcomecollection.org/works/fbnfek8v/items?canvas=35&shouldScrollToCanvas=true. Başlık sayfası (tarama 7) 7. baskı, Félix Alcan, Paris, 1898 gösteriyor; katalogdaki 1897 yerine tarama esas alındı. Türkçe metin bu Fransızca pasajdan serbest çevrildi."
       },
       "rights": {
-        "status": "pending",
-        "basis": "",
-        "publicNote": ""
+        "status": "approved",
+        "basis": "Jules Payot’nun 1898 Fransızca baskısı. Wellcome Collection öğeyi Public Domain Mark ile sunar: https://wellcomecollection.org/works/fbnfek8v. Modern Türkçe baskı veya çeviri kullanılmadı. Kaynak kredisi: Wellcome Collection.",
+        "publicNote": "Türkçe metin, bu arşiv için yapay zekâ desteğiyle hazırlanmış serbest çeviridir; yayımlanmış bir Türkçe baskıdan alınmamıştır. Açıklama, yorum ve uygulama önerileri alıntıdan ayrıdır."
       },
       "videoRefs": [],
-      "status": "draft",
-      "publishedAt": null,
-      "editorialNote": "Birebir metin ve baskı kaynağı seçilmedi. Okuma özeti veya kişisel uyarlama doğrudan alıntı sayılmaz."
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "editorialNote": "Kaynak dilindeki kısa pasajdan bu arşiv için çevrildi. Yorumlar editoryaldir; yeni kişisel deneyim veya video yayın bilgisi eklenmedi."
     },
     {
       "id": "irade-terbiyesi-04",
       "slug": "irade-terbiyesi-04",
-      "kind": "direct-quote",
-      "title": "",
-      "text": "",
+      "kind": "free-translation",
+      "title": "Düşünceni somutlaştır",
+      "text": "Düşüncemizi her zaman ayrıntılandırmalı, somut hâle getirmeliyiz.",
       "textLanguage": "tr",
       "authorId": "jules-payot",
       "bookId": "irade-terbiyesi",
-      "categoryIds": [],
-      "tags": [],
-      "meaning": "",
-      "commentary": "",
-      "application": "",
-      "critique": "",
+      "categoryIds": [
+        "irade-disiplin",
+        "insan-psikolojisi"
+      ],
+      "tags": [
+        "somutlaştırma",
+        "plan",
+        "niyet",
+        "davranış"
+      ],
+      "meaning": "Payot, genel sözcüklerin bazen belirsiz düşünceleri örttüğünü söyler; düşünmeyi somut ayrıntılarla ilişkilendirir.",
+      "commentary": "Daha disiplinli olmak gibi geniş bir isteğin günlük karşılığını yazmak, neyi gerçekten deneyeceğimizi görünür kılar.",
+      "application": "Genel hedefini bugün yapılabilecek tek bir davranışa çevir: ne yapacaksın, ne zaman ve hangi koşulda?",
+      "critique": "Somut bir plan kurmak, onu uyguladığımızın kanıtı değildir. Planın ardından ne olduğunu ayrıca kaydetmek gerekir.",
       "source": {
-        "translator": "",
-        "publisher": "",
-        "edition": "",
-        "year": null,
-        "page": "",
-        "locator": "",
-        "url": "",
-        "language": "tr",
-        "originalText": ""
+        "translator": "Düşünce Arşivi — yapay zekâ desteğiyle Türkçe serbest çeviri",
+        "publisher": "Félix Alcan, Paris",
+        "edition": "7. baskı; Wellcome Collection taraması, b28050101",
+        "year": 1898,
+        "language": "fr",
+        "page": "129",
+        "locator": "Kitap III · Bölüm II · Qu’est-ce que méditer et comment méditer",
+        "url": "https://wellcomecollection.org/works/fbnfek8v/items?canvas=153&shouldScrollToCanvas=true",
+        "originalText": "Nous devons toujours particulariser notre pensée, la rendre concrète."
       },
       "verification": {
-        "status": "pending",
-        "checkedBy": "",
-        "checkedAt": null,
-        "evidence": ""
+        "status": "verified",
+        "checkedBy": "Codex — kaynak metni karşılaştırması",
+        "checkedAt": "2026-10-19",
+        "evidence": "Codex, OCR pasajını basılı s. 129 sayfa görüntüsüyle karşılaştırdı: https://wellcomecollection.org/works/fbnfek8v/items?canvas=153&shouldScrollToCanvas=true. Başlık sayfası (tarama 7) 7. baskı, Félix Alcan, Paris, 1898 gösteriyor; katalogdaki 1897 yerine tarama esas alındı. Türkçe metin bu Fransızca pasajdan serbest çevrildi."
       },
       "rights": {
-        "status": "pending",
-        "basis": "",
-        "publicNote": ""
+        "status": "approved",
+        "basis": "Jules Payot’nun 1898 Fransızca baskısı. Wellcome Collection öğeyi Public Domain Mark ile sunar: https://wellcomecollection.org/works/fbnfek8v. Modern Türkçe baskı veya çeviri kullanılmadı. Kaynak kredisi: Wellcome Collection.",
+        "publicNote": "Türkçe metin, bu arşiv için yapay zekâ desteğiyle hazırlanmış serbest çeviridir; yayımlanmış bir Türkçe baskıdan alınmamıştır. Açıklama, yorum ve uygulama önerileri alıntıdan ayrıdır."
       },
       "videoRefs": [],
-      "status": "draft",
-      "publishedAt": null,
-      "editorialNote": "Birebir metin ve baskı kaynağı seçilmedi. Okuma özeti veya kişisel uyarlama doğrudan alıntı sayılmaz."
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "editorialNote": "Kaynak dilindeki kısa pasajdan bu arşiv için çevrildi. Yorumlar editoryaldir; yeni kişisel deneyim veya video yayın bilgisi eklenmedi."
     },
     {
       "id": "irade-terbiyesi-05",
       "slug": "irade-terbiyesi-05",
-      "kind": "direct-quote",
-      "title": "",
-      "text": "",
+      "kind": "free-translation",
+      "title": "Büyük işin içindeki küçük adımlar",
+      "text": "Eylemek, öyleyse, binlerce küçük eylemi gerçekleştirmektir.",
       "textLanguage": "tr",
       "authorId": "jules-payot",
       "bookId": "irade-terbiyesi",
-      "categoryIds": [],
-      "tags": [],
-      "meaning": "",
-      "commentary": "",
-      "application": "",
-      "critique": "",
+      "categoryIds": [
+        "irade-disiplin",
+        "basari-calisma"
+      ],
+      "tags": [
+        "küçük adımlar",
+        "süreklilik",
+        "alışkanlık",
+        "başlamak"
+      ],
+      "meaning": "Büyük bir çalışma, çok sayıda küçük dikkat ve emek adımına ayrılır. Payot, iradenin bu somut eylemler içinde çalıştırıldığını anlatır.",
+      "commentary": "Başlamak için büyük bir motivasyon anı beklemek yerine, sıradaki tamamlanabilir parçayı seçebiliriz. Küçük adımın değeri, asıl işe bağlanmasındadır.",
+      "application": "Bugünkü işi bir paragraf, bir not veya bir hazırlık adımı kadar küçült; tamamlayınca sıradaki parçaya karar ver.",
+      "critique": "Küçük adımları saymak tek başına ilerleme değildir. Yönü kontrol etmek ve gerektiğinde dinlenmek de çalışmanın parçasıdır.",
       "source": {
-        "translator": "",
-        "publisher": "",
-        "edition": "",
-        "year": null,
-        "page": "",
-        "locator": "",
-        "url": "",
-        "language": "tr",
-        "originalText": ""
+        "translator": "Düşünce Arşivi — yapay zekâ desteğiyle Türkçe serbest çeviri",
+        "publisher": "Félix Alcan, Paris",
+        "edition": "7. baskı; Wellcome Collection taraması, b28050101",
+        "year": 1898,
+        "language": "fr",
+        "page": "137",
+        "locator": "Kitap III · Bölüm III · L’action dans l’éducation de la volonté",
+        "url": "https://wellcomecollection.org/works/fbnfek8v/items?canvas=161&shouldScrollToCanvas=true",
+        "originalText": "Agir c’est donc accomplir mille menues actions."
       },
       "verification": {
-        "status": "pending",
-        "checkedBy": "",
-        "checkedAt": null,
-        "evidence": ""
+        "status": "verified",
+        "checkedBy": "Codex — kaynak metni karşılaştırması",
+        "checkedAt": "2026-10-19",
+        "evidence": "Codex, OCR pasajını basılı s. 137 sayfa görüntüsüyle karşılaştırdı: https://wellcomecollection.org/works/fbnfek8v/items?canvas=161&shouldScrollToCanvas=true. Başlık sayfası (tarama 7) 7. baskı, Félix Alcan, Paris, 1898 gösteriyor; katalogdaki 1897 yerine tarama esas alındı. Türkçe metin bu Fransızca pasajdan serbest çevrildi."
       },
       "rights": {
-        "status": "pending",
-        "basis": "",
-        "publicNote": ""
+        "status": "approved",
+        "basis": "Jules Payot’nun 1898 Fransızca baskısı. Wellcome Collection öğeyi Public Domain Mark ile sunar: https://wellcomecollection.org/works/fbnfek8v. Modern Türkçe baskı veya çeviri kullanılmadı. Kaynak kredisi: Wellcome Collection.",
+        "publicNote": "Türkçe metin, bu arşiv için yapay zekâ desteğiyle hazırlanmış serbest çeviridir; yayımlanmış bir Türkçe baskıdan alınmamıştır. Açıklama, yorum ve uygulama önerileri alıntıdan ayrıdır."
       },
       "videoRefs": [],
-      "status": "draft",
-      "publishedAt": null,
-      "editorialNote": "Birebir metin ve baskı kaynağı seçilmedi. Okuma özeti veya kişisel uyarlama doğrudan alıntı sayılmaz."
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "editorialNote": "Kaynak dilindeki kısa pasajdan bu arşiv için çevrildi. Yorumlar editoryaldir; yeni kişisel deneyim veya video yayın bilgisi eklenmedi."
     },
     {
       "id": "kendime-dusunceler-01",
       "slug": "kendime-dusunceler-01",
-      "kind": "direct-quote",
-      "title": "",
-      "text": "",
+      "kind": "free-translation",
+      "title": "Güne bir amaçla başla",
+      "text": "Sabah isteksizce kalkarken şunu düşün: Bir insanın yapacağı işi yapmak için kalkıyorum.",
       "textLanguage": "tr",
       "authorId": "marcus-aurelius",
       "bookId": "kendime-dusunceler",
-      "categoryIds": [],
-      "tags": [],
-      "meaning": "",
-      "commentary": "",
-      "application": "",
-      "critique": "",
+      "categoryIds": [
+        "irade-disiplin",
+        "felsefe-yasam"
+      ],
+      "tags": [
+        "sabah",
+        "amaç",
+        "sorumluluk",
+        "başlamak"
+      ],
+      "meaning": "Marcus, güne başlamayı insanın toplumsal sorumluluklarıyla ilişkilendirir. Aynı pasajda dinlenme ihtiyacını da kabul eder.",
+      "commentary": "Bu düşünceyi daha erken kalkma yarışına çevirmeden okuyabiliriz: Bugün yerine getirmek istediğimiz anlamlı sorumluluk nedir?",
+      "application": "Günün ilk uygun anında, seni bekleyen tek bir anlamlı işi ve onun ilk küçük adımını belirle.",
+      "critique": "Uyku ihtiyacı ve yaşam koşulları kişiden kişiye değişir. Pasajı dinlenmeyi küçümsemek veya yorgunluğu ahlaki bir kusur saymak için kullanmamalı.",
       "source": {
-        "translator": "",
-        "publisher": "",
-        "edition": "",
-        "year": null,
+        "translator": "George Long (İngilizce çeviri); Düşünce Arşivi — yapay zekâ desteğiyle Türkçe serbest çeviri",
+        "publisher": "Project Gutenberg (dijital kaynak)",
+        "edition": "E-kitap #15877; George Long çevirisi. İlk dijital yayın: 2005.",
+        "year": 2005,
+        "language": "en",
         "page": "",
-        "locator": "",
-        "url": "",
-        "language": "tr",
-        "originalText": ""
+        "locator": "Kitap V · 1",
+        "url": "https://www.gutenberg.org/cache/epub/15877/pg15877-images.html#v._1",
+        "originalText": "In the morning when thou risest unwillingly, let this thought be present,—I am rising to the work of a human being."
       },
       "verification": {
-        "status": "pending",
-        "checkedBy": "",
-        "checkedAt": null,
-        "evidence": ""
+        "status": "verified",
+        "checkedBy": "Codex — kaynak metni karşılaştırması",
+        "checkedAt": "2026-10-19",
+        "evidence": "Codex, George Long çevirisindeki Kitap V · 1 pasajını ve çevresini https://www.gutenberg.org/cache/epub/15877/pg15877-images.html#v._1 üzerinden karşılaştırdı. Bu doğrudan Eski Yunancadan çeviri değildir; İngilizce ara kaynak açıkça belirtildi."
       },
       "rights": {
-        "status": "pending",
-        "basis": "",
-        "publicNote": ""
+        "status": "approved",
+        "basis": "Marcus Aurelius’un kamu malı eseri ve George Long’un (1800–1879) kamu malı İngilizce çevirisi. Project Gutenberg #15877 kaydı: https://www.gutenberg.org/ebooks/15877. Modern Türkçe çeviri kullanılmadı; Türkçe metin İngilizce kaynak üzerinden bu arşiv için üretildi.",
+        "publicNote": "Türkçe metin, bu arşiv için yapay zekâ desteğiyle hazırlanmış serbest çeviridir; yayımlanmış bir Türkçe baskıdan alınmamıştır. Açıklama, yorum ve uygulama önerileri alıntıdan ayrıdır."
       },
       "videoRefs": [],
-      "status": "draft",
-      "publishedAt": null,
-      "editorialNote": "Birebir metin ve baskı kaynağı seçilmedi. Okuma özeti veya kişisel uyarlama doğrudan alıntı sayılmaz."
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "editorialNote": "Kaynak dilindeki kısa pasajdan bu arşiv için çevrildi. Yorumlar editoryaldir; yeni kişisel deneyim veya video yayın bilgisi eklenmedi."
     },
     {
       "id": "kendime-dusunceler-02",
       "slug": "kendime-dusunceler-02",
-      "kind": "direct-quote",
-      "title": "",
-      "text": "",
+      "kind": "free-translation",
+      "title": "Olay ile yargını ayır",
+      "text": "Dışarıdaki bir şey seni sıkıntıya düşürüyorsa, seni sarsan o şey değil, onun hakkındaki kendi yargındır. Bu yargıyı şimdi silmek senin elindedir.",
       "textLanguage": "tr",
       "authorId": "marcus-aurelius",
       "bookId": "kendime-dusunceler",
-      "categoryIds": [],
-      "tags": [],
-      "meaning": "",
-      "commentary": "",
-      "application": "",
-      "critique": "",
+      "categoryIds": [
+        "insan-psikolojisi",
+        "felsefe-yasam"
+      ],
+      "tags": [
+        "yargı",
+        "olay",
+        "duygu",
+        "stoacılık"
+      ],
+      "meaning": "Stoacı bakış, karşılaştığımız olay ile o olaya verdiğimiz zihinsel anlam arasında bir ayrım kurar.",
+      "commentary": "Bir olayı yorumlamak zorundayız; fakat ilk yorumumuzun tek mümkün açıklama olup olmadığını sorabiliriz. Bu aralık, vereceğimiz tepkiyi yeniden düşünmeye yardımcı olabilir.",
+      "application": "Zorlayıcı bir olayda önce gözlenebilir olanı, sonra ona eklediğin yorumu ayrı satırlara yaz.",
+      "critique": "Gerçek zarar, haksızlık ve acı yalnızca düşünceden ibaret değildir. Bu güçlü Stoacı iddiayı, kişinin yaşadığı zararı inkâr etmek veya onu suçlamak için kullanmamalı.",
       "source": {
-        "translator": "",
-        "publisher": "",
-        "edition": "",
-        "year": null,
+        "translator": "George Long (İngilizce çeviri); Düşünce Arşivi — yapay zekâ desteğiyle Türkçe serbest çeviri",
+        "publisher": "Project Gutenberg (dijital kaynak)",
+        "edition": "E-kitap #15877; George Long çevirisi. İlk dijital yayın: 2005.",
+        "year": 2005,
+        "language": "en",
         "page": "",
-        "locator": "",
-        "url": "",
-        "language": "tr",
-        "originalText": ""
+        "locator": "Kitap VIII · 47",
+        "url": "https://www.gutenberg.org/cache/epub/15877/pg15877-images.html#viii._47",
+        "originalText": "If thou art pained by any external thing, it is not this thing that disturbs thee, but thy own judgment about it. And it is in thy power to wipe out this judgment now."
       },
       "verification": {
-        "status": "pending",
-        "checkedBy": "",
-        "checkedAt": null,
-        "evidence": ""
+        "status": "verified",
+        "checkedBy": "Codex — kaynak metni karşılaştırması",
+        "checkedAt": "2026-10-19",
+        "evidence": "Codex, George Long çevirisindeki Kitap VIII · 47 pasajını ve çevresini https://www.gutenberg.org/cache/epub/15877/pg15877-images.html#viii._47 üzerinden karşılaştırdı. Bu doğrudan Eski Yunancadan çeviri değildir; İngilizce ara kaynak açıkça belirtildi."
       },
       "rights": {
-        "status": "pending",
-        "basis": "",
-        "publicNote": ""
+        "status": "approved",
+        "basis": "Marcus Aurelius’un kamu malı eseri ve George Long’un (1800–1879) kamu malı İngilizce çevirisi. Project Gutenberg #15877 kaydı: https://www.gutenberg.org/ebooks/15877. Modern Türkçe çeviri kullanılmadı; Türkçe metin İngilizce kaynak üzerinden bu arşiv için üretildi.",
+        "publicNote": "Türkçe metin, bu arşiv için yapay zekâ desteğiyle hazırlanmış serbest çeviridir; yayımlanmış bir Türkçe baskıdan alınmamıştır. Açıklama, yorum ve uygulama önerileri alıntıdan ayrıdır."
       },
       "videoRefs": [],
-      "status": "draft",
-      "publishedAt": null,
-      "editorialNote": "Birebir metin ve baskı kaynağı seçilmedi. Okuma özeti veya kişisel uyarlama doğrudan alıntı sayılmaz."
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "editorialNote": "Kaynak dilindeki kısa pasajdan bu arşiv için çevrildi. Yorumlar editoryaldir; yeni kişisel deneyim veya video yayın bilgisi eklenmedi."
     },
     {
       "id": "kendime-dusunceler-03",
       "slug": "kendime-dusunceler-03",
-      "kind": "direct-quote",
-      "title": "",
-      "text": "",
+      "kind": "free-translation",
+      "title": "Engel karşısında yeni bir yol ara",
+      "text": "Zihin, kendi etkinliğinin önündeki her engeli dönüştürüp bir yardımcıya çevirir; böylece eylemi durduran şey ilerlemeye, yoldaki engel de yolu aşmaya hizmet eder.",
       "textLanguage": "tr",
       "authorId": "marcus-aurelius",
       "bookId": "kendime-dusunceler",
-      "categoryIds": [],
-      "tags": [],
-      "meaning": "",
-      "commentary": "",
-      "application": "",
-      "critique": "",
+      "categoryIds": [
+        "felsefe-yasam",
+        "basari-calisma"
+      ],
+      "tags": [
+        "engel",
+        "esneklik",
+        "yöntem",
+        "stoacılık"
+      ],
+      "meaning": "Pasaj, dış engellerin davranışı sınırlayabildiğini kabul ederken zihnin yaklaşımını değiştirme imkânına odaklanır.",
+      "commentary": "Bunu her engelin iyi olduğu iddiası olarak değil, engel ortaya çıktıktan sonra elimizde hangi seçeneklerin kaldığını araştırma çağrısı olarak okuyabiliriz.",
+      "application": "Bir yöntem kapanınca aynı amaca hizmet edebilecek başka bir yöntemi yaz; mümkün değilse hedefin kapsamını yeniden değerlendir.",
+      "critique": "Bazı engeller tek kişinin çabasıyla aşılamaz. Yardım istemek, beklemek veya vazgeçmek de koşullara uygun bir karar olabilir.",
       "source": {
-        "translator": "",
-        "publisher": "",
-        "edition": "",
-        "year": null,
+        "translator": "George Long (İngilizce çeviri); Düşünce Arşivi — yapay zekâ desteğiyle Türkçe serbest çeviri",
+        "publisher": "Project Gutenberg (dijital kaynak)",
+        "edition": "E-kitap #15877; George Long çevirisi. İlk dijital yayın: 2005.",
+        "year": 2005,
+        "language": "en",
         "page": "",
-        "locator": "",
-        "url": "",
-        "language": "tr",
-        "originalText": ""
+        "locator": "Kitap V · 20",
+        "url": "https://www.gutenberg.org/cache/epub/15877/pg15877-images.html#v._20",
+        "originalText": "for the mind converts and changes every hindrance to its activity into an aid; and so that which is a hindrance is made a furtherance to an act; and that which is an obstacle on the road helps us on this road."
       },
       "verification": {
-        "status": "pending",
-        "checkedBy": "",
-        "checkedAt": null,
-        "evidence": ""
+        "status": "verified",
+        "checkedBy": "Codex — kaynak metni karşılaştırması",
+        "checkedAt": "2026-10-19",
+        "evidence": "Codex, George Long çevirisindeki Kitap V · 20 pasajını ve çevresini https://www.gutenberg.org/cache/epub/15877/pg15877-images.html#v._20 üzerinden karşılaştırdı. Bu doğrudan Eski Yunancadan çeviri değildir; İngilizce ara kaynak açıkça belirtildi."
       },
       "rights": {
-        "status": "pending",
-        "basis": "",
-        "publicNote": ""
+        "status": "approved",
+        "basis": "Marcus Aurelius’un kamu malı eseri ve George Long’un (1800–1879) kamu malı İngilizce çevirisi. Project Gutenberg #15877 kaydı: https://www.gutenberg.org/ebooks/15877. Modern Türkçe çeviri kullanılmadı; Türkçe metin İngilizce kaynak üzerinden bu arşiv için üretildi.",
+        "publicNote": "Türkçe metin, bu arşiv için yapay zekâ desteğiyle hazırlanmış serbest çeviridir; yayımlanmış bir Türkçe baskıdan alınmamıştır. Açıklama, yorum ve uygulama önerileri alıntıdan ayrıdır."
       },
       "videoRefs": [],
-      "status": "draft",
-      "publishedAt": null,
-      "editorialNote": "Birebir metin ve baskı kaynağı seçilmedi. Okuma özeti veya kişisel uyarlama doğrudan alıntı sayılmaz."
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "editorialNote": "Kaynak dilindeki kısa pasajdan bu arşiv için çevrildi. Yorumlar editoryaldir; yeni kişisel deneyim veya video yayın bilgisi eklenmedi."
     },
     {
       "id": "kendime-dusunceler-04",
       "slug": "kendime-dusunceler-04",
-      "kind": "direct-quote",
-      "title": "",
-      "text": "",
+      "kind": "free-translation",
+      "title": "İyi insanı davranışında göster",
+      "text": "İyi bir insanın nasıl olması gerektiğini konuşup durma; öyle biri ol.",
       "textLanguage": "tr",
       "authorId": "marcus-aurelius",
       "bookId": "kendime-dusunceler",
-      "categoryIds": [],
-      "tags": [],
-      "meaning": "",
-      "commentary": "",
-      "application": "",
-      "critique": "",
+      "categoryIds": [
+        "felsefe-yasam",
+        "irade-disiplin"
+      ],
+      "tags": [
+        "etik",
+        "değerler",
+        "eylem",
+        "tutarlılık"
+      ],
+      "meaning": "Marcus, iyi yaşam üzerine konuşmanın davranışın yerine geçmemesini ister.",
+      "commentary": "Bir değeri benimsediğimizi söylemek ile onu küçük bir kararda korumak farklı şeylerdir. Sözü somut bir davranışla karşılaştırmak, aradaki farkı görmemizi sağlar.",
+      "application": "Bugün önemsediğin bir değeri seç ve onu gösterebileceğin tek bir davranışı belirle.",
+      "critique": "Eylem vurgusu, neyin iyi olduğunu tartışmayı gereksiz kılmaz. Düşünmeden yapılan bir eylem de zarar verebilir.",
       "source": {
-        "translator": "",
-        "publisher": "",
-        "edition": "",
-        "year": null,
+        "translator": "George Long (İngilizce çeviri); Düşünce Arşivi — yapay zekâ desteğiyle Türkçe serbest çeviri",
+        "publisher": "Project Gutenberg (dijital kaynak)",
+        "edition": "E-kitap #15877; George Long çevirisi. İlk dijital yayın: 2005.",
+        "year": 2005,
+        "language": "en",
         "page": "",
-        "locator": "",
-        "url": "",
-        "language": "tr",
-        "originalText": ""
+        "locator": "Kitap X · 16",
+        "url": "https://www.gutenberg.org/cache/epub/15877/pg15877-images.html#x._16",
+        "originalText": "No longer talk at all about the kind of man that a good man ought to be, but be such."
       },
       "verification": {
-        "status": "pending",
-        "checkedBy": "",
-        "checkedAt": null,
-        "evidence": ""
+        "status": "verified",
+        "checkedBy": "Codex — kaynak metni karşılaştırması",
+        "checkedAt": "2026-10-19",
+        "evidence": "Codex, George Long çevirisindeki Kitap X · 16 pasajını ve çevresini https://www.gutenberg.org/cache/epub/15877/pg15877-images.html#x._16 üzerinden karşılaştırdı. Bu doğrudan Eski Yunancadan çeviri değildir; İngilizce ara kaynak açıkça belirtildi."
       },
       "rights": {
-        "status": "pending",
-        "basis": "",
-        "publicNote": ""
+        "status": "approved",
+        "basis": "Marcus Aurelius’un kamu malı eseri ve George Long’un (1800–1879) kamu malı İngilizce çevirisi. Project Gutenberg #15877 kaydı: https://www.gutenberg.org/ebooks/15877. Modern Türkçe çeviri kullanılmadı; Türkçe metin İngilizce kaynak üzerinden bu arşiv için üretildi.",
+        "publicNote": "Türkçe metin, bu arşiv için yapay zekâ desteğiyle hazırlanmış serbest çeviridir; yayımlanmış bir Türkçe baskıdan alınmamıştır. Açıklama, yorum ve uygulama önerileri alıntıdan ayrıdır."
       },
       "videoRefs": [],
-      "status": "draft",
-      "publishedAt": null,
-      "editorialNote": "Birebir metin ve baskı kaynağı seçilmedi. Okuma özeti veya kişisel uyarlama doğrudan alıntı sayılmaz."
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "editorialNote": "Kaynak dilindeki kısa pasajdan bu arşiv için çevrildi. Yorumlar editoryaldir; yeni kişisel deneyim veya video yayın bilgisi eklenmedi."
     },
     {
       "id": "kendime-dusunceler-05",
       "slug": "kendime-dusunceler-05",
-      "kind": "direct-quote",
-      "title": "",
-      "text": "",
+      "kind": "free-translation",
+      "title": "Yaparken ve söylerken iki ölçü",
+      "text": "Doğru değilse yapma; gerçek değilse söyleme.",
       "textLanguage": "tr",
       "authorId": "marcus-aurelius",
       "bookId": "kendime-dusunceler",
-      "categoryIds": [],
-      "tags": [],
-      "meaning": "",
-      "commentary": "",
-      "application": "",
-      "critique": "",
+      "categoryIds": [
+        "felsefe-yasam",
+        "insan-psikolojisi"
+      ],
+      "tags": [
+        "dürüstlük",
+        "etik",
+        "kaynak",
+        "doğrulama"
+      ],
+      "meaning": "Pasaj, eylem için ahlaki doğruluğu, söz için gerçeğe uygunluğu iki ayrı ölçü olarak koyar.",
+      "commentary": "Özellikle bir bilgi paylaşırken emin olmadığımız noktayı açık bırakmak da dürüstlüğün parçasıdır. Arşivde kaynak ile yorumun ayrılması bu ölçüyü görünür kılar.",
+      "application": "Bir iddiayı paylaşmadan önce kaynağını kontrol et; doğrulayamadığın kısmı kesin bilgi gibi aktarma.",
+      "critique": "Neyin doğru eylem olduğu her durumda açık olmayabilir. İlke, bağlamı ve başkaları üzerindeki etkileri düşünme sorumluluğunu ortadan kaldırmaz.",
       "source": {
-        "translator": "",
-        "publisher": "",
-        "edition": "",
-        "year": null,
+        "translator": "George Long (İngilizce çeviri); Düşünce Arşivi — yapay zekâ desteğiyle Türkçe serbest çeviri",
+        "publisher": "Project Gutenberg (dijital kaynak)",
+        "edition": "E-kitap #15877; George Long çevirisi. İlk dijital yayın: 2005.",
+        "year": 2005,
+        "language": "en",
         "page": "",
-        "locator": "",
-        "url": "",
-        "language": "tr",
-        "originalText": ""
+        "locator": "Kitap XII · 17",
+        "url": "https://www.gutenberg.org/cache/epub/15877/pg15877-images.html#xii._17",
+        "originalText": "If it is not right, do not do it: if it is not true, do not say it."
       },
       "verification": {
-        "status": "pending",
-        "checkedBy": "",
-        "checkedAt": null,
-        "evidence": ""
+        "status": "verified",
+        "checkedBy": "Codex — kaynak metni karşılaştırması",
+        "checkedAt": "2026-10-19",
+        "evidence": "Codex, George Long çevirisindeki Kitap XII · 17 pasajını ve çevresini https://www.gutenberg.org/cache/epub/15877/pg15877-images.html#xii._17 üzerinden karşılaştırdı. Bu doğrudan Eski Yunancadan çeviri değildir; İngilizce ara kaynak açıkça belirtildi."
       },
       "rights": {
-        "status": "pending",
-        "basis": "",
-        "publicNote": ""
+        "status": "approved",
+        "basis": "Marcus Aurelius’un kamu malı eseri ve George Long’un (1800–1879) kamu malı İngilizce çevirisi. Project Gutenberg #15877 kaydı: https://www.gutenberg.org/ebooks/15877. Modern Türkçe çeviri kullanılmadı; Türkçe metin İngilizce kaynak üzerinden bu arşiv için üretildi.",
+        "publicNote": "Türkçe metin, bu arşiv için yapay zekâ desteğiyle hazırlanmış serbest çeviridir; yayımlanmış bir Türkçe baskıdan alınmamıştır. Açıklama, yorum ve uygulama önerileri alıntıdan ayrıdır."
       },
       "videoRefs": [],
-      "status": "draft",
-      "publishedAt": null,
-      "editorialNote": "Birebir metin ve baskı kaynağı seçilmedi. Okuma özeti veya kişisel uyarlama doğrudan alıntı sayılmaz."
+      "status": "published",
+      "publishedAt": "2026-10-19",
+      "editorialNote": "Kaynak dilindeki kısa pasajdan bu arşiv için çevrildi. Yorumlar editoryaldir; yeni kişisel deneyim veya video yayın bilgisi eklenmedi."
     }
   ],
   "originalInsights": []

@@ -82,7 +82,7 @@ function publicData(source = sourceData, site = siteData) {
       if (entry[key] !== undefined) output[key] = entry[key];
     }
     output.source = {};
-    for (const key of ['translator', 'publisher', 'edition', 'year', 'page', 'locator', 'url', 'language']) {
+    for (const key of ['translator', 'publisher', 'edition', 'year', 'page', 'locator', 'url', 'language', 'originalText']) {
       if (entry.source?.[key]) output.source[key] = entry.source[key];
     }
     output.verifiedAt = entry.verification.checkedAt;
@@ -117,9 +117,10 @@ function renderCard(entry, data) {
   const details = [['Alıntının anlamı', entry.meaning], ['Bizim yorumumuz', entry.commentary],
     ['Günlük hayatta', entry.application], ['Eleştirel değerlendirme', entry.critique]]
     .filter(([, value]) => value).map(([label, value]) => `<section><h3>${label}</h3><p>${esc(value)}</p></section>`).join('');
-  const fields = [['Özgün eser', book?.originalTitle], ['Çevirmen', entry.source.translator], ['Yayınevi', entry.source.publisher],
+  const languages = { tr: 'Türkçe', it: 'İtalyanca', fr: 'Fransızca', en: 'İngilizce', grc: 'Eski Yunanca' };
+  const fields = [['Özgün eser', book?.originalTitle], ['Çeviri', entry.source.translator], ['Yayınevi / dijital kaynak', entry.source.publisher],
     ['Baskı', entry.source.edition], ['Yıl', entry.source.year], ['Sayfa', entry.source.page], ['Bölüm / konum', entry.source.locator],
-    ['Kaynak dili', entry.source.language], ['Metnin dili', entry.textLanguage], ['Doğrulama tarihi', entry.verifiedAt]]
+    ['Kaynak dili', languages[entry.source.language] || entry.source.language], ['Metnin dili', languages[entry.textLanguage] || entry.textLanguage], ['Kaynak kontrolü', entry.verifiedAt]]
     .filter(([, value]) => value).map(([label, value]) => `<div><dt>${label}</dt><dd>${esc(value)}</dd></div>`).join('');
   const related = entry.projectIds.map(id => data.projects.find(project => project.id === id)).filter(Boolean)
     .map(project => `<a class="text-link" href="${esc(project.slug)}.html">${esc(project.title)} →</a>`).join('');
@@ -134,7 +135,8 @@ function renderCard(entry, data) {
   ${entry.meaning || entry.commentary ? `<p class="thought-excerpt"><span>${entry.meaning ? 'Anlamı' : 'Bizim yorumumuz'}</span> ${esc((entry.meaning || entry.commentary).slice(0, 180))}${(entry.meaning || entry.commentary).length > 180 ? '…' : ''}</p>` : ''}
   <details><summary>Kaynak ve yorumları incele <span aria-hidden="true">↗</span></summary><div class="thought-details">${details}
     <section><h3>Kaynak bilgisi</h3><dl class="thought-source">${fields}</dl>${entry.source.url ? `<a class="text-link" href="${esc(entry.source.url)}" target="_blank" rel="noopener noreferrer">Kaynağı aç ↗</a>` : ''}
-    <p class="source-note">Sayfa numarası belirtilen baskıya aittir. Açıklama ve yorumlar, yazarın metninden ayrı değerlendirilmelidir.</p>${entry.rightsNote ? `<p class="source-note">${esc(entry.rightsNote)}</p>` : ''}</section>
+    ${entry.source.originalText ? `<h3 class="source-passage-heading">Kaynak dilindeki pasaj</h3><blockquote class="source-passage" lang="${esc(entry.source.language)}"><p>${esc(entry.source.originalText)}</p></blockquote>` : ''}
+    <p class="source-note">Sayfa numarası belirtilen kaynak baskıya aittir; başka baskılarda değişebilir. Açıklama ve yorumlar, yazarın metninden ayrı değerlendirilmelidir.</p>${entry.rightsNote ? `<p class="source-note">${esc(entry.rightsNote)}</p>` : ''}</section>
     ${related || videos ? `<section><h3>Düşünceden deneye</h3>${related}${videos}</section>` : ''}</div></details>
   <div class="thought-actions"><button type="button" data-entry-action="copy-text" hidden>Metni kopyala</button><button type="button" data-entry-action="copy-link" hidden>Bağlantıyı kopyala</button><button type="button" data-entry-action="share" hidden>Paylaş ↗</button></div>
 </article>`;

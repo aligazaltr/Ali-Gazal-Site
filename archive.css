@@ -70,6 +70,9 @@
 .thought-source dt { color: var(--muted); }
 .thought-source dd { margin: 0; color: var(--text); }
 .thought-details .source-note { color: var(--muted); font-size: 0.75rem; }
+.source-passage-heading { margin-top: 1.5rem; }
+.thought-card .source-passage { border-left: 2px solid var(--orange-line); padding-left: 1rem; margin-block: 0.8rem; }
+.source-passage p { font-family: var(--literary); }
 .thought-actions { display: flex; flex-wrap: wrap; gap: 0.1rem 0.4rem; border-top: 1px solid var(--line); }
 .thought-actions:empty { display: none; }
 .archive-feedback { color: var(--orange); font-size: 0.85rem; margin-block: 1rem; }

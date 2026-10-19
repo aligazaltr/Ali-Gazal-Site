@@ -15,12 +15,12 @@ function fixture() {
   data.originalInsights = [];
   data.authors.push({ id: 'test-author', slug: 'test-author', name: 'Test Yazarı', bio: 'Yazılım testi; gerçek yazar değil.' });
   data.books.push({ id: 'test-book', slug: 'test-book', title: 'Test Kitabı', authorId: 'test-author', originalLanguage: 'tr', originalTitle: '', focus: 'Yazılım testi' });
-  const entry = { ...clone(data.quotes[0]), id: 'test-one', slug: 'test-one', authorId: 'test-author', bookId: 'test-book',
+  const entry = { ...clone(data.quotes[0]), id: 'test-one', slug: 'test-one', kind: 'direct-quote', authorId: 'test-author', bookId: 'test-book',
     text: 'IŞIK, İRADE ve çalışma: bu bir yazılım test metnidir; gerçek alıntı değildir.',
     title: 'Yalnızca test', categoryIds: ['irade-disiplin', 'basari-calisma'], tags: ['öğrenme'],
     meaning: 'Bağlam araması için test açıklaması.', commentary: 'Dikkat üzerine test yorumu.',
     application: 'Alışkanlık için test alanı.', critique: 'Sınırlar için test alanı.',
-    status: 'published', publishedAt: '2026-10-19',
+    status: 'published', publishedAt: '2026-10-19', videoRefs: [],
     verification: { status: 'verified', checkedBy: 'Automated test', checkedAt: '2026-10-19', evidence: 'Synthetic test, not editorial verification.' },
     rights: { status: 'approved', basis: 'Synthetic test text' },
     source: { language: 'tr', publisher: 'Test yayınevi', edition: 'Test baskısı', page: '1', locator: '', translator: '', url: '' } };
@@ -128,11 +128,23 @@ test('sharing includes attribution, content kind, source locator and stable cano
 });
 test('no-JS HTML has published text and source; empty archive is noindex, populated archive gains schema', () => {
   const template = fs.readFileSync(path.join(__dirname, '../dusunce-arsivi.html'), 'utf8');
-  assert.match(renderPage(template, publicData()), /name="robots" content="noindex,follow"/);
+  const empty = clone(source); empty.quotes = []; empty.originalInsights = [];
+  assert.match(renderPage(template, publicData(empty)), /name="robots" content="noindex,follow"/);
   const html = renderPage(template, publicData(fixture()));
   assert.match(html, /name="robots" content="index,follow"/);
   assert.match(html, /application\/ld\+json/); assert.match(html, /Test baskısı/);
   assert.match(html, /IŞIK, İRADE ve çalışma/); assert.match(html, /id="archive-empty" hidden/);
+});
+test('published translations expose their source passage safely and retain their label when copied', () => {
+  const data = fixture(); const entry = data.quotes.at(-1);
+  entry.kind = 'free-translation'; entry.source.translator = 'Test çevireni';
+  entry.source.originalText = '<script>not executable</script>'; entry.source.language = 'en';
+  const published = publicData(data); const output = published.entries.at(-1);
+  const html = renderCard(output, published);
+  assert.equal(output.source.originalText, entry.source.originalText);
+  assert.match(html, /Kaynak dilindeki pasaj/); assert.match(html, /lang="en"/);
+  assert.match(html, /&lt;script&gt;not executable/); assert.doesNotMatch(html, /<script>/);
+  assert.match(core.shareText(output, published), /Serbest çeviri/);
 });
 test('deployment allowlist excludes editorial source, test scripts and docs', () => {
   const allowlist = fs.readFileSync(path.join(__dirname, '../.assetsignore'), 'utf8').trim().split('\n');
