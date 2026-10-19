@@ -86,3 +86,24 @@ seçilebilir metin sunulur. Yerel paylaşım iptali hata sayılmaz.
 
 Yüzlerce kayıt için yeni kimlikler ve ilişkiler eklemek yeterli. Ayrı yazar/kitap
 sayfaları, sosyal görsel üretimi, semantik arama ve kişiselleştirme bu sürümde yok.
+
+## İlk sürüm doğrulaması — 19 Ekim 2026
+
+- 18 Node testi: yayın kapıları, kaynak/telif eksikleri, Türkçe arama, filtreler,
+  türler, video/zaman damgası, paylaşım metni, güvenli HTML ve veri senkronizasyonu.
+- Cloudflare dal önizlemesinde arşiv, sentetik içerikli arşiv, ana sayfa ve
+  Machiavelli: 320/360/390/430/768/1440 px × iki tema = 48 düzen kontrolü.
+  Yatay taşma ve 44 px altı form/düğme/ana menü hedefi görülmedi.
+- Tarayıcıda arama, birleşik filtreler, boş sonuç, kopyalanan metnin içeriği,
+  paylaşımın bağlantı kopyalama yedeği, rastgele keşif, hash yenileme/geri gezinme,
+  klavyeyle ayrıntı açma, görünür odak ve tema kalıcılığı denendi.
+- JavaScript çalıştırılmayan iframe içinde test metinleri, kaynaklar ve native
+  ayrıntılar kullanılabildi. Uzun test metni taşmadı. Uygulama kaynaklı konsol
+  hatası görülmedi; tarayıcı eklentisinin kendi hata kayıtları ayrı tutuldu.
+- `content/archive.json` önizleme sunucusunda 404 döndü. Bu kontrolde fark edilen
+  iç içe 404 adreslerindeki göreli bağlantılar kök base adresiyle düzeltildi.
+- Yeni arşivde hareketli giriş yok; azaltılmış hareket kuralları CSS'de korunuyor.
+  Fiziksel Android cihazı, cihazın yerel paylaşım menüsü ve işletim sistemi
+  hareket tercihi bu ortamda doğrudan test edilmedi. Boyut testleri tarayıcı
+  iframe görünümüdür; gerçek cihaz testi yerine geçmez.
+- Gerçek yazarlara atfedilmeyen sentetik test sayfaları nihai daldan kaldırıldı.
