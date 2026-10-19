@@ -3,7 +3,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const siteData = require('../site-data.js');
-const { changedFiles, validVideo } = require('./sync-site.js');
+const { changedFiles, validVideo, validateResearch } = require('./sync-site.js');
 const { changes: archiveChanges } = require('./build-archive.js');
 
 const root = path.resolve(__dirname, '..');
@@ -88,6 +88,7 @@ const canonicalExpectations = {
   'index.html': `${siteData.canonicalOrigin}/`,
   'rehberler.html': `${siteData.canonicalOrigin}/rehberler`,
   'machiavelli.html': `${siteData.canonicalOrigin}/machiavelli`,
+  'irade-terbiyesi.html': `${siteData.canonicalOrigin}/irade-terbiyesi`,
   'dusunce-arsivi.html': `${siteData.canonicalOrigin}/dusunce-arsivi`,
   'hakkimda.html': `${siteData.canonicalOrigin}/hakkimda`
 };
@@ -193,7 +194,8 @@ const sitemap = fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8');
   `${siteData.canonicalOrigin}/`,
   `${siteData.canonicalOrigin}/rehberler`,
   `${siteData.canonicalOrigin}/hakkimda`,
-  `${siteData.canonicalOrigin}/machiavelli`
+  `${siteData.canonicalOrigin}/machiavelli`,
+  `${siteData.canonicalOrigin}/irade-terbiyesi`
 ].forEach(url => {
   if (!sitemap.includes(`<loc>${url}</loc>`)) fail(`sitemap.xml: URL eksik (${url})`);
 });
@@ -204,6 +206,7 @@ if (!assetsIgnore.includes('!/robots.txt') || !assetsIgnore.includes('!/sitemap.
 }
 
 for (const project of Object.values(siteData.projects)) {
+  try { validateResearch(project); } catch (error) { fail(error.message); }
   if (!project.id || !project.slug || !project.title || !project.summary) {
     fail('site-data.js: proje kimliği, slug, başlık veya özet eksik');
   }

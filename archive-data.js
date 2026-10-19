@@ -41,7 +41,9 @@ const AG_ARCHIVE_DATA = {
       "originalTitle": "L’Éducation de la volonté",
       "authorId": "jules-payot",
       "focus": "İrade, dikkat ve çalışma",
-      "projectIds": []
+      "projectIds": [
+        "irade-terbiyesi"
+      ]
     },
     {
       "id": "kendime-dusunceler",
@@ -85,6 +87,19 @@ const AG_ARCHIVE_DATA = {
       "thumbnail": {
         "src": "machiavelli-prens-7-gun-kapak.jpg",
         "alt": "Ali Gazal ve Machiavelli’nin yer aldığı, “İşe yaradı mı?” ve “7 Gün” yazılı Machiavelli deneyi kapağı.",
+        "width": 1280,
+        "height": 720
+      }
+    },
+    {
+      "id": "irade-terbiyesi",
+      "slug": "irade-terbiyesi",
+      "title": "Jules Payot — İrade Terbiyesi",
+      "statusLabel": "Kitap okunuyor, araştırma devam ediyor.",
+      "bookId": "irade-terbiyesi",
+      "thumbnail": {
+        "src": "",
+        "alt": "",
         "width": 1280,
         "height": 720
       }
@@ -333,7 +348,9 @@ const AG_ARCHIVE_DATA = {
       },
       "verifiedAt": "2026-10-19",
       "rightsNote": "Türkçe metin, bu arşiv için yapay zekâ desteğiyle hazırlanmış serbest çeviridir; yayımlanmış bir Türkçe baskıdan alınmamıştır. Açıklama, yorum ve uygulama önerileri alıntıdan ayrıdır.",
-      "projectIds": [],
+      "projectIds": [
+        "irade-terbiyesi"
+      ],
       "videos": []
     },
     {
@@ -373,7 +390,9 @@ const AG_ARCHIVE_DATA = {
       },
       "verifiedAt": "2026-10-19",
       "rightsNote": "Türkçe metin, bu arşiv için yapay zekâ desteğiyle hazırlanmış serbest çeviridir; yayımlanmış bir Türkçe baskıdan alınmamıştır. Açıklama, yorum ve uygulama önerileri alıntıdan ayrıdır.",
-      "projectIds": [],
+      "projectIds": [
+        "irade-terbiyesi"
+      ],
       "videos": []
     },
     {
@@ -413,7 +432,9 @@ const AG_ARCHIVE_DATA = {
       },
       "verifiedAt": "2026-10-19",
       "rightsNote": "Türkçe metin, bu arşiv için yapay zekâ desteğiyle hazırlanmış serbest çeviridir; yayımlanmış bir Türkçe baskıdan alınmamıştır. Açıklama, yorum ve uygulama önerileri alıntıdan ayrıdır.",
-      "projectIds": [],
+      "projectIds": [
+        "irade-terbiyesi"
+      ],
       "videos": []
     },
     {
@@ -453,7 +474,9 @@ const AG_ARCHIVE_DATA = {
       },
       "verifiedAt": "2026-10-19",
       "rightsNote": "Türkçe metin, bu arşiv için yapay zekâ desteğiyle hazırlanmış serbest çeviridir; yayımlanmış bir Türkçe baskıdan alınmamıştır. Açıklama, yorum ve uygulama önerileri alıntıdan ayrıdır.",
-      "projectIds": [],
+      "projectIds": [
+        "irade-terbiyesi"
+      ],
       "videos": []
     },
     {
@@ -493,7 +516,9 @@ const AG_ARCHIVE_DATA = {
       },
       "verifiedAt": "2026-10-19",
       "rightsNote": "Türkçe metin, bu arşiv için yapay zekâ desteğiyle hazırlanmış serbest çeviridir; yayımlanmış bir Türkçe baskıdan alınmamıştır. Açıklama, yorum ve uygulama önerileri alıntıdan ayrıdır.",
-      "projectIds": [],
+      "projectIds": [
+        "irade-terbiyesi"
+      ],
       "videos": []
     },
     {

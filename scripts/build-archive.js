@@ -161,7 +161,7 @@ function renderPage(template, data) {
   html = replace(html, 'count', data.entries.length ? `${data.entries.length} düşünce` : 'Henüz yayımlanmış düşünce yok');
   html = html.replace(/(<div\b[^>]*id="archive-empty")[^>]*>/, `$1${data.entries.length ? ' hidden' : ''}>`);
   html = html.replace(/(<meta name="robots" content=")[^"]+/, `$1${data.entries.length ? 'index,follow' : 'noindex,follow'}`);
-  html = replace(html, 'related', data.projects.map(project => `<article class="archive-project"><div><p class="eyebrow">DÜŞÜNCEDEN GERÇEK HAYATA</p><h3>${esc(project.title)}</h3><p>${esc(project.statusLabel)}</p><a class="text-link" href="${esc(project.slug)}.html">Deneyin yöntemini ve kayıtlarını incele →</a></div>${project.thumbnail?.src ? `<a href="${esc(project.slug)}.html" aria-label="${esc(project.title)}"><img src="${esc(project.thumbnail.src)}" alt="${esc(project.thumbnail.alt)}" width="1280" height="720" loading="lazy"></a>` : ''}</article>`).join(''));
+  html = replace(html, 'related', data.projects.map(project => `<article class="archive-project${project.thumbnail?.src ? '' : ' archive-project-text'}"><div><p class="eyebrow">DÜŞÜNCEDEN GERÇEK HAYATA</p><h3>${esc(project.title)}</h3><p>${esc(project.statusLabel)}</p><a class="text-link" href="${esc(project.slug)}.html">Deneyin yöntemini ve kayıtlarını incele →</a></div>${project.thumbnail?.src ? `<a href="${esc(project.slug)}.html" aria-label="${esc(project.title)}"><img src="${esc(project.thumbnail.src)}" alt="${esc(project.thumbnail.alt)}" width="1280" height="720" loading="lazy"></a>` : ''}</article>`).join(''));
   const structured = { '@context': 'https://schema.org', '@type': 'CollectionPage', name: 'Düşünce Arşivi | Ali Gazal',
     url: `${data.canonicalOrigin}/dusunce-arsivi`, inLanguage: 'tr',
     mainEntity: { '@type': 'ItemList', numberOfItems: data.entries.length, itemListElement: data.entries.map((entry, i) => ({ '@type': 'ListItem', position: i + 1, url: core.entryUrl(entry, data.canonicalOrigin), name: entry.title || `${data.authors.find(author => author.id === entry.authorId)?.name || entry.credit} · ${core.kinds[entry.kind]}` })) } };
@@ -176,10 +176,13 @@ function changes() {
   const dates = data.entries.map(entry => entry.publishedAt).sort();
   const sitemap = fs.readFileSync(path.join(root, 'sitemap.xml'), 'utf8');
   outputs.set('sitemap.xml', replace(sitemap, 'sitemap', data.entries.length ? `\n  <url><loc>${data.canonicalOrigin}/dusunce-arsivi</loc><lastmod>${dates.at(-1)}</lastmod></url>\n` : ''));
-  const related = data.entries.filter(entry => entry.projectIds.includes('machiavelli'));
-  const mach = fs.readFileSync(path.join(root, 'machiavelli.html'), 'utf8');
-  outputs.set('machiavelli.html', replace(mach, 'project-quotes', related.length
-    ? `<ul class="archive-related-list">${related.map(entry => `<li><a href="dusunce-arsivi.html#dusunce-${esc(entry.slug)}">${esc(entry.title || entry.text.slice(0, 95))}${!entry.title && entry.text.length > 95 ? '…' : ''}</a></li>`).join('')}</ul>` : ''));
+  for (const project of data.projects) {
+    const file = `${project.slug}.html`;
+    const html = fs.readFileSync(path.join(root, file), 'utf8');
+    const related = data.entries.filter(entry => entry.projectIds.includes(project.id));
+    outputs.set(file, replace(html, 'project-quotes', related.length
+      ? `<ul class="archive-related-list">${related.map(entry => `<li><a href="dusunce-arsivi.html#dusunce-${esc(entry.slug)}">${esc(entry.title || entry.text.slice(0, 95))}${!entry.title && entry.text.length > 95 ? '…' : ''}</a></li>`).join('')}</ul>` : ''));
+  }
   return [...outputs].flatMap(([file, next]) => {
     const current = fs.existsSync(path.join(root, file)) ? fs.readFileSync(path.join(root, file), 'utf8') : '';
     return current === next ? [] : [{ file, next }];

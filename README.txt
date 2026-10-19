@@ -16,6 +16,8 @@ Ana dosyalar:
 - index.html              Kanalın ana sayfası
 - rehberler.html          Proje arşivi
 - machiavelli.html        Aktif deney dosyası
+- irade-terbiyesi.html    Sıradaki araştırma; dört aşama, mevcut arşiv bağlantıları
+- research.css           Yeni araştırma sunumunun dar kapsamlı stilleri
 - marcus-aurelius.html    Arşivlenen eski adres için güvenli yönlendirme
 - hakkimda.html           Amaç ve yayın ilkeleri
 - 404.html                Bilinmeyen adresler için dönüş sayfası
@@ -35,12 +37,17 @@ Kontrol:
   node scripts/sync-site.js --check
   node scripts/check-site.js
   node --test scripts/test-publishing.js
+  node --test scripts/test-*.js
   node --check site-data.js
   node --check site.js
   node --check project.js
   node --check theme.js
 
 MERKEZÎ PROJE VERİSİ
+
+İrade Terbiyesi araştırma aşamalarını ve sonraki video yayınını güncelleme
+adımları: docs/irade-terbiyesi.md. Araştırmanın dört aşaması video üretiminden
+ayrıdır; okuma yüzdesi veya otomatik tamamlanma yüzdesi hesaplanmaz.
 
 Yeni proje veya yayın güncellemesi site-data.js içindeki projects kaydından
 yönetilir. Proje aramasının ayrı arayüzü henüz yoktur; title, slug, summary, topics, status,
