@@ -80,7 +80,8 @@
   function keepDiscoveryVisible() {
     const box = discovery.getBoundingClientRect();
     // Only reposition after a user request and only when the new passage would be off-screen.
-    if (box.top > window.innerHeight * .72 || box.bottom < 0) {
+    const attributionBottom = discovery.querySelector('.discovery-author')?.getBoundingClientRect().bottom || box.bottom;
+    if (box.top > window.innerHeight * .45 || attributionBottom > window.innerHeight || box.bottom < 0) {
       stage.scrollIntoView({ block: 'start', behavior: window.AG_MOTION?.enabled() ? 'smooth' : 'auto' });
     }
   }
