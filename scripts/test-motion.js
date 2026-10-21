@@ -49,6 +49,13 @@ test('changing motion preference during a swap commits latest content and cancel
   f.preference.matches = true; f.listeners.preference({ matches: true }); await flush();
   assert.equal(content, 'new'); assert.equal(f.calls[0].animation.cancelled, true);
 });
+test('keyboard focus cancels a pending swap without replacing the focused content', async () => {
+  const f = fixture(); let content = 'focused content';
+  f.element.contains = () => true;
+  f.api.swap(f.element, () => { content = 'replacement'; });
+  f.listeners.focusin({ target: {} }); await flush();
+  assert.equal(content, 'focused content'); assert.equal(f.calls[0].animation.cancelled, true);
+});
 test('page backgrounding does not leave pending discovery content or animation behind', async () => {
   const f = fixture(); let content = 'old';
   f.api.swap(f.element, () => { content = 'new'; });

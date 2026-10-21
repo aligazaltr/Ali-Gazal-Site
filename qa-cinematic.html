@@ -23,7 +23,7 @@ function inspect(doc) {
 byId('show').onclick = async () => { const doc = await load(byId('page').value, +byId('width').value, byId('theme').value, byId('nojs').checked); byId('result').textContent = JSON.stringify(inspect(doc)); };
 byId('snapshot').onclick=()=>{
   const d=frame.contentDocument;
-  byId('result').textContent=JSON.stringify({scene:d.querySelector('[data-story]')?.dataset.scene,selected:d.querySelector('[data-selected-entry]')?.dataset.selectedEntry,animations:frame.contentWindow.__motionLog,active:d.getAnimations().length},null,2);
+  byId('result').textContent=JSON.stringify({layout:inspect(d),scene:d.querySelector('[data-story]')?.dataset.scene,selected:d.querySelector('[data-selected-entry]')?.dataset.selectedEntry,animations:frame.contentWindow.__motionLog,active:d.getAnimations().length},null,2);
 };
 for(let i=0;i<3;i++)byId('story'+i).onclick=()=>frame.contentDocument.querySelectorAll('[data-story-scene]')[i]?.scrollIntoView({block:'center',behavior:'instant'});
 byId('matrix').onclick = async () => {

@@ -55,7 +55,7 @@
   }
   function render(writeUrl = false) {
     const filterKey = JSON.stringify(filters());
-    if (lastFilters !== filterKey) { window.AG_MOTION?.cancel(discovery); discovery.hidden = true; lastFilters = filterKey; }
+    if (lastFilters !== filterKey) { window.AG_MOTION?.cancel(discovery); discovery.hidden = true; feedback.textContent = ''; lastFilters = filterKey; }
     visible = core.search(index, filters());
     const ids = new Set(visible.map(entry => entry.id));
     cards.forEach((card, id) => { card.hidden = !ids.has(id); });
@@ -88,7 +88,7 @@
     const entry = data.entries.find(item => location.hash === `#dusunce-${item.slug}`);
     if (entry) reveal(entry, focus);
   }
-  function restore() { fill(core.readFilters(location.search, data)); render(); followHash(); }
+  function restore() { window.AG_MOTION?.cancel(discovery); discovery.hidden = true; fill(core.readFilters(location.search, data)); render(); followHash(); }
   form.addEventListener('submit', event => { event.preventDefault(); clearTimeout(pending); render(true); });
   fields.q.addEventListener('input', () => { clearTimeout(pending); pending = setTimeout(() => render(true), 100); });
   form.addEventListener('change', event => {
@@ -115,7 +115,8 @@
     if (!entry) return;
     previousId = entry.id;
     if (discovery.hidden) {
-      discovery.hidden = false; showDiscovery(entry); window.AG_MOTION?.enter(discovery);
+      discovery.hidden = false; showDiscovery(entry);
+      window.AG_MOTION?.animate(discovery, [{ opacity: 0, transform: 'translateY(12px)' }, { opacity: 1, transform: 'translateY(0)' }], { duration: 350 });
     } else if (window.AG_MOTION) window.AG_MOTION.swap(discovery, () => showDiscovery(entry));
     else showDiscovery(entry);
   });

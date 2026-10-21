@@ -114,7 +114,7 @@
     if (document.hidden) { updates.forEach(commit => commit()); updates.clear(); active.forEach(animation => animation.cancel()); active.clear(); }
   });
   document.addEventListener('focusin', event => {
-    active.forEach((animation, element) => { if (element.contains(event.target)) cancel(element, true); });
+    active.forEach((animation, element) => { if (element.contains(event.target)) cancel(element); });
   });
   window.AG_MOTION = Object.freeze({ init, enter, animate, cancel, swap, refresh, enabled });
 })();
