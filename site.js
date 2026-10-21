@@ -65,54 +65,10 @@
     window.addEventListener('resize', requestUpdate, { passive: true });
   }
 
-  function setupMotion() {
-    const preference = window.matchMedia?.('(prefers-reduced-motion: reduce)');
-    if (preference?.matches || !Element.prototype.animate) return;
-
-    const active = new Map();
-    function enter(element, delay = 0) {
-      if (preference?.matches) return;
-      // The underlying document is always visible, including when JS fails.
-      const animation = element.animate([
-        { opacity: 0.55, transform: 'translateY(12px)' },
-        { opacity: 1, transform: 'translateY(0)' }
-      ], { duration: 520, delay, easing: 'cubic-bezier(.2,.7,.2,1)', fill: 'none' });
-      active.set(element, animation);
-      animation.finished.catch(() => {}).finally(() => active.delete(element));
-    }
-
-    document.querySelectorAll('.hero-copy > *, .hero-dossier, .project-opening > *')
-      .forEach((element, index) => enter(element, Math.min(index * 65, 260)));
-
-    let observer;
-    if ('IntersectionObserver' in window) {
-      observer = new IntersectionObserver(entries => {
-        entries.filter(entry => entry.isIntersecting).forEach((entry, index) => {
-          enter(entry.target, Math.min(index * 45, 135));
-          observer.unobserve(entry.target);
-        });
-      }, { threshold: 0.08 });
-      document.querySelectorAll('.section-heading, .process-card, .project-card, .phase-panel, .article-section > h2, .principle-list > li, .evidence-card, .result-panel, .prose-section')
-        .forEach(element => observer.observe(element));
-    }
-
-    preference?.addEventListener?.('change', event => {
-      if (!event.matches) return;
-      observer?.disconnect();
-      active.forEach(animation => animation.cancel());
-      active.clear();
-    });
-    document.addEventListener('focusin', event => {
-      active.forEach((animation, element) => {
-        if (element.contains(event.target)) animation.cancel();
-      });
-    });
-  }
-
   document.addEventListener('DOMContentLoaded', () => {
     applyProjectFields();
     insertProjectCovers();
     setupReadingProgress();
-    window.requestAnimationFrame(setupMotion);
+    window.AG_MOTION?.init();
   });
 })();

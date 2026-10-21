@@ -69,6 +69,8 @@ function renderResearchStages(project) {
 function renderHtml(html, data = siteData) {
   const id = html.match(/<html\b[^>]*data-project="([^"]+)"/)?.[1];
   if (!id) return html;
+  html = html.replace(/(<!-- experience:intro:start -->)[\s\S]*?(<!-- experience:intro:end -->)/,
+    (_, start, end) => `${start}<p class="cinema-words" aria-label="${escape(data.experience.intro.join(' '))}">${data.experience.intro.map(word => `<span class="cinema-word" aria-hidden="true">${escape(word)}</span>`).join('')}</p><p class="cinema-tagline">${escape(data.experience.tagline)}</p>${end}`);
   const project = data.projects[id];
   if (!project) throw new Error(`Bilinmeyen proje: ${id}`);
   validateResearch(project);

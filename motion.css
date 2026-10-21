@@ -1,0 +1,37 @@
+/* One motion language. Base content is never hidden in anticipation of JavaScript. */
+:root { --motion-fast: 180ms; --motion-normal: 360ms; --motion-slow: 720ms; --motion-ease: cubic-bezier(.2,.7,.2,1); }
+.cinema-hero { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr); gap: 2rem 4rem; padding-top: clamp(2.5rem, 5vw, 5rem); padding-bottom: 2rem; }
+.cinema-hero .hero-copy { position: relative; }
+.cinema-hero .eyebrow { max-width: 40ch; font-size: .68rem; letter-spacing: .12em; }
+.cinema-words { margin: 1.5rem 0; font-size: clamp(3.6rem, 6.8vw, 6.2rem); line-height: .97; font-weight: 850; letter-spacing: -.07em; }
+.cinema-word { display: block; width: fit-content; }
+.cinema-word:nth-child(2) { color: var(--orange); }
+.cinema-word:nth-child(4) { font-family: var(--literary); font-weight: 400; font-style: italic; letter-spacing: -.055em; }
+.cinema-hero h1 { margin: 1.7rem 0 .6rem; font-size: clamp(1.1rem, 1.6vw, 1.4rem); line-height: 1.35; letter-spacing: -.025em; max-width: 30ch; }
+.cinema-tagline { color: var(--muted); font-size: .9rem; max-width: 32ch; margin-bottom: 0; }
+.cinema-hero .hero-copy .lead { font-size: .9rem; max-width: 44ch; color: var(--muted-strong); margin-block: .8rem 0; }
+.cinema-hero .actions { margin-top: 1.5rem; }
+.cinema-hero .hero-dossier { padding-top: 2rem; border-top: 1px solid var(--orange-line); }
+.cinema-hero .dossier-cover { position: relative; overflow: hidden; }
+.cinema-hero .dossier-cover::after { content: ''; position: absolute; inset: 0; border: 1px solid var(--line-strong); pointer-events: none; }
+.cinema-hero .dossier-copy h2 { font-size: clamp(2rem, 3.2vw, 3rem); }
+.cinema-hero .scroll-cue { margin-top: .4rem; padding-top: 1rem; width: 100%; border-top: 1px solid var(--line); }
+.button, .thought-actions button { transition: transform var(--motion-fast) var(--motion-ease), background-color var(--motion-fast), border-color var(--motion-fast); }
+.button:active, .thought-actions button:active { transform: translateY(2px) scale(.985); }
+@media (max-width: 56rem) {
+  .cinema-hero { grid-template-columns: 1fr; gap: 2rem; }
+  .cinema-words { font-size: clamp(3.7rem, 10.7vw, 6rem); }
+  .cinema-hero h1 { max-width: 30ch; font-size: 1.2rem; }
+  .cinema-hero .hero-dossier { max-width: none; padding-top: 1.5rem; }
+}
+@media (max-width: 30rem) {
+  .cinema-hero { padding-top: 2rem; }
+  .cinema-words { font-size: clamp(3rem, 13.5vw, 4.4rem); }
+  .cinema-hero .eyebrow { font-size: .62rem; }
+  .cinema-hero .actions { display: flex; flex-wrap: wrap; }
+  .cinema-hero .actions .button { padding-inline: .85rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-delay: 0ms !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+  .button:active, .thought-actions button:active { transform: none; }
+}
