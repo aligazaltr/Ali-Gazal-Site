@@ -142,10 +142,14 @@
     if (initialized) return;
     initialized = true;
     setupStories();
-    document.querySelectorAll('.cinema-word').forEach((element, i) => { seen.add(element); enter(element, i * 130); });
-    document.querySelectorAll('.cinema-hero .hero-copy > :not(.cinema-words):not(.eyebrow), .cinema-hero .eyebrow, .hero-dossier, .project-hero-copy > *, .project-feature-cover img, .research-opening .project-hero > *, .archive-intro > div > *, .about-opening [data-reveal], .projects-page .page-intro > *')
-      .forEach((element, i) => { seen.add(element); enter(element, Math.min(i * 75, 300), element.tagName === 'IMG'); });
     startObserver();
+    const opening = (element, delay, image = false) => {
+      if (onScreen(element)) { seen.add(element); observer?.unobserve(element); enter(element, delay, image); }
+      else observer?.observe(element);
+    };
+    document.querySelectorAll('.cinema-word').forEach((element, i) => opening(element, i * 130));
+    document.querySelectorAll('.cinema-hero .hero-copy > :not(.cinema-words):not(.eyebrow), .cinema-hero .eyebrow, .hero-dossier, .project-hero-copy > *, .project-feature-cover img, .research-opening .project-hero > *, .archive-intro > div > *, .about-opening [data-reveal], .projects-page .page-intro > *')
+      .forEach((element, i) => opening(element, Math.min(i * 75, 300), element.tagName === 'IMG'));
     // Native details controls semantics and focus. CSS enhances expansion where supported.
     document.querySelectorAll('.thought-card details').forEach(details => details.addEventListener('toggle', () => {
       if (details.open) animate(details.querySelector('.thought-details'), [{ opacity: .3 }, { opacity: 1 }], { duration: 300 });

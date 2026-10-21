@@ -17,11 +17,13 @@
   <meta name="twitter:title" content="Ali Gazal hakkında">
   <meta name="twitter:description" content="Fikirleri gerçek hayatta test etme yöntemi ve yayın ilkeleri.">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <script src="qa-prelude.js"></script>
   <script src="theme.js"></script>
   <script src="share-context.js" defer></script>
   <script src="motion.js" defer></script>
   <script src="site.js" defer></script>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="editorial.css">
   <link rel="stylesheet" href="motion.css">
 </head>
 <body>
@@ -46,43 +48,57 @@
     </div>
   </header>
 
-  <main id="icerik" class="page site-shell narrow-page">
-    <header class="page-intro">
-      <p class="eyebrow">PROJENİN AMACI</p>
-      <h1>Sadece anlatmak değil, gerçekten denemek.</h1>
-      <p class="lead">
-        Ben Ali Gazal. Kanalda kitaplardaki ve başka alanlardaki fikirleri seçip
-        gündelik hayatımda sınamaya çalışıyorum. Sitede soruyu, yöntemi ve
-        elimdeki kanıtın sınırlarını açıkça gösteriyorum.
-      </p>
+  <main id="icerik" class="page site-shell about-page">
+    <header class="about-opening">
+      <div>
+        <p class="eyebrow" data-reveal>ALİ GAZAL / PROJENİN AMACI</p>
+        <h1 data-reveal="title">Sadece<br>anlatmak değil,<br><em>gerçekten<br>denemek.</em></h1>
+        <a class="text-link" href="#neden" data-reveal>Bu projenin arkasındaki soru <span aria-hidden="true">↓</span></a>
+      </div>
+      <section class="about-identity" aria-labelledby="ben-kimim">
+        <div class="about-mark" aria-hidden="true"><span>AG</span><i></i><i></i></div>
+        <p class="eyebrow" data-reveal>BEN KİMİM?</p>
+        <h2 id="ben-kimim" data-reveal>Ben Ali Gazal.</h2>
+        <p data-reveal>Kanalda kitaplardaki ve başka alanlardaki fikirleri seçip gündelik hayatımda sınamaya çalışıyorum. Sitede soruyu, yöntemi ve elimdeki kanıtın sınırlarını açıkça gösteriyorum.</p>
+        <p class="about-signature" data-reveal>Fikirlerden gerçek hayata.</p>
+      </section>
     </header>
 
-    <section class="prose-section" aria-labelledby="neden">
-      <p class="eyebrow">NEDEN?</p>
-      <h2 id="neden">Bilmekle uygulamak aynı şey değil.</h2>
-      <p>
-        Bir kitap okumak veya güçlü bir fikir duymak kolay. Asıl mesele, o fikri
-        yorgunken, çalışırken, hata yaparken ve günlük hayat devam ederken
-        uygulayabilmek. Bu projeler tam olarak o aradaki mesafeyi inceliyor.
-      </p>
-    </section>
-
-    <section class="principles-panel" aria-labelledby="ilkeler">
-      <p class="eyebrow">YAYIN İLKELERİ</p>
-      <h2 id="ilkeler">Sonuç neyse, hikâye o.</h2>
-      <ul class="plain-list">
-        <li><span>01</span> Her proje tek ve anlaşılır bir soruyla başlar.</li>
-        <li><span>02</span> İşe yaramayan ve yarım kalan taraflar saklanmaz.</li>
-        <li><span>03</span> Video deneyin hikâyesini, site ise yöntemi ve doğrulanmış kayıtları taşır.</li>
-      </ul>
-    </section>
-
-    <section class="closing-panel">
+    <section class="about-chapter about-why" aria-labelledby="neden">
+      <div class="chapter-label" data-reveal><span aria-hidden="true">01</span><p class="eyebrow">NEDEN BU PROJE?</p></div>
       <div>
-        <p class="eyebrow">AKTİF DOSYA</p>
-        <h2>Machiavelli deneyini takip et.</h2>
+        <h2 id="neden" data-reveal="title">Bilmekle uygulamak<br><em>aynı şey değil.</em></h2>
+        <p data-reveal>Bir kitap okumak veya güçlü bir fikir duymak kolay. Asıl mesele, o fikri yorgunken, çalışırken, hata yaparken ve günlük hayat devam ederken uygulayabilmek. Bu projeler tam olarak o aradaki mesafeyi inceliyor.</p>
       </div>
-      <a class="button primary" href="machiavelli.html">Projeyi incele</a>
+    </section>
+
+    <section class="about-method" aria-labelledby="calisma-felsefesi">
+      <div class="chapter-label" data-reveal><span aria-hidden="true">02</span><h2 id="calisma-felsefesi" class="eyebrow">ÇALIŞMA FELSEFESİ</h2></div>
+      <div class="about-method-grid">
+        <article data-reveal><span class="method-mark" aria-hidden="true">↗</span><h3>Araştır.</h3><p>Fikrin ne söylediğini kaynağından anla. İddiayı, soruyu ve sınırlarını belirle.</p><span class="method-index" aria-hidden="true">01 / SORU</span></article>
+        <article data-reveal><span class="method-mark" aria-hidden="true">→</span><h3>Uygula.</h3><p>Fikri gündelik hayatın içinde sına. Zorlandığın anları ve yaptığın değişiklikleri kaydet.</p><span class="method-index" aria-hidden="true">02 / DENEY</span></article>
+        <article data-reveal><span class="method-mark" aria-hidden="true">↘</span><h3>Değerlendir.</h3><p>Sonucu kayıtlarla birlikte incele. İşe yarayanları, eksikleri ve belirsizlikleri açıkça göster.</p><span class="method-index" aria-hidden="true">03 / SONUÇ</span></article>
+      </div>
+    </section>
+
+    <section class="about-chapter about-transparency" aria-labelledby="ilkeler">
+      <div class="chapter-label" data-reveal><span aria-hidden="true">03</span><p class="eyebrow">ŞEFFAFLIK</p></div>
+      <div>
+        <h2 id="ilkeler" data-reveal="title">Sonuç neyse,<br><em>hikâye o.</em></h2>
+        <ul class="plain-list">
+          <li data-reveal><span>01</span> Her proje tek ve anlaşılır bir soruyla başlar.</li>
+          <li data-reveal><span>02</span> İşe yaramayan ve yarım kalan taraflar saklanmaz.</li>
+          <li data-reveal><span>03</span> Video deneyin hikâyesini, site ise yöntemi ve doğrulanmış kayıtları taşır.</li>
+          <li data-reveal><span>04</span> Başarılar, başarısızlıklar ve kanıtların sınırları birlikte değerlendirilir.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="about-closing" aria-labelledby="calismalari-kesfet">
+      <p class="eyebrow" data-reveal>MERAKTAN GERÇEK HAYATA</p>
+      <h2 id="calismalari-kesfet" data-reveal="title">Sorunun peşinden<br><em>birlikte gidelim.</em></h2>
+      <div class="actions"><a class="button primary" href="rehberler.html">Çalışmalarımı keşfet <span aria-hidden="true">→</span></a><a class="button secondary" href="https://www.youtube.com/@aligazaltr" target="_blank" rel="noopener noreferrer">YouTube kanalıma git ↗</a></div>
+      <a class="text-link" href="machiavelli.html">Aktif dosya: Machiavelli / Prens →</a>
     </section>
   </main>
 

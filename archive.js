@@ -17,11 +17,15 @@
   let previousId = null;
   let pending;
   let lastFilters = '';
+  let discoveryObserver;
+  const stage = document.querySelector('[data-archive-discovery]');
   const discovery = document.createElement('article');
   discovery.className = 'discovery-card';
+  discovery.id = 'kesfedilen-dusunce';
+  discovery.tabIndex = -1;
   discovery.hidden = true;
   discovery.setAttribute('aria-label', 'Keşfedilen düşünce');
-  document.querySelector('[data-archive-discovery]').after(discovery);
+  stage.append(discovery);
   function showDiscovery(entry) {
     const author = data.authors.find(item => item.id === entry.authorId);
     const book = data.books.find(item => item.id === entry.bookId);
@@ -37,12 +41,48 @@
     for (const [action, label] of [['copy-text', 'Metni kopyala'], ['copy-link', 'Bağlantıyı kopyala'], ['share', 'Paylaş ↗']]) {
       const button = node('button', label); button.type = 'button'; button.dataset.entryAction = action; actions.append(button);
     }
+    const mask = node('div', '', 'reveal-mask');
+    mask.append(node('p', entry.text, 'discovery-text'));
+    const rule = node('span', '', 'discovery-rule'); rule.setAttribute('aria-hidden', 'true');
     discovery.replaceChildren(node('p', 'KEŞFEDİLEN DÜŞÜNCE / ' + core.kinds[entry.kind], 'eyebrow'),
-      node('p', entry.text, 'discovery-text'), node('p', `${author?.name || entry.credit || ''} / ${book?.title || ''}`, 'discovery-author'),
-      node('p', entry.source.locator || entry.source.page || '', 'discovery-source'), link, actions);
+      mask, rule, node('p', author?.name || entry.credit || '', 'discovery-author'),
+      node('p', `${book?.title || ''}${entry.source?.locator ? ' · ' + entry.source.locator : ''}${entry.source?.page ? ' · s. ' + entry.source.page : ''}`, 'discovery-source'), link, actions);
+    stage.dataset.hasSelection = 'true';
     const url = new URL(location.href); url.hash = `dusunce-${entry.slug}`;
     history.pushState(null, '', url);
     feedback.textContent = `${author?.name || 'Arşiv'}: ${entry.title || 'Yeni bir düşünce'} seçildi.`;
+  }
+  function clearDiscovery() {
+    discoveryObserver?.disconnect();
+    window.AG_MOTION?.cancelTree(discovery);
+    discovery.hidden = true;
+    delete stage.dataset.hasSelection;
+  }
+  function animateDiscovery() {
+    const motion = window.AG_MOTION;
+    if (!motion) return;
+    motion.animate(discovery, [{ opacity: .3 }, { opacity: 1 }], { duration: 260 });
+    motion.enter(discovery.querySelector('.discovery-text'), 30);
+    motion.animate(discovery.querySelector('.discovery-rule'), [{ transform: 'scaleX(0)' }, { transform: 'scaleX(1)' }], { duration: 480, delay: 100, fill: 'backwards' });
+    motion.enter(discovery.querySelector('.discovery-author'), 140);
+    motion.enter(discovery.querySelector('.discovery-source'), 210);
+  }
+  function revealDiscovery() {
+    discoveryObserver?.disconnect();
+    const box = discovery.getBoundingClientRect();
+    if (box.top >= window.innerHeight && 'IntersectionObserver' in window) {
+      discoveryObserver = new IntersectionObserver(entries => {
+        if (entries.some(entry => entry.isIntersecting)) { discoveryObserver.disconnect(); animateDiscovery(); }
+      }, { threshold: .1 });
+      discoveryObserver.observe(discovery);
+    } else animateDiscovery();
+  }
+  function keepDiscoveryVisible() {
+    const box = discovery.getBoundingClientRect();
+    // Only reposition after a user request and only when the new passage would be off-screen.
+    if (box.top > window.innerHeight * .72 || box.bottom < 0) {
+      stage.scrollIntoView({ block: 'start', behavior: window.AG_MOTION?.enabled() ? 'smooth' : 'auto' });
+    }
   }
 
   function filters() { return Object.fromEntries(Object.entries(fields).map(([key, node]) => [key, node.value])); }
@@ -55,7 +95,7 @@
   }
   function render(writeUrl = false) {
     const filterKey = JSON.stringify(filters());
-    if (lastFilters !== filterKey) { window.AG_MOTION?.cancel(discovery); discovery.hidden = true; feedback.textContent = ''; lastFilters = filterKey; }
+    if (lastFilters !== filterKey) { clearDiscovery(); feedback.textContent = ''; lastFilters = filterKey; }
     visible = core.search(index, filters());
     const ids = new Set(visible.map(entry => entry.id));
     cards.forEach((card, id) => { card.hidden = !ids.has(id); });
@@ -88,7 +128,7 @@
     const entry = data.entries.find(item => location.hash === `#dusunce-${item.slug}`);
     if (entry) reveal(entry, focus);
   }
-  function restore() { window.AG_MOTION?.cancel(discovery); discovery.hidden = true; fill(core.readFilters(location.search, data)); render(); followHash(); }
+  function restore() { clearDiscovery(); fill(core.readFilters(location.search, data)); render(); followHash(); }
   form.addEventListener('submit', event => { event.preventDefault(); clearTimeout(pending); render(true); });
   fields.q.addEventListener('input', () => { clearTimeout(pending); pending = setTimeout(() => render(true), 100); });
   form.addEventListener('change', event => {
@@ -114,11 +154,12 @@
     const entry = core.random(visible, previousId);
     if (!entry) return;
     previousId = entry.id;
+    window.AG_MOTION?.animate(randomButton.querySelector('span'), [{ transform: 'translateX(0)' }, { transform: 'translateX(5px)' }, { transform: 'translateX(0)' }], { duration: 280 });
     if (discovery.hidden) {
-      discovery.hidden = false; showDiscovery(entry);
-      window.AG_MOTION?.animate(discovery, [{ opacity: 0, transform: 'translateY(12px)' }, { opacity: 1, transform: 'translateY(0)' }], { duration: 350 });
-    } else if (window.AG_MOTION) window.AG_MOTION.swap(discovery, () => showDiscovery(entry));
-    else showDiscovery(entry);
+      discovery.hidden = false; showDiscovery(entry); keepDiscoveryVisible(); revealDiscovery();
+    } else if (window.AG_MOTION) window.AG_MOTION.swap(discovery, () => { showDiscovery(entry); keepDiscoveryVisible(); }, revealDiscovery);
+    else { showDiscovery(entry); keepDiscoveryVisible(); }
+
   });
   window.addEventListener('popstate', restore);
   window.addEventListener('hashchange', () => followHash(true));

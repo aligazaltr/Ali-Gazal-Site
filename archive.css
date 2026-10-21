@@ -137,3 +137,84 @@ button:active:not(:disabled) { transform: translateY(1px); }
   .thought-card:hover { transform: translateY(-4px); border-color: var(--orange-line); box-shadow: var(--shadow-raised); }
 }
 @media (prefers-reduced-motion: reduce) { .thought-card { transition: none; } }
+
+/* 3.0 — a reading room, a distinct discovery stage, and calm editorial entries. */
+.archive-intro { padding-block: 1rem 4rem; align-items: end; }
+.archive-intro h1 { font-size: clamp(4rem, 8.7vw, 8rem); letter-spacing: -.075em; margin-bottom: 1.4rem; }
+.archive-deck { font-family: var(--literary); font-size: 1.65rem; letter-spacing: -.025em; margin-bottom: .8rem; }
+.archive-intro .lead { color: var(--muted); font-size: .95rem; max-width: 49ch; }
+.archive-reading-note { border: 0; padding: 0 0 .5rem 2.5rem; }
+.reading-lines { position: relative; height: 4.5rem; width: 9rem; margin-bottom: 2rem; }
+.reading-lines i { display: block; height: 1px; background: var(--orange-line); margin-top: 1rem; }
+.reading-lines i:nth-child(2) { width: 75%; }
+.reading-lines i:nth-child(3) { width: 45%; }
+.reading-statement { font-size: 2.7rem; }
+.archive-shelf { background: var(--card-wash); padding: 1.4rem 1.5rem 2rem; }
+.archive-shelf li { border-left: 1px solid var(--line-strong); }
+.archive-filters { padding: clamp(1rem, 3vw, 2rem); border: 1px solid var(--line); background: var(--surface); }
+.archive-search input { border: 0; border-bottom: 1px solid var(--line-strong); border-radius: 0; padding-inline: 0; background: transparent; }
+.archive-search input:focus-visible { outline-offset: 5px; }
+.archive-toolbar { margin-bottom: 1rem; }
+.discovery-stage { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.6fr); gap: clamp(1.5rem, 5vw, 4rem); padding: clamp(1.4rem, 4vw, 3rem); margin: 0 0 2.5rem; border-block: 1px solid var(--orange-line); background: linear-gradient(125deg, var(--card-wash), transparent 65%), var(--bg-raised); scroll-margin-top: 1.2rem; }
+.discovery-heading h3 { font-size: clamp(2rem, 3vw, 2.9rem); line-height: 1.1; letter-spacing: -.05em; margin-block: 1rem 1.7rem; }
+.discovery-heading h3 em { font-family: var(--literary); color: var(--orange); font-weight: 400; }
+.archive-random { border: 1px solid var(--line-strong); border-radius: .25rem; padding: .75rem 1rem; font-size: .8rem; line-height: 1.5; min-height: 3.5rem; transition: background var(--motion-fast), transform var(--motion-fast); }
+.archive-random:hover:not(:disabled) { background: var(--orange-soft); border-color: var(--orange-line); }
+.archive-random span { display: inline-block; }
+[data-random-hint] { margin-top: .8rem; line-height: 1.6; }
+.discovery-invite { align-self: center; font-family: var(--literary); font-size: clamp(1.5rem, 3vw, 2.4rem); color: var(--muted); line-height: 1.35; max-width: 30ch; margin: 1rem 0; }
+[data-has-selection] .discovery-invite { display: none; }
+.discovery-card { min-width: 0; border: 0; border-radius: 0; background: transparent; padding: 0; margin: 0; box-shadow: none; }
+.discovery-card .eyebrow { color: var(--muted); font-size: .6rem; letter-spacing: .09em; margin: 0 0 1.1rem; }
+.discovery-text { margin: 0 0 1.3rem; font-size: clamp(1.65rem, 3.1vw, 2.6rem); line-height: 1.28; letter-spacing: -.035em; max-width: 37ch; }
+.discovery-rule { display: block; height: 1px; width: 3rem; background: var(--orange); margin-block: .2rem 1.3rem; transform-origin: left; }
+.discovery-author { color: var(--text); margin-bottom: .35rem; }
+.discovery-source { line-height: 1.6; margin-bottom: .5rem; }
+.discovery-card > .text-link { font-size: .8rem; }
+.discovery-card .thought-actions { margin-top: .7rem; }
+.archive-results { gap: 2rem; }
+.thought-card { position: relative; border-radius: .2rem; padding: clamp(1.3rem, 3.3vw, 2.5rem); background: linear-gradient(150deg, var(--card-wash), transparent 55%), var(--surface); }
+.thought-kind { display: flex; align-items: center; gap: .8rem; font-size: .64rem; letter-spacing: .12em; margin-bottom: 1.6rem; }
+.thought-kind::before { content: ''; width: 1.6rem; height: 1px; background: currentColor; }
+.thought-text { font-size: clamp(1.5rem, 2.5vw, 2.15rem); line-height: 1.37; letter-spacing: -.025em; margin-bottom: 1.4rem; }
+.thought-title { font-size: .78rem; color: var(--muted); margin-block: .2rem .6rem; }
+.thought-excerpt { border-left: 1px solid var(--line-strong); padding-left: 1rem; margin-block: .8rem 1.5rem; }
+.thought-excerpt span { display: block; margin-bottom: .35rem; font-size: .7rem; letter-spacing: .06em; text-transform: uppercase; }
+.thought-card details[open] summary { color: var(--orange); }
+.thought-card summary span { display: inline-block; transition: transform 220ms var(--motion-ease); }
+.thought-card details[open] summary span { transform: rotate(90deg); }
+/* Native keyboard and no-JS disclosure; only supporting browsers interpolate the block. */
+@supports (interpolate-size: allow-keywords) and selector(details::details-content) {
+  @media (prefers-reduced-motion: no-preference) {
+    .thought-card details { interpolate-size: allow-keywords; }
+    .thought-card details::details-content { block-size: 0; overflow: clip; transition: block-size 320ms var(--motion-ease), content-visibility 320ms allow-discrete; }
+    .thought-card details[open]::details-content { block-size: auto; }
+  }
+}
+@media (max-width: 56rem) {
+  .archive-intro h1 { font-size: clamp(3.3rem, 11vw, 6rem); }
+  .discovery-stage { grid-template-columns: 1fr; gap: 1.5rem; }
+  .discovery-heading { display: grid; grid-template-columns: 1fr 1fr; gap: .4rem 1.2rem; align-items: center; }
+  .discovery-heading .eyebrow { grid-column: 1; margin: 0; }
+  .discovery-heading h3 { grid-column: 1; grid-row: 2 / 4; margin: 0; font-size: 2rem; }
+  .archive-random { grid-column: 2; grid-row: 1 / 3; }
+  [data-random-hint] { grid-column: 2; margin: 0; }
+  .discovery-card { border-top: 1px solid var(--line); padding-top: 1.5rem; }
+  .discovery-text { font-size: clamp(1.65rem, 5vw, 2.4rem); }
+}
+@media (max-width: 42rem) {
+  .archive-intro { padding-block: 0 2.5rem; }
+  .archive-intro h1 { font-size: clamp(3.3rem, 14vw, 5.5rem); }
+  .archive-deck { font-size: 1.4rem; }
+  .archive-shelf { padding-inline: 1.1rem; }
+  .archive-shelf li + li { padding-top: .8rem; border-top: 1px solid var(--line); }
+  .discovery-stage { padding: 1.25rem; }
+  .discovery-heading { display: block; }
+  .discovery-heading h3 { font-size: 1.9rem; margin: .6rem 0 1rem; }
+  .discovery-heading h3 br { display: none; }
+  .discovery-heading h3 em::before { content: ' '; }
+  .archive-random { width: 100%; }
+  [data-random-hint] { margin-top: .65rem; }
+  .archive-results { gap: 1.5rem; }
+  .thought-text { font-size: 1.6rem; }
+}

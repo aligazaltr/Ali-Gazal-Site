@@ -17,6 +17,7 @@
   <meta name="twitter:title" content="Düşünce Arşivi | Ali Gazal">
   <meta name="twitter:description" content="Kitaplardan düşünceler, kaynakları ve ayrı tutulan yorumlarımız. Okumadan gerçek hayata uzanan bir arşiv.">
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <script src="qa-prelude.js"></script>
   <script src="theme.js"></script>
   <script src="archive-data.js" defer></script>
   <script src="archive-core.js" defer></script>
@@ -55,12 +56,14 @@
   <main id="icerik" class="archive-page site-shell">
     <header class="archive-intro">
       <div>
-        <p class="eyebrow">DÜŞÜNCE ARŞİVİ</p>
-        <h1>Bir cümlenin<br><em>ötesine bak.</em></h1>
+        <p class="eyebrow">KİTAPLAR · KAYNAKLAR · GERÇEK HAYAT</p>
+        <h1 data-reveal="title">Düşünce<br><em>Arşivi.</em></h1>
+        <p class="archive-deck">Bir cümlenin ötesine bak.</p>
         <p class="lead">Kitaplardan gelen düşünceler, kaynakları ve kendi yorumlarımız. Okuduklarımızla gerçek hayat deneyleri arasında bir bağ.</p>
         <a class="archive-jump" href="#arsiv">Arşivi keşfet <span aria-hidden="true">↓</span></a>
       </div>
       <div class="archive-reading-note" aria-label="Okuma yaklaşımımız">
+        <div class="reading-lines" aria-hidden="true"><i></i><i></i><i></i></div>
         <p class="eyebrow">OKUMADAN HAYATA</p>
         <p class="reading-statement">Bir söz.<br>Bir bağlam.<br><em>Yeni bir soru.</em></p>
         <p>Yazarın ne söylediğini, bizim ne düşündüğümüzü ve hayatta neyi deneyebileceğimizi ayrı ayrı ele alıyoruz.</p>
@@ -88,8 +91,18 @@
       <noscript><p class="archive-help">Yayımlanmış bütün düşünceler aşağıda okunabilir. Arama ve filtreler için JavaScript gerekir; tarayıcının sayfada bul özelliğini de kullanabilirsin.</p></noscript>
       <div class="archive-toolbar">
         <p id="archive-count" role="status" aria-live="polite" aria-atomic="true"><!-- archive:count:start -->15 düşünce<!-- archive:count:end --></p>
-        <div data-archive-discovery hidden><button class="archive-random" type="button" data-random-thought disabled aria-describedby="random-hint"><span aria-hidden="true">↝</span> Rastgele bir düşünce keşfet</button><p id="random-hint" data-random-hint>Doğrulanmış ilk düşünce yayımlandığında açılacak.</p></div>
+
       </div>
+      <section class="discovery-stage" data-archive-discovery hidden aria-labelledby="kesif-baslik">
+        <header class="discovery-heading">
+          <p class="eyebrow">BİR SAYFA AÇ</p>
+          <h3 id="kesif-baslik">Bir düşünceyle<br><em>karşılaş.</em></h3>
+          <button class="archive-random" type="button" data-random-thought disabled aria-describedby="random-hint" aria-controls="kesfedilen-dusunce"><span aria-hidden="true">↝</span> Rastgele bir düşünce keşfet</button>
+          <p id="random-hint" data-random-hint>Doğrulanmış ilk düşünce yayımlandığında açılacak.</p>
+        </header>
+        <p class="discovery-invite">Bazen yeni bir soru,<br>beklemediğin bir cümleden doğar.</p>
+      </section>
+      <p id="archive-feedback" class="archive-feedback" role="status" aria-live="polite" aria-atomic="true"></p>
       <div class="archive-results"><!-- archive:cards:start --><article class="thought-card" id="dusunce-prens-01" data-archive-entry="prens-01" tabindex="-1" aria-labelledby="baslik-prens-01">
   <p class="thought-kind">Serbest çeviri</p>
   <p class="thought-text">Bir şeyin hayal edilen hâlinden çok, fiilî gerçeğinin peşinden gitmeyi daha uygun buldum.</p>
@@ -304,7 +317,7 @@
         <span class="empty-mark" aria-hidden="true">“</span>
         <div><h2>İlk düşünceler, kaynaklarıyla birlikte hazırlanıyor.</h2><p>Machiavelli, Jules Payot ve Marcus Aurelius’tan seçkiler; birebir metinleri, baskı bilgileri ve kullanım koşulları kontrol edildikten sonra burada yer alacak.</p><a href="#yayin-ilkesi">Arşivin yayın yaklaşımı <span aria-hidden="true">↓</span></a></div>
       </div>
-      <p id="archive-feedback" class="archive-feedback" role="status" aria-live="polite" aria-atomic="true"></p>
+
       <div id="archive-copy-fallback" class="archive-copy-fallback" hidden><label for="archive-copy-value">Seçip kopyalayabileceğin metin</label><textarea id="archive-copy-value" readonly rows="5"></textarea></div>
     </section>
 
