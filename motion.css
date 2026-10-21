@@ -68,18 +68,48 @@
 .story-scene.is-active { border-top-color: var(--orange); }
 .cinema-project-name { font-size: clamp(2.8rem, 7vw, 6rem); font-weight: 800; letter-spacing: -.065em; line-height: 1.05; margin: 2rem 0; }
 .cinema-project-name span { display: block; font-size: .72rem; color: var(--orange); letter-spacing: .13em; margin-top: 1rem; }
+/* On phones the visual belongs to each scene, rather than an off-screen sticky panel. */
+.reveal-mask { overflow: clip; }
+.story-scene-heading .eyebrow { display: flex; gap: .7rem; align-items: baseline; }
+.scene-glyph { display: none; }
 @media (max-width: 56rem) {
-  .story-layout { grid-template-columns: 1fr; gap: 1rem; }
-  .story-visual { position: relative; top: auto; display: grid; grid-template-columns: 1fr auto; gap: 0 1rem; padding: 1.3rem; }
-  .story-counter { grid-column: 1 / -1; }
-  .story-orbit { grid-column: 2; grid-row: 2 / 4; width: 5rem; height: 5rem; margin: 0; align-self: center; }
-  .story-word { font-size: 3rem; margin: .5rem 0; }
-  .story-caption, .story-description { display: none; } /* Same complete text immediately below. */
-  .story-ticks { grid-column: 1 / -1; }
-  .story-scene { min-height: 0; padding: 2.5rem 0; }
+  .story-layout { display: block; }
+  .story-visual { display: none; }
+  .story-scene { min-height: 0; padding-block: clamp(2rem, 7vw, 3rem); }
+  .story-scene-heading { display: flex; justify-content: space-between; align-items: center; gap: 1rem; margin-bottom: 1.5rem; }
+  .story-scene-heading .eyebrow { display: grid; margin: 0; gap: .5rem; }
+  .scene-number { font-family: var(--literary); font-size: 4.5rem; line-height: 1; font-weight: 400; letter-spacing: -.07em; color: var(--text); }
+  .scene-label { font-size: .7rem; letter-spacing: .18em; }
+  .story-scene h3 { font-size: clamp(1.9rem, 7vw, 2.7rem); max-width: 18ch; }
+  .scene-glyph { display: block; position: relative; width: 6rem; height: 5rem; transform-origin: left center; color: var(--orange); }
+  .scene-glyph i { position: absolute; display: block; border: 1px solid currentColor; }
+  .scene-glyph-0 i { width: 3rem; height: 3rem; border-radius: 50%; top: 1rem; left: 2rem; }
+  .scene-glyph-0 i:nth-child(2) { transform: scale(.6); }
+  .scene-glyph-0 i:nth-child(3) { width: 5rem; height: 1px; top: 2.5rem; left: 0; border-width: 1px 0 0; }
+  .scene-glyph-1 i { width: 2.8rem; height: 2.8rem; top: 1rem; left: .3rem; }
+  .scene-glyph-1 i:nth-child(2) { left: 2.2rem; top: .2rem; }
+  .scene-glyph-1 i:nth-child(3) { width: 4.8rem; top: 4rem; height: 1px; border-width: 1px 0 0; }
+  .scene-glyph-2 i { width: 4.8rem; height: 1px; top: 1rem; border-width: 1px 0 0; }
+  .scene-glyph-2 i:nth-child(2) { width: 3.5rem; top: 2.3rem; }
+  .scene-glyph-2 i:nth-child(3) { width: 2rem; top: 3.6rem; }
+  .story-scene:last-child { padding-bottom: 1rem; }
 }
 @media (prefers-reduced-motion: reduce) {
   .story-orbit i { transition: none; }
   .story-visual { position: relative; top: auto; }
   .story-scene { min-height: 0; padding-block: 2rem; }
 }
+
+/* Same-origin navigation remains ordinary links; unsupported browsers ignore this enhancement. */
+@media (prefers-reduced-motion: no-preference) {
+  @view-transition { navigation: auto; }
+  ::view-transition-old(root) { animation-duration: 140ms; }
+  ::view-transition-new(root) { animation-duration: 220ms; }
+  ::view-transition-group(root) { pointer-events: none; }
+}
+.preview-notice { display: flex; flex-wrap: wrap; gap: .25rem 1rem; align-items: center; padding-block: .6rem; border-bottom: 1px solid var(--line); font-size: .72rem; color: var(--muted); }
+.preview-notice strong { color: var(--orange); font-size: .62rem; letter-spacing: .12em; }
+.preview-notice label { display: flex; align-items: center; gap: .6rem; margin-left: auto; }
+.preview-notice select { background: var(--bg-raised); color: var(--text); border: 1px solid var(--line); border-radius: .2rem; min-height: 2.75rem; padding-inline: .6rem; font: inherit; max-width: 100%; }
+.preview-notice a { color: var(--muted-strong); min-height: 2.75rem; display: inline-flex; align-items: center; text-underline-offset: .2em; }
+@media (max-width: 42rem) { .preview-notice label { margin-left: 0; } .preview-notice { font-size: .68rem; } }

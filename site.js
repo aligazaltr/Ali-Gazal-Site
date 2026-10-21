@@ -65,10 +65,33 @@
     window.addEventListener('resize', requestUpdate, { passive: true });
   }
 
+  function setupPreviewNotice() {
+    const canonical = document.querySelector('link[rel="canonical"]')?.href;
+    if (!canonical || !window.AG_SHARE?.context(canonical, location.href).isPreview) return;
+    const note = document.createElement('aside');
+    note.className = 'preview-notice site-shell';
+    note.setAttribute('aria-label', 'Önizleme ortamı');
+    const label = document.createElement('strong'); label.textContent = 'ÖNİZLEME';
+    const text = document.createElement('span'); text.textContent = 'Bu tasarım henüz canlıya alınmadı.';
+    const field = document.createElement('label'); field.textContent = 'Paylaşılacak sürüm';
+    const select = document.createElement('select'); select.id = 'share-environment';
+    for (const [value, text] of [['preview', 'Bu önizleme'], ['production', 'Canlı site']]) {
+      const option = document.createElement('option'); option.value = value; option.textContent = text; select.append(option);
+    }
+    field.append(select);
+    const link = document.createElement('a'); link.href = canonical; link.textContent = 'Canlı siteyi aç ↗';
+    note.append(label, text, field, link);
+    document.querySelector('.site-header')?.after(note);
+    select.addEventListener('change', () => {
+      document.dispatchEvent(new Event('sharecontextchange'));
+    });
+  }
+
   document.addEventListener('DOMContentLoaded', () => {
     applyProjectFields();
     insertProjectCovers();
     setupReadingProgress();
+    setupPreviewNotice();
     window.AG_MOTION?.init();
   });
 })();

@@ -143,16 +143,16 @@
       const owner = button.closest('[data-archive-entry], [data-selected-entry]');
       const entry = data.entries.find(item => item.id === (owner?.dataset.archiveEntry || owner?.dataset.selectedEntry));
       if (!entry) return;
-      const url = core.entryUrl(entry, data.canonicalOrigin);
+      const { url, isPreview, label } = window.AG_SHARE.linkFor(core.entryUrl(entry, data.canonicalOrigin), location.href, document.getElementById('share-environment')?.value);
       const text = core.shareText(entry, data);
       const action = button.dataset.entryAction;
       fallback.hidden = true; feedback.textContent = '';
       if (action === 'share' && typeof navigator.share === 'function') {
-        try { await navigator.share({ title: entry.title || 'Düşünce Arşivi · Ali Gazal', text, url }); feedback.textContent = 'Paylaşım menüsü açıldı.'; return; }
+        try { await navigator.share({ title: `${isPreview ? 'Önizleme · ' : ''}${entry.title || 'Düşünce Arşivi · Ali Gazal'}`, text, url }); feedback.textContent = 'Paylaşım menüsü açıldı.'; return; }
         catch (error) { if (error?.name === 'AbortError') return; }
       }
       const value = action === 'copy-text' ? `${text}\n${url}` : url;
-      try { await copy(value); feedback.textContent = action === 'copy-text' ? 'Düşünce, kaynak bilgisiyle kopyalandı.' : 'Düşüncenin bağlantısı kopyalandı.'; }
+      try { await copy(value); feedback.textContent = action === 'copy-text' ? 'Düşünce, kaynak bilgisiyle kopyalandı.' : `${label} bağlantısı kopyalandı.`; }
       catch (_) {
         fallbackField.value = value; fallback.hidden = false;
         feedback.textContent = 'Otomatik kopyalama kullanılamıyor. Aşağıdaki metni seçip kopyalayabilirsin.';

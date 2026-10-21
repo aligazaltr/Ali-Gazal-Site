@@ -79,7 +79,7 @@ function renderStory(story) {
       <p class="story-description" data-story-description>${escape(first.description)}</p>
       <div class="story-ticks">${story.scenes.map(() => '<span></span>').join('')}</div>
     </div>
-    <div class="story-scenes">${story.scenes.map((scene, i) => `<article class="story-scene" data-story-scene id="hikaye-${escape(scene.id)}"><p class="eyebrow"><span>${String(i + 1).padStart(2, '0')}</span> / ${escape(scene.label)}</p><h3>${escape(scene.title)}</h3><p>${escape(scene.description)}</p><p class="story-note">${escape(scene.note)}</p></article>`).join('')}</div>
+    <div class="story-scenes">${story.scenes.map((scene, i) => `<article class="story-scene" data-story-scene id="hikaye-${escape(scene.id)}"><div class="story-scene-heading"><p class="eyebrow"><span class="scene-number">${String(i + 1).padStart(2, '0')}</span> <span class="scene-label">${escape(scene.label)}</span></p><div class="scene-glyph scene-glyph-${i}" aria-hidden="true"><i></i><i></i><i></i></div></div><div class="reveal-mask"><h3>${escape(scene.title)}</h3></div><p class="scene-description">${escape(scene.description)}</p><p class="story-note">${escape(scene.note)}</p></article>`).join('')}</div>
   </div>`;
 }
 
