@@ -1,0 +1,38 @@
+{
+  "testEnvironment": "Chrome cloud browser, real page UI; no physical Android",
+  "backNavigation": {
+    "from": "https://8a74d75b-ali-gazal-site.aliicerikmedya.workers.dev/",
+    "to": "https://8a74d75b-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli",
+    "samePreview": true
+  },
+  "toc": {
+    "clicked": "Kısa sonuç",
+    "hash": "#sonuc",
+    "readingIndicatorHidden": false,
+    "observedProgressDuringScroll": "0.124826035756343"
+  },
+  "reload": {
+    "url": "https://8a74d75b-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli#sonuc",
+    "theme": "light",
+    "heading": "Machiavelli’nin üç düşüncesi davranışımı değiştirecek mi?"
+  },
+  "shortScreen": {
+    "width": 390,
+    "height": 480,
+    "documentWidth": 390,
+    "overflow": [],
+    "smallControls": [],
+    "selected": "prens-03",
+    "settledAnimations": 0,
+    "pageErrors": [],
+    "note": "Natural vertical scroll remains necessary for the full quote and attribution in this short viewport."
+  },
+  "cacheHeaders": {
+    "url": "https://feature-cinematic-experience-v2-ali-gazal-site.aliicerikmedya.workers.dev/motion.js",
+    "status": 200,
+    "cache-control": "public, max-age=0, must-revalidate",
+    "cf-cache-status": "HIT",
+    "x-robots-tag": "noindex"
+  },
+  "console": "Observed errors were Chrome extension metadata errors; no application-origin errors in recorded QA."
+}
