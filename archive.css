@@ -125,3 +125,15 @@ button:active:not(:disabled) { transform: translateY(1px); }
   .archive-page *, .archive-page *::before, .archive-page *::after { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
   .archive-page button:active { transform: none; }
 }
+
+/* Discovery stays beside its button: new text replaces old text without a page reload. */
+.discovery-card { margin: 1.5rem 0 2.5rem; padding: clamp(1.2rem, 4vw, 2.4rem); border: 1px solid var(--orange-line); background: linear-gradient(120deg, var(--orange-soft), transparent 80%), var(--bg-raised); border-radius: var(--radius); overflow-wrap: anywhere; }
+.discovery-text { font-family: var(--literary); font-size: clamp(1.5rem, 3vw, 2.25rem); line-height: 1.45; max-width: 40ch; }
+.discovery-author { color: var(--orange); font-size: .9rem; font-weight: 700; margin-bottom: .5rem; }
+.discovery-source { color: var(--muted); font-size: .8rem; }
+.discovery-card > .text-link { min-height: 2.75rem; display: inline-flex; align-items: center; }
+.thought-card { transition: transform var(--motion-normal, 360ms) var(--motion-ease, ease), border-color var(--motion-fast, 180ms), box-shadow var(--motion-normal, 360ms); }
+@media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+  .thought-card:hover { transform: translateY(-4px); border-color: var(--orange-line); box-shadow: var(--shadow-raised); }
+}
+@media (prefers-reduced-motion: reduce) { .thought-card { transition: none; } }
