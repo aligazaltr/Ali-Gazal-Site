@@ -8,6 +8,20 @@
 const AG_SITE_DATA = (() => {
   const data = {
     canonicalOrigin: 'https://ali-gazal-site.aliicerikmedya.workers.dev',
+    experience: {
+      intro: ['DÜŞÜN.', 'SORGULA.', 'DENE.', 'KEŞFET.'],
+      tagline: 'Fikirlerin, deneylerin ve gerçek hayatın buluştuğu yer.',
+      stories: {
+        method: {
+          label: 'FİKİRDEN DENEYE', title: 'Bir fikir. Gerçek hayat. Dürüst bir sonuç.',
+          scenes: [
+            { id: 'fikir', label: 'FİKİR', title: 'Bir fikir ne kadar güçlü olabilir?', description: 'Bir düşünceyi anlamak için önce onun ne iddia ettiğini araştırıyorum.', note: 'Kaynağı oku. İddiayı anla. Soruyu belirle.' },
+            { id: 'deney', label: 'DENEY', title: 'Peki gerçek hayatta ne oluyor?', description: 'Fikirleri yalnızca okumuyor, gerçek koşullarda test ediyorum.', note: 'Uygula. Zorlandığın anları kaydet. Değişimi izle.' },
+            { id: 'sonuc', label: 'SONUÇ', title: 'Gerçekten işe yaradı mı?', description: 'Başarıları, başarısızlıkları ve sınırları olduğu gibi paylaşıyorum.', note: 'Sonucu, kanıtları ve eksikleri birlikte değerlendir.' }
+          ]
+        }
+      }
+    },
     phases: [
       { id: 'preparing', label: 'Hazırlanıyor' },
       { id: 'testing', label: 'Deneniyor' },

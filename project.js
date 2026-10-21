@@ -100,22 +100,33 @@
     const fallback = document.querySelector('[data-share-fallback]');
     const link = document.querySelector('[data-share-url]');
     const canonical = document.querySelector('link[rel="canonical"]')?.href;
-    const url = canonical || `${siteData.canonicalOrigin}/${project.slug}`;
+    const productionUrl = canonical || `${siteData.canonicalOrigin}/${project.slug}`;
+    const shareContext = () => window.AG_SHARE.linkFor(productionUrl, location.href, document.getElementById('share-environment')?.value);
+    const updateDestination = () => {
+      const { url, isPreview } = shareContext();
+      button.textContent = isPreview ? 'Önizlemeyi paylaş ↗' : 'Bu projeyi paylaş ↗';
+      if (link) { link.href = url; link.textContent = url; }
+    };
+    document.addEventListener('sharecontextchange', updateDestination);
+    const { url } = shareContext();
 
     if (link) {
       link.href = url;
       link.textContent = url;
     }
     button.hidden = false;
+    updateDestination();
 
     button.addEventListener('click', async () => {
+      const { url, isPreview, label } = shareContext();
+      updateDestination();
       if (status) status.textContent = '';
       if (fallback) fallback.hidden = true;
 
       if (typeof navigator.share === 'function') {
         try {
           await navigator.share({
-            title: project.sharing.title,
+            title: `${isPreview ? 'Önizleme · ' : ''}${project.sharing.title}`,
             text: project.sharing.description,
             url
           });
@@ -127,7 +138,7 @@
 
       try {
         await copyText(url);
-        if (status) status.textContent = 'Proje bağlantısı kopyalandı.';
+        if (status) status.textContent = `${label} bağlantısı kopyalandı.`;
       } catch (_) {
         if (fallback) fallback.hidden = false;
         if (status) status.textContent = 'Otomatik kopyalama kullanılamıyor.';

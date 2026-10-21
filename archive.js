@@ -16,6 +16,75 @@
   let visible = [];
   let previousId = null;
   let pending;
+  let lastFilters = '';
+  let discoveryObserver;
+  const stage = document.querySelector('[data-archive-discovery]');
+  const discovery = document.createElement('article');
+  discovery.className = 'discovery-card';
+  discovery.id = 'kesfedilen-dusunce';
+  discovery.tabIndex = -1;
+  discovery.hidden = true;
+  discovery.setAttribute('aria-label', 'Keşfedilen düşünce');
+  stage.append(discovery);
+  function showDiscovery(entry) {
+    const author = data.authors.find(item => item.id === entry.authorId);
+    const book = data.books.find(item => item.id === entry.bookId);
+    const node = (tag, text, className) => {
+      const element = document.createElement(tag); element.textContent = text;
+      if (className) element.className = className;
+      return element;
+    };
+    discovery.dataset.selectedEntry = entry.id;
+    const link = node('a', 'Kaynağı ve yorumları incele →', 'text-link');
+    link.href = `#dusunce-${entry.slug}`;
+    const actions = node('div', '', 'thought-actions');
+    for (const [action, label] of [['copy-text', 'Metni kopyala'], ['copy-link', 'Bağlantıyı kopyala'], ['share', 'Paylaş ↗']]) {
+      const button = node('button', label); button.type = 'button'; button.dataset.entryAction = action; actions.append(button);
+    }
+    const mask = node('div', '', 'reveal-mask');
+    mask.append(node('p', entry.text, 'discovery-text'));
+    const rule = node('span', '', 'discovery-rule'); rule.setAttribute('aria-hidden', 'true');
+    discovery.replaceChildren(node('p', 'KEŞFEDİLEN DÜŞÜNCE / ' + core.kinds[entry.kind], 'eyebrow'),
+      mask, rule, node('p', author?.name || entry.credit || '', 'discovery-author'),
+      node('p', `${book?.title || ''}${entry.source?.locator ? ' · ' + entry.source.locator : ''}${entry.source?.page ? ' · s. ' + entry.source.page : ''}`, 'discovery-source'), link, actions);
+    stage.dataset.hasSelection = 'true';
+    const url = new URL(location.href); url.hash = `dusunce-${entry.slug}`;
+    history.pushState(null, '', url);
+    feedback.textContent = `${author?.name || 'Arşiv'}: ${entry.title || 'Yeni bir düşünce'} seçildi.`;
+  }
+  function clearDiscovery() {
+    discoveryObserver?.disconnect();
+    window.AG_MOTION?.cancelTree(discovery);
+    discovery.hidden = true;
+    delete stage.dataset.hasSelection;
+  }
+  function animateDiscovery() {
+    const motion = window.AG_MOTION;
+    if (!motion) return;
+    motion.animate(discovery, [{ opacity: .3 }, { opacity: 1 }], { duration: 260 });
+    motion.enter(discovery.querySelector('.discovery-text'), 30);
+    motion.animate(discovery.querySelector('.discovery-rule'), [{ transform: 'scaleX(0)' }, { transform: 'scaleX(1)' }], { duration: 480, delay: 100, fill: 'backwards' });
+    motion.enter(discovery.querySelector('.discovery-author'), 140);
+    motion.enter(discovery.querySelector('.discovery-source'), 210);
+  }
+  function revealDiscovery() {
+    discoveryObserver?.disconnect();
+    const box = discovery.getBoundingClientRect();
+    if (box.top >= window.innerHeight && 'IntersectionObserver' in window) {
+      discoveryObserver = new IntersectionObserver(entries => {
+        if (entries.some(entry => entry.isIntersecting)) { discoveryObserver.disconnect(); animateDiscovery(); }
+      }, { threshold: .1 });
+      discoveryObserver.observe(discovery);
+    } else animateDiscovery();
+  }
+  function keepDiscoveryVisible() {
+    const box = discovery.getBoundingClientRect();
+    // Only reposition after a user request and only when the new passage would be off-screen.
+    const attributionBottom = discovery.querySelector('.discovery-author')?.getBoundingClientRect().bottom || box.bottom;
+    if (box.top > window.innerHeight * .45 || attributionBottom > window.innerHeight || box.bottom < 0) {
+      stage.scrollIntoView({ block: 'start', behavior: window.AG_MOTION?.enabled() ? 'smooth' : 'auto' });
+    }
+  }
 
   function filters() { return Object.fromEntries(Object.entries(fields).map(([key, node]) => [key, node.value])); }
   function fill(next) { for (const [key, field] of Object.entries(fields)) field.value = next[key] || ''; }
@@ -26,6 +95,8 @@
     history.replaceState(null, '', url);
   }
   function render(writeUrl = false) {
+    const filterKey = JSON.stringify(filters());
+    if (lastFilters !== filterKey) { clearDiscovery(); feedback.textContent = ''; lastFilters = filterKey; }
     visible = core.search(index, filters());
     const ids = new Set(visible.map(entry => entry.id));
     cards.forEach((card, id) => { card.hidden = !ids.has(id); });
@@ -39,6 +110,7 @@
     document.querySelector('[data-random-hint]').textContent = visible.length
       ? 'Seçtiğin filtrelerdeki düşünceler arasından.'
       : data.entries.length ? 'Keşfetmek için filtreleri genişlet.' : 'Doğrulanmış ilk düşünce yayımlandığında açılacak.';
+    window.AG_MOTION?.refresh();
     if (writeUrl) updateUrl();
   }
   function reveal(entry, focus = false) {
@@ -57,7 +129,7 @@
     const entry = data.entries.find(item => location.hash === `#dusunce-${item.slug}`);
     if (entry) reveal(entry, focus);
   }
-  function restore() { fill(core.readFilters(location.search, data)); render(); followHash(); }
+  function restore() { clearDiscovery(); fill(core.readFilters(location.search, data)); render(); followHash(); }
   form.addEventListener('submit', event => { event.preventDefault(); clearTimeout(pending); render(true); });
   fields.q.addEventListener('input', () => { clearTimeout(pending); pending = setTimeout(() => render(true), 100); });
   form.addEventListener('change', event => {
@@ -82,9 +154,13 @@
     clearTimeout(pending); render(true);
     const entry = core.random(visible, previousId);
     if (!entry) return;
-    const url = new URL(location.href); url.hash = `dusunce-${entry.slug}`;
-    history.pushState(null, '', url); reveal(entry, true);
-    feedback.textContent = 'Bir düşünce seçildi. Kaynağını ve yorumlarını inceleyebilirsin.';
+    previousId = entry.id;
+    window.AG_MOTION?.animate(randomButton.querySelector('span'), [{ transform: 'translateX(0)' }, { transform: 'translateX(5px)' }, { transform: 'translateX(0)' }], { duration: 280 });
+    if (discovery.hidden) {
+      discovery.hidden = false; showDiscovery(entry); keepDiscoveryVisible(); revealDiscovery();
+    } else if (window.AG_MOTION) window.AG_MOTION.swap(discovery, () => { showDiscovery(entry); keepDiscoveryVisible(); }, revealDiscovery);
+    else { showDiscovery(entry); keepDiscoveryVisible(); }
+
   });
   window.addEventListener('popstate', restore);
   window.addEventListener('hashchange', () => followHash(true));
@@ -102,27 +178,28 @@
     field.remove(); focused?.focus({ preventScroll: true });
     if (!success) throw new Error('copy-unavailable');
   }
-  document.querySelectorAll('[data-entry-action]').forEach(button => {
-    button.hidden = false;
-    button.addEventListener('click', async () => {
-      const entry = data.entries.find(item => item.id === button.closest('[data-archive-entry]').dataset.archiveEntry);
+  document.querySelectorAll('[data-entry-action]').forEach(button => { button.hidden = false; });
+  document.addEventListener('click', async event => {
+      const button = event.target.closest('[data-entry-action]');
+      if (!button) return;
+      const owner = button.closest('[data-archive-entry], [data-selected-entry]');
+      const entry = data.entries.find(item => item.id === (owner?.dataset.archiveEntry || owner?.dataset.selectedEntry));
       if (!entry) return;
-      const url = core.entryUrl(entry, data.canonicalOrigin);
+      const { url, isPreview, label } = window.AG_SHARE.linkFor(core.entryUrl(entry, data.canonicalOrigin), location.href, document.getElementById('share-environment')?.value);
       const text = core.shareText(entry, data);
       const action = button.dataset.entryAction;
       fallback.hidden = true; feedback.textContent = '';
       if (action === 'share' && typeof navigator.share === 'function') {
-        try { await navigator.share({ title: entry.title || 'Düşünce Arşivi · Ali Gazal', text, url }); feedback.textContent = 'Paylaşım menüsü açıldı.'; return; }
+        try { await navigator.share({ title: `${isPreview ? 'Önizleme · ' : ''}${entry.title || 'Düşünce Arşivi · Ali Gazal'}`, text, url }); feedback.textContent = 'Paylaşım menüsü açıldı.'; return; }
         catch (error) { if (error?.name === 'AbortError') return; }
       }
       const value = action === 'copy-text' ? `${text}\n${url}` : url;
-      try { await copy(value); feedback.textContent = action === 'copy-text' ? 'Düşünce, kaynak bilgisiyle kopyalandı.' : 'Düşüncenin bağlantısı kopyalandı.'; }
+      try { await copy(value); feedback.textContent = action === 'copy-text' ? 'Düşünce, kaynak bilgisiyle kopyalandı.' : `${label} bağlantısı kopyalandı.`; }
       catch (_) {
         fallbackField.value = value; fallback.hidden = false;
         feedback.textContent = 'Otomatik kopyalama kullanılamıyor. Aşağıdaki metni seçip kopyalayabilirsin.';
         fallbackField.focus(); fallbackField.select();
       }
-    });
   });
   restore();
   form.hidden = false;

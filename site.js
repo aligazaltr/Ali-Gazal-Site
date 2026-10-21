@@ -65,47 +65,25 @@
     window.addEventListener('resize', requestUpdate, { passive: true });
   }
 
-  function setupMotion() {
-    const preference = window.matchMedia?.('(prefers-reduced-motion: reduce)');
-    if (preference?.matches || !Element.prototype.animate) return;
-
-    const active = new Map();
-    function enter(element, delay = 0) {
-      if (preference?.matches) return;
-      // The underlying document is always visible, including when JS fails.
-      const animation = element.animate([
-        { opacity: 0.55, transform: 'translateY(12px)' },
-        { opacity: 1, transform: 'translateY(0)' }
-      ], { duration: 520, delay, easing: 'cubic-bezier(.2,.7,.2,1)', fill: 'none' });
-      active.set(element, animation);
-      animation.finished.catch(() => {}).finally(() => active.delete(element));
+  function setupPreviewNotice() {
+    const canonical = document.querySelector('link[rel="canonical"]')?.href;
+    if (!canonical || !window.AG_SHARE?.context(canonical, location.href).isPreview) return;
+    const note = document.createElement('aside');
+    note.className = 'preview-notice site-shell';
+    note.setAttribute('aria-label', 'Önizleme ortamı');
+    const label = document.createElement('strong'); label.textContent = 'ÖNİZLEME';
+    const text = document.createElement('span'); text.textContent = 'Bu tasarım henüz canlıya alınmadı.';
+    const field = document.createElement('label'); field.textContent = 'Paylaşılacak sürüm';
+    const select = document.createElement('select'); select.id = 'share-environment';
+    for (const [value, text] of [['preview', 'Bu önizleme'], ['production', 'Canlı site']]) {
+      const option = document.createElement('option'); option.value = value; option.textContent = text; select.append(option);
     }
-
-    document.querySelectorAll('.hero-copy > *, .hero-dossier, .project-opening > *')
-      .forEach((element, index) => enter(element, Math.min(index * 65, 260)));
-
-    let observer;
-    if ('IntersectionObserver' in window) {
-      observer = new IntersectionObserver(entries => {
-        entries.filter(entry => entry.isIntersecting).forEach((entry, index) => {
-          enter(entry.target, Math.min(index * 45, 135));
-          observer.unobserve(entry.target);
-        });
-      }, { threshold: 0.08 });
-      document.querySelectorAll('.section-heading, .process-card, .project-card, .phase-panel, .article-section > h2, .principle-list > li, .evidence-card, .result-panel, .prose-section')
-        .forEach(element => observer.observe(element));
-    }
-
-    preference?.addEventListener?.('change', event => {
-      if (!event.matches) return;
-      observer?.disconnect();
-      active.forEach(animation => animation.cancel());
-      active.clear();
-    });
-    document.addEventListener('focusin', event => {
-      active.forEach((animation, element) => {
-        if (element.contains(event.target)) animation.cancel();
-      });
+    field.append(select);
+    const link = document.createElement('a'); link.href = canonical; link.textContent = 'Canlı siteyi aç ↗';
+    note.append(label, text, field, link);
+    document.querySelector('.site-header')?.after(note);
+    select.addEventListener('change', () => {
+      document.dispatchEvent(new Event('sharecontextchange'));
     });
   }
 
@@ -113,6 +91,7 @@
     applyProjectFields();
     insertProjectCovers();
     setupReadingProgress();
-    window.requestAnimationFrame(setupMotion);
+    setupPreviewNotice();
+    window.AG_MOTION?.init();
   });
 })();

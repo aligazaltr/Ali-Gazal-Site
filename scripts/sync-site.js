@@ -66,9 +66,30 @@ function renderResearchStages(project) {
   return project.research.stages.map((stage, i) => `<li class="research-stage is-${stage.status}" data-research-stage="${escape(stage.id)}"${stage.status === 'in-progress' ? ' aria-current="step"' : ''}><span class="research-number" aria-hidden="true">${String(i + 1).padStart(2, '0')}</span><div><h3>${escape(stage.title)}</h3><p>${escape(stage.description)}</p><p class="research-goal"><strong>Hedef:</strong> ${escape(stage.goal)}</p></div><span class="research-state">${researchStates[stage.status]}</span></li>`).join('\n');
 }
 
+function renderStory(story) {
+  if (!story || story.scenes.length < 3) throw new Error('Hikâye için en az üç gerçek sahne gerekli');
+  const first = story.scenes[0];
+  return `<div class="section-heading"><p class="eyebrow">${escape(story.label)}</p><h2 id="hikaye-baslik">${escape(story.title)}</h2></div>
+  <div class="story-layout" data-story data-scene="0">
+    <div class="story-visual" aria-hidden="true">
+      <p class="story-counter"><span data-story-number>01</span> / ${String(story.scenes.length).padStart(2, '0')} <span>MERAKTAN GERÇEK HAYATA</span></p>
+      <div class="story-orbit"><i></i><i></i><i></i><span class="story-orbit-center">AG</span></div>
+      <p class="story-word" data-story-label>${escape(first.label)}</p>
+      <p class="story-caption" data-story-caption>${escape(first.title)}</p>
+      <p class="story-description" data-story-description>${escape(first.description)}</p>
+      <div class="story-ticks">${story.scenes.map(() => '<span></span>').join('')}</div>
+    </div>
+    <div class="story-scenes">${story.scenes.map((scene, i) => `<article class="story-scene" data-story-scene id="hikaye-${escape(scene.id)}"><div class="story-scene-heading"><p class="eyebrow"><span class="scene-number">${String(i + 1).padStart(2, '0')}</span> <span class="scene-label">${escape(scene.label)}</span></p><div class="scene-glyph scene-glyph-${i}" aria-hidden="true"><i></i><i></i><i></i></div></div><div class="reveal-mask"><h3>${escape(scene.title)}</h3></div><p class="scene-description">${escape(scene.description)}</p><p class="story-note">${escape(scene.note)}</p></article>`).join('')}</div>
+  </div>`;
+}
+
 function renderHtml(html, data = siteData) {
   const id = html.match(/<html\b[^>]*data-project="([^"]+)"/)?.[1];
   if (!id) return html;
+  html = html.replace(/(<!-- experience:intro:start -->)[\s\S]*?(<!-- experience:intro:end -->)/,
+    (_, start, end) => `${start}<p class="cinema-words" aria-label="${escape(data.experience.intro.join(' '))}">${data.experience.intro.map(word => `<span class="cinema-word" aria-hidden="true">${escape(word)}</span>`).join('')}</p><p class="cinema-tagline">${escape(data.experience.tagline)}</p>${end}`);
+  html = html.replace(/(<!-- experience:story:([a-z0-9-]+):start -->)[\s\S]*?(<!-- experience:story:\2:end -->)/,
+    (_, start, key, end) => `${start}${renderStory(data.experience.stories[key])}${end}`);
   const project = data.projects[id];
   if (!project) throw new Error(`Bilinmeyen proje: ${id}`);
   validateResearch(project);
