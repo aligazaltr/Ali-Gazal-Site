@@ -5,8 +5,6 @@
 .cinema-hero .eyebrow { max-width: 40ch; font-size: .68rem; letter-spacing: .12em; }
 .cinema-words { margin: 1.5rem 0; font-size: clamp(3.6rem, 6.8vw, 6.2rem); line-height: .97; font-weight: 850; letter-spacing: -.07em; }
 .cinema-word { display: block; width: fit-content; }
-.cinema-word:nth-child(2) { color: var(--orange); }
-.cinema-word:nth-child(4) { font-family: var(--literary); font-weight: 400; font-style: italic; letter-spacing: -.055em; }
 .cinema-hero h1 { margin: 1.7rem 0 .6rem; font-size: clamp(1.1rem, 1.6vw, 1.4rem); line-height: 1.35; letter-spacing: -.025em; max-width: 30ch; }
 .cinema-tagline { color: var(--muted); font-size: .9rem; max-width: 32ch; margin-bottom: 0; }
 .cinema-hero .hero-copy .lead { font-size: .9rem; max-width: 44ch; color: var(--muted-strong); margin-block: .8rem 0; }
@@ -44,17 +42,6 @@
 .story-counter { display: flex; gap: .6rem; align-items: center; color: var(--muted); font-size: .75rem; font-variant-numeric: tabular-nums; }
 .story-counter > span:first-child { color: var(--orange); }
 .story-counter > span:last-child { margin-left: auto; font-size: .56rem; letter-spacing: .1em; }
-.story-orbit { position: relative; width: 11rem; height: 11rem; margin: 2.2rem auto; }
-.story-orbit i { position: absolute; inset: 0; border: 1px solid var(--orange-line); border-radius: 50%; transition: transform var(--motion-slow) var(--motion-ease); }
-.story-orbit i:nth-child(2) { transform: scale(.72); }
-.story-orbit i:nth-child(3) { transform: scale(.44); }
-.story-orbit-center { position: absolute; inset: 0; display: grid; place-items: center; color: var(--orange); font-size: 1.3rem; font-weight: 700; }
-[data-scene="1"] .story-orbit i:first-child { transform: scale(.82) translateX(-22%); }
-[data-scene="1"] .story-orbit i:nth-child(2) { transform: scale(.82) translateX(22%); }
-[data-scene="1"] .story-orbit i:nth-child(3) { transform: scale(.52); }
-[data-scene="2"] .story-orbit i:first-child { transform: scale(.92); }
-[data-scene="2"] .story-orbit i:nth-child(2) { transform: scale(.92) rotate(45deg); border-radius: 12%; }
-[data-scene="2"] .story-orbit i:nth-child(3) { transform: scale(.62); }
 .story-word { font-size: clamp(3rem, 5.5vw, 5rem); line-height: 1; font-weight: 850; letter-spacing: -.065em; margin-bottom: 1.1rem; }
 .story-caption { font-family: var(--literary); font-size: 1.6rem; line-height: 1.25; min-height: 2.6em; margin-bottom: .8rem; }
 .story-description { color: var(--muted); font-size: .9rem; min-height: 5em; }
@@ -71,7 +58,6 @@
 /* On phones the visual belongs to each scene, rather than an off-screen sticky panel. */
 .reveal-mask { overflow: clip; }
 .story-scene-heading .eyebrow { display: flex; gap: .7rem; align-items: baseline; }
-.scene-glyph { display: none; }
 @media (max-width: 56rem) {
   .story-layout { display: block; }
   .story-visual { display: none; }
@@ -81,21 +67,9 @@
   .scene-number { font-family: var(--literary); font-size: 4.5rem; line-height: 1; font-weight: 400; letter-spacing: -.07em; color: var(--text); }
   .scene-label { font-size: .7rem; letter-spacing: .18em; }
   .story-scene h3 { font-size: clamp(1.9rem, 7vw, 2.7rem); max-width: 18ch; }
-  .scene-glyph { display: block; position: relative; width: 6rem; height: 5rem; transform-origin: left center; color: var(--orange); }
-  .scene-glyph i { position: absolute; display: block; border: 1px solid currentColor; }
-  .scene-glyph-0 i { width: 3rem; height: 3rem; border-radius: 50%; top: 1rem; left: 2rem; }
-  .scene-glyph-0 i:nth-child(2) { transform: scale(.6); }
-  .scene-glyph-0 i:nth-child(3) { width: 5rem; height: 1px; top: 2.5rem; left: 0; border-width: 1px 0 0; }
-  .scene-glyph-1 i { width: 2.8rem; height: 2.8rem; top: 1rem; left: .3rem; }
-  .scene-glyph-1 i:nth-child(2) { left: 2.2rem; top: .2rem; }
-  .scene-glyph-1 i:nth-child(3) { width: 4.8rem; top: 4rem; height: 1px; border-width: 1px 0 0; }
-  .scene-glyph-2 i { width: 4.8rem; height: 1px; top: 1rem; border-width: 1px 0 0; }
-  .scene-glyph-2 i:nth-child(2) { width: 3.5rem; top: 2.3rem; }
-  .scene-glyph-2 i:nth-child(3) { width: 2rem; top: 3.6rem; }
   .story-scene:last-child { padding-bottom: 1rem; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .story-orbit i { transition: none; }
   .story-visual { position: relative; top: auto; }
   .story-scene { min-height: 0; padding-block: 2rem; }
 }

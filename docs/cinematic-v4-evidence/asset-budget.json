@@ -1,0 +1,71 @@
+[
+  {
+    "file": "motion.js",
+    "beforeBytes": 9618,
+    "afterBytes": 11554,
+    "beforeGzipBytes": 2930,
+    "afterGzipBytes": 3460
+  },
+  {
+    "file": "archive.js",
+    "beforeBytes": 11778,
+    "afterBytes": 12544,
+    "beforeGzipBytes": 3854,
+    "afterGzipBytes": 4034
+  },
+  {
+    "file": "site.js",
+    "beforeBytes": 3989,
+    "afterBytes": 3989,
+    "beforeGzipBytes": 1491,
+    "afterGzipBytes": 1491
+  },
+  {
+    "file": "site-data.js",
+    "beforeBytes": 19572,
+    "afterBytes": 19572,
+    "beforeGzipBytes": 5851,
+    "afterGzipBytes": 5851
+  },
+  {
+    "file": "share-context.js",
+    "beforeBytes": 1052,
+    "afterBytes": 1052,
+    "beforeGzipBytes": 509,
+    "afterGzipBytes": 509
+  },
+  {
+    "file": "theme.js",
+    "beforeBytes": 2102,
+    "afterBytes": 2102,
+    "beforeGzipBytes": 830,
+    "afterGzipBytes": 830
+  },
+  {
+    "file": "motion.css",
+    "beforeBytes": 9652,
+    "afterBytes": 9652,
+    "beforeGzipBytes": 2607,
+    "afterGzipBytes": 2607
+  },
+  {
+    "file": "archive.css",
+    "beforeBytes": 19139,
+    "afterBytes": 20264,
+    "beforeGzipBytes": 4076,
+    "afterGzipBytes": 4320
+  },
+  {
+    "file": "signature.css",
+    "beforeBytes": 0,
+    "afterBytes": 9210,
+    "beforeGzipBytes": 0,
+    "afterGzipBytes": 2408
+  },
+  {
+    "file": "machiavelli-prens-7-gun-kapak.jpg",
+    "beforeBytes": 197054,
+    "afterBytes": 197054,
+    "identical": true
+  }
+]

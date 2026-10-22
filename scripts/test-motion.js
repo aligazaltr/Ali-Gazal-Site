@@ -131,3 +131,37 @@ test('off-screen elements never start an animation', () => {
   const f = fixture(); f.element.getBoundingClientRect = () => ({ top: 1100, bottom: 1500, left: 0, right: 300 });
   f.api.enter(f.element); assert.equal(f.calls.length, 0);
 });
+
+test('layer morph uses the current visual position, cancels older travel and reaches the new CSS state', () => {
+  const f = fixture();
+  let state = 'old';
+  const part = Object.assign(new f.Element(), { hidden: false, getClientRects: () => [{}], contains: () => false });
+  const layer = { contains: node => node === part, getClientRects: () => [{}], querySelectorAll: () => [part] };
+  f.window.getComputedStyle = () => ({ transform: state === 'old' ? 'matrix(1,0,0,1,30,0)' : 'matrix(1,0,0,1,90,0)', opacity: '1' });
+  f.api.animate(part, [{ transform: 'none' }, { transform: 'scale(2)' }]);
+  f.api.morph(layer, () => { state = 'new'; });
+  assert.equal(f.calls[0].animation.cancelled, true);
+  assert.equal(f.calls[1].frames[0].transform, 'matrix(1,0,0,1,30,0)');
+  assert.equal(f.calls[1].frames[1].transform, 'matrix(1,0,0,1,90,0)');
+});
+test('off-screen and reduced-motion morphs commit meaning without scheduling visual work', () => {
+  for (const reduced of [true, false]) {
+    const f = fixture(reduced); let state = 0;
+    const layer = { getClientRects: () => [], contains: () => false, querySelectorAll: () => [f.element] };
+    f.api.morph(layer, () => { state = 2; });
+    assert.equal(state, 2); assert.equal(f.calls.length, 0);
+  }
+});
+test('case scene renders only public records and central facts, including limitations', () => {
+  const data = structuredClone(require('../site-data.js').projects.machiavelli);
+  const { caseStudy } = require('./render-scenes.js');
+  data.evidence.entries.push({ public: false, title: 'PRIVATE', dayLabel: 'PRIVATE' });
+  data.dates.label = 'CENTRAL DATES'; data.result.summary = 'CENTRAL RESULT';
+  const html = caseStudy(data);
+  assert.ok(html.includes('CENTRAL DATES')); assert.ok(html.includes('CENTRAL RESULT'));
+  assert.ok(html.includes('4 anonim kayıt'));
+  assert.ok(!html.includes('PRIVATE'));
+  assert.ok(html.includes(data.result.limitations[3]));
+  data.result.published = false;
+  assert.equal(caseStudy(data), '');
+});

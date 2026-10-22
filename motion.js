@@ -78,6 +78,7 @@
       const style = window.getComputedStyle(part);
       return { transform: fromRest ? 'translateY(24px) scale(.9)' : style.transform, opacity: fromRest ? 0 : style.opacity };
     }) : [];
+    if (container) cancelTree(container);
     update();
     if (!canMove) return;
     parts.forEach((part, i) => {
