@@ -71,15 +71,9 @@
 .case-principles li { padding: .75rem 0 .75rem .25rem; border-top: 1px solid var(--line); }
 .case-principles li::marker { color: var(--orange); }
 .case-scene .text-link { align-self: start; margin-top: .75rem; min-height: 44px; display: inline-flex; align-items: center; }
-.project-name-reveal { display: block; }
+.project-title-source .reveal-mask, .project-name-reveal { display: block; }
 .research-stage { position: relative; }
 .research-stage:not(:last-child)::after { content: ''; position: absolute; left: 1.25rem; bottom: -1.2rem; height: 1.2rem; width: 1px; background: var(--orange-line); }
-.process-card { position: relative; }
-.process-card h3::before { content: ''; display: block; width: 1.8rem; height: 1px; background: var(--orange); margin-bottom: 1rem; }
-@media (prefers-reduced-motion: no-preference) {
-  .cinema-hero .dossier-cover img, .project-opening .project-feature-cover img { view-transition-name: machiavelli-cover; }
-  ::view-transition-group(machiavelli-cover) { animation-duration: 420ms; animation-timing-function: var(--motion-ease); }
-}
 @media (max-width: 56rem) {
   .story-scene-heading { align-items: center; gap: 1.5rem; }
   .local-folio { display: block; width: min(52%, 15rem); height: 9rem; margin: 0; flex-shrink: 0; }

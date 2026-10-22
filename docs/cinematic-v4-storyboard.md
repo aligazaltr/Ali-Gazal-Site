@@ -11,6 +11,6 @@ Başlangıç: main `9f61f699e2c5364c5e7db6e12e6566ca08d4c350` / 3.0. Beğenilen 
 
 Ortak hareket sistemi `motion.js`, statik sahne üretimi `scripts/render-scenes.js` ve `scripts/sync-site.js`. Proje gerçekleri yalnız `site-data.js` içinden gelir. 15 doğrulanmış düşüncenin metin/kaynakları bu çalışmanın kapsamı dışında, aynen korunur.
 
-Normal bağlantılar ve tarayıcı geçmişi korunur. Destekleyen tarayıcılarda ana sayfa/Machiavelli gerçek kapağı kısa ortak görsel geçiş kullanır; desteklemeyenlerde standart navigasyon. Payot'un dört aşaması ve Hakkımda'nın güçlü başlığı aynı kalır.
+Normal bağlantılar ve tarayıcı geçmişi korunur. Sayfalar ortak gerçek kapak, tipografi ve giriş hareketi dilini kullanır. Denenen cross-document View Transition, Chrome geri/ileri kontrolünde opt-in iptal hatası verdiği için teslimden çıkarıldı; standart navigasyon bütün tarayıcılarda esas davranıştır. Payot'un dört aşaması ve Hakkımda'nın güçlü başlığı aynı kalır.
 
 Yayın sınırı: ayrı dal/PR ve önizleme. 4.0 için kullanıcı onayı gelmeden main birleştirmesi veya üretim dağıtımı yapılmaz.

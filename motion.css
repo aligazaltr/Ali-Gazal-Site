@@ -74,13 +74,7 @@
   .story-scene { min-height: 0; padding-block: 2rem; }
 }
 
-/* Same-origin navigation remains ordinary links; unsupported browsers ignore this enhancement. */
-@media (prefers-reduced-motion: no-preference) {
-  @view-transition { navigation: auto; }
-  ::view-transition-old(root) { animation-duration: 140ms; }
-  ::view-transition-new(root) { animation-duration: 220ms; }
-  ::view-transition-group(root) { pointer-events: none; }
-}
+/* Normal document navigation preserves browser history and remains usable during entry motion. */
 .preview-notice { display: flex; flex-wrap: wrap; gap: .25rem 1rem; align-items: center; padding-block: .6rem; border-bottom: 1px solid var(--line); font-size: .72rem; color: var(--muted); }
 .preview-notice strong { color: var(--orange); font-size: .62rem; letter-spacing: .12em; }
 .preview-notice label { display: flex; align-items: center; gap: .6rem; margin-left: auto; }
