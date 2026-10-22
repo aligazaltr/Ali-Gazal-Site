@@ -41,7 +41,7 @@
   }
   function enter(element, delay = 0, image = false) {
     const title = element?.dataset?.reveal === 'title';
-    const line = element?.parentElement?.classList.contains('reveal-mask');
+    const line = element?.parentElement?.classList.contains('reveal-mask') || element?.parentElement?.classList.contains('word-window');
     const frames = image ? [
       { opacity: .3, transform: 'scale(1.035)', clipPath: 'inset(0 0 16% 0)' },
       { opacity: 1, transform: 'scale(1)', clipPath: 'inset(0 0 0 0)' }
@@ -68,6 +68,30 @@
       if (reveal) reveal();
       else animate(element, [{ opacity: .15, transform: 'translateY(8px)' }, { opacity: 1, transform: 'translateY(0)' }], { duration: 360 });
     }).catch(() => {});
+  }
+  // Read transforms before/after a semantic state change. The same layers travel;
+  // no scroll loop, layout interpolation, or animation on an invisible stage.
+  function morph(container, update, fromRest = false) {
+    const parts = [...(container?.querySelectorAll?.('[data-morph]') || [])];
+    const canMove = enabled() && onScreen(container) && typeof window.getComputedStyle === 'function';
+    const before = canMove ? parts.map(part => {
+      const style = window.getComputedStyle(part);
+      return { transform: fromRest ? 'translateY(24px) scale(.9)' : style.transform, opacity: fromRest ? 0 : style.opacity };
+    }) : [];
+    update();
+    if (!canMove) return;
+    parts.forEach((part, i) => {
+      const style = window.getComputedStyle(part);
+      animate(part, [before[i], { transform: style.transform, opacity: style.opacity }],
+        { duration: compact?.matches ? 520 : 660, delay: fromRest ? i * 25 : 0, fill: 'backwards' });
+    });
+  }
+  function revealFolio(scene) {
+    const folio = scene.querySelector('.local-folio');
+    if (!folio) return;
+    const state = folio.dataset.folioState;
+    if (state !== '0') folio.dataset.folioState = String(Number(state) - 1);
+    morph(folio, () => { folio.dataset.folioState = state; }, state === '0');
   }
   function refresh() {
     if (!observer) return;
@@ -96,9 +120,7 @@
             enter(scene.querySelector('.scene-label'), 80);
             enter(scene.querySelector('h3'), 130);
             enter(scene.querySelector('.scene-description'), 190);
-            animate(scene.querySelector('.scene-glyph'), [
-              { opacity: .2, transform: 'scaleX(.25)' }, { opacity: 1, transform: 'scaleX(1)' }
-            ], { duration: 600, delay: 100, fill: 'backwards' });
+            revealFolio(scene);
           });
         }, { threshold: .15 });
         scenes.forEach(scene => watcher.observe(scene));
@@ -114,7 +136,11 @@
         const next = scenes.indexOf(current);
         if (next === selected) return;
         selected = next;
-        story.dataset.scene = String(next);
+        morph(stage, () => {
+          story.dataset.scene = String(next);
+          const folio = stage?.querySelector?.('.idea-folio');
+          if (folio) folio.dataset.folioState = String(next);
+        });
         scenes.forEach(scene => scene.classList.toggle('is-active', scene === current));
         story.querySelector('[data-story-number]').textContent = String(next + 1).padStart(2, '0');
         story.querySelector('[data-story-label]').textContent = current.querySelector('.scene-label').textContent;
@@ -124,7 +150,11 @@
         if (!seen.has(current)) { seen.add(current); enter(current.querySelector('h3')); }
       }, { rootMargin: '-25% 0px -35% 0px', threshold: [0, .2, .6] });
       scenes.forEach(scene => watcher.observe(scene));
-      storyCleanups.push(() => watcher.disconnect());
+      const visibility = new IntersectionObserver(entries => {
+        entries.forEach(entry => { if (!entry.isIntersecting) cancelTree(stage); });
+      }, { threshold: 0 });
+      if (stage) visibility.observe(stage);
+      storyCleanups.push(() => { watcher.disconnect(); visibility.disconnect(); });
     });
   }
   function startObserver() {
@@ -147,7 +177,14 @@
       if (onScreen(element)) { seen.add(element); observer?.unobserve(element); enter(element, delay, image); }
       else observer?.observe(element);
     };
-    document.querySelectorAll('.cinema-word').forEach((element, i) => opening(element, i * 130));
+    document.querySelectorAll('.cinema-word').forEach((element, i) => {
+      if (!onScreen(element)) { observer?.observe(element); return; }
+      seen.add(element);
+      animate(element, [
+        { transform: 'translateY(108%) skewY(4deg) scale(.97)', opacity: .55 },
+        { transform: 'translateY(0) skewY(0deg) scale(1)', opacity: 1 }
+      ], { duration: 520, delay: i * 105, fill: 'backwards' });
+    });
     document.querySelectorAll('.cinema-hero .hero-copy > :not(.cinema-words):not(.eyebrow), .cinema-hero .eyebrow, .hero-dossier, .project-hero-copy > *, .project-feature-cover img, .research-opening .project-hero > *, .archive-intro > div > *, .about-opening [data-reveal], .projects-page .page-intro > *')
       .forEach((element, i) => opening(element, Math.min(i * 75, 300), element.tagName === 'IMG'));
     // Native details controls semantics and focus. CSS enhances expansion where supported.
@@ -166,5 +203,5 @@
   document.addEventListener('focusin', event => {
     active.forEach((_, element) => { if (element.contains(event.target)) cancel(element); });
   });
-  window.AG_MOTION = Object.freeze({ init, enter, animate, cancel, cancelTree, swap, refresh, enabled });
+  window.AG_MOTION = Object.freeze({ init, enter, animate, cancel, cancelTree, swap, refresh, enabled, morph });
 })();

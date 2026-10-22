@@ -44,7 +44,9 @@
     const mask = node('div', '', 'reveal-mask');
     mask.append(node('p', entry.text, 'discovery-text'));
     const rule = node('span', '', 'discovery-rule'); rule.setAttribute('aria-hidden', 'true');
-    discovery.replaceChildren(node('p', 'KEŞFEDİLEN DÜŞÜNCE / ' + core.kinds[entry.kind], 'eyebrow'),
+    const leaf = node('span', '', 'discovery-leaf'); leaf.setAttribute('aria-hidden', 'true');
+    const ordinal = String(data.entries.findIndex(item => item.id === entry.id) + 1).padStart(2, '0');
+    discovery.replaceChildren(leaf, node('p', ordinal + ' / ' + data.entries.length + ' · ' + core.kinds[entry.kind], 'eyebrow'),
       mask, rule, node('p', author?.name || entry.credit || '', 'discovery-author'),
       node('p', `${book?.title || ''}${entry.source?.locator ? ' · ' + entry.source.locator : ''}${entry.source?.page ? ' · s. ' + entry.source.page : ''}`, 'discovery-source'), link, actions);
     stage.dataset.hasSelection = 'true';
@@ -61,11 +63,15 @@
   function animateDiscovery() {
     const motion = window.AG_MOTION;
     if (!motion) return;
-    motion.animate(discovery, [{ opacity: .3 }, { opacity: 1 }], { duration: 260 });
-    motion.enter(discovery.querySelector('.discovery-text'), 30);
-    motion.animate(discovery.querySelector('.discovery-rule'), [{ transform: 'scaleX(0)' }, { transform: 'scaleX(1)' }], { duration: 480, delay: 100, fill: 'backwards' });
-    motion.enter(discovery.querySelector('.discovery-author'), 140);
-    motion.enter(discovery.querySelector('.discovery-source'), 210);
+    motion.animate(discovery, [{ opacity: .6, transform: 'translateX(6px)' }, { opacity: 1, transform: 'translateX(0)' }], { duration: 280 });
+    motion.animate(discovery.querySelector('.discovery-leaf'), [
+      { transform: 'scaleX(.25) translateX(12px)', opacity: .2 },
+      { transform: 'scaleX(1) translateX(0)', opacity: 1 }
+    ], { duration: 500, fill: 'backwards' });
+    motion.enter(discovery.querySelector('.discovery-text'), 65);
+    motion.animate(discovery.querySelector('.discovery-rule'), [{ transform: 'scaleX(0)' }, { transform: 'scaleX(1)' }], { duration: 460, delay: 60, fill: 'backwards' });
+    motion.enter(discovery.querySelector('.discovery-author'), 180);
+    motion.enter(discovery.querySelector('.discovery-source'), 240);
   }
   function revealDiscovery() {
     discoveryObserver?.disconnect();
@@ -82,7 +88,10 @@
     // Only reposition after a user request and only when the new passage would be off-screen.
     const attributionBottom = discovery.querySelector('.discovery-author')?.getBoundingClientRect().bottom || box.bottom;
     if (box.top > window.innerHeight * .45 || attributionBottom > window.innerHeight || box.bottom < 0) {
-      stage.scrollIntoView({ block: 'start', behavior: window.AG_MOTION?.enabled() ? 'smooth' : 'auto' });
+      // Short phone windows prioritize the selected passage; the button keeps keyboard focus.
+      const stageBox = stage.getBoundingClientRect();
+      const target = attributionBottom - stageBox.top + 24 > window.innerHeight ? discovery : stage;
+      target.scrollIntoView({ block: 'start', behavior: window.AG_MOTION?.enabled() ? 'smooth' : 'auto' });
     }
   }
 

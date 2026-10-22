@@ -218,3 +218,18 @@ button:active:not(:disabled) { transform: translateY(1px); }
   .archive-results { gap: 1.5rem; }
   .thought-text { font-size: 1.6rem; }
 }
+
+/* 4.0 — a fresh sheet of the archive opens; source and credit stay on the sheet. */
+.discovery-card { position: relative; isolation: isolate; padding: 1.5rem 1.6rem 1.4rem 2rem; border-left: 1px solid var(--orange-line); scroll-margin-top: 1.25rem; }
+.discovery-leaf { position: absolute; inset: 0; z-index: -1; background: linear-gradient(105deg, var(--card-wash), transparent 90%); border-block: 1px solid var(--line); transform-origin: left center; pointer-events: none; }
+.discovery-leaf::after { content: ''; position: absolute; inset: .4rem -.4rem -.4rem .4rem; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.discovery-rule { width: 4.5rem; }
+.discovery-card .reveal-mask { padding-block: .08em; }
+.discovery-text { hanging-punctuation: first last; }
+.discovery-card .thought-actions { border-top: 1px solid var(--line); padding-top: .7rem; }
+@media (max-width: 56rem) { .discovery-card { padding: 1.2rem 1.2rem 1rem; } }
+@media (max-width: 26rem) {
+  .discovery-stage { padding-inline: 1rem; }
+  .discovery-card { padding-inline: .8rem; }
+  .discovery-text { font-size: 1.55rem; }
+}
