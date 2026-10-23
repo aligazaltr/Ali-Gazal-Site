@@ -1,0 +1,20 @@
+<!doctype html><html lang="tr" data-theme="dark"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="robots" content="noindex,nofollow"><title>Machiavelli · Dört kare prototipi</title><link rel="stylesheet" href="styles.css"><link rel="stylesheet" href="machiavelli-scene.css"><script src="machiavelli-frames.js"></script><style>body{margin:0}.proto-tools{display:flex;gap:8px;padding:10px;flex-wrap:wrap}.proto-tools button{padding:10px}body.clean .proto-tools{display:none}.mc-scene{margin:0}.mc-scene.is-directed{--stage-height:calc(100svh - 80px)}body.clean .mc-scene{--stage-height:calc(100svh - 24px)}</style></head><body><nav class="proto-tools" aria-label="Prototip kontrolleri"><button data-frame="0">01 · Beliriş</button><button data-frame="1">02 · Portre</button><button data-frame="2">03 · Dönüşüm</button><button data-frame="3">04 · Deney</button><button id="theme">Temayı değiştir</button><button id="clean">Sade görünüm</button></nav><main class="site-shell"><section class="mc-scene" data-machiavelli-scene aria-labelledby="mc-title">
+  <div class="mc-stage">
+    <div class="mc-atmosphere" aria-hidden="true"></div>
+    <p class="mc-edition">BİR KİTAPTAN <span>GERÇEK HAYATA</span></p>
+    <h1 class="mc-title" id="mc-title"><span>MACHIAVELLI</span><em>PRENS</em></h1>
+    <div class="mc-portrait" aria-hidden="true"><img src="machiavelli-portrait-640.webp" srcset="machiavelli-portrait-640.webp 640w, machiavelli-portrait-960.webp 960w" sizes="(max-width: 600px) 80vw, 480px" width="960" height="1140" alt="" fetchpriority="high" decoding="async"></div>
+    <p class="mc-premise">Üç düşünce.<br>Yedi gün.<br><em>Gerçek hayat.</em></p>
+    <figure class="mc-film" data-project="machiavelli" data-project-cover data-cover-priority="high">
+      <!-- project-cover:start --><img class="project-cover" src="machiavelli-prens-7-gun-kapak.jpg" alt="Ali Gazal ve Machiavelli’nin yer aldığı, “İşe yaradı mı?” ve “7 Gün” yazılı Machiavelli deneyi kapağı." width="1280" height="720" loading="eager" fetchpriority="high" decoding="async"><!-- project-cover:end -->
+      <figcaption data-project-field="display.coverCaption">Final video kapağı · Video henüz yayımlanmadı</figcaption>
+    </figure>
+    <div class="mc-outcome"><p class="eyebrow">MACHIAVELLI / PRENS</p><p class="mc-statement">ÜÇ DÜŞÜNCE. YEDİ GÜN. <em>GERÇEK HAYAT.</em></p><p data-project-field="statusLabel">Deney tamamlandı · video hazırlanıyor</p><p class="mc-date" data-project-field="dates.label">21–27 Eylül 2026</p></div>
+    <a class="mc-jump text-link" href="#deney-asamasi">Araştırma dosyasını incele <span aria-hidden="true">↓</span></a>
+    <div class="mc-measure" aria-hidden="true"><span></span></div>
+  </div>
+</section><div id="deney-asamasi"></div></main><script>
+const scene=document.querySelector('.mc-scene'),stage=document.querySelector('.mc-stage');scene.classList.add('is-directed');let selected=0;
+function paint(){const p=scene.querySelector('.mc-portrait'),f=scene.querySelector('.mc-film');const fw=f.offsetWidth;const g={height:stage.clientHeight,mobile:innerWidth<=600,portraitWidth:p.offsetWidth,portraitHeight:p.offsetHeight,portraitLeft:p.offsetLeft,portraitTop:p.offsetTop,filmWidth:fw,filmLeft:stage.clientWidth/2-fw/2,filmTop:f.offsetTop};AG_MACHIAVELLI_FRAMES.apply(stage,AG_MACHIAVELLI_FRAMES.sample([0,.32,.68,1][selected],g));scene.dataset.frame=selected;}
+document.querySelectorAll('[data-frame]').forEach(b=>b.onclick=()=>{selected=Number(b.dataset.frame);paint()});document.querySelector('#theme').onclick=()=>document.documentElement.dataset.theme=document.documentElement.dataset.theme==='dark'?'light':'dark';document.querySelector('#clean').onclick=()=>{document.body.classList.toggle('clean');paint()};addEventListener('resize',paint);addEventListener('load',paint);paint();
+</script></body></html>

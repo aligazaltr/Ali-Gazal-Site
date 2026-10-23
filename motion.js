@@ -57,9 +57,9 @@
     if (!enabled() || !onScreen(element)) { update(); return; }
     let updated = false;
     const commit = () => { if (!updated) { updated = true; update(); } };
-    const outgoing = animate(element, options.page ? [
-      { opacity: 1, transform: 'translateX(0)' }, { opacity: 0, transform: 'translateX(-8px)' }
-    ] : [{ opacity: 1, transform: 'scale(1)' }, { opacity: .12, transform: 'scale(.985)' }], { duration: options.page ? 180 : 150 });
+    const outgoing = animate(element, options.text ? [
+      { opacity: 1 }, { opacity: 0 }
+    ] : [{ opacity: 1, transform: 'scale(1)' }, { opacity: .12, transform: 'scale(.985)' }], { duration: options.text ? 180 : 150 });
     if (!outgoing) { commit(); return; }
     updates.set(element, commit);
     outgoing.finished.then(() => {
