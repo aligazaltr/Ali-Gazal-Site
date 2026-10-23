@@ -1,6 +1,6 @@
 /* One semantic composition; progressive motion is owned by machiavelli-scene.js. */
 const escape = value => String(value).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-function renderMachiavelliScene(project, videoIsValid = false) {
+function renderMachiavelliScene(project) {
   const cover = project.video.thumbnail;
   return `<section class="mc-scene" data-machiavelli-scene aria-labelledby="mc-title">
   <div class="mc-stage">
@@ -13,7 +13,7 @@ function renderMachiavelliScene(project, videoIsValid = false) {
       <!-- project-cover:start --><img class="project-cover" src="${escape(cover.src)}" alt="${escape(cover.alt)}" width="${cover.width}" height="${cover.height}" loading="eager" fetchpriority="high" decoding="async"><!-- project-cover:end -->
       <figcaption data-project-field="display.coverCaption">${escape(project.display.coverCaption)}</figcaption>
     </figure>
-    <div class="mc-outcome"><p class="eyebrow">MACHIAVELLI / PRENS</p><p class="mc-statement">ÜÇ DÜŞÜNCE. YEDİ GÜN. <em>GERÇEK HAYAT.</em></p><p data-project-field="statusLabel">${escape(project.statusLabel)}</p><p class="mc-date" data-project-field="dates.label">${escape(project.dates.label)}</p>${project.video.published && videoIsValid ? `<a class="text-link" href="${escape(project.video.url)}" target="_blank" rel="noopener noreferrer">YouTube’da videoyu izle ↗</a>` : ''}</div>
+    <div class="mc-outcome"><p class="eyebrow">MACHIAVELLI / PRENS</p><p class="mc-statement">ÜÇ DÜŞÜNCE. YEDİ GÜN. <em>GERÇEK HAYAT.</em></p><p data-project-field="statusLabel">${escape(project.statusLabel)}</p><p class="mc-date" data-project-field="dates.label">${escape(project.dates.label)}</p></div>
     <a class="mc-jump text-link" href="#deney-asamasi">Araştırma dosyasını incele <span aria-hidden="true">↓</span></a>
     <div class="mc-measure" aria-hidden="true"><span></span></div>
   </div>

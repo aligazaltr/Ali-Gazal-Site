@@ -240,7 +240,7 @@
     });
     document.querySelectorAll('.cinema-hero .hero-copy > :not(.cinema-words):not(.eyebrow), .cinema-hero .eyebrow, .hero-dossier, .project-opening:not(.machiavelli-opening) .project-hero-copy > *, .project-opening:not(.machiavelli-opening) .project-feature-cover img, .research-opening .project-hero > *, .archive-intro > div > *, .about-opening [data-reveal], .projects-page .page-intro > *')
       .forEach((element, i) => opening(element, Math.min(i * 75, 300), element.tagName === 'IMG'));
-    document.querySelectorAll('.machiavelli-title-main, .machiavelli-subtitle, .machiavelli-opening .project-feature-cover img, .machiavelli-opening .opening-question, .machiavelli-opening .lead')
+    document.querySelectorAll('.machiavelli-opening .opening-question, .machiavelli-opening .lead')
       .forEach((element, i) => opening(element, i * 95, element.tagName === 'IMG'));
     // Native details controls semantics and focus. CSS enhances expansion where supported.
     document.querySelectorAll('.thought-card details').forEach(details => details.addEventListener('toggle', () => {

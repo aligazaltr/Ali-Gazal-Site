@@ -4,6 +4,7 @@ const fs = require('node:fs');
 const path = require('node:path');
 const siteData = require('../site-data.js');
 const { signature } = require('./render-scenes.js');
+const { renderMachiavelliScene } = require('./render-machiavelli-scene.js');
 const root = path.resolve(__dirname, '..');
 
 function escape(value) {
@@ -99,6 +100,9 @@ function renderHtml(html, data = siteData) {
     || !Number.isInteger(project.video.durationSeconds) || project.video.durationSeconds <= 0)) {
     throw new Error(`${id}: yayın için gerçek YouTube URL'si, başlık, tarih ve süre zorunlu`);
   }
+
+  html = html.replace(/(<!-- experience:machiavelli-scene:start -->)[\s\S]*?(<!-- experience:machiavelli-scene:end -->)/,
+    (_, start, end) => `${start}${renderMachiavelliScene(project)}${end}`);
 
   html = html.replace(/<([a-z][\w:-]*)([^>]*\sdata-project-field="([^"]+)"[^>]*)>([^<]*)<\/\1>/gi,
     (_, tag, attributes, field) => `<${tag}${attributes}>${escape(read(project, field))}</${tag}>`);

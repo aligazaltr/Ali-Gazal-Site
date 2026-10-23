@@ -8,8 +8,8 @@
     return [
       { titleX:0,titleY:0,titleScale:1,titleOpacity:1,portraitX:0,portraitY:0,portraitScale:.88,portraitOpacity:.38,premiseOpacity:1,premiseY:0,filmScale:.94,filmClip:100,outcomeOpacity:0,outcomeY:16 },
       { titleX:0,titleY:-g.height*.075,titleScale:g.mobile?.66:.54,titleOpacity:.78,portraitX:-g.portraitWidth*(g.mobile?.12:.25),portraitY:0,portraitScale:g.mobile?1.05:1.1,portraitOpacity:1,premiseOpacity:.5,premiseY:-10,filmScale:.94,filmClip:100,outcomeOpacity:0,outcomeY:16 },
-      { titleX:0,titleY:-g.height*.075,titleScale:.35,titleOpacity:.8,portraitX:alignX,portraitY:alignY,portraitScale:scale,portraitOpacity:.9,premiseOpacity:0,premiseY:-24,filmScale:1,filmClip:38,outcomeOpacity:0,outcomeY:16 },
-      { titleX:0,titleY:-g.height*.075,titleScale:.35,titleOpacity:1,portraitX:alignX,portraitY:alignY,portraitScale:scale,portraitOpacity:0,premiseOpacity:0,premiseY:-24,filmScale:1,filmClip:0,outcomeOpacity:1,outcomeY:0 }
+      { titleX:0,titleY:-g.height*.075,titleScale:g.mobile?.6:.35,titleOpacity:.8,portraitX:alignX,portraitY:alignY,portraitScale:scale,portraitOpacity:.9,premiseOpacity:0,premiseY:-24,filmScale:1,filmClip:38,outcomeOpacity:0,outcomeY:16 },
+      { titleX:0,titleY:-g.height*.075,titleScale:g.mobile?.6:.35,titleOpacity:1,portraitX:alignX,portraitY:alignY,portraitScale:scale,portraitOpacity:0,premiseOpacity:0,premiseY:-24,filmScale:1,filmClip:0,outcomeOpacity:1,outcomeY:0 }
     ];
   }
   function sample(progress, geometry) {
