@@ -222,7 +222,7 @@ button:active:not(:disabled) { transform: translateY(1px); }
 /* 4.1 — an editorial page changes; the verified quotation remains the focus. */
 .discovery-card { position:relative; isolation:isolate; overflow:clip; padding:1.5rem 1.6rem 1.4rem 2rem; border-left:1px solid var(--orange-line); scroll-margin-top:1.25rem; }
 .discovery-leaf { position:absolute; inset:0; z-index:-1; background:linear-gradient(105deg,var(--card-wash),transparent 90%); border-block:1px solid var(--line); pointer-events:none; }
-.discovery-turn { position:absolute; inset:-1px; z-index:2; opacity:0; transform:translateX(-110%); pointer-events:none; background:linear-gradient(90deg,var(--line-strong),var(--bg-raised) 5%,var(--bg-raised) 88%,var(--card-wash)); border-left:1px solid var(--line-strong); box-shadow:-12px 0 24px #00000012; }
+.discovery-turn { position:absolute; inset:-1px; z-index:2; opacity:0; transform:none; pointer-events:none; background:linear-gradient(90deg,var(--line-strong),var(--bg-raised) 5%,var(--bg-raised) 88%,var(--card-wash)); border-left:1px solid var(--line-strong); box-shadow:-12px 0 24px #00000012; }
 .discovery-rule { width:4.5rem; }
 .discovery-card .reveal-mask { padding-block:.08em; }
 .discovery-text { hanging-punctuation:first last; }
