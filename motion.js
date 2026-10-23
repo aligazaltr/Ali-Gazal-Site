@@ -87,12 +87,12 @@
         { duration: compact?.matches ? 520 : 660, delay: fromRest ? i * 25 : 0, fill: 'backwards' });
     });
   }
-  function revealFolio(scene) {
-    const folio = scene.querySelector('.local-folio');
-    if (!folio) return;
-    const state = folio.dataset.folioState;
-    if (state !== '0') folio.dataset.folioState = String(Number(state) - 1);
-    morph(folio, () => { folio.dataset.folioState = state; }, state === '0');
+  function revealSignature(scene) {
+    const signature = scene.querySelector('.local-signature');
+    if (!signature) return;
+    const state = signature.dataset.signatureState;
+    if (state !== '0') signature.dataset.signatureState = String(Number(state) - 1);
+    morph(signature, () => { signature.dataset.signatureState = state; }, state === '0');
   }
   function refresh() {
     if (!observer) return;
@@ -121,7 +121,7 @@
             enter(scene.querySelector('.scene-label'), 80);
             enter(scene.querySelector('h3'), 130);
             enter(scene.querySelector('.scene-description'), 190);
-            revealFolio(scene);
+            revealSignature(scene);
           });
         }, { threshold: .15 });
         scenes.forEach(scene => watcher.observe(scene));
@@ -139,8 +139,8 @@
         selected = next;
         morph(stage, () => {
           story.dataset.scene = String(next);
-          const folio = stage?.querySelector?.('.idea-folio');
-          if (folio) folio.dataset.folioState = String(next);
+          const signature = stage?.querySelector?.('.ag-signature');
+          if (signature) signature.dataset.signatureState = String(next);
         });
         scenes.forEach(scene => scene.classList.toggle('is-active', scene === current));
         story.querySelector('[data-story-number]').textContent = String(next + 1).padStart(2, '0');
@@ -158,6 +158,46 @@
       storyCleanups.push(() => { watcher.disconnect(); visibility.disconnect(); });
     });
   }
+  // Only visible connection tracks receive a frame, and only after scroll/resize.
+  // Normal document scrolling remains in charge; no timers or perpetual frame loop.
+  function setupConnections() {
+    const tracks = [...document.querySelectorAll('[data-scroll-track]')];
+    if (!tracks.length || !('IntersectionObserver' in window)) return;
+    const visible = new Set();
+    let frame = 0;
+    const clamp = value => Math.max(0, Math.min(1, value));
+    const paint = () => {
+      frame = 0;
+      if (!enabled()) return;
+      visible.forEach(track => {
+        const box = track.getBoundingClientRect();
+        if (track.dataset.scrollTrack === 'opening') {
+          const word = track.querySelector('.word-window:last-child');
+          const progress = clamp(-box.top / Math.max(1, box.height));
+          if (word) word.style.transform = `translateX(${progress * 12}px) scale(${1 - progress * .08})`;
+        } else {
+          const progress = clamp((window.innerHeight - box.top) / (window.innerHeight * .65));
+          const trace = track.querySelector('.journey-trace');
+          if (trace) trace.style.transform = `scaleY(${.2 + .8 * progress})`;
+        }
+      });
+    };
+    const schedule = () => { if (enabled() && visible.size && !frame) frame = window.requestAnimationFrame(paint); };
+    const reset = () => {
+      if (frame) window.cancelAnimationFrame(frame);
+      frame = 0;
+      tracks.forEach(track => track.querySelectorAll('.word-window, .journey-trace').forEach(part => part.style.removeProperty('transform')));
+    };
+    const watcher = new IntersectionObserver(entries => {
+      entries.forEach(entry => entry.isIntersecting ? visible.add(entry.target) : visible.delete(entry.target));
+      schedule();
+    });
+    tracks.forEach(track => watcher.observe(track));
+    window.addEventListener('scroll', schedule, { passive: true });
+    window.addEventListener('resize', schedule, { passive: true });
+    preference?.addEventListener?.('change', event => event.matches ? reset() : schedule());
+    document.addEventListener('visibilitychange', () => document.hidden ? reset() : schedule());
+  }
   function startObserver() {
     if (!('IntersectionObserver' in window) || !enabled()) return;
     observer ||= new IntersectionObserver(entries => {
@@ -173,6 +213,7 @@
     if (initialized) return;
     initialized = true;
     setupStories();
+    setupConnections();
     startObserver();
     const opening = (element, delay, image = false) => {
       if (onScreen(element)) { seen.add(element); observer?.unobserve(element); enter(element, delay, image); }

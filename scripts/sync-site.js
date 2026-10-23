@@ -3,7 +3,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const siteData = require('../site-data.js');
-const { folio, caseStudy } = require('./render-scenes.js');
+const { signature } = require('./render-scenes.js');
 const root = path.resolve(__dirname, '..');
 
 function escape(value) {
@@ -70,17 +70,17 @@ function renderResearchStages(project) {
 function renderStory(story) {
   if (!story || story.scenes.length < 3) throw new Error('Hikâye için en az üç gerçek sahne gerekli');
   const first = story.scenes[0];
-  return `<div class="section-heading"><p class="eyebrow">${escape(story.label)}</p><h2 id="hikaye-baslik">${escape(story.title)}</h2></div>
+  return `<div class="section-heading story-arrival" data-scroll-track="arrival"><span class="journey-trace" aria-hidden="true"></span><p class="eyebrow">${escape(story.label)}</p><h2 id="hikaye-baslik">${escape(story.title)}</h2></div>
   <div class="story-layout" data-story data-scene="0">
     <div class="story-visual" aria-hidden="true">
       <p class="story-counter"><span data-story-number>01</span> / ${String(story.scenes.length).padStart(2, '0')} <span>MERAKTAN GERÇEK HAYATA</span></p>
-      ${folio()}
+      ${signature()}
       <p class="story-word" data-story-label>${escape(first.label)}</p>
       <p class="story-caption" data-story-caption>${escape(first.title)}</p>
       <p class="story-description" data-story-description>${escape(first.description)}</p>
       <div class="story-ticks">${story.scenes.map(() => '<span></span>').join('')}</div>
     </div>
-    <div class="story-scenes">${story.scenes.map((scene, i) => `<article class="story-scene" data-story-scene id="hikaye-${escape(scene.id)}"><div class="story-scene-heading"><p class="eyebrow"><span class="scene-number">${String(i + 1).padStart(2, '0')}</span> <span class="scene-label">${escape(scene.label)}</span></p>${folio(i, true)}</div><div class="reveal-mask"><h3>${escape(scene.title)}</h3></div><p class="scene-description">${escape(scene.description)}</p><p class="story-note">${escape(scene.note)}</p></article>`).join('')}</div>
+    <div class="story-scenes">${story.scenes.map((scene, i) => `<article class="story-scene" data-story-scene id="hikaye-${escape(scene.id)}"><div class="story-scene-heading"><p class="eyebrow"><span class="scene-number">${String(i + 1).padStart(2, '0')}</span> <span class="scene-label">${escape(scene.label)}</span></p>${signature(i, true)}</div><div class="reveal-mask"><h3>${escape(scene.title)}</h3></div><p class="scene-description">${escape(scene.description)}</p><p class="story-note">${escape(scene.note)}</p></article>`).join('')}</div>
   </div>`;
 }
 
@@ -94,8 +94,6 @@ function renderHtml(html, data = siteData) {
   const project = data.projects[id];
   if (!project) throw new Error(`Bilinmeyen proje: ${id}`);
   validateResearch(project);
-  html = html.replace(/(<!-- experience:case:start -->)[\s\S]*?(<!-- experience:case:end -->)/,
-    (_, start, end) => `${start}${caseStudy(project)}${end}`);
   if (project.video.published && (!validVideo(project.video)
     || !/^\d{4}-\d{2}-\d{2}$/.test(project.publishedAt || '')
     || !Number.isInteger(project.video.durationSeconds) || project.video.durationSeconds <= 0)) {

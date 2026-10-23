@@ -152,16 +152,11 @@ test('off-screen and reduced-motion morphs commit meaning without scheduling vis
     assert.equal(state, 2); assert.equal(f.calls.length, 0);
   }
 });
-test('case scene renders only public records and central facts, including limitations', () => {
-  const data = structuredClone(require('../site-data.js').projects.machiavelli);
-  const { caseStudy } = require('./render-scenes.js');
-  data.evidence.entries.push({ public: false, title: 'PRIVATE', dayLabel: 'PRIVATE' });
-  data.dates.label = 'CENTRAL DATES'; data.result.summary = 'CENTRAL RESULT';
-  const html = caseStudy(data);
-  assert.ok(html.includes('CENTRAL DATES')); assert.ok(html.includes('CENTRAL RESULT'));
-  assert.ok(html.includes('4 anonim kayıt'));
-  assert.ok(!html.includes('PRIVATE'));
-  assert.ok(html.includes(data.result.limitations[3]));
-  data.result.published = false;
-  assert.equal(caseStudy(data), '');
+test('signature replaces paper compositions while research facts remain in the document', () => {
+  const html = fs.readFileSync(require.resolve('../index.html'), 'utf8');
+  const research = fs.readFileSync(require.resolve('../machiavelli.html'), 'utf8');
+  assert.ok(html.includes('ag-signature')); assert.ok(!html.includes('folio-leaf'));
+  assert.ok(!research.includes('case-study')); assert.ok(!research.includes('case-record-rail'));
+  for (const id of ['kurallar', 'kanit-defteri', 'sonuc']) assert.ok(research.includes(`id="${id}"`));
+  assert.ok(research.replace(/\s+/g, ' ').includes(require('../site-data.js').projects.machiavelli.result.summary));
 });
