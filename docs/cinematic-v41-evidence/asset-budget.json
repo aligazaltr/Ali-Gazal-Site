@@ -1,0 +1,62 @@
+{
+  "baseline": "6a4e46a",
+  "assets": [
+    {
+      "file": "motion.js",
+      "before": 11554,
+      "after": 15053,
+      "gzipBefore": 3460,
+      "gzipAfter": 4315
+    },
+    {
+      "file": "motion.css",
+      "before": 7192,
+      "after": 7192,
+      "gzipBefore": 2135,
+      "gzipAfter": 2135
+    },
+    {
+      "file": "signature.css",
+      "before": 8776,
+      "after": 5999,
+      "gzipBefore": 2258,
+      "gzipAfter": 1839
+    },
+    {
+      "file": "archive.js",
+      "before": 12544,
+      "after": 13054,
+      "gzipBefore": 4034,
+      "gzipAfter": 4174
+    },
+    {
+      "file": "archive.css",
+      "before": 20264,
+      "after": 20703,
+      "gzipBefore": 4320,
+      "gzipAfter": 4458
+    },
+    {
+      "file": "index.html",
+      "before": 15160,
+      "after": 13286,
+      "gzipBefore": 3747,
+      "gzipAfter": 3661
+    },
+    {
+      "file": "machiavelli.html",
+      "before": 30455,
+      "after": 24027,
+      "gzipBefore": 7601,
+      "gzipAfter": 6602
+    }
+  ],
+  "protectedFilesUnchanged": {
+    "site-data.js": true,
+    "content/archive.json": true,
+    "archive-data.js": true,
+    "machiavelli-prens-7-gun-kapak.jpg": true,
+    "share-context.js": true,
+    "theme.js": true
+  }
+}
