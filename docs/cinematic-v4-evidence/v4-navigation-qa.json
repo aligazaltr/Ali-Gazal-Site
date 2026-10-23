@@ -1,0 +1,25 @@
+{
+  "checks": [
+    "share permalink opens correct details",
+    "same preview origin retained on home link",
+    "back returns to correct thought",
+    "forward returns home",
+    "theme remains dark after reload",
+    "home to projects",
+    "projects to Payot: four original stages",
+    "home to Machiavelli",
+    "contents link reaches #sonuc",
+    "about headline preserved",
+    "keyboard Tab reaches copy-text"
+  ],
+  "readingProgressAtResult": "--reading-progress: 0.9076607947562474;",
+  "applicationErrors": [
+    {
+      "level": "error",
+      "message": "InvalidStateError: Transition was aborted because of invalid state. ViewTransition opt-in disabled",
+      "timestamp": "2026-10-22T22:22:59.599Z",
+      "url": "https://feature-cinematic-signature-experience-v4-ali-gazal-site.aliicerikmedya.workers.dev/"
+    }
+  ],
+  "scope": "Real Chrome interaction; share and clipboard payloads intercepted only in separate QA iframe; no physical Android or native share-sheet verification"
+}

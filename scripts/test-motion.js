@@ -131,3 +131,44 @@ test('off-screen elements never start an animation', () => {
   const f = fixture(); f.element.getBoundingClientRect = () => ({ top: 1100, bottom: 1500, left: 0, right: 300 });
   f.api.enter(f.element); assert.equal(f.calls.length, 0);
 });
+
+test('layer morph uses the current visual position, cancels older travel and reaches the new CSS state', () => {
+  const f = fixture();
+  let state = 'old';
+  const part = Object.assign(new f.Element(), { hidden: false, getClientRects: () => [{}], contains: () => false });
+  const layer = { contains: node => node === part, getClientRects: () => [{}], querySelectorAll: () => [part] };
+  f.window.getComputedStyle = () => ({ transform: state === 'old' ? 'matrix(1,0,0,1,30,0)' : 'matrix(1,0,0,1,90,0)', opacity: '1' });
+  f.api.animate(part, [{ transform: 'none' }, { transform: 'scale(2)' }]);
+  f.api.morph(layer, () => { state = 'new'; });
+  assert.equal(f.calls[0].animation.cancelled, true);
+  assert.equal(f.calls[1].frames[0].transform, 'matrix(1,0,0,1,30,0)');
+  assert.equal(f.calls[1].frames[1].transform, 'matrix(1,0,0,1,90,0)');
+});
+test('off-screen and reduced-motion morphs commit meaning without scheduling visual work', () => {
+  for (const reduced of [true, false]) {
+    const f = fixture(reduced); let state = 0;
+    const layer = { getClientRects: () => [], contains: () => false, querySelectorAll: () => [f.element] };
+    f.api.morph(layer, () => { state = 2; });
+    assert.equal(state, 2); assert.equal(f.calls.length, 0);
+  }
+});
+test('signature replaces paper compositions while research facts remain in the document', () => {
+  const html = fs.readFileSync(require.resolve('../index.html'), 'utf8');
+  const research = fs.readFileSync(require.resolve('../machiavelli.html'), 'utf8');
+  assert.ok(html.includes('ag-signature')); assert.ok(!html.includes('folio-leaf'));
+  assert.ok(!research.includes('case-study')); assert.ok(!research.includes('case-record-rail'));
+  for (const id of ['kurallar', 'kanit-defteri', 'sonuc']) assert.ok(research.includes(`id="${id}"`));
+  assert.ok(research.replace(/\s+/g, ' ').includes(require('../site-data.js').projects.machiavelli.result.summary));
+});
+test('text fade commits only the latest selection and clears when interrupted', async () => {
+  const f = fixture(); let content = 'old';
+  f.api.swap(f.element, () => { content = 'stale'; }, null, { text: true });
+  assert.equal(f.calls[0].options.duration, 180);
+  f.api.swap(f.element, () => { content = 'latest'; }, null, { text: true });
+  assert.equal(f.calls[0].animation.cancelled, true);
+  f.calls[1].animation.finish(); await flush();
+  assert.equal(content, 'latest');
+  const reduced = fixture(true); let immediate = false;
+  reduced.api.swap(reduced.element, () => { immediate = true; }, null, { text: true });
+  assert.equal(immediate, true); assert.equal(reduced.calls.length, 0);
+});

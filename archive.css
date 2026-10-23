@@ -218,3 +218,19 @@ button:active:not(:disabled) { transform: translateY(1px); }
   .archive-results { gap: 1.5rem; }
   .thought-text { font-size: 1.6rem; }
 }
+
+/* 4.2 — quiet text changes; no moving surface or page overlay. */
+.discovery-card { position:relative; isolation:isolate; overflow:clip; padding:1.5rem 1.6rem 1.4rem 2rem; border-left:1px solid var(--orange-line); scroll-margin-top:1.25rem; }
+.discovery-rule { width:4.5rem; }
+.discovery-card .reveal-mask { padding-block:.08em; }
+.discovery-text { hanging-punctuation:first last; }
+.discovery-card[data-passage-length="short"] .discovery-text { font-size:clamp(2rem,3.5vw,3.1rem); line-height:1.22; max-width:28ch; }
+.discovery-card[data-passage-length="long"] .discovery-text { font-size:clamp(1.4rem,2.3vw,2rem); line-height:1.4; }
+.discovery-card .thought-actions { border-top:1px solid var(--line); padding-top:.7rem; }
+@media (max-width:56rem) { .discovery-card { padding:1.2rem 1.2rem 1rem; } }
+@media (max-width:30rem) {
+  .discovery-stage { padding-inline:1rem; }
+  .discovery-card { padding-inline:.8rem; }
+  .discovery-text { font-size:1.55rem; }
+  .discovery-card[data-passage-length="short"] .discovery-text { font-size:clamp(1.7rem,7vw,2rem); }
+}

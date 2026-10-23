@@ -1,0 +1,43 @@
+[
+  {
+    "file": "motion.js",
+    "beforeBytes": 9618,
+    "afterBytes": 11554,
+    "beforeGzipBytes": 2930,
+    "afterGzipBytes": 3460
+  },
+  {
+    "file": "archive.js",
+    "beforeBytes": 11778,
+    "afterBytes": 12544,
+    "beforeGzipBytes": 3854,
+    "afterGzipBytes": 4034
+  },
+  {
+    "file": "motion.css",
+    "beforeBytes": 9652,
+    "afterBytes": 7192,
+    "beforeGzipBytes": 2607,
+    "afterGzipBytes": 2135
+  },
+  {
+    "file": "archive.css",
+    "beforeBytes": 19139,
+    "afterBytes": 20264,
+    "beforeGzipBytes": 4076,
+    "afterGzipBytes": 4320
+  },
+  {
+    "file": "signature.css",
+    "beforeBytes": 0,
+    "afterBytes": 8776,
+    "beforeGzipBytes": 0,
+    "afterGzipBytes": 2258
+  },
+  {
+    "file": "machiavelli-prens-7-gun-kapak.jpg",
+    "beforeBytes": 197054,
+    "afterBytes": 197054,
+    "identical": true
+  }
+]

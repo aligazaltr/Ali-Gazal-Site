@@ -27,7 +27,7 @@
     active.forEach((_, child) => { if (element.contains(child)) cancel(child); });
   }
   function animate(element, frames, options = {}) {
-    if (!enabled() || !onScreen(element)) return null;
+    if (!element || !enabled() || !onScreen(element)) return null;
     cancel(element);
     if (active.size >= 12) cancel(active.keys().next().value);
     try {
@@ -41,7 +41,7 @@
   }
   function enter(element, delay = 0, image = false) {
     const title = element?.dataset?.reveal === 'title';
-    const line = element?.parentElement?.classList.contains('reveal-mask');
+    const line = element?.parentElement?.classList.contains('reveal-mask') || element?.parentElement?.classList.contains('word-window');
     const frames = image ? [
       { opacity: .3, transform: 'scale(1.035)', clipPath: 'inset(0 0 16% 0)' },
       { opacity: 1, transform: 'scale(1)', clipPath: 'inset(0 0 0 0)' }
@@ -52,14 +52,14 @@
     return animate(element, frames, { delay, duration: compact?.matches ? 560 : 720, fill: 'backwards' });
   }
   // Commit only the latest selection. Child reveals can be composed independently of the exit.
-  function swap(element, update, reveal) {
+  function swap(element, update, reveal, options = {}) {
     cancelTree(element);
     if (!enabled() || !onScreen(element)) { update(); return; }
     let updated = false;
     const commit = () => { if (!updated) { updated = true; update(); } };
-    const outgoing = animate(element, [
-      { opacity: 1, transform: 'scale(1)' }, { opacity: .12, transform: 'scale(.985)' }
-    ], { duration: 150 });
+    const outgoing = animate(element, options.text ? [
+      { opacity: 1 }, { opacity: 0 }
+    ] : [{ opacity: 1, transform: 'scale(1)' }, { opacity: .12, transform: 'scale(.985)' }], { duration: options.text ? 180 : 150 });
     if (!outgoing) { commit(); return; }
     updates.set(element, commit);
     outgoing.finished.then(() => {
@@ -68,6 +68,31 @@
       if (reveal) reveal();
       else animate(element, [{ opacity: .15, transform: 'translateY(8px)' }, { opacity: 1, transform: 'translateY(0)' }], { duration: 360 });
     }).catch(() => {});
+  }
+  // Read transforms before/after a semantic state change. The same layers travel;
+  // no scroll loop, layout interpolation, or animation on an invisible stage.
+  function morph(container, update, fromRest = false) {
+    const parts = [...(container?.querySelectorAll?.('[data-morph]') || [])];
+    const canMove = enabled() && onScreen(container) && typeof window.getComputedStyle === 'function';
+    const before = canMove ? parts.map(part => {
+      const style = window.getComputedStyle(part);
+      return { transform: fromRest ? 'translateY(24px) scale(.9)' : style.transform, opacity: fromRest ? 0 : style.opacity };
+    }) : [];
+    if (container) cancelTree(container);
+    update();
+    if (!canMove) return;
+    parts.forEach((part, i) => {
+      const style = window.getComputedStyle(part);
+      animate(part, [before[i], { transform: style.transform, opacity: style.opacity }],
+        { duration: compact?.matches ? 520 : 660, delay: fromRest ? i * 25 : 0, fill: 'backwards' });
+    });
+  }
+  function revealSignature(scene) {
+    const signature = scene.querySelector('.local-signature');
+    if (!signature) return;
+    const state = signature.dataset.signatureState;
+    if (state !== '0') signature.dataset.signatureState = String(Number(state) - 1);
+    morph(signature, () => { signature.dataset.signatureState = state; }, state === '0');
   }
   function refresh() {
     if (!observer) return;
@@ -96,9 +121,7 @@
             enter(scene.querySelector('.scene-label'), 80);
             enter(scene.querySelector('h3'), 130);
             enter(scene.querySelector('.scene-description'), 190);
-            animate(scene.querySelector('.scene-glyph'), [
-              { opacity: .2, transform: 'scaleX(.25)' }, { opacity: 1, transform: 'scaleX(1)' }
-            ], { duration: 600, delay: 100, fill: 'backwards' });
+            revealSignature(scene);
           });
         }, { threshold: .15 });
         scenes.forEach(scene => watcher.observe(scene));
@@ -114,18 +137,77 @@
         const next = scenes.indexOf(current);
         if (next === selected) return;
         selected = next;
-        story.dataset.scene = String(next);
+        morph(stage, () => {
+          story.dataset.scene = String(next);
+          const signature = stage?.querySelector?.('.ag-signature');
+          if (signature) signature.dataset.signatureState = String(next);
+        });
         scenes.forEach(scene => scene.classList.toggle('is-active', scene === current));
         story.querySelector('[data-story-number]').textContent = String(next + 1).padStart(2, '0');
-        story.querySelector('[data-story-label]').textContent = current.querySelector('.scene-label').textContent;
+        const label = story.querySelector('[data-story-label]');
+        const outgoing = story.querySelector('.story-word-exit');
+        if (outgoing) outgoing.textContent = label.textContent;
+        label.textContent = current.querySelector('.scene-label').textContent;
         story.querySelector('[data-story-caption]').textContent = current.querySelector('h3').textContent;
         story.querySelector('[data-story-description]').textContent = current.querySelector('.scene-description').textContent;
-        if (onScreen(stage)) animate(story.querySelector('.story-word'), [{ opacity: .2, transform: 'translateY(14px)' }, { opacity: 1, transform: 'translateY(0)' }], { duration: 420 });
+        if (onScreen(stage)) {
+          // A single editorial drum: the previous word leaves the same mask the next enters.
+          animate(outgoing, [{ transform: 'translateY(0) scale(1)', opacity: 1 }, { transform: 'translateY(-115%) scale(.94)', opacity: 0 }], { duration: 620 });
+          animate(label, [{ transform: 'translateY(115%) scale(1.08)', opacity: .65 }, { transform: 'translateY(0) scale(1)', opacity: 1 }], { duration: 660 });
+        }
         if (!seen.has(current)) { seen.add(current); enter(current.querySelector('h3')); }
       }, { rootMargin: '-25% 0px -35% 0px', threshold: [0, .2, .6] });
       scenes.forEach(scene => watcher.observe(scene));
-      storyCleanups.push(() => watcher.disconnect());
+      const visibility = new IntersectionObserver(entries => {
+        entries.forEach(entry => { if (!entry.isIntersecting) cancelTree(stage); });
+      }, { threshold: 0 });
+      if (stage) visibility.observe(stage);
+      storyCleanups.push(() => { watcher.disconnect(); visibility.disconnect(); });
     });
+  }
+  // Only visible connection tracks receive a frame, and only after scroll/resize.
+  // Normal document scrolling remains in charge; no timers or perpetual frame loop.
+  function setupConnections() {
+    const tracks = [...document.querySelectorAll('[data-scroll-track]')];
+    if (!tracks.length || !('IntersectionObserver' in window)) return;
+    const visible = new Set();
+    let frame = 0;
+    const clamp = value => Math.max(0, Math.min(1, value));
+    const paint = () => {
+      frame = 0;
+      if (!enabled()) return;
+      visible.forEach(track => {
+        const box = track.getBoundingClientRect();
+        if (track.dataset.scrollTrack === 'opening') {
+          const word = track.querySelector('.word-window:last-child');
+          const progress = clamp(-box.top / Math.max(1, box.height));
+          if (word) word.style.transform = `translateX(${progress * 12}px) scale(${1 - progress * .08})`;
+        } else if (track.dataset.scrollTrack === 'cover') {
+          const progress = clamp(-box.top / Math.max(1, box.height));
+          const image = track.querySelector('.cover-travel');
+          if (image) image.style.transform = `translateY(${progress * -12}px) scale(${1 - progress * .025})`;
+        } else {
+          const progress = clamp((window.innerHeight - box.top) / (window.innerHeight * .65));
+          const trace = track.querySelector('.journey-trace');
+          if (trace) trace.style.transform = `scaleY(${.2 + .8 * progress})`;
+        }
+      });
+    };
+    const schedule = () => { if (enabled() && visible.size && !frame) frame = window.requestAnimationFrame(paint); };
+    const reset = () => {
+      if (frame) window.cancelAnimationFrame(frame);
+      frame = 0;
+      tracks.forEach(track => track.querySelectorAll('.word-window, .journey-trace, .cover-travel').forEach(part => part.style.removeProperty('transform')));
+    };
+    const watcher = new IntersectionObserver(entries => {
+      entries.forEach(entry => entry.isIntersecting ? visible.add(entry.target) : visible.delete(entry.target));
+      schedule();
+    });
+    tracks.forEach(track => watcher.observe(track));
+    window.addEventListener('scroll', schedule, { passive: true });
+    window.addEventListener('resize', schedule, { passive: true });
+    preference?.addEventListener?.('change', event => event.matches ? reset() : schedule());
+    document.addEventListener('visibilitychange', () => document.hidden ? reset() : schedule());
   }
   function startObserver() {
     if (!('IntersectionObserver' in window) || !enabled()) return;
@@ -142,14 +224,24 @@
     if (initialized) return;
     initialized = true;
     setupStories();
+    setupConnections();
     startObserver();
     const opening = (element, delay, image = false) => {
       if (onScreen(element)) { seen.add(element); observer?.unobserve(element); enter(element, delay, image); }
       else observer?.observe(element);
     };
-    document.querySelectorAll('.cinema-word').forEach((element, i) => opening(element, i * 130));
-    document.querySelectorAll('.cinema-hero .hero-copy > :not(.cinema-words):not(.eyebrow), .cinema-hero .eyebrow, .hero-dossier, .project-hero-copy > *, .project-feature-cover img, .research-opening .project-hero > *, .archive-intro > div > *, .about-opening [data-reveal], .projects-page .page-intro > *')
+    document.querySelectorAll('.cinema-word').forEach((element, i) => {
+      if (!onScreen(element)) { observer?.observe(element); return; }
+      seen.add(element);
+      animate(element, [
+        { transform: 'translateY(108%) skewY(4deg) scale(.97)', opacity: .55 },
+        { transform: 'translateY(0) skewY(0deg) scale(1)', opacity: 1 }
+      ], { duration: 520, delay: i * 105, fill: 'backwards' });
+    });
+    document.querySelectorAll('.cinema-hero .hero-copy > :not(.cinema-words):not(.eyebrow), .cinema-hero .eyebrow, .hero-dossier, .project-opening:not(.machiavelli-opening) .project-hero-copy > *, .project-opening:not(.machiavelli-opening) .project-feature-cover img, .research-opening .project-hero > *, .archive-intro > div > *, .about-opening [data-reveal], .projects-page .page-intro > *')
       .forEach((element, i) => opening(element, Math.min(i * 75, 300), element.tagName === 'IMG'));
+    document.querySelectorAll('.machiavelli-opening .opening-question, .machiavelli-opening .lead')
+      .forEach((element, i) => opening(element, i * 95, element.tagName === 'IMG'));
     // Native details controls semantics and focus. CSS enhances expansion where supported.
     document.querySelectorAll('.thought-card details').forEach(details => details.addEventListener('toggle', () => {
       if (details.open) animate(details.querySelector('.thought-details'), [{ opacity: .3 }, { opacity: 1 }], { duration: 300 });
@@ -166,5 +258,5 @@
   document.addEventListener('focusin', event => {
     active.forEach((_, element) => { if (element.contains(event.target)) cancel(element); });
   });
-  window.AG_MOTION = Object.freeze({ init, enter, animate, cancel, cancelTree, swap, refresh, enabled });
+  window.AG_MOTION = Object.freeze({ init, enter, animate, cancel, cancelTree, swap, refresh, enabled, morph });
 })();

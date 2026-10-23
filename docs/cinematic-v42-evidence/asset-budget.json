@@ -1,0 +1,56 @@
+[
+  {
+    "file": "machiavelli-prens-7-gun-kapak.jpg",
+    "bytes": 197054,
+    "gzipBytes": 197041,
+    "sha256": "4a0bfa2e1cdc2e2c2205f96f571ee12368f0afa71d99873b0061f99c03b3f8f7"
+  },
+  {
+    "file": "machiavelli-portrait-640.webp",
+    "bytes": 78846,
+    "gzipBytes": 78829,
+    "sha256": "2d3a14ca3eb9021ca42baef77ff0b8a689b38f6d273ce6f0c2051cfb4783a4a6"
+  },
+  {
+    "file": "machiavelli-portrait-960.webp",
+    "bytes": 159010,
+    "gzipBytes": 158694,
+    "sha256": "2c35b99687b86c42406cf6c8e5810ebe7d7193a6c7466496a9a1229c142225c5"
+  },
+  {
+    "file": "machiavelli-frames.js",
+    "bytes": 2656,
+    "gzipBytes": 1059,
+    "sha256": "f952b1d4ccab3b85291543c528cde167153323822bd66ff473472ed4c759a74c"
+  },
+  {
+    "file": "machiavelli-scene.js",
+    "bytes": 3354,
+    "gzipBytes": 1325,
+    "sha256": "7618af78d4514a2eda90d8c1ca8ef044df9dc7fb1cd6875a0ece94123885ba2f"
+  },
+  {
+    "file": "machiavelli-scene.css",
+    "bytes": 6424,
+    "gzipBytes": 1936,
+    "sha256": "8cbc2344124977f33498c7fcf9428ac4e839e61c5ee6fc2f507c9eeee68af972"
+  },
+  {
+    "file": "archive.js",
+    "bytes": 12512,
+    "gzipBytes": 4047,
+    "sha256": "da486b06e714d714e6e9d6cf8284aa3256c1b320908cca07a9a48a50229627c4"
+  },
+  {
+    "file": "archive.css",
+    "bytes": 20204,
+    "gzipBytes": 4322,
+    "sha256": "9f9dc9b06a5f3fa3e60b4c0b50480cf88a7b5b0f5f2ff2124807f5c3aac28f53"
+  },
+  {
+    "file": "motion.js",
+    "bytes": 14897,
+    "gzipBytes": 4288,
+    "sha256": "3c06448f988fc926abdc5a5af875cacb7281ee067d0c289a2534e743ce309dd7"
+  }
+]

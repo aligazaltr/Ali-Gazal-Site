@@ -1,0 +1,81 @@
+/* 4.2 — a portrait becomes part of the real experiment cover.
+   Static flow is the default, including no JS, reduced motion and print. */
+.mc-scene { position:relative; margin:0 0 2.5rem; }
+.mc-stage { position:relative; isolation:isolate; overflow:clip; padding:1rem 0 3rem; }
+.mc-atmosphere { position:absolute; inset:0; z-index:-1; pointer-events:none; background:radial-gradient(ellipse at 68% 37%,var(--orange-soft),transparent 58%); }
+.mc-edition { display:flex; justify-content:space-between; gap:1rem; margin:0; font-size:.6rem; font-weight:650; letter-spacing:.16em; color:var(--muted-strong); }
+.mc-edition span { color:var(--orange); }
+.mc-title { position:relative; z-index:4; font-size:clamp(2rem,10.5vw,9.2rem); line-height:.92; letter-spacing:-.075em; margin:2.4rem 0 0; transform-origin:0 0; }
+.mc-title > span { display:block; }
+.mc-title em { display:block; font:italic .6em/1.18 var(--literary); letter-spacing:-.045em; color:var(--orange); }
+.mc-portrait { width:min(72%,26rem); margin:1rem auto 0; transform-origin:50% 30%; }
+.mc-portrait img { display:block; width:100%; height:auto; mask-image:linear-gradient(#000 80%,transparent); }
+.mc-premise { font-size:clamp(1.6rem,3vw,2.8rem); font-weight:650; line-height:1.15; letter-spacing:-.045em; }
+.mc-premise em { font:italic 1.05em var(--literary); color:var(--orange); }
+.mc-film { margin:2rem auto 1rem; width:100%; max-width:58rem; transform-origin:80% 30%; }
+.mc-film img { display:block; width:100%; height:auto; aspect-ratio:16/9; object-fit:contain; border:0; border-radius:0; }
+.mc-film figcaption { margin-top:.5rem; font-size:.62rem; color:var(--muted); }
+.mc-outcome { margin:1.6rem 0 2rem; }
+.mc-outcome p { margin:0 0 .35rem; }
+.mc-outcome .eyebrow { color:var(--muted); font-size:.6rem; }
+.mc-statement { font-size:clamp(1.1rem,2.05vw,1.8rem); font-weight:750; letter-spacing:-.035em; line-height:1.18; }
+.mc-statement em { font-family:var(--literary); font-weight:400; }
+.mc-outcome [data-project-field="statusLabel"] { font-size:.8rem; color:var(--muted-strong); }
+.mc-date { font-size:.67rem; color:var(--muted); }
+.mc-jump { min-height:44px; display:inline-flex; align-items:center; gap:1rem; font-size:.78rem; }
+.mc-measure { display:none; }
+/* Directed composition: these same DOM objects occupy the four storyboard states. */
+.mc-scene.is-directed { --stage-height:clamp(380px,calc(100svh - 24px),860px); }
+.is-directed .mc-stage { height:var(--stage-height); padding:0; }
+.is-directed .mc-edition { position:absolute; inset:1rem 0 auto; z-index:5; opacity:var(--edition-opacity,1); }
+.is-directed .mc-title { position:absolute; inset:12% 0 auto; margin:0; transform:translate3d(var(--title-x,0px),var(--title-y,0px),0) scale(var(--title-scale,1)); opacity:var(--title-opacity,1); }
+.is-directed .mc-portrait { position:absolute; width:min(43%,460px); top:10%; left:52%; margin:0; z-index:3; transform:translate3d(var(--portrait-x,0px),var(--portrait-y,0px),0) scale(var(--portrait-scale,.88)); opacity:var(--portrait-opacity,.38); }
+.is-directed .mc-premise { position:absolute; left:0; bottom:16%; margin:0; z-index:4; opacity:var(--premise-opacity,1); transform:translateY(var(--premise-y,0px)); }
+.is-directed .mc-film { position:absolute; width:min(90%,calc((var(--stage-height) * .85 - 200px) * 1.77778)); left:50%; top:15%; margin:0; z-index:2; transform:translate(-50%,0) scale(var(--film-scale,.94)); clip-path:inset(0 0 0 var(--film-clip,100%)); opacity:var(--film-opacity,1); }
+.is-directed .mc-outcome { position:absolute; left:0; right:0; bottom:3.8rem; margin:0; z-index:4; opacity:var(--outcome-opacity,0); transform:translateY(var(--outcome-y,16px)); }
+.is-directed .mc-jump { position:absolute; left:0; bottom:0; z-index:5; }
+.is-directed .mc-measure { display:block; position:absolute; bottom:.5rem; right:0; width:5rem; height:1px; background:var(--line-strong); }
+.mc-measure span { display:block; height:100%; background:var(--orange); transform:scaleX(var(--progress,0)); transform-origin:left; }
+.mc-scene.is-scrolling .mc-stage { position:sticky; top:12px; }
+.mc-scene.is-scrolling { height:var(--scene-height); }
+.mc-source-note { max-width:65ch; margin:0 0 2rem; color:var(--muted); font-size:.65rem; line-height:1.6; }
+@media (max-width:600px) {
+  .mc-title { font-size:10.3vw; }
+  .mc-edition { font-size:.48rem; letter-spacing:.12em; }
+  .mc-scene.is-directed { --stage-height:clamp(360px,calc(100svh - 24px),720px); }
+  .is-directed .mc-title { top:12%; }
+  .is-directed .mc-portrait { width:82%; max-width:360px; left:16%; top:20%; }
+  .is-directed .mc-premise { bottom:14%; font-size:1.45rem; }
+  .is-directed .mc-film { width:100%; top:24%; }
+  .is-directed .mc-outcome { top:calc(24% + var(--film-height,200px) + 2rem); bottom:auto; }
+  .mc-statement { font-size:1.05rem; max-width:29ch; }
+  .mc-outcome [data-project-field="statusLabel"] { font-size:.68rem; }
+  .mc-outcome .eyebrow, .mc-date { font-size:.57rem; }
+  .mc-film figcaption { font-size:.53rem; }
+  .mc-jump { font-size:.72rem; }
+  .mc-measure { max-width:2rem; }
+}
+@media (min-width:601px) and (max-height:620px) {
+  .mc-title { font-size:8vw; }
+  .is-directed .mc-portrait { width:min(35%,300px); left:60%; }
+  .is-directed .mc-outcome { bottom:3rem; }
+  .mc-statement { font-size:1.15rem; }
+}
+@media (max-width:600px) and (max-height:600px) {
+  .is-directed .mc-film { top:17%; width:min(100%,calc((var(--stage-height) * .83 - 185px) * 1.77778)); }
+  .is-directed .mc-outcome { top:calc(17% + var(--film-height,180px) + 2rem); }
+}
+@media (max-width:600px) and (max-height:600px) { .is-directed .mc-outcome p { margin-bottom:.2rem; } }
+@media (prefers-reduced-motion:reduce), print {
+  .mc-scene.is-directed { height:auto!important; }
+  .mc-scene.is-directed .mc-stage { height:auto; position:relative; top:0; display:flex; flex-direction:column; }
+  .mc-scene.is-directed .mc-stage > :not(.mc-atmosphere) { position:relative; inset:auto; transform:none!important; opacity:1!important; clip-path:none!important; }
+  .mc-scene.is-directed .mc-title { margin-block:2rem 0; }
+  .mc-scene.is-directed .mc-portrait { width:min(72%,26rem); margin:1rem auto; }
+  .mc-scene.is-directed .mc-film { width:100%; margin:1rem auto; }
+  .mc-scene.is-directed .mc-outcome { margin:1rem 0; }
+  .mc-scene.is-directed .mc-measure { display:none; }
+}
+
+.mc-page .project-page { padding-top:1.25rem; }
+.mc-page .breadcrumbs { margin-bottom:1rem; }
