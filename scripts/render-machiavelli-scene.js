@@ -7,7 +7,7 @@ function renderMachiavelliScene(project) {
     <div class="mc-atmosphere" aria-hidden="true"></div>
     <p class="mc-edition">BİR KİTAPTAN <span>GERÇEK HAYATA</span></p>
     <h1 class="mc-title" id="mc-title"><span>MACHIAVELLI</span><em>PRENS</em></h1>
-    <div class="mc-portrait" aria-hidden="true"><img src="machiavelli-portrait-640.webp" srcset="machiavelli-portrait-640.webp 640w, machiavelli-portrait-960.webp 960w" sizes="(max-width: 600px) 80vw, 480px" width="960" height="1140" alt="" fetchpriority="high" decoding="async"></div>
+    <div class="mc-portrait"><img src="machiavelli-portrait-640.webp" srcset="machiavelli-portrait-640.webp 640w, machiavelli-portrait-960.webp 960w" sizes="(max-width: 600px) 80vw, 480px" width="960" height="1140" alt="Video kapağındaki Machiavelli tasvirinden uyarlanmış dijital portre." fetchpriority="high" decoding="async"></div>
     <p class="mc-premise">Üç düşünce.<br>Yedi gün.<br><em>Gerçek hayat.</em></p>
     <figure class="mc-film" data-project="machiavelli" data-project-cover data-cover-priority="high">
       <!-- project-cover:start --><img class="project-cover" src="${escape(cover.src)}" alt="${escape(cover.alt)}" width="${cover.width}" height="${cover.height}" loading="eager" fetchpriority="high" decoding="async"><!-- project-cover:end -->
