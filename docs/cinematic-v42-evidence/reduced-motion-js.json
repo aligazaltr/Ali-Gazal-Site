@@ -1,0 +1,92 @@
+{
+  "preview": "381d80f6",
+  "checks": [
+    {
+      "mode": "JS matchMedia simulation, not OS/CSS emulation",
+      "scene": {
+        "directed": false,
+        "images": [
+          {
+            "loaded": true,
+            "src": "https://381d80f6-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-640.webp"
+          },
+          {
+            "loaded": true,
+            "src": "https://381d80f6-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg"
+          }
+        ],
+        "progress": null,
+        "text": "\n  \n    \n    BİR KİTAPTAN GERÇEK HAYATA\n    MACHIAVELLIPRENS\n    \n    Üç düşünce.Yedi gün.Gerçek hayat.\n    \n      \n      Final video kapağı · Video henüz yayımlanmadı\n    \n    MACHIAVELLI / PRENSÜÇ DÜŞÜNCE. YEDİ GÜN. GERÇEK HAYAT.Deney tamamlandı · video hazırlanıyor21–27 Eylül 2026\n    Araştırma dosyasını incele ↓\n    \n  \n"
+      },
+      "snapshot": {
+        "url": "https://381d80f6-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli",
+        "layout": {
+          "width": 390,
+          "height": 740,
+          "documentWidth": 390,
+          "overflow": [],
+          "small": [],
+          "hiddenMain": false
+        },
+        "stageDisplay": null,
+        "focus": "<body class=\"mc-page\" data-project=\"machiavelli\" data-long-page=\"\">\n  <a class=\"skip-link\" href=\"#icerik\">İçeriğe geç</a>\n  <div class=\"reading-progress\" data-reading-progress=\"\" aria-hidden=\"true\" style=\"--reading-progress: 0;\"><span></span></div>\n\n",
+        "canonical": "https://ali-gazal-site.aliicerikmedya.workers.dev/machiavelli",
+        "animations": [],
+        "active": 0,
+        "shares": [],
+        "errors": [],
+        "performance": {
+          "lcp": {
+            "ms": 190312,
+            "element": "",
+            "size": 60750
+          },
+          "cls": 0.12769342890187485,
+          "maxEventDuration": null,
+          "mode": "lab iframe, no throttling"
+        }
+      }
+    },
+    {
+      "mode": "JS matchMedia simulation, not OS/CSS emulation",
+      "scene": {
+        "directed": false,
+        "images": [
+          {
+            "loaded": true,
+            "src": "https://381d80f6-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-640.webp"
+          },
+          {
+            "loaded": true,
+            "src": "https://381d80f6-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg"
+          }
+        ],
+        "progress": null
+      },
+      "snapshot": {
+        "url": "https://381d80f6-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli",
+        "layout": {
+          "width": 1440,
+          "height": 740,
+          "documentWidth": 1440,
+          "overflow": [],
+          "small": [],
+          "hiddenMain": false
+        },
+        "stageDisplay": null,
+        "focus": "<body class=\"mc-page\" data-project=\"machiavelli\" data-long-page=\"\">\n  <a class=\"skip-link\" href=\"#icerik\">İçeriğe geç</a>\n  <div class=\"reading-progress\" data-reading-progress=\"\" aria-hidden=\"true\" style=\"--reading-progress: 0;\"><span></span></div>\n\n",
+        "canonical": "https://ali-gazal-site.aliicerikmedya.workers.dev/machiavelli",
+        "animations": [],
+        "active": 0,
+        "shares": [],
+        "errors": [],
+        "performance": {
+          "lcp": null,
+          "cls": 0.07724249635022834,
+          "maxEventDuration": null,
+          "mode": "lab iframe, no throttling"
+        }
+      }
+    }
+  ]
+}

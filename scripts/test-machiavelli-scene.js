@@ -63,3 +63,8 @@ test('scene controller schedules one visible frame and stops offscreen or in bac
   f.observe([{isIntersecting:true}]);f.document.hidden=true;f.listeners.visibilitychange();assert.equal(f.queue.size,0);
   f.preference.matches=true;f.listeners.preference();assert.equal(f.classes.has('is-directed'),false);
 });
+test('an unavailable portrait restores the readable cover and research flow',()=>{
+  const f=fixture();f.observe([{isIntersecting:true}]);assert.equal(f.queue.size,1);
+  f.imageListeners.error();assert.equal(f.queue.size,0);assert.equal(f.classes.has('is-directed'),false);
+  assert.equal(f.classes.has('is-scrolling'),false);assert.equal(f.scene.dataset.progress,undefined);
+});

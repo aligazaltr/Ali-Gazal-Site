@@ -1,0 +1,71 @@
+[
+  {
+    "file": "site-data.js",
+    "unchanged": true,
+    "sha256": "1baddc195f4a58bfd7084d0a089badec8d7a2b46c006283afbb42f3de225dddb"
+  },
+  {
+    "file": "content/archive.json",
+    "unchanged": true,
+    "sha256": "c4afcc7eb3b963fe86987c925f92fae90bacb51273d6182f6d84eadf47cfe276"
+  },
+  {
+    "file": "archive-data.js",
+    "unchanged": true,
+    "sha256": "1f55993100b204714e2f6be32b03ae234c617cd3bca0418ae26795fa722695ce"
+  },
+  {
+    "file": "machiavelli-prens-7-gun-kapak.jpg",
+    "unchanged": true,
+    "sha256": "4a0bfa2e1cdc2e2c2205f96f571ee12368f0afa71d99873b0061f99c03b3f8f7"
+  },
+  {
+    "file": "theme.js",
+    "unchanged": true,
+    "sha256": "11dbd81cf950a5c3c106d608467f78638353784fa11ddcb655879e3dff897e1d"
+  },
+  {
+    "file": "share-context.js",
+    "unchanged": true,
+    "sha256": "aeb72b8d92424183f7807f265847dac03402126376368008c55c43805302acbd"
+  },
+  {
+    "file": "signature.css",
+    "unchanged": true,
+    "sha256": "66de2f52d4b6dc17071600a5464ac1042813f1766c5b1a896c8209b688bfa333"
+  },
+  {
+    "file": "editorial.css",
+    "unchanged": true,
+    "sha256": "b2146295ced1b128d21c2965153cd857d8b946a7b89479782f448a1b10cfebb4"
+  },
+  {
+    "file": "styles.css",
+    "unchanged": true,
+    "sha256": "9d2b9bd6afc5fa22556eb527c330125bab469a5f5f77e0a2d0737d57cde3f0db"
+  },
+  {
+    "file": "index.html",
+    "unchanged": true,
+    "sha256": "756e7fb3710c8a40f91f8f997b6c6f49db863f60655a7cb8d05d2b8cbc15bcb1"
+  },
+  {
+    "file": "hakkimda.html",
+    "unchanged": true,
+    "sha256": "475c577c43cd45a2dc06f089478a2ade3f93186e869f8766d1b9eea7e508eecc"
+  },
+  {
+    "file": "rehberler.html",
+    "unchanged": true,
+    "sha256": "e81dcb0768ccbc929c1299cc3de6af335bc21a74f7ce5a80b911cf3ae2a00b36"
+  },
+  {
+    "file": "irade-terbiyesi.html",
+    "unchanged": true,
+    "sha256": "483dbe8fdabd1ab452c9392e2f36fafa9eb3e8775dfd66b99d33892534939be3"
+  },
+  {
+    "file": "machiavelli.html: project-facts through end",
+    "unchanged": true
+  }
+]
