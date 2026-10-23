@@ -27,7 +27,7 @@
     active.forEach((_, child) => { if (element.contains(child)) cancel(child); });
   }
   function animate(element, frames, options = {}) {
-    if (!enabled() || !onScreen(element)) return null;
+    if (!element || !enabled() || !onScreen(element)) return null;
     cancel(element);
     if (active.size >= 12) cancel(active.keys().next().value);
     try {
@@ -52,14 +52,14 @@
     return animate(element, frames, { delay, duration: compact?.matches ? 560 : 720, fill: 'backwards' });
   }
   // Commit only the latest selection. Child reveals can be composed independently of the exit.
-  function swap(element, update, reveal) {
+  function swap(element, update, reveal, options = {}) {
     cancelTree(element);
     if (!enabled() || !onScreen(element)) { update(); return; }
     let updated = false;
     const commit = () => { if (!updated) { updated = true; update(); } };
-    const outgoing = animate(element, [
-      { opacity: 1, transform: 'scale(1)' }, { opacity: .12, transform: 'scale(.985)' }
-    ], { duration: 150 });
+    const outgoing = animate(element, options.page ? [
+      { opacity: 1, transform: 'translateX(0)' }, { opacity: 0, transform: 'translateX(-8px)' }
+    ] : [{ opacity: 1, transform: 'scale(1)' }, { opacity: .12, transform: 'scale(.985)' }], { duration: options.page ? 180 : 150 });
     if (!outgoing) { commit(); return; }
     updates.set(element, commit);
     outgoing.finished.then(() => {
@@ -144,10 +144,17 @@
         });
         scenes.forEach(scene => scene.classList.toggle('is-active', scene === current));
         story.querySelector('[data-story-number]').textContent = String(next + 1).padStart(2, '0');
-        story.querySelector('[data-story-label]').textContent = current.querySelector('.scene-label').textContent;
+        const label = story.querySelector('[data-story-label]');
+        const outgoing = story.querySelector('.story-word-exit');
+        if (outgoing) outgoing.textContent = label.textContent;
+        label.textContent = current.querySelector('.scene-label').textContent;
         story.querySelector('[data-story-caption]').textContent = current.querySelector('h3').textContent;
         story.querySelector('[data-story-description]').textContent = current.querySelector('.scene-description').textContent;
-        if (onScreen(stage)) animate(story.querySelector('.story-word'), [{ opacity: .2, transform: 'translateY(14px)' }, { opacity: 1, transform: 'translateY(0)' }], { duration: 420 });
+        if (onScreen(stage)) {
+          // A single editorial drum: the previous word leaves the same mask the next enters.
+          animate(outgoing, [{ transform: 'translateY(0) scale(1)', opacity: 1 }, { transform: 'translateY(-115%) scale(.94)', opacity: 0 }], { duration: 620 });
+          animate(label, [{ transform: 'translateY(115%) scale(1.08)', opacity: .65 }, { transform: 'translateY(0) scale(1)', opacity: 1 }], { duration: 660 });
+        }
         if (!seen.has(current)) { seen.add(current); enter(current.querySelector('h3')); }
       }, { rootMargin: '-25% 0px -35% 0px', threshold: [0, .2, .6] });
       scenes.forEach(scene => watcher.observe(scene));
@@ -175,6 +182,10 @@
           const word = track.querySelector('.word-window:last-child');
           const progress = clamp(-box.top / Math.max(1, box.height));
           if (word) word.style.transform = `translateX(${progress * 12}px) scale(${1 - progress * .08})`;
+        } else if (track.dataset.scrollTrack === 'cover') {
+          const progress = clamp(-box.top / Math.max(1, box.height));
+          const image = track.querySelector('.cover-travel');
+          if (image) image.style.transform = `translateY(${progress * -12}px) scale(${1 - progress * .025})`;
         } else {
           const progress = clamp((window.innerHeight - box.top) / (window.innerHeight * .65));
           const trace = track.querySelector('.journey-trace');
@@ -186,7 +197,7 @@
     const reset = () => {
       if (frame) window.cancelAnimationFrame(frame);
       frame = 0;
-      tracks.forEach(track => track.querySelectorAll('.word-window, .journey-trace').forEach(part => part.style.removeProperty('transform')));
+      tracks.forEach(track => track.querySelectorAll('.word-window, .journey-trace, .cover-travel').forEach(part => part.style.removeProperty('transform')));
     };
     const watcher = new IntersectionObserver(entries => {
       entries.forEach(entry => entry.isIntersecting ? visible.add(entry.target) : visible.delete(entry.target));
@@ -227,8 +238,10 @@
         { transform: 'translateY(0) skewY(0deg) scale(1)', opacity: 1 }
       ], { duration: 520, delay: i * 105, fill: 'backwards' });
     });
-    document.querySelectorAll('.cinema-hero .hero-copy > :not(.cinema-words):not(.eyebrow), .cinema-hero .eyebrow, .hero-dossier, .project-hero-copy > *, .project-feature-cover img, .research-opening .project-hero > *, .archive-intro > div > *, .about-opening [data-reveal], .projects-page .page-intro > *')
+    document.querySelectorAll('.cinema-hero .hero-copy > :not(.cinema-words):not(.eyebrow), .cinema-hero .eyebrow, .hero-dossier, .project-opening:not(.machiavelli-opening) .project-hero-copy > *, .project-opening:not(.machiavelli-opening) .project-feature-cover img, .research-opening .project-hero > *, .archive-intro > div > *, .about-opening [data-reveal], .projects-page .page-intro > *')
       .forEach((element, i) => opening(element, Math.min(i * 75, 300), element.tagName === 'IMG'));
+    document.querySelectorAll('.machiavelli-title-main, .machiavelli-subtitle, .machiavelli-opening .project-feature-cover img, .machiavelli-opening .opening-question, .machiavelli-opening .lead')
+      .forEach((element, i) => opening(element, i * 95, element.tagName === 'IMG'));
     // Native details controls semantics and focus. CSS enhances expansion where supported.
     document.querySelectorAll('.thought-card details').forEach(details => details.addEventListener('toggle', () => {
       if (details.open) animate(details.querySelector('.thought-details'), [{ opacity: .3 }, { opacity: 1 }], { duration: 300 });

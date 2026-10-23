@@ -75,7 +75,7 @@ function renderStory(story) {
     <div class="story-visual" aria-hidden="true">
       <p class="story-counter"><span data-story-number>01</span> / ${String(story.scenes.length).padStart(2, '0')} <span>MERAKTAN GERÇEK HAYATA</span></p>
       ${signature()}
-      <p class="story-word" data-story-label>${escape(first.label)}</p>
+      <div class="story-word-window"><span class="story-word-exit"></span><p class="story-word" data-story-label>${escape(first.label)}</p></div>
       <p class="story-caption" data-story-caption>${escape(first.title)}</p>
       <p class="story-description" data-story-description>${escape(first.description)}</p>
       <div class="story-ticks">${story.scenes.map(() => '<span></span>').join('')}</div>

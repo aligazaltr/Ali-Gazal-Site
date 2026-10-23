@@ -219,17 +219,20 @@ button:active:not(:disabled) { transform: translateY(1px); }
   .thought-text { font-size: 1.6rem; }
 }
 
-/* 4.0 — a fresh sheet of the archive opens; source and credit stay on the sheet. */
-.discovery-card { position: relative; isolation: isolate; padding: 1.5rem 1.6rem 1.4rem 2rem; border-left: 1px solid var(--orange-line); scroll-margin-top: 1.25rem; }
-.discovery-leaf { position: absolute; inset: 0; z-index: -1; background: linear-gradient(105deg, var(--card-wash), transparent 90%); border-block: 1px solid var(--line); transform-origin: left center; pointer-events: none; }
-.discovery-leaf::after { content: ''; position: absolute; inset: .4rem -.4rem -.4rem .4rem; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-.discovery-rule { width: 4.5rem; }
-.discovery-card .reveal-mask { padding-block: .08em; }
-.discovery-text { hanging-punctuation: first last; }
-.discovery-card .thought-actions { border-top: 1px solid var(--line); padding-top: .7rem; }
-@media (max-width: 56rem) { .discovery-card { padding: 1.2rem 1.2rem 1rem; } }
-@media (max-width: 26rem) {
-  .discovery-stage { padding-inline: 1rem; }
-  .discovery-card { padding-inline: .8rem; }
-  .discovery-text { font-size: 1.55rem; }
+/* 4.1 — an editorial page changes; the verified quotation remains the focus. */
+.discovery-card { position:relative; isolation:isolate; overflow:clip; padding:1.5rem 1.6rem 1.4rem 2rem; border-left:1px solid var(--orange-line); scroll-margin-top:1.25rem; }
+.discovery-leaf { position:absolute; inset:0; z-index:-1; background:linear-gradient(105deg,var(--card-wash),transparent 90%); border-block:1px solid var(--line); pointer-events:none; }
+.discovery-turn { position:absolute; inset:-1px; z-index:2; opacity:0; transform:translateX(-110%); pointer-events:none; background:linear-gradient(90deg,var(--line-strong),var(--bg-raised) 5%,var(--bg-raised) 88%,var(--card-wash)); border-left:1px solid var(--line-strong); box-shadow:-12px 0 24px #00000012; }
+.discovery-rule { width:4.5rem; }
+.discovery-card .reveal-mask { padding-block:.08em; }
+.discovery-text { hanging-punctuation:first last; }
+.discovery-card[data-passage-length="short"] .discovery-text { font-size:clamp(2rem,3.5vw,3.1rem); line-height:1.22; max-width:28ch; }
+.discovery-card[data-passage-length="long"] .discovery-text { font-size:clamp(1.4rem,2.3vw,2rem); line-height:1.4; }
+.discovery-card .thought-actions { border-top:1px solid var(--line); padding-top:.7rem; }
+@media (max-width:56rem) { .discovery-card { padding:1.2rem 1.2rem 1rem; } }
+@media (max-width:30rem) {
+  .discovery-stage { padding-inline:1rem; }
+  .discovery-card { padding-inline:.8rem; }
+  .discovery-text { font-size:1.55rem; }
+  .discovery-card[data-passage-length="short"] .discovery-text { font-size:clamp(1.7rem,7vw,2rem); }
 }

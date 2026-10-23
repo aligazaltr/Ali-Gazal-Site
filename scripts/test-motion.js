@@ -160,3 +160,15 @@ test('signature replaces paper compositions while research facts remain in the d
   for (const id of ['kurallar', 'kanit-defteri', 'sonuc']) assert.ok(research.includes(`id="${id}"`));
   assert.ok(research.replace(/\s+/g, ' ').includes(require('../site-data.js').projects.machiavelli.result.summary));
 });
+test('page turn commits only the latest selection and clears when interrupted', async () => {
+  const f = fixture(); let content = 'old';
+  f.api.swap(f.element, () => { content = 'stale'; }, null, { page: true });
+  assert.equal(f.calls[0].options.duration, 180);
+  f.api.swap(f.element, () => { content = 'latest'; }, null, { page: true });
+  assert.equal(f.calls[0].animation.cancelled, true);
+  f.calls[1].animation.finish(); await flush();
+  assert.equal(content, 'latest');
+  const reduced = fixture(true); let immediate = false;
+  reduced.api.swap(reduced.element, () => { immediate = true; }, null, { page: true });
+  assert.equal(immediate, true); assert.equal(reduced.calls.length, 0);
+});

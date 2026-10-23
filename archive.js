@@ -35,6 +35,7 @@
       return element;
     };
     discovery.dataset.selectedEntry = entry.id;
+    discovery.dataset.passageLength = entry.text.length <= 160 ? 'short' : entry.text.length > 280 ? 'long' : 'medium';
     const link = node('a', 'Kaynağı ve yorumları incele →', 'text-link');
     link.href = `#dusunce-${entry.slug}`;
     const actions = node('div', '', 'thought-actions');
@@ -45,8 +46,9 @@
     mask.append(node('p', entry.text, 'discovery-text'));
     const rule = node('span', '', 'discovery-rule'); rule.setAttribute('aria-hidden', 'true');
     const leaf = node('span', '', 'discovery-leaf'); leaf.setAttribute('aria-hidden', 'true');
+    const turn = node('span', '', 'discovery-turn'); turn.setAttribute('aria-hidden', 'true');
     const ordinal = String(data.entries.findIndex(item => item.id === entry.id) + 1).padStart(2, '0');
-    discovery.replaceChildren(leaf, node('p', ordinal + ' / ' + data.entries.length + ' · ' + core.kinds[entry.kind], 'eyebrow'),
+    discovery.replaceChildren(leaf, turn, node('p', ordinal + ' / ' + data.entries.length + ' · ' + core.kinds[entry.kind], 'eyebrow'),
       mask, rule, node('p', author?.name || entry.credit || '', 'discovery-author'),
       node('p', `${book?.title || ''}${entry.source?.locator ? ' · ' + entry.source.locator : ''}${entry.source?.page ? ' · s. ' + entry.source.page : ''}`, 'discovery-source'), link, actions);
     stage.dataset.hasSelection = 'true';
@@ -63,15 +65,18 @@
   function animateDiscovery() {
     const motion = window.AG_MOTION;
     if (!motion) return;
-    motion.animate(discovery, [{ opacity: .6, transform: 'translateX(6px)' }, { opacity: 1, transform: 'translateX(0)' }], { duration: 280 });
-    motion.animate(discovery.querySelector('.discovery-leaf'), [
-      { transform: 'scaleX(.25) translateX(12px)', opacity: .2 },
-      { transform: 'scaleX(1) translateX(0)', opacity: 1 }
-    ], { duration: 500, fill: 'backwards' });
-    motion.enter(discovery.querySelector('.discovery-text'), 65);
-    motion.animate(discovery.querySelector('.discovery-rule'), [{ transform: 'scaleX(0)' }, { transform: 'scaleX(1)' }], { duration: 460, delay: 60, fill: 'backwards' });
-    motion.enter(discovery.querySelector('.discovery-author'), 180);
-    motion.enter(discovery.querySelector('.discovery-source'), 240);
+    motion.animate(discovery.querySelector('.discovery-turn'), [
+      { transform: 'translateX(105%) skewX(-8deg)', opacity: 1 },
+      { transform: 'translateX(-105%) skewX(-8deg)', opacity: 1, offset: .92 },
+      { transform: 'translateX(-110%) skewX(-8deg)', opacity: 0 }
+    ], { duration: 540, easing: 'cubic-bezier(.4,0,.15,1)' });
+    motion.animate(discovery.querySelector('.discovery-text'), [
+      { transform: 'translateY(58px)', opacity: 0 }, { transform: 'translateY(0)', opacity: 1 }
+    ], { duration: 520, delay: 80, fill: 'backwards' });
+    motion.animate(discovery.querySelector('.discovery-rule'), [{ transform: 'scaleX(0)' }, { transform: 'scaleX(1)' }], { duration: 420, delay: 160, fill: 'backwards' });
+    for (const [selector, delay] of [['.discovery-author', 210], ['.discovery-source', 280]]) {
+      motion.animate(discovery.querySelector(selector), [{ transform: 'translateY(10px)', opacity: 0 }, { transform: 'translateY(0)', opacity: 1 }], { duration: 320, delay, fill: 'backwards' });
+    }
   }
   function revealDiscovery() {
     discoveryObserver?.disconnect();
@@ -167,7 +172,7 @@
     window.AG_MOTION?.animate(randomButton.querySelector('span'), [{ transform: 'translateX(0)' }, { transform: 'translateX(5px)' }, { transform: 'translateX(0)' }], { duration: 280 });
     if (discovery.hidden) {
       discovery.hidden = false; showDiscovery(entry); keepDiscoveryVisible(); revealDiscovery();
-    } else if (window.AG_MOTION) window.AG_MOTION.swap(discovery, () => { showDiscovery(entry); keepDiscoveryVisible(); }, revealDiscovery);
+    } else if (window.AG_MOTION) window.AG_MOTION.swap(discovery, () => { showDiscovery(entry); keepDiscoveryVisible(); }, revealDiscovery, { page: true });
     else { showDiscovery(entry); keepDiscoveryVisible(); }
 
   });
