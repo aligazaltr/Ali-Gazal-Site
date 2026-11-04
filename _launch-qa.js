@@ -36,6 +36,12 @@ $('fallbacks').onclick=async()=>{
  }}finally{$('fallbacks').disabled=false;output({test:'fallbacks',total:rows.length,failed:rows.filter(r=>!r.passed),rows});}
 };
 async function animations(d){await Promise.race([Promise.allSettled(d.getAnimations().map(a=>a.finished)),delay(1400)]);await settle(d.defaultView);}
+// Wait for the user-visible selection, not a transient list of animation promises.
+async function selectionChanged(d, previous) {
+ const deadline=Date.now()+1500;
+ while(Date.now()<deadline){if(d.querySelector('[data-selected-entry]')?.dataset.selectedEntry!==previous)return true;await delay(25);}
+ return false;
+}
 $('behavior').onclick=async()=>{
  const rows=[],check=(name,passed,detail)=>rows.push({name,passed:!!passed,...(detail?{detail}:{})});
  try{
@@ -46,7 +52,7 @@ $('behavior').onclick=async()=>{
  change(author,'jules-payot');check('author filter',visible()===5);change(book,'irade-terbiyesi');
  random.scrollIntoView({block:'center',behavior:'instant'});random.focus();random.click();await animations(d);
  const first=d.querySelector('[data-selected-entry]').dataset.selectedEntry;check('filtered random',first.startsWith('irade-terbiyesi'));
- random.click();await animations(d);check('no immediate repeat',first!==d.querySelector('[data-selected-entry]').dataset.selectedEntry);
+ random.click();const changed=await selectionChanged(d,first);await animations(d);check('no immediate repeat',changed,{first,second:d.querySelector('[data-selected-entry]').dataset.selectedEntry});
  for(let i=0;i<6;i++)random.click();await animations(d);check('last rapid selection stays valid',d.querySelector('[data-selected-entry]').dataset.selectedEntry.startsWith('irade-terbiyesi'));check('focus retained',d.activeElement===random);
  for(const action of ['copy-text','copy-link','share']){d.querySelector(`.discovery-card [data-entry-action="${action}"]`).click();await settle(w);}
  const shares=w.__launchQA.shares;check('copy text carries attribution',shares.some(s=>s.method==='clipboard'&&s.text.includes('Jules Payot')));
