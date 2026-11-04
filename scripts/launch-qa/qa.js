@@ -1,5 +1,5 @@
 /* UI-driven audit harness. Source is kept outside the release assets. */
-const $=id=>document.getElementById(id), pages=['index.html','machiavelli.html','rehberler.html','dusunce-arsivi.html','hakkimda.html','irade-terbiyesi.html'];
+const $=id=>document.getElementById(id), pages=['index.html','machiavelli.html','rehberler.html','dusunce-arsivi.html','hakkimda.html','irade-terbiyesi.html','404.html'];
 let frame=$('preview');
 const output=value=>$('result').textContent=JSON.stringify(value);
 const delay=ms=>new Promise(resolve=>setTimeout(resolve,ms));
@@ -25,14 +25,14 @@ $('matrix').onclick=async()=>{
  const rows=[];$('matrix').disabled=true;
  try{for(const page of pages)for(const theme of ['dark','light'])for(const width of [320,360,390,430,768,1024,1440]){
   try{const d=await load(page,width,theme,{reduced:false,nojs:false});const row=snapshot(d);row.passed=!row.overflow&&!row.smallTargets.length&&row.h1===1&&row.main&&row.theme===theme&&row.viewport===width&&!row.errors.length&&!row.violations.length;rows.push(row);}catch(e){rows.push({page,width,theme,passed:false,error:String(e)});}
-  output({running:true,done:rows.length,total:84,failed:rows.filter(r=>!r.passed),rows});
+  output({running:true,done:rows.length,total:98,failed:rows.filter(r=>!r.passed),rows});
  }}finally{$('matrix').disabled=false;output({test:'layout',total:rows.length,failed:rows.filter(r=>!r.passed),rows});}
 };
 $('fallbacks').onclick=async()=>{
  const rows=[];$('fallbacks').disabled=true;
  try{for(const mode of ['nojs','reduced-js'])for(const page of pages)for(const width of [390,1440]){
   try{const d=await load(page,width,'light',{nojs:mode==='nojs',reduced:mode==='reduced-js'});const row={mode,...snapshot(d)};row.passed=!row.overflow&&row.h1===1&&row.main&&(mode==='nojs'?!row.scriptRan:row.activeAnimations===0)&&row.scene!==true;rows.push(row);}catch(e){rows.push({mode,page,width,passed:false,error:String(e)});}
-  output({running:true,done:rows.length,total:24,rows});
+  output({running:true,done:rows.length,total:28,rows});
  }}finally{$('fallbacks').disabled=false;output({test:'fallbacks',total:rows.length,failed:rows.filter(r=>!r.passed),rows});}
 };
 async function animations(d){await Promise.race([Promise.allSettled(d.getAnimations().map(a=>a.finished)),delay(1400)]);await settle(d.defaultView);}
