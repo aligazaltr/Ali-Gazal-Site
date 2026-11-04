@@ -1,0 +1,143 @@
+{
+  "capturedAt": "2026-11-04T20:32:46.620263+00:00",
+  "queries": [
+    {
+      "name": "aligazal.com",
+      "type": "NS",
+      "result": {
+        "error": "curl: (28) Proxy CONNECT aborted due to timeout"
+      },
+      "retryResult": {
+        "Status": 0,
+        "TC": false,
+        "RD": true,
+        "RA": true,
+        "AD": false,
+        "CD": false,
+        "Question": [
+          {
+            "name": "aligazal.com.",
+            "type": 2
+          }
+        ],
+        "Answer": [
+          {
+            "name": "aligazal.com.",
+            "type": 2,
+            "TTL": 21600,
+            "data": "sullivan.ns.cloudflare.com."
+          },
+          {
+            "name": "aligazal.com.",
+            "type": 2,
+            "TTL": 21600,
+            "data": "elinore.ns.cloudflare.com."
+          }
+        ],
+        "Comment": "Response from 108.162.192.153."
+      }
+    },
+    {
+      "name": "aligazal.com",
+      "type": "A",
+      "result": {
+        "error": "curl: (28) Proxy CONNECT aborted due to timeout"
+      },
+      "retryResult": {
+        "error": "curl: (28) Proxy CONNECT aborted due to timeout"
+      }
+    },
+    {
+      "name": "www.aligazal.com",
+      "type": "A",
+      "result": {
+        "error": "curl: (28) Proxy CONNECT aborted due to timeout"
+      },
+      "retryResult": {
+        "error": "curl: (28) Proxy CONNECT aborted due to timeout"
+      }
+    },
+    {
+      "name": "www.aligazal.com",
+      "type": "CNAME",
+      "result": {
+        "Status": 3,
+        "TC": false,
+        "RD": true,
+        "RA": true,
+        "AD": false,
+        "CD": false,
+        "Question": [
+          {
+            "name": "www.aligazal.com.",
+            "type": 5
+          }
+        ],
+        "Authority": [
+          {
+            "name": "aligazal.com.",
+            "type": 6,
+            "TTL": 1800,
+            "data": "elinore.ns.cloudflare.com. dns.cloudflare.com. 2419308059 10000 2400 604800 1800"
+          }
+        ],
+        "Comment": "Response from 173.245.58.153."
+      }
+    },
+    {
+      "name": "aligazal.com",
+      "type": "DS",
+      "result": {
+        "Status": 0,
+        "TC": false,
+        "RD": true,
+        "RA": true,
+        "AD": false,
+        "CD": false,
+        "Question": [
+          {
+            "name": "aligazal.com.",
+            "type": 43
+          }
+        ],
+        "Authority": [
+          {
+            "name": "com.",
+            "type": 6,
+            "TTL": 900,
+            "data": "a.gtld-servers.net. nstld.verisign-grs.com. 1793824336 1800 900 604800 900"
+          }
+        ],
+        "Comment": "Response from 2001:503:a83e::2:30."
+      }
+    },
+    {
+      "name": "aligazal.com",
+      "type": "DNSKEY",
+      "result": {
+        "Status": 0,
+        "TC": false,
+        "RD": true,
+        "RA": true,
+        "AD": false,
+        "CD": false,
+        "Question": [
+          {
+            "name": "aligazal.com.",
+            "type": 48
+          }
+        ],
+        "Authority": [
+          {
+            "name": "aligazal.com.",
+            "type": 6,
+            "TTL": 1800,
+            "data": "elinore.ns.cloudflare.com. dns.cloudflare.com. 2419308059 10000 2400 604800 1800"
+          }
+        ],
+        "Comment": "Response from 172.64.35.161."
+      }
+    }
+  ],
+  "boundedRetryAt": "2026-11-04T20:36:39.504958+00:00"
+}

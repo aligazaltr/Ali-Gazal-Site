@@ -1,0 +1,23 @@
+[
+  {
+    "file": "site-data.js",
+    "beforeBytes": 19543,
+    "afterBytes": 19857,
+    "beforeGzipBytes": 5833,
+    "afterGzipBytes": 5916
+  },
+  {
+    "file": "index.html",
+    "beforeBytes": 14026,
+    "afterBytes": 14080,
+    "beforeGzipBytes": 3717,
+    "afterGzipBytes": 3748
+  },
+  {
+    "file": "rehberler.html",
+    "beforeBytes": 6034,
+    "afterBytes": 6088,
+    "beforeGzipBytes": 2293,
+    "afterGzipBytes": 2286
+  }
+]
