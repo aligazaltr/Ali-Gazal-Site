@@ -9,8 +9,8 @@ async function load(page=$('page').value,width=Number($('width').value),theme=$(
   localStorage.setItem('ag-theme',theme);
   const next=document.createElement('iframe');next.id='preview';next.title='Site önizlemesi';next.style.width=width+'px';next.style.height='740px';
   if(options.nojs??$('nojs').checked)next.setAttribute('sandbox','allow-same-origin');
-  const loaded=new Promise((resolve,reject)=>{next.onload=resolve;setTimeout(()=>reject(new Error('iframe load deadline: '+page)),10000);});
-  frame.replaceWith(next);frame=next;next.src=page;await loaded;
+  const loaded=new Promise((resolve,reject)=>{next.onload=()=>{if(next.contentDocument.URL!=='about:blank')resolve();};setTimeout(()=>reject(new Error('iframe load deadline: '+page)),10000);});
+  next.src=page;frame.replaceWith(next);frame=next;await loaded;
   await settle(next.contentWindow);
   return next.contentDocument;
 }
