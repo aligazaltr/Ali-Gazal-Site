@@ -1,0 +1,32 @@
+{
+  "productCommit": "317be8305e294dcb73763576eda476d24ce75109",
+  "checks": [
+    {
+      "check": "clean preview",
+      "url": "https://chore-prelaunch-security-baseline-20261104-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli",
+      "canonical": "https://aligazal.com/machiavelli",
+      "qaScriptCount": 0,
+      "heading": "MACHIAVELLI\nPRENS"
+    },
+    {
+      "check": "theme persists reload",
+      "chosen": "dark",
+      "actual": "dark"
+    },
+    {
+      "check": "research jump",
+      "url": "https://chore-prelaunch-security-baseline-20261104-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli#deney-asamasi"
+    },
+    {
+      "check": "real browser Turkish search",
+      "visibleEntries": 7,
+      "canonical": "https://aligazal.com/dusunce-arsivi",
+      "theme": "dark"
+    },
+    {
+      "check": "home stays in preview",
+      "url": "https://chore-prelaunch-security-baseline-20261104-ali-gazal-site.aliicerikmedya.workers.dev/",
+      "errors": []
+    }
+  ]
+}

@@ -1,0 +1,129 @@
+[
+  {
+    "file": "styles.css",
+    "unchanged": true,
+    "sha256": "9d2b9bd6afc5fa22556eb527c330125bab469a5f5f77e0a2d0737d57cde3f0db"
+  },
+  {
+    "file": "signature.css",
+    "unchanged": true,
+    "sha256": "66de2f52d4b6dc17071600a5464ac1042813f1766c5b1a896c8209b688bfa333"
+  },
+  {
+    "file": "editorial.css",
+    "unchanged": true,
+    "sha256": "b2146295ced1b128d21c2965153cd857d8b946a7b89479782f448a1b10cfebb4"
+  },
+  {
+    "file": "research.css",
+    "unchanged": true,
+    "sha256": "47fc60ab9f426fed9e1f7c7ee9e039071711767af9ae2fb19779c64f3b603422"
+  },
+  {
+    "file": "motion.css",
+    "unchanged": true,
+    "sha256": "eaf876530d8ed8fb018ac51022d69d146bfb9952c40e082979c7fc9a4a100f0f"
+  },
+  {
+    "file": "archive.css",
+    "unchanged": true,
+    "sha256": "9f9dc9b06a5f3fa3e60b4c0b50480cf88a7b5b0f5f2ff2124807f5c3aac28f53"
+  },
+  {
+    "file": "machiavelli-scene.css",
+    "unchanged": true,
+    "sha256": "8cbc2344124977f33498c7fcf9428ac4e839e61c5ee6fc2f507c9eeee68af972"
+  },
+  {
+    "file": "machiavelli-scene.js",
+    "unchanged": true,
+    "sha256": "7618af78d4514a2eda90d8c1ca8ef044df9dc7fb1cd6875a0ece94123885ba2f"
+  },
+  {
+    "file": "machiavelli-frames.js",
+    "unchanged": true,
+    "sha256": "f952b1d4ccab3b85291543c528cde167153323822bd66ff473472ed4c759a74c"
+  },
+  {
+    "file": "motion.js",
+    "unchanged": true,
+    "sha256": "3c06448f988fc926abdc5a5af875cacb7281ee067d0c289a2534e743ce309dd7"
+  },
+  {
+    "file": "site.js",
+    "unchanged": true,
+    "sha256": "47e9a96fbac87e0b9f27d77a9d0b9c1f76afa448ea9764a8c887a37d6836f3d6"
+  },
+  {
+    "file": "theme.js",
+    "unchanged": true,
+    "sha256": "11dbd81cf950a5c3c106d608467f78638353784fa11ddcb655879e3dff897e1d"
+  },
+  {
+    "file": "archive.js",
+    "unchanged": true,
+    "sha256": "da486b06e714d714e6e9d6cf8284aa3256c1b320908cca07a9a48a50229627c4"
+  },
+  {
+    "file": "project.js",
+    "unchanged": true,
+    "sha256": "12752f97c12c4abcf4b9871188115b2bfbc19853bb9e842a6c40cdaa70a61d77"
+  },
+  {
+    "file": "archive-core.js",
+    "unchanged": true,
+    "sha256": "e0c96dee83dc2f6399d825506898be5385106a07d63116aa0543cc14a95d1c68"
+  },
+  {
+    "file": "content/archive.json",
+    "unchanged": true,
+    "sha256": "c4afcc7eb3b963fe86987c925f92fae90bacb51273d6182f6d84eadf47cfe276"
+  },
+  {
+    "file": "machiavelli-prens-7-gun-kapak.jpg",
+    "unchanged": true,
+    "sha256": "4a0bfa2e1cdc2e2c2205f96f571ee12368f0afa71d99873b0061f99c03b3f8f7"
+  },
+  {
+    "file": "machiavelli-portrait-640.webp",
+    "unchanged": true,
+    "sha256": "2d3a14ca3eb9021ca42baef77ff0b8a689b38f6d273ce6f0c2051cfb4783a4a6"
+  },
+  {
+    "file": "machiavelli-portrait-960.webp",
+    "unchanged": true,
+    "sha256": "2c35b99687b86c42406cf6c8e5810ebe7d7193a6c7466496a9a1229c142225c5"
+  },
+  {
+    "file": "index.html: body except data-share-url target",
+    "unchanged": true
+  },
+  {
+    "file": "machiavelli.html: body except data-share-url target",
+    "unchanged": true
+  },
+  {
+    "file": "rehberler.html: body except data-share-url target",
+    "unchanged": true
+  },
+  {
+    "file": "dusunce-arsivi.html: body except data-share-url target",
+    "unchanged": true
+  },
+  {
+    "file": "hakkimda.html: body except data-share-url target",
+    "unchanged": true
+  },
+  {
+    "file": "irade-terbiyesi.html: body except data-share-url target",
+    "unchanged": true
+  },
+  {
+    "file": "site-data.js: except canonical origin",
+    "unchanged": true
+  },
+  {
+    "file": "archive-data.js: except canonical origin",
+    "unchanged": true
+  }
+]

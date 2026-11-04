@@ -1,0 +1,105 @@
+npm warn Unknown env config "http-proxy". This will stop working in the next major version of npm.
+[33m▲ [43;33m[[43;30mWARNING[43;33m][0m [1mProxy environment variables detected. We'll use your proxy for fetch requests.[0m
+
+
+
+ ⛅️ wrangler 4.157.0
+────────────────────
+[custom build] Running: node scripts/sync-site.js --check && node scripts/build-archive.js --check && node scripts/sync-seo.js --check && node scripts/check-site.js && node --test scripts/test-*.js
+[custom build] ✓ Merkezî veri ve statik HTML eşleşiyor.
+[custom build] 
+[custom build] ✓ Arşiv: 3 yazar, 3 kitap, 15 yayımlanmış düşünce. Taslaklar kamuya açık çıktıya alınmadı.
+[custom build] 
+[custom build] ✓ Canonical, sosyal paylaşım, robots ve sitemap merkezî alan adıyla eşleşiyor.
+[custom build] 
+[custom build] ✓ 8 HTML sayfası, yerel bağlantılar, kimlikler, canonical alanları ve yayın kapıları denetlendi.
+[custom build] 
+[custom build] ✓ Site veri modeli ve statik bütünlük kontrolleri temiz.
+[custom build] 
+[custom build] ✔ initial catalog slots remain available and generated content is in sync (12.710261ms)
+[custom build] ✔ draft and archived text / private verification notes never enter public artifacts (4.713449ms)
+[custom build] 
+[custom build] ✔ publishing fails closed for missing text, source, translation credit, verification or rights (5.659647ms)
+[custom build] ✔ invalid and duplicate identities / book-author relations are rejected (1.58481ms)
+[custom build] ✔ Turkish search covers text, author, book, categories, tags and every commentary field (1.80307ms)
+[custom build] 
+[custom build] ✔ URL filters round-trip and discard invalid IDs without executing query text (1.445671ms)
+[custom build] 
+[custom build] ✔ random discovery handles zero / one entry and avoids consecutive repetitions (0.809501ms)
+[custom build] ✔ all content kinds are labelled; translations require source text and credit (2.663687ms)
+[custom build] ✔ unreleased video produces no watch link; only verified in-range timestamp is exported (2.106177ms)
+[custom build] 
+[custom build] ✔ static cards escape unsafe text, contain accessible details and handle long passages (1.069123ms)
+[custom build] ✔ sharing includes attribution, content kind, source locator and stable canonical anchor (1.727115ms)
+[custom build] ✔ no-JS HTML has published text and source; empty archive is noindex, populated archive gains schema (3.757186ms)
+[custom build] 
+[custom build] ✔ published translations expose their source passage safely and retain their label when copied (0.88888ms)
+[custom build] ✔ deployment allowlist excludes editorial source, test scripts and docs (0.389057ms)
+[custom build] 
+[custom build] ✔ verified production domain is consistent across crawlable outputs (12.080842ms)
+[custom build] 
+[custom build] ✔ metadata can migrate again without touching page bodies (2.165516ms)
+[custom build] ✔ home social preview and Machiavelli use the unchanged final cover (0.452723ms)
+[custom build] ✔ only JSON-LD can occur inline; no inline handlers or external active resources (1.579092ms)
+[custom build] ✔ release assets contain every HTML dependency and exclude undeclared files (2.022981ms)
+[custom build] ✔ portrait travels to the cover face anchor while the real cover opens from the right (1.766695ms)
+[custom build] ✔ scroll sampling is finite, reversible, clamped and continuous at storyboard boundaries (1.934227ms)
+[custom build] ✔ static composition contains the real cover, current status and a working research jump without fabricated video links (0.34424ms)
+[custom build] ✔ archive contains no page sweep or paper overlay and retains text, author and source entrances (1.832534ms)
+[custom build] ✔ scene controller keeps reduced motion and short windows in readable flow (3.358895ms)
+[custom build] ✔ scene controller schedules one visible frame and stops offscreen or in background (1.699173ms)
+[custom build] ✔ an unavailable portrait restores the readable cover and research flow (0.830583ms)
+[custom build] ✔ reduced motion and missing animation APIs preserve immediate content updates (3.822316ms)
+[custom build] ✔ random-style swap fades out before replacing text, then settles with a separate entry (0.902391ms)
+[custom build] ✔ rapid discovery selections cannot restore an obsolete selection (1.003383ms)
+[custom build] ✔ changing motion preference during a swap commits latest content and cancels motion (0.824734ms)
+[custom build] ✔ keyboard focus cancels a pending swap without replacing the focused content (2.057774ms)
+[custom build] ✔ page backgrounding does not leave pending discovery content or animation behind (0.787408ms)
+[custom build] ✔ static cinematic slogan and three full scenes survive without JavaScript (6.347103ms)
+[custom build] ✔ mobile scenes reveal their own content without updating or animating the hidden panel (2.929498ms)
+[custom build] ✔ desktop sticky story still changes number, label, title and description (1.209744ms)
+[custom build] ✔ breakpoint changes disconnect the old story controller (1.281103ms)
+[custom build] ✔ off-screen elements never start an animation (1.010694ms)
+[custom build] 
+[custom build] ✔ layer morph uses the current visual position, cancels older travel and reaches the new CSS state (2.611419ms)
+[custom build] ✔ off-screen and reduced-motion morphs commit meaning without scheduling visual work (1.291268ms)
+[custom build] ✔ signature replaces paper compositions while research facts remain in the document (3.16881ms)
+[custom build] ✔ text fade commits only the latest selection and clears when interrupted (1.909891ms)
+[custom build] 
+[custom build] ✔ current HTML is stable and preserves the unpublished video gate (25.843549ms)
+[custom build] ✔ one release record updates static copy, metadata, phase and chapters (9.142374ms)
+[custom build] 
+[custom build] ✔ a release with a missing URL cannot generate public HTML (2.428653ms)
+[custom build] ✔ static evidence includes public records and respects publication gates (3.264254ms)
+[custom build] ✔ channel, foreign host and insecure URLs cannot pass as video links (0.392161ms)
+[custom build] ✔ Payot begins with four research stages, no experiment outcome or invented release (26.084724ms)
+[custom build] 
+[custom build] ✔ one central stage change updates detail and homepage without JavaScript (5.782612ms)
+[custom build] ✔ invalid stage counts, out-of-order completion and premature production are rejected (0.997054ms)
+[custom build] ✔ future video release uses existing gates while research stays at four stages (4.510743ms)
+[custom build] ✔ existing Payot entries link both ways without generating extra quotes or video URLs (1.839625ms)
+[custom build] ✔ Wrangler reads _headers as deployment metadata without publishing it as an asset (1.286991ms)
+[custom build] ✔ response security policy enforces local scripts without an unsafe script escape (0.952677ms)
+[custom build] 
+[custom build] ✔ preview thought links preserve the thought and environment without leaking filter/tracking queries (0.820207ms)
+[custom build] 
+[custom build] ✔ production shares always use the canonical origin; preview can explicitly choose production (0.281805ms)
+[custom build] 
+[custom build] ✔ project preview sharing and same-origin home navigation remain on the reviewed build (0.161313ms)
+[custom build] 
+[custom build] ✔ only the exact legacy production host shares the new canonical URL (0.820979ms)
+[custom build] 
+[custom build] ℹ tests 57
+[custom build] ℹ suites 0
+[custom build] ℹ pass 57
+[custom build] 
+[custom build] ℹ fail 0
+[custom build] ℹ cancelled 0
+[custom build] ℹ skipped 0
+[custom build] ℹ todo 0
+[custom build] ℹ duration_ms 244.651207
+[custom build] 
+✨ Read 307 files from the assets directory /workspace/scratch/934bf1c88e00/Ali-Gazal-Site
+Total Upload: 0.35 KiB / gzip: 0.25 KiB
+No bindings found.
+--dry-run: exiting now.

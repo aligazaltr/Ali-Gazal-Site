@@ -1,0 +1,13 @@
+{
+  "wranglerVersion": "4.157.0",
+  "sourcePackage": "Cloudflare wrangler (official npm package)",
+  "bundledSourceSha256": "2c42bd42760a75b9c57042a0b6d88170c31fc9ea7d154a18a8a8b328bfaeea55",
+  "finding": "User allowlisting !/_headers overrode the default metadata exclusion. Initial product preview served the exact 641-byte policy file with status 200. The file contains policy, not credentials.",
+  "inspection": "createAssetsIgnoreFunction prepends metadata exclusions then appends user rules; getAssetsOptions independently reads _headers; createWorkerUploadForm includes it as deployment metadata. Removing the allowlist exception preserves parsing and prevents public asset serving.",
+  "initialEvidence": "product-http-audit.json",
+  "fix": "Remove !/_headers; keep the physical file; verify actual HTTP headers and 404 for /_headers on the corrected preview.",
+  "headersSourceSha256": "cfb793266d31ed00afdda938de937373440ba5b6132061018132c7fd081cb9f3",
+  "initialHttpSha256": "cfb793266d31ed00afdda938de937373440ba5b6132061018132c7fd081cb9f3",
+  "correctedStatus": 404,
+  "correctedPreview": "5c92d1f2"
+}

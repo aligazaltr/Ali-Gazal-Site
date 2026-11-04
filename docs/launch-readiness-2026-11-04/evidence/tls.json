@@ -1,0 +1,5 @@
+{
+  "verified": false,
+  "error": "[Errno -3] Temporary failure in name resolution",
+  "note": "Direct socket failure does not establish an origin certificate error."
+}

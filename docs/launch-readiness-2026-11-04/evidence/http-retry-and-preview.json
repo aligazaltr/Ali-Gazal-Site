@@ -1,0 +1,89 @@
+{
+  "capturedAt": "2026-11-04T19:16:57.863296+00:00",
+  "note": "Explicit follow-up after initial proxy timeouts; these are additional observations, not replacements for failed probes.",
+  "requests": [
+    {
+      "url": "https://aligazal.com/",
+      "status": 200,
+      "curlExit": 0,
+      "error": null,
+      "headers": {
+        "content-type": "text/html",
+        "cache-control": "public, max-age=0, must-revalidate"
+      },
+      "bytes": 13286,
+      "sha256": "756e7fb3710c8a40f91f8f997b6c6f49db863f60655a7cb8d05d2b8cbc15bcb1",
+      "sslVerifyResult": 0
+    },
+    {
+      "url": "https://aligazal.com/machiavelli",
+      "status": 200,
+      "curlExit": 0,
+      "error": null,
+      "headers": {
+        "content-type": "text/html",
+        "cache-control": "public, max-age=0, must-revalidate"
+      },
+      "bytes": 24977,
+      "sha256": "57128d550eed2df2392a26c044c277c0bf8aa005bbc6ee5a0f691b442edb3d9f",
+      "sslVerifyResult": 0
+    },
+    {
+      "url": "https://eb69ec6d-ali-gazal-site.aliicerikmedya.workers.dev/",
+      "status": 200,
+      "curlExit": 0,
+      "error": null,
+      "headers": {
+        "content-type": "text/html",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "x-robots-tag": "noindex",
+        "content-security-policy": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; worker-src 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "bytes": 14026,
+      "sha256": "1dbc3fad46dad390d4a57ebc0b90b8dab18bba0b77fd2ddf17b61713b61c4ae2",
+      "sslVerifyResult": 0
+    },
+    {
+      "url": "https://eb69ec6d-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli",
+      "status": 200,
+      "curlExit": 0,
+      "error": null,
+      "headers": {
+        "content-type": "text/html",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "x-robots-tag": "noindex",
+        "content-security-policy": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; worker-src 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "bytes": 24848,
+      "sha256": "a66c120bf2c3f18306354db90af25c4d60deebadedf8f74debd580431a1a65d4",
+      "sslVerifyResult": 0
+    },
+    {
+      "url": "https://eb69ec6d-ali-gazal-site.aliicerikmedya.workers.dev/dusunce-arsivi",
+      "status": 200,
+      "curlExit": 0,
+      "error": null,
+      "headers": {
+        "content-type": "text/html",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "x-robots-tag": "noindex",
+        "content-security-policy": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; worker-src 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "bytes": 73663,
+      "sha256": "844a02b2921c45d0b17b2682ee5efc5ce3fb4e1c818ce79ec8db832da30eef19",
+      "sslVerifyResult": 0
+    }
+  ]
+}

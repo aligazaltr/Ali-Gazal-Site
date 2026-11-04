@@ -1,0 +1,119 @@
+{
+  "preview": "fc84e5ff",
+  "note": "Clipboard and native-share payloads use test doubles. They are not real OS menus or platform cache checks.",
+  "test": "behavior",
+  "total": 17,
+  "failed": [],
+  "rows": [
+    {
+      "name": "author filter",
+      "passed": true
+    },
+    {
+      "name": "filtered random",
+      "passed": true
+    },
+    {
+      "name": "no immediate repeat",
+      "passed": true
+    },
+    {
+      "name": "last rapid selection stays valid",
+      "passed": true
+    },
+    {
+      "name": "focus retained",
+      "passed": true
+    },
+    {
+      "name": "copy text carries attribution",
+      "passed": true
+    },
+    {
+      "name": "preview link stays in preview",
+      "passed": true
+    },
+    {
+      "name": "native share adapter receives preview URL",
+      "passed": true
+    },
+    {
+      "name": "empty disables random",
+      "passed": true
+    },
+    {
+      "name": "empty hides stale thought",
+      "passed": true
+    },
+    {
+      "name": "Turkish search",
+      "passed": true
+    },
+    {
+      "name": "source details open",
+      "passed": true
+    },
+    {
+      "name": "no black overlay",
+      "passed": true
+    },
+    {
+      "name": "no unexpected CSP/error",
+      "passed": true
+    },
+    {
+      "name": "project preview share origin",
+      "passed": true
+    },
+    {
+      "name": "explicit production share uses custom domain",
+      "passed": true
+    },
+    {
+      "name": "Machiavelli scroll controller loaded",
+      "passed": true
+    }
+  ],
+  "snapshot": {
+    "page": "/machiavelli",
+    "viewport": 390,
+    "width": 375,
+    "height": 740,
+    "documentWidth": 375,
+    "theme": "dark",
+    "h1": 1,
+    "main": true,
+    "overflow": false,
+    "smallTargets": [],
+    "canonical": "https://aligazal.com/machiavelli",
+    "images": [
+      {
+        "src": "https://fc84e5ff-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-640.webp",
+        "loaded": true
+      },
+      {
+        "src": "https://fc84e5ff-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+        "loaded": true
+      }
+    ],
+    "scene": true,
+    "errors": [],
+    "violations": [],
+    "scriptRan": true,
+    "shares": [
+      {
+        "method": "share",
+        "title": "Önizleme · Machiavelli’nin üç düşüncesini 7 gün denedim | Ali Gazal",
+        "text": "Yedi günlük deney tamamlandı. En güçlü sonuç fiilî gerçeğe bakma ilkesiydi; diğer iki ilke etkili oldu ancak kurallar her olayda eksiksiz uygulanmadı. Video hazırlanıyor.",
+        "url": "https://fc84e5ff-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli"
+      },
+      {
+        "method": "share",
+        "title": "Machiavelli’nin üç düşüncesini 7 gün denedim | Ali Gazal",
+        "text": "Yedi günlük deney tamamlandı. En güçlü sonuç fiilî gerçeğe bakma ilkesiydi; diğer iki ilke etkili oldu ancak kurallar her olayda eksiksiz uygulanmadı. Video hazırlanıyor.",
+        "url": "https://aligazal.com/machiavelli"
+      }
+    ],
+    "activeAnimations": 1
+  }
+}

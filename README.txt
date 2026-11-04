@@ -35,6 +35,8 @@ Yerel önizleme:
 
 Kontrol:
   node scripts/sync-site.js --check
+  node scripts/build-archive.js --check
+  node scripts/sync-seo.js --check
   node scripts/check-site.js
   node --test scripts/test-*.js
   node --check site-data.js
@@ -127,22 +129,25 @@ Ardından node scripts/sync-site.js ve node scripts/check-site.js çalıştırı
 Kendin Dene ayrı onay ve gerçek rehber olmadan kapalı kalır.
 
 Doğrulanmış varsayılan üretim adresi:
-https://ali-gazal-site.aliicerikmedya.workers.dev/
+https://aligazal.com/
 
-Özel alan adı bağlanırsa canonical ve Open Graph adresleri birlikte
-güncellenmelidir.
+Eski Workers adresi geçiş döneminde çalışır. Üretim alan adı site-data.js
+canonicalOrigin alanından, statik SEO çıktıları scripts/sync-seo.js ile yönetilir.
+Alan adı, güvenlik, panel işlemleri ve geri dönüş: docs/launch-readiness-2026-11-04/REPORT.md
 
 DÜŞÜNCE ARŞİVİ
 
 /dusunce-arsivi mevcut siteye bağlı tek bir arşiv bölümüdür. Yazar, kitap,
 alıntı ve özgün düşünce kayıtları content/archive.json içinde yönetilir.
-Başlangıç: 3 yazar, 3 kitap, 15 boş taslak; doğrulanmış alıntı henüz yok.
+Mevcut arşiv: 3 yazar, 3 kitap, kaynak kontrolünden geçmiş 15 yayımlanmış düşünce.
+Doğrudan alıntı, serbest çeviri ve yorum ayrımları korunur.
 Taslaklar web dağıtımına ve archive-data.js dosyasına alınmaz. Mevcut
 .assetsignore izin listesi korunmuştur. Video kaynağı site-data.js olarak kalır.
 
 İçerik güncellemesinden sonra:
   node scripts/sync-site.js
   node scripts/build-archive.js
+  node scripts/sync-seo.js
   node scripts/check-site.js
   node --test scripts/test-*.js
 

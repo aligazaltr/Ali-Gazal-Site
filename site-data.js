@@ -7,7 +7,7 @@
  */
 const AG_SITE_DATA = (() => {
   const data = {
-    canonicalOrigin: 'https://ali-gazal-site.aliicerikmedya.workers.dev',
+    canonicalOrigin: 'https://aligazal.com',
     experience: {
       intro: ['DÜŞÜN.', 'SORGULA.', 'DENE.', 'KEŞFET.'],
       tagline: 'Fikirlerin, deneylerin ve gerçek hayatın buluştuğu yer.',

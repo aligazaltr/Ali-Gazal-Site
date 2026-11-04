@@ -9,7 +9,11 @@
     const here = new URL(current);
     if (production.protocol !== 'https:') throw new Error('Invalid production URL');
     const preview = new URL(production.pathname + production.hash, here.origin);
-    return { production: production.href, preview: preview.href, isPreview: here.origin !== production.origin };
+    // Only the exact former production origin is a production alias. Branch
+    // previews, foreign hosts and lookalike domains must remain previews.
+    const legacyProduction = 'https://ali-gazal-site.aliicerikmedya.workers.dev';
+    const isLegacy = production.origin === 'https://aligazal.com' && here.origin === legacyProduction;
+    return { production: production.href, preview: preview.href, isPreview: here.origin !== production.origin && !isLegacy };
   }
   function linkFor(canonical, current, mode) {
     const info = context(canonical, current);
