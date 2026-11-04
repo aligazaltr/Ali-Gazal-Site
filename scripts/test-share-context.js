@@ -2,7 +2,7 @@ const test = require('node:test');
 const assert = require('node:assert/strict');
 const share = require('../share-context.js');
 const archive = require('../archive-core.js');
-const production = 'https://ali-gazal-site.aliicerikmedya.workers.dev';
+const production = 'https://aligazal.com';
 const preview = 'https://feature-cinematic-experience-v2-ali-gazal-site.aliicerikmedya.workers.dev';
 test('preview thought links preserve the thought and environment without leaking filter/tracking queries', () => {
   const canonical = archive.entryUrl({slug: 'prens-01'}, production);
@@ -22,4 +22,15 @@ test('project preview sharing and same-origin home navigation remain on the revi
   const link = share.linkFor(production + '/machiavelli', preview + '/machiavelli.html');
   assert.equal(link.url, preview + '/machiavelli');
   assert.equal(new URL('index.html', link.url).href, preview + '/index.html');
+});
+
+test('only the exact legacy production host shares the new canonical URL', () => {
+  const old = 'https://ali-gazal-site.aliicerikmedya.workers.dev';
+  const canonical = production + '/dusunce-arsivi#dusunce-prens-01';
+  assert.deepEqual(share.linkFor(canonical, old + '/dusunce-arsivi?q=disiplin'), {
+    url: canonical, isPreview: false, label: 'Canlı site'
+  });
+  for (const host of [old.replace('https://', 'https://test-'), old + '.evil.example', 'http://aligazal.com']) {
+    assert.equal(share.context(canonical, host).isPreview, true);
+  }
 });

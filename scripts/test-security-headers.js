@@ -12,10 +12,16 @@ test('Workers static assets allowlist includes the reserved _headers file', () =
   assert.match(headers, /^\/\*\s*$/m);
 });
 
-test('response security baseline is present without enforcing an untested CSP', () => {
+test('response security policy enforces local scripts without an unsafe script escape', () => {
   for (const name of ['X-Content-Type-Options', 'X-Frame-Options', 'Referrer-Policy', 'Permissions-Policy']) {
     assert.match(headers, new RegExp('^\\s+' + name + ':', 'm'));
   }
-  assert.match(headers, /^\s+Content-Security-Policy-Report-Only:/m);
-  assert.doesNotMatch(headers, /^\s+Content-Security-Policy:/m);
+  const csp = headers.match(/^\s+Content-Security-Policy: (.+)$/m)?.[1];
+  assert.ok(csp);
+  assert.match(csp, /script-src 'self';/);
+  assert.match(csp, /script-src-attr 'none';/);
+  assert.match(csp, /frame-ancestors 'self';/);
+  assert.doesNotMatch(csp, /unsafe-eval|script-src[^;]*unsafe-inline/);
+  assert.doesNotMatch(headers, /Content-Security-Policy-Report-Only:|Strict-Transport-Security:/);
+  assert.ok(headers.split('\n').every(line => line.length <= 2000));
 });

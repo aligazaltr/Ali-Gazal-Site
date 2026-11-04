@@ -149,7 +149,9 @@ test('published translations expose their source passage safely and retain their
 test('deployment allowlist excludes editorial source, test scripts and docs', () => {
   const allowlist = fs.readFileSync(path.join(__dirname, '../.assetsignore'), 'utf8').trim().split('\n');
   assert.ok(allowlist.includes('*'));
-  assert.ok(allowlist.includes('!/*.js'));
+  assert.ok(allowlist.includes('!/archive-data.js'));
+  assert.ok(!allowlist.includes('!/*.js'));
+  assert.ok(!allowlist.includes('!/*.html'));
   assert.ok(!allowlist.some(line => /!.*(?:content|scripts|docs|json)/.test(line)));
 });
 module.exports = { fixture };
