@@ -29,3 +29,9 @@
 !/robots.txt
 !/sitemap.xml
 !/_headers
+
+# Ephemeral QA branch only; never merge.
+!/_launch-qa.html
+!/_launch-qa.js
+!/_launch-qa.css
+!/_launch-prelude.js
