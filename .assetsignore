@@ -1,4 +1,4 @@
-# Only public site files in the repository root are uploaded.
+# Explicit release files only. New files require deliberate approval here.
 *
 !/index.html
 !/machiavelli.html
@@ -8,7 +8,13 @@
 !/irade-terbiyesi.html
 !/marcus-aurelius.html
 !/404.html
-!/*.css
+!/styles.css
+!/research.css
+!/editorial.css
+!/motion.css
+!/signature.css
+!/archive.css
+!/machiavelli-scene.css
 !/theme.js
 !/site-data.js
 !/share-context.js
@@ -20,12 +26,9 @@
 !/archive.js
 !/machiavelli-frames.js
 !/machiavelli-scene.js
-!/*.svg
-!/*.webp
-!/*.png
-!/*.jpg
-!/*.jpeg
-!/*.avif
+!/favicon.svg
+!/machiavelli-prens-7-gun-kapak.jpg
+!/machiavelli-portrait-640.webp
+!/machiavelli-portrait-960.webp
 !/robots.txt
 !/sitemap.xml
-!/_headers

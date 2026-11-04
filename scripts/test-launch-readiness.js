@@ -47,3 +47,20 @@ test('only JSON-LD can occur inline; no inline handlers or external active resou
     assert.doesNotMatch(html,/\son(?:click|load|error|submit)\s*=/i);
   }
 });
+
+test('release assets contain every HTML dependency and exclude undeclared files',()=>{
+  const rules=fs.readFileSync(path.join(root,'.assetsignore'),'utf8').split('\n').map(s=>s.trim()).filter(s=>s&&!s.startsWith('#'));
+  assert.equal(rules[0],'*');
+  const allowed=new Set(rules.slice(1).map(rule=>{assert.match(rule,/^!\/[a-z0-9_.-]+$/i);return rule.slice(2);}));
+  for(const file of fs.readdirSync(root).filter(file=>file.endsWith('.html'))){
+    assert.ok(allowed.has(file),`HTML excluded: ${file}`);
+    const html=fs.readFileSync(path.join(root,file),'utf8');
+    for(const [,reference] of html.matchAll(/\s(?:href|src)="([^"]+)"/g)){
+      if(/^(?:https?:|mailto:|tel:|data:|#)/.test(reference))continue;
+      const target=reference.split(/[?#]/)[0].replace(/^\//,'');
+      if(target)assert.ok(allowed.has(target),`${file} dependency excluded: ${target}`);
+    }
+  }
+  for(const file of ['wrangler.jsonc','.git/config','README.txt','content/archive.json','docs/report.html','_headers','_launch-qa.html','_launch-qa.js','debug.css','private-photo.png','script.js.map'])assert.equal(allowed.has(file),false,file);
+  for(const file of ['machiavelli-portrait-640.webp','machiavelli-portrait-960.webp','robots.txt','sitemap.xml'])assert.ok(allowed.has(file),file);
+});

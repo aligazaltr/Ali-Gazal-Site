@@ -7,8 +7,9 @@ const root = path.resolve(__dirname, '..');
 const headers = fs.readFileSync(path.join(root, '_headers'), 'utf8');
 const ignore = fs.readFileSync(path.join(root, '.assetsignore'), 'utf8');
 
-test('Workers static assets allowlist includes the reserved _headers file', () => {
-  assert.match(ignore, /^!\/_headers\s*$/m);
+test('Wrangler reads _headers as deployment metadata without publishing it as an asset', () => {
+  assert.doesNotMatch(ignore, /^!\/_headers\s*$/m);
+  assert.ok(fs.existsSync(path.join(root, '_headers')));
   assert.match(headers, /^\/\*\s*$/m);
 });
 
