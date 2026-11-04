@@ -1,0 +1,14 @@
+{
+  "preview": "fc84e5ff",
+  "note": "The inline script is an intentional harmless test in an unmerged QA branch. Its violation is expected.",
+  "test": "CSP inline canary",
+  "executed": false,
+  "violations": [
+    {
+      "directive": "script-src-elem",
+      "blocked": "inline",
+      "disposition": "enforce"
+    }
+  ],
+  "passed": true
+}

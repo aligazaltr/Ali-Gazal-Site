@@ -1,0 +1,881 @@
+{
+  "capturedAt": "2026-11-04T19:01:28.600686+00:00",
+  "note": "HTTP observations through environment egress proxy; timing is not Lighthouse or field performance. HTTP-only failures may be egress policy, not origin.",
+  "requests": [
+    {
+      "url": "https://aligazal.com/",
+      "curlExit": 28,
+      "error": "curl: (28) Proxy CONNECT aborted due to timeout",
+      "effectiveUrl": "https://aligazal.com/",
+      "status": 0,
+      "redirects": 0,
+      "sslVerifyResult": 0,
+      "timeTotal": 10.002366,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "responses": [],
+      "matchesRepoBytes": false
+    },
+    {
+      "url": "http://aligazal.com/",
+      "curlExit": 0,
+      "error": null,
+      "effectiveUrl": "http://aligazal.com/",
+      "status": 200,
+      "redirects": 0,
+      "sslVerifyResult": 0,
+      "timeTotal": 6.805267,
+      "bytes": 13286,
+      "sha256": "756e7fb3710c8a40f91f8f997b6c6f49db863f60655a7cb8d05d2b8cbc15bcb1",
+      "responses": [
+        {
+          "status": "HTTP/1.1 200 OK",
+          "headers": {
+            "content-type": "text/html",
+            "cf-cache-status": "HIT",
+            "cache-control": "public, max-age=0, must-revalidate",
+            "server": "envoy",
+            "cf-ray": "a555ddaa7c06f8b7-LAX"
+          }
+        }
+      ],
+      "title": "Ali Gazal | Fikirleri ger\u00e7ek hayatta test ediyorum",
+      "wordpressMarkers": false,
+      "canonical": [
+        "https://ali-gazal-site.aliicerikmedya.workers.dev/"
+      ],
+      "scripts": [
+        "theme.js",
+        "site-data.js",
+        "share-context.js",
+        "motion.js",
+        "site.js"
+      ],
+      "matchesRepoBytes": true
+    },
+    {
+      "url": "https://www.aligazal.com/",
+      "curlExit": 0,
+      "error": null,
+      "effectiveUrl": "https://www.aligazal.com/",
+      "status": 503,
+      "redirects": 0,
+      "sslVerifyResult": 0,
+      "timeTotal": 6.853138,
+      "bytes": 98,
+      "sha256": "33fbc61ad080ef68dd7a6479f8c53f1bf864dba2930567dbbc4ceb47490a1909",
+      "responses": [
+        {
+          "status": "HTTP/1.1 200 OK",
+          "headers": {}
+        },
+        {
+          "status": "HTTP/2 503 ",
+          "headers": {
+            "content-type": "text/plain",
+            "server": "envoy"
+          }
+        }
+      ],
+      "matchesRepoBytes": false
+    },
+    {
+      "url": "http://www.aligazal.com/",
+      "curlExit": 0,
+      "error": null,
+      "effectiveUrl": "http://www.aligazal.com/",
+      "status": 503,
+      "redirects": 0,
+      "sslVerifyResult": 0,
+      "timeTotal": 6.853336,
+      "bytes": 95,
+      "sha256": "9deff96f9b5925fa5081257849ace321304b382d64cfb67d90a21a3c7cbf2925",
+      "responses": [
+        {
+          "status": "HTTP/1.1 503 Service Unavailable",
+          "headers": {
+            "content-type": "text/plain",
+            "server": "envoy"
+          }
+        }
+      ],
+      "matchesRepoBytes": false
+    },
+    {
+      "url": "https://ali-gazal-site.aliicerikmedya.workers.dev/",
+      "curlExit": 0,
+      "error": null,
+      "effectiveUrl": "https://ali-gazal-site.aliicerikmedya.workers.dev/",
+      "status": 200,
+      "redirects": 0,
+      "sslVerifyResult": 0,
+      "timeTotal": 6.973491,
+      "bytes": 13286,
+      "sha256": "756e7fb3710c8a40f91f8f997b6c6f49db863f60655a7cb8d05d2b8cbc15bcb1",
+      "responses": [
+        {
+          "status": "HTTP/1.1 200 OK",
+          "headers": {}
+        },
+        {
+          "status": "HTTP/2 200 ",
+          "headers": {
+            "content-type": "text/html",
+            "cf-cache-status": "HIT",
+            "cache-control": "public, max-age=0, must-revalidate",
+            "server": "envoy",
+            "cf-ray": "a555ddab2e88f8b7-LAX"
+          }
+        }
+      ],
+      "title": "Ali Gazal | Fikirleri ger\u00e7ek hayatta test ediyorum",
+      "wordpressMarkers": false,
+      "canonical": [
+        "https://ali-gazal-site.aliicerikmedya.workers.dev/"
+      ],
+      "scripts": [
+        "theme.js",
+        "site-data.js",
+        "share-context.js",
+        "motion.js",
+        "site.js"
+      ],
+      "matchesRepoBytes": true
+    },
+    {
+      "url": "https://aligazal.com/machiavelli",
+      "curlExit": 28,
+      "error": "curl: (28) Proxy CONNECT aborted due to timeout",
+      "effectiveUrl": "https://aligazal.com/machiavelli",
+      "status": 0,
+      "redirects": 0,
+      "sslVerifyResult": 0,
+      "timeTotal": 10.002669,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "responses": [],
+      "matchesRepoBytes": false
+    },
+    {
+      "url": "https://aligazal.com/rehberler",
+      "curlExit": 0,
+      "error": null,
+      "effectiveUrl": "https://aligazal.com/rehberler",
+      "status": 200,
+      "redirects": 0,
+      "sslVerifyResult": 0,
+      "timeTotal": 3.982356,
+      "bytes": 6092,
+      "sha256": "e81dcb0768ccbc929c1299cc3de6af335bc21a74f7ce5a80b911cf3ae2a00b36",
+      "responses": [
+        {
+          "status": "HTTP/1.1 200 OK",
+          "headers": {}
+        },
+        {
+          "status": "HTTP/2 200 ",
+          "headers": {
+            "content-type": "text/html",
+            "cf-cache-status": "HIT",
+            "cache-control": "public, max-age=0, must-revalidate",
+            "server": "envoy",
+            "cf-ray": "a555ddc32e27a733-LAX"
+          }
+        }
+      ],
+      "title": "Projeler | Ali Gazal",
+      "wordpressMarkers": false,
+      "canonical": [
+        "https://ali-gazal-site.aliicerikmedya.workers.dev/rehberler"
+      ],
+      "scripts": [
+        "theme.js",
+        "site-data.js",
+        "share-context.js",
+        "motion.js",
+        "site.js"
+      ],
+      "matchesRepoBytes": true
+    },
+    {
+      "url": "https://aligazal.com/dusunce-arsivi",
+      "curlExit": 0,
+      "error": null,
+      "effectiveUrl": "https://aligazal.com/dusunce-arsivi",
+      "status": 200,
+      "redirects": 0,
+      "sslVerifyResult": 0,
+      "timeTotal": 3.919056,
+      "bytes": 74185,
+      "sha256": "c8805240f1d02ca1d6c341093edbfc8a39f2099428fdae6881204b929f16d7bf",
+      "responses": [
+        {
+          "status": "HTTP/1.1 200 OK",
+          "headers": {}
+        },
+        {
+          "status": "HTTP/2 200 ",
+          "headers": {
+            "content-type": "text/html",
+            "cf-cache-status": "HIT",
+            "cache-control": "public, max-age=0, must-revalidate",
+            "server": "envoy",
+            "cf-ray": "a555ddc25b13a733-LAX"
+          }
+        }
+      ],
+      "title": "D\u00fc\u015f\u00fcnce Ar\u015fivi | Ali Gazal",
+      "wordpressMarkers": false,
+      "canonical": [
+        "https://ali-gazal-site.aliicerikmedya.workers.dev/dusunce-arsivi"
+      ],
+      "scripts": [
+        "theme.js",
+        "archive-data.js",
+        "archive-core.js",
+        "share-context.js",
+        "motion.js",
+        "archive.js",
+        "site.js"
+      ],
+      "matchesRepoBytes": true
+    },
+    {
+      "url": "https://aligazal.com/hakkimda",
+      "curlExit": 0,
+      "error": null,
+      "effectiveUrl": "https://aligazal.com/hakkimda",
+      "status": 200,
+      "redirects": 0,
+      "sslVerifyResult": 0,
+      "timeTotal": 3.840213,
+      "bytes": 6878,
+      "sha256": "475c577c43cd45a2dc06f089478a2ade3f93186e869f8766d1b9eea7e508eecc",
+      "responses": [
+        {
+          "status": "HTTP/1.1 200 OK",
+          "headers": {}
+        },
+        {
+          "status": "HTTP/2 200 ",
+          "headers": {
+            "content-type": "text/html",
+            "cf-cache-status": "HIT",
+            "cache-control": "public, max-age=0, must-revalidate",
+            "server": "envoy",
+            "cf-ray": "a555ddc25b27a733-LAX"
+          }
+        }
+      ],
+      "title": "Hakk\u0131nda | Ali Gazal",
+      "wordpressMarkers": false,
+      "canonical": [
+        "https://ali-gazal-site.aliicerikmedya.workers.dev/hakkimda"
+      ],
+      "scripts": [
+        "theme.js",
+        "share-context.js",
+        "motion.js",
+        "site.js"
+      ],
+      "matchesRepoBytes": true
+    },
+    {
+      "url": "https://aligazal.com/irade-terbiyesi",
+      "curlExit": 0,
+      "error": null,
+      "effectiveUrl": "https://aligazal.com/irade-terbiyesi",
+      "status": 200,
+      "redirects": 0,
+      "sslVerifyResult": 0,
+      "timeTotal": 3.860078,
+      "bytes": 13810,
+      "sha256": "483dbe8fdabd1ab452c9392e2f36fafa9eb3e8775dfd66b99d33892534939be3",
+      "responses": [
+        {
+          "status": "HTTP/1.1 200 OK",
+          "headers": {}
+        },
+        {
+          "status": "HTTP/2 200 ",
+          "headers": {
+            "content-type": "text/html",
+            "cf-cache-status": "HIT",
+            "cache-control": "public, max-age=0, must-revalidate",
+            "server": "envoy",
+            "cf-ray": "a555ddc32e2da733-LAX"
+          }
+        }
+      ],
+      "title": null,
+      "wordpressMarkers": false,
+      "canonical": [
+        "https://ali-gazal-site.aliicerikmedya.workers.dev/irade-terbiyesi"
+      ],
+      "scripts": [
+        "theme.js",
+        "site-data.js",
+        "share-context.js",
+        "motion.js",
+        "site.js",
+        "project.js"
+      ],
+      "matchesRepoBytes": true
+    },
+    {
+      "url": "https://aligazal.com/robots.txt",
+      "curlExit": 0,
+      "error": null,
+      "effectiveUrl": "https://aligazal.com/robots.txt",
+      "status": 200,
+      "redirects": 0,
+      "sslVerifyResult": 0,
+      "timeTotal": 0.699512,
+      "bytes": 95,
+      "sha256": "d87e6c8bd281857b2edb7c49ac44484274b5dbc08fe3912bbbeee7f5b281a557",
+      "responses": [
+        {
+          "status": "HTTP/1.1 200 OK",
+          "headers": {}
+        },
+        {
+          "status": "HTTP/2 200 ",
+          "headers": {
+            "content-type": "text/plain",
+            "cf-cache-status": "HIT",
+            "cache-control": "public, max-age=0, must-revalidate",
+            "etag": "\"b788a38cd12fdf8512796f050930d5f7\"",
+            "server": "envoy",
+            "cf-ray": "a555ddc25b33a733-LAX"
+          }
+        }
+      ],
+      "matchesRepoBytes": true
+    },
+    {
+      "url": "https://aligazal.com/sitemap.xml",
+      "curlExit": 0,
+      "error": null,
+      "effectiveUrl": "https://aligazal.com/sitemap.xml",
+      "status": 200,
+      "redirects": 0,
+      "sslVerifyResult": 0,
+      "timeTotal": 0.910614,
+      "bytes": 905,
+      "sha256": "dc4b629ba5fea14bc14a920a03893ab544e2e30b8201b6709d2420f376e1d272",
+      "responses": [
+        {
+          "status": "HTTP/1.1 200 OK",
+          "headers": {}
+        },
+        {
+          "status": "HTTP/2 200 ",
+          "headers": {
+            "content-type": "application/xml",
+            "cf-cache-status": "MISS",
+            "cache-control": "public, max-age=0, must-revalidate",
+            "etag": "\"e82a379ec86a7894f312d4f12054cf0e\"",
+            "server": "envoy",
+            "cf-ray": "a555ddc32e33a733-LAX"
+          }
+        }
+      ],
+      "matchesRepoBytes": true
+    },
+    {
+      "url": "https://aligazal.com/launch-readiness-missing-20261104",
+      "curlExit": 0,
+      "error": null,
+      "effectiveUrl": "https://aligazal.com/launch-readiness-missing-20261104",
+      "status": 404,
+      "redirects": 0,
+      "sslVerifyResult": 0,
+      "timeTotal": 7.191585,
+      "bytes": 2439,
+      "sha256": "e2ed1f10876ae30d1bf562ea46c17c37150aec5dcd1f95eac4c5ba9cdc84e7c4",
+      "responses": [
+        {
+          "status": "HTTP/1.1 200 OK",
+          "headers": {}
+        },
+        {
+          "status": "HTTP/2 404 ",
+          "headers": {
+            "content-type": "text/html",
+            "cf-cache-status": "HIT",
+            "cache-control": "public, max-age=0, must-revalidate",
+            "server": "envoy",
+            "cf-ray": "a555ddefcfeba733-LAX"
+          }
+        }
+      ],
+      "title": "Sayfa bulunamad\u0131 | Ali Gazal",
+      "wordpressMarkers": false,
+      "canonical": [],
+      "scripts": [
+        "theme.js",
+        "share-context.js",
+        "motion.js",
+        "site.js"
+      ]
+    },
+    {
+      "url": "https://aligazal.com/site-data.js",
+      "curlExit": 0,
+      "error": null,
+      "effectiveUrl": "https://aligazal.com/site-data.js",
+      "status": 200,
+      "redirects": 0,
+      "sslVerifyResult": 0,
+      "timeTotal": 7.248278,
+      "bytes": 19572,
+      "sha256": "1baddc195f4a58bfd7084d0a089badec8d7a2b46c006283afbb42f3de225dddb",
+      "responses": [
+        {
+          "status": "HTTP/1.1 200 OK",
+          "headers": {}
+        },
+        {
+          "status": "HTTP/2 200 ",
+          "headers": {
+            "content-type": "text/javascript",
+            "cf-cache-status": "HIT",
+            "cache-control": "public, max-age=0, must-revalidate",
+            "etag": "\"eda377fee6a5fbdb56f7fe4bdb8da221\"",
+            "server": "envoy",
+            "cf-ray": "a555ddefcff6a733-LAX"
+          }
+        }
+      ],
+      "matchesRepoBytes": true
+    },
+    {
+      "url": "https://aligazal.com/theme.js",
+      "curlExit": 0,
+      "error": null,
+      "effectiveUrl": "https://aligazal.com/theme.js",
+      "status": 200,
+      "redirects": 0,
+      "sslVerifyResult": 0,
+      "timeTotal": 7.164321,
+      "bytes": 2102,
+      "sha256": "11dbd81cf950a5c3c106d608467f78638353784fa11ddcb655879e3dff897e1d",
+      "responses": [
+        {
+          "status": "HTTP/1.1 200 OK",
+          "headers": {}
+        },
+        {
+          "status": "HTTP/2 200 ",
+          "headers": {
+            "content-type": "text/javascript",
+            "cf-cache-status": "HIT",
+            "cache-control": "public, max-age=0, must-revalidate",
+            "etag": "\"b4c591b5a89f4ab39be53088f1602b90\"",
+            "server": "envoy",
+            "cf-ray": "a555ddefcfe2a733-LAX"
+          }
+        }
+      ],
+      "matchesRepoBytes": true
+    },
+    {
+      "url": "https://aligazal.com/machiavelli-prens-7-gun-kapak.jpg",
+      "curlExit": 0,
+      "error": null,
+      "effectiveUrl": "https://aligazal.com/machiavelli-prens-7-gun-kapak.jpg",
+      "status": 200,
+      "redirects": 0,
+      "sslVerifyResult": 0,
+      "timeTotal": 7.205601,
+      "bytes": 197054,
+      "sha256": "4a0bfa2e1cdc2e2c2205f96f571ee12368f0afa71d99873b0061f99c03b3f8f7",
+      "responses": [
+        {
+          "status": "HTTP/1.1 200 OK",
+          "headers": {}
+        },
+        {
+          "status": "HTTP/2 200 ",
+          "headers": {
+            "content-type": "image/jpeg",
+            "cf-cache-status": "HIT",
+            "cache-control": "public, max-age=0, must-revalidate",
+            "etag": "\"69e00cac85256067a1b679a25f5cd92e\"",
+            "server": "envoy",
+            "cf-ray": "a555ddefcfeca733-LAX"
+          }
+        }
+      ],
+      "matchesRepoBytes": true
+    },
+    {
+      "url": "https://aligazal.com/wrangler.jsonc",
+      "curlExit": 0,
+      "error": null,
+      "effectiveUrl": "https://aligazal.com/wrangler.jsonc",
+      "status": 404,
+      "redirects": 0,
+      "sslVerifyResult": 0,
+      "timeTotal": 7.052417,
+      "bytes": 2439,
+      "sha256": "e2ed1f10876ae30d1bf562ea46c17c37150aec5dcd1f95eac4c5ba9cdc84e7c4",
+      "responses": [
+        {
+          "status": "HTTP/1.1 200 OK",
+          "headers": {}
+        },
+        {
+          "status": "HTTP/2 404 ",
+          "headers": {
+            "content-type": "text/html",
+            "cf-cache-status": "HIT",
+            "cache-control": "public, max-age=0, must-revalidate",
+            "server": "envoy",
+            "cf-ray": "a555ddefcfc8a733-LAX"
+          }
+        }
+      ],
+      "title": "Sayfa bulunamad\u0131 | Ali Gazal",
+      "wordpressMarkers": false,
+      "canonical": [],
+      "scripts": [
+        "theme.js",
+        "share-context.js",
+        "motion.js",
+        "site.js"
+      ],
+      "matchesRepoBytes": false
+    },
+    {
+      "url": "https://aligazal.com/.git/config",
+      "curlExit": 0,
+      "error": null,
+      "effectiveUrl": "https://aligazal.com/.git/config",
+      "status": 404,
+      "redirects": 0,
+      "sslVerifyResult": 0,
+      "timeTotal": 6.982187,
+      "bytes": 2439,
+      "sha256": "e2ed1f10876ae30d1bf562ea46c17c37150aec5dcd1f95eac4c5ba9cdc84e7c4",
+      "responses": [
+        {
+          "status": "HTTP/1.1 200 OK",
+          "headers": {}
+        },
+        {
+          "status": "HTTP/2 404 ",
+          "headers": {
+            "content-type": "text/html",
+            "cf-cache-status": "HIT",
+            "cache-control": "public, max-age=0, must-revalidate",
+            "server": "envoy",
+            "cf-ray": "a555ddefcfbea733-LAX"
+          }
+        }
+      ],
+      "title": "Sayfa bulunamad\u0131 | Ali Gazal",
+      "wordpressMarkers": false,
+      "canonical": [],
+      "scripts": [
+        "theme.js",
+        "share-context.js",
+        "motion.js",
+        "site.js"
+      ]
+    },
+    {
+      "url": "https://aligazal.com/content/archive.json",
+      "curlExit": 0,
+      "error": null,
+      "effectiveUrl": "https://aligazal.com/content/archive.json",
+      "status": 404,
+      "redirects": 0,
+      "sslVerifyResult": 0,
+      "timeTotal": 4.936509,
+      "bytes": 2439,
+      "sha256": "e2ed1f10876ae30d1bf562ea46c17c37150aec5dcd1f95eac4c5ba9cdc84e7c4",
+      "responses": [
+        {
+          "status": "HTTP/1.1 200 OK",
+          "headers": {}
+        },
+        {
+          "status": "HTTP/2 404 ",
+          "headers": {
+            "content-type": "text/html",
+            "cf-cache-status": "HIT",
+            "cache-control": "public, max-age=0, must-revalidate",
+            "server": "envoy",
+            "cf-ray": "a555de0ec847a733-LAX"
+          }
+        }
+      ],
+      "title": "Sayfa bulunamad\u0131 | Ali Gazal",
+      "wordpressMarkers": false,
+      "canonical": [],
+      "scripts": [
+        "theme.js",
+        "share-context.js",
+        "motion.js",
+        "site.js"
+      ],
+      "matchesRepoBytes": false
+    },
+    {
+      "url": "https://aligazal.com/docs/cinematic-v42-review.md",
+      "curlExit": 0,
+      "error": null,
+      "effectiveUrl": "https://aligazal.com/docs/cinematic-v42-review.md",
+      "status": 404,
+      "redirects": 0,
+      "sslVerifyResult": 0,
+      "timeTotal": 4.921697,
+      "bytes": 2439,
+      "sha256": "e2ed1f10876ae30d1bf562ea46c17c37150aec5dcd1f95eac4c5ba9cdc84e7c4",
+      "responses": [
+        {
+          "status": "HTTP/1.1 200 OK",
+          "headers": {}
+        },
+        {
+          "status": "HTTP/2 404 ",
+          "headers": {
+            "content-type": "text/html",
+            "cf-cache-status": "HIT",
+            "cache-control": "public, max-age=0, must-revalidate",
+            "server": "envoy",
+            "cf-ray": "a555de0ec83fa733-LAX"
+          }
+        }
+      ],
+      "title": "Sayfa bulunamad\u0131 | Ali Gazal",
+      "wordpressMarkers": false,
+      "canonical": [],
+      "scripts": [
+        "theme.js",
+        "share-context.js",
+        "motion.js",
+        "site.js"
+      ],
+      "matchesRepoBytes": false
+    },
+    {
+      "url": "https://aligazal.com/scripts/test-motion.js",
+      "curlExit": 0,
+      "error": null,
+      "effectiveUrl": "https://aligazal.com/scripts/test-motion.js",
+      "status": 404,
+      "redirects": 0,
+      "sslVerifyResult": 0,
+      "timeTotal": 4.903345,
+      "bytes": 2439,
+      "sha256": "e2ed1f10876ae30d1bf562ea46c17c37150aec5dcd1f95eac4c5ba9cdc84e7c4",
+      "responses": [
+        {
+          "status": "HTTP/1.1 200 OK",
+          "headers": {}
+        },
+        {
+          "status": "HTTP/2 404 ",
+          "headers": {
+            "content-type": "text/html",
+            "cf-cache-status": "HIT",
+            "cache-control": "public, max-age=0, must-revalidate",
+            "server": "envoy",
+            "cf-ray": "a555de0ec83ca733-LAX"
+          }
+        }
+      ],
+      "title": "Sayfa bulunamad\u0131 | Ali Gazal",
+      "wordpressMarkers": false,
+      "canonical": [],
+      "scripts": [
+        "theme.js",
+        "share-context.js",
+        "motion.js",
+        "site.js"
+      ],
+      "matchesRepoBytes": false
+    },
+    {
+      "url": "https://aligazal.com/_headers",
+      "curlExit": 0,
+      "error": null,
+      "effectiveUrl": "https://aligazal.com/_headers",
+      "status": 404,
+      "redirects": 0,
+      "sslVerifyResult": 0,
+      "timeTotal": 4.891936,
+      "bytes": 2439,
+      "sha256": "e2ed1f10876ae30d1bf562ea46c17c37150aec5dcd1f95eac4c5ba9cdc84e7c4",
+      "responses": [
+        {
+          "status": "HTTP/1.1 200 OK",
+          "headers": {}
+        },
+        {
+          "status": "HTTP/2 404 ",
+          "headers": {
+            "content-type": "text/html",
+            "cf-cache-status": "HIT",
+            "cache-control": "public, max-age=0, must-revalidate",
+            "server": "envoy",
+            "cf-ray": "a555de0ec842a733-LAX"
+          }
+        }
+      ],
+      "title": "Sayfa bulunamad\u0131 | Ali Gazal",
+      "wordpressMarkers": false,
+      "canonical": [],
+      "scripts": [
+        "theme.js",
+        "share-context.js",
+        "motion.js",
+        "site.js"
+      ]
+    },
+    {
+      "url": "https://aligazal.com/README.txt",
+      "curlExit": 0,
+      "error": null,
+      "effectiveUrl": "https://aligazal.com/README.txt",
+      "status": 404,
+      "redirects": 0,
+      "sslVerifyResult": 0,
+      "timeTotal": 4.878934,
+      "bytes": 2439,
+      "sha256": "e2ed1f10876ae30d1bf562ea46c17c37150aec5dcd1f95eac4c5ba9cdc84e7c4",
+      "responses": [
+        {
+          "status": "HTTP/1.1 200 OK",
+          "headers": {}
+        },
+        {
+          "status": "HTTP/2 404 ",
+          "headers": {
+            "content-type": "text/html",
+            "cf-cache-status": "HIT",
+            "cache-control": "public, max-age=0, must-revalidate",
+            "server": "envoy",
+            "cf-ray": "a555de0ec823a733-LAX"
+          }
+        }
+      ],
+      "title": "Sayfa bulunamad\u0131 | Ali Gazal",
+      "wordpressMarkers": false,
+      "canonical": [],
+      "scripts": [
+        "theme.js",
+        "share-context.js",
+        "motion.js",
+        "site.js"
+      ],
+      "matchesRepoBytes": false
+    },
+    {
+      "url": "https://ali-gazal-site.aliicerikmedya.workers.dev/machiavelli",
+      "curlExit": 0,
+      "error": null,
+      "effectiveUrl": "https://ali-gazal-site.aliicerikmedya.workers.dev/machiavelli",
+      "status": 200,
+      "redirects": 0,
+      "sslVerifyResult": 0,
+      "timeTotal": 5.874067,
+      "bytes": 24977,
+      "sha256": "57128d550eed2df2392a26c044c277c0bf8aa005bbc6ee5a0f691b442edb3d9f",
+      "responses": [
+        {
+          "status": "HTTP/1.1 200 OK",
+          "headers": {}
+        },
+        {
+          "status": "HTTP/2 200 ",
+          "headers": {
+            "content-type": "text/html",
+            "cf-cache-status": "HIT",
+            "cache-control": "public, max-age=0, must-revalidate",
+            "server": "envoy",
+            "cf-ray": "a555de14befcf8b7-LAX"
+          }
+        }
+      ],
+      "title": null,
+      "wordpressMarkers": false,
+      "canonical": [
+        "https://ali-gazal-site.aliicerikmedya.workers.dev/machiavelli"
+      ],
+      "scripts": [
+        "theme.js",
+        "site-data.js",
+        "share-context.js",
+        "motion.js",
+        "site.js",
+        "project.js",
+        "machiavelli-frames.js",
+        "machiavelli-scene.js"
+      ],
+      "matchesRepoBytes": true
+    },
+    {
+      "url": "https://ali-gazal-site.aliicerikmedya.workers.dev/site-data.js",
+      "curlExit": 0,
+      "error": null,
+      "effectiveUrl": "https://ali-gazal-site.aliicerikmedya.workers.dev/site-data.js",
+      "status": 200,
+      "redirects": 0,
+      "sslVerifyResult": 0,
+      "timeTotal": 0.995751,
+      "bytes": 19572,
+      "sha256": "1baddc195f4a58bfd7084d0a089badec8d7a2b46c006283afbb42f3de225dddb",
+      "responses": [
+        {
+          "status": "HTTP/1.1 200 OK",
+          "headers": {}
+        },
+        {
+          "status": "HTTP/2 200 ",
+          "headers": {
+            "content-type": "text/javascript",
+            "cf-cache-status": "HIT",
+            "cache-control": "public, max-age=0, must-revalidate",
+            "etag": "\"eda377fee6a5fbdb56f7fe4bdb8da221\"",
+            "server": "envoy",
+            "cf-ray": "a555de146df3f8b7-LAX"
+          }
+        }
+      ],
+      "matchesRepoBytes": true
+    },
+    {
+      "url": "https://ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+      "curlExit": 0,
+      "error": null,
+      "effectiveUrl": "https://ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+      "status": 200,
+      "redirects": 0,
+      "sslVerifyResult": 0,
+      "timeTotal": 0.948129,
+      "bytes": 197054,
+      "sha256": "4a0bfa2e1cdc2e2c2205f96f571ee12368f0afa71d99873b0061f99c03b3f8f7",
+      "responses": [
+        {
+          "status": "HTTP/1.1 200 OK",
+          "headers": {}
+        },
+        {
+          "status": "HTTP/2 200 ",
+          "headers": {
+            "content-type": "image/jpeg",
+            "cf-cache-status": "HIT",
+            "cache-control": "public, max-age=0, must-revalidate",
+            "etag": "\"69e00cac85256067a1b679a25f5cd92e\"",
+            "server": "envoy",
+            "cf-ray": "a555de146de2f8b7-LAX"
+          }
+        }
+      ],
+      "matchesRepoBytes": true
+    }
+  ]
+}

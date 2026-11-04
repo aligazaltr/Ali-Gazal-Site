@@ -1,0 +1,11 @@
+{
+  "checkedAt": "2026-11-04T19:39:25.322Z",
+  "main": "7b238f140a67c840b425933eba09bee33afb76a0",
+  "mainProtected": false,
+  "visibleRulesets": [],
+  "pr": 13,
+  "head": "317be8305e294dcb73763576eda476d24ce75109",
+  "merged": false,
+  "state": "open",
+  "note": "Account 2FA, installation token permissions and Cloudflare account security settings not inspected."
+}

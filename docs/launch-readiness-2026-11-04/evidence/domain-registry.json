@@ -1,0 +1,25 @@
+{
+  "ldhName": "ALIGAZAL.COM",
+  "status": [
+    "client transfer prohibited"
+  ],
+  "events": [
+    {
+      "eventAction": "registration",
+      "eventDate": "2026-11-04T18:47:36Z"
+    },
+    {
+      "eventAction": "expiration",
+      "eventDate": "2027-11-04T18:47:36Z"
+    },
+    {
+      "eventAction": "last changed",
+      "eventDate": "2026-11-04T18:47:37Z"
+    },
+    {
+      "eventAction": "last update of RDAP database",
+      "eventDate": "2026-11-04T19:15:04Z"
+    }
+  ],
+  "note": "Public registry evidence only; automatic renewal and account controls not verified."
+}
