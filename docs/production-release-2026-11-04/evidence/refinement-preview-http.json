@@ -1,0 +1,930 @@
+{
+  "capturedAt": "2026-11-04T20:41:53.545326+00:00",
+  "origin": "https://a7061f87-ali-gazal-site.aliicerikmedya.workers.dev",
+  "note": "Read-only audit through an egress proxy; production must be indexable, previews must carry noindex. HTTP timings and UA metadata are not real social-platform previews or field performance.",
+  "total": 27,
+  "failed": [],
+  "requests": [
+    {
+      "path": "/",
+      "requestedUrl": "https://a7061f87-ali-gazal-site.aliicerikmedya.workers.dev/",
+      "effectiveUrl": "https://a7061f87-ali-gazal-site.aliicerikmedya.workers.dev/",
+      "status": 200,
+      "curlExit": 0,
+      "error": null,
+      "headers": {
+        "content-type": "text/html",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "x-robots-tag": "noindex",
+        "content-security-policy": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; worker-src 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "locations": [],
+      "bytes": 14080,
+      "sha256": "e5572bc7cda81b2d0d17646e0e3f8ae81bb45bb004ab2704f85e82421beb0019",
+      "sslVerifyResult": 0,
+      "nelPresent": true,
+      "setCookiePresent": false,
+      "canonical": "https://aligazal.com/",
+      "metadata": {
+        "viewport": "width=device-width, initial-scale=1",
+        "description": "Ali Gazal, fikirleri ger\u00e7ek hayatta test ediyor. Machiavelli / Prens deneyinin yedi g\u00fcnl\u00fck sonucu, y\u00f6ntemi ve kan\u0131t s\u0131n\u0131rlar\u0131 bu sitede.",
+        "theme-color": "#0b0b0a",
+        "og:type": "website",
+        "og:url": "https://aligazal.com/",
+        "og:site_name": "Ali Gazal",
+        "og:locale": "tr_TR",
+        "og:title": "Ali Gazal | Fikirleri ger\u00e7ek hayatta test ediyorum",
+        "og:description": "Ger\u00e7ek hayat deneyleri, y\u00f6ntem ve kan\u0131t s\u0131n\u0131rlar\u0131. Machiavelli / Prens deneyi tamamland\u0131; video haz\u0131rlan\u0131yor.",
+        "twitter:card": "summary_large_image",
+        "twitter:title": "Ali Gazal | Fikirleri ger\u00e7ek hayatta test ediyorum",
+        "twitter:description": "Ger\u00e7ek hayat deneyleri, y\u00f6ntem ve kan\u0131t s\u0131n\u0131rlar\u0131. Machiavelli / Prens deneyi tamamland\u0131; video haz\u0131rlan\u0131yor.",
+        "og:image": "https://aligazal.com/machiavelli-prens-7-gun-kapak.jpg",
+        "og:image:secure_url": "https://aligazal.com/machiavelli-prens-7-gun-kapak.jpg",
+        "og:image:type": "image/jpeg",
+        "og:image:width": "1280",
+        "og:image:height": "720",
+        "og:image:alt": "Ali Gazal ve Machiavelli\u2019nin yer ald\u0131\u011f\u0131, \u201c\u0130\u015fe yarad\u0131 m\u0131?\u201d ve \u201c7 G\u00fcn\u201d yaz\u0131l\u0131 Machiavelli deneyi kapa\u011f\u0131.",
+        "twitter:image": "https://aligazal.com/machiavelli-prens-7-gun-kapak.jpg",
+        "twitter:image:alt": "Ali Gazal ve Machiavelli\u2019nin yer ald\u0131\u011f\u0131, \u201c\u0130\u015fe yarad\u0131 m\u0131?\u201d ve \u201c7 G\u00fcn\u201d yaz\u0131l\u0131 Machiavelli deneyi kapa\u011f\u0131."
+      },
+      "h1": 1,
+      "checks": {
+        "canonical": true,
+        "ogUrl": true,
+        "metadata": true,
+        "heading": true,
+        "securityHeaders": true,
+        "indexingPolicy": true,
+        "exactBuiltHtml": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/machiavelli",
+      "requestedUrl": "https://a7061f87-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli",
+      "effectiveUrl": "https://a7061f87-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli",
+      "status": 200,
+      "curlExit": 0,
+      "error": null,
+      "headers": {
+        "content-type": "text/html",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "x-robots-tag": "noindex",
+        "content-security-policy": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; worker-src 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "locations": [],
+      "bytes": 24848,
+      "sha256": "a66c120bf2c3f18306354db90af25c4d60deebadedf8f74debd580431a1a65d4",
+      "sslVerifyResult": 0,
+      "nelPresent": true,
+      "setCookiePresent": false,
+      "canonical": "https://aligazal.com/machiavelli",
+      "metadata": {
+        "viewport": "width=device-width, initial-scale=1",
+        "description": "Yedi g\u00fcnl\u00fck deney tamamland\u0131. En g\u00fc\u00e7l\u00fc sonu\u00e7 fiil\u00ee ger\u00e7e\u011fe bakma ilkesiydi; di\u011fer iki ilke etkili oldu ancak kurallar her olayda eksiksiz uygulanmad\u0131. Video haz\u0131rlan\u0131yor.",
+        "theme-color": "#0b0b0a",
+        "og:type": "article",
+        "og:url": "https://aligazal.com/machiavelli",
+        "og:site_name": "Ali Gazal",
+        "og:locale": "tr_TR",
+        "og:title": "Machiavelli\u2019nin \u00fc\u00e7 d\u00fc\u015f\u00fcncesini 7 g\u00fcn denedim | Ali Gazal",
+        "og:description": "Yedi g\u00fcnl\u00fck deney tamamland\u0131. En g\u00fc\u00e7l\u00fc sonu\u00e7 fiil\u00ee ger\u00e7e\u011fe bakma ilkesiydi; di\u011fer iki ilke etkili oldu ancak kurallar her olayda eksiksiz uygulanmad\u0131. Video haz\u0131rlan\u0131yor.",
+        "og:image": "https://aligazal.com/machiavelli-prens-7-gun-kapak.jpg",
+        "og:image:secure_url": "https://aligazal.com/machiavelli-prens-7-gun-kapak.jpg",
+        "og:image:type": "image/jpeg",
+        "og:image:width": "1280",
+        "og:image:height": "720",
+        "og:image:alt": "Ali Gazal ve Machiavelli\u2019nin yer ald\u0131\u011f\u0131, \u201c\u0130\u015fe yarad\u0131 m\u0131?\u201d ve \u201c7 G\u00fcn\u201d yaz\u0131l\u0131 Machiavelli deneyi kapa\u011f\u0131.",
+        "twitter:card": "summary_large_image",
+        "twitter:title": "Machiavelli\u2019nin \u00fc\u00e7 d\u00fc\u015f\u00fcncesini 7 g\u00fcn denedim | Ali Gazal",
+        "twitter:description": "Yedi g\u00fcnl\u00fck deney tamamland\u0131. En g\u00fc\u00e7l\u00fc sonu\u00e7 fiil\u00ee ger\u00e7e\u011fe bakma ilkesiydi; di\u011fer iki ilke etkili oldu ancak kurallar her olayda eksiksiz uygulanmad\u0131. Video haz\u0131rlan\u0131yor.",
+        "twitter:image": "https://aligazal.com/machiavelli-prens-7-gun-kapak.jpg",
+        "twitter:image:alt": "Ali Gazal ve Machiavelli\u2019nin yer ald\u0131\u011f\u0131, \u201c\u0130\u015fe yarad\u0131 m\u0131?\u201d ve \u201c7 G\u00fcn\u201d yaz\u0131l\u0131 Machiavelli deneyi kapa\u011f\u0131."
+      },
+      "h1": 1,
+      "checks": {
+        "canonical": true,
+        "ogUrl": true,
+        "metadata": true,
+        "heading": true,
+        "securityHeaders": true,
+        "indexingPolicy": true,
+        "exactBuiltHtml": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/rehberler",
+      "requestedUrl": "https://a7061f87-ali-gazal-site.aliicerikmedya.workers.dev/rehberler",
+      "effectiveUrl": "https://a7061f87-ali-gazal-site.aliicerikmedya.workers.dev/rehberler",
+      "status": 200,
+      "curlExit": 0,
+      "error": null,
+      "headers": {
+        "content-type": "text/html",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "x-robots-tag": "noindex",
+        "content-security-policy": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; worker-src 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "locations": [],
+      "bytes": 6088,
+      "sha256": "e22add5c0e991ff66f6ada7609d65a2c4c16198e789438fb47116ea1427b5e62",
+      "sslVerifyResult": 0,
+      "nelPresent": true,
+      "setCookiePresent": false,
+      "canonical": "https://aligazal.com/rehberler",
+      "metadata": {
+        "viewport": "width=device-width, initial-scale=1",
+        "description": "Ali Gazal'\u0131n g\u00fcncel ger\u00e7ek hayat deneyleri. Machiavelli / Prens projesinin durumu, y\u00f6ntemi ve kan\u0131t s\u0131n\u0131rlar\u0131.",
+        "theme-color": "#0b0b0a",
+        "og:type": "website",
+        "og:url": "https://aligazal.com/rehberler",
+        "og:site_name": "Ali Gazal",
+        "og:locale": "tr_TR",
+        "og:title": "Projeler | Ali Gazal",
+        "og:description": "G\u00fcncel ger\u00e7ek hayat deneylerini ve hangi a\u015famada olduklar\u0131n\u0131 incele.",
+        "twitter:card": "summary",
+        "twitter:title": "Projeler | Ali Gazal",
+        "twitter:description": "G\u00fcncel ger\u00e7ek hayat deneylerini ve hangi a\u015famada olduklar\u0131n\u0131 incele."
+      },
+      "h1": 1,
+      "checks": {
+        "canonical": true,
+        "ogUrl": true,
+        "metadata": true,
+        "heading": true,
+        "securityHeaders": true,
+        "indexingPolicy": true,
+        "exactBuiltHtml": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/dusunce-arsivi",
+      "requestedUrl": "https://a7061f87-ali-gazal-site.aliicerikmedya.workers.dev/dusunce-arsivi",
+      "effectiveUrl": "https://a7061f87-ali-gazal-site.aliicerikmedya.workers.dev/dusunce-arsivi",
+      "status": 200,
+      "curlExit": 0,
+      "error": null,
+      "headers": {
+        "content-type": "text/html",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "x-robots-tag": "noindex",
+        "content-security-policy": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; worker-src 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "locations": [],
+      "bytes": 73663,
+      "sha256": "844a02b2921c45d0b17b2682ee5efc5ce3fb4e1c818ce79ec8db832da30eef19",
+      "sslVerifyResult": 0,
+      "nelPresent": true,
+      "setCookiePresent": false,
+      "canonical": "https://aligazal.com/dusunce-arsivi",
+      "metadata": {
+        "viewport": "width=device-width, initial-scale=1",
+        "description": "Kitaplardan d\u00fc\u015f\u00fcnceler, kaynaklar\u0131 ve ayr\u0131 tutulan yorumlar\u0131m\u0131z. Machiavelli, Jules Payot ve Marcus Aurelius okuma ar\u015fivi.",
+        "theme-color": "#0b0b0a",
+        "og:type": "website",
+        "og:url": "https://aligazal.com/dusunce-arsivi",
+        "og:site_name": "Ali Gazal",
+        "og:locale": "tr_TR",
+        "og:title": "D\u00fc\u015f\u00fcnce Ar\u015fivi | Ali Gazal",
+        "og:description": "Kitaplardan d\u00fc\u015f\u00fcnceler, kaynaklar\u0131 ve ayr\u0131 tutulan yorumlar\u0131m\u0131z. Okumadan ger\u00e7ek hayata uzanan bir ar\u015fiv.",
+        "twitter:card": "summary",
+        "twitter:title": "D\u00fc\u015f\u00fcnce Ar\u015fivi | Ali Gazal",
+        "twitter:description": "Kitaplardan d\u00fc\u015f\u00fcnceler, kaynaklar\u0131 ve ayr\u0131 tutulan yorumlar\u0131m\u0131z. Okumadan ger\u00e7ek hayata uzanan bir ar\u015fiv.",
+        "robots": "index,follow"
+      },
+      "h1": 1,
+      "checks": {
+        "canonical": true,
+        "ogUrl": true,
+        "metadata": true,
+        "heading": true,
+        "securityHeaders": true,
+        "indexingPolicy": true,
+        "exactBuiltHtml": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/hakkimda",
+      "requestedUrl": "https://a7061f87-ali-gazal-site.aliicerikmedya.workers.dev/hakkimda",
+      "effectiveUrl": "https://a7061f87-ali-gazal-site.aliicerikmedya.workers.dev/hakkimda",
+      "status": 200,
+      "curlExit": 0,
+      "error": null,
+      "headers": {
+        "content-type": "text/html",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "x-robots-tag": "noindex",
+        "content-security-policy": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; worker-src 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "locations": [],
+      "bytes": 6820,
+      "sha256": "9777aae8d51aac16f861e7173a10806ab220bff9ff1c7c30ac3643dadb1ee39f",
+      "sslVerifyResult": 0,
+      "nelPresent": true,
+      "setCookiePresent": false,
+      "canonical": "https://aligazal.com/hakkimda",
+      "metadata": {
+        "viewport": "width=device-width, initial-scale=1",
+        "description": "Ali Gazal projesinin amac\u0131: fikirleri ger\u00e7ek hayatta deneyip sonu\u00e7lar\u0131n\u0131 a\u00e7\u0131k\u00e7a payla\u015fmak.",
+        "theme-color": "#0b0b0a",
+        "og:type": "website",
+        "og:url": "https://aligazal.com/hakkimda",
+        "og:site_name": "Ali Gazal",
+        "og:locale": "tr_TR",
+        "og:title": "Ali Gazal hakk\u0131nda",
+        "og:description": "Fikirleri ger\u00e7ek hayatta test etme y\u00f6ntemi ve yay\u0131n ilkeleri.",
+        "twitter:card": "summary",
+        "twitter:title": "Ali Gazal hakk\u0131nda",
+        "twitter:description": "Fikirleri ger\u00e7ek hayatta test etme y\u00f6ntemi ve yay\u0131n ilkeleri."
+      },
+      "h1": 1,
+      "checks": {
+        "canonical": true,
+        "ogUrl": true,
+        "metadata": true,
+        "heading": true,
+        "securityHeaders": true,
+        "indexingPolicy": true,
+        "exactBuiltHtml": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/irade-terbiyesi",
+      "requestedUrl": "https://a7061f87-ali-gazal-site.aliicerikmedya.workers.dev/irade-terbiyesi",
+      "effectiveUrl": "https://a7061f87-ali-gazal-site.aliicerikmedya.workers.dev/irade-terbiyesi",
+      "status": 200,
+      "curlExit": 0,
+      "error": null,
+      "headers": {
+        "content-type": "text/html",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "x-robots-tag": "noindex",
+        "content-security-policy": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; worker-src 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "locations": [],
+      "bytes": 13723,
+      "sha256": "91eeb5b97c743cf18fc7c9f534871c81874d94195f9001fb90f1a60329a6067b",
+      "sslVerifyResult": 0,
+      "nelPresent": true,
+      "setCookiePresent": false,
+      "canonical": "https://aligazal.com/irade-terbiyesi",
+      "metadata": {
+        "viewport": "width=device-width, initial-scale=1",
+        "description": "Jules Payot\u2019nun \u0130rade Terbiyesi kitab\u0131ndan ki\u015fisel uygulamaya: d\u00f6rt ara\u015ft\u0131rma a\u015famas\u0131, g\u00fcncel okuma durumu ve planlanan 7 g\u00fcnl\u00fck deney. Deney hen\u00fcz ba\u015flamad\u0131.",
+        "theme-color": "#0b0b0a",
+        "og:type": "article",
+        "og:url": "https://aligazal.com/irade-terbiyesi",
+        "og:site_name": "Ali Gazal",
+        "og:locale": "tr_TR",
+        "og:title": "\u0130rade ger\u00e7ekten e\u011fitilebilir mi? | Jules Payot \u2014 Ali Gazal",
+        "og:description": "Jules Payot\u2019nun \u0130rade Terbiyesi kitab\u0131ndan ki\u015fisel uygulamaya: d\u00f6rt ara\u015ft\u0131rma a\u015famas\u0131, g\u00fcncel okuma durumu ve planlanan 7 g\u00fcnl\u00fck deney. Deney hen\u00fcz ba\u015flamad\u0131.",
+        "twitter:card": "summary",
+        "twitter:title": "\u0130rade ger\u00e7ekten e\u011fitilebilir mi? | Jules Payot \u2014 Ali Gazal",
+        "twitter:description": "Jules Payot\u2019nun \u0130rade Terbiyesi kitab\u0131ndan ki\u015fisel uygulamaya: d\u00f6rt ara\u015ft\u0131rma a\u015famas\u0131, g\u00fcncel okuma durumu ve planlanan 7 g\u00fcnl\u00fck deney. Deney hen\u00fcz ba\u015flamad\u0131."
+      },
+      "h1": 1,
+      "checks": {
+        "canonical": true,
+        "ogUrl": true,
+        "metadata": true,
+        "heading": true,
+        "securityHeaders": true,
+        "indexingPolicy": true,
+        "exactBuiltHtml": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/robots.txt",
+      "requestedUrl": "https://a7061f87-ali-gazal-site.aliicerikmedya.workers.dev/robots.txt",
+      "effectiveUrl": "https://a7061f87-ali-gazal-site.aliicerikmedya.workers.dev/robots.txt",
+      "status": 200,
+      "curlExit": 0,
+      "error": null,
+      "headers": {
+        "content-type": "text/plain",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "x-robots-tag": "noindex",
+        "content-security-policy": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; worker-src 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "locations": [],
+      "bytes": 66,
+      "sha256": "9e3ceedd30334406559e571cf0496324e02c2f9d3ee0135fb6fac1c2634ebb65",
+      "sslVerifyResult": 0,
+      "nelPresent": true,
+      "setCookiePresent": false,
+      "checks": {
+        "reachable": true,
+        "exactAsset": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/sitemap.xml",
+      "requestedUrl": "https://a7061f87-ali-gazal-site.aliicerikmedya.workers.dev/sitemap.xml",
+      "effectiveUrl": "https://a7061f87-ali-gazal-site.aliicerikmedya.workers.dev/sitemap.xml",
+      "status": 200,
+      "curlExit": 0,
+      "error": null,
+      "headers": {
+        "content-type": "application/xml",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "x-robots-tag": "noindex",
+        "content-security-policy": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; worker-src 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "locations": [],
+      "bytes": 679,
+      "sha256": "c8b7389246939b5a6374dc68688deff860f2b8bc727005ebe934f92c50817fe7",
+      "sslVerifyResult": 0,
+      "nelPresent": true,
+      "setCookiePresent": false,
+      "checks": {
+        "reachable": true,
+        "exactAsset": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/machiavelli-prens-7-gun-kapak.jpg",
+      "requestedUrl": "https://a7061f87-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+      "effectiveUrl": "https://a7061f87-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+      "status": 200,
+      "curlExit": 0,
+      "error": null,
+      "headers": {
+        "content-type": "image/jpeg",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "x-robots-tag": "noindex",
+        "content-security-policy": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; worker-src 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "locations": [],
+      "bytes": 197054,
+      "sha256": "4a0bfa2e1cdc2e2c2205f96f571ee12368f0afa71d99873b0061f99c03b3f8f7",
+      "sslVerifyResult": 0,
+      "nelPresent": true,
+      "setCookiePresent": false,
+      "checks": {
+        "reachable": true,
+        "exactAsset": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/machiavelli-portrait-640.webp",
+      "requestedUrl": "https://a7061f87-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-640.webp",
+      "effectiveUrl": "https://a7061f87-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-640.webp",
+      "status": 200,
+      "curlExit": 0,
+      "error": null,
+      "headers": {
+        "content-type": "image/webp",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "x-robots-tag": "noindex",
+        "content-security-policy": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; worker-src 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "locations": [],
+      "bytes": 78846,
+      "sha256": "2d3a14ca3eb9021ca42baef77ff0b8a689b38f6d273ce6f0c2051cfb4783a4a6",
+      "sslVerifyResult": 0,
+      "nelPresent": true,
+      "setCookiePresent": false,
+      "checks": {
+        "reachable": true,
+        "exactAsset": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/machiavelli-portrait-960.webp",
+      "requestedUrl": "https://a7061f87-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-960.webp",
+      "effectiveUrl": "https://a7061f87-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-960.webp",
+      "status": 200,
+      "curlExit": 0,
+      "error": null,
+      "headers": {
+        "content-type": "image/webp",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "x-robots-tag": "noindex",
+        "content-security-policy": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; worker-src 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "locations": [],
+      "bytes": 159010,
+      "sha256": "2c35b99687b86c42406cf6c8e5810ebe7d7193a6c7466496a9a1229c142225c5",
+      "sslVerifyResult": 0,
+      "nelPresent": true,
+      "setCookiePresent": false,
+      "checks": {
+        "reachable": true,
+        "exactAsset": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/index.html",
+      "requestedUrl": "https://a7061f87-ali-gazal-site.aliicerikmedya.workers.dev/index.html",
+      "effectiveUrl": "https://a7061f87-ali-gazal-site.aliicerikmedya.workers.dev/",
+      "status": 200,
+      "curlExit": 0,
+      "error": null,
+      "headers": {
+        "location": "/",
+        "x-robots-tag": "noindex",
+        "content-security-policy": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; worker-src 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "content-type": "text/html",
+        "cache-control": "public, max-age=0, must-revalidate"
+      },
+      "locations": [
+        "/"
+      ],
+      "bytes": 14080,
+      "sha256": "e5572bc7cda81b2d0d17646e0e3f8ae81bb45bb004ab2704f85e82421beb0019",
+      "sslVerifyResult": 0,
+      "nelPresent": true,
+      "setCookiePresent": false,
+      "checks": {
+        "reachable": true,
+        "exactAsset": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/machiavelli.html",
+      "requestedUrl": "https://a7061f87-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli.html",
+      "effectiveUrl": "https://a7061f87-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli",
+      "status": 200,
+      "curlExit": 0,
+      "error": null,
+      "headers": {
+        "location": "/machiavelli",
+        "x-robots-tag": "noindex",
+        "content-security-policy": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; worker-src 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "content-type": "text/html",
+        "cache-control": "public, max-age=0, must-revalidate"
+      },
+      "locations": [
+        "/machiavelli"
+      ],
+      "bytes": 24848,
+      "sha256": "a66c120bf2c3f18306354db90af25c4d60deebadedf8f74debd580431a1a65d4",
+      "sslVerifyResult": 0,
+      "nelPresent": true,
+      "setCookiePresent": false,
+      "checks": {
+        "reachable": true,
+        "exactAsset": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/machiavelli/",
+      "requestedUrl": "https://a7061f87-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli/",
+      "effectiveUrl": "https://a7061f87-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli",
+      "status": 200,
+      "curlExit": 0,
+      "error": null,
+      "headers": {
+        "location": "/machiavelli",
+        "x-robots-tag": "noindex",
+        "content-security-policy": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; worker-src 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN",
+        "content-type": "text/html",
+        "cache-control": "public, max-age=0, must-revalidate"
+      },
+      "locations": [
+        "/machiavelli"
+      ],
+      "bytes": 24848,
+      "sha256": "a66c120bf2c3f18306354db90af25c4d60deebadedf8f74debd580431a1a65d4",
+      "sslVerifyResult": 0,
+      "nelPresent": true,
+      "setCookiePresent": false,
+      "checks": {
+        "reachable": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/launch-readiness-missing-20261104",
+      "requestedUrl": "https://a7061f87-ali-gazal-site.aliicerikmedya.workers.dev/launch-readiness-missing-20261104",
+      "effectiveUrl": "https://a7061f87-ali-gazal-site.aliicerikmedya.workers.dev/launch-readiness-missing-20261104",
+      "status": 404,
+      "curlExit": 0,
+      "error": null,
+      "headers": {
+        "content-type": "text/html",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "x-robots-tag": "noindex",
+        "content-security-policy": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; worker-src 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "locations": [],
+      "bytes": 2439,
+      "sha256": "e2ed1f10876ae30d1bf562ea46c17c37150aec5dcd1f95eac4c5ba9cdc84e7c4",
+      "sslVerifyResult": 0,
+      "nelPresent": true,
+      "setCookiePresent": false,
+      "checks": {
+        "notPublic": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/wrangler.jsonc",
+      "requestedUrl": "https://a7061f87-ali-gazal-site.aliicerikmedya.workers.dev/wrangler.jsonc",
+      "effectiveUrl": "https://a7061f87-ali-gazal-site.aliicerikmedya.workers.dev/wrangler.jsonc",
+      "status": 404,
+      "curlExit": 0,
+      "error": null,
+      "headers": {
+        "content-type": "text/html",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "x-robots-tag": "noindex",
+        "content-security-policy": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; worker-src 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "locations": [],
+      "bytes": 2439,
+      "sha256": "e2ed1f10876ae30d1bf562ea46c17c37150aec5dcd1f95eac4c5ba9cdc84e7c4",
+      "sslVerifyResult": 0,
+      "nelPresent": true,
+      "setCookiePresent": false,
+      "checks": {
+        "notPublic": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/.git/config",
+      "requestedUrl": "https://a7061f87-ali-gazal-site.aliicerikmedya.workers.dev/.git/config",
+      "effectiveUrl": "https://a7061f87-ali-gazal-site.aliicerikmedya.workers.dev/.git/config",
+      "status": 404,
+      "curlExit": 0,
+      "error": null,
+      "headers": {
+        "content-type": "text/html",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "x-robots-tag": "noindex",
+        "content-security-policy": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; worker-src 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "locations": [],
+      "bytes": 2439,
+      "sha256": "e2ed1f10876ae30d1bf562ea46c17c37150aec5dcd1f95eac4c5ba9cdc84e7c4",
+      "sslVerifyResult": 0,
+      "nelPresent": true,
+      "setCookiePresent": false,
+      "checks": {
+        "notPublic": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/content/archive.json",
+      "requestedUrl": "https://a7061f87-ali-gazal-site.aliicerikmedya.workers.dev/content/archive.json",
+      "effectiveUrl": "https://a7061f87-ali-gazal-site.aliicerikmedya.workers.dev/content/archive.json",
+      "status": 404,
+      "curlExit": 0,
+      "error": null,
+      "headers": {
+        "content-type": "text/html",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "x-robots-tag": "noindex",
+        "content-security-policy": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; worker-src 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "locations": [],
+      "bytes": 2439,
+      "sha256": "e2ed1f10876ae30d1bf562ea46c17c37150aec5dcd1f95eac4c5ba9cdc84e7c4",
+      "sslVerifyResult": 0,
+      "nelPresent": true,
+      "setCookiePresent": false,
+      "checks": {
+        "notPublic": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/docs/launch-readiness-2026-11-04/REPORT.md",
+      "requestedUrl": "https://a7061f87-ali-gazal-site.aliicerikmedya.workers.dev/docs/launch-readiness-2026-11-04/REPORT.md",
+      "effectiveUrl": "https://a7061f87-ali-gazal-site.aliicerikmedya.workers.dev/docs/launch-readiness-2026-11-04/REPORT.md",
+      "status": 404,
+      "curlExit": 0,
+      "error": null,
+      "headers": {
+        "content-type": "text/html",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "x-robots-tag": "noindex",
+        "content-security-policy": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; worker-src 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "locations": [],
+      "bytes": 2439,
+      "sha256": "e2ed1f10876ae30d1bf562ea46c17c37150aec5dcd1f95eac4c5ba9cdc84e7c4",
+      "sslVerifyResult": 0,
+      "nelPresent": true,
+      "setCookiePresent": false,
+      "checks": {
+        "notPublic": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/scripts/test-launch-readiness.js",
+      "requestedUrl": "https://a7061f87-ali-gazal-site.aliicerikmedya.workers.dev/scripts/test-launch-readiness.js",
+      "effectiveUrl": "https://a7061f87-ali-gazal-site.aliicerikmedya.workers.dev/scripts/test-launch-readiness.js",
+      "status": 404,
+      "curlExit": 0,
+      "error": null,
+      "headers": {
+        "content-type": "text/html",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "x-robots-tag": "noindex",
+        "content-security-policy": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; worker-src 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "locations": [],
+      "bytes": 2439,
+      "sha256": "e2ed1f10876ae30d1bf562ea46c17c37150aec5dcd1f95eac4c5ba9cdc84e7c4",
+      "sslVerifyResult": 0,
+      "nelPresent": true,
+      "setCookiePresent": false,
+      "checks": {
+        "notPublic": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/README.txt",
+      "requestedUrl": "https://a7061f87-ali-gazal-site.aliicerikmedya.workers.dev/README.txt",
+      "effectiveUrl": "https://a7061f87-ali-gazal-site.aliicerikmedya.workers.dev/README.txt",
+      "status": 404,
+      "curlExit": 0,
+      "error": null,
+      "headers": {
+        "content-type": "text/html",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "x-robots-tag": "noindex",
+        "content-security-policy": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; worker-src 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "locations": [],
+      "bytes": 2439,
+      "sha256": "e2ed1f10876ae30d1bf562ea46c17c37150aec5dcd1f95eac4c5ba9cdc84e7c4",
+      "sslVerifyResult": 0,
+      "nelPresent": true,
+      "setCookiePresent": false,
+      "checks": {
+        "notPublic": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/_headers",
+      "requestedUrl": "https://a7061f87-ali-gazal-site.aliicerikmedya.workers.dev/_headers",
+      "effectiveUrl": "https://a7061f87-ali-gazal-site.aliicerikmedya.workers.dev/_headers",
+      "status": 404,
+      "curlExit": 0,
+      "error": null,
+      "headers": {
+        "content-type": "text/html",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "x-robots-tag": "noindex",
+        "content-security-policy": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; worker-src 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "locations": [],
+      "bytes": 2439,
+      "sha256": "e2ed1f10876ae30d1bf562ea46c17c37150aec5dcd1f95eac4c5ba9cdc84e7c4",
+      "sslVerifyResult": 0,
+      "nelPresent": true,
+      "setCookiePresent": false,
+      "checks": {
+        "notPublic": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/_launch-qa",
+      "requestedUrl": "https://a7061f87-ali-gazal-site.aliicerikmedya.workers.dev/_launch-qa",
+      "effectiveUrl": "https://a7061f87-ali-gazal-site.aliicerikmedya.workers.dev/_launch-qa",
+      "status": 404,
+      "curlExit": 0,
+      "error": null,
+      "headers": {
+        "content-type": "text/html",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "x-robots-tag": "noindex",
+        "content-security-policy": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; worker-src 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "locations": [],
+      "bytes": 2439,
+      "sha256": "e2ed1f10876ae30d1bf562ea46c17c37150aec5dcd1f95eac4c5ba9cdc84e7c4",
+      "sslVerifyResult": 0,
+      "nelPresent": true,
+      "setCookiePresent": false,
+      "checks": {
+        "notPublic": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/_launch-qa.html",
+      "requestedUrl": "https://a7061f87-ali-gazal-site.aliicerikmedya.workers.dev/_launch-qa.html",
+      "effectiveUrl": "https://a7061f87-ali-gazal-site.aliicerikmedya.workers.dev/_launch-qa.html",
+      "status": 404,
+      "curlExit": 0,
+      "error": null,
+      "headers": {
+        "content-type": "text/html",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "x-robots-tag": "noindex",
+        "content-security-policy": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; worker-src 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "locations": [],
+      "bytes": 2439,
+      "sha256": "e2ed1f10876ae30d1bf562ea46c17c37150aec5dcd1f95eac4c5ba9cdc84e7c4",
+      "sslVerifyResult": 0,
+      "nelPresent": true,
+      "setCookiePresent": false,
+      "checks": {
+        "notPublic": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/_launch-qa.js",
+      "requestedUrl": "https://a7061f87-ali-gazal-site.aliicerikmedya.workers.dev/_launch-qa.js",
+      "effectiveUrl": "https://a7061f87-ali-gazal-site.aliicerikmedya.workers.dev/_launch-qa.js",
+      "status": 404,
+      "curlExit": 0,
+      "error": null,
+      "headers": {
+        "content-type": "text/html",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "x-robots-tag": "noindex",
+        "content-security-policy": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; worker-src 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "locations": [],
+      "bytes": 2439,
+      "sha256": "e2ed1f10876ae30d1bf562ea46c17c37150aec5dcd1f95eac4c5ba9cdc84e7c4",
+      "sslVerifyResult": 0,
+      "nelPresent": true,
+      "setCookiePresent": false,
+      "checks": {
+        "notPublic": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/_launch-prelude.js",
+      "requestedUrl": "https://a7061f87-ali-gazal-site.aliicerikmedya.workers.dev/_launch-prelude.js",
+      "effectiveUrl": "https://a7061f87-ali-gazal-site.aliicerikmedya.workers.dev/_launch-prelude.js",
+      "status": 404,
+      "curlExit": 0,
+      "error": null,
+      "headers": {
+        "content-type": "text/html",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "x-robots-tag": "noindex",
+        "content-security-policy": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; worker-src 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "locations": [],
+      "bytes": 2439,
+      "sha256": "e2ed1f10876ae30d1bf562ea46c17c37150aec5dcd1f95eac4c5ba9cdc84e7c4",
+      "sslVerifyResult": 0,
+      "nelPresent": true,
+      "setCookiePresent": false,
+      "checks": {
+        "notPublic": true
+      },
+      "passed": true
+    },
+    {
+      "path": "/site.js.map",
+      "requestedUrl": "https://a7061f87-ali-gazal-site.aliicerikmedya.workers.dev/site.js.map",
+      "effectiveUrl": "https://a7061f87-ali-gazal-site.aliicerikmedya.workers.dev/site.js.map",
+      "status": 404,
+      "curlExit": 0,
+      "error": null,
+      "headers": {
+        "content-type": "text/html",
+        "cache-control": "public, max-age=0, must-revalidate",
+        "x-robots-tag": "noindex",
+        "content-security-policy": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; worker-src 'none'",
+        "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=()",
+        "referrer-policy": "strict-origin-when-cross-origin",
+        "x-content-type-options": "nosniff",
+        "x-frame-options": "SAMEORIGIN"
+      },
+      "locations": [],
+      "bytes": 2439,
+      "sha256": "e2ed1f10876ae30d1bf562ea46c17c37150aec5dcd1f95eac4c5ba9cdc84e7c4",
+      "sslVerifyResult": 0,
+      "nelPresent": true,
+      "setCookiePresent": false,
+      "checks": {
+        "notPublic": true
+      },
+      "passed": true
+    }
+  ]
+}

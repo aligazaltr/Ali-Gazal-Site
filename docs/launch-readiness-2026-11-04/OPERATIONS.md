@@ -1,6 +1,6 @@
 # İşletim, panel işlemleri ve geri dönüş
 
-4 Kasım 2026. Bu adımlar hazırlanmıştır; uygulanmış hesap ayarları gibi okunmamalıdır. Main veya DNS değişikliği için sahibin ayrıca onayı gerekir.
+4 Kasım 2026 güncellemesi: kullanıcının master üretim talimatı kapsamında PR #13 birleştirildi. Teknik üretim commit’i `d1207a4345eaf35117236a12bfac52961b9be361`; başarılı Cloudflare sürümü `c836d4fb-b12e-4095-8cf4-829a21770d4a`. Altı üretim sayfasının HTML, canonical ve güvenlik başlıkları doğrulandı. Aşağıdaki hesap/DNS işlemleri **uygulanmış değildir**. Yeni yayın kaydı: [üretim ve kontrollü metin düzeltmeleri](../production-release-2026-11-04/RELEASE.md).
 
 ## Öncelik 1 — Alan adı ve tek ana adres
 
@@ -9,7 +9,7 @@
 3. Rules → Redirect Rules / Single Redirect: kaynak koşulu `(http.host eq "www.aligazal.com") or (http.host eq "aligazal.com" and http.request.scheme eq "http")`. Hedef dinamik ifade `concat("https://aligazal.com", http.request.uri.path)`, **preserve query string**, durum **308**. Böylece www ve bu iki hostun HTTP trafiği tek kanonik adrese gider. Hedef host bu koşula HTTPS ile tekrar eşleşmediğinden döngü oluşmaz. Zone'da başka kurallar varsa öncelik/çakışma testi yap; aynı işi yapan ikinci kural ekleme.
 4. Şu dört adresi dış cihazdan dene: `http://aligazal.com/machiavelli?ref=test`, `http://www.aligazal.com/machiavelli?ref=test`, `https://www.aligazal.com/machiavelli?ref=test`, `https://aligazal.com/machiavelli?ref=test`. İlk üçü kalıcı yönlendirme, sonuncusu 200; yol/sorgu korunmalı. Önizleme `*.workers.dev` adresleri bu zone kuralına dahil edilmez.
 5. Eski Workers adresindeki tam 308 bu zone kuralıyla sağlanamaz. Assets-only `_redirects` host eşleştirmesi desteklemez. İleride gerçekten gerekirse exact-host kontrolü olan Worker request handler, ASSETS binding ve run_worker_first ayrı değişiklik olarak hazırlanmalı; önizlemeler hariç tutulmalı, yanıt başlıkları yeniden uygulanmalı ve Worker istek kotası değerlendirilmelidir. Şimdilik eski linkler çalışır, yeni canonical/paylaşım adresi kullanılır.
-6. PR #13'ün temiz önizlemesini incele. Yayın onayı gelince merge → başarılı üretim build'i → canlı header/canonical/OG/404/tema/paylaşım kontrolü sırası izlenir. DNS ayarı ile kod onayının birbirinin yerine geçtiğini varsayma.
+6. PR #13 için merge → başarılı üretim build’i → canlı header/canonical/OG/404 kontrolü tamamlandı. Sonraki değişikliklerde de ayrı dal/PR, temiz önizleme ve üretim doğrulaması kullan. DNS ayarı ile kod onayının birbirinin yerine geçtiğini varsayma.
 
 ## Öncelik 2 — Hesap güvenliği
 
@@ -23,8 +23,8 @@
 
 ## Öncelik 3 — Google ve sosyal paylaşım
 
-1. Google Search Console → Domain Property: `aligazal.com`. Google'ın ürettiği gerçek TXT değerini DNS'e ekle; mevcut TXT/MX kayıtlarını silme. Doğrulama başarılı olmadan kurulmuş sayma.
-2. Kod canlıya alındıktan ve sitemap yeni alan adında doğru olduktan sonra `https://aligazal.com/sitemap.xml` gönder. URL Inspection ile ana sayfa ve Machiavelli'yi kontrol et. İndeksleme garanti edilmez.
+1. Kullanıcı `aligazal.com` Domain Property sahipliğini DNS üzerinden **zaten doğruladığını** bildirdi. Doğrulama tekrarlanmaz; mevcut Google TXT kaydı korunur. Bu çalışmada Search Console hesabına erişilmedi.
+2. Yeni alan adlı sitemap teknik olarak canlı ve doğrulandı. Mevcut doğrulanmış mülkte Sitemaps raporunu kontrol et; gönderilmediyse `https://aligazal.com/sitemap.xml` gönder. Gönderilmişse yeniden kurulum gerekmez. URL Inspection ile ana sayfa ve Machiavelli’yi kontrol et. Google’a gönderim bu çalışmada bağımsız doğrulanamadı; indeksleme garanti edilmez.
 3. Gerçek cihazda ana sayfa/Machiavelli bağlantısını WhatsApp, Telegram, Discord, Facebook ve X'te önizle; gereksiz herkese açık gönderi gerekmez. Mevcut önbellek değişimi hemen göstermeyebilir. İncelemede platform hesaplarına paylaşım gönderilmedi.
 4. Video yayımlandığında gerçek URL, kesin başlık, yayın tarihi, süre ve varsa doğrulanmış chapter listesini kullan. Bunlar olmadan published=true yapılmaz.
 
@@ -36,7 +36,8 @@ GitHub, kaynak/optimize görseller/önceki commit'leri tutar; aynı hesaptaki re
 
 ### Kod geri dönüşü
 
-- Şu an doğrulanmış üretim kodu: `7b238f140a67c840b425933eba09bee33afb76a0`.
+- PR #13 öncesi üretim kodu: `7b238f140a67c840b425933eba09bee33afb76a0`.
+- Teknik yayın sonrası doğrulanmış üretim kodu: `d1207a4345eaf35117236a12bfac52961b9be361`; sürüm `c836d4fb-b12e-4095-8cf4-829a21770d4a`. Küçük metin düzeltmesini geri almak için bu teknik sürüm korunacak. PR #14’ün son üretim build/sürüm kaydı PR açıklamasında tutulacak.
 - Yeni sürüm sonrasında sorun varsa önce hatayı/başarısız build'i belirle. Çalışan main tarihçesini force-push ile değiştirme.
 - Hatalı yayın commit'i için **yeni dalda revert commit + PR + test** hazırla; merge ancak sahibin onayıyla yapılır. DNS değişiklikleri git revert ile geri alınmaz.
 - Acil durumda Cloudflare → Worker → Deployments/Versions → son çalışan **üretim** sürümünü rollback/redeploy seç; preview sürümünü yanlışlıkla üretim sanma. Bindings ve config uyumluluğunu kontrol et. Dış domain/zone redirect kuralları rollback ile otomatik geri dönmeyebilir.

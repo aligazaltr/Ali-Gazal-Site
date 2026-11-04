@@ -33,7 +33,7 @@ def probe(base,path):
   if path in PAGES and m.get('http_code')==200:
    meta=Metadata();meta.feed(b.decode(errors='replace'));route=path
    row.update(canonical=meta.canonical,metadata=meta.values,h1=meta.h1)
-   row['checks']={'canonical':meta.canonical=='https://aligazal.com'+route,'ogUrl':meta.values.get('og:url')=='https://aligazal.com'+route,'metadata':all(meta.values.get(k) for k in ['description','og:title','og:description','twitter:card','twitter:title','twitter:description']),'heading':meta.h1==1,'securityHeaders':all(h.get(k) for k in SECURITY),'previewNoindex':'noindex' in h.get('x-robots-tag',''),'exactBuiltHtml':b==(ROOT/PAGES[path]).read_bytes()}
+   row['checks']={'canonical':meta.canonical=='https://aligazal.com'+route,'ogUrl':meta.values.get('og:url')=='https://aligazal.com'+route,'metadata':all(meta.values.get(k) for k in ['description','og:title','og:description','twitter:card','twitter:title','twitter:description']),'heading':meta.h1==1,'securityHeaders':all(h.get(k) for k in SECURITY),'indexingPolicy':('noindex' not in (h.get('x-robots-tag','')+' '+meta.values.get('robots','')).lower()) if urlsplit(base).hostname=='aligazal.com' else 'noindex' in h.get('x-robots-tag',''),'exactBuiltHtml':b==(ROOT/PAGES[path]).read_bytes()}
   elif path.startswith('/_launch-') or path in ['/wrangler.jsonc','/.git/config','/content/archive.json','/docs/launch-readiness-2026-11-04/REPORT.md','/scripts/test-launch-readiness.js','/README.txt','/_headers','/site.js.map','/launch-readiness-missing-20261104']:
    row['checks']={'notPublic':m.get('http_code')==404}
   else:
@@ -49,7 +49,7 @@ def main():
  with concurrent.futures.ThreadPoolExecutor(max_workers=4) as ex:rows=list(ex.map(lambda p:probe(base,p),paths))
  # Extension/slash redirects resolve to pages, so compare via explicit observations,
  # not a guessed file named with a trailing slash.
- result={'capturedAt':datetime.datetime.now(datetime.timezone.utc).isoformat(),'origin':base,'note':'Preview-only audit through an egress proxy. HTTP timings and UA metadata are not real social-platform previews or field performance.','total':len(rows),'failed':[r for r in rows if not r['passed']],'requests':rows}
+ result={'capturedAt':datetime.datetime.now(datetime.timezone.utc).isoformat(),'origin':base,'note':'Read-only audit through an egress proxy; production must be indexable, previews must carry noindex. HTTP timings and UA metadata are not real social-platform previews or field performance.','total':len(rows),'failed':[r for r in rows if not r['passed']],'requests':rows}
  Path(args.output).write_text(json.dumps(result,indent=2)+'\n')
  print(json.dumps({'total':len(rows),'failed':[{'path':r['path'],'status':r['status'],'error':r['error'],'checks':r.get('checks')} for r in result['failed']]}))
 if __name__=='__main__':main()

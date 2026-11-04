@@ -1,0 +1,12 @@
+{
+  "test": "CSP inline canary",
+  "executed": false,
+  "violations": [
+    {
+      "directive": "script-src-elem",
+      "blocked": "inline",
+      "disposition": "enforce"
+    }
+  ],
+  "passed": true
+}
