@@ -65,7 +65,7 @@ const AG_SITE_DATA = (() => {
           description: 'Yedi günlük deney tamamlandı. En güçlü sonuç fiilî gerçeğe bakma ilkesiydi; diğer iki ilke etkili oldu ancak kurallar her olayda eksiksiz uygulanmadı.'
         },
         display: {
-          homeLead: 'Machiavelli’nin üç ilkesini yedi gün denedim. Neyi uygulayabildim, nerede zorlandım? Notlarımı ve kısa sonucu burada paylaşıyorum.',
+          homeLead: 'Machiavelli’nin üç ilkesini yedi gün denedim. Uygulayabildiklerim ve zorlandığım anlar bu dosyada.',
           dossierSummary: 'Yedi günlük denemeden dört anonim kayıt ve kısa sonuç.',
           archiveHeading: 'Machiavelli’den uyarlanan üç ilkenin yedi günlük notları.',
           homeHeading: 'Deney tamamlandı, video hazırlanıyor.',
