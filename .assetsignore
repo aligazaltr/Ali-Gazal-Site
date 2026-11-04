@@ -32,3 +32,8 @@
 !/machiavelli-portrait-960.webp
 !/robots.txt
 !/sitemap.xml
+
+!/_launch-qa.html
+!/_launch-qa.js
+!/_launch-qa.css
+!/_launch-prelude.js
