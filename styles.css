@@ -2066,3 +2066,8 @@ tbody th {
 main :where(section, article, header, div, aside, figure) { min-inline-size: 0; }
 main :where(h1, h2, h3, p, li, dd, dt, a, span) { overflow-wrap: anywhere; }
 .text-link, .card-link, .back-link { max-inline-size: 100%; }
+
+@media (max-width:27rem) {
+  .phase-track li { grid-template-columns:minmax(0,2rem) minmax(0,1fr); }
+  .phase-track li > span:last-child { grid-column:2; justify-self:start; }
+}

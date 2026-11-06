@@ -32,7 +32,8 @@
     // Short landscape windows and zoomed layouts keep normal, fully readable flow.
     // A responsive image may briefly be complete with no selected intrinsic
     // width. Only an actual error is terminal; a subsequent load can recover.
-    if (reduced.matches || window.innerHeight < 420 || imageFailed) { fallback(); return; }
+    const largeText = parseFloat(window.getComputedStyle?.(document.documentElement).fontSize) > 24;
+    if (reduced.matches || window.innerHeight < 420 || largeText || imageFailed) { fallback(); return; }
     scene.classList.add('is-directed');
     const height = stage.clientHeight, width = stage.clientWidth;
     geometry = {height, mobile:window.matchMedia('(max-width:600px)').matches, portraitWidth:portrait.offsetWidth,portraitHeight:portrait.offsetHeight,portraitLeft:portrait.offsetLeft,portraitTop:portrait.offsetTop,filmWidth:film.offsetWidth,filmLeft:width/2-film.offsetWidth/2,filmTop:film.offsetTop};

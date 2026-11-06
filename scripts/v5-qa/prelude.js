@@ -1,6 +1,6 @@
 /* Test branch only: never allowlisted by the release .assetsignore. */
 (() => {
-  const state = window.__launchQA = {errors:[], violations:[], shares:[], resources:[]};
+  const state = window.__launchQA = {errors:[], violations:[], shares:[], resources:[],imageLifecycle:[]};
   window.addEventListener('error', event=>state.errors.push(String(event.message)));
   window.addEventListener('unhandledrejection', event=>state.errors.push(String(event.reason)));
   document.addEventListener('securitypolicyviolation', event=>state.violations.push({directive:event.effectiveDirective,blocked:event.blockedURI,disposition:event.disposition}));
@@ -8,13 +8,13 @@
   const params=new URLSearchParams(location.search);
   if(params.has('v5measure'))localStorage.setItem('ag-theme',params.get('theme')==='light'?'light':'dark');
   if(options?.text200)document.documentElement.style.fontSize='200%';
-  const metric={lcpMs:null,cls:0,longTasks:0,longestTaskMs:0,observedInteractionMs:[]};
+  const metric={lcpMs:null,cls:0,shifts:[],longTasks:0,longestTaskMs:0,observedInteractionMs:[]};
   for(const type of ['largest-contentful-paint','layout-shift','longtask','event']) {
     if(!window.PerformanceObserver?.supportedEntryTypes.includes(type))continue;
     try {new PerformanceObserver(list=>{
       for(const e of list.getEntries()){
         if(type==='largest-contentful-paint')metric.lcpMs=e.startTime;
-        if(type==='layout-shift'&&!e.hadRecentInput)metric.cls+=e.value;
+        if(type==='layout-shift'&&!e.hadRecentInput){metric.cls+=e.value;metric.shifts.push({at:e.startTime,value:e.value,sources:e.sources.map(s=>({node:s.node?.tagName+'#'+(s.node?.id||'')+'.'+(s.node?.className||''),previous:s.previousRect.toJSON(),current:s.currentRect.toJSON()}))});}
         if(type==='longtask'){metric.longTasks++;metric.longestTaskMs=Math.max(metric.longestTaskMs,e.duration);}
         if(type==='event'&&e.interactionId)metric.observedInteractionMs.push(e.duration);
       }
@@ -32,6 +32,7 @@
     };
     document.body.append(button,result);
   });
+  for(const eventName of ['load','error'])document.addEventListener(eventName,event=>{const i=event.target;if(i?.tagName==='IMG')state.imageLifecycle.push({event:eventName,at:performance.now(),src:i.currentSrc||i.src,complete:i.complete,width:i.naturalWidth});},true);
   state.videoActivations=[];
   document.addEventListener('click',event=>{
     const a=event.target.closest?.('a[data-published-cover],a[data-project-video-link]');
