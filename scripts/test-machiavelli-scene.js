@@ -37,10 +37,10 @@ test('archive contains no page sweep or paper overlay and retains text, author a
   for(const name of ['discovery-turn','discovery-leaf','skewX']) assert.ok(!(js+css).includes(name));
   for(const name of ['.discovery-text','.discovery-author','.discovery-source'])assert.ok(js.includes(name));
 });
-function fixture(reduce=false, height=740) {
+function fixture(reduce=false, height=740, naturalWidth=960, fontSize=16) {
   const listeners={},queue=new Map(),classes=new Set(),props={},imageListeners={};let id=0;
   const style={setProperty:(k,v)=>props[k]=v,removeProperty:k=>delete props[k]};
-  const image={complete:true,naturalWidth:960,addEventListener:(k,v)=>imageListeners[k]=v};
+  const image={complete:true,naturalWidth,addEventListener:(k,v)=>imageListeners[k]=v};
   const portrait={offsetWidth:460,offsetHeight:546,offsetLeft:600,offsetTop:74,querySelector:()=>image};
   const film={offsetWidth:760,offsetTop:111};const stage={clientHeight:height-24,clientWidth:1152,style,removeAttribute:()=>Object.keys(props).forEach(k=>delete props[k])};
   const scene={style,dataset:{},classList:{add:(...names)=>names.forEach(n=>classes.add(n)),remove:(...names)=>names.forEach(n=>classes.delete(n))},getBoundingClientRect:()=>({top:200-window.scrollY}),querySelector:s=>({'.mc-stage':stage,'.mc-portrait':portrait,'.mc-film':film})[s]};
@@ -48,7 +48,7 @@ function fixture(reduce=false, height=740) {
   let observed; class Observer{constructor(f){observed=f;}observe(){}}
   const requestAnimationFrame=f=>{queue.set(++id,f);return id;},cancelAnimationFrame=i=>queue.delete(i);
   const document={hidden:false,querySelector:()=>scene,addEventListener:(n,f)=>listeners[n]=f};
-  const window={innerHeight:height,scrollY:0,IntersectionObserver:Observer,requestAnimationFrame,matchMedia:q=>q.includes('reduced')?preference:{matches:false},addEventListener:(n,f)=>listeners[n]=f};
+  const window={getComputedStyle:()=>({fontSize:String(fontSize)}),innerHeight:height,scrollY:0,IntersectionObserver:Observer,requestAnimationFrame,matchMedia:q=>q.includes('reduced')?preference:{matches:false},addEventListener:(n,f)=>listeners[n]=f};
   vm.runInNewContext(fs.readFileSync(require.resolve('../machiavelli-scene'),'utf8'),{window:{...window,AG_MACHIAVELLI_FRAMES:frames},document,IntersectionObserver:Observer,requestAnimationFrame,cancelAnimationFrame});
   return {listeners,queue,classes,props,preference,scene,imageListeners,document,observe:observed};
 }
@@ -67,4 +67,16 @@ test('an unavailable portrait restores the readable cover and research flow',()=
   const f=fixture();f.observe([{isIntersecting:true}]);assert.equal(f.queue.size,1);
   f.imageListeners.error();assert.equal(f.queue.size,0);assert.equal(f.classes.has('is-directed'),false);
   assert.equal(f.classes.has('is-scrolling'),false);assert.equal(f.scene.dataset.progress,undefined);
+});
+
+test('responsive image selection is not mistaken for a permanent image failure',()=>{
+  const f=fixture(false,740,0);assert.equal(f.classes.has('is-directed'),true);
+  f.imageListeners.error();assert.equal(f.classes.has('is-directed'),false);
+  f.imageListeners.load();assert.equal(f.classes.has('is-directed'),true);
+  f.imageListeners.error();assert.equal(f.classes.has('is-directed'),false);
+  f.imageListeners.load();assert.equal(f.classes.has('is-directed'),true);
+});
+
+test('large reader text keeps the scene in normal readable flow',()=>{
+  const f=fixture(false,740,960,32);assert.equal(f.classes.has('is-directed'),false);assert.equal(f.queue.size,0);
 });

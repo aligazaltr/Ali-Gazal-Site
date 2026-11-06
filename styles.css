@@ -2061,3 +2061,19 @@ tbody th {
     border-color: #bbb;
   }
 }
+
+/* Reflow: grid minimums must not force enlarged or long text off the page. */
+main :where(section, article, header, div, aside, figure) { min-inline-size: 0; }
+main { overflow-wrap:anywhere; }
+.text-link, .card-link, .back-link { max-inline-size: 100%; }
+
+@media (max-width:27rem) {
+  .phase-track li { grid-template-columns:minmax(0,2rem) minmax(0,1fr); }
+  .phase-track li > span:last-child { grid-column:2; justify-self:start; }
+}
+
+/* Hidden enhancement controls reserve geometry only when JS is available. */
+html[data-js] .theme-toggle[hidden] { display:inline-flex!important; visibility:hidden; }
+[data-theme-label] { min-inline-size:5.1em; text-align:start; }
+
+.reading-lines { max-inline-size:100%; }

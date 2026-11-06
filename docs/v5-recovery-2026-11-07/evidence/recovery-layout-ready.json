@@ -1,0 +1,4526 @@
+{
+  "test": "layout",
+  "total": 98,
+  "failed": [
+    {
+      "page": "dusunce-arsivi.html",
+      "width": 360,
+      "theme": "light",
+      "passed": false,
+      "error": "Error: Document/CSS/theme readiness deadline: dusunce-arsivi.html"
+    },
+    {
+      "page": "dusunce-arsivi.html",
+      "width": 1440,
+      "theme": "light",
+      "passed": false,
+      "error": "Error: Document/CSS/theme readiness deadline: dusunce-arsivi.html"
+    },
+    {
+      "page": "hakkimda.html",
+      "width": 390,
+      "theme": "dark",
+      "passed": false,
+      "error": "Error: Document/CSS/theme readiness deadline: hakkimda.html"
+    },
+    {
+      "page": "/hakkimda",
+      "viewport": 360,
+      "width": 345,
+      "height": 740,
+      "documentWidth": 345,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [
+        {
+          "text": "Ana sayfa",
+          "width": 64.421875,
+          "height": 17
+        },
+        {
+          "text": "Projeler",
+          "width": 50.65625,
+          "height": 17
+        },
+        {
+          "text": "Düşünce Arşivi",
+          "width": 99.109375,
+          "height": 17
+        },
+        {
+          "text": "Hakkında",
+          "width": 62.203125,
+          "height": 17
+        },
+        {
+          "text": "☀\n        Açık tema",
+          "width": 94.875,
+          "height": 21
+        },
+        {
+          "text": "Bu önizlemeCanlı site",
+          "width": 96,
+          "height": 19
+        },
+        {
+          "text": "Çalışmalarımı keşfet →",
+          "width": 152.859375,
+          "height": 17
+        },
+        {
+          "text": "YouTube kanalıma git ↗",
+          "width": 158.25,
+          "height": 17
+        }
+      ],
+      "canonical": "https://aligazal.com/hakkimda",
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 0,
+      "imageLifecycle": [],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": false
+    },
+    {
+      "page": "/hakkimda",
+      "viewport": 390,
+      "width": 375,
+      "height": 740,
+      "documentWidth": 375,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [
+        {
+          "text": "Ana sayfa",
+          "width": 64.421875,
+          "height": 17
+        },
+        {
+          "text": "Projeler",
+          "width": 50.65625,
+          "height": 17
+        },
+        {
+          "text": "Düşünce Arşivi",
+          "width": 99.109375,
+          "height": 17
+        },
+        {
+          "text": "Hakkında",
+          "width": 62.203125,
+          "height": 17
+        },
+        {
+          "text": "☀\n        Açık tema",
+          "width": 94.875,
+          "height": 21
+        },
+        {
+          "text": "Çalışmalarımı keşfet →",
+          "width": 152.859375,
+          "height": 17
+        },
+        {
+          "text": "YouTube kanalıma git ↗",
+          "width": 158.25,
+          "height": 17
+        }
+      ],
+      "canonical": "https://aligazal.com/hakkimda",
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 0,
+      "imageLifecycle": [],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": false
+    },
+    {
+      "page": "/hakkimda",
+      "viewport": 430,
+      "width": 415,
+      "height": 740,
+      "documentWidth": 415,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [
+        {
+          "text": "Ana sayfa",
+          "width": 64.421875,
+          "height": 17
+        },
+        {
+          "text": "Projeler",
+          "width": 50.65625,
+          "height": 17
+        },
+        {
+          "text": "Düşünce Arşivi",
+          "width": 99.109375,
+          "height": 17
+        },
+        {
+          "text": "Hakkında",
+          "width": 62.203125,
+          "height": 17
+        },
+        {
+          "text": "☀\n        Açık tema",
+          "width": 94.875,
+          "height": 21
+        },
+        {
+          "text": "Çalışmalarımı keşfet →",
+          "width": 152.859375,
+          "height": 17
+        },
+        {
+          "text": "YouTube kanalıma git ↗",
+          "width": 158.25,
+          "height": 17
+        }
+      ],
+      "canonical": "https://aligazal.com/hakkimda",
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 0,
+      "imageLifecycle": [],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": false
+    },
+    {
+      "page": "/hakkimda",
+      "viewport": 1024,
+      "width": 1009,
+      "height": 740,
+      "documentWidth": 1009,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [
+        {
+          "text": "Bu önizlemeCanlı site",
+          "width": 96,
+          "height": 19
+        }
+      ],
+      "canonical": "https://aligazal.com/hakkimda",
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 0,
+      "imageLifecycle": [],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": false
+    },
+    {
+      "page": "/hakkimda",
+      "viewport": 1440,
+      "width": 1425,
+      "height": 740,
+      "documentWidth": 1425,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [
+        {
+          "text": "Bu önizlemeCanlı site",
+          "width": 96,
+          "height": 19
+        }
+      ],
+      "canonical": "https://aligazal.com/hakkimda",
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 0,
+      "imageLifecycle": [],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": false
+    },
+    {
+      "page": "irade-terbiyesi.html",
+      "width": 360,
+      "theme": "dark",
+      "passed": false,
+      "error": "Error: Document/CSS/theme readiness deadline: irade-terbiyesi.html"
+    },
+    {
+      "page": "irade-terbiyesi.html",
+      "width": 390,
+      "theme": "dark",
+      "passed": false,
+      "error": "Error: Document/CSS/theme readiness deadline: irade-terbiyesi.html"
+    },
+    {
+      "page": "irade-terbiyesi.html",
+      "width": 320,
+      "theme": "light",
+      "passed": false,
+      "error": "Error: Document/CSS/theme readiness deadline: irade-terbiyesi.html"
+    },
+    {
+      "page": "irade-terbiyesi.html",
+      "width": 1024,
+      "theme": "light",
+      "passed": false,
+      "error": "Error: Document/CSS/theme readiness deadline: irade-terbiyesi.html"
+    },
+    {
+      "page": "404.html",
+      "width": 1024,
+      "theme": "dark",
+      "passed": false,
+      "error": "Error: Document/CSS/theme readiness deadline: 404.html"
+    },
+    {
+      "page": "/404",
+      "viewport": 430,
+      "width": 430,
+      "height": 740,
+      "documentWidth": 430,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [
+        {
+          "text": "Ana sayfa",
+          "width": 64.421875,
+          "height": 17
+        },
+        {
+          "text": "Projeler",
+          "width": 50.65625,
+          "height": 17
+        },
+        {
+          "text": "Düşünce Arşivi",
+          "width": 99.109375,
+          "height": 17
+        },
+        {
+          "text": "Hakkında",
+          "width": 62.203125,
+          "height": 17
+        },
+        {
+          "text": "☀\n        Açık tema",
+          "width": 94.875,
+          "height": 21
+        },
+        {
+          "text": "Güncel projeler",
+          "width": 99.953125,
+          "height": 17
+        },
+        {
+          "text": "Ana sayfa",
+          "width": 64.421875,
+          "height": 17
+        }
+      ],
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 0,
+      "imageLifecycle": [],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": false
+    }
+  ],
+  "rows": [
+    {
+      "page": "/",
+      "viewport": 320,
+      "width": 305,
+      "height": 740,
+      "documentWidth": 305,
+      "theme": "dark",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/",
+      "images": [
+        {
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "loaded": true
+        }
+      ],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 7,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 167,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 167,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 228.2999999988824,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 228.2999999988824,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/",
+      "viewport": 360,
+      "width": 345,
+      "height": 740,
+      "documentWidth": 345,
+      "theme": "dark",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/",
+      "images": [
+        {
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "loaded": true
+        }
+      ],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 8,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 187.40000000037253,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 272.5,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 272.5,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/",
+      "viewport": 390,
+      "width": 375,
+      "height": 740,
+      "documentWidth": 375,
+      "theme": "dark",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/",
+      "images": [
+        {
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "loaded": true
+        }
+      ],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 8,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 162.09999999962747,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 162.09999999962747,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 214.5,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 214.5,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/",
+      "viewport": 430,
+      "width": 415,
+      "height": 740,
+      "documentWidth": 415,
+      "theme": "dark",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/",
+      "images": [
+        {
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "loaded": true
+        }
+      ],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 8,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 160.7999999988824,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 160.89999999850988,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 225.19999999925494,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 225.19999999925494,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/",
+      "viewport": 768,
+      "width": 753,
+      "height": 740,
+      "documentWidth": 753,
+      "theme": "dark",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/",
+      "images": [
+        {
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "loaded": true
+        }
+      ],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 7,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 162.90000000037253,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 222,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 222,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/",
+      "viewport": 1024,
+      "width": 1009,
+      "height": 740,
+      "documentWidth": 1009,
+      "theme": "dark",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/",
+      "images": [
+        {
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "loaded": true
+        }
+      ],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 9,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 142.10000000149012,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 142.2000000011176,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 223.2000000011176,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 223.2000000011176,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/",
+      "viewport": 1440,
+      "width": 1425,
+      "height": 740,
+      "documentWidth": 1425,
+      "theme": "dark",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/",
+      "images": [
+        {
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "loaded": true
+        }
+      ],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 7,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 149.7000000011176,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 218.09999999962747,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 218.2000000011176,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/",
+      "viewport": 320,
+      "width": 305,
+      "height": 740,
+      "documentWidth": 305,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/",
+      "images": [
+        {
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "loaded": true
+        }
+      ],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 7,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 331.80000000074506,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 538.7000000011176,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 538.7000000011176,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/",
+      "viewport": 360,
+      "width": 345,
+      "height": 740,
+      "documentWidth": 345,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/",
+      "images": [
+        {
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "loaded": true
+        }
+      ],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 8,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 151.2000000011176,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 151.2000000011176,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 202,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 202,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/",
+      "viewport": 390,
+      "width": 375,
+      "height": 740,
+      "documentWidth": 375,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/",
+      "images": [
+        {
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "loaded": true
+        }
+      ],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 8,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 151.80000000074506,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 212.19999999925494,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 212.19999999925494,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/",
+      "viewport": 430,
+      "width": 415,
+      "height": 740,
+      "documentWidth": 415,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/",
+      "images": [
+        {
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "loaded": true
+        }
+      ],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 8,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 186.40000000037253,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 186.5,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 240.90000000037253,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 240.90000000037253,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/",
+      "viewport": 768,
+      "width": 753,
+      "height": 740,
+      "documentWidth": 753,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/",
+      "images": [
+        {
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "loaded": true
+        }
+      ],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 7,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 168.89999999850988,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 243,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 243,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/",
+      "viewport": 1024,
+      "width": 1009,
+      "height": 740,
+      "documentWidth": 1009,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/",
+      "images": [
+        {
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "loaded": true
+        }
+      ],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 9,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 148.60000000149012,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 148.60000000149012,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 217.10000000149012,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 217.10000000149012,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/",
+      "viewport": 1440,
+      "width": 1425,
+      "height": 740,
+      "documentWidth": 1425,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/",
+      "images": [
+        {
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "loaded": true
+        }
+      ],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 7,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 164.80000000074506,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 164.80000000074506,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 223.2000000011176,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 223.2000000011176,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/machiavelli",
+      "viewport": 320,
+      "width": 305,
+      "height": 740,
+      "documentWidth": 305,
+      "theme": "dark",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/machiavelli",
+      "images": [
+        {
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-640.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "loaded": true
+        }
+      ],
+      "scene": true,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 0,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 175.2999999988824,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-640.webp",
+          "complete": true,
+          "width": 256
+        },
+        {
+          "event": "load",
+          "at": 217.69999999925494,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 265.69999999925494,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [
+        {
+          "selector": ".mc-film figcaption",
+          "fontSize": "11px",
+          "lineHeight": "18.15px",
+          "color": "rgb(170, 166, 158)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(170, 166, 158)"
+        },
+        {
+          "selector": ".mc-source-note",
+          "fontSize": "13px",
+          "lineHeight": "21.45px",
+          "color": "rgb(170, 166, 158)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(170, 166, 158)"
+        },
+        {
+          "selector": ".mc-date",
+          "fontSize": "11px",
+          "lineHeight": "18.15px",
+          "color": "rgb(170, 166, 158)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(170, 166, 158)"
+        },
+        {
+          "selector": ".mc-outcome [data-project-field=\"statusLabel\"]",
+          "fontSize": "12px",
+          "lineHeight": "19.8px",
+          "color": "rgb(209, 204, 195)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(209, 204, 195)"
+        }
+      ],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/machiavelli",
+      "viewport": 360,
+      "width": 345,
+      "height": 740,
+      "documentWidth": 345,
+      "theme": "dark",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/machiavelli",
+      "images": [
+        {
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-640.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "loaded": true
+        }
+      ],
+      "scene": true,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 0,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 153.40000000037253,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-640.webp",
+          "complete": true,
+          "width": 288
+        },
+        {
+          "event": "load",
+          "at": 225,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [
+        {
+          "selector": ".mc-film figcaption",
+          "fontSize": "11px",
+          "lineHeight": "18.15px",
+          "color": "rgb(170, 166, 158)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(170, 166, 158)"
+        },
+        {
+          "selector": ".mc-source-note",
+          "fontSize": "13px",
+          "lineHeight": "21.45px",
+          "color": "rgb(170, 166, 158)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(170, 166, 158)"
+        },
+        {
+          "selector": ".mc-date",
+          "fontSize": "11px",
+          "lineHeight": "18.15px",
+          "color": "rgb(170, 166, 158)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(170, 166, 158)"
+        },
+        {
+          "selector": ".mc-outcome [data-project-field=\"statusLabel\"]",
+          "fontSize": "12px",
+          "lineHeight": "19.8px",
+          "color": "rgb(209, 204, 195)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(209, 204, 195)"
+        }
+      ],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/machiavelli",
+      "viewport": 390,
+      "width": 375,
+      "height": 740,
+      "documentWidth": 375,
+      "theme": "dark",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/machiavelli",
+      "images": [
+        {
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-640.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "loaded": true
+        }
+      ],
+      "scene": true,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 0,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 154.59999999962747,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-640.webp",
+          "complete": true,
+          "width": 312
+        },
+        {
+          "event": "load",
+          "at": 210.2999999988824,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 225.59999999962747,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [
+        {
+          "selector": ".mc-film figcaption",
+          "fontSize": "11px",
+          "lineHeight": "18.15px",
+          "color": "rgb(170, 166, 158)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(170, 166, 158)"
+        },
+        {
+          "selector": ".mc-source-note",
+          "fontSize": "13px",
+          "lineHeight": "21.45px",
+          "color": "rgb(170, 166, 158)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(170, 166, 158)"
+        },
+        {
+          "selector": ".mc-date",
+          "fontSize": "11px",
+          "lineHeight": "18.15px",
+          "color": "rgb(170, 166, 158)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(170, 166, 158)"
+        },
+        {
+          "selector": ".mc-outcome [data-project-field=\"statusLabel\"]",
+          "fontSize": "12px",
+          "lineHeight": "19.8px",
+          "color": "rgb(209, 204, 195)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(209, 204, 195)"
+        }
+      ],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/machiavelli",
+      "viewport": 430,
+      "width": 415,
+      "height": 740,
+      "documentWidth": 415,
+      "theme": "dark",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/machiavelli",
+      "images": [
+        {
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-640.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "loaded": true
+        }
+      ],
+      "scene": true,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 0,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 302.5,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-640.webp",
+          "complete": true,
+          "width": 343
+        },
+        {
+          "event": "load",
+          "at": 357.5,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 376.59999999962747,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [
+        {
+          "selector": ".mc-film figcaption",
+          "fontSize": "11px",
+          "lineHeight": "18.15px",
+          "color": "rgb(170, 166, 158)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(170, 166, 158)"
+        },
+        {
+          "selector": ".mc-source-note",
+          "fontSize": "13px",
+          "lineHeight": "21.45px",
+          "color": "rgb(170, 166, 158)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(170, 166, 158)"
+        },
+        {
+          "selector": ".mc-date",
+          "fontSize": "11px",
+          "lineHeight": "18.15px",
+          "color": "rgb(170, 166, 158)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(170, 166, 158)"
+        },
+        {
+          "selector": ".mc-outcome [data-project-field=\"statusLabel\"]",
+          "fontSize": "12px",
+          "lineHeight": "19.8px",
+          "color": "rgb(209, 204, 195)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(209, 204, 195)"
+        }
+      ],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/machiavelli",
+      "viewport": 768,
+      "width": 753,
+      "height": 740,
+      "documentWidth": 753,
+      "theme": "dark",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/machiavelli",
+      "images": [
+        {
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-640.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "loaded": true
+        }
+      ],
+      "scene": true,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 0,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 160.69999999925494,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-640.webp",
+          "complete": true,
+          "width": 480
+        },
+        {
+          "event": "load",
+          "at": 214.69999999925494,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 236.7999999988824,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [
+        {
+          "selector": ".mc-film figcaption",
+          "fontSize": "9.92px",
+          "lineHeight": "16.368px",
+          "color": "rgb(170, 166, 158)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(170, 166, 158)"
+        },
+        {
+          "selector": ".mc-source-note",
+          "fontSize": "13px",
+          "lineHeight": "21.45px",
+          "color": "rgb(170, 166, 158)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(170, 166, 158)"
+        },
+        {
+          "selector": ".mc-date",
+          "fontSize": "10.72px",
+          "lineHeight": "17.688px",
+          "color": "rgb(170, 166, 158)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(170, 166, 158)"
+        },
+        {
+          "selector": ".mc-outcome [data-project-field=\"statusLabel\"]",
+          "fontSize": "12.8px",
+          "lineHeight": "21.12px",
+          "color": "rgb(209, 204, 195)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(209, 204, 195)"
+        }
+      ],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/machiavelli",
+      "viewport": 1024,
+      "width": 1009,
+      "height": 740,
+      "documentWidth": 1009,
+      "theme": "dark",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/machiavelli",
+      "images": [
+        {
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-640.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "loaded": true
+        }
+      ],
+      "scene": true,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 0,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 172.40000000037253,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-640.webp",
+          "complete": true,
+          "width": 480
+        },
+        {
+          "event": "load",
+          "at": 228.59999999962747,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 262.5,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [
+        {
+          "selector": ".mc-film figcaption",
+          "fontSize": "9.92px",
+          "lineHeight": "16.368px",
+          "color": "rgb(170, 166, 158)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(170, 166, 158)"
+        },
+        {
+          "selector": ".mc-source-note",
+          "fontSize": "13px",
+          "lineHeight": "21.45px",
+          "color": "rgb(170, 166, 158)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(170, 166, 158)"
+        },
+        {
+          "selector": ".mc-date",
+          "fontSize": "10.72px",
+          "lineHeight": "17.688px",
+          "color": "rgb(170, 166, 158)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(170, 166, 158)"
+        },
+        {
+          "selector": ".mc-outcome [data-project-field=\"statusLabel\"]",
+          "fontSize": "12.8px",
+          "lineHeight": "21.12px",
+          "color": "rgb(209, 204, 195)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(209, 204, 195)"
+        }
+      ],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/machiavelli",
+      "viewport": 1440,
+      "width": 1425,
+      "height": 740,
+      "documentWidth": 1425,
+      "theme": "dark",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/machiavelli",
+      "images": [
+        {
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-640.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "loaded": true
+        }
+      ],
+      "scene": true,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 0,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 166.60000000149012,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-640.webp",
+          "complete": true,
+          "width": 480
+        },
+        {
+          "event": "load",
+          "at": 217.10000000149012,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 241.80000000074506,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [
+        {
+          "selector": ".mc-film figcaption",
+          "fontSize": "9.92px",
+          "lineHeight": "16.368px",
+          "color": "rgb(170, 166, 158)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(170, 166, 158)"
+        },
+        {
+          "selector": ".mc-source-note",
+          "fontSize": "13px",
+          "lineHeight": "21.45px",
+          "color": "rgb(170, 166, 158)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(170, 166, 158)"
+        },
+        {
+          "selector": ".mc-date",
+          "fontSize": "10.72px",
+          "lineHeight": "17.688px",
+          "color": "rgb(170, 166, 158)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(170, 166, 158)"
+        },
+        {
+          "selector": ".mc-outcome [data-project-field=\"statusLabel\"]",
+          "fontSize": "12.8px",
+          "lineHeight": "21.12px",
+          "color": "rgb(209, 204, 195)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(209, 204, 195)"
+        }
+      ],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/machiavelli",
+      "viewport": 320,
+      "width": 305,
+      "height": 740,
+      "documentWidth": 305,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/machiavelli",
+      "images": [
+        {
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-640.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "loaded": true
+        }
+      ],
+      "scene": true,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 0,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 150.60000000149012,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-640.webp",
+          "complete": true,
+          "width": 256
+        },
+        {
+          "event": "load",
+          "at": 204.40000000037253,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 228,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [
+        {
+          "selector": ".mc-film figcaption",
+          "fontSize": "11px",
+          "lineHeight": "18.15px",
+          "color": "rgb(98, 93, 84)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(98, 93, 84)"
+        },
+        {
+          "selector": ".mc-source-note",
+          "fontSize": "13px",
+          "lineHeight": "21.45px",
+          "color": "rgb(98, 93, 84)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(98, 93, 84)"
+        },
+        {
+          "selector": ".mc-date",
+          "fontSize": "11px",
+          "lineHeight": "18.15px",
+          "color": "rgb(98, 93, 84)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(98, 93, 84)"
+        },
+        {
+          "selector": ".mc-outcome [data-project-field=\"statusLabel\"]",
+          "fontSize": "12px",
+          "lineHeight": "19.8px",
+          "color": "rgb(71, 65, 56)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(71, 65, 56)"
+        }
+      ],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/machiavelli",
+      "viewport": 360,
+      "width": 345,
+      "height": 740,
+      "documentWidth": 345,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/machiavelli",
+      "images": [
+        {
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-640.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "loaded": true
+        }
+      ],
+      "scene": true,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 0,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 151.09999999962747,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-640.webp",
+          "complete": true,
+          "width": 288
+        },
+        {
+          "event": "load",
+          "at": 227.40000000037253,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [
+        {
+          "selector": ".mc-film figcaption",
+          "fontSize": "11px",
+          "lineHeight": "18.15px",
+          "color": "rgb(98, 93, 84)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(98, 93, 84)"
+        },
+        {
+          "selector": ".mc-source-note",
+          "fontSize": "13px",
+          "lineHeight": "21.45px",
+          "color": "rgb(98, 93, 84)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(98, 93, 84)"
+        },
+        {
+          "selector": ".mc-date",
+          "fontSize": "11px",
+          "lineHeight": "18.15px",
+          "color": "rgb(98, 93, 84)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(98, 93, 84)"
+        },
+        {
+          "selector": ".mc-outcome [data-project-field=\"statusLabel\"]",
+          "fontSize": "12px",
+          "lineHeight": "19.8px",
+          "color": "rgb(71, 65, 56)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(71, 65, 56)"
+        }
+      ],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/machiavelli",
+      "viewport": 390,
+      "width": 375,
+      "height": 740,
+      "documentWidth": 375,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/machiavelli",
+      "images": [
+        {
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-640.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "loaded": true
+        }
+      ],
+      "scene": true,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 0,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 159.19999999925494,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-640.webp",
+          "complete": true,
+          "width": 312
+        },
+        {
+          "event": "load",
+          "at": 209.40000000037253,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 234,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [
+        {
+          "selector": ".mc-film figcaption",
+          "fontSize": "11px",
+          "lineHeight": "18.15px",
+          "color": "rgb(98, 93, 84)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(98, 93, 84)"
+        },
+        {
+          "selector": ".mc-source-note",
+          "fontSize": "13px",
+          "lineHeight": "21.45px",
+          "color": "rgb(98, 93, 84)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(98, 93, 84)"
+        },
+        {
+          "selector": ".mc-date",
+          "fontSize": "11px",
+          "lineHeight": "18.15px",
+          "color": "rgb(98, 93, 84)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(98, 93, 84)"
+        },
+        {
+          "selector": ".mc-outcome [data-project-field=\"statusLabel\"]",
+          "fontSize": "12px",
+          "lineHeight": "19.8px",
+          "color": "rgb(71, 65, 56)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(71, 65, 56)"
+        }
+      ],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/machiavelli",
+      "viewport": 430,
+      "width": 415,
+      "height": 740,
+      "documentWidth": 415,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/machiavelli",
+      "images": [
+        {
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-640.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "loaded": true
+        }
+      ],
+      "scene": true,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 0,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 151.5,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-640.webp",
+          "complete": true,
+          "width": 343
+        },
+        {
+          "event": "load",
+          "at": 206.09999999962747,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 221.90000000037253,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [
+        {
+          "selector": ".mc-film figcaption",
+          "fontSize": "11px",
+          "lineHeight": "18.15px",
+          "color": "rgb(98, 93, 84)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(98, 93, 84)"
+        },
+        {
+          "selector": ".mc-source-note",
+          "fontSize": "13px",
+          "lineHeight": "21.45px",
+          "color": "rgb(98, 93, 84)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(98, 93, 84)"
+        },
+        {
+          "selector": ".mc-date",
+          "fontSize": "11px",
+          "lineHeight": "18.15px",
+          "color": "rgb(98, 93, 84)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(98, 93, 84)"
+        },
+        {
+          "selector": ".mc-outcome [data-project-field=\"statusLabel\"]",
+          "fontSize": "12px",
+          "lineHeight": "19.8px",
+          "color": "rgb(71, 65, 56)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(71, 65, 56)"
+        }
+      ],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/machiavelli",
+      "viewport": 768,
+      "width": 753,
+      "height": 740,
+      "documentWidth": 753,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/machiavelli",
+      "images": [
+        {
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-640.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "loaded": true
+        }
+      ],
+      "scene": true,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 0,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 153.19999999925494,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-640.webp",
+          "complete": true,
+          "width": 480
+        },
+        {
+          "event": "load",
+          "at": 215.90000000037253,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [
+        {
+          "selector": ".mc-film figcaption",
+          "fontSize": "9.92px",
+          "lineHeight": "16.368px",
+          "color": "rgb(98, 93, 84)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(98, 93, 84)"
+        },
+        {
+          "selector": ".mc-source-note",
+          "fontSize": "13px",
+          "lineHeight": "21.45px",
+          "color": "rgb(98, 93, 84)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(98, 93, 84)"
+        },
+        {
+          "selector": ".mc-date",
+          "fontSize": "10.72px",
+          "lineHeight": "17.688px",
+          "color": "rgb(98, 93, 84)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(98, 93, 84)"
+        },
+        {
+          "selector": ".mc-outcome [data-project-field=\"statusLabel\"]",
+          "fontSize": "12.8px",
+          "lineHeight": "21.12px",
+          "color": "rgb(71, 65, 56)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(71, 65, 56)"
+        }
+      ],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/machiavelli",
+      "viewport": 1024,
+      "width": 1009,
+      "height": 740,
+      "documentWidth": 1009,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/machiavelli",
+      "images": [
+        {
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-640.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "loaded": true
+        }
+      ],
+      "scene": true,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 0,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 156.40000000037253,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-640.webp",
+          "complete": true,
+          "width": 480
+        },
+        {
+          "event": "load",
+          "at": 193,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 220.10000000149012,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [
+        {
+          "selector": ".mc-film figcaption",
+          "fontSize": "9.92px",
+          "lineHeight": "16.368px",
+          "color": "rgb(98, 93, 84)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(98, 93, 84)"
+        },
+        {
+          "selector": ".mc-source-note",
+          "fontSize": "13px",
+          "lineHeight": "21.45px",
+          "color": "rgb(98, 93, 84)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(98, 93, 84)"
+        },
+        {
+          "selector": ".mc-date",
+          "fontSize": "10.72px",
+          "lineHeight": "17.688px",
+          "color": "rgb(98, 93, 84)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(98, 93, 84)"
+        },
+        {
+          "selector": ".mc-outcome [data-project-field=\"statusLabel\"]",
+          "fontSize": "12.8px",
+          "lineHeight": "21.12px",
+          "color": "rgb(71, 65, 56)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(71, 65, 56)"
+        }
+      ],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/machiavelli",
+      "viewport": 1440,
+      "width": 1425,
+      "height": 740,
+      "documentWidth": 1425,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/machiavelli",
+      "images": [
+        {
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-640.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "loaded": true
+        }
+      ],
+      "scene": true,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 0,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 265.3999999985099,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-640.webp",
+          "complete": true,
+          "width": 480
+        },
+        {
+          "event": "load",
+          "at": 446.8999999985099,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [
+        {
+          "selector": ".mc-film figcaption",
+          "fontSize": "9.92px",
+          "lineHeight": "16.368px",
+          "color": "rgb(98, 93, 84)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(98, 93, 84)"
+        },
+        {
+          "selector": ".mc-source-note",
+          "fontSize": "13px",
+          "lineHeight": "21.45px",
+          "color": "rgb(98, 93, 84)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(98, 93, 84)"
+        },
+        {
+          "selector": ".mc-date",
+          "fontSize": "10.72px",
+          "lineHeight": "17.688px",
+          "color": "rgb(98, 93, 84)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(98, 93, 84)"
+        },
+        {
+          "selector": ".mc-outcome [data-project-field=\"statusLabel\"]",
+          "fontSize": "12.8px",
+          "lineHeight": "21.12px",
+          "color": "rgb(71, 65, 56)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(71, 65, 56)"
+        }
+      ],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/rehberler",
+      "viewport": 320,
+      "width": 305,
+      "height": 740,
+      "documentWidth": 305,
+      "theme": "dark",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/rehberler",
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 3,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 229.30000000074506,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 242.40000000037253,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/rehberler",
+      "viewport": 360,
+      "width": 345,
+      "height": 740,
+      "documentWidth": 345,
+      "theme": "dark",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/rehberler",
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 3,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 218.7999999988824,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/rehberler",
+      "viewport": 390,
+      "width": 375,
+      "height": 740,
+      "documentWidth": 375,
+      "theme": "dark",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/rehberler",
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 3,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 227,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 235.7000000011176,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/rehberler",
+      "viewport": 430,
+      "width": 415,
+      "height": 740,
+      "documentWidth": 415,
+      "theme": "dark",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/rehberler",
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 3,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 211.19999999925494,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 221.5,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/rehberler",
+      "viewport": 768,
+      "width": 753,
+      "height": 740,
+      "documentWidth": 753,
+      "theme": "dark",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/rehberler",
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 3,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 231.69999999925494,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 243.09999999962747,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/rehberler",
+      "viewport": 1024,
+      "width": 1009,
+      "height": 740,
+      "documentWidth": 1009,
+      "theme": "dark",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/rehberler",
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 3,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 246.80000000074506,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/rehberler",
+      "viewport": 1440,
+      "width": 1425,
+      "height": 740,
+      "documentWidth": 1425,
+      "theme": "dark",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/rehberler",
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 3,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 214.89999999850988,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/rehberler",
+      "viewport": 320,
+      "width": 305,
+      "height": 740,
+      "documentWidth": 305,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/rehberler",
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 3,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 210.90000000037253,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 220.7999999988824,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/rehberler",
+      "viewport": 360,
+      "width": 345,
+      "height": 740,
+      "documentWidth": 345,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/rehberler",
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 3,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 198.80000000074506,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 206.59999999962747,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/rehberler",
+      "viewport": 390,
+      "width": 375,
+      "height": 740,
+      "documentWidth": 375,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/rehberler",
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 3,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 208.7000000011176,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/rehberler",
+      "viewport": 430,
+      "width": 415,
+      "height": 740,
+      "documentWidth": 415,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/rehberler",
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 3,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 361.40000000037253,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 382.09999999962747,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/rehberler",
+      "viewport": 768,
+      "width": 753,
+      "height": 740,
+      "documentWidth": 753,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/rehberler",
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 3,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 220.90000000037253,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/rehberler",
+      "viewport": 1024,
+      "width": 1009,
+      "height": 740,
+      "documentWidth": 1009,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/rehberler",
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 3,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 224.09999999962747,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/rehberler",
+      "viewport": 1440,
+      "width": 1425,
+      "height": 740,
+      "documentWidth": 1425,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/rehberler",
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 3,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 218.59999999962747,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 225.90000000037253,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/dusunce-arsivi",
+      "viewport": 320,
+      "width": 305,
+      "height": 740,
+      "documentWidth": 305,
+      "theme": "dark",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/dusunce-arsivi",
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 5,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 208.69999999925494,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [
+        {
+          "selector": "#archive-author",
+          "fontSize": "16px",
+          "lineHeight": "normal",
+          "color": "rgb(246, 242, 234)",
+          "background": "rgb(18, 18, 16)",
+          "border": "rgb(170, 166, 158)",
+          "borderContrast": 7.731743929766169,
+          "textContrast": 16.796564747834335
+        },
+        {
+          "selector": "#archive-query",
+          "fontSize": "16px",
+          "lineHeight": "26.4px",
+          "color": "rgb(246, 242, 234)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(246, 242, 234)"
+        }
+      ],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/dusunce-arsivi",
+      "viewport": 360,
+      "width": 345,
+      "height": 740,
+      "documentWidth": 345,
+      "theme": "dark",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/dusunce-arsivi",
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 5,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 215.40000000037253,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [
+        {
+          "selector": "#archive-author",
+          "fontSize": "16px",
+          "lineHeight": "normal",
+          "color": "rgb(246, 242, 234)",
+          "background": "rgb(18, 18, 16)",
+          "border": "rgb(170, 166, 158)",
+          "borderContrast": 7.731743929766169,
+          "textContrast": 16.796564747834335
+        },
+        {
+          "selector": "#archive-query",
+          "fontSize": "16px",
+          "lineHeight": "26.4px",
+          "color": "rgb(246, 242, 234)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(246, 242, 234)"
+        }
+      ],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/dusunce-arsivi",
+      "viewport": 390,
+      "width": 375,
+      "height": 740,
+      "documentWidth": 375,
+      "theme": "dark",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/dusunce-arsivi",
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 5,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 222.09999999962747,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [
+        {
+          "selector": "#archive-author",
+          "fontSize": "16px",
+          "lineHeight": "normal",
+          "color": "rgb(246, 242, 234)",
+          "background": "rgb(18, 18, 16)",
+          "border": "rgb(170, 166, 158)",
+          "borderContrast": 7.731743929766169,
+          "textContrast": 16.796564747834335
+        },
+        {
+          "selector": "#archive-query",
+          "fontSize": "16px",
+          "lineHeight": "26.4px",
+          "color": "rgb(246, 242, 234)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(246, 242, 234)"
+        }
+      ],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/dusunce-arsivi",
+      "viewport": 430,
+      "width": 415,
+      "height": 740,
+      "documentWidth": 415,
+      "theme": "dark",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/dusunce-arsivi",
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 5,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 269.19999999925494,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [
+        {
+          "selector": "#archive-author",
+          "fontSize": "16px",
+          "lineHeight": "normal",
+          "color": "rgb(246, 242, 234)",
+          "background": "rgb(18, 18, 16)",
+          "border": "rgb(170, 166, 158)",
+          "borderContrast": 7.731743929766169,
+          "textContrast": 16.796564747834335
+        },
+        {
+          "selector": "#archive-query",
+          "fontSize": "16px",
+          "lineHeight": "26.4px",
+          "color": "rgb(246, 242, 234)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(246, 242, 234)"
+        }
+      ],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/dusunce-arsivi",
+      "viewport": 768,
+      "width": 753,
+      "height": 740,
+      "documentWidth": 753,
+      "theme": "dark",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/dusunce-arsivi",
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 9,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 212.7999999988824,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [
+        {
+          "selector": "#archive-author",
+          "fontSize": "14.4px",
+          "lineHeight": "normal",
+          "color": "rgb(246, 242, 234)",
+          "background": "rgb(18, 18, 16)",
+          "border": "rgb(170, 166, 158)",
+          "borderContrast": 7.731743929766169,
+          "textContrast": 16.796564747834335
+        },
+        {
+          "selector": "#archive-query",
+          "fontSize": "16.8px",
+          "lineHeight": "27.72px",
+          "color": "rgb(246, 242, 234)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(246, 242, 234)"
+        }
+      ],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/dusunce-arsivi",
+      "viewport": 1024,
+      "width": 1009,
+      "height": 740,
+      "documentWidth": 1009,
+      "theme": "dark",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/dusunce-arsivi",
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 9,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 197.90000000037253,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [
+        {
+          "selector": "#archive-author",
+          "fontSize": "14.4px",
+          "lineHeight": "normal",
+          "color": "rgb(246, 242, 234)",
+          "background": "rgb(18, 18, 16)",
+          "border": "rgb(170, 166, 158)",
+          "borderContrast": 7.731743929766169,
+          "textContrast": 16.796564747834335
+        },
+        {
+          "selector": "#archive-query",
+          "fontSize": "16.8px",
+          "lineHeight": "27.72px",
+          "color": "rgb(246, 242, 234)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(246, 242, 234)"
+        }
+      ],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/dusunce-arsivi",
+      "viewport": 1440,
+      "width": 1425,
+      "height": 740,
+      "documentWidth": 1425,
+      "theme": "dark",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/dusunce-arsivi",
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 9,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 428.40000000037253,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [
+        {
+          "selector": "#archive-author",
+          "fontSize": "14.4px",
+          "lineHeight": "normal",
+          "color": "rgb(246, 242, 234)",
+          "background": "rgb(18, 18, 16)",
+          "border": "rgb(170, 166, 158)",
+          "borderContrast": 7.731743929766169,
+          "textContrast": 16.796564747834335
+        },
+        {
+          "selector": "#archive-query",
+          "fontSize": "16.8px",
+          "lineHeight": "27.72px",
+          "color": "rgb(246, 242, 234)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(246, 242, 234)"
+        }
+      ],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/dusunce-arsivi",
+      "viewport": 320,
+      "width": 305,
+      "height": 740,
+      "documentWidth": 305,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/dusunce-arsivi",
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 5,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 236,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [
+        {
+          "selector": "#archive-author",
+          "fontSize": "16px",
+          "lineHeight": "normal",
+          "color": "rgb(36, 32, 25)",
+          "background": "rgb(238, 232, 221)",
+          "border": "rgb(98, 93, 84)",
+          "borderContrast": 5.3599958267027485,
+          "textContrast": 13.292238345252688
+        },
+        {
+          "selector": "#archive-query",
+          "fontSize": "16px",
+          "lineHeight": "26.4px",
+          "color": "rgb(36, 32, 25)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(36, 32, 25)"
+        }
+      ],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "dusunce-arsivi.html",
+      "width": 360,
+      "theme": "light",
+      "passed": false,
+      "error": "Error: Document/CSS/theme readiness deadline: dusunce-arsivi.html"
+    },
+    {
+      "page": "/dusunce-arsivi",
+      "viewport": 390,
+      "width": 375,
+      "height": 740,
+      "documentWidth": 375,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/dusunce-arsivi",
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 5,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 333.80000000074506,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [
+        {
+          "selector": "#archive-author",
+          "fontSize": "16px",
+          "lineHeight": "normal",
+          "color": "rgb(36, 32, 25)",
+          "background": "rgb(238, 232, 221)",
+          "border": "rgb(98, 93, 84)",
+          "borderContrast": 5.3599958267027485,
+          "textContrast": 13.292238345252688
+        },
+        {
+          "selector": "#archive-query",
+          "fontSize": "16px",
+          "lineHeight": "26.4px",
+          "color": "rgb(36, 32, 25)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(36, 32, 25)"
+        }
+      ],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/dusunce-arsivi",
+      "viewport": 430,
+      "width": 415,
+      "height": 740,
+      "documentWidth": 415,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/dusunce-arsivi",
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 5,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 211.40000000037253,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [
+        {
+          "selector": "#archive-author",
+          "fontSize": "16px",
+          "lineHeight": "normal",
+          "color": "rgb(36, 32, 25)",
+          "background": "rgb(238, 232, 221)",
+          "border": "rgb(98, 93, 84)",
+          "borderContrast": 5.3599958267027485,
+          "textContrast": 13.292238345252688
+        },
+        {
+          "selector": "#archive-query",
+          "fontSize": "16px",
+          "lineHeight": "26.4px",
+          "color": "rgb(36, 32, 25)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(36, 32, 25)"
+        }
+      ],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/dusunce-arsivi",
+      "viewport": 768,
+      "width": 753,
+      "height": 740,
+      "documentWidth": 753,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/dusunce-arsivi",
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 9,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 207.80000000074506,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [
+        {
+          "selector": "#archive-author",
+          "fontSize": "14.4px",
+          "lineHeight": "normal",
+          "color": "rgb(36, 32, 25)",
+          "background": "rgb(238, 232, 221)",
+          "border": "rgb(98, 93, 84)",
+          "borderContrast": 5.3599958267027485,
+          "textContrast": 13.292238345252688
+        },
+        {
+          "selector": "#archive-query",
+          "fontSize": "16.8px",
+          "lineHeight": "27.72px",
+          "color": "rgb(36, 32, 25)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(36, 32, 25)"
+        }
+      ],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/dusunce-arsivi",
+      "viewport": 1024,
+      "width": 1009,
+      "height": 740,
+      "documentWidth": 1009,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/dusunce-arsivi",
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 10,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 207.19999999925494,
+          "src": "https://2a238dc4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [
+        {
+          "selector": "#archive-author",
+          "fontSize": "14.4px",
+          "lineHeight": "normal",
+          "color": "rgb(36, 32, 25)",
+          "background": "rgb(238, 232, 221)",
+          "border": "rgb(98, 93, 84)",
+          "borderContrast": 5.3599958267027485,
+          "textContrast": 13.292238345252688
+        },
+        {
+          "selector": "#archive-query",
+          "fontSize": "16.8px",
+          "lineHeight": "27.72px",
+          "color": "rgb(36, 32, 25)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(36, 32, 25)"
+        }
+      ],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "dusunce-arsivi.html",
+      "width": 1440,
+      "theme": "light",
+      "passed": false,
+      "error": "Error: Document/CSS/theme readiness deadline: dusunce-arsivi.html"
+    },
+    {
+      "page": "/hakkimda",
+      "viewport": 320,
+      "width": 305,
+      "height": 740,
+      "documentWidth": 305,
+      "theme": "dark",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/hakkimda",
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 4,
+      "imageLifecycle": [],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/hakkimda",
+      "viewport": 360,
+      "width": 345,
+      "height": 740,
+      "documentWidth": 345,
+      "theme": "dark",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/hakkimda",
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 0,
+      "imageLifecycle": [],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "hakkimda.html",
+      "width": 390,
+      "theme": "dark",
+      "passed": false,
+      "error": "Error: Document/CSS/theme readiness deadline: hakkimda.html"
+    },
+    {
+      "page": "/hakkimda",
+      "viewport": 430,
+      "width": 415,
+      "height": 740,
+      "documentWidth": 415,
+      "theme": "dark",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/hakkimda",
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 5,
+      "imageLifecycle": [],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/hakkimda",
+      "viewport": 768,
+      "width": 753,
+      "height": 740,
+      "documentWidth": 753,
+      "theme": "dark",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/hakkimda",
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 5,
+      "imageLifecycle": [],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/hakkimda",
+      "viewport": 1024,
+      "width": 1009,
+      "height": 740,
+      "documentWidth": 1009,
+      "theme": "dark",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/hakkimda",
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 7,
+      "imageLifecycle": [],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/hakkimda",
+      "viewport": 1440,
+      "width": 1425,
+      "height": 740,
+      "documentWidth": 1425,
+      "theme": "dark",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/hakkimda",
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 7,
+      "imageLifecycle": [],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/hakkimda",
+      "viewport": 320,
+      "width": 305,
+      "height": 740,
+      "documentWidth": 305,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/hakkimda",
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 4,
+      "imageLifecycle": [],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/hakkimda",
+      "viewport": 360,
+      "width": 345,
+      "height": 740,
+      "documentWidth": 345,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [
+        {
+          "text": "Ana sayfa",
+          "width": 64.421875,
+          "height": 17
+        },
+        {
+          "text": "Projeler",
+          "width": 50.65625,
+          "height": 17
+        },
+        {
+          "text": "Düşünce Arşivi",
+          "width": 99.109375,
+          "height": 17
+        },
+        {
+          "text": "Hakkında",
+          "width": 62.203125,
+          "height": 17
+        },
+        {
+          "text": "☀\n        Açık tema",
+          "width": 94.875,
+          "height": 21
+        },
+        {
+          "text": "Bu önizlemeCanlı site",
+          "width": 96,
+          "height": 19
+        },
+        {
+          "text": "Çalışmalarımı keşfet →",
+          "width": 152.859375,
+          "height": 17
+        },
+        {
+          "text": "YouTube kanalıma git ↗",
+          "width": 158.25,
+          "height": 17
+        }
+      ],
+      "canonical": "https://aligazal.com/hakkimda",
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 0,
+      "imageLifecycle": [],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": false
+    },
+    {
+      "page": "/hakkimda",
+      "viewport": 390,
+      "width": 375,
+      "height": 740,
+      "documentWidth": 375,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [
+        {
+          "text": "Ana sayfa",
+          "width": 64.421875,
+          "height": 17
+        },
+        {
+          "text": "Projeler",
+          "width": 50.65625,
+          "height": 17
+        },
+        {
+          "text": "Düşünce Arşivi",
+          "width": 99.109375,
+          "height": 17
+        },
+        {
+          "text": "Hakkında",
+          "width": 62.203125,
+          "height": 17
+        },
+        {
+          "text": "☀\n        Açık tema",
+          "width": 94.875,
+          "height": 21
+        },
+        {
+          "text": "Çalışmalarımı keşfet →",
+          "width": 152.859375,
+          "height": 17
+        },
+        {
+          "text": "YouTube kanalıma git ↗",
+          "width": 158.25,
+          "height": 17
+        }
+      ],
+      "canonical": "https://aligazal.com/hakkimda",
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 0,
+      "imageLifecycle": [],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": false
+    },
+    {
+      "page": "/hakkimda",
+      "viewport": 430,
+      "width": 415,
+      "height": 740,
+      "documentWidth": 415,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [
+        {
+          "text": "Ana sayfa",
+          "width": 64.421875,
+          "height": 17
+        },
+        {
+          "text": "Projeler",
+          "width": 50.65625,
+          "height": 17
+        },
+        {
+          "text": "Düşünce Arşivi",
+          "width": 99.109375,
+          "height": 17
+        },
+        {
+          "text": "Hakkında",
+          "width": 62.203125,
+          "height": 17
+        },
+        {
+          "text": "☀\n        Açık tema",
+          "width": 94.875,
+          "height": 21
+        },
+        {
+          "text": "Çalışmalarımı keşfet →",
+          "width": 152.859375,
+          "height": 17
+        },
+        {
+          "text": "YouTube kanalıma git ↗",
+          "width": 158.25,
+          "height": 17
+        }
+      ],
+      "canonical": "https://aligazal.com/hakkimda",
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 0,
+      "imageLifecycle": [],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": false
+    },
+    {
+      "page": "/hakkimda",
+      "viewport": 768,
+      "width": 753,
+      "height": 740,
+      "documentWidth": 753,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/hakkimda",
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": false,
+      "shares": [],
+      "activeAnimations": 0,
+      "imageLifecycle": [],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/hakkimda",
+      "viewport": 1024,
+      "width": 1009,
+      "height": 740,
+      "documentWidth": 1009,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [
+        {
+          "text": "Bu önizlemeCanlı site",
+          "width": 96,
+          "height": 19
+        }
+      ],
+      "canonical": "https://aligazal.com/hakkimda",
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 0,
+      "imageLifecycle": [],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": false
+    },
+    {
+      "page": "/hakkimda",
+      "viewport": 1440,
+      "width": 1425,
+      "height": 740,
+      "documentWidth": 1425,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [
+        {
+          "text": "Bu önizlemeCanlı site",
+          "width": 96,
+          "height": 19
+        }
+      ],
+      "canonical": "https://aligazal.com/hakkimda",
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 0,
+      "imageLifecycle": [],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": false
+    },
+    {
+      "page": "/irade-terbiyesi",
+      "viewport": 320,
+      "width": 305,
+      "height": 740,
+      "documentWidth": 305,
+      "theme": "dark",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/irade-terbiyesi",
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 0,
+      "imageLifecycle": [],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "irade-terbiyesi.html",
+      "width": 360,
+      "theme": "dark",
+      "passed": false,
+      "error": "Error: Document/CSS/theme readiness deadline: irade-terbiyesi.html"
+    },
+    {
+      "page": "irade-terbiyesi.html",
+      "width": 390,
+      "theme": "dark",
+      "passed": false,
+      "error": "Error: Document/CSS/theme readiness deadline: irade-terbiyesi.html"
+    },
+    {
+      "page": "/irade-terbiyesi",
+      "viewport": 430,
+      "width": 415,
+      "height": 740,
+      "documentWidth": 415,
+      "theme": "dark",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/irade-terbiyesi",
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 5,
+      "imageLifecycle": [],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/irade-terbiyesi",
+      "viewport": 768,
+      "width": 753,
+      "height": 740,
+      "documentWidth": 753,
+      "theme": "dark",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/irade-terbiyesi",
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 6,
+      "imageLifecycle": [],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/irade-terbiyesi",
+      "viewport": 1024,
+      "width": 1009,
+      "height": 740,
+      "documentWidth": 1009,
+      "theme": "dark",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/irade-terbiyesi",
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 6,
+      "imageLifecycle": [],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/irade-terbiyesi",
+      "viewport": 1440,
+      "width": 1425,
+      "height": 740,
+      "documentWidth": 1425,
+      "theme": "dark",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/irade-terbiyesi",
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 6,
+      "imageLifecycle": [],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "irade-terbiyesi.html",
+      "width": 320,
+      "theme": "light",
+      "passed": false,
+      "error": "Error: Document/CSS/theme readiness deadline: irade-terbiyesi.html"
+    },
+    {
+      "page": "/irade-terbiyesi",
+      "viewport": 360,
+      "width": 345,
+      "height": 740,
+      "documentWidth": 345,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/irade-terbiyesi",
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 5,
+      "imageLifecycle": [],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/irade-terbiyesi",
+      "viewport": 390,
+      "width": 375,
+      "height": 740,
+      "documentWidth": 375,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/irade-terbiyesi",
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 5,
+      "imageLifecycle": [],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/irade-terbiyesi",
+      "viewport": 430,
+      "width": 415,
+      "height": 740,
+      "documentWidth": 415,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/irade-terbiyesi",
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 5,
+      "imageLifecycle": [],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/irade-terbiyesi",
+      "viewport": 768,
+      "width": 753,
+      "height": 740,
+      "documentWidth": 753,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/irade-terbiyesi",
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 6,
+      "imageLifecycle": [],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "irade-terbiyesi.html",
+      "width": 1024,
+      "theme": "light",
+      "passed": false,
+      "error": "Error: Document/CSS/theme readiness deadline: irade-terbiyesi.html"
+    },
+    {
+      "page": "/irade-terbiyesi",
+      "viewport": 1440,
+      "width": 1425,
+      "height": 740,
+      "documentWidth": 1425,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/irade-terbiyesi",
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 6,
+      "imageLifecycle": [],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/404",
+      "viewport": 320,
+      "width": 305,
+      "height": 740,
+      "documentWidth": 305,
+      "theme": "dark",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 0,
+      "imageLifecycle": [],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/404",
+      "viewport": 360,
+      "width": 345,
+      "height": 740,
+      "documentWidth": 345,
+      "theme": "dark",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 0,
+      "imageLifecycle": [],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/404",
+      "viewport": 390,
+      "width": 375,
+      "height": 740,
+      "documentWidth": 375,
+      "theme": "dark",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 0,
+      "imageLifecycle": [],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/404",
+      "viewport": 430,
+      "width": 415,
+      "height": 740,
+      "documentWidth": 415,
+      "theme": "dark",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 0,
+      "imageLifecycle": [],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/404",
+      "viewport": 768,
+      "width": 753,
+      "height": 740,
+      "documentWidth": 753,
+      "theme": "dark",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 0,
+      "imageLifecycle": [],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "404.html",
+      "width": 1024,
+      "theme": "dark",
+      "passed": false,
+      "error": "Error: Document/CSS/theme readiness deadline: 404.html"
+    },
+    {
+      "page": "/404",
+      "viewport": 1440,
+      "width": 1425,
+      "height": 740,
+      "documentWidth": 1425,
+      "theme": "dark",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 0,
+      "imageLifecycle": [],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/404",
+      "viewport": 320,
+      "width": 305,
+      "height": 740,
+      "documentWidth": 305,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 0,
+      "imageLifecycle": [],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/404",
+      "viewport": 360,
+      "width": 345,
+      "height": 740,
+      "documentWidth": 345,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 0,
+      "imageLifecycle": [],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/404",
+      "viewport": 390,
+      "width": 375,
+      "height": 740,
+      "documentWidth": 375,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 0,
+      "imageLifecycle": [],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/404",
+      "viewport": 430,
+      "width": 430,
+      "height": 740,
+      "documentWidth": 430,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [
+        {
+          "text": "Ana sayfa",
+          "width": 64.421875,
+          "height": 17
+        },
+        {
+          "text": "Projeler",
+          "width": 50.65625,
+          "height": 17
+        },
+        {
+          "text": "Düşünce Arşivi",
+          "width": 99.109375,
+          "height": 17
+        },
+        {
+          "text": "Hakkında",
+          "width": 62.203125,
+          "height": 17
+        },
+        {
+          "text": "☀\n        Açık tema",
+          "width": 94.875,
+          "height": 21
+        },
+        {
+          "text": "Güncel projeler",
+          "width": 99.953125,
+          "height": 17
+        },
+        {
+          "text": "Ana sayfa",
+          "width": 64.421875,
+          "height": 17
+        }
+      ],
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 0,
+      "imageLifecycle": [],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": false
+    },
+    {
+      "page": "/404",
+      "viewport": 768,
+      "width": 753,
+      "height": 740,
+      "documentWidth": 753,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": false,
+      "shares": [],
+      "activeAnimations": 0,
+      "imageLifecycle": [],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/404",
+      "viewport": 1024,
+      "width": 1009,
+      "height": 740,
+      "documentWidth": 1009,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 0,
+      "imageLifecycle": [],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": true
+    },
+    {
+      "page": "/404",
+      "viewport": 1440,
+      "width": 1425,
+      "height": 740,
+      "documentWidth": 1425,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "images": [],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": false,
+      "shares": [],
+      "activeAnimations": 0,
+      "imageLifecycle": [],
+      "styles": [],
+      "publishedLinks": [],
+      "passed": true
+    }
+  ]
+}

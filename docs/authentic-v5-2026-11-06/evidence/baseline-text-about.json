@@ -1,0 +1,22 @@
+{
+  "page": "/baseline/hakkimda",
+  "viewport": 390,
+  "width": 375,
+  "height": 740,
+  "documentWidth": 431,
+  "theme": "dark",
+  "h1": 1,
+  "main": true,
+  "overflow": true,
+  "smallTargets": [],
+  "canonical": "https://aligazal.com/hakkimda",
+  "images": [],
+  "scene": null,
+  "errors": [],
+  "violations": [],
+  "scriptRan": true,
+  "shares": [],
+  "activeAnimations": 0,
+  "styles": [],
+  "publishedLinks": []
+}

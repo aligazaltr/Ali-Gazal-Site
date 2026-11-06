@@ -1,0 +1,2296 @@
+{
+  "test": "published layouts",
+  "total": 28,
+  "failed": [],
+  "rows": [
+    {
+      "page": "/_v5-published",
+      "viewport": 320,
+      "width": 305,
+      "height": 740,
+      "documentWidth": 305,
+      "theme": "dark",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/machiavelli",
+      "images": [
+        {
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-640.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "loaded": true
+        }
+      ],
+      "scene": true,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 0,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 200.40000000037253,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-640.webp",
+          "complete": true,
+          "width": 256
+        },
+        {
+          "event": "load",
+          "at": 246.40000000037253,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 263.90000000037253,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 344.40000000037253,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [
+        {
+          "selector": ".mc-film figcaption",
+          "fontSize": "11px",
+          "lineHeight": "18.15px",
+          "color": "rgb(170, 166, 158)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(170, 166, 158)"
+        },
+        {
+          "selector": ".mc-source-note",
+          "fontSize": "13px",
+          "lineHeight": "21.45px",
+          "color": "rgb(170, 166, 158)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(170, 166, 158)"
+        },
+        {
+          "selector": ".mc-date",
+          "fontSize": "11px",
+          "lineHeight": "18.15px",
+          "color": "rgb(170, 166, 158)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(170, 166, 158)"
+        },
+        {
+          "selector": ".mc-outcome [data-project-field=\"statusLabel\"]",
+          "fontSize": "12px",
+          "lineHeight": "19.8px",
+          "color": "rgb(209, 204, 195)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(209, 204, 195)"
+        }
+      ],
+      "publishedLinks": [
+        {
+          "href": "https://www.youtube.com/watch?v=TESTFIXTURE",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "label": "YouTube’da izle: Yerel test & <başlık> $& (yeni sekmede)"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "page": "/_v5-published",
+      "viewport": 360,
+      "width": 345,
+      "height": 740,
+      "documentWidth": 345,
+      "theme": "dark",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/machiavelli",
+      "images": [
+        {
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-640.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "loaded": true
+        }
+      ],
+      "scene": true,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 0,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 181.09999999962747,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-640.webp",
+          "complete": true,
+          "width": 288
+        },
+        {
+          "event": "load",
+          "at": 254.30000000074506,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 254.30000000074506,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [
+        {
+          "selector": ".mc-film figcaption",
+          "fontSize": "11px",
+          "lineHeight": "18.15px",
+          "color": "rgb(170, 166, 158)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(170, 166, 158)"
+        },
+        {
+          "selector": ".mc-source-note",
+          "fontSize": "13px",
+          "lineHeight": "21.45px",
+          "color": "rgb(170, 166, 158)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(170, 166, 158)"
+        },
+        {
+          "selector": ".mc-date",
+          "fontSize": "11px",
+          "lineHeight": "18.15px",
+          "color": "rgb(170, 166, 158)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(170, 166, 158)"
+        },
+        {
+          "selector": ".mc-outcome [data-project-field=\"statusLabel\"]",
+          "fontSize": "12px",
+          "lineHeight": "19.8px",
+          "color": "rgb(209, 204, 195)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(209, 204, 195)"
+        }
+      ],
+      "publishedLinks": [
+        {
+          "href": "https://www.youtube.com/watch?v=TESTFIXTURE",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "label": "YouTube’da izle: Yerel test & <başlık> $& (yeni sekmede)"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "page": "/_v5-published",
+      "viewport": 390,
+      "width": 375,
+      "height": 740,
+      "documentWidth": 375,
+      "theme": "dark",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/machiavelli",
+      "images": [
+        {
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-640.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "loaded": true
+        }
+      ],
+      "scene": true,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 0,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 187.59999999962747,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-640.webp",
+          "complete": true,
+          "width": 312
+        },
+        {
+          "event": "load",
+          "at": 243.90000000037253,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 261.7999999988824,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 261.7999999988824,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [
+        {
+          "selector": ".mc-film figcaption",
+          "fontSize": "11px",
+          "lineHeight": "18.15px",
+          "color": "rgb(170, 166, 158)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(170, 166, 158)"
+        },
+        {
+          "selector": ".mc-source-note",
+          "fontSize": "13px",
+          "lineHeight": "21.45px",
+          "color": "rgb(170, 166, 158)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(170, 166, 158)"
+        },
+        {
+          "selector": ".mc-date",
+          "fontSize": "11px",
+          "lineHeight": "18.15px",
+          "color": "rgb(170, 166, 158)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(170, 166, 158)"
+        },
+        {
+          "selector": ".mc-outcome [data-project-field=\"statusLabel\"]",
+          "fontSize": "12px",
+          "lineHeight": "19.8px",
+          "color": "rgb(209, 204, 195)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(209, 204, 195)"
+        }
+      ],
+      "publishedLinks": [
+        {
+          "href": "https://www.youtube.com/watch?v=TESTFIXTURE",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "label": "YouTube’da izle: Yerel test & <başlık> $& (yeni sekmede)"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "page": "/_v5-published",
+      "viewport": 430,
+      "width": 415,
+      "height": 740,
+      "documentWidth": 415,
+      "theme": "dark",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/machiavelli",
+      "images": [
+        {
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-640.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "loaded": true
+        }
+      ],
+      "scene": true,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 0,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 201.30000000074506,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-640.webp",
+          "complete": true,
+          "width": 343
+        },
+        {
+          "event": "load",
+          "at": 254.2000000011176,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 259.30000000074506,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 284.1000000014901,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [
+        {
+          "selector": ".mc-film figcaption",
+          "fontSize": "11px",
+          "lineHeight": "18.15px",
+          "color": "rgb(170, 166, 158)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(170, 166, 158)"
+        },
+        {
+          "selector": ".mc-source-note",
+          "fontSize": "13px",
+          "lineHeight": "21.45px",
+          "color": "rgb(170, 166, 158)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(170, 166, 158)"
+        },
+        {
+          "selector": ".mc-date",
+          "fontSize": "11px",
+          "lineHeight": "18.15px",
+          "color": "rgb(170, 166, 158)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(170, 166, 158)"
+        },
+        {
+          "selector": ".mc-outcome [data-project-field=\"statusLabel\"]",
+          "fontSize": "12px",
+          "lineHeight": "19.8px",
+          "color": "rgb(209, 204, 195)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(209, 204, 195)"
+        }
+      ],
+      "publishedLinks": [
+        {
+          "href": "https://www.youtube.com/watch?v=TESTFIXTURE",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "label": "YouTube’da izle: Yerel test & <başlık> $& (yeni sekmede)"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "page": "/_v5-published",
+      "viewport": 768,
+      "width": 753,
+      "height": 740,
+      "documentWidth": 753,
+      "theme": "dark",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/machiavelli",
+      "images": [
+        {
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-640.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "loaded": true
+        }
+      ],
+      "scene": true,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 0,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 158.80000000074506,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-640.webp",
+          "complete": true,
+          "width": 480
+        },
+        {
+          "event": "load",
+          "at": 242.59999999962747,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 242.59999999962747,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [
+        {
+          "selector": ".mc-film figcaption",
+          "fontSize": "9.92px",
+          "lineHeight": "16.368px",
+          "color": "rgb(170, 166, 158)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(170, 166, 158)"
+        },
+        {
+          "selector": ".mc-source-note",
+          "fontSize": "13px",
+          "lineHeight": "21.45px",
+          "color": "rgb(170, 166, 158)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(170, 166, 158)"
+        },
+        {
+          "selector": ".mc-date",
+          "fontSize": "10.72px",
+          "lineHeight": "17.688px",
+          "color": "rgb(170, 166, 158)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(170, 166, 158)"
+        },
+        {
+          "selector": ".mc-outcome [data-project-field=\"statusLabel\"]",
+          "fontSize": "12.8px",
+          "lineHeight": "21.12px",
+          "color": "rgb(209, 204, 195)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(209, 204, 195)"
+        }
+      ],
+      "publishedLinks": [
+        {
+          "href": "https://www.youtube.com/watch?v=TESTFIXTURE",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "label": "YouTube’da izle: Yerel test & <başlık> $& (yeni sekmede)"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "page": "/_v5-published",
+      "viewport": 1024,
+      "width": 1009,
+      "height": 740,
+      "documentWidth": 1009,
+      "theme": "dark",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/machiavelli",
+      "images": [
+        {
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-640.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "loaded": true
+        }
+      ],
+      "scene": true,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 0,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 196.5,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-640.webp",
+          "complete": true,
+          "width": 480
+        },
+        {
+          "event": "load",
+          "at": 240.90000000037253,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 240.90000000037253,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [
+        {
+          "selector": ".mc-film figcaption",
+          "fontSize": "9.92px",
+          "lineHeight": "16.368px",
+          "color": "rgb(170, 166, 158)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(170, 166, 158)"
+        },
+        {
+          "selector": ".mc-source-note",
+          "fontSize": "13px",
+          "lineHeight": "21.45px",
+          "color": "rgb(170, 166, 158)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(170, 166, 158)"
+        },
+        {
+          "selector": ".mc-date",
+          "fontSize": "10.72px",
+          "lineHeight": "17.688px",
+          "color": "rgb(170, 166, 158)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(170, 166, 158)"
+        },
+        {
+          "selector": ".mc-outcome [data-project-field=\"statusLabel\"]",
+          "fontSize": "12.8px",
+          "lineHeight": "21.12px",
+          "color": "rgb(209, 204, 195)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(209, 204, 195)"
+        }
+      ],
+      "publishedLinks": [
+        {
+          "href": "https://www.youtube.com/watch?v=TESTFIXTURE",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "label": "YouTube’da izle: Yerel test & <başlık> $& (yeni sekmede)"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "page": "/_v5-published",
+      "viewport": 1440,
+      "width": 1425,
+      "height": 740,
+      "documentWidth": 1425,
+      "theme": "dark",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/machiavelli",
+      "images": [
+        {
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-640.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "loaded": true
+        }
+      ],
+      "scene": true,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 0,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 179.7000000011176,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-640.webp",
+          "complete": true,
+          "width": 480
+        },
+        {
+          "event": "load",
+          "at": 222.30000000074506,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 260.5,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 260.59999999962747,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [
+        {
+          "selector": ".mc-film figcaption",
+          "fontSize": "9.92px",
+          "lineHeight": "16.368px",
+          "color": "rgb(170, 166, 158)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(170, 166, 158)"
+        },
+        {
+          "selector": ".mc-source-note",
+          "fontSize": "13px",
+          "lineHeight": "21.45px",
+          "color": "rgb(170, 166, 158)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(170, 166, 158)"
+        },
+        {
+          "selector": ".mc-date",
+          "fontSize": "10.72px",
+          "lineHeight": "17.688px",
+          "color": "rgb(170, 166, 158)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(170, 166, 158)"
+        },
+        {
+          "selector": ".mc-outcome [data-project-field=\"statusLabel\"]",
+          "fontSize": "12.8px",
+          "lineHeight": "21.12px",
+          "color": "rgb(209, 204, 195)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(209, 204, 195)"
+        }
+      ],
+      "publishedLinks": [
+        {
+          "href": "https://www.youtube.com/watch?v=TESTFIXTURE",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "label": "YouTube’da izle: Yerel test & <başlık> $& (yeni sekmede)"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "page": "/_v5-published",
+      "viewport": 320,
+      "width": 305,
+      "height": 740,
+      "documentWidth": 305,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/machiavelli",
+      "images": [
+        {
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-640.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "loaded": true
+        }
+      ],
+      "scene": true,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 0,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 268.40000000037253,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-640.webp",
+          "complete": true,
+          "width": 256
+        },
+        {
+          "event": "load",
+          "at": 318.80000000074506,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 345,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 345,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [
+        {
+          "selector": ".mc-film figcaption",
+          "fontSize": "11px",
+          "lineHeight": "18.15px",
+          "color": "rgb(98, 93, 84)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(98, 93, 84)"
+        },
+        {
+          "selector": ".mc-source-note",
+          "fontSize": "13px",
+          "lineHeight": "21.45px",
+          "color": "rgb(98, 93, 84)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(98, 93, 84)"
+        },
+        {
+          "selector": ".mc-date",
+          "fontSize": "11px",
+          "lineHeight": "18.15px",
+          "color": "rgb(98, 93, 84)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(98, 93, 84)"
+        },
+        {
+          "selector": ".mc-outcome [data-project-field=\"statusLabel\"]",
+          "fontSize": "12px",
+          "lineHeight": "19.8px",
+          "color": "rgb(71, 65, 56)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(71, 65, 56)"
+        }
+      ],
+      "publishedLinks": [
+        {
+          "href": "https://www.youtube.com/watch?v=TESTFIXTURE",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "label": "YouTube’da izle: Yerel test & <başlık> $& (yeni sekmede)"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "page": "/_v5-published",
+      "viewport": 360,
+      "width": 345,
+      "height": 740,
+      "documentWidth": 345,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/machiavelli",
+      "images": [
+        {
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-640.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "loaded": true
+        }
+      ],
+      "scene": true,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 0,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 137.69999999925494,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-640.webp",
+          "complete": true,
+          "width": 288
+        },
+        {
+          "event": "load",
+          "at": 190.40000000037253,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 190.40000000037253,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 207.5,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [
+        {
+          "selector": ".mc-film figcaption",
+          "fontSize": "11px",
+          "lineHeight": "18.15px",
+          "color": "rgb(98, 93, 84)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(98, 93, 84)"
+        },
+        {
+          "selector": ".mc-source-note",
+          "fontSize": "13px",
+          "lineHeight": "21.45px",
+          "color": "rgb(98, 93, 84)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(98, 93, 84)"
+        },
+        {
+          "selector": ".mc-date",
+          "fontSize": "11px",
+          "lineHeight": "18.15px",
+          "color": "rgb(98, 93, 84)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(98, 93, 84)"
+        },
+        {
+          "selector": ".mc-outcome [data-project-field=\"statusLabel\"]",
+          "fontSize": "12px",
+          "lineHeight": "19.8px",
+          "color": "rgb(71, 65, 56)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(71, 65, 56)"
+        }
+      ],
+      "publishedLinks": [
+        {
+          "href": "https://www.youtube.com/watch?v=TESTFIXTURE",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "label": "YouTube’da izle: Yerel test & <başlık> $& (yeni sekmede)"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "page": "/_v5-published",
+      "viewport": 390,
+      "width": 375,
+      "height": 740,
+      "documentWidth": 375,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/machiavelli",
+      "images": [
+        {
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-640.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "loaded": true
+        }
+      ],
+      "scene": true,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 0,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 161.59999999962747,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-640.webp",
+          "complete": true,
+          "width": 312
+        },
+        {
+          "event": "load",
+          "at": 203.80000000074506,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 224.30000000074506,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 224.30000000074506,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [
+        {
+          "selector": ".mc-film figcaption",
+          "fontSize": "11px",
+          "lineHeight": "18.15px",
+          "color": "rgb(98, 93, 84)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(98, 93, 84)"
+        },
+        {
+          "selector": ".mc-source-note",
+          "fontSize": "13px",
+          "lineHeight": "21.45px",
+          "color": "rgb(98, 93, 84)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(98, 93, 84)"
+        },
+        {
+          "selector": ".mc-date",
+          "fontSize": "11px",
+          "lineHeight": "18.15px",
+          "color": "rgb(98, 93, 84)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(98, 93, 84)"
+        },
+        {
+          "selector": ".mc-outcome [data-project-field=\"statusLabel\"]",
+          "fontSize": "12px",
+          "lineHeight": "19.8px",
+          "color": "rgb(71, 65, 56)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(71, 65, 56)"
+        }
+      ],
+      "publishedLinks": [
+        {
+          "href": "https://www.youtube.com/watch?v=TESTFIXTURE",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "label": "YouTube’da izle: Yerel test & <başlık> $& (yeni sekmede)"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "page": "/_v5-published",
+      "viewport": 430,
+      "width": 415,
+      "height": 740,
+      "documentWidth": 415,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/machiavelli",
+      "images": [
+        {
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-640.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "loaded": true
+        }
+      ],
+      "scene": true,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 0,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 158.89999999850988,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-640.webp",
+          "complete": true,
+          "width": 343
+        },
+        {
+          "event": "load",
+          "at": 203.19999999925494,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 232.2999999988824,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 232.2999999988824,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [
+        {
+          "selector": ".mc-film figcaption",
+          "fontSize": "11px",
+          "lineHeight": "18.15px",
+          "color": "rgb(98, 93, 84)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(98, 93, 84)"
+        },
+        {
+          "selector": ".mc-source-note",
+          "fontSize": "13px",
+          "lineHeight": "21.45px",
+          "color": "rgb(98, 93, 84)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(98, 93, 84)"
+        },
+        {
+          "selector": ".mc-date",
+          "fontSize": "11px",
+          "lineHeight": "18.15px",
+          "color": "rgb(98, 93, 84)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(98, 93, 84)"
+        },
+        {
+          "selector": ".mc-outcome [data-project-field=\"statusLabel\"]",
+          "fontSize": "12px",
+          "lineHeight": "19.8px",
+          "color": "rgb(71, 65, 56)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(71, 65, 56)"
+        }
+      ],
+      "publishedLinks": [
+        {
+          "href": "https://www.youtube.com/watch?v=TESTFIXTURE",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "label": "YouTube’da izle: Yerel test & <başlık> $& (yeni sekmede)"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "page": "/_v5-published",
+      "viewport": 768,
+      "width": 753,
+      "height": 740,
+      "documentWidth": 753,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/machiavelli",
+      "images": [
+        {
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-640.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "loaded": true
+        }
+      ],
+      "scene": true,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 0,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 150.40000000037253,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-640.webp",
+          "complete": true,
+          "width": 480
+        },
+        {
+          "event": "load",
+          "at": 195.19999999925494,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 223.59999999962747,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 223.69999999925494,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [
+        {
+          "selector": ".mc-film figcaption",
+          "fontSize": "9.92px",
+          "lineHeight": "16.368px",
+          "color": "rgb(98, 93, 84)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(98, 93, 84)"
+        },
+        {
+          "selector": ".mc-source-note",
+          "fontSize": "13px",
+          "lineHeight": "21.45px",
+          "color": "rgb(98, 93, 84)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(98, 93, 84)"
+        },
+        {
+          "selector": ".mc-date",
+          "fontSize": "10.72px",
+          "lineHeight": "17.688px",
+          "color": "rgb(98, 93, 84)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(98, 93, 84)"
+        },
+        {
+          "selector": ".mc-outcome [data-project-field=\"statusLabel\"]",
+          "fontSize": "12.8px",
+          "lineHeight": "21.12px",
+          "color": "rgb(71, 65, 56)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(71, 65, 56)"
+        }
+      ],
+      "publishedLinks": [
+        {
+          "href": "https://www.youtube.com/watch?v=TESTFIXTURE",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "label": "YouTube’da izle: Yerel test & <başlık> $& (yeni sekmede)"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "page": "/_v5-published",
+      "viewport": 1024,
+      "width": 1009,
+      "height": 740,
+      "documentWidth": 1009,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/machiavelli",
+      "images": [
+        {
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-640.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "loaded": true
+        }
+      ],
+      "scene": true,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 0,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 178.2999999988824,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-640.webp",
+          "complete": true,
+          "width": 480
+        },
+        {
+          "event": "load",
+          "at": 228.19999999925494,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 273.5,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 273.59999999962747,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [
+        {
+          "selector": ".mc-film figcaption",
+          "fontSize": "9.92px",
+          "lineHeight": "16.368px",
+          "color": "rgb(98, 93, 84)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(98, 93, 84)"
+        },
+        {
+          "selector": ".mc-source-note",
+          "fontSize": "13px",
+          "lineHeight": "21.45px",
+          "color": "rgb(98, 93, 84)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(98, 93, 84)"
+        },
+        {
+          "selector": ".mc-date",
+          "fontSize": "10.72px",
+          "lineHeight": "17.688px",
+          "color": "rgb(98, 93, 84)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(98, 93, 84)"
+        },
+        {
+          "selector": ".mc-outcome [data-project-field=\"statusLabel\"]",
+          "fontSize": "12.8px",
+          "lineHeight": "21.12px",
+          "color": "rgb(71, 65, 56)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(71, 65, 56)"
+        }
+      ],
+      "publishedLinks": [
+        {
+          "href": "https://www.youtube.com/watch?v=TESTFIXTURE",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "label": "YouTube’da izle: Yerel test & <başlık> $& (yeni sekmede)"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "page": "/_v5-published",
+      "viewport": 1440,
+      "width": 1425,
+      "height": 740,
+      "documentWidth": 1425,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/machiavelli",
+      "images": [
+        {
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-640.webp",
+          "loaded": true
+        },
+        {
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "loaded": true
+        }
+      ],
+      "scene": true,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 0,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 177.5,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-portrait-640.webp",
+          "complete": true,
+          "width": 480
+        },
+        {
+          "event": "load",
+          "at": 221.59999999962747,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 251.2999999988824,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 251.2999999988824,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [
+        {
+          "selector": ".mc-film figcaption",
+          "fontSize": "9.92px",
+          "lineHeight": "16.368px",
+          "color": "rgb(98, 93, 84)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(98, 93, 84)"
+        },
+        {
+          "selector": ".mc-source-note",
+          "fontSize": "13px",
+          "lineHeight": "21.45px",
+          "color": "rgb(98, 93, 84)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(98, 93, 84)"
+        },
+        {
+          "selector": ".mc-date",
+          "fontSize": "10.72px",
+          "lineHeight": "17.688px",
+          "color": "rgb(98, 93, 84)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(98, 93, 84)"
+        },
+        {
+          "selector": ".mc-outcome [data-project-field=\"statusLabel\"]",
+          "fontSize": "12.8px",
+          "lineHeight": "21.12px",
+          "color": "rgb(71, 65, 56)",
+          "background": "rgba(0, 0, 0, 0)",
+          "border": "rgb(71, 65, 56)"
+        }
+      ],
+      "publishedLinks": [
+        {
+          "href": "https://www.youtube.com/watch?v=TESTFIXTURE",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "label": "YouTube’da izle: Yerel test & <başlık> $& (yeni sekmede)"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "page": "/_v5-published-home",
+      "viewport": 320,
+      "width": 305,
+      "height": 740,
+      "documentWidth": 305,
+      "theme": "dark",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/",
+      "images": [
+        {
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "loaded": true
+        }
+      ],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 6,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 157,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 222.90000000037253,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 222.90000000037253,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [],
+      "publishedLinks": [
+        {
+          "href": "https://www.youtube.com/watch?v=TESTFIXTURE",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "label": "YouTube’da izle: Yerel test & <başlık> $& (yeni sekmede)"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "page": "/_v5-published-home",
+      "viewport": 360,
+      "width": 345,
+      "height": 740,
+      "documentWidth": 345,
+      "theme": "dark",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/",
+      "images": [
+        {
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "loaded": true
+        }
+      ],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 7,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 147.90000000037253,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 148,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 215.19999999925494,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 215.2999999988824,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [],
+      "publishedLinks": [
+        {
+          "href": "https://www.youtube.com/watch?v=TESTFIXTURE",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "label": "YouTube’da izle: Yerel test & <başlık> $& (yeni sekmede)"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "page": "/_v5-published-home",
+      "viewport": 390,
+      "width": 375,
+      "height": 740,
+      "documentWidth": 375,
+      "theme": "dark",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/",
+      "images": [
+        {
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "loaded": true
+        }
+      ],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 6,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 155.09999999962747,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 217.7000000011176,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 217.7000000011176,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [],
+      "publishedLinks": [
+        {
+          "href": "https://www.youtube.com/watch?v=TESTFIXTURE",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "label": "YouTube’da izle: Yerel test & <başlık> $& (yeni sekmede)"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "page": "/_v5-published-home",
+      "viewport": 430,
+      "width": 415,
+      "height": 740,
+      "documentWidth": 415,
+      "theme": "dark",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/",
+      "images": [
+        {
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "loaded": true
+        }
+      ],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 6,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 236.69999999925494,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 236.69999999925494,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 402.7999999988824,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 402.7999999988824,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [],
+      "publishedLinks": [
+        {
+          "href": "https://www.youtube.com/watch?v=TESTFIXTURE",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "label": "YouTube’da izle: Yerel test & <başlık> $& (yeni sekmede)"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "page": "/_v5-published-home",
+      "viewport": 768,
+      "width": 753,
+      "height": 740,
+      "documentWidth": 753,
+      "theme": "dark",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/",
+      "images": [
+        {
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "loaded": true
+        }
+      ],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 6,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 165.69999999925494,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 165.69999999925494,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 234.39999999850988,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 234.39999999850988,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [],
+      "publishedLinks": [
+        {
+          "href": "https://www.youtube.com/watch?v=TESTFIXTURE",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "label": "YouTube’da izle: Yerel test & <başlık> $& (yeni sekmede)"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "page": "/_v5-published-home",
+      "viewport": 1024,
+      "width": 1009,
+      "height": 740,
+      "documentWidth": 1009,
+      "theme": "dark",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/",
+      "images": [
+        {
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "loaded": true
+        }
+      ],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 8,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 164.69999999925494,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 164.69999999925494,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 236.2999999988824,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 236.2999999988824,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [],
+      "publishedLinks": [
+        {
+          "href": "https://www.youtube.com/watch?v=TESTFIXTURE",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "label": "YouTube’da izle: Yerel test & <başlık> $& (yeni sekmede)"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "page": "/_v5-published-home",
+      "viewport": 1440,
+      "width": 1425,
+      "height": 740,
+      "documentWidth": 1425,
+      "theme": "dark",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/",
+      "images": [
+        {
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "loaded": true
+        }
+      ],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 6,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 155.69999999925494,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 155.69999999925494,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 218,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 218,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [],
+      "publishedLinks": [
+        {
+          "href": "https://www.youtube.com/watch?v=TESTFIXTURE",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "label": "YouTube’da izle: Yerel test & <başlık> $& (yeni sekmede)"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "page": "/_v5-published-home",
+      "viewport": 320,
+      "width": 305,
+      "height": 740,
+      "documentWidth": 305,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/",
+      "images": [
+        {
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "loaded": true
+        }
+      ],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 6,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 163.7000000011176,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 163.7000000011176,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 223.40000000037253,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 223.40000000037253,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [],
+      "publishedLinks": [
+        {
+          "href": "https://www.youtube.com/watch?v=TESTFIXTURE",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "label": "YouTube’da izle: Yerel test & <başlık> $& (yeni sekmede)"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "page": "/_v5-published-home",
+      "viewport": 360,
+      "width": 345,
+      "height": 740,
+      "documentWidth": 345,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/",
+      "images": [
+        {
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "loaded": true
+        }
+      ],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 7,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 166.90000000037253,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 238.30000000074506,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 238.30000000074506,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [],
+      "publishedLinks": [
+        {
+          "href": "https://www.youtube.com/watch?v=TESTFIXTURE",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "label": "YouTube’da izle: Yerel test & <başlık> $& (yeni sekmede)"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "page": "/_v5-published-home",
+      "viewport": 390,
+      "width": 375,
+      "height": 740,
+      "documentWidth": 375,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/",
+      "images": [
+        {
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "loaded": true
+        }
+      ],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 6,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 158,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 158.09999999962747,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 226.19999999925494,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 226.19999999925494,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [],
+      "publishedLinks": [
+        {
+          "href": "https://www.youtube.com/watch?v=TESTFIXTURE",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "label": "YouTube’da izle: Yerel test & <başlık> $& (yeni sekmede)"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "page": "/_v5-published-home",
+      "viewport": 430,
+      "width": 415,
+      "height": 740,
+      "documentWidth": 415,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/",
+      "images": [
+        {
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "loaded": true
+        }
+      ],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 6,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 150.09999999962747,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 150.19999999925494,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 213.19999999925494,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 213.19999999925494,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [],
+      "publishedLinks": [
+        {
+          "href": "https://www.youtube.com/watch?v=TESTFIXTURE",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "label": "YouTube’da izle: Yerel test & <başlık> $& (yeni sekmede)"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "page": "/_v5-published-home",
+      "viewport": 768,
+      "width": 753,
+      "height": 740,
+      "documentWidth": 753,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/",
+      "images": [
+        {
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "loaded": true
+        }
+      ],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 6,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 145.09999999962747,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 145.2000000011176,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 220.59999999962747,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 220.59999999962747,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [],
+      "publishedLinks": [
+        {
+          "href": "https://www.youtube.com/watch?v=TESTFIXTURE",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "label": "YouTube’da izle: Yerel test & <başlık> $& (yeni sekmede)"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "page": "/_v5-published-home",
+      "viewport": 1024,
+      "width": 1009,
+      "height": 740,
+      "documentWidth": 1009,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/",
+      "images": [
+        {
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "loaded": true
+        }
+      ],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 8,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 183,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 238.40000000037253,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 238.40000000037253,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [],
+      "publishedLinks": [
+        {
+          "href": "https://www.youtube.com/watch?v=TESTFIXTURE",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "label": "YouTube’da izle: Yerel test & <başlık> $& (yeni sekmede)"
+        }
+      ],
+      "passed": true
+    },
+    {
+      "page": "/_v5-published-home",
+      "viewport": 1440,
+      "width": 1425,
+      "height": 740,
+      "documentWidth": 1425,
+      "theme": "light",
+      "h1": 1,
+      "main": true,
+      "overflow": false,
+      "smallTargets": [],
+      "canonical": "https://aligazal.com/",
+      "images": [
+        {
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "loaded": true
+        }
+      ],
+      "scene": null,
+      "errors": [],
+      "violations": [],
+      "scriptRan": true,
+      "shares": [],
+      "activeAnimations": 6,
+      "imageLifecycle": [
+        {
+          "event": "load",
+          "at": 159.80000000074506,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 159.90000000037253,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 222.90000000037253,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        },
+        {
+          "event": "load",
+          "at": 222.90000000037253,
+          "src": "https://34743474-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli-prens-7-gun-kapak.jpg",
+          "complete": true,
+          "width": 1280
+        }
+      ],
+      "styles": [],
+      "publishedLinks": [
+        {
+          "href": "https://www.youtube.com/watch?v=TESTFIXTURE",
+          "target": "_blank",
+          "rel": "noopener noreferrer",
+          "label": "YouTube’da izle: Yerel test & <başlık> $& (yeni sekmede)"
+        }
+      ],
+      "passed": true
+    }
+  ]
+}

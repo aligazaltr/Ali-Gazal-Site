@@ -1,0 +1,27 @@
+{
+  "page": "/baseline/",
+  "viewport": 390,
+  "width": 375,
+  "height": 740,
+  "documentWidth": 576,
+  "theme": "dark",
+  "h1": 1,
+  "main": true,
+  "overflow": true,
+  "smallTargets": [],
+  "canonical": "https://aligazal.com/",
+  "images": [
+    {
+      "src": "https://c91f366f-ali-gazal-site.aliicerikmedya.workers.dev/baseline/machiavelli-prens-7-gun-kapak.jpg",
+      "loaded": true
+    }
+  ],
+  "scene": null,
+  "errors": [],
+  "violations": [],
+  "scriptRan": true,
+  "shares": [],
+  "activeAnimations": 0,
+  "styles": [],
+  "publishedLinks": []
+}
