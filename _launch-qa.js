@@ -11,14 +11,15 @@ async function load(page=$('page').value,width=Number($('width').value),theme=$(
   if(options.nojs??$('nojs').checked)next.setAttribute('sandbox','allow-same-origin');
   const loaded=new Promise((resolve,reject)=>{next.onload=()=>{if(next.contentDocument.URL!=='about:blank')resolve();};setTimeout(()=>reject(new Error('iframe load deadline: '+page)),10000);});
   next.src=($('variant').value==='baseline'&&!page.startsWith('_v5-')?'baseline/':'')+page;frame.replaceWith(next);frame=next;await loaded;
+  const readyDeadline=Date.now()+5000;
+  while((next.contentDocument.readyState!=='complete'||!next.contentDocument.querySelector('h1'))&&Date.now()<readyDeadline)await delay(50);
   await Promise.race([Promise.allSettled([...next.contentDocument.images].filter(i=>i.loading!=='lazy').map(i=>i.decode())),delay(5000)]);
   await settle(next.contentWindow);
   // In embedded Chromium, pageshow/first layout can follow image decoding.
   // Require the real controller state; never turn a fallback into a passing scene.
-  const scene=next.contentDocument.querySelector('[data-machiavelli-scene]');
-  if(scene&&!next.hasAttribute('sandbox')&&!window.__launchOptions.reduced&&Number($('height').value)>=420){
+  if((page==='machiavelli.html'||page==='_v5-published.html')&&!next.hasAttribute('sandbox')&&!window.__launchOptions.reduced&&Number($('height').value)>=420){
     const deadline=Date.now()+3000;
-    while(!scene.classList.contains('is-directed')&&Date.now()<deadline)await delay(50);
+    while(!next.contentDocument.querySelector('.mc-scene.is-directed')&&Date.now()<deadline)await delay(50);
   }
   return next.contentDocument;
 }
