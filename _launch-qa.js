@@ -135,4 +135,20 @@ $('text-matrix').onclick=async()=>{
  }}catch(e){rows.push({passed:false,error:String(e)});}finally{$('text200').checked=false;}
  output({test:'text resize 200 percent (not browser zoom)',total:rows.length,failed:rows.filter(r=>!r.passed),rows});
 };
-load().then(()=>output(snapshot())).catch(e=>output({error:String(e)}));
+// One test owns the iframe at a time, including the initial page load.
+// Otherwise late initial-load results can overwrite a running suite and one
+// suite can remove another suite's document (invalidating its image loads).
+const auditButtons=[...document.querySelectorAll('button')];
+let auditBusy=true;
+const disableAuditButtons=value=>auditButtons.forEach(b=>b.disabled=value);
+for(const button of auditButtons){
+ const action=button.onclick;
+ button.onclick=async()=>{
+  if(auditBusy)return;
+  auditBusy=true;disableAuditButtons(true);output({running:true,test:button.id});
+  try{await action();}catch(e){output({error:String(e)});}
+  finally{auditBusy=false;disableAuditButtons(false);}
+ };
+}
+disableAuditButtons(true);
+load().then(()=>output(snapshot())).catch(e=>output({error:String(e)})).finally(()=>{auditBusy=false;disableAuditButtons(false);});
