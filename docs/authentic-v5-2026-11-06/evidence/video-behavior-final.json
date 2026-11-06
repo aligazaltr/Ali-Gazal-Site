@@ -1,0 +1,76 @@
+{
+  "test": "video behavior",
+  "total": 11,
+  "failed": [
+    {
+      "name": "cinematic controller is active before focus",
+      "passed": false,
+      "detail": {
+        "fallback": "{\"height\":740,\"reduced\":false,\"complete\":true,\"naturalWidth\":0,\"portraitWidth\":247,\"filmWidth\":343}",
+        "height": 740
+      }
+    },
+    {
+      "name": "focus exposes cover before the scroll reveal",
+      "passed": false,
+      "detail": {
+        "clip": "none",
+        "zIndex": "auto"
+      }
+    }
+  ],
+  "rows": [
+    {
+      "name": "unpublished scene has no video anchor",
+      "passed": true
+    },
+    {
+      "name": "cinematic controller is active before focus",
+      "passed": false,
+      "detail": {
+        "fallback": "{\"height\":740,\"reduced\":false,\"complete\":true,\"naturalWidth\":0,\"portraitWidth\":247,\"filmWidth\":343}",
+        "height": 740
+      }
+    },
+    {
+      "name": "native cover anchor is keyboard focusable",
+      "passed": true
+    },
+    {
+      "name": "focus exposes cover before the scroll reveal",
+      "passed": false,
+      "detail": {
+        "clip": "none",
+        "zIndex": "auto"
+      }
+    },
+    {
+      "name": "named link announces destination and new tab",
+      "passed": true
+    },
+    {
+      "name": "activation targets gated URL in a new tab",
+      "passed": true
+    },
+    {
+      "name": "separate research route remains",
+      "passed": true
+    },
+    {
+      "name": "home cover targets the released video",
+      "passed": true
+    },
+    {
+      "name": "home retains the dossier route",
+      "passed": true
+    },
+    {
+      "name": "no-JS published cover remains a native link",
+      "passed": true
+    },
+    {
+      "name": "no-JS research route remains",
+      "passed": true
+    }
+  ]
+}

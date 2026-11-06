@@ -1,0 +1,6 @@
+Baseline: main 1701231.
+First QA baseline folder returned 404 because its parent directory remained ignored; QA-only manifest corrected and layout checks now verify canonical identity. Product manifest never admitted QA files.
+Native Chromium/zoom attempt: desktop Chromium opened, but AT-SPI provider unavailable; cloud-browser Ctrl+plus did not alter CSS viewport width. Real browser zoom and native Lighthouse are not verified. Text-resize simulation is tested separately.
+
+QA follow-up: the first iframe controller assertions were not accepted as success. Added fallback-reason DOM instrumentation only in the QA output; observed complete=true/naturalWidth=0, controller safely fell back to readable static flow. A direct top-level fixture was directed and passed native focus/Enter/click. Audit controls were then serialized so initialization and suites cannot replace each other's iframe. Final suite results are stored separately. Product scene controller/frames remain unchanged.
+Text 200% is a root-font simulation, not native browser zoom. 14/28 samples overflowed; these failures are not hidden or counted as WCAG success.

@@ -1,0 +1,86 @@
+{
+  "date": "2026-11-06T21:04:59.162211+00:00",
+  "rows": [
+    {
+      "name": "www.aligazal.com",
+      "type": "CNAME",
+      "result": {
+        "Status": 3,
+        "TC": false,
+        "RD": true,
+        "RA": true,
+        "AD": false,
+        "CD": false,
+        "Question": [
+          {
+            "name": "www.aligazal.com.",
+            "type": 5
+          }
+        ],
+        "Authority": [
+          {
+            "name": "aligazal.com.",
+            "type": 6,
+            "TTL": 1800,
+            "data": "elinore.ns.cloudflare.com. dns.cloudflare.com. 2419308059 10000 2400 604800 1800"
+          }
+        ],
+        "Comment": "Response from 172.64.35.161."
+      }
+    },
+    {
+      "name": "aligazal.com",
+      "type": "DS",
+      "result": {
+        "Status": 0,
+        "TC": false,
+        "RD": true,
+        "RA": true,
+        "AD": false,
+        "CD": false,
+        "Question": [
+          {
+            "name": "aligazal.com.",
+            "type": 43
+          }
+        ],
+        "Authority": [
+          {
+            "name": "com.",
+            "type": 6,
+            "TTL": 900,
+            "data": "a.gtld-servers.net. nstld.verisign-grs.com. 1793999076 1800 900 604800 900"
+          }
+        ],
+        "Comment": "Response from 2001:501:b1f9::30."
+      }
+    },
+    {
+      "name": "aligazal.com",
+      "type": "DNSKEY",
+      "result": {
+        "Status": 0,
+        "TC": false,
+        "RD": true,
+        "RA": true,
+        "AD": false,
+        "CD": false,
+        "Question": [
+          {
+            "name": "aligazal.com.",
+            "type": 48
+          }
+        ],
+        "Authority": [
+          {
+            "name": "aligazal.com.",
+            "type": 6,
+            "TTL": 1800,
+            "data": "elinore.ns.cloudflare.com. dns.cloudflare.com. 2419308059 10000 2400 604800 1800"
+          }
+        ],
+        "Comment": "Response from 172.64.35.161."
+      }
+    }
+  ]
+}

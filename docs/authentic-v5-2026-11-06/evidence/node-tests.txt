@@ -1,0 +1,382 @@
+TAP version 13
+# Subtest: initial catalog slots remain available and generated content is in sync
+ok 1 - initial catalog slots remain available and generated content is in sync
+  ---
+  duration_ms: 8.747133
+  type: 'test'
+  ...
+# Subtest: draft and archived text / private verification notes never enter public artifacts
+ok 2 - draft and archived text / private verification notes never enter public artifacts
+  ---
+  duration_ms: 2.312714
+  type: 'test'
+  ...
+# Subtest: publishing fails closed for missing text, source, translation credit, verification or rights
+ok 3 - publishing fails closed for missing text, source, translation credit, verification or rights
+  ---
+  duration_ms: 4.244822
+  type: 'test'
+  ...
+# Subtest: invalid and duplicate identities / book-author relations are rejected
+ok 4 - invalid and duplicate identities / book-author relations are rejected
+  ---
+  duration_ms: 0.677834
+  type: 'test'
+  ...
+# Subtest: Turkish search covers text, author, book, categories, tags and every commentary field
+ok 5 - Turkish search covers text, author, book, categories, tags and every commentary field
+  ---
+  duration_ms: 1.219171
+  type: 'test'
+  ...
+# Subtest: URL filters round-trip and discard invalid IDs without executing query text
+ok 6 - URL filters round-trip and discard invalid IDs without executing query text
+  ---
+  duration_ms: 0.866148
+  type: 'test'
+  ...
+# Subtest: random discovery handles zero / one entry and avoids consecutive repetitions
+ok 7 - random discovery handles zero / one entry and avoids consecutive repetitions
+  ---
+  duration_ms: 0.62928
+  type: 'test'
+  ...
+# Subtest: all content kinds are labelled; translations require source text and credit
+ok 8 - all content kinds are labelled; translations require source text and credit
+  ---
+  duration_ms: 1.14498
+  type: 'test'
+  ...
+# Subtest: unreleased video produces no watch link; only verified in-range timestamp is exported
+ok 9 - unreleased video produces no watch link; only verified in-range timestamp is exported
+  ---
+  duration_ms: 2.852319
+  type: 'test'
+  ...
+# Subtest: static cards escape unsafe text, contain accessible details and handle long passages
+ok 10 - static cards escape unsafe text, contain accessible details and handle long passages
+  ---
+  duration_ms: 0.613276
+  type: 'test'
+  ...
+# Subtest: sharing includes attribution, content kind, source locator and stable canonical anchor
+ok 11 - sharing includes attribution, content kind, source locator and stable canonical anchor
+  ---
+  duration_ms: 0.499154
+  type: 'test'
+  ...
+# Subtest: no-JS HTML has published text and source; empty archive is noindex, populated archive gains schema
+ok 12 - no-JS HTML has published text and source; empty archive is noindex, populated archive gains schema
+  ---
+  duration_ms: 1.986901
+  type: 'test'
+  ...
+# Subtest: published translations expose their source passage safely and retain their label when copied
+ok 13 - published translations expose their source passage safely and retain their label when copied
+  ---
+  duration_ms: 0.57589
+  type: 'test'
+  ...
+# Subtest: deployment allowlist excludes editorial source, test scripts and docs
+ok 14 - deployment allowlist excludes editorial source, test scripts and docs
+  ---
+  duration_ms: 0.262396
+  type: 'test'
+  ...
+# Subtest: verified production domain is consistent across crawlable outputs
+ok 15 - verified production domain is consistent across crawlable outputs
+  ---
+  duration_ms: 6.680822
+  type: 'test'
+  ...
+# Subtest: metadata can migrate again without touching page bodies
+ok 16 - metadata can migrate again without touching page bodies
+  ---
+  duration_ms: 1.808112
+  type: 'test'
+  ...
+# Subtest: home social preview and Machiavelli use the unchanged final cover
+ok 17 - home social preview and Machiavelli use the unchanged final cover
+  ---
+  duration_ms: 0.294746
+  type: 'test'
+  ...
+# Subtest: only JSON-LD can occur inline; no inline handlers or external active resources
+ok 18 - only JSON-LD can occur inline; no inline handlers or external active resources
+  ---
+  duration_ms: 1.05931
+  type: 'test'
+  ...
+# Subtest: release assets contain every HTML dependency and exclude undeclared files
+ok 19 - release assets contain every HTML dependency and exclude undeclared files
+  ---
+  duration_ms: 1.335037
+  type: 'test'
+  ...
+# Subtest: portrait travels to the cover face anchor while the real cover opens from the right
+ok 20 - portrait travels to the cover face anchor while the real cover opens from the right
+  ---
+  duration_ms: 1.652427
+  type: 'test'
+  ...
+# Subtest: scroll sampling is finite, reversible, clamped and continuous at storyboard boundaries
+ok 21 - scroll sampling is finite, reversible, clamped and continuous at storyboard boundaries
+  ---
+  duration_ms: 1.438893
+  type: 'test'
+  ...
+# Subtest: static composition contains the real cover, current status and a working research jump without fabricated video links
+ok 22 - static composition contains the real cover, current status and a working research jump without fabricated video links
+  ---
+  duration_ms: 0.361466
+  type: 'test'
+  ...
+# Subtest: archive contains no page sweep or paper overlay and retains text, author and source entrances
+ok 23 - archive contains no page sweep or paper overlay and retains text, author and source entrances
+  ---
+  duration_ms: 1.73435
+  type: 'test'
+  ...
+# Subtest: scene controller keeps reduced motion and short windows in readable flow
+ok 24 - scene controller keeps reduced motion and short windows in readable flow
+  ---
+  duration_ms: 2.977808
+  type: 'test'
+  ...
+# Subtest: scene controller schedules one visible frame and stops offscreen or in background
+ok 25 - scene controller schedules one visible frame and stops offscreen or in background
+  ---
+  duration_ms: 1.354005
+  type: 'test'
+  ...
+# Subtest: an unavailable portrait restores the readable cover and research flow
+ok 26 - an unavailable portrait restores the readable cover and research flow
+  ---
+  duration_ms: 1.146122
+  type: 'test'
+  ...
+# Subtest: reduced motion and missing animation APIs preserve immediate content updates
+ok 27 - reduced motion and missing animation APIs preserve immediate content updates
+  ---
+  duration_ms: 4.001384
+  type: 'test'
+  ...
+# Subtest: random-style swap fades out before replacing text, then settles with a separate entry
+ok 28 - random-style swap fades out before replacing text, then settles with a separate entry
+  ---
+  duration_ms: 1.168965
+  type: 'test'
+  ...
+# Subtest: rapid discovery selections cannot restore an obsolete selection
+ok 29 - rapid discovery selections cannot restore an obsolete selection
+  ---
+  duration_ms: 0.987081
+  type: 'test'
+  ...
+# Subtest: changing motion preference during a swap commits latest content and cancels motion
+ok 30 - changing motion preference during a swap commits latest content and cancels motion
+  ---
+  duration_ms: 0.997928
+  type: 'test'
+  ...
+# Subtest: keyboard focus cancels a pending swap without replacing the focused content
+ok 31 - keyboard focus cancels a pending swap without replacing the focused content
+  ---
+  duration_ms: 0.99301
+  type: 'test'
+  ...
+# Subtest: page backgrounding does not leave pending discovery content or animation behind
+ok 32 - page backgrounding does not leave pending discovery content or animation behind
+  ---
+  duration_ms: 0.99285
+  type: 'test'
+  ...
+# Subtest: static cinematic slogan and three full scenes survive without JavaScript
+ok 33 - static cinematic slogan and three full scenes survive without JavaScript
+  ---
+  duration_ms: 8.200959
+  type: 'test'
+  ...
+# Subtest: mobile scenes reveal their own content without updating or animating the hidden panel
+ok 34 - mobile scenes reveal their own content without updating or animating the hidden panel
+  ---
+  duration_ms: 2.096106
+  type: 'test'
+  ...
+# Subtest: desktop sticky story still changes number, label, title and description
+ok 35 - desktop sticky story still changes number, label, title and description
+  ---
+  duration_ms: 1.427045
+  type: 'test'
+  ...
+# Subtest: breakpoint changes disconnect the old story controller
+ok 36 - breakpoint changes disconnect the old story controller
+  ---
+  duration_ms: 1.087503
+  type: 'test'
+  ...
+# Subtest: off-screen elements never start an animation
+ok 37 - off-screen elements never start an animation
+  ---
+  duration_ms: 0.82769
+  type: 'test'
+  ...
+# Subtest: layer morph uses the current visual position, cancels older travel and reaches the new CSS state
+ok 38 - layer morph uses the current visual position, cancels older travel and reaches the new CSS state
+  ---
+  duration_ms: 1.176387
+  type: 'test'
+  ...
+# Subtest: off-screen and reduced-motion morphs commit meaning without scheduling visual work
+ok 39 - off-screen and reduced-motion morphs commit meaning without scheduling visual work
+  ---
+  duration_ms: 1.603052
+  type: 'test'
+  ...
+# Subtest: signature replaces paper compositions while research facts remain in the document
+ok 40 - signature replaces paper compositions while research facts remain in the document
+  ---
+  duration_ms: 3.76706
+  type: 'test'
+  ...
+# Subtest: text fade commits only the latest selection and clears when interrupted
+ok 41 - text fade commits only the latest selection and clears when interrupted
+  ---
+  duration_ms: 1.978208
+  type: 'test'
+  ...
+# Subtest: current HTML is stable and preserves the unpublished video gate
+ok 42 - current HTML is stable and preserves the unpublished video gate
+  ---
+  duration_ms: 19.222907
+  type: 'test'
+  ...
+# Subtest: one release record updates static copy, metadata, phase and chapters
+ok 43 - one release record updates static copy, metadata, phase and chapters
+  ---
+  duration_ms: 8.573311
+  type: 'test'
+  ...
+# Subtest: a release with a missing URL cannot generate public HTML
+ok 44 - a release with a missing URL cannot generate public HTML
+  ---
+  duration_ms: 1.863265
+  type: 'test'
+  ...
+# Subtest: static evidence includes public records and respects publication gates
+ok 45 - static evidence includes public records and respects publication gates
+  ---
+  duration_ms: 3.366746
+  type: 'test'
+  ...
+# Subtest: channel, foreign host and insecure URLs cannot pass as video links
+ok 46 - channel, foreign host and insecure URLs cannot pass as video links
+  ---
+  duration_ms: 0.249306
+  type: 'test'
+  ...
+# Subtest: Payot begins with four research stages, no experiment outcome or invented release
+ok 47 - Payot begins with four research stages, no experiment outcome or invented release
+  ---
+  duration_ms: 19.681441
+  type: 'test'
+  ...
+# Subtest: one central stage change updates detail and homepage without JavaScript
+ok 48 - one central stage change updates detail and homepage without JavaScript
+  ---
+  duration_ms: 4.583013
+  type: 'test'
+  ...
+# Subtest: invalid stage counts, out-of-order completion and premature production are rejected
+ok 49 - invalid stage counts, out-of-order completion and premature production are rejected
+  ---
+  duration_ms: 0.80114
+  type: 'test'
+  ...
+# Subtest: future video release uses existing gates while research stays at four stages
+ok 50 - future video release uses existing gates while research stays at four stages
+  ---
+  duration_ms: 4.125812
+  type: 'test'
+  ...
+# Subtest: existing Payot entries link both ways without generating extra quotes or video URLs
+ok 51 - existing Payot entries link both ways without generating extra quotes or video URLs
+  ---
+  duration_ms: 2.075455
+  type: 'test'
+  ...
+# Subtest: Wrangler reads _headers as deployment metadata without publishing it as an asset
+ok 52 - Wrangler reads _headers as deployment metadata without publishing it as an asset
+  ---
+  duration_ms: 1.275457
+  type: 'test'
+  ...
+# Subtest: response security policy enforces local scripts without an unsafe script escape
+ok 53 - response security policy enforces local scripts without an unsafe script escape
+  ---
+  duration_ms: 1.939881
+  type: 'test'
+  ...
+# Subtest: preview thought links preserve the thought and environment without leaking filter/tracking queries
+ok 54 - preview thought links preserve the thought and environment without leaking filter/tracking queries
+  ---
+  duration_ms: 1.530291
+  type: 'test'
+  ...
+# Subtest: production shares always use the canonical origin; preview can explicitly choose production
+ok 55 - production shares always use the canonical origin; preview can explicitly choose production
+  ---
+  duration_ms: 0.338211
+  type: 'test'
+  ...
+# Subtest: project preview sharing and same-origin home navigation remain on the reviewed build
+ok 56 - project preview sharing and same-origin home navigation remain on the reviewed build
+  ---
+  duration_ms: 0.240994
+  type: 'test'
+  ...
+# Subtest: only the exact legacy production host shares the new canonical URL
+ok 57 - only the exact legacy production host shares the new canonical URL
+  ---
+  duration_ms: 1.102315
+  type: 'test'
+  ...
+# Subtest: a video destination requires a genuine video-shaped HTTPS URL and a nonempty title
+ok 58 - a video destination requires a genuine video-shaped HTTPS URL and a nonempty title
+  ---
+  duration_ms: 1.130498
+  type: 'test'
+  ...
+# Subtest: video links reject channels, redirect paths, credentials, alternate ports and lookalike hosts
+ok 59 - video links reject channels, redirect paths, credentials, alternate ports and lookalike hosts
+  ---
+  duration_ms: 0.282597
+  type: 'test'
+  ...
+# Subtest: the published scene has a native named cover link and keeps the separate research route
+ok 60 - the published scene has a native named cover link and keeps the separate research route
+  ---
+  duration_ms: 2.196608
+  type: 'test'
+  ...
+# Subtest: publication and withdrawal keep static home/scene links coherent without JavaScript
+ok 61 - publication and withdrawal keep static home/scene links coherent without JavaScript
+  ---
+  duration_ms: 21.006652
+  type: 'test'
+  ...
+# Subtest: malformed published data fails the static build instead of shipping an unsafe cover
+ok 62 - malformed published data fails the static build instead of shipping an unsafe cover
+  ---
+  duration_ms: 1.546836
+  type: 'test'
+  ...
+1..62
+# tests 62
+# suites 0
+# pass 62
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 197.377824

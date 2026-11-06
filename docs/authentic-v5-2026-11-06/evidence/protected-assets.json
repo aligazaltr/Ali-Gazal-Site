@@ -1,0 +1,87 @@
+[
+  {
+    "file": "motion.js",
+    "unchanged": true,
+    "sha256": "3c06448f988fc926abdc5a5af875cacb7281ee067d0c289a2534e743ce309dd7"
+  },
+  {
+    "file": "motion.css",
+    "unchanged": true,
+    "sha256": "eaf876530d8ed8fb018ac51022d69d146bfb9952c40e082979c7fc9a4a100f0f"
+  },
+  {
+    "file": "signature.css",
+    "unchanged": true,
+    "sha256": "66de2f52d4b6dc17071600a5464ac1042813f1766c5b1a896c8209b688bfa333"
+  },
+  {
+    "file": "machiavelli-scene.js",
+    "unchanged": true,
+    "sha256": "7618af78d4514a2eda90d8c1ca8ef044df9dc7fb1cd6875a0ece94123885ba2f"
+  },
+  {
+    "file": "machiavelli-frames.js",
+    "unchanged": true,
+    "sha256": "f952b1d4ccab3b85291543c528cde167153323822bd66ff473472ed4c759a74c"
+  },
+  {
+    "file": "machiavelli-prens-7-gun-kapak.jpg",
+    "unchanged": true,
+    "sha256": "4a0bfa2e1cdc2e2c2205f96f571ee12368f0afa71d99873b0061f99c03b3f8f7"
+  },
+  {
+    "file": "machiavelli-portrait-640.webp",
+    "unchanged": true,
+    "sha256": "2d3a14ca3eb9021ca42baef77ff0b8a689b38f6d273ce6f0c2051cfb4783a4a6"
+  },
+  {
+    "file": "machiavelli-portrait-960.webp",
+    "unchanged": true,
+    "sha256": "2c35b99687b86c42406cf6c8e5810ebe7d7193a6c7466496a9a1229c142225c5"
+  },
+  {
+    "file": "hakkimda.html",
+    "unchanged": true,
+    "sha256": "9777aae8d51aac16f861e7173a10806ab220bff9ff1c7c30ac3643dadb1ee39f"
+  },
+  {
+    "file": "editorial.css",
+    "unchanged": true,
+    "sha256": "b2146295ced1b128d21c2965153cd857d8b946a7b89479782f448a1b10cfebb4"
+  },
+  {
+    "file": "rehberler.html",
+    "unchanged": true,
+    "sha256": "e22add5c0e991ff66f6ada7609d65a2c4c16198e789438fb47116ea1427b5e62"
+  },
+  {
+    "file": "archive.js",
+    "unchanged": true,
+    "sha256": "da486b06e714d714e6e9d6cf8284aa3256c1b320908cca07a9a48a50229627c4"
+  },
+  {
+    "file": "archive-core.js",
+    "unchanged": true,
+    "sha256": "e0c96dee83dc2f6399d825506898be5385106a07d63116aa0543cc14a95d1c68"
+  },
+  {
+    "file": "content/archive.json",
+    "unchanged": true,
+    "sha256": "c4afcc7eb3b963fe86987c925f92fae90bacb51273d6182f6d84eadf47cfe276"
+  },
+  {
+    "file": "_headers",
+    "unchanged": true,
+    "sha256": "cfb793266d31ed00afdda938de937373440ba5b6132061018132c7fd081cb9f3"
+  },
+  {
+    "file": "robots.txt",
+    "unchanged": true,
+    "sha256": "9e3ceedd30334406559e571cf0496324e02c2f9d3ee0135fb6fac1c2634ebb65"
+  },
+  {
+    "file": "sitemap.xml",
+    "unchanged": true,
+    "sha256": "c8b7389246939b5a6374dc68688deff860f2b8bc727005ebe934f92c50817fe7"
+  }
+]

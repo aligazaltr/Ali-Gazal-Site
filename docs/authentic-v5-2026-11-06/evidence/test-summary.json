@@ -1,0 +1,44 @@
+[
+  {
+    "file": "layout-98.json",
+    "total": 98,
+    "failed": 0,
+    "passed": 98
+  },
+  {
+    "file": "fallbacks-28.json",
+    "total": 28,
+    "failed": 0,
+    "passed": 28
+  },
+  {
+    "file": "archive-behavior-17.json",
+    "total": 17,
+    "failed": 0,
+    "passed": 17
+  },
+  {
+    "file": "video-behavior-final.json",
+    "total": 11,
+    "failed": 2,
+    "passed": 9
+  },
+  {
+    "file": "published-layout-28-final.json",
+    "total": 28,
+    "failed": 8,
+    "passed": 20
+  },
+  {
+    "file": "text-28.json",
+    "total": 28,
+    "failed": 14,
+    "passed": 14
+  },
+  {
+    "file": "clean-preview-http-final.json",
+    "total": 33,
+    "failed": 0,
+    "passed": 33
+  }
+]
