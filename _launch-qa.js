@@ -10,7 +10,10 @@ async function load(page=$('page').value,width=Number($('width').value),theme=$(
   const next=document.createElement('iframe');next.id='preview';next.title='Site önizlemesi';next.style.width=width+'px';next.style.height=$('height').value+'px';
   if(options.nojs??$('nojs').checked)next.setAttribute('sandbox','allow-same-origin');
   const loaded=new Promise((resolve,reject)=>{next.onload=()=>{if(next.contentDocument.URL!=='about:blank')resolve();};setTimeout(()=>reject(new Error('iframe load deadline: '+page)),10000);});
-  next.src=($('variant').value==='baseline'&&!page.startsWith('_v5-')?'baseline/':'')+page;frame.replaceWith(next);frame=next;await loaded;
+  // Keep the preceding document alive until the next has loaded. Removing it
+  // early can abort a shared in-flight image request in Chromium iframe tests.
+  const previous=frame;previous.id='previous-preview';
+  next.src=($('variant').value==='baseline'&&!page.startsWith('_v5-')?'baseline/':'')+page;previous.after(next);frame=next;await loaded;previous.remove();
   const readyDeadline=Date.now()+5000;
   while((next.contentDocument.readyState!=='complete'||!next.contentDocument.querySelector('h1'))&&Date.now()<readyDeadline)await delay(50);
   await Promise.race([Promise.allSettled([...next.contentDocument.images].filter(i=>i.loading!=='lazy').map(i=>i.decode())),delay(5000)]);
