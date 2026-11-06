@@ -12,10 +12,12 @@ async function load(page=$('page').value,width=Number($('width').value),theme=$(
   const loaded=new Promise((resolve,reject)=>{next.onload=()=>{if(next.contentDocument.URL!=='about:blank')resolve();};setTimeout(()=>reject(new Error('iframe load deadline: '+page)),10000);});
   // Keep the preceding document alive until the next has loaded. Removing it
   // early can abort a shared in-flight image request in Chromium iframe tests.
-  const previous=frame;previous.id='previous-preview';
+  const previous=frame;previous.id='previous-preview';previous.style.position='absolute';previous.style.visibility='hidden';
   next.src=($('variant').value==='baseline'&&!page.startsWith('_v5-')?'baseline/':'')+page;previous.after(next);frame=next;await loaded;previous.remove();
   const readyDeadline=Date.now()+5000;
-  while((next.contentDocument.readyState!=='complete'||!next.contentDocument.querySelector('h1'))&&Date.now()<readyDeadline)await delay(50);
+  const renderReady=()=>{const d=next.contentDocument;return d.readyState==='complete'&&d.querySelector('h1')&&[...d.querySelectorAll('link[rel=stylesheet]')].every(l=>l.sheet)&&(next.hasAttribute('sandbox')||d.documentElement.dataset.theme);};
+  while(!renderReady()&&Date.now()<readyDeadline)await delay(50);
+  if(!renderReady())throw Error('Document/CSS/theme readiness deadline: '+page);
   await Promise.race([Promise.allSettled([...next.contentDocument.images].filter(i=>i.loading!=='lazy').map(i=>i.decode())),delay(5000)]);
   // An iframe load event / decode resolution can precede responsive-image
   // intrinsic metadata in Chromium. Wait for the asserted condition itself.
@@ -38,7 +40,7 @@ function snapshotBase(d=frame.contentDocument){
 $('show').onclick=async()=>{try{await load();output(snapshot());}catch(e){output({error:String(e)});}};
 $('snapshot').onclick=()=>output(snapshot());
 $('matrix').onclick=async()=>{
- const rows=[];$('matrix').disabled=true;
+ const rows=[];$('variant').value='candidate';$('text200').checked=false;$('matrix').disabled=true;
  try{for(const page of pages)for(const theme of ['dark','light'])for(const width of [320,360,390,430,768,1024,1440]){
   try{const d=await load(page,width,theme,{reduced:false,nojs:false});const row=snapshot(d);row.passed=(page==='404.html'?!row.canonical:row.canonical==='https://aligazal.com'+(page==='index.html'?'/':'/'+page.replace('.html','')))&&!row.overflow&&!row.smallTargets.length&&row.h1===1&&row.main&&row.theme===theme&&row.viewport===width&&!row.errors.length&&!row.violations.length;rows.push(row);}catch(e){rows.push({page,width,theme,passed:false,error:String(e)});}
   output({running:true,done:rows.length,total:98,failed:rows.filter(r=>!r.passed),rows});
