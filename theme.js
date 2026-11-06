@@ -1,6 +1,9 @@
 /* Runs before the stylesheet to apply a saved choice without a theme flash. */
 (() => {
   const root = document.documentElement;
+  // Set before CSS/first paint so the static preview toolbar reserves its space.
+  const canonical = document.querySelector('link[rel="canonical"]')?.href;
+  if (canonical && window.AG_SHARE?.context(canonical, location.href).isPreview) root.dataset.preview = '';
   const system = window.matchMedia?.('(prefers-color-scheme: light)');
   let saved;
 
