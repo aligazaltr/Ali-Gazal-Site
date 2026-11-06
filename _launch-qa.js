@@ -11,6 +11,7 @@ async function load(page=$('page').value,width=Number($('width').value),theme=$(
   if(options.nojs??$('nojs').checked)next.setAttribute('sandbox','allow-same-origin');
   const loaded=new Promise((resolve,reject)=>{next.onload=()=>{if(next.contentDocument.URL!=='about:blank')resolve();};setTimeout(()=>reject(new Error('iframe load deadline: '+page)),10000);});
   next.src=($('variant').value==='baseline'&&!page.startsWith('_v5-')?'baseline/':'')+page;frame.replaceWith(next);frame=next;await loaded;
+  await Promise.race([Promise.allSettled([...next.contentDocument.images].filter(i=>i.loading!=='lazy').map(i=>i.decode())),delay(5000)]);
   await settle(next.contentWindow);
   return next.contentDocument;
 }
@@ -91,7 +92,7 @@ function snapshot(d=frame.contentDocument) {
 $('video-matrix').onclick=async()=>{
  const rows=[];$('variant').value='candidate';$('height').value='740';$('text200').checked=false;
  try{for(const page of ['_v5-published.html','_v5-published-home.html'])for(const theme of ['dark','light'])for(const width of [320,360,390,430,768,1024,1440]){
-  const d=await load(page,width,theme,{nojs:false,reduced:false});const r=snapshot(d);r.passed=!r.overflow&&!r.errors.length&&!r.violations.length&&r.publishedLinks.length===1&&r.publishedLinks[0].target==='_blank'&&r.publishedLinks[0].rel.includes('noopener')&&r.publishedLinks[0].href==='https://www.youtube.com/watch?v=TESTFIXTURE';rows.push(r);output({running:true,done:rows.length,total:28,failed:rows.filter(r=>!r.passed)});
+  const d=await load(page,width,theme,{nojs:false,reduced:false});const r=snapshot(d);r.passed=!r.overflow&&!r.errors.length&&!r.violations.length&&r.images.every(i=>i.loaded)&&(page!=='_v5-published.html'||r.scene===true)&&r.publishedLinks.length===1&&r.publishedLinks[0].target==='_blank'&&r.publishedLinks[0].rel.includes('noopener')&&r.publishedLinks[0].href==='https://www.youtube.com/watch?v=TESTFIXTURE';rows.push(r);output({running:true,done:rows.length,total:28,failed:rows.filter(r=>!r.passed)});
  }}catch(e){rows.push({passed:false,error:String(e)});}output({test:'published layouts',total:rows.length,failed:rows.filter(r=>!r.passed),rows});
 };
 $('video-behavior').onclick=async()=>{
@@ -101,9 +102,9 @@ $('video-behavior').onclick=async()=>{
  let d=await load('machiavelli.html',390,'dark',{nojs:false,reduced:false});
  check('unpublished scene has no video anchor',!d.querySelector('[data-published-cover]'));
  d=await load('_v5-published.html',390,'dark',{nojs:false,reduced:false});
- let a=d.querySelector('[data-published-cover]'),film=d.querySelector('.mc-film');a.focus();await settle(d.defaultView);
+ let a=d.querySelector('[data-published-cover]'),film=d.querySelector('.mc-film');check('cinematic controller is active before focus',d.querySelector('.mc-scene').classList.contains('is-directed'));a.focus();await settle(d.defaultView);
  check('native cover anchor is keyboard focusable',d.activeElement===a);
- check('focus exposes cover before the scroll reveal',d.defaultView.getComputedStyle(film).clipPath==='none',{clip:d.defaultView.getComputedStyle(film).clipPath,zIndex:d.defaultView.getComputedStyle(film).zIndex});
+ check('focus exposes cover before the scroll reveal',d.defaultView.getComputedStyle(film).clipPath==='none'&&d.defaultView.getComputedStyle(film).zIndex==='6',{clip:d.defaultView.getComputedStyle(film).clipPath,zIndex:d.defaultView.getComputedStyle(film).zIndex});
  check('named link announces destination and new tab',a.getAttribute('aria-label').includes('YouTube’da izle')&&a.getAttribute('aria-label').includes('yeni sekmede'));
  a.click();check('activation targets gated URL in a new tab',d.defaultView.__launchQA.videoActivations.some(x=>x.href==='https://www.youtube.com/watch?v=TESTFIXTURE'&&x.target==='_blank'&&x.rel.includes('noopener')));
  check('separate research route remains',!!d.querySelector('a.mc-jump[href="#deney-asamasi"]'));
