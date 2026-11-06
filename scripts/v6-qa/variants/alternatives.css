@@ -1,0 +1,18 @@
+/* Evaluated alternative B; test-only, never a release dependency. */
+.alt-notebook .author-opening { display:grid; grid-template-columns:minmax(0,.65fr) minmax(0,1.35fr); gap:2rem 4rem; }
+.alt-notebook .author-byline { display:flex; flex-direction:column; justify-content:start; border:0; border-top:2px solid var(--orange); padding-top:1rem; }
+.alt-notebook .author-opening h1 { margin:0; font:750 clamp(2.5rem,4.5vw,4.5rem)/1.1 Arial, sans-serif; letter-spacing:-.04em; }
+.alt-notebook .author-opening-foot { grid-column:2; display:block; }
+.alt-notebook .author-letter { background:var(--bg-raised); padding:2rem; gap:3rem; }
+.alt-notebook .author-method-list { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:2rem; }
+.alt-notebook .author-method-list li { display:block; }
+.alt-notebook .author-method-list h3 { margin-block:1rem; font-size:1.7rem; }
+.alt-ledger .publication-opening h1 { font:500 3rem/1 var(--literary); letter-spacing:-.03em; }
+.alt-ledger .publication-spread { grid-template-columns:minmax(0,1fr) 13rem; gap:3rem; }
+.alt-ledger .publication-copy { display:grid; grid-template-columns:1fr 1fr; gap:0 2rem; }
+.alt-ledger .publication-copy h3 { font:650 1.8rem/1.2 Arial, sans-serif; grid-column:1; }
+.alt-ledger .publication-copy > p { font-size:.9rem; }
+.alt-ledger .publication-deck { grid-column:2; grid-row:1/3; }
+.alt-ledger .publication-status { grid-column:1; }
+.alt-ledger .publication-cover figcaption { font-size:.7rem; }
+@media(max-width:42rem) { .alt-notebook .author-opening,.alt-notebook .author-method-list,.alt-ledger .publication-spread { display:block; } .alt-notebook .author-opening h1 { margin-block:2rem; } .alt-notebook .author-letter { padding:1.5rem; } .alt-ledger .publication-copy { display:block; } .alt-ledger .publication-cover { margin-top:2rem; } }

@@ -173,3 +173,5 @@
   .v6-dossier .evidence-details { margin-top:1rem; }
 }
 @media (forced-colors:active) { .mc-film-link:focus-visible { outline:3px solid Highlight; outline-offset:3px; } }
+
+.editorial-arrow { flex:none; vertical-align:middle; margin-inline-start:.6rem; }
