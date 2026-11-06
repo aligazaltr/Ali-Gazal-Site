@@ -24,7 +24,7 @@ $('snapshot').onclick=()=>output(snapshot());
 $('matrix').onclick=async()=>{
  const rows=[];$('matrix').disabled=true;
  try{for(const page of pages)for(const theme of ['dark','light'])for(const width of [320,360,390,430,768,1024,1440]){
-  try{const d=await load(page,width,theme,{reduced:false,nojs:false});const row=snapshot(d);row.passed=!row.overflow&&!row.smallTargets.length&&row.h1===1&&row.main&&row.theme===theme&&row.viewport===width&&!row.errors.length&&!row.violations.length;rows.push(row);}catch(e){rows.push({page,width,theme,passed:false,error:String(e)});}
+  try{const d=await load(page,width,theme,{reduced:false,nojs:false});const row=snapshot(d);row.passed=(page==='404.html'?!row.canonical:row.canonical==='https://aligazal.com'+(page==='index.html'?'/':'/'+page.replace('.html','')))&&!row.overflow&&!row.smallTargets.length&&row.h1===1&&row.main&&row.theme===theme&&row.viewport===width&&!row.errors.length&&!row.violations.length;rows.push(row);}catch(e){rows.push({page,width,theme,passed:false,error:String(e)});}
   output({running:true,done:rows.length,total:98,failed:rows.filter(r=>!r.passed),rows});
  }}finally{$('matrix').disabled=false;output({test:'layout',total:rows.length,failed:rows.filter(r=>!r.passed),rows});}
 };

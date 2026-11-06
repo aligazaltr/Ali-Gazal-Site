@@ -1,5 +1,6 @@
 # QA ONLY — never merge this manifest.
 *
+!/baseline/
 !/index.html
 !/machiavelli.html
 !/rehberler.html
