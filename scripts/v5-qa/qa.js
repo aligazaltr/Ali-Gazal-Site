@@ -17,6 +17,10 @@ async function load(page=$('page').value,width=Number($('width').value),theme=$(
   const readyDeadline=Date.now()+5000;
   while((next.contentDocument.readyState!=='complete'||!next.contentDocument.querySelector('h1'))&&Date.now()<readyDeadline)await delay(50);
   await Promise.race([Promise.allSettled([...next.contentDocument.images].filter(i=>i.loading!=='lazy').map(i=>i.decode())),delay(5000)]);
+  // An iframe load event / decode resolution can precede responsive-image
+  // intrinsic metadata in Chromium. Wait for the asserted condition itself.
+  const imageDeadline=Date.now()+3000;
+  while([...next.contentDocument.images].some(i=>i.loading!=='lazy'&&(!i.complete||!i.naturalWidth))&&Date.now()<imageDeadline)await delay(50);
   await settle(next.contentWindow);
   // In embedded Chromium, pageshow/first layout can follow image decoding.
   // Require the real controller state; never turn a fallback into a passing scene.
