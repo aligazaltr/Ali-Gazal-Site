@@ -101,7 +101,6 @@ button:active:not(:disabled) { transform: translateY(1px); }
   .archive-shelf ul { gap: 1rem; }
 }
 @media (max-width: 42rem) {
-  .archive-filters select { font-size:1rem; }
   .archive-intro { grid-template-columns: 1fr; padding-bottom: 2rem; }
   .archive-intro h1 { font-size: clamp(3rem, 13vw, 4.5rem); }
   .archive-intro .lead { font-size: 1rem; }
@@ -153,7 +152,7 @@ button:active:not(:disabled) { transform: translateY(1px); }
 .archive-shelf { background: var(--card-wash); padding: 1.4rem 1.5rem 2rem; }
 .archive-shelf li { border-left: 1px solid var(--line-strong); }
 .archive-filters { padding: clamp(1rem, 3vw, 2rem); border: 1px solid var(--line); background: var(--surface); }
-.archive-search input { border: 0; border-bottom: 1px solid var(--line-strong); border-radius: 0; padding-inline: 0; background: transparent; }
+.archive-search input { border: 0; border-bottom: 1px solid var(--muted); border-radius: 0; padding-inline: 0; background: transparent; }
 .archive-search input:focus-visible { outline-offset: 5px; }
 .archive-toolbar { margin-bottom: 1rem; }
 .discovery-stage { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.6fr); gap: clamp(1.5rem, 5vw, 4rem); padding: clamp(1.4rem, 4vw, 3rem); margin: 0 0 2.5rem; border-block: 1px solid var(--orange-line); background: linear-gradient(125deg, var(--card-wash), transparent 65%), var(--bg-raised); scroll-margin-top: 1.2rem; }
