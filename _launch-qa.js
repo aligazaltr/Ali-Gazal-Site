@@ -94,7 +94,7 @@ function snapshot(d=frame.contentDocument) {
   if(bg&&bg[3]!==0&&border){const alpha=border[3]??1,mixed=border.slice(0,3).map((v,i)=>v*alpha+bg[i]*(1-alpha));row.borderContrast=ratio(mixed,bg);if(fg)row.textContrast=ratio(fg,bg);}
   styles.push(row);
  }
- return {...base,styles,publishedLinks:[...d.querySelectorAll('[data-published-cover],a[data-project-video-link][target="_blank"]')].map(a=>({href:a.href,target:a.target,rel:a.rel,label:a.getAttribute('aria-label')}))};
+ return {...base,sceneFallback:d.querySelector('[data-qa-fallback]')?.dataset.qaFallback,styles,publishedLinks:[...d.querySelectorAll('[data-published-cover],a[data-project-video-link][target="_blank"]')].map(a=>({href:a.href,target:a.target,rel:a.rel,label:a.getAttribute('aria-label')}))};
 }
 $('video-matrix').onclick=async()=>{
  const rows=[];$('variant').value='candidate';$('height').value='740';$('text200').checked=false;
@@ -109,7 +109,7 @@ $('video-behavior').onclick=async()=>{
  let d=await load('machiavelli.html',390,'dark',{nojs:false,reduced:false});
  check('unpublished scene has no video anchor',!d.querySelector('[data-published-cover]'));
  d=await load('_v5-published.html',390,'dark',{nojs:false,reduced:false});
- let a=d.querySelector('[data-published-cover]'),film=d.querySelector('.mc-film');check('cinematic controller is active before focus',d.querySelector('.mc-scene').classList.contains('is-directed'));a.focus();await settle(d.defaultView);
+ let a=d.querySelector('[data-published-cover]'),film=d.querySelector('.mc-film');check('cinematic controller is active before focus',d.querySelector('.mc-scene').classList.contains('is-directed'),{fallback:d.querySelector('.mc-scene').dataset.qaFallback,height:d.defaultView.innerHeight});a.focus();await settle(d.defaultView);
  check('native cover anchor is keyboard focusable',d.activeElement===a);
  check('focus exposes cover before the scroll reveal',d.defaultView.getComputedStyle(film).clipPath==='none'&&d.defaultView.getComputedStyle(film).zIndex==='6',{clip:d.defaultView.getComputedStyle(film).clipPath,zIndex:d.defaultView.getComputedStyle(film).zIndex});
  check('named link announces destination and new tab',a.getAttribute('aria-label').includes('YouTube’da izle')&&a.getAttribute('aria-label').includes('yeni sekmede'));

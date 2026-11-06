@@ -10,7 +10,7 @@
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
   let geometry, start = 0, travel = 1, pending = 0, visible = false, ready = false;
   const cancel = () => { if (pending) cancelAnimationFrame(pending); pending = 0; };
-  function fallback() {
+  function fallback() { scene.dataset.qaFallback=JSON.stringify({height:innerHeight,reduced:reduced.matches,complete:image.complete,naturalWidth:image.naturalWidth,portraitWidth:portrait.offsetWidth,filmWidth:film.offsetWidth});
     cancel(); ready = false;
     scene.classList.remove('is-directed', 'is-scrolling');
     scene.style.removeProperty('--scene-height');
