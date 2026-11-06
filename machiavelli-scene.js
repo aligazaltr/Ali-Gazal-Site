@@ -11,6 +11,7 @@
   let geometry, start = 0, travel = 1, pending = 0, visible = false, ready = false, imageFailed = false;
   const cancel = () => { if (pending) cancelAnimationFrame(pending); pending = 0; };
   function fallback() { scene.dataset.qaFallback=JSON.stringify({height:innerHeight,reduced:reduced.matches,complete:image.complete,naturalWidth:image.naturalWidth,portraitWidth:portrait.offsetWidth,filmWidth:film.offsetWidth});
+    document.documentElement?.removeAttribute('data-scene-ready');
     cancel(); ready = false;
     scene.classList.remove('is-directed', 'is-scrolling');
     scene.style.removeProperty('--scene-height');
@@ -61,4 +62,5 @@
   image.addEventListener('error', () => { imageFailed = true; fallback(); });
   // Links and text remain present before decoding; an unavailable asset cannot trap the page.
   measure();
+  document.documentElement?.removeAttribute('data-scene-ready');
 })();
