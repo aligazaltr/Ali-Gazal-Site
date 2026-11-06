@@ -2061,3 +2061,8 @@ tbody th {
     border-color: #bbb;
   }
 }
+
+/* Reflow: grid minimums must not force enlarged or long text off the page. */
+main :where(section, article, header, div, aside, figure) { min-inline-size: 0; }
+main :where(h1, h2, h3, p, li, dd, dt, a, span) { overflow-wrap: anywhere; }
+.text-link, .card-link, .back-link { max-inline-size: 100%; }
