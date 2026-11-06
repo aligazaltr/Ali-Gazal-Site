@@ -13,6 +13,13 @@ async function load(page=$('page').value,width=Number($('width').value),theme=$(
   next.src=($('variant').value==='baseline'&&!page.startsWith('_v5-')?'baseline/':'')+page;frame.replaceWith(next);frame=next;await loaded;
   await Promise.race([Promise.allSettled([...next.contentDocument.images].filter(i=>i.loading!=='lazy').map(i=>i.decode())),delay(5000)]);
   await settle(next.contentWindow);
+  // In embedded Chromium, pageshow/first layout can follow image decoding.
+  // Require the real controller state; never turn a fallback into a passing scene.
+  const scene=next.contentDocument.querySelector('[data-machiavelli-scene]');
+  if(scene&&!next.hasAttribute('sandbox')&&!window.__launchOptions.reduced&&Number($('height').value)>=420){
+    const deadline=Date.now()+3000;
+    while(!scene.classList.contains('is-directed')&&Date.now()<deadline)await delay(50);
+  }
   return next.contentDocument;
 }
 function snapshotBase(d=frame.contentDocument){
