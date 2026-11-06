@@ -1,0 +1,101 @@
+{
+ "type": "service",
+ "has": [
+  "ground"
+ ],
+ "hero": {
+  "id": "word",
+  "name": "Oversized headline with one live word",
+  "from": "x.ai ('for everything you build / imagine / search'), Vercel, Stripe Sessions",
+  "demo": "hero-word.html",
+  "job": "Type does the work, for a brief without a strong photograph: an oversized headline across the container where one word changes (what you move, where you ship, who it is for), then a foot row with the line and the buttons on the left half and four facts as a column on the right half.",
+  "types": {
+   "service": 2,
+   "software": 2,
+   "product": 1,
+   "gaming": 0
+  },
+  "needs": [
+   "ground"
+  ],
+  "h1": {
+   "token": "--ly-h1-word",
+   "size": [
+    144,
+    54
+   ],
+   "leading": 0.92,
+   "lines": [
+    2,
+    3
+   ],
+   "maxChars": 28
+  },
+  "grid": {
+   "h1": "span-12 from the left line, its two lines locked (layout.js), the live word last",
+   "foot": "the lead and the buttons under it on span-6; the four facts as a column (label left, value right, hairlines) on span-5 start-8, ending on the right line"
+  },
+  "at1440": {
+   "hero": "1440x900, the block centred in it",
+   "h1": "144 (129.6 after the 0.9 scale) on 2 lines from y 227, 1280 wide from x 80; the lines locked, the live word's slot as wide as its widest word",
+   "underline": "the accent, 0.05em thick, under the live word only; each word brings its own",
+   "foot": "64 under the h1: the lead 20/30 on 3 lines on span-6, the buttons 44 32 under it; the four facts as a column on span-5 start-8 (rows of 50, hairlines), ending on the right line",
+   "measured": "hero 900/900, h1 130px (weight 400) on 2 lines, its box from y 227"
+  },
+  "at390": {
+   "hero": "844: exactly one screen",
+   "h1": "54 (48.6) on 3 lines",
+   "facts": "2 x 2 under the buttons",
+   "measured": "hero 844/844, h1 49px on 3 lines from y 149"
+  },
+  "moment": "the live word (data-ly-word): a new word every 2 s for two rounds, then it rests on the first and plays again when the pointer enters; no line moves (the slot is as wide as the widest word). Letters near the pointer thicken (+200) and widen (+10%) on a face with a wdth axis (data-ly-letters=wdth), on lines locked at rest. A phone and reduced motion hold the first word, no letters",
+  "moments": [],
+  "grounds": [
+   {
+    "id": "halo",
+    "only": "tech"
+   },
+   {
+    "id": "mist",
+    "only": "tech"
+   },
+   {
+    "id": "paper",
+    "only": "tech"
+   },
+   {
+    "id": "grain",
+    "only": "tech"
+   },
+   {
+    "id": "dots",
+    "only": "tech"
+   },
+   {
+    "id": "ruled",
+    "only": "tech"
+   },
+   {
+    "id": "liquid",
+    "only": "tech"
+   }
+  ],
+  "effects": [],
+  "mistakes": [
+   "a slogan; the sentence must say what is sold",
+   "more than four words in the rotation",
+   "a word that changes the line's meaning into nonsense",
+   "the underline on the whole headline",
+   "a face without a wght axis for the letters",
+   "a line that breaks differently when the word changes or a letter widens",
+   "the moments kit's word-rotate on top of the live word",
+   "dealt to a brief that has photographs (a photograph leads then)"
+  ],
+  "avoid": [
+   "photo",
+   "film",
+   "ui",
+   "object"
+  ]
+ }
+}
