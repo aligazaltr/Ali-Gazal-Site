@@ -1,6 +1,12 @@
 /* Runs before the stylesheet to apply a saved choice without a theme flash. */
 (() => {
   const root = document.documentElement;
+  root.dataset.js = '';
+  // Reserve the enhanced opening before first paint; no-JS/reduced/large-text
+  // readers retain the normal document. The controller consumes this hint.
+  if (window.IntersectionObserver && window.requestAnimationFrame && window.innerHeight >= 420
+      && !window.matchMedia('(prefers-reduced-motion: reduce)').matches
+      && parseFloat(window.getComputedStyle(root).fontSize) <= 24) root.dataset.sceneReady = '';
   // Set before CSS/first paint so the static preview toolbar reserves its space.
   const canonical = document.querySelector('link[rel="canonical"]')?.href;
   if (canonical && window.AG_SHARE?.context(canonical, location.href).isPreview) root.dataset.preview = '';
