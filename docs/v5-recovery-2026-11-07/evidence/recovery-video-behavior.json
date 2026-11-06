@@ -1,0 +1,58 @@
+{
+  "test": "video behavior",
+  "total": 11,
+  "failed": [],
+  "rows": [
+    {
+      "name": "unpublished scene has no video anchor",
+      "passed": true
+    },
+    {
+      "name": "cinematic controller is active before focus",
+      "passed": true,
+      "detail": {
+        "height": 740
+      }
+    },
+    {
+      "name": "native cover anchor is keyboard focusable",
+      "passed": true
+    },
+    {
+      "name": "focus exposes cover before the scroll reveal",
+      "passed": true,
+      "detail": {
+        "clip": "none",
+        "zIndex": "6"
+      }
+    },
+    {
+      "name": "named link announces destination and new tab",
+      "passed": true
+    },
+    {
+      "name": "activation targets gated URL in a new tab",
+      "passed": true
+    },
+    {
+      "name": "separate research route remains",
+      "passed": true
+    },
+    {
+      "name": "home cover targets the released video",
+      "passed": true
+    },
+    {
+      "name": "home retains the dossier route",
+      "passed": true
+    },
+    {
+      "name": "no-JS published cover remains a native link",
+      "passed": true
+    },
+    {
+      "name": "no-JS research route remains",
+      "passed": true
+    }
+  ]
+}

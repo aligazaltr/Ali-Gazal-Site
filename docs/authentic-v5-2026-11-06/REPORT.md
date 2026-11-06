@@ -1,3 +1,5 @@
+> **7 Kasım güncellemesi:** Bu tarihsel raporun başarısız testleri ve araç kullanımı bilgileri ilk V5 çalışmasına aittir. Yeni kurtarma kodu ve gerçek tekrar sonuçları için [V5 Recovery](../v5-recovery-2026-11-07/REPORT.md) raporunu okuyun. Eski başarısız sonuçlar silinmedi.
+
 # Ali Gazal — Authentic Experience V5
 
 6 Kasım 2026. İnceleme tabanı: `1701231db40ab44bb125917dd4617018a5ebc899`. Üretim için birleştirme veya dağıtım yapılmadı. [PR #15](https://github.com/aligazaltr/Ali-Gazal-Site/pull/15) ayrı daldadır.
