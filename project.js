@@ -48,17 +48,7 @@
   }
 
   function isYouTubeUrl(value) {
-    try {
-      const url = new URL(value);
-      return url.protocol === 'https:' && [
-        'youtube.com',
-        'www.youtube.com',
-        'm.youtube.com',
-        'youtu.be'
-      ].includes(url.hostname);
-    } catch (_) {
-      return false;
-    }
+    return !!window.AG_VIDEO_LINKS?.youtubeUrl(value);
   }
 
   function renderPhase() {
@@ -181,7 +171,8 @@
   function renderVideoPanel() {
     const panel = document.querySelector('[data-video-panel]');
     const video = project.video;
-    if (!panel || !video.published || !video.title || !isYouTubeUrl(video.url)) return;
+    const url = window.AG_VIDEO_LINKS?.publishedUrl(video);
+    if (!panel || !url) return;
 
     panel.replaceChildren();
     panel.append(element('p', 'eyebrow', 'VİDEO YAYINDA'));
@@ -201,7 +192,7 @@
     panel.append(element('h2', '', video.title));
     panel.append(element('p', '', 'Video YouTube’da yayımlandı. Site içi oynatıcı yerine doğrudan kanaldaki videoya gidebilirsin.'));
     const link = element('a', 'button primary', 'YouTube’da videoyu izle ↗');
-    link.href = video.url;
+    link.href = url;
     link.target = '_blank';
     link.rel = 'noopener noreferrer';
     panel.append(link);

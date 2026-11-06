@@ -33,10 +33,28 @@
       image.alt = thumbnail.alt;
       image.width = Number(thumbnail.width) || 1280;
       image.height = Number(thumbnail.height) || 720;
-      image.loading = container.dataset.coverPriority === 'high' ? 'eager' : 'lazy';
-      if (container.dataset.coverPriority === 'high') image.fetchPriority = 'high';
+      const priority = container.dataset.coverPriority;
+      image.loading = ['high', 'low'].includes(priority) ? 'eager' : 'lazy';
+      image.fetchPriority = ['high', 'low'].includes(priority) ? priority : 'auto';
       image.decoding = 'async';
       if (!image.isConnected) container.prepend(image);
+    });
+  }
+
+  function applyVideoCoverLinks() {
+    if (!window.AG_VIDEO_LINKS) return;
+    document.querySelectorAll('a[data-project-video-link]').forEach(link => {
+      const project = projectFor(link);
+      if (!project) return;
+      const url = window.AG_VIDEO_LINKS.publishedUrl(project.video);
+      link.href = url || project.slug + '.html';
+      if (url) {
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        link.setAttribute('aria-label', 'YouTube’da izle: ' + project.video.title + ' (yeni sekmede)');
+      } else {
+        for (const name of ['target', 'rel', 'aria-label']) link.removeAttribute(name);
+      }
     });
   }
 
@@ -90,6 +108,7 @@
   document.addEventListener('DOMContentLoaded', () => {
     applyProjectFields();
     insertProjectCovers();
+    applyVideoCoverLinks();
     setupReadingProgress();
     setupPreviewNotice();
     window.AG_MOTION?.init();

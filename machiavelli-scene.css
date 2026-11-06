@@ -15,6 +15,14 @@
 .mc-film { margin:2rem auto 1rem; width:100%; max-width:58rem; transform-origin:80% 30%; }
 .mc-film img { display:block; width:100%; height:auto; aspect-ratio:16/9; object-fit:contain; border:0; border-radius:0; }
 .mc-film figcaption { margin-top:.5rem; font-size:.62rem; color:var(--muted); }
+.mc-film-link { display:block; position:relative; color:var(--text); text-decoration:none; }
+.mc-film-link ~ figcaption { padding-inline-end:8rem; min-height:1.25rem; }
+.mc-watch-label { position:absolute; top:100%; right:0; margin-top:.25rem; min-height:24px; display:flex; align-items:center; padding:.2rem .5rem; background:var(--bg-raised); color:var(--text); font-size:.6875rem; font-weight:750; line-height:1.4; white-space:nowrap; }
+.mc-film-link:focus-visible { outline:none; }
+.mc-film-link:focus-visible::after { content:""; position:absolute; inset:0; border:3px solid var(--text); box-shadow:inset 0 0 0 3px var(--bg); pointer-events:none; }
+/* A tabbed-to video stays visible even before its scroll reveal is complete. */
+.is-directed .mc-film:focus-within { clip-path:none; opacity:1; z-index:6; }
+@media (hover:hover) { .mc-film-link:hover .mc-watch-label { color:var(--orange); text-decoration:underline; text-underline-offset:.2em; } }
 .mc-outcome { margin:1.6rem 0 2rem; }
 .mc-outcome p { margin:0 0 .35rem; }
 .mc-outcome .eyebrow { color:var(--muted); font-size:.6rem; }
@@ -38,7 +46,7 @@
 .mc-measure span { display:block; height:100%; background:var(--orange); transform:scaleX(var(--progress,0)); transform-origin:left; }
 .mc-scene.is-scrolling .mc-stage { position:sticky; top:12px; }
 .mc-scene.is-scrolling { height:var(--scene-height); }
-.mc-source-note { max-width:65ch; margin:0 0 2rem; color:var(--muted); font-size:.65rem; line-height:1.6; }
+.mc-source-note { max-width:65ch; margin:0 0 2rem; color:var(--muted); font-size:.8125rem; line-height:1.65; }
 @media (max-width:600px) {
   .mc-title { font-size:10.3vw; }
   .mc-edition { font-size:.48rem; letter-spacing:.12em; }
@@ -49,9 +57,9 @@
   .is-directed .mc-film { width:100%; top:24%; }
   .is-directed .mc-outcome { top:calc(24% + var(--film-height,200px) + 2rem); bottom:auto; }
   .mc-statement { font-size:1.05rem; max-width:29ch; }
-  .mc-outcome [data-project-field="statusLabel"] { font-size:.68rem; }
-  .mc-outcome .eyebrow, .mc-date { font-size:.57rem; }
-  .mc-film figcaption { font-size:.53rem; }
+  .mc-outcome [data-project-field="statusLabel"] { font-size:.75rem; }
+  .mc-outcome .eyebrow, .mc-date { font-size:.6875rem; }
+  .mc-film figcaption { font-size:.6875rem; }
   .mc-jump { font-size:.72rem; }
   .mc-measure { max-width:2rem; }
 }

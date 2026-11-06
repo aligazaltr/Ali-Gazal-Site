@@ -4,7 +4,8 @@ const fs = require('node:fs');
 const path = require('node:path');
 const siteData = require('../site-data.js');
 const { signature } = require('./render-scenes.js');
-const { renderMachiavelliScene } = require('./render-machiavelli-scene.js');
+const { renderMachiavelliScene, renderSceneCover } = require('./render-machiavelli-scene.js');
+const { validVideo, publishedUrl } = require('../video-links.js');
 const root = path.resolve(__dirname, '..');
 
 function escape(value) {
@@ -16,18 +17,6 @@ function read(project, field) {
   const value = field.split('.').reduce((current, key) => current?.[key], project);
   if (!['string', 'number'].includes(typeof value)) throw new Error(`Eksik veri alanı: ${field}`);
   return value;
-}
-
-function validVideo(video) {
-  try {
-    const url = new URL(video.url);
-    return video.title?.trim() && url.protocol === 'https:'
-      && ['youtube.com', 'www.youtube.com', 'm.youtube.com', 'youtu.be'].includes(url.hostname)
-      && (url.hostname === 'youtu.be' ? /^\/[A-Za-z0-9_-]{11}$/.test(url.pathname)
-        : url.pathname === '/watch' && /^[A-Za-z0-9_-]{11}$/.test(url.searchParams.get('v') || ''));
-  } catch (_) {
-    return false;
-  }
 }
 
 function secondsLabel(seconds) {
@@ -127,12 +116,22 @@ function renderHtml(html, data = siteData) {
   html = html.replace(/(<!-- project-cover:start -->)[\s\S]*?(<!-- project-cover:end -->)/g,
     (match, start, end, offset) => {
       const openingTag = html.slice(0, offset).match(/<[^>]+data-project-cover[^>]*>\s*$/)?.[0] || '';
+      if (openingTag.includes('class="mc-film"')) return start + renderSceneCover(project) + end;
       const high = openingTag.includes('data-cover-priority="high"');
       const image = thumbnail.src && thumbnail.alt
         ? `<img class="project-cover" src="${escape(thumbnail.src)}" alt="${escape(thumbnail.alt)}" width="${thumbnail.width}" height="${thumbnail.height}" loading="${high ? 'eager' : 'lazy'}"${high ? ' fetchpriority="high"' : ''} decoding="async">`
         : '';
       return `${start}${image}${end}`;
     });
+
+  // Native links work before JavaScript and stay reversible if a video is withdrawn.
+  html = html.replace(/<a\b([^>]*\bdata-project-video-link\b[^>]*)>/g, (_, attributes) => {
+    const url = publishedUrl(project.video);
+    attributes = attributes.replace(/\s(?:href|target|rel|aria-label)="[^"]*"/g, '');
+    const destination = url || project.slug + '.html';
+    const external = url ? ' target="_blank" rel="noopener noreferrer" aria-label="YouTube’da izle: ' + escape(project.video.title) + ' (yeni sekmede)"' : '';
+    return '<a' + attributes + ' href="' + escape(destination) + '"' + external + '>';
+  });
 
   const currentIndex = data.phases.findIndex(phase => phase.id === project.phase);
   html = html.replace(/<li([^>]*\sdata-phase="([^"]+)"[^>]*)>([\s\S]*?)<\/li>/g,
