@@ -1,0 +1,182 @@
+{
+  "test": "fallback and lifecycle simulations",
+  "total": 11,
+  "failed": [
+    {
+      "name": "orientation/viewport resize",
+      "passed": false,
+      "detail": {
+        "url": "https://52a4388e-ali-gazal-site.aliicerikmedya.workers.dev/_v61-late",
+        "width": 768,
+        "height": 430,
+        "theme": "light",
+        "progress": 0.7507,
+        "directed": true,
+        "overflow": false,
+        "portraitOpacity": 1,
+        "filmOpacity": 0.845816,
+        "clip": "none",
+        "medianLandmarkError": 233.7230297999597,
+        "maxLandmarkError": 238.22786981603917,
+        "anchor": {
+          "x": 608.440698939698,
+          "y": 110.71993190752829,
+          "viewportX": 632.440698939698,
+          "viewportY": 122.71993190752829
+        },
+        "portraitTransform": "matrix(0.532818, -0.00204529, 0.00204529, 0.532818, 67.5185, -24.3733)",
+        "coverTransform": "matrix(1.01161, 4.59053e-05, -4.59053e-05, 1.01161, -175.762, -0.268325)",
+        "titleOpacity": 0.009347,
+        "premiseOpacity": 0.005842,
+        "outcomeOpacity": 0,
+        "errors": [],
+        "violations": []
+      }
+    }
+  ],
+  "rows": [
+    {
+      "name": "readable fallback {\"nojs\":true}",
+      "passed": true,
+      "detail": {
+        "cover": 1280
+      }
+    },
+    {
+      "name": "readable fallback {\"reduced\":true}",
+      "passed": true,
+      "detail": {
+        "cover": 1280
+      }
+    },
+    {
+      "name": "readable fallback {\"height\":390}",
+      "passed": true,
+      "detail": {
+        "cover": 1280
+      }
+    },
+    {
+      "name": "readable fallback {\"largeText\":true}",
+      "passed": true,
+      "detail": {
+        "cover": 1280
+      }
+    },
+    {
+      "name": "readable fallback {\"noObserver\":true}",
+      "passed": true,
+      "detail": {
+        "cover": 1280
+      }
+    },
+    {
+      "name": "readable fallback {\"noSticky\":true}",
+      "passed": true,
+      "detail": {
+        "cover": 1280
+      }
+    },
+    {
+      "name": "actual failed image restores static cover",
+      "passed": true
+    },
+    {
+      "name": "subsequent real load recovers",
+      "passed": true
+    },
+    {
+      "name": "late portrait remains registered",
+      "passed": true,
+      "detail": {
+        "url": "https://52a4388e-ali-gazal-site.aliicerikmedya.workers.dev/_v61-late",
+        "width": 390,
+        "height": 740,
+        "theme": "light",
+        "progress": 0.7507,
+        "directed": true,
+        "overflow": false,
+        "portraitOpacity": 1,
+        "filmOpacity": 0.845816,
+        "clip": "none",
+        "medianLandmarkError": 0.18195057312077284,
+        "maxLandmarkError": 0.6209600549385439,
+        "anchor": {
+          "x": 256.80330132988894,
+          "y": 226.5265195178717,
+          "viewportX": 272.80330132988894,
+          "viewportY": 238.5265195178717
+        },
+        "portraitTransform": "matrix(0.532818, -0.00204529, 0.00204529, 0.532818, 67.5185, -24.3733)",
+        "coverTransform": "matrix(1.01161, 4.59053e-05, -4.59053e-05, 1.01161, -175.762, -0.268325)",
+        "titleOpacity": 0.009347,
+        "premiseOpacity": 0.005842,
+        "outcomeOpacity": 0,
+        "errors": [],
+        "violations": []
+      }
+    },
+    {
+      "name": "orientation/viewport resize",
+      "passed": false,
+      "detail": {
+        "url": "https://52a4388e-ali-gazal-site.aliicerikmedya.workers.dev/_v61-late",
+        "width": 768,
+        "height": 430,
+        "theme": "light",
+        "progress": 0.7507,
+        "directed": true,
+        "overflow": false,
+        "portraitOpacity": 1,
+        "filmOpacity": 0.845816,
+        "clip": "none",
+        "medianLandmarkError": 233.7230297999597,
+        "maxLandmarkError": 238.22786981603917,
+        "anchor": {
+          "x": 608.440698939698,
+          "y": 110.71993190752829,
+          "viewportX": 632.440698939698,
+          "viewportY": 122.71993190752829
+        },
+        "portraitTransform": "matrix(0.532818, -0.00204529, 0.00204529, 0.532818, 67.5185, -24.3733)",
+        "coverTransform": "matrix(1.01161, 4.59053e-05, -4.59053e-05, 1.01161, -175.762, -0.268325)",
+        "titleOpacity": 0.009347,
+        "premiseOpacity": 0.005842,
+        "outcomeOpacity": 0,
+        "errors": [],
+        "violations": []
+      }
+    },
+    {
+      "name": "fresh navigation/measure",
+      "passed": true,
+      "detail": {
+        "url": "https://52a4388e-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli",
+        "width": 768,
+        "height": 740,
+        "theme": "light",
+        "progress": 0.7499,
+        "directed": true,
+        "overflow": false,
+        "portraitOpacity": 1,
+        "filmOpacity": 0.843315,
+        "clip": "none",
+        "medianLandmarkError": 0.33350741792180577,
+        "maxLandmarkError": 1.1333591377730314,
+        "anchor": {
+          "x": 511.60936942912576,
+          "y": 207.7369737196404,
+          "viewportX": 535.6093694291258,
+          "viewportY": 219.7369737196404
+        },
+        "portraitTransform": "matrix(0.90638, -0.00347702, 0.00347702, 0.90638, 4.84059, 14.3709)",
+        "coverTransform": "matrix(1.00267, 4.79673e-05, -4.79673e-05, 1.00267, -319.557, -0.434309)",
+        "titleOpacity": 0.009853,
+        "premiseOpacity": 0.006158,
+        "outcomeOpacity": 0,
+        "errors": [],
+        "violations": []
+      }
+    }
+  ]
+}

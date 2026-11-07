@@ -1,0 +1,10 @@
+{
+  "sourceCommit": "b2e5996daa07cbc7c491bcd882d95335a1fec644",
+  "build": "3b6d689b-90f1-490e-901e-88912cef73a1",
+  "conclusion": "success",
+  "preview": "https://0444aef4-ali-gazal-site.aliicerikmedya.workers.dev/machiavelli",
+  "productionChanged": false,
+  "qaFinalCommit": "ccfb23e14575b5e96ca8ee8a6cce6cb79ac5280e",
+  "qaFinalVersion": "2387b2a3-480a-4491-abfb-8665988a54d6",
+  "note": "Baseline manifest completion is a subsequent QA builder-only fix; no change to product geometry."
+}

@@ -1,0 +1,11 @@
+{
+  "test": "CSP",
+  "passed": true,
+  "violations": [
+    {
+      "directive": "script-src-elem",
+      "blocked": "inline",
+      "disposition": "enforce"
+    }
+  ]
+}
