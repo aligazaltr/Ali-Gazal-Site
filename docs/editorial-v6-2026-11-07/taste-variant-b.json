@@ -1,0 +1,122 @@
+{
+ "type": "service",
+ "has": [
+  "ground"
+ ],
+ "hero": {
+  "id": "statement",
+  "name": "Quiet statement over a ground",
+  "from": "Anthropic, Stripe Press, Mercury, private banks and advisers",
+  "demo": "hero-statement.html",
+  "job": "One calm sentence at 56px over a ground that fills the hero, the buttons, then four facts docked under a hairline. For a company whose product is trust or a service, when there is no strong picture. The ground carries the look: a dark horizon with a lit rim, a grainy field in the lit tone, a halo, dusk or (software) liquid.",
+  "types": {
+   "service": 3,
+   "software": 2,
+   "gaming": 0,
+   "product": 2
+  },
+  "needs": [
+   "ground"
+  ],
+  "h1": {
+   "token": "--ly-h1-quiet",
+   "size": [
+    56,
+    34
+   ],
+   "leading": 1.1,
+   "lines": [
+    2,
+    3
+   ],
+   "maxChars": 54
+  },
+  "grid": {
+   "text": "from the left line, h1 max 21ch, lead max 42ch",
+   "facts": "4 x span-3 under a hairline, docked at the hero's foot (64 above the fold)"
+  },
+  "at1440": {
+   "hero": "1440x900, the text block top-aligned (layout-v4.md section 3: the h1 first, top at y 120), the facts docked at the foot",
+   "order": "pill 32 at y 120 (only for real news), 32, h1 56 (59.4) on 2 lines (from y 120 without the pill, y 184 with it), 24, lead 20/30 on 3 or 4 lines, 32, buttons 44; the four facts under a hairline at the hero's foot",
+   "ground": "the demo: bg-horizon on a dark page (the lit rim rises from the hero's foot behind the facts)",
+   "measured": "hero 900/900, h1 59px (weight 400) on 2 lines, its box from y 120 (no pill)"
+  },
+  "at390": {
+   "hero": "844: exactly one screen",
+   "h1": "34 (36) on 3 lines",
+   "facts": "2 x 2",
+   "measured": "hero 844/844, h1 36px on 3 lines from y 96 (80 on a place page: --hgap 24)"
+  },
+  "moment": "the ground: liquid (two slow blobs, software only, with its pause disc) or a still horizon, field, halo, dusk or grain",
+  "moments": [
+   {
+    "id": "liquid-type",
+    "only": "tech"
+   }
+  ],
+  "grounds": [
+   {
+    "id": "horizon",
+    "only": "tech",
+    "dark": true
+   },
+   {
+    "id": "deep",
+    "only": "tech",
+    "dark": true
+   },
+   {
+    "id": "field",
+    "only": "tech"
+   },
+   {
+    "id": "halo",
+    "only": "tech"
+   },
+   {
+    "id": "dusk",
+    "only": "tech"
+   },
+   {
+    "id": "grain",
+    "only": "tech"
+   },
+   {
+    "id": "mist",
+    "only": "tech"
+   },
+   {
+    "id": "liquid",
+    "only": "tech"
+   }
+  ],
+  "effects": [
+   {
+    "id": "aurora-curtains",
+    "only": "tech"
+   },
+   {
+    "id": "grain-gradient",
+    "only": "tech"
+   },
+   {
+    "id": "soft-light-bars",
+    "only": "tech"
+   }
+  ],
+  "mistakes": [
+   "a pale wash that reads as an empty page",
+   "a ground that fights the words",
+   "the statement centred",
+   "a second visual on the hero",
+   "a lead longer than three lines",
+   "liquid-type (tech only) on a headline of more than six words: it is for a short, large one"
+  ],
+  "avoid": [
+   "photo",
+   "film",
+   "ui",
+   "object"
+  ]
+ }
+}
