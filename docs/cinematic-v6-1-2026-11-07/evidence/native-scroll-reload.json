@@ -1,0 +1,17 @@
+{
+  "forward": {
+    "p": 0.7319,
+    "scroll": 936
+  },
+  "reversed": {
+    "directed": true,
+    "p": "0.0000",
+    "scroll": 0
+  },
+  "reloaded": {
+    "clip": "none",
+    "directed": true,
+    "image": 480,
+    "p": "0.0000"
+  }
+}

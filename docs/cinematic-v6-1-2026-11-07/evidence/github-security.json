@@ -1,0 +1,9 @@
+{
+  "base": "0b3f0d02c240a8c19a0e3fbd232fcc0b90d066ab",
+  "mainProtected": false,
+  "rulesets": [],
+  "branchProtectionDetails": "403 Resource not accessible by integration",
+  "account2FA": "not accessible",
+  "tokenScopes": "not accessible",
+  "deployment": "Cloudflare GitHub integration; no GitHub workflow files found"
+}

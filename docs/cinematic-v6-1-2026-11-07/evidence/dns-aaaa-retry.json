@@ -1,0 +1,29 @@
+{
+  "Status": 0,
+  "TC": false,
+  "RD": true,
+  "RA": true,
+  "AD": false,
+  "CD": false,
+  "Question": [
+    {
+      "name": "aligazal.com.",
+      "type": 28
+    }
+  ],
+  "Answer": [
+    {
+      "name": "aligazal.com.",
+      "type": 28,
+      "TTL": 300,
+      "data": "2606:4700:3035::ac43:c07f"
+    },
+    {
+      "name": "aligazal.com.",
+      "type": 28,
+      "TTL": 300,
+      "data": "2606:4700:3033::6815:4458"
+    }
+  ],
+  "Comment": "Response from 173.245.58.153."
+}

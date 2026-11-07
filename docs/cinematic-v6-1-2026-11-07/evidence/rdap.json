@@ -1,0 +1,45 @@
+{
+  "ldhName": "ALIGAZAL.COM",
+  "status": [
+    "client transfer prohibited"
+  ],
+  "secureDNS": {
+    "delegationSigned": false
+  },
+  "events": [
+    {
+      "eventAction": "registration",
+      "eventDate": "2026-11-04T18:47:36Z"
+    },
+    {
+      "eventAction": "expiration",
+      "eventDate": "2027-11-04T18:47:36Z"
+    },
+    {
+      "eventAction": "last changed",
+      "eventDate": "2026-11-04T18:47:37Z"
+    },
+    {
+      "eventAction": "last update of RDAP database",
+      "eventDate": "2026-11-07T19:27:08Z"
+    }
+  ],
+  "nameservers": [
+    {
+      "objectClassName": "nameserver",
+      "ldhName": "ELINORE.NS.CLOUDFLARE.COM"
+    },
+    {
+      "objectClassName": "nameserver",
+      "ldhName": "SULLIVAN.NS.CLOUDFLARE.COM"
+    }
+  ],
+  "registrars": [
+    {
+      "handle": "1910",
+      "roles": [
+        "registrar"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+[
+  {
+    "path": "/_v61-qa",
+    "status": 404,
+    "exit": 0,
+    "passed": true,
+    "expectedPublic": false
+  },
+  {
+    "path": "/_v61-qa.js",
+    "status": 404,
+    "exit": 0,
+    "passed": true,
+    "expectedPublic": false
+  },
+  {
+    "path": "/_v61-late",
+    "status": 404,
+    "exit": 0,
+    "passed": true,
+    "expectedPublic": false
+  },
+  {
+    "path": "/_v61-error",
+    "status": 404,
+    "exit": 0,
+    "passed": true,
+    "expectedPublic": false
+  },
+  {
+    "path": "/_v61-landmarks.json",
+    "status": 404,
+    "exit": 0,
+    "passed": true,
+    "expectedPublic": false
+  },
+  {
+    "path": "/scripts/v61-qa/qa.js",
+    "status": 404,
+    "exit": 0,
+    "passed": true,
+    "expectedPublic": false
+  },
+  {
+    "path": "/docs/cinematic-v6-1-2026-11-07/REPORT.md",
+    "status": 404,
+    "exit": 0,
+    "passed": true,
+    "expectedPublic": false
+  },
+  {
+    "path": "/machiavelli-scene.js",
+    "status": 200,
+    "exit": 0,
+    "passed": true,
+    "expectedPublic": true
+  }
+]

@@ -134,6 +134,9 @@ function renderHtml(html, data = siteData) {
   });
 
   const currentIndex = data.phases.findIndex(phase => phase.id === project.phase);
+  const homeVideoUrl=publishedUrl(project.video);
+  html=html.replace(/(<!-- home-video-link:start -->)[\s\S]*?(<!-- home-video-link:end -->)/,
+    (_,start,end)=>start+(homeVideoUrl?`<a class="text-link" data-project-video-link href="${escape(homeVideoUrl)}" target="_blank" rel="noopener noreferrer" aria-label="YouTube’da izle: ${escape(project.video.title)} (yeni sekmede)">Videoyu YouTube’da izle <span aria-hidden="true">↗</span></a>`:'')+end);
   html = html.replace(/<li([^>]*\sdata-phase="([^"]+)"[^>]*)>([\s\S]*?)<\/li>/g,
     (_, attributes, phaseId, contents) => {
       const index = data.phases.findIndex(phase => phase.id === phaseId);

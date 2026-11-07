@@ -5,6 +5,8 @@
   // Reserve the enhanced opening before first paint; no-JS/reduced/large-text
   // readers retain the normal document. The controller consumes this hint.
   if (window.IntersectionObserver && window.requestAnimationFrame && window.innerHeight >= 420
+      && window.matchMedia && window.CSS?.supports('position', 'sticky')
+      && window.CSS.supports('transform', 'translate3d(0,0,0)')
       && !window.matchMedia('(prefers-reduced-motion: reduce)').matches
       && parseFloat(window.getComputedStyle(root).fontSize) <= 24) root.dataset.sceneReady = '';
   // Set before CSS/first paint so the static preview toolbar reserves its space.
@@ -44,6 +46,9 @@
   apply(theme);
 
   document.addEventListener('DOMContentLoaded', () => {
+    // If an enhancement script failed to load, never leave its first-paint
+    // reservation active. The controller consumes it before this event.
+    root.removeAttribute('data-scene-ready');
     apply(theme);
     document.querySelector('[data-theme-toggle]')?.addEventListener('click', () => {
       chosen = true;

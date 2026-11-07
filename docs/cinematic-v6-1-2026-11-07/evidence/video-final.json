@@ -1,0 +1,44 @@
+{
+  "test": "native publication gate",
+  "total": 6,
+  "failed": [],
+  "rows": [
+    {
+      "name": "real unpublished cover has no video link",
+      "passed": true
+    },
+    {
+      "name": "native focus exposes final full cover",
+      "passed": true,
+      "detail": {
+        "rect": {
+          "x": 16,
+          "y": 547.140625,
+          "width": 343,
+          "height": 220.9375,
+          "top": 547.140625,
+          "right": 359,
+          "bottom": 768.078125,
+          "left": 16
+        },
+        "href": "https://www.youtube.com/watch?v=TESTFIXTURE"
+      }
+    },
+    {
+      "name": "HTTPS new-tab activation",
+      "passed": true
+    },
+    {
+      "name": "separate research link",
+      "passed": true
+    },
+    {
+      "name": "explicit home watch link and dossier",
+      "passed": true
+    },
+    {
+      "name": "no-JS native published cover",
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,341 @@
+{
+  "at": "2026-11-07T19:27:18.561740+00:00",
+  "queries": [
+    {
+      "provider": "cloudflare",
+      "name": "aligazal.com",
+      "type": "NS",
+      "exit": 0,
+      "response": {
+        "Status": 0,
+        "TC": false,
+        "RD": true,
+        "RA": true,
+        "AD": false,
+        "CD": false,
+        "Question": [
+          {
+            "name": "aligazal.com",
+            "type": 2
+          }
+        ],
+        "Answer": [
+          {
+            "name": "aligazal.com",
+            "type": 2,
+            "TTL": 86400,
+            "data": "elinore.ns.cloudflare.com."
+          },
+          {
+            "name": "aligazal.com",
+            "type": 2,
+            "TTL": 86400,
+            "data": "sullivan.ns.cloudflare.com."
+          }
+        ]
+      }
+    },
+    {
+      "provider": "cloudflare",
+      "name": "aligazal.com",
+      "type": "A",
+      "exit": 0,
+      "response": {
+        "Status": 0,
+        "TC": false,
+        "RD": true,
+        "RA": true,
+        "AD": false,
+        "CD": false,
+        "Question": [
+          {
+            "name": "aligazal.com",
+            "type": 1
+          }
+        ],
+        "Answer": [
+          {
+            "name": "aligazal.com",
+            "type": 1,
+            "TTL": 300,
+            "data": "172.67.192.127"
+          },
+          {
+            "name": "aligazal.com",
+            "type": 1,
+            "TTL": 300,
+            "data": "104.21.68.88"
+          }
+        ]
+      }
+    },
+    {
+      "provider": "cloudflare",
+      "name": "aligazal.com",
+      "type": "AAAA",
+      "exit": 28,
+      "response": {
+        "error": "curl: (28) Connection timed out after 5003 milliseconds\n"
+      }
+    },
+    {
+      "provider": "cloudflare",
+      "name": "aligazal.com",
+      "type": "DS",
+      "exit": 0,
+      "response": {
+        "Status": 0,
+        "TC": false,
+        "RD": true,
+        "RA": true,
+        "AD": false,
+        "CD": false,
+        "Question": [
+          {
+            "name": "aligazal.com",
+            "type": 43
+          }
+        ],
+        "Authority": [
+          {
+            "name": "com",
+            "type": 6,
+            "TTL": 900,
+            "data": "a.gtld-servers.net. nstld.verisign-grs.com. 1794079611 1800 900 604800 900"
+          },
+          {
+            "name": "com",
+            "type": 46,
+            "TTL": 900,
+            "data": "SOA 13 1 900 1794684411 1794075411 65344 com. WmSaxMALvKEbPX7yEo22f0EG6yeMFqVz+LhNEgnzq5SrqnrbX8neQRUT7u1/pe6FQBg5+3WOO5VnF1TaDac7sg=="
+          },
+          {
+            "name": "OSFV2UTH159DUNK432IUE7R2C8E93GNG.com",
+            "type": 50,
+            "TTL": 900,
+            "data": "1 1 0 - OSFVB44OMFK1CC8AFB7J41M9DL9OCPAG NS DS RRSIG"
+          },
+          {
+            "name": "OSFV2UTH159DUNK432IUE7R2C8E93GNG.com",
+            "type": 46,
+            "TTL": 900,
+            "data": "NSEC3 13 2 900 1794356395 1793747395 65344 com. P2Xu9rmud/X21wLu2CKZSyuVclwfNMieG2Nkc7YK4Y2oXEOCgRaCclanw6AZH27oshN7UDVdsjxbCRqZTAtMCg=="
+          },
+          {
+            "name": "CK0POJMG874LJREF7EFN8430QVIT8BSM.com",
+            "type": 50,
+            "TTL": 900,
+            "data": "1 1 0 - CK0Q35HRS4H76G6CHNB9414CJN6S5UPL NS SOA RRSIG DNSKEY NSEC3PARAM"
+          },
+          {
+            "name": "CK0POJMG874LJREF7EFN8430QVIT8BSM.com",
+            "type": 46,
+            "TTL": 900,
+            "data": "NSEC3 13 2 900 1794615964 1794006964 65344 com. Gg9lAyVoIGNjw70ckW2eXXMek9AgalMaU3Z2YNF+eK+A0DfQak1Txrpk5ICBmcVpb+1q/vL3lbNgflz4p+XZrA=="
+          }
+        ]
+      }
+    },
+    {
+      "provider": "cloudflare",
+      "name": "aligazal.com",
+      "type": "DNSKEY",
+      "exit": 0,
+      "response": {
+        "Status": 0,
+        "TC": false,
+        "RD": true,
+        "RA": true,
+        "AD": false,
+        "CD": false,
+        "Question": [
+          {
+            "name": "aligazal.com",
+            "type": 48
+          }
+        ],
+        "Authority": [
+          {
+            "name": "aligazal.com",
+            "type": 6,
+            "TTL": 1800,
+            "data": "elinore.ns.cloudflare.com. dns.cloudflare.com. 2419308059 10000 2400 604800 1800"
+          }
+        ]
+      }
+    },
+    {
+      "provider": "cloudflare",
+      "name": "www.aligazal.com",
+      "type": "A",
+      "exit": 0,
+      "response": {
+        "Status": 3,
+        "TC": false,
+        "RD": true,
+        "RA": true,
+        "AD": false,
+        "CD": false,
+        "Question": [
+          {
+            "name": "www.aligazal.com",
+            "type": 1
+          }
+        ],
+        "Authority": [
+          {
+            "name": "aligazal.com",
+            "type": 6,
+            "TTL": 1800,
+            "data": "elinore.ns.cloudflare.com. dns.cloudflare.com. 2419308059 10000 2400 604800 1800"
+          }
+        ]
+      }
+    },
+    {
+      "provider": "cloudflare",
+      "name": "www.aligazal.com",
+      "type": "CNAME",
+      "exit": 0,
+      "response": {
+        "Status": 3,
+        "TC": false,
+        "RD": true,
+        "RA": true,
+        "AD": false,
+        "CD": false,
+        "Question": [
+          {
+            "name": "www.aligazal.com",
+            "type": 5
+          }
+        ],
+        "Authority": [
+          {
+            "name": "aligazal.com",
+            "type": 6,
+            "TTL": 1800,
+            "data": "elinore.ns.cloudflare.com. dns.cloudflare.com. 2419308059 10000 2400 604800 1800"
+          }
+        ]
+      }
+    },
+    {
+      "provider": "google",
+      "name": "aligazal.com",
+      "type": "DS",
+      "exit": 0,
+      "response": {
+        "Status": 0,
+        "TC": false,
+        "RD": true,
+        "RA": true,
+        "AD": false,
+        "CD": false,
+        "Question": [
+          {
+            "name": "aligazal.com.",
+            "type": 43
+          }
+        ],
+        "Authority": [
+          {
+            "name": "CK0POJMG874LJREF7EFN8430QVIT8BSM.com.",
+            "type": 50,
+            "TTL": 900,
+            "data": "1 1 0 - CK0Q35HRS4H76G6CHNB9414CJN6S5UPL NS SOA RRSIG DNSKEY NSEC3PARAM"
+          },
+          {
+            "name": "CK0POJMG874LJREF7EFN8430QVIT8BSM.com.",
+            "type": 46,
+            "TTL": 900,
+            "data": "nsec3 13 2 900 1794615964 1794006964 65344 com. Gg9lAyVoIGNjw70ckW2eXXMek9AgalMaU3Z2YNF+eK+A0DfQak1Txrpk5ICBmcVpb+1q/vL3lbNgflz4p+XZrA=="
+          },
+          {
+            "name": "com.",
+            "type": 6,
+            "TTL": 900,
+            "data": "a.gtld-servers.net. nstld.verisign-grs.com. 1794079611 1800 900 604800 900"
+          },
+          {
+            "name": "com.",
+            "type": 46,
+            "TTL": 900,
+            "data": "soa 13 1 900 1794684411 1794075411 65344 com. WmSaxMALvKEbPX7yEo22f0EG6yeMFqVz+LhNEgnzq5SrqnrbX8neQRUT7u1/pe6FQBg5+3WOO5VnF1TaDac7sg=="
+          },
+          {
+            "name": "OSFV2UTH159DUNK432IUE7R2C8E93GNG.com.",
+            "type": 50,
+            "TTL": 900,
+            "data": "1 1 0 - OSFVB44OMFK1CC8AFB7J41M9DL9OCPAG NS DS RRSIG"
+          },
+          {
+            "name": "OSFV2UTH159DUNK432IUE7R2C8E93GNG.com.",
+            "type": 46,
+            "TTL": 900,
+            "data": "nsec3 13 2 900 1794356395 1793747395 65344 com. P2Xu9rmud/X21wLu2CKZSyuVclwfNMieG2Nkc7YK4Y2oXEOCgRaCclanw6AZH27oshN7UDVdsjxbCRqZTAtMCg=="
+          }
+        ],
+        "Comment": "Response from 2001:501:b1f9::30."
+      }
+    },
+    {
+      "provider": "google",
+      "name": "aligazal.com",
+      "type": "DNSKEY",
+      "exit": 0,
+      "response": {
+        "Status": 0,
+        "TC": false,
+        "RD": true,
+        "RA": true,
+        "AD": false,
+        "CD": false,
+        "Question": [
+          {
+            "name": "aligazal.com.",
+            "type": 48
+          }
+        ],
+        "Authority": [
+          {
+            "name": "aligazal.com.",
+            "type": 6,
+            "TTL": 1800,
+            "data": "elinore.ns.cloudflare.com. dns.cloudflare.com. 2419308059 10000 2400 604800 1800"
+          }
+        ],
+        "Comment": "Response from 172.64.35.161."
+      }
+    },
+    {
+      "provider": "google",
+      "name": "www.aligazal.com",
+      "type": "A",
+      "exit": 0,
+      "response": {
+        "Status": 3,
+        "TC": false,
+        "RD": true,
+        "RA": true,
+        "AD": false,
+        "CD": false,
+        "Question": [
+          {
+            "name": "www.aligazal.com.",
+            "type": 1
+          }
+        ],
+        "Authority": [
+          {
+            "name": "aligazal.com.",
+            "type": 6,
+            "TTL": 1800,
+            "data": "elinore.ns.cloudflare.com. dns.cloudflare.com. 2419308059 10000 2400 604800 1800"
+          }
+        ],
+        "Comment": "Response from 173.245.58.153."
+      }
+    }
+  ]
+}
