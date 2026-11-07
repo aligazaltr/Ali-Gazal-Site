@@ -3,7 +3,7 @@ const $=id=>document.getElementById(id),frame=$('preview'),output=x=>$('result')
 const params=new URLSearchParams(location.search);for(const k of ['variant','width','theme','progress'])if(params.has(k))$(k).value=params.get(k);if(params.has('capture'))document.body.classList.add('capture');
 let landmarks;
 const ready=async check=>{const end=Date.now()+6000;while(!check()){if(Date.now()>end)throw Error('Document/CSS/image/controller readiness timeout');await pause(50);}};
-async function settle(){await pause(90);}
+async function settle(){await new Promise((resolve,reject)=>{const timer=setTimeout(()=>reject(Error('Animation-frame deadline; keep QA visible')),5000);const w=frame.contentWindow;w.requestAnimationFrame(()=>w.requestAnimationFrame(()=>{clearTimeout(timer);resolve();}));});}
 async function load(page='machiavelli',o={}) {
  parent.__launchOptions={mock:true,...o};localStorage.setItem('ag-theme',$('theme').value);frame.style.width=$('width').value+'px';frame.style.height=(o.height||740)+'px';
  if(o.nojs)frame.setAttribute('sandbox','allow-same-origin');else frame.removeAttribute('sandbox');
