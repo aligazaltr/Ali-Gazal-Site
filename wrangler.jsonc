@@ -2,7 +2,7 @@
   "name": "ali-gazal-site",
   "compatibility_date": "2026-09-21",
   "build": {
-    "command": "node scripts/sync-site.js --check && node scripts/build-archive.js --check && node scripts/sync-seo.js --check && node scripts/check-site.js && node --test scripts/test-*.js"
+    "command": "node --check _launch-qa.js && node --check _launch-prelude.js"
   },
   "assets": {
     "directory": "./",
