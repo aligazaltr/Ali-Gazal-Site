@@ -1,0 +1,41 @@
+{
+  "page": "/baseline/dusunce-arsivi",
+  "viewport": 390,
+  "width": 375,
+  "height": 740,
+  "documentWidth": 375,
+  "theme": "dark",
+  "h1": 1,
+  "main": true,
+  "overflow": false,
+  "smallTargets": [],
+  "canonical": "https://aligazal.com/dusunce-arsivi",
+  "images": [],
+  "scene": null,
+  "errors": [],
+  "violations": [],
+  "scriptRan": true,
+  "shares": [],
+  "activeAnimations": 0,
+  "styles": [
+    {
+      "selector": "#archive-author",
+      "fontSize": "16px",
+      "lineHeight": "normal",
+      "color": "rgb(246, 242, 234)",
+      "background": "rgb(18, 18, 16)",
+      "border": "rgba(246, 242, 234, 0.23)",
+      "borderContrast": 1.9708458094147023,
+      "textContrast": 16.796564747834335
+    },
+    {
+      "selector": "#archive-query",
+      "fontSize": "16px",
+      "lineHeight": "26.4px",
+      "color": "rgb(246, 242, 234)",
+      "background": "rgba(0, 0, 0, 0)",
+      "border": "rgb(246, 242, 234)"
+    }
+  ],
+  "publishedLinks": []
+}

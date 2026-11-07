@@ -8,9 +8,10 @@
   const image = portrait.querySelector('img');
   const film = scene.querySelector('.mc-film');
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
-  let geometry, start = 0, travel = 1, pending = 0, visible = false, ready = false;
+  let geometry, start = 0, travel = 1, pending = 0, visible = false, ready = false, imageFailed = false;
   const cancel = () => { if (pending) cancelAnimationFrame(pending); pending = 0; };
   function fallback() {
+    document.documentElement?.removeAttribute('data-scene-ready');
     cancel(); ready = false;
     scene.classList.remove('is-directed', 'is-scrolling');
     scene.style.removeProperty('--scene-height');
@@ -30,7 +31,10 @@
   function measure() {
     cancel();
     // Short landscape windows and zoomed layouts keep normal, fully readable flow.
-    if (reduced.matches || window.innerHeight < 420 || (image.complete && !image.naturalWidth)) { fallback(); return; }
+    // A responsive image may briefly be complete with no selected intrinsic
+    // width. Only an actual error is terminal; a subsequent load can recover.
+    const largeText = parseFloat(window.getComputedStyle?.(document.documentElement).fontSize) > 24;
+    if (reduced.matches || window.innerHeight < 420 || largeText || imageFailed) { fallback(); return; }
     scene.classList.add('is-directed');
     const height = stage.clientHeight, width = stage.clientWidth;
     geometry = {height, mobile:window.matchMedia('(max-width:600px)').matches, portraitWidth:portrait.offsetWidth,portraitHeight:portrait.offsetHeight,portraitLeft:portrait.offsetLeft,portraitTop:portrait.offsetTop,filmWidth:film.offsetWidth,filmLeft:width/2-film.offsetWidth/2,filmTop:film.offsetTop};
@@ -54,8 +58,9 @@
   window.addEventListener('pageshow', measure);
   reduced.addEventListener('change', measure);
   document.addEventListener('visibilitychange', () => document.hidden ? cancel() : schedule());
-  image.addEventListener('load', measure, {once:true});
-  image.addEventListener('error', fallback, {once:true});
+  image.addEventListener('load', () => { imageFailed = false; measure(); });
+  image.addEventListener('error', () => { imageFailed = true; fallback(); });
   // Links and text remain present before decoding; an unavailable asset cannot trap the page.
   measure();
+  document.documentElement?.removeAttribute('data-scene-ready');
 })();

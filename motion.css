@@ -75,9 +75,15 @@
 }
 
 /* Normal document navigation preserves browser history and remains usable during entry motion. */
-.preview-notice { display: flex; flex-wrap: wrap; gap: .25rem 1rem; align-items: center; padding-block: .6rem; border-bottom: 1px solid var(--line); font-size: .72rem; color: var(--muted); }
+.preview-notice { display: none; flex-wrap: wrap; gap: .25rem 1rem; align-items: center; padding-block: .6rem; border-bottom: 1px solid var(--line); font-size: .72rem; color: var(--muted); }
 .preview-notice strong { color: var(--orange); font-size: .62rem; letter-spacing: .12em; }
 .preview-notice label { display: flex; align-items: center; gap: .6rem; margin-left: auto; }
 .preview-notice select { background: var(--bg-raised); color: var(--text); border: 1px solid var(--line); border-radius: .2rem; min-height: 2.75rem; padding-inline: .6rem; font: inherit; max-width: 100%; }
 .preview-notice a { color: var(--muted-strong); min-height: 2.75rem; display: inline-flex; align-items: center; text-underline-offset: .2em; }
 @media (max-width: 42rem) { .preview-notice label { margin-left: 0; } .preview-notice { font-size: .68rem; } }
+
+/* Keep each opening word selectable and complete when readers enlarge text. */
+.cinema-word { max-inline-size: 100%; overflow-wrap: anywhere; }
+.story-scene-heading { flex-wrap: wrap; }
+
+html[data-preview] .preview-notice { display:flex; }

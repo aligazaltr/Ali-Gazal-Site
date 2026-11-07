@@ -1,0 +1,1225 @@
+[
+  {
+    "test": "top-level lab observation",
+    "path": "/baseline/machiavelli",
+    "theme": "light",
+    "viewport": {
+      "width": 1363,
+      "height": 936,
+      "dpr": 1
+    },
+    "lcpMs": 432,
+    "cls": 0.11780459606294359,
+    "shifts": [
+      {
+        "at": 423.7999999988824,
+        "value": 0.11775915115445179,
+        "sources": [
+          {
+            "node": "MAIN#icerik.",
+            "previous": {
+              "x": 0,
+              "y": 77,
+              "width": 1348,
+              "height": 859,
+              "top": 77,
+              "right": 1348,
+              "bottom": 936,
+              "left": 0
+            },
+            "current": {
+              "x": 0,
+              "y": 141.1875,
+              "width": 1348,
+              "height": 794.8125,
+              "top": 141.1875,
+              "right": 1348,
+              "bottom": 936,
+              "left": 0
+            }
+          },
+          {
+            "node": "P#.mc-premise",
+            "previous": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "current": {
+              "x": 98,
+              "y": 795.5625,
+              "width": 227,
+              "height": 140.4375,
+              "top": 795.5625,
+              "right": 325,
+              "bottom": 936,
+              "left": 98
+            }
+          },
+          {
+            "node": "NAV#.",
+            "previous": {
+              "x": 827.109375,
+              "y": 16,
+              "width": 390.890625,
+              "height": 44,
+              "top": 16,
+              "right": 1218,
+              "bottom": 60,
+              "left": 827.109375
+            },
+            "current": {
+              "x": 707.15625,
+              "y": 16,
+              "width": 390.890625,
+              "height": 44,
+              "top": 16,
+              "right": 1098.046875,
+              "bottom": 60,
+              "left": 707.15625
+            }
+          },
+          {
+            "node": "P#.mc-edition",
+            "previous": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "current": {
+              "x": 98,
+              "y": 237.1875,
+              "width": 1152,
+              "height": 15.828125,
+              "top": 237.1875,
+              "right": 1250,
+              "bottom": 253.015625,
+              "left": 98
+            }
+          },
+          {
+            "node": "undefined#.",
+            "previous": {
+              "x": 926.078125,
+              "y": 59.6875,
+              "width": 57.8125,
+              "height": 1.90625,
+              "top": 59.6875,
+              "right": 983.890625,
+              "bottom": 61.59375,
+              "left": 926.078125
+            },
+            "current": {
+              "x": 806.125,
+              "y": 59.6875,
+              "width": 57.8125,
+              "height": 1.90625,
+              "top": 59.6875,
+              "right": 863.9375,
+              "bottom": 61.59375,
+              "left": 806.125
+            }
+          }
+        ]
+      },
+      {
+        "at": 1184.8999999985099,
+        "value": 0.0000034957621916733774,
+        "sources": [
+          {
+            "node": "SPAN#.",
+            "previous": {
+              "x": 1167.53125,
+              "y": 28.125,
+              "width": 70.28125,
+              "height": 18,
+              "top": 28.125,
+              "right": 1237.8125,
+              "bottom": 46.125,
+              "left": 1167.53125
+            },
+            "current": {
+              "x": 1172.25,
+              "y": 28.125,
+              "width": 65.5625,
+              "height": 18,
+              "top": 28.125,
+              "right": 1237.8125,
+              "bottom": 46.125,
+              "left": 1172.25
+            }
+          }
+        ]
+      },
+      {
+        "at": 2288.699999999255,
+        "value": 0.0000034957621916733774,
+        "sources": [
+          {
+            "node": "SPAN#.",
+            "previous": {
+              "x": 1172.25,
+              "y": 28.125,
+              "width": 65.5625,
+              "height": 18,
+              "top": 28.125,
+              "right": 1237.8125,
+              "bottom": 46.125,
+              "left": 1172.25
+            },
+            "current": {
+              "x": 1167.53125,
+              "y": 28.125,
+              "width": 70.28125,
+              "height": 18,
+              "top": 28.125,
+              "right": 1237.8125,
+              "bottom": 46.125,
+              "left": 1167.53125
+            }
+          }
+        ]
+      },
+      {
+        "at": 9402.699999999255,
+        "value": 0.0000034957621916733774,
+        "sources": [
+          {
+            "node": "SPAN#.",
+            "previous": {
+              "x": 1167.53125,
+              "y": 28.125,
+              "width": 70.28125,
+              "height": 18,
+              "top": 28.125,
+              "right": 1237.8125,
+              "bottom": 46.125,
+              "left": 1167.53125
+            },
+            "current": {
+              "x": 1172.25,
+              "y": 28.125,
+              "width": 65.5625,
+              "height": 18,
+              "top": 28.125,
+              "right": 1237.8125,
+              "bottom": 46.125,
+              "left": 1172.25
+            }
+          }
+        ]
+      },
+      {
+        "at": 16417.799999998882,
+        "value": 0.0000034957621916733774,
+        "sources": [
+          {
+            "node": "SPAN#.",
+            "previous": {
+              "x": 1172.25,
+              "y": 28.125,
+              "width": 65.5625,
+              "height": 18,
+              "top": 28.125,
+              "right": 1237.8125,
+              "bottom": 46.125,
+              "left": 1172.25
+            },
+            "current": {
+              "x": 1167.53125,
+              "y": 28.125,
+              "width": 70.28125,
+              "height": 18,
+              "top": 28.125,
+              "right": 1237.8125,
+              "bottom": 46.125,
+              "left": 1167.53125
+            }
+          }
+        ]
+      },
+      {
+        "at": 18449.799999998882,
+        "value": 0.0000034957621916733774,
+        "sources": [
+          {
+            "node": "SPAN#.",
+            "previous": {
+              "x": 1167.53125,
+              "y": 28.125,
+              "width": 70.28125,
+              "height": 18,
+              "top": 28.125,
+              "right": 1237.8125,
+              "bottom": 46.125,
+              "left": 1167.53125
+            },
+            "current": {
+              "x": 1172.25,
+              "y": 28.125,
+              "width": 65.5625,
+              "height": 18,
+              "top": 28.125,
+              "right": 1237.8125,
+              "bottom": 46.125,
+              "left": 1172.25
+            }
+          }
+        ]
+      },
+      {
+        "at": 19466.099999999627,
+        "value": 0.0000034957621916733774,
+        "sources": [
+          {
+            "node": "SPAN#.",
+            "previous": {
+              "x": 1172.25,
+              "y": 28.125,
+              "width": 65.5625,
+              "height": 18,
+              "top": 28.125,
+              "right": 1237.8125,
+              "bottom": 46.125,
+              "left": 1172.25
+            },
+            "current": {
+              "x": 1167.53125,
+              "y": 28.125,
+              "width": 70.28125,
+              "height": 18,
+              "top": 28.125,
+              "right": 1237.8125,
+              "bottom": 46.125,
+              "left": 1167.53125
+            }
+          }
+        ]
+      },
+      {
+        "at": 20483.699999999255,
+        "value": 0.0000034957621916733774,
+        "sources": [
+          {
+            "node": "SPAN#.",
+            "previous": {
+              "x": 1167.53125,
+              "y": 28.125,
+              "width": 70.28125,
+              "height": 18,
+              "top": 28.125,
+              "right": 1237.8125,
+              "bottom": 46.125,
+              "left": 1167.53125
+            },
+            "current": {
+              "x": 1172.25,
+              "y": 28.125,
+              "width": 65.5625,
+              "height": 18,
+              "top": 28.125,
+              "right": 1237.8125,
+              "bottom": 46.125,
+              "left": 1172.25
+            }
+          }
+        ]
+      },
+      {
+        "at": 21499.5,
+        "value": 0.0000034957621916733774,
+        "sources": [
+          {
+            "node": "SPAN#.",
+            "previous": {
+              "x": 1172.25,
+              "y": 28.125,
+              "width": 65.5625,
+              "height": 18,
+              "top": 28.125,
+              "right": 1237.8125,
+              "bottom": 46.125,
+              "left": 1172.25
+            },
+            "current": {
+              "x": 1167.53125,
+              "y": 28.125,
+              "width": 70.28125,
+              "height": 18,
+              "top": 28.125,
+              "right": 1237.8125,
+              "bottom": 46.125,
+              "left": 1167.53125
+            }
+          }
+        ]
+      },
+      {
+        "at": 22515.699999999255,
+        "value": 0.0000034957621916733774,
+        "sources": [
+          {
+            "node": "SPAN#.",
+            "previous": {
+              "x": 1167.53125,
+              "y": 28.125,
+              "width": 70.28125,
+              "height": 18,
+              "top": 28.125,
+              "right": 1237.8125,
+              "bottom": 46.125,
+              "left": 1167.53125
+            },
+            "current": {
+              "x": 1172.25,
+              "y": 28.125,
+              "width": 65.5625,
+              "height": 18,
+              "top": 28.125,
+              "right": 1237.8125,
+              "bottom": 46.125,
+              "left": 1172.25
+            }
+          }
+        ]
+      },
+      {
+        "at": 23533.799999998882,
+        "value": 0.0000034957621916733774,
+        "sources": [
+          {
+            "node": "SPAN#.",
+            "previous": {
+              "x": 1172.25,
+              "y": 28.125,
+              "width": 65.5625,
+              "height": 18,
+              "top": 28.125,
+              "right": 1237.8125,
+              "bottom": 46.125,
+              "left": 1172.25
+            },
+            "current": {
+              "x": 1167.53125,
+              "y": 28.125,
+              "width": 70.28125,
+              "height": 18,
+              "top": 28.125,
+              "right": 1237.8125,
+              "bottom": 46.125,
+              "left": 1167.53125
+            }
+          }
+        ]
+      },
+      {
+        "at": 24552.699999999255,
+        "value": 0.0000034957621916733774,
+        "sources": [
+          {
+            "node": "SPAN#.",
+            "previous": {
+              "x": 1167.53125,
+              "y": 28.125,
+              "width": 70.28125,
+              "height": 18,
+              "top": 28.125,
+              "right": 1237.8125,
+              "bottom": 46.125,
+              "left": 1167.53125
+            },
+            "current": {
+              "x": 1172.25,
+              "y": 28.125,
+              "width": 65.5625,
+              "height": 18,
+              "top": 28.125,
+              "right": 1237.8125,
+              "bottom": 46.125,
+              "left": 1172.25
+            }
+          }
+        ]
+      },
+      {
+        "at": 25566.099999999627,
+        "value": 0.0000034957621916733774,
+        "sources": [
+          {
+            "node": "SPAN#.",
+            "previous": {
+              "x": 1172.25,
+              "y": 28.125,
+              "width": 65.5625,
+              "height": 18,
+              "top": 28.125,
+              "right": 1237.8125,
+              "bottom": 46.125,
+              "left": 1172.25
+            },
+            "current": {
+              "x": 1167.53125,
+              "y": 28.125,
+              "width": 70.28125,
+              "height": 18,
+              "top": 28.125,
+              "right": 1237.8125,
+              "bottom": 46.125,
+              "left": 1167.53125
+            }
+          }
+        ]
+      },
+      {
+        "at": 26582,
+        "value": 0.0000034957621916733774,
+        "sources": [
+          {
+            "node": "SPAN#.",
+            "previous": {
+              "x": 1167.53125,
+              "y": 28.125,
+              "width": 70.28125,
+              "height": 18,
+              "top": 28.125,
+              "right": 1237.8125,
+              "bottom": 46.125,
+              "left": 1167.53125
+            },
+            "current": {
+              "x": 1172.25,
+              "y": 28.125,
+              "width": 65.5625,
+              "height": 18,
+              "top": 28.125,
+              "right": 1237.8125,
+              "bottom": 46.125,
+              "left": 1172.25
+            }
+          }
+        ]
+      }
+    ],
+    "longTasks": 0,
+    "longestTaskMs": 0,
+    "observedInteractionMs": [],
+    "inp": null,
+    "inpNote": "No field INP claimed; recorded event durations are individual lab interactions only.",
+    "navigation": {
+      "ttfbMs": 126.5,
+      "domContentLoadedMs": 420.19999999925494,
+      "loadMs": 427.19999999925494
+    },
+    "resources": [
+      {
+        "name": "/_launch-prelude.js",
+        "transferSize": 300,
+        "encodedBodySize": 2251,
+        "durationMs": 179.19999999925494
+      },
+      {
+        "name": "/baseline/theme.js",
+        "transferSize": 1158,
+        "encodedBodySize": 858,
+        "durationMs": 105.59999999962747
+      },
+      {
+        "name": "/baseline/site-data.js",
+        "transferSize": 6644,
+        "encodedBodySize": 6344,
+        "durationMs": 233.7000000011176
+      },
+      {
+        "name": "/baseline/motion.js",
+        "transferSize": 4962,
+        "encodedBodySize": 4662,
+        "durationMs": 228.80000000074506
+      },
+      {
+        "name": "/baseline/share-context.js",
+        "transferSize": 976,
+        "encodedBodySize": 676,
+        "durationMs": 232.80000000074506
+      },
+      {
+        "name": "/baseline/project.js",
+        "transferSize": 6599,
+        "encodedBodySize": 6299,
+        "durationMs": 225.80000000074506
+      },
+      {
+        "name": "/baseline/site.js",
+        "transferSize": 1858,
+        "encodedBodySize": 1558,
+        "durationMs": 243.90000000037253
+      },
+      {
+        "name": "/baseline/machiavelli-scene.css",
+        "transferSize": 2395,
+        "encodedBodySize": 2095,
+        "durationMs": 68.79999999888241
+      },
+      {
+        "name": "/baseline/signature.css",
+        "transferSize": 2286,
+        "encodedBodySize": 1986,
+        "durationMs": 105.69999999925494
+      },
+      {
+        "name": "/baseline/motion.css",
+        "transferSize": 2596,
+        "encodedBodySize": 2296,
+        "durationMs": 178
+      },
+      {
+        "name": "/baseline/styles.css",
+        "transferSize": 9810,
+        "encodedBodySize": 9510,
+        "durationMs": 202.7999999988824
+      },
+      {
+        "name": "/baseline/editorial.css",
+        "transferSize": 2233,
+        "encodedBodySize": 1933,
+        "durationMs": 203.89999999850988
+      },
+      {
+        "name": "/baseline/machiavelli-scene.js",
+        "transferSize": 1698,
+        "encodedBodySize": 1398,
+        "durationMs": 224.5
+      },
+      {
+        "name": "/baseline/machiavelli-frames.js",
+        "transferSize": 1413,
+        "encodedBodySize": 1113,
+        "durationMs": 224.90000000037253
+      },
+      {
+        "name": "/baseline/machiavelli-portrait-640.webp",
+        "transferSize": 79146,
+        "encodedBodySize": 78846,
+        "durationMs": 102.20000000111759
+      },
+      {
+        "name": "/baseline/machiavelli-prens-7-gun-kapak.jpg",
+        "transferSize": 197354,
+        "encodedBodySize": 197054,
+        "durationMs": 200.59999999962747
+      },
+      {
+        "name": "/baseline/favicon.svg",
+        "transferSize": 513,
+        "encodedBodySize": 213,
+        "durationMs": 49.59999999962747
+      }
+    ],
+    "errors": [],
+    "violations": []
+  },
+  {
+    "test": "top-level lab observation",
+    "path": "/machiavelli",
+    "theme": "dark",
+    "viewport": {
+      "width": 1363,
+      "height": 936,
+      "dpr": 1
+    },
+    "lcpMs": 316,
+    "cls": 0.05468864445514241,
+    "shifts": [
+      {
+        "at": 334.80000000074506,
+        "value": 0.05468864445514241,
+        "sources": [
+          {
+            "node": "H1#mc-title.mc-title",
+            "previous": {
+              "x": 98,
+              "y": 259.40625,
+              "width": 1152,
+              "height": 264.984375,
+              "top": 259.40625,
+              "right": 1250,
+              "bottom": 524.390625,
+              "left": 98
+            },
+            "current": {
+              "x": 98,
+              "y": 292.375,
+              "width": 1152,
+              "height": 264.984375,
+              "top": 292.375,
+              "right": 1250,
+              "bottom": 557.359375,
+              "left": 98
+            }
+          },
+          {
+            "node": "P#.mc-premise",
+            "previous": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "current": {
+              "x": 98,
+              "y": 795.5625,
+              "width": 227,
+              "height": 140.4375,
+              "top": 795.5625,
+              "right": 325,
+              "bottom": 936,
+              "left": 98
+            }
+          },
+          {
+            "node": "NAV#.",
+            "previous": {
+              "x": 827.109375,
+              "y": 16,
+              "width": 390.890625,
+              "height": 44,
+              "top": 16,
+              "right": 1218,
+              "bottom": 60,
+              "left": 827.109375
+            },
+            "current": {
+              "x": 707.15625,
+              "y": 16,
+              "width": 390.890625,
+              "height": 44,
+              "top": 16,
+              "right": 1098.046875,
+              "bottom": 60,
+              "left": 707.15625
+            }
+          },
+          {
+            "node": "undefined#.",
+            "previous": {
+              "x": 926.078125,
+              "y": 59.6875,
+              "width": 57.8125,
+              "height": 1.90625,
+              "top": 59.6875,
+              "right": 983.890625,
+              "bottom": 61.59375,
+              "left": 926.078125
+            },
+            "current": {
+              "x": 806.125,
+              "y": 59.6875,
+              "width": 57.8125,
+              "height": 1.90625,
+              "top": 59.6875,
+              "right": 863.9375,
+              "bottom": 61.59375,
+              "left": 806.125
+            }
+          }
+        ]
+      }
+    ],
+    "longTasks": 0,
+    "longestTaskMs": 0,
+    "observedInteractionMs": [],
+    "inp": null,
+    "inpNote": "No field INP claimed; recorded event durations are individual lab interactions only.",
+    "navigation": {
+      "ttfbMs": 185.09999999962747,
+      "domContentLoadedMs": 333.30000000074506,
+      "loadMs": 336.40000000037253
+    },
+    "resources": [
+      {
+        "name": "/_launch-prelude.js",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 65.30000000074506
+      },
+      {
+        "name": "/share-context.js",
+        "transferSize": 300,
+        "encodedBodySize": 676,
+        "durationMs": 59.30000000074506
+      },
+      {
+        "name": "/theme.js",
+        "transferSize": 300,
+        "encodedBodySize": 988,
+        "durationMs": 60.69999999925494
+      },
+      {
+        "name": "/site-data.js",
+        "transferSize": 300,
+        "encodedBodySize": 6344,
+        "durationMs": 100
+      },
+      {
+        "name": "/motion.js",
+        "transferSize": 300,
+        "encodedBodySize": 4596,
+        "durationMs": 109.09999999962747
+      },
+      {
+        "name": "/video-links.js",
+        "transferSize": 300,
+        "encodedBodySize": 643,
+        "durationMs": 120.59999999962747
+      },
+      {
+        "name": "/project.js",
+        "transferSize": 300,
+        "encodedBodySize": 6156,
+        "durationMs": 124.69999999925494
+      },
+      {
+        "name": "/site.js",
+        "transferSize": 300,
+        "encodedBodySize": 1525,
+        "durationMs": 127.19999999925494
+      },
+      {
+        "name": "/editorial.css",
+        "transferSize": 300,
+        "encodedBodySize": 1933,
+        "durationMs": 53.19999999925494
+      },
+      {
+        "name": "/motion.css",
+        "transferSize": 300,
+        "encodedBodySize": 2386,
+        "durationMs": 54
+      },
+      {
+        "name": "/styles.css",
+        "transferSize": 300,
+        "encodedBodySize": 9654,
+        "durationMs": 64.59999999962747
+      },
+      {
+        "name": "/signature.css",
+        "transferSize": 300,
+        "encodedBodySize": 1986,
+        "durationMs": 54
+      },
+      {
+        "name": "/machiavelli-scene.css",
+        "transferSize": 300,
+        "encodedBodySize": 2417,
+        "durationMs": 68.5
+      },
+      {
+        "name": "/machiavelli-frames.js",
+        "transferSize": 300,
+        "encodedBodySize": 1113,
+        "durationMs": 109.20000000111759
+      },
+      {
+        "name": "/machiavelli-portrait-640.webp",
+        "transferSize": 300,
+        "encodedBodySize": 78846,
+        "durationMs": 56.80000000074506
+      },
+      {
+        "name": "/machiavelli-prens-7-gun-kapak.jpg",
+        "transferSize": 300,
+        "encodedBodySize": 197054,
+        "durationMs": 121
+      },
+      {
+        "name": "/machiavelli-scene.js",
+        "transferSize": 300,
+        "encodedBodySize": 1606,
+        "durationMs": 128.30000000074506
+      },
+      {
+        "name": "/favicon.svg",
+        "transferSize": 513,
+        "encodedBodySize": 213,
+        "durationMs": 43.899999998509884
+      }
+    ],
+    "errors": [],
+    "violations": []
+  },
+  {
+    "test": "top-level lab observation",
+    "path": "/machiavelli",
+    "theme": "light",
+    "viewport": {
+      "width": 1363,
+      "height": 936,
+      "dpr": 1
+    },
+    "lcpMs": 300,
+    "cls": 0.00013614621228233328,
+    "shifts": [
+      {
+        "at": 1135,
+        "value": 0.000045382070760777765,
+        "sources": [
+          {
+            "node": "NAV#.",
+            "previous": {
+              "x": 707.15625,
+              "y": 16,
+              "width": 390.890625,
+              "height": 44,
+              "top": 16,
+              "right": 1098.046875,
+              "bottom": 60,
+              "left": 707.15625
+            },
+            "current": {
+              "x": 704.0625,
+              "y": 16,
+              "width": 390.890625,
+              "height": 44,
+              "top": 16,
+              "right": 1094.953125,
+              "bottom": 60,
+              "left": 704.0625
+            }
+          },
+          {
+            "node": "BUTTON#.theme-toggle",
+            "previous": {
+              "x": 1130.046875,
+              "y": 16,
+              "width": 119.953125,
+              "height": 44,
+              "top": 16,
+              "right": 1250,
+              "bottom": 60,
+              "left": 1130.046875
+            },
+            "current": {
+              "x": 1126.953125,
+              "y": 16,
+              "width": 123.046875,
+              "height": 44,
+              "top": 16,
+              "right": 1250,
+              "bottom": 60,
+              "left": 1126.953125
+            }
+          },
+          {
+            "node": "undefined#.",
+            "previous": {
+              "x": 806.125,
+              "y": 59.6875,
+              "width": 57.8125,
+              "height": 1.90625,
+              "top": 59.6875,
+              "right": 863.9375,
+              "bottom": 61.59375,
+              "left": 806.125
+            },
+            "current": {
+              "x": 803.03125,
+              "y": 59.6875,
+              "width": 57.8125,
+              "height": 1.90625,
+              "top": 59.6875,
+              "right": 860.84375,
+              "bottom": 61.59375,
+              "left": 803.03125
+            }
+          }
+        ]
+      },
+      {
+        "at": 2236.5,
+        "value": 0.000045382070760777765,
+        "sources": [
+          {
+            "node": "NAV#.",
+            "previous": {
+              "x": 704.0625,
+              "y": 16,
+              "width": 390.890625,
+              "height": 44,
+              "top": 16,
+              "right": 1094.953125,
+              "bottom": 60,
+              "left": 704.0625
+            },
+            "current": {
+              "x": 707.15625,
+              "y": 16,
+              "width": 390.890625,
+              "height": 44,
+              "top": 16,
+              "right": 1098.046875,
+              "bottom": 60,
+              "left": 707.15625
+            }
+          },
+          {
+            "node": "BUTTON#.theme-toggle",
+            "previous": {
+              "x": 1126.953125,
+              "y": 16,
+              "width": 123.046875,
+              "height": 44,
+              "top": 16,
+              "right": 1250,
+              "bottom": 60,
+              "left": 1126.953125
+            },
+            "current": {
+              "x": 1130.046875,
+              "y": 16,
+              "width": 119.953125,
+              "height": 44,
+              "top": 16,
+              "right": 1250,
+              "bottom": 60,
+              "left": 1130.046875
+            }
+          },
+          {
+            "node": "undefined#.",
+            "previous": {
+              "x": 803.03125,
+              "y": 59.6875,
+              "width": 57.8125,
+              "height": 1.90625,
+              "top": 59.6875,
+              "right": 860.84375,
+              "bottom": 61.59375,
+              "left": 803.03125
+            },
+            "current": {
+              "x": 806.125,
+              "y": 59.6875,
+              "width": 57.8125,
+              "height": 1.90625,
+              "top": 59.6875,
+              "right": 863.9375,
+              "bottom": 61.59375,
+              "left": 806.125
+            }
+          }
+        ]
+      },
+      {
+        "at": 9352.400000000373,
+        "value": 0.000045382070760777765,
+        "sources": [
+          {
+            "node": "NAV#.",
+            "previous": {
+              "x": 707.15625,
+              "y": 16,
+              "width": 390.890625,
+              "height": 44,
+              "top": 16,
+              "right": 1098.046875,
+              "bottom": 60,
+              "left": 707.15625
+            },
+            "current": {
+              "x": 704.0625,
+              "y": 16,
+              "width": 390.890625,
+              "height": 44,
+              "top": 16,
+              "right": 1094.953125,
+              "bottom": 60,
+              "left": 704.0625
+            }
+          },
+          {
+            "node": "BUTTON#.theme-toggle",
+            "previous": {
+              "x": 1130.046875,
+              "y": 16,
+              "width": 119.953125,
+              "height": 44,
+              "top": 16,
+              "right": 1250,
+              "bottom": 60,
+              "left": 1130.046875
+            },
+            "current": {
+              "x": 1126.953125,
+              "y": 16,
+              "width": 123.046875,
+              "height": 44,
+              "top": 16,
+              "right": 1250,
+              "bottom": 60,
+              "left": 1126.953125
+            }
+          },
+          {
+            "node": "undefined#.",
+            "previous": {
+              "x": 806.125,
+              "y": 59.6875,
+              "width": 57.8125,
+              "height": 1.90625,
+              "top": 59.6875,
+              "right": 863.9375,
+              "bottom": 61.59375,
+              "left": 806.125
+            },
+            "current": {
+              "x": 803.03125,
+              "y": 59.6875,
+              "width": 57.8125,
+              "height": 1.90625,
+              "top": 59.6875,
+              "right": 860.84375,
+              "bottom": 61.59375,
+              "left": 803.03125
+            }
+          }
+        ]
+      }
+    ],
+    "longTasks": 0,
+    "longestTaskMs": 0,
+    "observedInteractionMs": [],
+    "inp": null,
+    "inpNote": "No field INP claimed; recorded event durations are individual lab interactions only.",
+    "navigation": {
+      "ttfbMs": 169.5,
+      "domContentLoadedMs": 329.19999999925494,
+      "loadMs": 333.30000000074506
+    },
+    "resources": [
+      {
+        "name": "/_launch-prelude.js",
+        "transferSize": 300,
+        "encodedBodySize": 2251,
+        "durationMs": 59
+      },
+      {
+        "name": "/share-context.js",
+        "transferSize": 300,
+        "encodedBodySize": 676,
+        "durationMs": 64.30000000074506
+      },
+      {
+        "name": "/theme.js",
+        "transferSize": 300,
+        "encodedBodySize": 1203,
+        "durationMs": 76.80000000074506
+      },
+      {
+        "name": "/styles.css",
+        "transferSize": 300,
+        "encodedBodySize": 9746,
+        "durationMs": 66.40000000037253
+      },
+      {
+        "name": "/video-links.js",
+        "transferSize": 300,
+        "encodedBodySize": 643,
+        "durationMs": 120.10000000149012
+      },
+      {
+        "name": "/project.js",
+        "transferSize": 300,
+        "encodedBodySize": 6245,
+        "durationMs": 122.40000000037253
+      },
+      {
+        "name": "/site.js",
+        "transferSize": 300,
+        "encodedBodySize": 1525,
+        "durationMs": 126.70000000111759
+      },
+      {
+        "name": "/site-data.js",
+        "transferSize": 300,
+        "encodedBodySize": 6420,
+        "durationMs": 127.70000000111759
+      },
+      {
+        "name": "/motion.js",
+        "transferSize": 300,
+        "encodedBodySize": 4596,
+        "durationMs": 138.7000000011176
+      },
+      {
+        "name": "/editorial.css",
+        "transferSize": 300,
+        "encodedBodySize": 1933,
+        "durationMs": 60.19999999925494
+      },
+      {
+        "name": "/motion.css",
+        "transferSize": 300,
+        "encodedBodySize": 2386,
+        "durationMs": 60.59999999962747
+      },
+      {
+        "name": "/signature.css",
+        "transferSize": 300,
+        "encodedBodySize": 1986,
+        "durationMs": 62.19999999925494
+      },
+      {
+        "name": "/machiavelli-scene.css",
+        "transferSize": 300,
+        "encodedBodySize": 2458,
+        "durationMs": 72.69999999925494
+      },
+      {
+        "name": "/machiavelli-frames.js",
+        "transferSize": 300,
+        "encodedBodySize": 1113,
+        "durationMs": 120.59999999962747
+      },
+      {
+        "name": "/machiavelli-scene.js",
+        "transferSize": 300,
+        "encodedBodySize": 1635,
+        "durationMs": 137.40000000037253
+      },
+      {
+        "name": "/machiavelli-portrait-640.webp",
+        "transferSize": 300,
+        "encodedBodySize": 78846,
+        "durationMs": 64.59999999962747
+      },
+      {
+        "name": "/machiavelli-prens-7-gun-kapak.jpg",
+        "transferSize": 300,
+        "encodedBodySize": 197054,
+        "durationMs": 150.30000000074506
+      },
+      {
+        "name": "/favicon.svg",
+        "transferSize": 513,
+        "encodedBodySize": 213,
+        "durationMs": 45.30000000074506
+      }
+    ],
+    "errors": [],
+    "violations": []
+  }
+]

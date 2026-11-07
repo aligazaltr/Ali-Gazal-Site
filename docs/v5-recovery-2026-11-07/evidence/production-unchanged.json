@@ -1,0 +1,23 @@
+[
+  {
+    "url": "https://aligazal.com/",
+    "curlExit": 0,
+    "exactMain170": true,
+    "sha256": "e5572bc7cda81b2d0d17646e0e3f8ae81bb45bb004ab2704f85e82421beb0019",
+    "bytes": 14080
+  },
+  {
+    "url": "https://aligazal.com/machiavelli",
+    "curlExit": 0,
+    "exactMain170": true,
+    "sha256": "a66c120bf2c3f18306354db90af25c4d60deebadedf8f74debd580431a1a65d4",
+    "bytes": 24848
+  },
+  {
+    "url": "https://aligazal.com/hakkimda",
+    "curlExit": 0,
+    "exactMain170": true,
+    "sha256": "9777aae8d51aac16f861e7173a10806ab220bff9ff1c7c30ac3643dadb1ee39f",
+    "bytes": 6820
+  }
+]

@@ -1,0 +1,1154 @@
+[
+  {
+    "test": "top-level lab observation",
+    "path": "/baseline/machiavelli",
+    "theme": "dark",
+    "viewport": {
+      "width": 1363,
+      "height": 936,
+      "dpr": 1
+    },
+    "lcpMs": 380,
+    "cls": 0.11775915115445179,
+    "shifts": [
+      {
+        "at": 425.40000000037253,
+        "value": 0.11775915115445179,
+        "sources": [
+          {
+            "node": "MAIN#icerik.",
+            "previous": {
+              "x": 0,
+              "y": 77,
+              "width": 1348,
+              "height": 859,
+              "top": 77,
+              "right": 1348,
+              "bottom": 936,
+              "left": 0
+            },
+            "current": {
+              "x": 0,
+              "y": 141.1875,
+              "width": 1348,
+              "height": 794.8125,
+              "top": 141.1875,
+              "right": 1348,
+              "bottom": 936,
+              "left": 0
+            }
+          },
+          {
+            "node": "P#.mc-premise",
+            "previous": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "current": {
+              "x": 98,
+              "y": 795.5625,
+              "width": 227,
+              "height": 140.4375,
+              "top": 795.5625,
+              "right": 325,
+              "bottom": 936,
+              "left": 98
+            }
+          },
+          {
+            "node": "NAV#.",
+            "previous": {
+              "x": 827.109375,
+              "y": 16,
+              "width": 390.890625,
+              "height": 44,
+              "top": 16,
+              "right": 1218,
+              "bottom": 60,
+              "left": 827.109375
+            },
+            "current": {
+              "x": 707.15625,
+              "y": 16,
+              "width": 390.890625,
+              "height": 44,
+              "top": 16,
+              "right": 1098.046875,
+              "bottom": 60,
+              "left": 707.15625
+            }
+          },
+          {
+            "node": "P#.mc-edition",
+            "previous": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "current": {
+              "x": 98,
+              "y": 237.1875,
+              "width": 1152,
+              "height": 15.828125,
+              "top": 237.1875,
+              "right": 1250,
+              "bottom": 253.015625,
+              "left": 98
+            }
+          },
+          {
+            "node": "undefined#.",
+            "previous": {
+              "x": 926.078125,
+              "y": 59.6875,
+              "width": 57.8125,
+              "height": 1.90625,
+              "top": 59.6875,
+              "right": 983.890625,
+              "bottom": 61.59375,
+              "left": 926.078125
+            },
+            "current": {
+              "x": 806.125,
+              "y": 59.6875,
+              "width": 57.8125,
+              "height": 1.90625,
+              "top": 59.6875,
+              "right": 863.9375,
+              "bottom": 61.59375,
+              "left": 806.125
+            }
+          }
+        ]
+      }
+    ],
+    "longTasks": 0,
+    "longestTaskMs": 0,
+    "observedInteractionMs": [],
+    "inp": null,
+    "inpNote": "No field INP claimed; recorded event durations are individual lab interactions only.",
+    "navigation": {
+      "ttfbMs": 212.40000000037253,
+      "domContentLoadedMs": 423.80000000074506,
+      "loadMs": 427.30000000074506
+    },
+    "resources": [
+      {
+        "name": "/_launch-prelude.js",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 91.5
+      },
+      {
+        "name": "/baseline/theme.js",
+        "transferSize": 1158,
+        "encodedBodySize": 858,
+        "durationMs": 84.20000000111759
+      },
+      {
+        "name": "/baseline/site-data.js",
+        "transferSize": 6714,
+        "encodedBodySize": 6414,
+        "durationMs": 150.40000000037253
+      },
+      {
+        "name": "/baseline/motion.css",
+        "transferSize": 2596,
+        "encodedBodySize": 2296,
+        "durationMs": 70.39999999850988
+      },
+      {
+        "name": "/baseline/editorial.css",
+        "transferSize": 2233,
+        "encodedBodySize": 1933,
+        "durationMs": 72.89999999850988
+      },
+      {
+        "name": "/baseline/styles.css",
+        "transferSize": 9762,
+        "encodedBodySize": 9462,
+        "durationMs": 83.09999999962747
+      },
+      {
+        "name": "/baseline/project.js",
+        "transferSize": 6505,
+        "encodedBodySize": 6205,
+        "durationMs": 165.19999999925494
+      },
+      {
+        "name": "/baseline/site.js",
+        "transferSize": 1858,
+        "encodedBodySize": 1558,
+        "durationMs": 165.5
+      },
+      {
+        "name": "/baseline/motion.js",
+        "transferSize": 4896,
+        "encodedBodySize": 4596,
+        "durationMs": 168.39999999850988
+      },
+      {
+        "name": "/baseline/share-context.js",
+        "transferSize": 976,
+        "encodedBodySize": 676,
+        "durationMs": 185.69999999925494
+      },
+      {
+        "name": "/baseline/signature.css",
+        "transferSize": 2286,
+        "encodedBodySize": 1986,
+        "durationMs": 76.79999999888241
+      },
+      {
+        "name": "/baseline/machiavelli-scene.css",
+        "transferSize": 2395,
+        "encodedBodySize": 2095,
+        "durationMs": 100.59999999962747
+      },
+      {
+        "name": "/baseline/machiavelli-frames.js",
+        "transferSize": 1413,
+        "encodedBodySize": 1113,
+        "durationMs": 167.5
+      },
+      {
+        "name": "/baseline/machiavelli-prens-7-gun-kapak.jpg",
+        "transferSize": 197354,
+        "encodedBodySize": 197054,
+        "durationMs": 81.90000000037253
+      },
+      {
+        "name": "/baseline/machiavelli-portrait-640.webp",
+        "transferSize": 79146,
+        "encodedBodySize": 78846,
+        "durationMs": 100.19999999925494
+      },
+      {
+        "name": "/baseline/machiavelli-scene.js",
+        "transferSize": 1698,
+        "encodedBodySize": 1398,
+        "durationMs": 157
+      },
+      {
+        "name": "/baseline/favicon.svg",
+        "transferSize": 513,
+        "encodedBodySize": 213,
+        "durationMs": 58.19999999925494
+      }
+    ],
+    "errors": [],
+    "violations": []
+  },
+  {
+    "test": "top-level lab observation",
+    "path": "/baseline/machiavelli",
+    "theme": "dark",
+    "viewport": {
+      "width": 1363,
+      "height": 936,
+      "dpr": 1
+    },
+    "lcpMs": 260,
+    "cls": 0.11775915115445179,
+    "shifts": [
+      {
+        "at": 243.09999999962747,
+        "value": 0.11775915115445179,
+        "sources": [
+          {
+            "node": "MAIN#icerik.",
+            "previous": {
+              "x": 0,
+              "y": 77,
+              "width": 1348,
+              "height": 859,
+              "top": 77,
+              "right": 1348,
+              "bottom": 936,
+              "left": 0
+            },
+            "current": {
+              "x": 0,
+              "y": 141.1875,
+              "width": 1348,
+              "height": 794.8125,
+              "top": 141.1875,
+              "right": 1348,
+              "bottom": 936,
+              "left": 0
+            }
+          },
+          {
+            "node": "P#.mc-premise",
+            "previous": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "current": {
+              "x": 98,
+              "y": 795.5625,
+              "width": 227,
+              "height": 140.4375,
+              "top": 795.5625,
+              "right": 325,
+              "bottom": 936,
+              "left": 98
+            }
+          },
+          {
+            "node": "NAV#.",
+            "previous": {
+              "x": 827.109375,
+              "y": 16,
+              "width": 390.890625,
+              "height": 44,
+              "top": 16,
+              "right": 1218,
+              "bottom": 60,
+              "left": 827.109375
+            },
+            "current": {
+              "x": 707.15625,
+              "y": 16,
+              "width": 390.890625,
+              "height": 44,
+              "top": 16,
+              "right": 1098.046875,
+              "bottom": 60,
+              "left": 707.15625
+            }
+          },
+          {
+            "node": "P#.mc-edition",
+            "previous": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "current": {
+              "x": 98,
+              "y": 237.1875,
+              "width": 1152,
+              "height": 15.828125,
+              "top": 237.1875,
+              "right": 1250,
+              "bottom": 253.015625,
+              "left": 98
+            }
+          },
+          {
+            "node": "undefined#.",
+            "previous": {
+              "x": 926.078125,
+              "y": 59.6875,
+              "width": 57.8125,
+              "height": 1.90625,
+              "top": 59.6875,
+              "right": 983.890625,
+              "bottom": 61.59375,
+              "left": 926.078125
+            },
+            "current": {
+              "x": 806.125,
+              "y": 59.6875,
+              "width": 57.8125,
+              "height": 1.90625,
+              "top": 59.6875,
+              "right": 863.9375,
+              "bottom": 61.59375,
+              "left": 806.125
+            }
+          }
+        ]
+      }
+    ],
+    "longTasks": 0,
+    "longestTaskMs": 0,
+    "observedInteractionMs": [],
+    "inp": null,
+    "inpNote": "No field INP claimed; recorded event durations are individual lab interactions only.",
+    "navigation": {
+      "ttfbMs": 46.399999998509884,
+      "domContentLoadedMs": 241.19999999925494,
+      "loadMs": 244.89999999850988
+    },
+    "resources": [
+      {
+        "name": "/_launch-prelude.js",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 69.40000000037253
+      },
+      {
+        "name": "/baseline/theme.js",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 59
+      },
+      {
+        "name": "/baseline/share-context.js",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 117.59999999962747
+      },
+      {
+        "name": "/baseline/site-data.js",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 133.19999999925494
+      },
+      {
+        "name": "/baseline/project.js",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 112.19999999925494
+      },
+      {
+        "name": "/baseline/motion.js",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 117.19999999925494
+      },
+      {
+        "name": "/baseline/site.js",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 131.7999999988824
+      },
+      {
+        "name": "/baseline/editorial.css",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 50.80000000074506
+      },
+      {
+        "name": "/baseline/styles.css",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 61.19999999925494
+      },
+      {
+        "name": "/baseline/signature.css",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 52.90000000037253
+      },
+      {
+        "name": "/baseline/motion.css",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 156
+      },
+      {
+        "name": "/baseline/machiavelli-scene.css",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 58.90000000037253
+      },
+      {
+        "name": "/baseline/machiavelli-scene.js",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 117.40000000037253
+      },
+      {
+        "name": "/baseline/machiavelli-frames.js",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 119.80000000074506
+      },
+      {
+        "name": "/baseline/machiavelli-portrait-640.webp",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 79.5
+      },
+      {
+        "name": "/baseline/machiavelli-prens-7-gun-kapak.jpg",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 82.19999999925494
+      },
+      {
+        "name": "/baseline/favicon.svg",
+        "transferSize": 300,
+        "encodedBodySize": 213,
+        "durationMs": 41.69999999925494
+      }
+    ],
+    "errors": [],
+    "violations": []
+  },
+  {
+    "test": "top-level lab observation",
+    "path": "/baseline/machiavelli",
+    "theme": "dark",
+    "viewport": {
+      "width": 1363,
+      "height": 936,
+      "dpr": 1
+    },
+    "lcpMs": 176,
+    "cls": 0.11775915115445179,
+    "shifts": [
+      {
+        "at": 200.59999999962747,
+        "value": 0.11775915115445179,
+        "sources": [
+          {
+            "node": "MAIN#icerik.",
+            "previous": {
+              "x": 0,
+              "y": 77,
+              "width": 1348,
+              "height": 859,
+              "top": 77,
+              "right": 1348,
+              "bottom": 936,
+              "left": 0
+            },
+            "current": {
+              "x": 0,
+              "y": 141.1875,
+              "width": 1348,
+              "height": 794.8125,
+              "top": 141.1875,
+              "right": 1348,
+              "bottom": 936,
+              "left": 0
+            }
+          },
+          {
+            "node": "P#.mc-premise",
+            "previous": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "current": {
+              "x": 98,
+              "y": 795.5625,
+              "width": 227,
+              "height": 140.4375,
+              "top": 795.5625,
+              "right": 325,
+              "bottom": 936,
+              "left": 98
+            }
+          },
+          {
+            "node": "NAV#.",
+            "previous": {
+              "x": 827.109375,
+              "y": 16,
+              "width": 390.890625,
+              "height": 44,
+              "top": 16,
+              "right": 1218,
+              "bottom": 60,
+              "left": 827.109375
+            },
+            "current": {
+              "x": 707.15625,
+              "y": 16,
+              "width": 390.890625,
+              "height": 44,
+              "top": 16,
+              "right": 1098.046875,
+              "bottom": 60,
+              "left": 707.15625
+            }
+          },
+          {
+            "node": "P#.mc-edition",
+            "previous": {
+              "x": 0,
+              "y": 0,
+              "width": 0,
+              "height": 0,
+              "top": 0,
+              "right": 0,
+              "bottom": 0,
+              "left": 0
+            },
+            "current": {
+              "x": 98,
+              "y": 237.1875,
+              "width": 1152,
+              "height": 15.828125,
+              "top": 237.1875,
+              "right": 1250,
+              "bottom": 253.015625,
+              "left": 98
+            }
+          },
+          {
+            "node": "undefined#.",
+            "previous": {
+              "x": 926.078125,
+              "y": 59.6875,
+              "width": 57.8125,
+              "height": 1.90625,
+              "top": 59.6875,
+              "right": 983.890625,
+              "bottom": 61.59375,
+              "left": 926.078125
+            },
+            "current": {
+              "x": 806.125,
+              "y": 59.6875,
+              "width": 57.8125,
+              "height": 1.90625,
+              "top": 59.6875,
+              "right": 863.9375,
+              "bottom": 61.59375,
+              "left": 806.125
+            }
+          }
+        ]
+      }
+    ],
+    "longTasks": 0,
+    "longestTaskMs": 0,
+    "observedInteractionMs": [],
+    "inp": null,
+    "inpNote": "No field INP claimed; recorded event durations are individual lab interactions only.",
+    "navigation": {
+      "ttfbMs": 51,
+      "domContentLoadedMs": 199.09999999962747,
+      "loadMs": 202.59999999962747
+    },
+    "resources": [
+      {
+        "name": "/_launch-prelude.js",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 56.20000000111759
+      },
+      {
+        "name": "/baseline/theme.js",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 81.90000000037253
+      },
+      {
+        "name": "/baseline/site-data.js",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 114.59999999962747
+      },
+      {
+        "name": "/baseline/share-context.js",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 117.09999999962747
+      },
+      {
+        "name": "/baseline/motion.js",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 123.69999999925494
+      },
+      {
+        "name": "/baseline/styles.css",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 55.40000000037253
+      },
+      {
+        "name": "/baseline/site.js",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 119.40000000037253
+      },
+      {
+        "name": "/baseline/project.js",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 125
+      },
+      {
+        "name": "/baseline/motion.css",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 52.90000000037253
+      },
+      {
+        "name": "/baseline/signature.css",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 54.09999999962747
+      },
+      {
+        "name": "/baseline/editorial.css",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 73.40000000037253
+      },
+      {
+        "name": "/baseline/machiavelli-scene.css",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 55.30000000074506
+      },
+      {
+        "name": "/baseline/machiavelli-frames.js",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 125.70000000111759
+      },
+      {
+        "name": "/baseline/machiavelli-portrait-640.webp",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 55.69999999925494
+      },
+      {
+        "name": "/baseline/machiavelli-scene.js",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 119.5
+      },
+      {
+        "name": "/baseline/machiavelli-prens-7-gun-kapak.jpg",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 74.69999999925494
+      },
+      {
+        "name": "/baseline/favicon.svg",
+        "transferSize": 300,
+        "encodedBodySize": 213,
+        "durationMs": 42.80000000074506
+      }
+    ],
+    "errors": [],
+    "violations": []
+  },
+  {
+    "test": "top-level lab observation",
+    "path": "/machiavelli",
+    "theme": "dark",
+    "viewport": {
+      "width": 1363,
+      "height": 936,
+      "dpr": 1
+    },
+    "lcpMs": 188,
+    "cls": 0,
+    "shifts": [],
+    "longTasks": 0,
+    "longestTaskMs": 0,
+    "observedInteractionMs": [],
+    "inp": null,
+    "inpNote": "No field INP claimed; recorded event durations are individual lab interactions only.",
+    "navigation": {
+      "ttfbMs": 48.29999999888241,
+      "domContentLoadedMs": 206.2999999988824,
+      "loadMs": 206.69999999925494
+    },
+    "resources": [
+      {
+        "name": "/_launch-prelude.js",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 66.29999999888241
+      },
+      {
+        "name": "/share-context.js",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 65.59999999962747
+      },
+      {
+        "name": "/theme.js",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 73.09999999962747
+      },
+      {
+        "name": "/video-links.js",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 116
+      },
+      {
+        "name": "/site-data.js",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 136.40000000037253
+      },
+      {
+        "name": "/motion.js",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 124.30000000074506
+      },
+      {
+        "name": "/site.js",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 125.40000000037253
+      },
+      {
+        "name": "/project.js",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 134.5
+      },
+      {
+        "name": "/styles.css",
+        "transferSize": 300,
+        "encodedBodySize": 9746,
+        "durationMs": 59.20000000111759
+      },
+      {
+        "name": "/machiavelli-scene.css",
+        "transferSize": 300,
+        "encodedBodySize": 2458,
+        "durationMs": 57.5
+      },
+      {
+        "name": "/signature.css",
+        "transferSize": 2286,
+        "encodedBodySize": 1986,
+        "durationMs": 60.29999999888241
+      },
+      {
+        "name": "/editorial.css",
+        "transferSize": 300,
+        "encodedBodySize": 1933,
+        "durationMs": 80.69999999925494
+      },
+      {
+        "name": "/motion.css",
+        "transferSize": 2686,
+        "encodedBodySize": 2386,
+        "durationMs": 82.29999999888241
+      },
+      {
+        "name": "/machiavelli-frames.js",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 123.69999999925494
+      },
+      {
+        "name": "/machiavelli-portrait-640.webp",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 60.09999999962747
+      },
+      {
+        "name": "/machiavelli-scene.js",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 115.69999999925494
+      },
+      {
+        "name": "/machiavelli-prens-7-gun-kapak.jpg",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 125.20000000111759
+      }
+    ],
+    "errors": [],
+    "violations": []
+  },
+  {
+    "test": "top-level lab observation",
+    "path": "/machiavelli",
+    "theme": "dark",
+    "viewport": {
+      "width": 1363,
+      "height": 936,
+      "dpr": 1
+    },
+    "lcpMs": 208,
+    "cls": 0,
+    "shifts": [],
+    "longTasks": 0,
+    "longestTaskMs": 0,
+    "observedInteractionMs": [],
+    "inp": null,
+    "inpNote": "No field INP claimed; recorded event durations are individual lab interactions only.",
+    "navigation": {
+      "ttfbMs": 48.5,
+      "domContentLoadedMs": 218,
+      "loadMs": 218.39999999850988
+    },
+    "resources": [
+      {
+        "name": "/share-context.js",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 73
+      },
+      {
+        "name": "/_launch-prelude.js",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 75.09999999962747
+      },
+      {
+        "name": "/theme.js",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 61.59999999962747
+      },
+      {
+        "name": "/site-data.js",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 125.09999999962747
+      },
+      {
+        "name": "/site.js",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 125.30000000074506
+      },
+      {
+        "name": "/motion.js",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 133.09999999962747
+      },
+      {
+        "name": "/video-links.js",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 145.40000000037253
+      },
+      {
+        "name": "/editorial.css",
+        "transferSize": 300,
+        "encodedBodySize": 1933,
+        "durationMs": 75.30000000074506
+      },
+      {
+        "name": "/styles.css",
+        "transferSize": 300,
+        "encodedBodySize": 9746,
+        "durationMs": 105.5
+      },
+      {
+        "name": "/project.js",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 126.09999999962747
+      },
+      {
+        "name": "/motion.css",
+        "transferSize": 300,
+        "encodedBodySize": 2386,
+        "durationMs": 66.40000000037253
+      },
+      {
+        "name": "/signature.css",
+        "transferSize": 300,
+        "encodedBodySize": 1986,
+        "durationMs": 67.80000000074506
+      },
+      {
+        "name": "/machiavelli-scene.css",
+        "transferSize": 300,
+        "encodedBodySize": 2458,
+        "durationMs": 61.69999999925494
+      },
+      {
+        "name": "/machiavelli-scene.js",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 129.5
+      },
+      {
+        "name": "/machiavelli-frames.js",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 145.2999999988824
+      },
+      {
+        "name": "/machiavelli-portrait-640.webp",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 58.40000000037253
+      },
+      {
+        "name": "/machiavelli-prens-7-gun-kapak.jpg",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 131.19999999925494
+      },
+      {
+        "name": "/favicon.svg",
+        "transferSize": 300,
+        "encodedBodySize": 213,
+        "durationMs": 38.29999999888241
+      }
+    ],
+    "errors": [],
+    "violations": []
+  },
+  {
+    "test": "top-level lab observation",
+    "path": "/machiavelli",
+    "theme": "dark",
+    "viewport": {
+      "width": 1363,
+      "height": 936,
+      "dpr": 1
+    },
+    "lcpMs": 176,
+    "cls": 0,
+    "shifts": [],
+    "longTasks": 0,
+    "longestTaskMs": 0,
+    "observedInteractionMs": [],
+    "inp": null,
+    "inpNote": "No field INP claimed; recorded event durations are individual lab interactions only.",
+    "navigation": {
+      "ttfbMs": 47.80000000074506,
+      "domContentLoadedMs": 193.09999999962747,
+      "loadMs": 196.2000000011176
+    },
+    "resources": [
+      {
+        "name": "/_launch-prelude.js",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 52.19999999925494
+      },
+      {
+        "name": "/theme.js",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 61.600000001490116
+      },
+      {
+        "name": "/share-context.js",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 66.30000000074506
+      },
+      {
+        "name": "/site-data.js",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 111.30000000074506
+      },
+      {
+        "name": "/video-links.js",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 112.89999999850988
+      },
+      {
+        "name": "/motion.js",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 123
+      },
+      {
+        "name": "/project.js",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 113.69999999925494
+      },
+      {
+        "name": "/site.js",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 114.69999999925494
+      },
+      {
+        "name": "/styles.css",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 58.40000000037253
+      },
+      {
+        "name": "/motion.css",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 53.20000000111759
+      },
+      {
+        "name": "/machiavelli-scene.css",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 58.100000001490116
+      },
+      {
+        "name": "/signature.css",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 65.60000000149012
+      },
+      {
+        "name": "/editorial.css",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 67.80000000074506
+      },
+      {
+        "name": "/machiavelli-frames.js",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 120.59999999962747
+      },
+      {
+        "name": "/machiavelli-portrait-640.webp",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 61.09999999962747
+      },
+      {
+        "name": "/machiavelli-prens-7-gun-kapak.jpg",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 114.90000000037253
+      },
+      {
+        "name": "/machiavelli-scene.js",
+        "transferSize": 300,
+        "encodedBodySize": 0,
+        "durationMs": 119.40000000037253
+      },
+      {
+        "name": "/favicon.svg",
+        "transferSize": 300,
+        "encodedBodySize": 213,
+        "durationMs": 38.30000000074506
+      }
+    ],
+    "errors": [],
+    "violations": []
+  }
+]

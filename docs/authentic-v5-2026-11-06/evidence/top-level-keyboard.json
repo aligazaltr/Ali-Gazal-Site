@@ -1,0 +1,18 @@
+{
+  "observation": "Direct top-level published fixture; native Shift+Tab from research link to cover; Enter captured without visiting the synthetic URL",
+  "focus": {
+    "clip": "none",
+    "focus": true,
+    "scene": "mc-scene is-directed is-scrolling",
+    "zIndex": "6"
+  },
+  "activation": [
+    {
+      "href": "https://www.youtube.com/watch?v=TESTFIXTURE",
+      "target": "_blank",
+      "rel": "noopener noreferrer",
+      "trusted": true,
+      "detail": 0
+    }
+  ]
+}

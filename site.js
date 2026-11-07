@@ -33,10 +33,28 @@
       image.alt = thumbnail.alt;
       image.width = Number(thumbnail.width) || 1280;
       image.height = Number(thumbnail.height) || 720;
-      image.loading = container.dataset.coverPriority === 'high' ? 'eager' : 'lazy';
-      if (container.dataset.coverPriority === 'high') image.fetchPriority = 'high';
+      const priority = container.dataset.coverPriority;
+      image.loading = ['high', 'low'].includes(priority) ? 'eager' : 'lazy';
+      image.fetchPriority = ['high', 'low'].includes(priority) ? priority : 'auto';
       image.decoding = 'async';
       if (!image.isConnected) container.prepend(image);
+    });
+  }
+
+  function applyVideoCoverLinks() {
+    if (!window.AG_VIDEO_LINKS) return;
+    document.querySelectorAll('a[data-project-video-link]').forEach(link => {
+      const project = projectFor(link);
+      if (!project) return;
+      const url = window.AG_VIDEO_LINKS.publishedUrl(project.video);
+      link.href = url || project.slug + '.html';
+      if (url) {
+        link.target = '_blank';
+        link.rel = 'noopener noreferrer';
+        link.setAttribute('aria-label', 'YouTube’da izle: ' + project.video.title + ' (yeni sekmede)');
+      } else {
+        for (const name of ['target', 'rel', 'aria-label']) link.removeAttribute(name);
+      }
     });
   }
 
@@ -68,20 +86,10 @@
   function setupPreviewNotice() {
     const canonical = document.querySelector('link[rel="canonical"]')?.href;
     if (!canonical || !window.AG_SHARE?.context(canonical, location.href).isPreview) return;
-    const note = document.createElement('aside');
-    note.className = 'preview-notice site-shell';
-    note.setAttribute('aria-label', 'Önizleme ortamı');
-    const label = document.createElement('strong'); label.textContent = 'ÖNİZLEME';
-    const text = document.createElement('span'); text.textContent = 'Bu tasarım henüz canlıya alınmadı.';
-    const field = document.createElement('label'); field.textContent = 'Paylaşılacak sürüm';
-    const select = document.createElement('select'); select.id = 'share-environment';
-    for (const [value, text] of [['preview', 'Bu önizleme'], ['production', 'Canlı site']]) {
-      const option = document.createElement('option'); option.value = value; option.textContent = text; select.append(option);
-    }
-    field.append(select);
-    const link = document.createElement('a'); link.href = canonical; link.textContent = 'Canlı siteyi aç ↗';
-    note.append(label, text, field, link);
-    document.querySelector('.site-header')?.after(note);
+    const note = document.querySelector('[data-preview-notice]');
+    if (!note) return;
+    const select = note.querySelector('#share-environment');
+    note.querySelector('[data-preview-live]').href = canonical;
     select.addEventListener('change', () => {
       document.dispatchEvent(new Event('sharecontextchange'));
     });
@@ -90,6 +98,7 @@
   document.addEventListener('DOMContentLoaded', () => {
     applyProjectFields();
     insertProjectCovers();
+    applyVideoCoverLinks();
     setupReadingProgress();
     setupPreviewNotice();
     window.AG_MOTION?.init();

@@ -1,0 +1,19 @@
+{
+  "focus": {
+    "clip": "none",
+    "focused": true,
+    "href": "https://www.youtube.com/watch?v=TESTFIXTURE",
+    "rel": "noopener noreferrer",
+    "target": "_blank",
+    "z": "6"
+  },
+  "activations": [
+    {
+      "href": "https://www.youtube.com/watch?v=TESTFIXTURE",
+      "target": "_blank",
+      "rel": "noopener noreferrer",
+      "trusted": true,
+      "detail": 0
+    }
+  ]
+}
