@@ -47,10 +47,11 @@ test('archive contains no page sweep or paper overlay and retains text, author a
   for(const name of ['discovery-turn','discovery-leaf','skewX']) assert.ok(!(js+css).includes(name));
   for(const name of ['.discovery-text','.discovery-author','.discovery-source'])assert.ok(js.includes(name));
 });
-function fixture(reduce=false, height=740, naturalWidth=960, fontSize=16, capabilities={}) {
+function fixture(reduce=false, height=740, naturalWidth=960, fontSize=16, capabilities={}, imageDecode) {
   const listeners={},queue=new Map(),classes=new Set(),props={},imageListeners={};let id=0;
   const style={setProperty:(k,v)=>props[k]=v,removeProperty:k=>delete props[k]};
   const image={complete:true,naturalWidth,addEventListener:(k,v)=>imageListeners[k]=v};
+  if(imageDecode)image.decode=imageDecode;
   const portrait={offsetWidth:460,offsetHeight:546,offsetLeft:600,offsetTop:74,querySelector:()=>image};
   const film={offsetWidth:760,offsetTop:111};const stage={clientHeight:height-24,clientWidth:1152,style,removeAttribute:()=>Object.keys(props).forEach(k=>delete props[k])};
   const scene={style,dataset:{},classList:{add:(...names)=>names.forEach(n=>classes.add(n)),remove:(...names)=>names.forEach(n=>classes.delete(n))},getBoundingClientRect:()=>({top:200-window.scrollY}),querySelector:s=>({'.mc-stage':stage,'.mc-portrait':portrait,'.mc-film':film})[s]};
@@ -61,7 +62,7 @@ function fixture(reduce=false, height=740, naturalWidth=960, fontSize=16, capabi
   const window={CSS:{supports:()=>true},getComputedStyle:()=>({fontSize:String(fontSize)}),innerHeight:height,scrollY:0,IntersectionObserver:Observer,requestAnimationFrame,matchMedia:q=>q.includes('reduced')?preference:{matches:false},addEventListener:(n,f)=>listeners[n]=f};
   Object.assign(window,capabilities);
   vm.runInNewContext(fs.readFileSync(require.resolve('../machiavelli-scene'),'utf8'),{window:{...window,AG_MACHIAVELLI_FRAMES:frames},document,IntersectionObserver:Observer,requestAnimationFrame,cancelAnimationFrame});
-  return {listeners,queue,classes,props,preference,scene,imageListeners,document,observe:observed};
+  return {listeners,queue,classes,props,preference,scene,image,imageListeners,document,observe:observed};
 }
 test('scene controller keeps reduced motion and short windows in readable flow',()=>{
   for(const args of [[true,740],[false,390]]){const f=fixture(...args);assert.equal(f.classes.has('is-directed'),false);assert.equal(f.queue.size,0);}
@@ -101,4 +102,15 @@ test('missing browser capabilities leave the original readable document alone',(
  for(const capabilities of [{IntersectionObserver:undefined},{requestAnimationFrame:undefined},{CSS:{supports:()=>false}}]){
   const f=fixture(false,740,960,16,capabilities);assert.equal(f.classes.has('is-directed'),false);assert.equal(f.queue.size,0);
  }
+});
+
+test('resize measurements coalesce before repaint',()=>{
+ const f=fixture();f.listeners.resize();f.listeners.resize();assert.equal(f.queue.size,1);
+ const cb=[...f.queue.values()][0];f.queue.clear();cb();assert.equal(f.classes.has('is-directed'),true);
+});
+test('a cached image failure before listener attachment still restores readable flow',async()=>{
+ const f=fixture(false,740,0,16,{},()=>Promise.reject(Error('invalid image')));
+ await new Promise(r=>setImmediate(r));for(const cb of f.queue.values())cb();
+ assert.equal(f.classes.has('is-directed'),false);
+ f.image.naturalWidth=960;f.imageListeners.load();assert.equal(f.classes.has('is-directed'),true);
 });
