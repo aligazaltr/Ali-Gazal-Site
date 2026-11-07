@@ -109,7 +109,7 @@ function snapshot(d=frame.contentDocument) {
 $('video-matrix').onclick=async()=>{
  const rows=[];$('variant').value='candidate';$('height').value='740';$('text200').checked=false;
  try{for(const page of ['_v5-published.html','_v5-published-home.html'])for(const theme of ['dark','light'])for(const width of [320,360,390,430,768,1024,1440]){
-  const d=await load(page,width,theme,{nojs:false,reduced:false});const r=snapshot(d);r.passed=!r.overflow&&!r.errors.length&&!r.violations.length&&r.images.every(i=>i.loaded)&&(page!=='_v5-published.html'||r.scene===true)&&r.publishedLinks.length===1&&r.publishedLinks[0].target==='_blank'&&r.publishedLinks[0].rel.includes('noopener')&&r.publishedLinks[0].href==='https://www.youtube.com/watch?v=TESTFIXTURE';rows.push(r);output({running:true,done:rows.length,total:28,failed:rows.filter(r=>!r.passed)});
+  const d=await load(page,width,theme,{nojs:false,reduced:false});const r=snapshot(d);r.passed=!r.overflow&&!r.errors.length&&!r.violations.length&&r.images.every(i=>i.loaded)&&(page!=='_v5-published.html'||r.scene===true)&&r.publishedLinks.length===(page==='_v5-published-home.html'?2:1)&&r.publishedLinks[0].target==='_blank'&&r.publishedLinks[0].rel.includes('noopener')&&r.publishedLinks[0].href==='https://www.youtube.com/watch?v=TESTFIXTURE';rows.push(r);output({running:true,done:rows.length,total:28,failed:rows.filter(r=>!r.passed)});
  }}catch(e){rows.push({passed:false,error:String(e)});}output({test:'published layouts',total:rows.length,failed:rows.filter(r=>!r.passed),rows});
 };
 $('video-behavior').onclick=async()=>{

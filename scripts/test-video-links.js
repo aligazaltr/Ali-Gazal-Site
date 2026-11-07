@@ -49,3 +49,11 @@ test('malformed published data fails the static build instead of shipping an uns
   assert.throws(()=>renderHtml(fs.readFileSync(require.resolve('../machiavelli.html'),'utf8'),fixture),/yayın için/);
   assert.doesNotMatch(renderMachiavelliScene(fixture.projects.machiavelli),/data-published-cover/);
 });
+
+test('published home has an explicit watch action and withdrawal removes it',()=>{
+ const source=fs.readFileSync(require.resolve('../index.html'),'utf8');
+ const html=renderHtml(source,releaseFixture());
+ assert.match(html,/Videoyu YouTube’da izle/);assert.match(html,/class="dossier-link" href="machiavelli.html"/);
+ assert.doesNotMatch(renderHtml(html,data),/Videoyu YouTube’da izle/);
+ assert.equal(data.projects.machiavelli.video.published,false);assert.equal(data.projects.machiavelli.video.url,'');
+});

@@ -1,7 +1,7 @@
 /* 4.2 — a portrait becomes part of the real experiment cover.
    Static flow is the default, including no JS, reduced motion and print. */
 .mc-scene { position:relative; margin:0 0 2.5rem; }
-.mc-stage { position:relative; isolation:isolate; overflow:clip; padding:1rem 0 3rem; }
+.mc-stage { position:relative; isolation:isolate; overflow:hidden; overflow:clip; padding:1rem 0 3rem; }
 .mc-atmosphere { position:absolute; inset:0; z-index:-1; pointer-events:none; background:radial-gradient(ellipse at 68% 37%,var(--orange-soft),transparent 58%); }
 .mc-edition { display:flex; justify-content:space-between; gap:1rem; margin:0; font-size:.6rem; font-weight:650; letter-spacing:.16em; color:var(--muted-strong); }
 .mc-edition span { color:var(--orange); }
@@ -21,7 +21,7 @@
 .mc-film-link:focus-visible { outline:none; }
 .mc-film-link:focus-visible::after { content:""; position:absolute; inset:0; border:3px solid var(--text); box-shadow:inset 0 0 0 3px var(--bg); pointer-events:none; }
 /* A tabbed-to video stays visible even before its scroll reveal is complete. */
-:is(.is-directed,html[data-scene-ready] .mc-scene) .mc-film:focus-within { clip-path:none; opacity:1; z-index:6; }
+:is(.is-directed,html[data-scene-ready] .mc-scene) .mc-film:focus-within { clip-path:none; opacity:1; z-index:6; transform:translate(-50%,0); }
 @media (hover:hover) { .mc-film-link:hover .mc-watch-label { color:var(--orange); text-decoration:underline; text-underline-offset:.2em; } }
 .mc-outcome { margin:1.6rem 0 2rem; }
 .mc-outcome p { margin:0 0 .35rem; }
@@ -37,9 +37,9 @@
 :is(.is-directed,html[data-scene-ready] .mc-scene) .mc-stage { height:var(--stage-height); padding:0; }
 :is(.is-directed,html[data-scene-ready] .mc-scene) .mc-edition { position:absolute; inset:1rem 0 auto; z-index:5; opacity:var(--edition-opacity,1); }
 :is(.is-directed,html[data-scene-ready] .mc-scene) .mc-title { position:absolute; inset:12% 0 auto; margin:0; transform:translate3d(var(--title-x,0px),var(--title-y,0px),0) scale(var(--title-scale,1)); opacity:var(--title-opacity,1); }
-:is(.is-directed,html[data-scene-ready] .mc-scene) .mc-portrait { position:absolute; width:min(43%,460px); top:10%; left:52%; margin:0; z-index:3; transform:translate3d(var(--portrait-x,0px),var(--portrait-y,0px),0) scale(var(--portrait-scale,.88)); opacity:var(--portrait-opacity,.38); }
+:is(.is-directed,html[data-scene-ready] .mc-scene) .mc-portrait { position:absolute; width:min(43%,460px); top:10%; left:52%; margin:0; z-index:3; transform:translate3d(var(--portrait-x,0px),var(--portrait-y,0px),0) rotate(var(--portrait-rotate,0deg)) scale(var(--portrait-scale,.88)); opacity:var(--portrait-opacity,.38); }
 :is(.is-directed,html[data-scene-ready] .mc-scene) .mc-premise { position:absolute; left:0; bottom:16%; margin:0; z-index:4; opacity:var(--premise-opacity,1); transform:translateY(var(--premise-y,0px)); }
-:is(.is-directed,html[data-scene-ready] .mc-scene) .mc-film { position:absolute; width:min(90%,calc((var(--stage-height) * .85 - 200px) * 1.77778)); left:50%; top:15%; margin:0; z-index:2; transform:translate(-50%,0) scale(var(--film-scale,.94)); clip-path:inset(0 0 0 var(--film-clip,100%)); opacity:var(--film-opacity,1); }
+:is(.is-directed,html[data-scene-ready] .mc-scene) .mc-film { position:absolute; width:min(90%,calc((var(--stage-height) * .85 - 200px) * 1.77778)); left:50%; top:15%; margin:0; z-index:2; transform-origin:0 0; transform:translate3d(var(--film-x,-50%),var(--film-y,0px),0) rotate(var(--film-rotate,0deg)) scale(var(--film-scale,1)); opacity:var(--film-opacity,0); }
 :is(.is-directed,html[data-scene-ready] .mc-scene) .mc-outcome { position:absolute; left:0; right:0; bottom:3.8rem; margin:0; z-index:4; opacity:var(--outcome-opacity,0); transform:translateY(var(--outcome-y,16px)); }
 :is(.is-directed,html[data-scene-ready] .mc-scene) .mc-jump { position:absolute; left:0; bottom:0; z-index:5; }
 :is(.is-directed,html[data-scene-ready] .mc-scene) .mc-measure { display:block; position:absolute; bottom:.5rem; right:0; width:5rem; height:1px; background:var(--line-strong); }

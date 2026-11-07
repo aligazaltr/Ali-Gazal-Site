@@ -2,7 +2,9 @@
 (() => {
   const scene = document.querySelector('[data-machiavelli-scene]');
   const frames = window.AG_MACHIAVELLI_FRAMES;
-  if (!scene || !frames || !window.IntersectionObserver || !window.requestAnimationFrame) return;
+  const supported = window.IntersectionObserver && window.requestAnimationFrame && window.matchMedia
+    && window.CSS?.supports('position', 'sticky') && window.CSS.supports('transform', 'translate3d(0,0,0)');
+  if (!scene || !frames || !supported) { document.documentElement?.removeAttribute('data-scene-ready'); return; }
   const stage = scene.querySelector('.mc-stage');
   const portrait = scene.querySelector('.mc-portrait');
   const image = portrait.querySelector('img');
@@ -36,8 +38,17 @@
     const largeText = parseFloat(window.getComputedStyle?.(document.documentElement).fontSize) > 24;
     if (reduced.matches || window.innerHeight < 420 || largeText || imageFailed) { fallback(); return; }
     scene.classList.add('is-directed');
-    const height = stage.clientHeight, width = stage.clientWidth;
-    geometry = {height, mobile:window.matchMedia('(max-width:600px)').matches, portraitWidth:portrait.offsetWidth,portraitHeight:portrait.offsetHeight,portraitLeft:portrait.offsetLeft,portraitTop:portrait.offsetTop,filmWidth:film.offsetWidth,filmLeft:width/2-film.offsetWidth/2,filmTop:film.offsetTop};
+    // Computed layout sizes are fractional and untransformed. offset* rounds
+    // them, while getBoundingClientRect includes our current scroll transform.
+    const ps=window.getComputedStyle(portrait),fs=window.getComputedStyle(film),ss=window.getComputedStyle(stage);
+    const number=(value,fallback)=>Number.isFinite(parseFloat(value))?parseFloat(value):fallback;
+    const height=number(ss.height,stage.clientHeight),width=number(ss.width,stage.clientWidth);
+    const pw=number(ps.width,portrait.offsetWidth),ph=number(ps.height,portrait.offsetHeight),fw=number(fs.width,film.offsetWidth);
+    const origin=(ps.transformOrigin||'').split(' ');
+    geometry = {height, mobile:window.matchMedia('(max-width:600px)').matches, portraitWidth:pw,portraitHeight:ph,
+      portraitLeft:number(ps.left,portrait.offsetLeft),portraitTop:number(ps.top,portrait.offsetTop),
+      portraitOriginX:number(origin[0],pw*.5),portraitOriginY:number(origin[1],ph*.3),
+      filmWidth:fw,filmLeft:width/2-fw/2,filmTop:number(fs.top,film.offsetTop)};
     if (!geometry.portraitWidth || !geometry.filmWidth) { fallback(); return; }
     stage.style.setProperty('--film-height', `${geometry.filmWidth * 9 / 16}px`);
     // Travel follows the composition size and is bounded on long screens.
@@ -56,7 +67,8 @@
   window.addEventListener('scroll', schedule, {passive:true});
   window.addEventListener('resize', measure, {passive:true});
   window.addEventListener('pageshow', measure);
-  reduced.addEventListener('change', measure);
+  if (reduced.addEventListener) reduced.addEventListener('change', measure);
+  else reduced.addListener?.(measure);
   document.addEventListener('visibilitychange', () => document.hidden ? cancel() : schedule());
   image.addEventListener('load', () => { imageFailed = false; measure(); });
   image.addEventListener('error', () => { imageFailed = true; fallback(); });
