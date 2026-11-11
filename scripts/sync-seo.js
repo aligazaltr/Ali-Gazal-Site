@@ -43,7 +43,7 @@ function renderRobots(data = site) {
 }
 function renderSitemap(data = site, thoughts = archive) {
   const dates = thoughts.entries.map(entry => entry.publishedAt).filter(Boolean).sort();
-  const lastmod = file => file === 'kontrol-bende-mi.html' ? data.projects['kontrol-bende-mi'].lastUpdated : file === 'irade-terbiyesi.html' ? data.projects['irade-terbiyesi'].lastUpdated
+  const lastmod = file => file === 'rehberler.html' ? Object.values(data.projects).map(project => project.lastUpdated).filter(Boolean).sort().at(-1) : file === 'kontrol-bende-mi.html' ? data.projects['kontrol-bende-mi'].lastUpdated : file === 'irade-terbiyesi.html' ? data.projects['irade-terbiyesi'].lastUpdated
     : file === 'dusunce-arsivi.html' ? dates.at(-1) : data.projects.machiavelli.lastUpdated;
   const row = (file, pathname) => `  <url><loc>${data.canonicalOrigin}${pathname}</loc><lastmod>${lastmod(file)}</lastmod></url>`;
   const rows = Object.entries(pages).filter(([file]) => file !== 'dusunce-arsivi.html').map(([file,p])=>row(file,p));
