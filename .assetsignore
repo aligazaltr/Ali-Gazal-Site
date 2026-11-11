@@ -1,4 +1,3 @@
-# Explicit release files only. New files require deliberate approval here.
 *
 !/index.html
 !/machiavelli.html
@@ -39,3 +38,9 @@
 !/control-scene.js
 !/control-frames.js
 !/kontrol-bende-mi-share.png
+!/control-alternative.html
+!/control-qa.html
+!/control-qa.js
+!/control-prelude.js
+!/thumbnail-A.png
+!/thumbnail-C.png
