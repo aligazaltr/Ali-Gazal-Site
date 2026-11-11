@@ -28,6 +28,7 @@ const AG_SITE_DATA = (() => {
       { id: 'reviewing', label: 'İnceleniyor' },
       { id: 'published', label: 'Video yayında' }
     ],
+    projectOrder: ['machiavelli', 'kontrol-bende-mi', 'irade-terbiyesi'],
     projects: {
       machiavelli: {
         id: 'machiavelli',
@@ -191,6 +192,38 @@ const AG_SITE_DATA = (() => {
           image: 'machiavelli-prens-7-gun-kapak.jpg'
         }
       },
+      'kontrol-bende-mi': {
+        id: 'kontrol-bende-mi', slug: 'kontrol-bende-mi',
+        title: 'Kontrol Bende mi?', shortTitle: 'Kontrol Bende mi?',
+        summary: '60 gün boyunca kendi davranışlarım üzerindeki kontrolü gözlemliyorum. Kararlarımı ve zorlandığım anları kayıtlarla değerlendireceğim.',
+        status: 'in-progress', statusLabel: 'Deney devam ediyor', phase: 'testing',
+        dates: { plannedStart: '2026-09-21', plannedEnd: '2026-11-19', label: '21 Eylül–19 Kasım 2026 · planlanan dönem' },
+        duration: { value: 60, unit: 'gün', label: '60 takvim günü · seçilen deney süresi' },
+        completedAt: null, lastUpdated: '2026-11-12', publishedAt: null,
+        topics: ['davranış', 'karar', 'kontrol', 'kişisel deney'], searchable: true,
+        experiment: {
+          state: 'testing',
+          // These states describe an editorial decision, never an automatic calendar transition.
+          states: { preparing: 'Hazırlık', testing: 'Deney devam ediyor', reviewing: 'Değerlendiriliyor', production: 'Video hazırlanıyor', published: 'Video yayında' },
+          purpose: 'Pornografi kullanımı ve ilişkili kişisel cinsel davranışlar üzerinde bilinçli kontrol kurmaya çalışırken neler olduğunu gözlemlemek.',
+          method: ['Kişisel kurallara uyum', 'Zorlanma ve dürtü gözlemleri', 'Genel tetikleyici kategorileri', 'Uygulanan müdahaleler', 'Günlük değerlendirme'],
+          milestones: [
+            { id: 'baslangic', label: 'Başlangıç', note: '21 Eylül 2026’da başladı. Bu tarih bir sonuç veya başarı serisi değildir.' },
+            { id: 'ilk-donem', label: 'İlk 30 gün', note: 'İlk değerlendirme aralığı. Bu döneme ait sonuçlar henüz yayımlanmadı.' },
+            { id: 'ikinci-donem', label: 'İkinci dönem', note: 'İkinci 30 günlük gözlem aralığı. Günlük olaylar bu sayfada paylaşılmıyor.' },
+            { id: 'final', label: 'Final', note: 'Planlanan 60. gün: 19 Kasım 2026. Tamamlanma ve sonuçlar ayrıca doğrulanacak.' }
+          ]
+        },
+        seo: { title: 'Kontrol Bende mi? — 60 Günlük Davranış Deneyi | Ali Gazal', description: '60 günlük kişisel davranış deneyi: kontrol, karar ve gerçek kayıtlar. Deney devam ediyor; yöntem, planlanan dönem ve değerlendirme sınırları bu dosyada.' },
+        display: { videoPanelTitle: 'Önce deney. Sonra hikâyesi.', videoPanelDescription: 'Deney devam ediyor. Video henüz yayımlanmadı; gerçek YouTube bağlantısı yayımlandığında burada yer alacak.' },
+        principles: [],
+        video: { published: false, url: '', title: '', durationSeconds: null, thumbnail: { src: '', alt: '', width: 1280, height: 720 }, chapters: [] },
+        result: { published: false, summary: '', limitations: [] },
+        evidence: { published: false, entries: [] },
+        tryIt: { enabled: false, durationDays: 60, storageVersion: 1, rules: [], guide: '' },
+        features: { evidenceLedger: false, videoTimeline: false, tryIt: false },
+        sharing: { title: 'Kontrol Bende mi? | Ali Gazal', description: '60 günlük kişisel davranış deneyi devam ediyor. Yöntem ve değerlendirme sınırları.', image: 'kontrol-bende-mi-share.png', imageAlt: 'Kontrol Bende mi? — 60 Günlük Davranış Deneyi. Deney devam ediyor.' }
+      },
       'irade-terbiyesi': {
         id: 'irade-terbiyesi',
         slug: 'irade-terbiyesi',
@@ -210,7 +243,7 @@ const AG_SITE_DATA = (() => {
         research: {
           question: 'Jules Payot’nun yaklaşık 130 yıllık yöntemleri günümüzde gerçekten işe yarıyor mu?',
           contentType: 'Kitap araştırması + modern bilim incelemesi + gerçek hayat deneyi',
-          videoLabel: 'İkinci ana video projesi · araştırma aşamasında',
+          videoLabel: 'Üçüncü ana video projesi · araştırma aşamasında',
           publicationLabel: 'Yayın tarihi henüz belirlenmedi.',
           readingLabel: 'Kitap okunuyor.',
           stages: [
@@ -244,6 +277,23 @@ const AG_SITE_DATA = (() => {
   // Publication copy follows the release flag, never the calendar. Keep the
   // fallback HTML in sync with: node scripts/sync-site.js
   Object.values(data.projects).forEach(project => {
+    if (project.experiment) {
+      const state = project.video.published ? 'published' : project.experiment.state;
+      if (state === 'published' && !project.video.published) throw new Error('Published experiment requires a verified video');
+      if (!project.experiment.states[state]) throw new Error('Unknown experiment state');
+      project.statusLabel = project.experiment.states[state];
+      project.display.resultHeading = project.result.published ? 'Kayıtların söylediği.' : 'Henüz son söz yok.';
+      project.display.recordNote = project.result.published ? 'Paylaşılması onaylanan değerlendirme bu dosyada.' : 'Kesin bir sonuç henüz yayımlanmadı.';
+      project.phase = project.video.published ? 'published' : ['reviewing', 'production'].includes(state) ? 'reviewing' : state === 'testing' ? 'testing' : 'preparing';
+      if (project.video.published) {
+        project.seo.title = `${project.video.title} | Ali Gazal`;
+        project.display.videoPanelTitle = project.video.title;
+        project.display.videoPanelDescription = 'Deneyin hikâyesi YouTube’da yayımlandı. Araştırma dosyası bu sayfada kalıyor.';
+      }
+      project.sharing.title = project.seo.title;
+      project.sharing.description = project.seo.description;
+      return;
+    }
     if (project.research) {
       const stages = project.research.stages;
       const current = stages.find(stage => stage.status === 'in-progress');
@@ -265,7 +315,7 @@ const AG_SITE_DATA = (() => {
         project.display.videoPanelDescription = 'Araştırmanın ve kişisel deneyin hikâyesi YouTube’da yayımlandı.';
         project.seo.title = `${project.video.title} | Ali Gazal`;
         project.research.publicationLabel = 'Video yayımlandı.';
-        project.research.videoLabel = 'İkinci ana video projesi · yayımlandı';
+        project.research.videoLabel = 'Üçüncü ana video projesi · yayımlandı';
       }
       project.sharing.title = project.seo.title;
       project.sharing.description = project.seo.description;

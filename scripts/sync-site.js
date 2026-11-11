@@ -81,6 +81,10 @@ function renderHtml(html, data = siteData) {
     (_, start, end) => `${start}<p class="cinema-words" aria-label="${escape(data.experience.intro.join(' '))}">${data.experience.intro.map(word => `<span class="word-window" aria-hidden="true"><span class="cinema-word">${escape(word)}</span></span>`).join('')}</p><p class="cinema-tagline">${escape(data.experience.tagline)}</p>${end}`);
   html = html.replace(/(<!-- experience:story:([a-z0-9-]+):start -->)[\s\S]*?(<!-- experience:story:\2:end -->)/,
     (_, start, key, end) => `${start}${renderStory(data.experience.stories[key])}${end}`);
+  html = html.replace(/(<!-- control:index:start -->)[\s\S]*?(<!-- control:index:end -->)/, (_, start, end) => {
+    const c = data.projects['kontrol-bende-mi'];
+    return start + `<section class="control-index" aria-labelledby="control-index-title"><div class="publication-row-heading"><span class="issue-number" aria-hidden="true">02</span><p>Kontrol / Zaman / Karar</p><span>${escape(c.statusLabel)}</span></div><div class="control-index-layout"><div><p class="eyebrow">60 GÜNLÜK DAVRANIŞ DENEYİ</p><h2 id="control-index-title">${escape(c.title)}</h2><p>${escape(c.summary)}</p><a class="text-link" href="kontrol-bende-mi.html">Deney dosyasını oku <span aria-hidden="true">↗</span></a></div><div class="control-index-art" aria-hidden="true"><span>60</span><div>${Array.from({length:60},(_,i)=>`<i style="--i:${i};--h:${24+(i*17%61)}%"></i>`).join('')}</div><small>BİR KARAR. ALTMIŞ GÜN.</small></div></div></section>` + end;
+  });
   const project = data.projects[id];
   if (!project) throw new Error(`Bilinmeyen proje: ${id}`);
   validateResearch(project);
@@ -124,6 +128,9 @@ function renderHtml(html, data = siteData) {
       return `${start}${image}${end}`;
     });
 
+  html = html.replace(/(<!-- control:method:start -->)[\s\S]*?(<!-- control:method:end -->)/, (_,a,b) => a + `<ol class="control-method">${project.experiment.method.map((text,i)=>`<li><span aria-hidden="true">0${i+1}</span>${escape(text)}</li>`).join('')}</ol>` + b);
+  html = html.replace(/(<!-- control:milestones:start -->)[\s\S]*?(<!-- control:milestones:end -->)/, (_,a,b) => a + `<div class="control-milestones">${project.experiment.milestones.map(m=>`<details name="control-period"><summary>${escape(m.label)}</summary><p>${escape(m.note)}</p></details>`).join('')}</div>` + b);
+
   // Native links work before JavaScript and stay reversible if a video is withdrawn.
   html = html.replace(/<a\b([^>]*\bdata-project-video-link\b[^>]*)>/g, (_, attributes) => {
     const url = publishedUrl(project.video);
@@ -163,6 +170,11 @@ function renderHtml(html, data = siteData) {
       ? `<section id="kanit-defteri" data-evidence-ledger class="feature-panel evidence-ledger" aria-labelledby="kanit-defteri-baslik">\n            <p class="eyebrow">KANIT DEFTERİ</p>\n            <h2 id="kanit-defteri-baslik">Kayıt neyi gösteriyor, neyi göstermiyor?</h2>\n            <p class="feature-intro">B ve C etiketleri kayıt zamanını gösterir; olayların bağımsız olarak kanıtlandığı anlamına gelmez.</p>\n            <div class="evidence-list">${cards}</div>\n          </section>`
       : '<section id="kanit-defteri" data-evidence-ledger aria-label="Kanıt Defteri"></section>');
 
+  html = html.replace(/(<!-- control:result:start -->)[\s\S]*?(<!-- control:result:end -->)/, (_,a,b) => a + (project.result.published && project.result.summary ? `<p class="control-empty">${escape(project.result.summary)}</p>${project.result.limitations.length ? `<ul>${project.result.limitations.map(t=>`<li>${escape(t)}</li>`).join('')}</ul>` : ''}` : `<p class="control-empty">${escape(project.statusLabel)}.</p><p>Final değerlendirmesi tamamlandığında, paylaşılması onaylanan sonuç özeti burada yer alacak.</p>`) + b);
+  html = html.replace(/(<!-- control:video-cover:start -->)[\s\S]*?(<!-- control:video-cover:end -->)/, (_,a,b) => {
+    const url=publishedUrl(project.video),t=project.video.thumbnail;
+    return a + (url && t.src && t.alt ? `<a href="${escape(url)}" target="_blank" rel="noopener noreferrer" aria-label="YouTube’da izle: ${escape(project.video.title)} (yeni sekmede)"><img src="${escape(t.src)}" alt="${escape(t.alt)}" width="${t.width}" height="${t.height}" loading="lazy" decoding="async"></a>` : '') + b;
+  });
   const video = project.video;
   const videoLink = video.published
     ? `<a class="button primary" href="${escape(video.url)}" target="_blank" rel="noopener noreferrer">YouTube’da videoyu izle ↗</a>`

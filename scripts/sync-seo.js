@@ -8,7 +8,7 @@ const root = path.resolve(__dirname, '..');
 const pages = Object.freeze({
   'index.html': '/', 'machiavelli.html': '/machiavelli',
   'rehberler.html': '/rehberler', 'dusunce-arsivi.html': '/dusunce-arsivi',
-  'hakkimda.html': '/hakkimda', 'irade-terbiyesi.html': '/irade-terbiyesi'
+  'hakkimda.html': '/hakkimda', 'kontrol-bende-mi.html': '/kontrol-bende-mi', 'irade-terbiyesi.html': '/irade-terbiyesi'
 });
 const escape = value => String(value).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
 function renderMetadata(html, file, data = site) {
@@ -43,7 +43,7 @@ function renderRobots(data = site) {
 }
 function renderSitemap(data = site, thoughts = archive) {
   const dates = thoughts.entries.map(entry => entry.publishedAt).filter(Boolean).sort();
-  const lastmod = file => file === 'irade-terbiyesi.html' ? data.projects['irade-terbiyesi'].lastUpdated
+  const lastmod = file => file === 'kontrol-bende-mi.html' ? data.projects['kontrol-bende-mi'].lastUpdated : file === 'irade-terbiyesi.html' ? data.projects['irade-terbiyesi'].lastUpdated
     : file === 'dusunce-arsivi.html' ? dates.at(-1) : data.projects.machiavelli.lastUpdated;
   const row = (file, pathname) => `  <url><loc>${data.canonicalOrigin}${pathname}</loc><lastmod>${lastmod(file)}</lastmod></url>`;
   const rows = Object.entries(pages).filter(([file]) => file !== 'dusunce-arsivi.html').map(([file,p])=>row(file,p));
