@@ -1,0 +1,9 @@
+{
+  "nativeEnterOpened": true,
+  "visibleKeyboardFocus": true,
+  "details": 4,
+  "shareStatus": "\u00d6nizleme ba\u011flant\u0131s\u0131 kopyaland\u0131.",
+  "clipboard": "",
+  "clipboardReadbackVerified": false,
+  "note": "The native keyboard focus and open state were read from DOM. The copy success status appeared, but the remote clipboard bridge returned empty text; physical OS sharing is not verified."
+}

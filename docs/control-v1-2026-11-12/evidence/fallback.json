@@ -1,0 +1,184 @@
+{
+  "test": "capability simulations, not physical device tests",
+  "total": 6,
+  "failed": [],
+  "rows": [
+    {
+      "scenario": {
+        "nojs": true
+      },
+      "passed": true,
+      "state": {
+        "url": "https://31d1bc1a-ali-gazal-site.aliicerikmedya.workers.dev/kontrol-bende-mi?review=2",
+        "width": 390,
+        "height": 740,
+        "progress": null,
+        "directed": false,
+        "overflow": false,
+        "h1Fits": true,
+        "textFits": true,
+        "h1Opacity": "1",
+        "lineCount": 60,
+        "question": "1",
+        "order": "0",
+        "transforms": [
+          "matrix(1, 0, 0, 1, 0, -25)",
+          "matrix(1, 0, 0, 1, 0, -2)",
+          "matrix(1, 0, 0, 1, 0, 21)"
+        ],
+        "notes": 4,
+        "watchLinks": 0,
+        "errors": [],
+        "violations": []
+      }
+    },
+    {
+      "scenario": {
+        "reduced": true
+      },
+      "passed": true,
+      "state": {
+        "url": "https://31d1bc1a-ali-gazal-site.aliicerikmedya.workers.dev/kontrol-bende-mi?review=3",
+        "width": 390,
+        "height": 740,
+        "theme": "dark",
+        "progress": null,
+        "directed": false,
+        "overflow": false,
+        "h1Fits": true,
+        "textFits": true,
+        "h1Opacity": "1",
+        "lineCount": 60,
+        "question": "1",
+        "order": "0",
+        "transforms": [
+          "matrix(1, 0, 0, 1, 0, -25)",
+          "matrix(1, 0, 0, 1, 0, -2)",
+          "matrix(1, 0, 0, 1, 0, 21)"
+        ],
+        "notes": 4,
+        "watchLinks": 0,
+        "errors": [],
+        "violations": []
+      }
+    },
+    {
+      "scenario": {
+        "noObserver": true
+      },
+      "passed": true,
+      "state": {
+        "url": "https://31d1bc1a-ali-gazal-site.aliicerikmedya.workers.dev/kontrol-bende-mi?review=4",
+        "width": 390,
+        "height": 740,
+        "theme": "dark",
+        "progress": null,
+        "directed": false,
+        "overflow": false,
+        "h1Fits": true,
+        "textFits": true,
+        "h1Opacity": "1",
+        "lineCount": 60,
+        "question": "1",
+        "order": "0",
+        "transforms": [
+          "matrix(1, 0, 0, 1, 0, -25)",
+          "matrix(1, 0, 0, 1, 0, -2)",
+          "matrix(1, 0, 0, 1, 0, 21)"
+        ],
+        "notes": 4,
+        "watchLinks": 0,
+        "errors": [],
+        "violations": []
+      }
+    },
+    {
+      "scenario": {
+        "largeText": true
+      },
+      "passed": true,
+      "state": {
+        "url": "https://31d1bc1a-ali-gazal-site.aliicerikmedya.workers.dev/kontrol-bende-mi?review=5",
+        "width": 390,
+        "height": 740,
+        "theme": "dark",
+        "progress": null,
+        "directed": false,
+        "overflow": false,
+        "h1Fits": true,
+        "textFits": true,
+        "h1Opacity": "1",
+        "lineCount": 60,
+        "question": "1",
+        "order": "0",
+        "transforms": [
+          "matrix(1, 0, 0, 1, 0, -25)",
+          "matrix(1, 0, 0, 1, 0, -2)",
+          "matrix(1, 0, 0, 1, 0, 21)"
+        ],
+        "notes": 4,
+        "watchLinks": 0,
+        "errors": [],
+        "violations": []
+      }
+    },
+    {
+      "scenario": {
+        "height": 390
+      },
+      "passed": true,
+      "state": {
+        "url": "https://31d1bc1a-ali-gazal-site.aliicerikmedya.workers.dev/kontrol-bende-mi?review=6",
+        "width": 390,
+        "height": 390,
+        "theme": "dark",
+        "progress": null,
+        "directed": false,
+        "overflow": false,
+        "h1Fits": true,
+        "textFits": true,
+        "h1Opacity": "1",
+        "lineCount": 60,
+        "question": "1",
+        "order": "0",
+        "transforms": [
+          "matrix(1, 0, 0, 1, 0, -25)",
+          "matrix(1, 0, 0, 1, 0, -2)",
+          "matrix(1, 0, 0, 1, 0, 21)"
+        ],
+        "notes": 4,
+        "watchLinks": 0,
+        "errors": [],
+        "violations": []
+      }
+    },
+    {
+      "scenario": "resize",
+      "passed": true,
+      "state": {
+        "url": "https://31d1bc1a-ali-gazal-site.aliicerikmedya.workers.dev/kontrol-bende-mi?review=7",
+        "width": 768,
+        "height": 430,
+        "theme": "dark",
+        "progress": "0.4992",
+        "directed": true,
+        "overflow": false,
+        "h1Fits": true,
+        "textFits": true,
+        "h1Opacity": "1",
+        "lineCount": 60,
+        "question": "0.9762385292992801",
+        "order": "0.7274998593465417",
+        "transforms": [
+          "matrix(1, 0, 0, 1, 0, -6.8125)",
+          "matrix(1, 0, 0, 1, 0, -0.545)",
+          "matrix(1, 0, 0, 1, 0, 5.7225)"
+        ],
+        "notes": 4,
+        "watchLinks": 0,
+        "errors": [],
+        "violations": []
+      }
+    }
+  ]
+}
