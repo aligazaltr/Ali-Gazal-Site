@@ -19,7 +19,19 @@
   const question=span(p,.64,.84),final=span(p,.85,1);
   const fw=Math.min(w*.92,1000),fh=fw*9/16,qwidth=mix(w*.90,fw*.84,final);
   const depth=mix(.22,1,span(p,.20,.65));
-  return {progress:p,matrix,cx,cy,scale,coverScale,foreground:1-span(p,.43,.46),measure:1-span(p,.06,.21),world:span(p,0,.16)*(1-span(p,.62,.84)),depthX:w*.7*depth,depthY:h*.8*depth,
+  // Three open material planes share the zero's vanishing point. The camera
+  // advances through their depth; no closed rings, screen rays or centre target.
+  const camera=1.22*span(p,.18,.72);
+  const folds=[['left',1.65,1.10],['right',2.15,.95],['floor',2.90,1.20]].map(([side,depth,thickness])=>{
+   const z=depth-camera,nw=w*.62/z,nh=h*.50/z,fw=w*.62/(z+thickness),fh=h*.50/(z+thickness);
+   let points,edge;
+   if(side==='left'){points=[[-nw,-nh],[-fw,-fh],[-fw,fh],[-nw,nh]];edge=[[-fw,-fh],[-fw,fh]];}
+   else if(side==='right'){points=[[nw,-nh],[fw,-fh],[fw,fh],[nw,nh]];edge=[[fw,-fh],[fw,fh]];}
+   else{points=[[-nw,nh],[-fw,fh],[fw,fh],[nw,nh]];edge=[[-fw,fh],[fw,fh]];}
+   const path=pts=>pts.map(([x,y],i)=>`${i?'L':'M'}${(cx+x).toFixed(3)} ${(cy+y).toFixed(3)}`).join('');
+   return {side,z,path:path(points)+'Z',edge:path(edge)};
+  });
+  return {progress:p,matrix,cx,cy,scale,coverScale,foreground:1-span(p,.43,.46),measure:1-span(p,.06,.21),world:span(p,0,.16)*(1-span(p,.62,.84)),depthX:w*.7*depth,depthY:h*.8*depth,folds,
    question,questionWidth:qwidth,questionX:w/2,questionY:h*.47,questionScale:mix(1,.90,final),
    lineShift:mix(54,0,question),frame:{x:(w-fw)/2,y:h*.47-fh/2,width:fw,height:fh,opacity:final},final};
  }
@@ -51,6 +63,7 @@
   el.querySelector('.portal-foreground').style.opacity=f.foreground;
   el.querySelector('.portal-world').style.opacity=f.world;
   el.querySelector('#control-depth').setAttribute('gradientTransform',`translate(${f.cx} ${f.cy}) scale(${f.depthX} ${f.depthY})`);
+  el.querySelectorAll('.portal-fold').forEach((e,i)=>{e.querySelector('.portal-fold-face').setAttribute('d',f.folds[i].path);e.querySelector('.portal-fold-edge').setAttribute('d',f.folds[i].edge);});
   const r=el.querySelector('.portal-final-frame');for(const k of ['x','y','width','height'])r.setAttribute(k,f.frame[k]);r.style.opacity=f.frame.opacity;
   const q=el.querySelector('.portal-question');q.style.width=f.questionWidth+'px';q.style.left=f.questionX+'px';q.style.top=f.questionY+'px';q.style.transform=`translate(-50%,-50%) scale(${f.questionScale})`;
   q.style.clipPath=`inset(0 ${50*(1-f.question)}%)`;q.style.visibility='visible';q.style.setProperty('--line-shift',f.lineShift+'px');

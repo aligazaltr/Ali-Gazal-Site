@@ -1,0 +1,1 @@
+setTimeout(()=>{const a=document.createElement('script');a.src='control-frames.js';a.onload=()=>{const b=document.createElement('script');b.src='control-scene.js';document.head.append(b);};document.head.append(a);},1200);

@@ -1,4 +1,3 @@
-# Explicit release files only. New files require deliberate approval here.
 *
 !/index.html
 !/machiavelli.html
@@ -39,3 +38,17 @@
 !/control-scene.js
 !/control-frames.js
 !/kontrol-bende-mi-share.png
+!/portal-qa.html
+!/portal-qa.js
+!/portal-prelude.js
+!/portal-late.js
+!/static-no-frames.html
+!/late-frames.html
+!/baseline-control.html
+!/baseline-control-frames.js
+!/baseline-control-scene.js
+!/baseline-control-scene.css
+!/v21-control.html
+!/v21-control-frames.js
+!/v21-control-scene.js
+!/v21-control-scene.css
