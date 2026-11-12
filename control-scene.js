@@ -5,8 +5,9 @@
  if(!scene||!F)return;
  const stage=scene.querySelector('.portal-stage'),svg=stage.querySelector('svg'),counter=stage.querySelector('.portal-counter');
  const reduced=window.matchMedia?.('(prefers-reduced-motion: reduce)');
+ const original=[...stage.querySelectorAll('svg,svg *, .portal-question,.portal-measure')].map(e=>[e,[...e.attributes].map(a=>[a.name,a.value])]);
  let geometry=null,start=0,travel=0,ticket=0,measureTicket=0,visible=true;
- const fallback=()=>{geometry=null;scene.classList.remove('is-directed');scene.style.removeProperty('--control-height');stage.style.removeProperty('--stage-height');scene.removeAttribute('data-progress');};
+ const fallback=()=>{for(const [e,attrs] of original){for(const a of [...e.attributes])e.removeAttribute(a.name);for(const [n,v] of attrs)e.setAttribute(n,v);}geometry=null;scene.classList.remove('is-directed');scene.style.removeProperty('--control-height');stage.style.removeProperty('--stage-height');scene.removeAttribute('data-progress');};
  if(!reduced||!window.IntersectionObserver||!window.requestAnimationFrame||!window.CSS?.supports('position','sticky')||!counter.getPointAtLength||!counter.isPointInFill){fallback();return;}
  function paint(){ticket=0;if(!geometry||document.hidden)return;const f=F.sample((window.scrollY-start)/travel,geometry);F.apply(stage,f);scene.dataset.progress=f.progress.toFixed(4);}
  function queue(){if(!ticket&&visible&&geometry)ticket=requestAnimationFrame(paint);}

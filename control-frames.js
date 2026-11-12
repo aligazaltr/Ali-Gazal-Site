@@ -40,7 +40,7 @@
   el.querySelector('.portal-horizon').style.opacity=(1-f.question)*.7;
   const r=el.querySelector('.portal-final-frame');for(const k of ['x','y','width','height'])r.setAttribute(k,f.frame[k]);r.style.opacity=f.frame.opacity;
   const q=el.querySelector('.portal-question');q.style.width=f.questionWidth+'px';q.style.left=f.questionX+'px';q.style.top=f.questionY+'px';q.style.transform=`translate(-50%,-50%) scale(${f.questionScale})`;
-  q.style.clipPath=`inset(0 ${50*(1-f.question)}%)`;q.style.visibility=f.question>0?'visible':'hidden';q.style.setProperty('--line-shift',f.lineShift+'px');
+  q.style.clipPath=`inset(0 ${50*(1-f.question)}%)`;q.style.visibility='visible';q.style.setProperty('--line-shift',f.lineShift+'px');
   const railH=(1-f.final)*f.questionHeight/2;el.querySelector('.portal-rails').setAttribute('d',`M${f.questionX-f.slit} ${f.cy-railH}v${railH*2}M${f.questionX+f.slit} ${f.cy-railH}v${railH*2}`);el.querySelector('.portal-rails').style.opacity=f.question*(1-f.final);
   el.querySelector('.portal-measure').style.opacity=f.measure;
  }
