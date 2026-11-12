@@ -22,7 +22,7 @@
   // Three open material planes share the zero's vanishing point. The camera
   // advances through their depth; no closed rings, screen rays or centre target.
   const camera=1.22*span(p,.18,.72);
-  const folds=[['left',1.65,1.10],['right',2.15,.95],['floor',2.90,1.20]].map(([side,depth,thickness])=>{
+  const folds=[['left',1.95,.70],['right',2.45,.65],['floor',3.15,.80]].map(([side,depth,thickness])=>{
    const z=depth-camera,nw=w*.62/z,nh=h*.50/z,fw=w*.62/(z+thickness),fh=h*.50/(z+thickness);
    let points,edge;
    if(side==='left'){points=[[-nw,-nh],[-fw,-fh],[-fw,fh],[-nw,nh]];edge=[[-fw,-fh],[-fw,fh]];}

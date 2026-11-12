@@ -6,7 +6,7 @@
 .portal-final-frame{fill:none;stroke:var(--line-strong);stroke-width:1;vector-effect:non-scaling-stroke}
 .portal-depth-center,.portal-depth-middle,.portal-depth-edge{stop-color:var(--orange)}
 .portal-material-outer{stop-color:var(--surface-strong)}.portal-material-inner{stop-color:var(--bg-raised)}.portal-material-warm{stop-color:var(--orange)}
-.portal-fold-edge{fill:none;stroke:var(--orange);stroke-width:1;stroke-opacity:.42;vector-effect:non-scaling-stroke}
+.portal-fold-edge{fill:none;stroke:var(--orange);stroke-width:1;stroke-opacity:.32;vector-effect:non-scaling-stroke}
 /* The stage is transparent: the site's original warm light and paper texture
    remain visible through it, and are the actual background of the dossier. */
 .portal-overline{position:absolute;inset:1.3rem 0 auto;display:flex;justify-content:space-between;gap:1rem;color:var(--muted-strong);font-size:.64rem;letter-spacing:.13em;line-height:1.5;z-index:3}
