@@ -23,8 +23,7 @@
    if(width<100||height<300||!Number.isFinite(radius)||radius<=0)throw Error('Invalid portal geometry');
    geometry={width,height,bounds,center,radius};
    svg.setAttribute('viewBox',`0 0 ${width} ${height}`);svg.dataset.width=width;svg.dataset.height=height;
-   const mask=svg.querySelector('mask');mask.setAttribute('width',width);mask.setAttribute('height',height);
-   for(const e of svg.querySelectorAll('.portal-mask-field,.portal-veil')){e.setAttribute('width',width);e.setAttribute('height',height);}
+   for(const e of svg.querySelectorAll('.portal-depth-field')){e.setAttribute('width',width);e.setAttribute('height',height);}
    travel=height*1.95;stage.style.setProperty('--stage-height',height+'px');scene.style.setProperty('--control-height',(height+travel)+'px');scene.classList.add('is-directed');
    start=scene.getBoundingClientRect().top+window.scrollY-12;paint();
   }catch(_){fallback();}

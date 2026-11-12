@@ -16,33 +16,45 @@
   const scale=base*Math.pow(coverScale/base,approach);
   const cx=mix(initialX,w/2,aim),cy=mix(initialY,h*.47,aim);
   const matrix=[scale,0,0,scale,cx-scale*c[0],cy-scale*c[1]];
-  const camera=2.6*span(p,.25,.68),question=span(p,.64,.84),final=span(p,.85,1);
-  const fw=Math.min(w*.92,1000),fh=fw*9/16,qwidth=mix(w*.90,fw*.84,final),qheight=mix(h*.40,fh*.64,final);
-  const gates=Array.from({length:9},(_,i)=>{
-   const z=1.35+i*.64-camera,s=.84/Math.max(.08,z),a=clamp((z-.2)/.5)*clamp((8-z)/4)*(1-span(p,.63,.86));
-   return{x:cx-w*.37*s,y:cy-h*.37*s,width:w*.74*s,height:h*.74*s,opacity:a*.55};
-  });
-  return {progress:p,matrix,cx,cy,scale,coverScale,foreground:1-span(p,.43,.46),measure:1-span(p,.06,.21),world:span(p,0,.16),gates,
-   question,questionWidth:qwidth,questionHeight:qheight,questionX:w/2,questionY:h*.47,questionScale:mix(1,.90,final),
-   slit:mix(0,qwidth/2,question),lineShift:mix(54,0,question),frame:{x:(w-fw)/2,y:h*.47-fh/2,width:fw,height:fh,opacity:final},final};
+  const question=span(p,.64,.84),final=span(p,.85,1);
+  const fw=Math.min(w*.92,1000),fh=fw*9/16,qwidth=mix(w*.90,fw*.84,final);
+  const depth=mix(.22,1,span(p,.20,.65));
+  return {progress:p,matrix,cx,cy,scale,coverScale,foreground:1-span(p,.43,.46),measure:1-span(p,.06,.21),world:span(p,0,.16)*(1-span(p,.62,.84)),depthX:w*.7*depth,depthY:h*.8*depth,
+   question,questionWidth:qwidth,questionX:w/2,questionY:h*.47,questionScale:mix(1,.90,final),
+   lineShift:mix(54,0,question),frame:{x:(w-fw)/2,y:h*.47-fh/2,width:fw,height:fh,opacity:final},final};
+ }
+ // Parse the fixed glyph once. Bake its affine coordinates into the viewport;
+ // no luminance mask or enlarged group transform is needed by the compositor.
+ function parsePath(d){
+  const tokens=d.match(/[MLQHVZ]|-?(?:\d*\.?\d+)(?:e[-+]?\d+)?/gi),out=[];let i=0,x=0,y=0;
+  while(i<tokens.length){const cmd=tokens[i++].toUpperCase();let v;
+   if(cmd==='Z'){out.push(['Z']);continue;}
+   if(cmd==='H'){x=+tokens[i++];out.push(['L',x,y]);continue;}
+   if(cmd==='V'){y=+tokens[i++];out.push(['L',x,y]);continue;}
+   const n=cmd==='Q'?4:cmd==='M'||cmd==='L'?2:0;if(!n)throw Error('Unsupported portal contour');
+   v=tokens.slice(i,i+n).map(Number);i+=n;x=v[n-2];y=v[n-1];out.push([cmd,...v]);
+  }return out;
+ }
+ const coordinate=v=>Number(v.toFixed(4));
+ function transformPath(commands,m){return commands.map(([cmd,...v])=>cmd+v.map((n,i)=>coordinate(n*m[0]+m[i%2?5:4])).join(' ')).join('');}
+ const prepared=new WeakMap();
+ function prepare(el){
+  if(prepared.has(el))return prepared.get(el);
+  const counter=el.querySelector('.portal-counter'),number=el.querySelector('.portal-number');
+  const a={opening:el.querySelector('.portal-opening'),counter:parsePath(counter.getAttribute('d')),number,
+   paths:[...number.querySelectorAll('path')].map(e=>[e,parsePath(e.getAttribute('d'))])};prepared.set(el,a);return a;
  }
  function apply(el,f){
-  const matrix=`matrix(${f.matrix.join(' ')})`;
-  el.querySelector('.portal-number').setAttribute('transform',matrix);
-  el.querySelector('.portal-counter').setAttribute('transform',matrix);
+  const a=prepare(el);a.number.removeAttribute('transform');
+  a.opening.setAttribute('d',transformPath(a.counter,f.matrix));
+  for(const [e,commands] of a.paths)e.setAttribute('d',transformPath(commands,f.matrix));
   el.querySelector('.portal-foreground').style.opacity=f.foreground;
   el.querySelector('.portal-world').style.opacity=f.world;
-  el.querySelectorAll('.portal-gate').forEach((e,i)=>{const a=f.gates[i];for(const k of ['x','y','width','height'])e.setAttribute(k,a[k]);e.style.opacity=a.opacity;});
-  const w=+el.querySelector('svg').getAttribute('data-width'),h=+el.querySelector('svg').getAttribute('data-height');
-  el.querySelector('.portal-rays').setAttribute('d',`M0 0L${f.cx} ${f.cy}L${w} 0M0 ${h}L${f.cx} ${f.cy}L${w} ${h}`);
-  el.querySelector('.portal-rays').style.opacity=(1-f.question)*.22;
-  el.querySelector('.portal-horizon').setAttribute('d',`M${f.cx-12} ${f.cy}h24M${f.cx} ${f.cy-12}v24`);
-  el.querySelector('.portal-horizon').style.opacity=(1-f.question)*.7;
+  el.querySelector('#control-depth').setAttribute('gradientTransform',`translate(${f.cx} ${f.cy}) scale(${f.depthX} ${f.depthY})`);
   const r=el.querySelector('.portal-final-frame');for(const k of ['x','y','width','height'])r.setAttribute(k,f.frame[k]);r.style.opacity=f.frame.opacity;
   const q=el.querySelector('.portal-question');q.style.width=f.questionWidth+'px';q.style.left=f.questionX+'px';q.style.top=f.questionY+'px';q.style.transform=`translate(-50%,-50%) scale(${f.questionScale})`;
   q.style.clipPath=`inset(0 ${50*(1-f.question)}%)`;q.style.visibility='visible';q.style.setProperty('--line-shift',f.lineShift+'px');
-  const railH=(1-f.final)*f.questionHeight/2;el.querySelector('.portal-rails').setAttribute('d',`M${f.questionX-f.slit} ${f.cy-railH}v${railH*2}M${f.questionX+f.slit} ${f.cy-railH}v${railH*2}`);el.querySelector('.portal-rails').style.opacity=f.question*(1-f.final);
   el.querySelector('.portal-measure').style.opacity=f.measure;
  }
- return {clamp,ease,sample,apply};
+ return {clamp,ease,sample,apply,parsePath,transformPath};
 });

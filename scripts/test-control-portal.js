@@ -23,3 +23,27 @@ test('dossier after entrance and protected project content are identical to roll
 test('static scene is complete, semantic and does not invent a video',()=>{
  const s=renderControlScene(data.projects['kontrol-bende-mi']);assert.equal((s.match(/<h1/g)||[]).length,1);assert.match(s,/BENDE <em>Mİ\?/);assert.match(s,/href="#deney"/);assert.doesNotMatch(s,/<img|<video|<iframe|youtube|oynat/i);
 });
+const approved=require('./portal-review/approved-v2-frames');
+test('V2.1 preserves approved camera, numeral and question motion at every progress sample',()=>{
+ const fields=['progress','matrix','cx','cy','scale','coverScale','foreground','measure','question','questionWidth','questionX','questionY','questionScale','lineShift','frame','final'];
+ for(const width of [360,390,430,1024,1440])for(let i=0;i<=200;i++){
+  const g={width,height:788,bounds:glyph.bounds,center:glyph.center,radius:97},before=approved.sample(i/200,g),after=F.sample(i/200,g);
+  for(const key of fields)assert.deepEqual(after[key],before[key],`width ${width} p ${i/200} ${key}`);
+ }
+});
+test('viewport-baked contours retain every original control point without scale textures',()=>{
+ for(const width of [360,390,430,1024,1440])for(const p of [0,.1,.18,.22,.3,.38,.43,.7,1]){
+  const g={width,height:788,bounds:glyph.bounds,center:glyph.center,radius:97},m=F.sample(p,g).matrix;
+  for(const d of [...glyph.paths,glyph.counter]){
+   const commands=F.parsePath(d),baked=F.parsePath(F.transformPath(commands,m));assert.equal(commands.length,baked.length);
+   commands.forEach((c,j)=>{assert.equal(c[0],baked[j][0]);for(let i=1;i<c.length;i++)assert.ok(Math.abs(baked[j][i]-(c[i]*m[0]+m[i%2?4:5]))<=.000051);});
+  }
+ }
+});
+test('new scene removes alpha-mask, rectangular tunnel, markers and unwanted caption at source',()=>{
+ const s=renderControlScene(data.projects['kontrol-bende-mi']);
+ assert.match(s,/<clipPath id="control-aperture" clipPathUnits="userSpaceOnUse">/);
+ assert.doesNotMatch(s,/<mask\b|portal-(?:gate|rays|horizon|rails|veil)|<small|Zamanın görsel|Sonuç veya başarı göstergesi/);
+ assert.match(s,/class="portal-depth-field"/);assert.match(s,/href="#deney"/);
+ const css=fs.readFileSync('control-scene.css','utf8');assert.doesNotMatch(css,/portal-(?:gate|rays|horizon|rails|veil)|portal-foot small/);assert.match(css,/body\[data-project="kontrol-bende-mi"\]\{background:var\(--bg\)\}/);
+});
