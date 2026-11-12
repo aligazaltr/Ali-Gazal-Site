@@ -1,0 +1,13 @@
+{
+  "before": {
+    "background": "radial-gradient(at 90% 5%, rgba(255, 134, 31, 0.17), rgba(0, 0, 0, 0) 608px) repeat scroll 0% 0% / auto padding-box border-box, repeating-linear-gradient(0deg, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 4px, rgba(255, 255, 255, 0.01) 4px, rgba(255, 255, 255, 0.01) 5px) repeat scroll 0% 0% / auto padding-box border-box, rgb(11, 11, 10) none repeat scroll 0% 0% / auto padding-box border-box",
+    "top": 848.171875,
+    "settledTop": 24.171875
+  },
+  "after": {
+    "background": "rgb(11, 11, 10) none repeat scroll 0% 0% / auto padding-box border-box",
+    "top": 268.171875,
+    "settledTop": 24.171875
+  },
+  "note": "The original top fields were read during smooth scrolling. Follow-up browser checks confirmed both targets settled at 24.171875px; final dossier screenshots were then replaced."
+}
