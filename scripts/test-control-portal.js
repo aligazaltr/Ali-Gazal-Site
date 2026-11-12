@@ -46,4 +46,5 @@ test('new scene removes alpha-mask, rectangular tunnel, markers and unwanted cap
  assert.doesNotMatch(s,/<mask\b|portal-(?:gate|rays|horizon|rails|veil)|<small|Zamanın görsel|Sonuç veya başarı göstergesi/);
  assert.match(s,/class="portal-depth-field"/);assert.match(s,/href="#deney"/);
  const css=fs.readFileSync('control-scene.css','utf8');assert.doesNotMatch(css,/portal-(?:gate|rays|horizon|rails|veil)|portal-foot small/);assert.match(css,/body\[data-project="kontrol-bende-mi"\]\{background:var\(--bg\)\}/);
+ const lettering=css.match(/\.portal-overline>span,\.portal-foot a\{([^}]+)\}/)[1];assert.doesNotMatch(lettering,/background/);assert.match(lettering,/text-shadow/);
 });
