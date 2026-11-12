@@ -30,3 +30,11 @@
 
 /* Metadata and the skip link remain readable while solid glyph strokes pass behind. */
 .portal-overline>span,.portal-foot a,.portal-foot small{background:var(--bg);padding:.22rem .35rem}.portal-overline>span:first-child,.portal-foot a{margin-left:-.35rem}.portal-overline>span:last-child,.portal-foot small{margin-right:-.35rem}
+/* Reuse the existing early scene-ready hint; reserve the exact first-paint layout.
+   theme.js removes the hint at DOMContentLoaded if the controller is missing. */
+[data-scene-ready] .control-scene{height:calc(min(840px,100svh - 32px)*2.95)}
+[data-scene-ready] .portal-stage{position:sticky;top:12px;padding:0;height:min(840px,calc(100svh - 32px))}
+[data-scene-ready] .portal-canvas{position:absolute;inset:0;width:100%;height:100%}
+[data-scene-ready] .portal-question{position:absolute;left:50%;top:47%;width:90%;transform:translate(-50%,-50%);clip-path:inset(0 50%);text-align:center;margin:0}
+[data-scene-ready] .portal-measure{position:absolute;top:79%;left:0;right:0;text-align:center;margin:0}
+[data-scene-ready] .portal-foot{position:absolute;inset:auto 0 1rem}
