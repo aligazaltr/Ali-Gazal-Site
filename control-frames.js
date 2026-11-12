@@ -22,12 +22,12 @@
   // Three open material planes share the zero's vanishing point. The camera
   // advances through their depth; no closed rings, screen rays or centre target.
   const camera=1.22*span(p,.18,.72);
-  const folds=[['left',1.95,.70],['right',2.45,.65],['floor',3.15,.80]].map(([side,depth,thickness])=>{
+  const folds=[['left',1.80,.48],['right',3.00,.52],['floor',4.30,.58]].map(([side,depth,thickness])=>{
    const z=depth-camera,nw=w*.62/z,nh=h*.50/z,fw=w*.62/(z+thickness),fh=h*.50/(z+thickness);
    let points,edge;
-   if(side==='left'){points=[[-nw,-nh],[-fw,-fh],[-fw,fh],[-nw,nh]];edge=[[-fw,-fh],[-fw,fh]];}
-   else if(side==='right'){points=[[nw,-nh],[fw,-fh],[fw,fh],[nw,nh]];edge=[[fw,-fh],[fw,fh]];}
-   else{points=[[-nw,nh],[-fw,fh],[fw,fh],[nw,nh]];edge=[[-fw,fh],[fw,fh]];}
+   if(side==='left'){points=[[-nw,-nh],[-nw,nh],[nw,nh],[fw,fh],[-fw,fh],[-fw,-fh]];edge=[[-fw,-fh],[-fw,fh],[fw,fh]];}
+   else if(side==='right'){points=[[-nw,-nh],[nw,-nh],[nw,nh],[fw,fh],[fw,-fh],[-fw,-fh]];edge=[[-fw,-fh],[fw,-fh],[fw,fh]];}
+   else{points=[[-nw,nh],[-nw,-nh],[nw,-nh],[fw,-fh],[-fw,-fh],[-fw,fh]];edge=[[fw,-fh],[-fw,-fh],[-fw,fh]];}
    const path=pts=>pts.map(([x,y],i)=>`${i?'L':'M'}${(cx+x).toFixed(3)} ${(cy+y).toFixed(3)}`).join('');
    return {side,z,path:path(points)+'Z',edge:path(edge)};
   });
