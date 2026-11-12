@@ -1,13 +1,14 @@
 /* The 60 Portal. Static composition is the default; JS only enhances this intro. */
 .control-page{padding-top:1.5rem}.control-scene{border-block:1px solid var(--line-strong);margin:1.5rem 0 0}
-.portal-stage{position:relative;isolation:isolate;padding:4.5rem 0 1rem;overflow:hidden;background:var(--bg)}
+.portal-stage{position:relative;isolation:isolate;padding:4.5rem 0 1rem;overflow:hidden;background:transparent}
 .portal-canvas{display:block;width:100%;height:clamp(180px,36vw,440px);overflow:hidden}
 .portal-number{fill:var(--text)}.portal-world,.portal-final-frame{display:none}
 .portal-final-frame{fill:none;stroke:var(--line-strong);stroke-width:1;vector-effect:non-scaling-stroke}
-.portal-depth-center{stop-color:var(--surface-strong)}.portal-depth-middle{stop-color:var(--surface)}.portal-depth-edge{stop-color:var(--bg)}
-:root[data-theme="light"] .portal-depth-center{stop-color:var(--bg-raised)}
-/* Keep this page's stage, gutters and dossier on the same existing theme base. */
-body[data-project="kontrol-bende-mi"]{background:var(--bg)}
+.portal-depth-center,.portal-depth-middle,.portal-depth-edge{stop-color:var(--orange)}
+.portal-material-outer{stop-color:var(--surface-strong)}.portal-material-inner{stop-color:var(--bg-raised)}.portal-material-warm{stop-color:var(--orange)}
+.portal-fold-edge{fill:none;stroke:var(--orange);stroke-width:1;stroke-opacity:.32;vector-effect:non-scaling-stroke}
+/* The stage is transparent: the site's original warm light and paper texture
+   remain visible through it, and are the actual background of the dossier. */
 .portal-overline{position:absolute;inset:1.3rem 0 auto;display:flex;justify-content:space-between;gap:1rem;color:var(--muted-strong);font-size:.64rem;letter-spacing:.13em;line-height:1.5;z-index:3}
 .control-live{display:flex;align-items:center;gap:.6rem;letter-spacing:0}.control-live::before{content:'';width:5px;height:5px;border-radius:50%;background:var(--orange)}
 .portal-measure{margin:0 0 2rem;font-size:.65rem;letter-spacing:.22em;color:var(--orange)}

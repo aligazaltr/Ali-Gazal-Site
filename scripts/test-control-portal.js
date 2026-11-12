@@ -24,7 +24,7 @@ test('static scene is complete, semantic and does not invent a video',()=>{
  const s=renderControlScene(data.projects['kontrol-bende-mi']);assert.equal((s.match(/<h1/g)||[]).length,1);assert.match(s,/BENDE <em>Mİ\?/);assert.match(s,/href="#deney"/);assert.doesNotMatch(s,/<img|<video|<iframe|youtube|oynat/i);
 });
 const approved=require('./portal-review/approved-v2-frames');
-test('V2.1 preserves approved camera, numeral and question motion at every progress sample',()=>{
+test('V2.2 preserves approved camera, numeral and question motion at every progress sample',()=>{
  const fields=['progress','matrix','cx','cy','scale','coverScale','foreground','measure','question','questionWidth','questionX','questionY','questionScale','lineShift','frame','final'];
  for(const width of [360,390,430,1024,1440])for(let i=0;i<=200;i++){
   const g={width,height:788,bounds:glyph.bounds,center:glyph.center,radius:97},before=approved.sample(i/200,g),after=F.sample(i/200,g);
@@ -45,6 +45,20 @@ test('new scene removes alpha-mask, rectangular tunnel, markers and unwanted cap
  assert.match(s,/<clipPath id="control-aperture" clipPathUnits="userSpaceOnUse">/);
  assert.doesNotMatch(s,/<mask\b|portal-(?:gate|rays|horizon|rails|veil)|<small|Zamanın görsel|Sonuç veya başarı göstergesi/);
  assert.match(s,/class="portal-depth-field"/);assert.match(s,/href="#deney"/);
- const css=fs.readFileSync('control-scene.css','utf8');assert.doesNotMatch(css,/portal-(?:gate|rays|horizon|rails|veil)|portal-foot small/);assert.match(css,/body\[data-project="kontrol-bende-mi"\]\{background:var\(--bg\)\}/);
+ const css=fs.readFileSync('control-scene.css','utf8');assert.doesNotMatch(css,/portal-(?:gate|rays|horizon|rails|veil)|portal-foot small/);assert.doesNotMatch(css,/body\[data-project="kontrol-bende-mi"\]\{background:/);assert.match(css,/\.portal-stage\{[^}]*background:transparent/);
  const lettering=css.match(/\.portal-overline>span,\.portal-foot a\{([^}]+)\}/)[1];assert.doesNotMatch(lettering,/background/);assert.match(lettering,/text-shadow/);
+});
+
+test('spatial depth remains visible, finite and reversible without closed frame edges',()=>{
+ const s=renderControlScene(data.projects['kontrol-bende-mi']);
+ assert.equal((s.match(/class="portal-fold"/g)||[]).length,3);
+ for(const width of [360,390,430,1024,1440]){
+  const g={width,height:788,bounds:glyph.bounds,center:glyph.center,radius:97};
+  for(const p of [.2,.3,.4,.5,.6,.7,1]){
+   const a=F.sample(p,g);assert.equal(a.folds.length,3);
+   for(const f of a.folds){assert.ok(f.z>0);assert.doesNotMatch(f.path,/NaN|Infinity/);assert.match(f.path,/Z$/);assert.doesNotMatch(f.edge,/Z/);assert.equal((f.edge.match(/L/g)||[]).length,2);}
+   F.sample(1-p,g);assert.deepEqual(F.sample(p,g).folds,a.folds);
+  }
+  const paths=p=>F.sample(p,g).folds.map(f=>f.path);assert.notDeepEqual(paths(.4),paths(.5));assert.notDeepEqual(paths(.5),paths(.6));
+ }
 });
