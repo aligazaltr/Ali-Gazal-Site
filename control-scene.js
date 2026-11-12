@@ -1,23 +1,39 @@
-/* Progressive enhancement only: natural scrolling, no idle animation loop. */
-(()=>{
-  const scene=document.querySelector('[data-control-scene]'),frames=window.AG_CONTROL_FRAMES;
-  if(!scene||!frames)return;
-  const stage=scene.querySelector('.control-stage');
-  const reduced=window.matchMedia?.('(prefers-reduced-motion: reduce)');
-  if(!reduced||!window.IntersectionObserver||!window.requestAnimationFrame||!window.CSS?.supports('position','sticky'))return;
-  let start=0,travel=1,visible=false,active=false,pending=0,measurePending=0;
-  function cancel(){if(pending)cancelAnimationFrame(pending);pending=0;}
-  function fallback(){cancel();active=false;scene.classList.remove('is-directed');scene.style.removeProperty('--control-height');stage.removeAttribute('style');delete scene.dataset.progress;}
-  function paint(){pending=0;if(!active||document.hidden)return;const f=frames.sample((window.scrollY-start)/travel);frames.apply(stage,f);scene.dataset.progress=f.progress.toFixed(4);}
-  function schedule(){if(active&&visible&&!document.hidden&&!pending)pending=requestAnimationFrame(paint);}
-  function measure(){measurePending=0;cancel();if(reduced.matches||innerHeight<420||parseFloat(getComputedStyle(document.documentElement).fontSize)>24){fallback();return;}
-    scene.classList.add('is-directed');const h=stage.getBoundingClientRect().height;travel=Math.max(280,Math.min(580,h*.65));
-    scene.style.setProperty('--control-height',`${h+travel}px`);start=scene.getBoundingClientRect().top+scrollY-12;active=true;paint();}
-  function resize(){if(!measurePending)measurePending=requestAnimationFrame(measure);}
-  const observer=new IntersectionObserver(entries=>{visible=entries.some(e=>e.isIntersecting);if(visible)schedule();else cancel();});observer.observe(scene);
-  addEventListener('scroll',schedule,{passive:true});addEventListener('resize',resize,{passive:true});addEventListener('pageshow',resize);
-  document.addEventListener('visibilitychange',()=>document.hidden?cancel():schedule());
-  if(reduced.addEventListener)reduced.addEventListener('change',resize);else reduced.addListener?.(resize);
-  if(window.ResizeObserver)new ResizeObserver(resize).observe(stage);
-  measure();
+/* One passive scroll listener; measure on layout changes, never in the paint path. */
+(function(){
+ 'use strict';
+ const scene=document.querySelector('[data-control-scene]'),F=window.AG_CONTROL_FRAMES;
+ if(!scene||!F)return;
+ const stage=scene.querySelector('.portal-stage'),svg=stage.querySelector('svg'),counter=stage.querySelector('.portal-counter');
+ const reduced=window.matchMedia?.('(prefers-reduced-motion: reduce)');
+ let geometry=null,start=0,travel=0,ticket=0,measureTicket=0,visible=true;
+ const fallback=()=>{geometry=null;scene.classList.remove('is-directed');scene.style.removeProperty('--control-height');stage.style.removeProperty('--stage-height');scene.removeAttribute('data-progress');};
+ if(!reduced||!window.IntersectionObserver||!window.requestAnimationFrame||!window.CSS?.supports('position','sticky')||!counter.getPointAtLength||!counter.isPointInFill){fallback();return;}
+ function paint(){ticket=0;if(!geometry||document.hidden)return;const f=F.sample((window.scrollY-start)/travel,geometry);F.apply(stage,f);scene.dataset.progress=f.progress.toFixed(4);}
+ function queue(){if(!ticket&&visible&&geometry)ticket=requestAnimationFrame(paint);}
+ function measure(){
+  measureTicket=0;
+  if(reduced.matches||window.innerHeight<420||parseFloat(getComputedStyle(document.documentElement).fontSize)>24){fallback();return;}
+  try{
+   const width=stage.clientWidth,height=Math.min(840,window.innerHeight-32),bounds=svg.dataset.glyphBounds.split(' ').map(Number),center=svg.dataset.counterCenter.split(' ').map(Number);
+   // Sample the ACTUAL closed counter; subtract arc spacing to bound the radius conservatively.
+   const length=counter.getTotalLength(),step=length/256;let radius=Infinity;
+   for(let i=0;i<256;i++){const v=counter.getPointAtLength(i*step);radius=Math.min(radius,Math.hypot(v.x-center[0],v.y-center[1]));}
+   radius-=step;
+   if(width<100||height<300||!Number.isFinite(radius)||radius<=0)throw Error('Invalid portal geometry');
+   geometry={width,height,bounds,center,radius};
+   svg.setAttribute('viewBox',`0 0 ${width} ${height}`);svg.dataset.width=width;svg.dataset.height=height;
+   const mask=svg.querySelector('mask');mask.setAttribute('width',width);mask.setAttribute('height',height);
+   for(const e of svg.querySelectorAll('.portal-mask-field,.portal-veil')){e.setAttribute('width',width);e.setAttribute('height',height);}
+   travel=height*1.95;stage.style.setProperty('--stage-height',height+'px');scene.style.setProperty('--control-height',(height+travel)+'px');scene.classList.add('is-directed');
+   start=scene.getBoundingClientRect().top+window.scrollY-12;paint();
+  }catch(_){fallback();}
+ }
+ function scheduleMeasure(){if(!measureTicket)measureTicket=requestAnimationFrame(measure);}
+ const observer=new IntersectionObserver(entries=>{visible=entries[0].isIntersecting;if(visible)queue();},{rootMargin:'150px'});observer.observe(scene);
+ window.addEventListener('scroll',queue,{passive:true});window.addEventListener('resize',scheduleMeasure,{passive:true});
+ window.addEventListener('pageshow',scheduleMeasure);document.addEventListener('visibilitychange',()=>{if(!document.hidden)scheduleMeasure();});
+ if(reduced.addEventListener)reduced.addEventListener('change',scheduleMeasure);else reduced.addListener(scheduleMeasure);
+ if(window.ResizeObserver)new ResizeObserver(scheduleMeasure).observe(stage);
+ document.fonts?.ready.then(scheduleMeasure);document.fonts?.addEventListener?.('loadingdone',scheduleMeasure);
+ measure();
 })();
