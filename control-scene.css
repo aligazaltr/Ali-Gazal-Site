@@ -32,8 +32,8 @@ body[data-project="kontrol-bende-mi"]{background:var(--bg)}
 @media(max-width:700px){.control-intro,.control-section{grid-template-columns:minmax(0,1fr);gap:1rem}.control-intro{padding-top:2.5rem}.control-facts{gap:1rem}.control-facts div{flex-basis:130px}.control-facts dd{font-size:.82rem}.control-video{padding:1.25rem}.control-index-layout{grid-template-columns:minmax(0,1fr);gap:1.5rem}.control-index-art{max-width:100%}.control-index-art>span{font-size:8rem}.control-index-art>div{height:60px}.control-index-art small{margin-top:.7rem}}
 @media(forced-colors:active){.control-duration i{border-color:CanvasText}.control-live::before{background:Highlight}.portal-number{fill:CanvasText}.portal-final-frame{stroke:CanvasText}}
 
-/* Metadata and the skip link remain readable while solid glyph strokes pass behind. */
-.portal-overline>span,.portal-foot a{background:var(--bg);padding:.22rem .35rem}.portal-overline>span:first-child,.portal-foot a{margin-left:-.35rem}.portal-overline>span:last-child{margin-right:-.35rem}
+/* Keep lettering legible without opaque rectangles cutting the moving glyph. */
+.portal-overline>span,.portal-foot a{padding:.22rem .35rem;text-shadow:-1px 0 0 var(--bg),1px 0 0 var(--bg),0 -1px 0 var(--bg),0 1px 0 var(--bg)}.portal-overline>span:first-child,.portal-foot a{margin-left:-.35rem}.portal-overline>span:last-child{margin-right:-.35rem}
 /* Reuse the existing early scene-ready hint; reserve the exact first-paint layout.
    theme.js removes the hint at DOMContentLoaded if the controller is missing. */
 [data-scene-ready] .control-scene{height:calc(min(840px,100svh - 32px)*2.95)}
