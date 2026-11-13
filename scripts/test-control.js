@@ -16,7 +16,7 @@ test('new project public schema is restricted and contains no diary/result/relea
  assert.deepEqual(control.evidence,{published:false,entries:[]});assert.deepEqual(control.result,{published:false,summary:'',limitations:[]});
  assert.equal(control.video.url,'');assert.equal(control.video.title,'');assert.equal(control.video.durationSeconds,null);assert.equal(control.publishedAt,null);assert.equal(control.video.thumbnail.src,'');
  assert.doesNotMatch(page,/role="progressbar"|<iframe|<video|href="https:\/\/(?:www\.)?youtube.com\/watch/);
- assert.equal(renderHtml(page),page);assert.equal((page.match(/class="control-line"/g)||[]).length,60);
+ assert.equal(renderHtml(page),page);assert.match(page,/id="control-aperture"/);
 });
 test('controlled public result and future video use escaped HTML and existing HTTPS gate',()=>{
  const d=structuredClone(data),p=d.projects['kontrol-bende-mi'];p.video.published=true;p.video.url='https://www.youtube.com/watch?v=TESTFIXTURE';p.video.title='SENTETİK TEST <Başlık>';p.video.durationSeconds=100;p.publishedAt='2026-11-20';
@@ -30,14 +30,15 @@ test('project experiment states are explicit rather than a phase-completion sequ
  for(const state of ['preparing','testing','reviewing','production']){const box={module:{exports:{}}};vm.runInNewContext(src.replace('  // Publication copy',`  data.projects['kontrol-bende-mi'].experiment.state='${state}';\n  // Publication copy`),box);assert.equal(box.module.exports.projects['kontrol-bende-mi'].video.published,false);}
  const box={module:{exports:{}}};assert.throws(()=>vm.runInNewContext(src.replace('  // Publication copy',"  data.projects['kontrol-bende-mi'].experiment.state='published';\n  // Publication copy"),box),/verified video/);
 });
-test('scroll interpolation is bounded, deterministic, monotonic and reversible',()=>{
- let previous=frames.sample(0);for(let i=0;i<=100;i++){const f=frames.sample(i/100);assert.ok(f.order>=previous.order);assert.ok(f.timeOpacity<=previous.timeOpacity);assert.ok(f.questionScale>=.93&&f.questionScale<=1);for(const v of Object.values(f))assert.ok(Number.isFinite(v));previous=f;}
- for(const p of [0,.2,.5,.75,1]){const first=frames.sample(p);frames.sample(1);assert.deepEqual(frames.sample(p),first);}
- assert.deepEqual(frames.sample(-3),frames.sample(0));assert.deepEqual(frames.sample(5),frames.sample(1));assert.deepEqual(frames.sample(NaN),frames.sample(0));
+test('camera is deterministic and reversible without stored phase state',()=>{
+ const g={width:390,height:740,bounds:[57,20,1210.5,794.5],center:[934.2297,407.2622],radius:98};
+ let prev=0;for(let i=0;i<=100;i++){const f=frames.sample(i/100,g);assert.ok(f.scale>=prev);assert.ok(f.question>=0&&f.question<=1);assert.ok(f.foreground>=0&&f.foreground<=1);assert.ok(f.matrix.every(Number.isFinite));prev=f.scale;}
+ for(const p of [0,.2,.43,.5,.75,1]){const first=frames.sample(p,g);frames.sample(1,g);assert.deepEqual(frames.sample(p,g),first);}
+ for(const v of [-3,NaN])assert.deepEqual(frames.sample(v,g),frames.sample(0,g));assert.deepEqual(frames.sample(5,g),frames.sample(1,g));
 });
 test('crawlable new page and only reviewed release assets',()=>{
  assert.equal(pages['kontrol-bende-mi.html'],'/kontrol-bende-mi');assert.match(renderSitemap(),/<loc>https:\/\/aligazal.com\/kontrol-bende-mi<\/loc>/);
  const manifest=fs.readFileSync(path.join(root,'.assetsignore'),'utf8');for(const n of ['kontrol-bende-mi.html','control-frames.js','control-scene.js','control-scene.css','kontrol-bende-mi-share.png'])assert.ok(manifest.includes('!/'+n));
  assert.doesNotMatch(manifest,/!\/.*(?:control-review|thumbnail-|control-alternative|control-qa)/);
- assert.equal((page.match(/<h1\b/g)||[]).length,1);assert.match(page,/aria-hidden="true"><span class="control-line"/);
+ assert.equal((page.match(/<h1\b/g)||[]).length,1);assert.match(page,/<svg class="portal-canvas"[^>]*aria-hidden="true"/);
 });
