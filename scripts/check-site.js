@@ -92,6 +92,7 @@ const canonicalExpectations = {
   'machiavelli.html': `${siteData.canonicalOrigin}/machiavelli`,
   'irade-terbiyesi.html': `${siteData.canonicalOrigin}/irade-terbiyesi`,
   'dusunce-arsivi.html': `${siteData.canonicalOrigin}/dusunce-arsivi`,
+  'kontrol-bende-mi.html': `${siteData.canonicalOrigin}/kontrol-bende-mi`,
   'hakkimda.html': `${siteData.canonicalOrigin}/hakkimda`
 };
 

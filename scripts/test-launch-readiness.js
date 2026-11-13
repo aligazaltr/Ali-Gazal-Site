@@ -16,7 +16,7 @@ test('verified production domain is consistent across crawlable outputs',()=>{
     assert.equal(renderMetadata(html,file),html);
   }
   assert.doesNotMatch(renderRobots()+renderSitemap(),/workers\.dev|undefined|null|marcus-aurelius|404/);
-  assert.equal((renderSitemap().match(/<loc>/g)||[]).length,6);
+  assert.equal((renderSitemap().match(/<loc>/g)||[]).length,7);
 });
 test('metadata can migrate again without touching page bodies',()=>{
   const fixture=structuredClone(data);fixture.canonicalOrigin='https://next.example';

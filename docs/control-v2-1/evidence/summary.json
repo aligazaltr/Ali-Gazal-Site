@@ -1,0 +1,13 @@
+{
+  "cases": 10,
+  "states": 110,
+  "failed": 0,
+  "masks": 0,
+  "markers": 0,
+  "unwantedCaption": false,
+  "consoleErrors": 0,
+  "cspViolations": 0,
+  "maxObservedLongTaskMs": 0,
+  "version": "final CSS without opaque lettering boxes",
+  "limits": "Desktop Chrome iframe layout with native scroll; not physical Android, mobile Firefox, an FPS test or a hardware-DPR change."
+}

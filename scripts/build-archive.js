@@ -35,7 +35,7 @@ function validate(source, site = siteData) {
     if (!authors.has(book.authorId) || !text(book.title)) errors.push(`${book.id}: kitap/yazar ilişkisi eksik`);
   }
   for (const project of Object.values(site.projects)) {
-    if (project.source.bookId && !books.has(project.source.bookId)) errors.push(`${project.id}: bilinmeyen arşiv kitabı`);
+    if (project.source?.bookId && !books.has(project.source?.bookId)) errors.push(`${project.id}: bilinmeyen arşiv kitabı`);
   }
   for (const entry of entries) {
     const original = entry.kind === 'original-insight';
@@ -72,10 +72,10 @@ function publicData(source = sourceData, site = siteData) {
   validate(source, site);
   const books = source.books.map(book => ({ id: book.id, slug: book.slug, title: book.title,
     originalTitle: book.originalTitle, authorId: book.authorId, focus: book.focus,
-    projectIds: Object.values(site.projects).filter(project => project.source.bookId === book.id).map(project => project.id) }));
+    projectIds: Object.values(site.projects).filter(project => project.source?.bookId === book.id).map(project => project.id) }));
   const projects = Object.values(site.projects).filter(project => books.some(book => book.projectIds.includes(project.id)))
     .map(project => ({ id: project.id, slug: project.slug, title: project.shortTitle, statusLabel: project.statusLabel,
-      bookId: project.source.bookId, thumbnail: project.video.thumbnail }));
+      bookId: project.source?.bookId, thumbnail: project.video.thumbnail }));
   const entries = [...source.quotes, ...source.originalInsights].filter(entry => entry.status === 'published').map(entry => {
     const output = {};
     for (const key of ['id', 'slug', 'kind', 'title', 'text', 'textLanguage', 'authorId', 'bookId', 'credit', 'categoryIds', 'tags', 'meaning', 'commentary', 'application', 'critique', 'publishedAt']) {

@@ -186,7 +186,12 @@
       image.height = Number(video.thumbnail.height) || 720;
       image.loading = 'lazy';
       image.decoding = 'async';
-      panel.append(image);
+      if (project.id === 'kontrol-bende-mi') {
+        const coverLink = element('a', '', ''); coverLink.href = url;
+        coverLink.target = '_blank'; coverLink.rel = 'noopener noreferrer';
+        coverLink.setAttribute('aria-label', `YouTube’da izle: ${video.title} (yeni sekmede)`);
+        coverLink.append(image); panel.append(coverLink);
+      } else panel.append(image);
     }
 
     panel.append(element('h2', '', video.title));

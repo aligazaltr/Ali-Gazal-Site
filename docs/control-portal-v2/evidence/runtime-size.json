@@ -1,0 +1,14 @@
+{
+  "control-frames.js": {
+    "bytes": 3784,
+    "gzipBytes": 1600
+  },
+  "control-scene.js": {
+    "bytes": 3776,
+    "gzipBytes": 1597
+  },
+  "control-scene.css": {
+    "bytes": 9606,
+    "gzipBytes": 2647
+  }
+}

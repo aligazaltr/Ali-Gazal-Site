@@ -1,0 +1,2342 @@
+[
+  {
+    "name": "before-390-light-20",
+    "box": {
+      "height": 820,
+      "viewportHeight": 936,
+      "viewportWidth": 1363,
+      "width": 390,
+      "x": 479,
+      "y": 214.375
+    },
+    "state": {
+      "url": "https://747942f3-ali-gazal-site.aliicerikmedya.workers.dev/baseline-control?review=32",
+      "width": 390,
+      "height": 820,
+      "theme": "light",
+      "progress": "0.2002",
+      "directed": true,
+      "overflow": false,
+      "h1Fits": true,
+      "textFits": true,
+      "h1Visible": true,
+      "matrix": [
+        0.5141534805297852,
+        0,
+        0,
+        0.5141534805297852,
+        -255.68423461914062,
+        160.96688842773438
+      ],
+      "center": {
+        "x": 224.65322875976562,
+        "y": 370.3621520996094
+      },
+      "coverage": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "sameTransform": true,
+      "maskCount": 1,
+      "bodyBackground": "radial-gradient(at 90% 5%, rgba(255, 145, 47, 0.16), rgba(0, 0, 0, 0) 608px) repeat scroll 0% 0% / auto padding-box border-box, repeating-linear-gradient(0deg, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 4px, rgba(36, 32, 25, 0.01) 4px, rgba(36, 32, 25, 0.01) 5px) repeat scroll 0% 0% / auto padding-box border-box, rgb(245, 240, 231) none repeat scroll 0% 0% / auto padding-box border-box",
+      "stageBackground": "rgb(245, 240, 231)",
+      "worldOpacity": "1",
+      "markerCount": 12,
+      "footnote": true,
+      "foreground": "1",
+      "questionClip": "inset(0px 50%)",
+      "frame": {
+        "width": "315.56",
+        "height": "177.5025",
+        "opacity": "0"
+      },
+      "notes": 4,
+      "watchLinks": 0,
+      "errors": [],
+      "violations": [],
+      "metrics": {
+        "longTasks": [],
+        "shifts": [],
+        "lcp": []
+      }
+    }
+  },
+  {
+    "name": "before-390-light-30",
+    "box": {
+      "height": 820,
+      "viewportHeight": 936,
+      "viewportWidth": 1363,
+      "width": 390,
+      "x": 479,
+      "y": 214.375
+    },
+    "state": {
+      "url": "https://747942f3-ali-gazal-site.aliicerikmedya.workers.dev/baseline-control?review=32",
+      "width": 390,
+      "height": 820,
+      "theme": "light",
+      "progress": "0.2998",
+      "directed": true,
+      "overflow": false,
+      "h1Fits": true,
+      "textFits": true,
+      "h1Visible": true,
+      "matrix": [
+        1.7833921909332275,
+        0,
+        0,
+        1.7833921909332275,
+        -1485.9888916015625,
+        -355.94781494140625
+      ],
+      "center": {
+        "x": 180.109130859375,
+        "y": 370.3603210449219
+      },
+      "coverage": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "sameTransform": true,
+      "maskCount": 1,
+      "bodyBackground": "radial-gradient(at 90% 5%, rgba(255, 145, 47, 0.16), rgba(0, 0, 0, 0) 608px) repeat scroll 0% 0% / auto padding-box border-box, repeating-linear-gradient(0deg, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 4px, rgba(36, 32, 25, 0.01) 4px, rgba(36, 32, 25, 0.01) 5px) repeat scroll 0% 0% / auto padding-box border-box, rgb(245, 240, 231) none repeat scroll 0% 0% / auto padding-box border-box",
+      "stageBackground": "rgb(245, 240, 231)",
+      "worldOpacity": "1",
+      "markerCount": 12,
+      "footnote": true,
+      "foreground": "1",
+      "questionClip": "inset(0px 50%)",
+      "frame": {
+        "width": "315.56",
+        "height": "177.5025",
+        "opacity": "0"
+      },
+      "notes": 4,
+      "watchLinks": 0,
+      "errors": [],
+      "violations": [],
+      "metrics": {
+        "longTasks": [],
+        "shifts": [],
+        "lcp": [
+          {
+            "value": 0,
+            "duration": 0,
+            "start": 4264,
+            "hadRecentInput": false
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "before-390-light-52",
+    "box": {
+      "height": 820,
+      "viewportHeight": 936,
+      "viewportWidth": 1363,
+      "width": 390,
+      "x": 479,
+      "y": 214.375
+    },
+    "state": {
+      "url": "https://747942f3-ali-gazal-site.aliicerikmedya.workers.dev/baseline-control?review=32",
+      "width": 390,
+      "height": 820,
+      "theme": "light",
+      "progress": "0.5204",
+      "directed": true,
+      "overflow": false,
+      "h1Fits": true,
+      "textFits": true,
+      "h1Visible": true,
+      "matrix": [
+        4.7689924240112305,
+        0,
+        0,
+        4.7689924240112305,
+        -4283.83447265625,
+        -1571.8701171875
+      ],
+      "center": {
+        "x": 171.50006103515625,
+        "y": 370.3599853515625
+      },
+      "coverage": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "sameTransform": true,
+      "maskCount": 1,
+      "bodyBackground": "radial-gradient(at 90% 5%, rgba(255, 145, 47, 0.16), rgba(0, 0, 0, 0) 608px) repeat scroll 0% 0% / auto padding-box border-box, repeating-linear-gradient(0deg, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 4px, rgba(36, 32, 25, 0.01) 4px, rgba(36, 32, 25, 0.01) 5px) repeat scroll 0% 0% / auto padding-box border-box, rgb(245, 240, 231) none repeat scroll 0% 0% / auto padding-box border-box",
+      "stageBackground": "rgb(245, 240, 231)",
+      "worldOpacity": "1",
+      "markerCount": 12,
+      "footnote": true,
+      "foreground": "0",
+      "questionClip": "inset(0px 50%)",
+      "frame": {
+        "width": "315.56",
+        "height": "177.5025",
+        "opacity": "0"
+      },
+      "notes": 4,
+      "watchLinks": 0,
+      "errors": [],
+      "violations": [],
+      "metrics": {
+        "longTasks": [],
+        "shifts": [],
+        "lcp": [
+          {
+            "value": 0,
+            "duration": 0,
+            "start": 4264,
+            "hadRecentInput": false
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "before-390-light-80",
+    "box": {
+      "height": 820,
+      "viewportHeight": 936,
+      "viewportWidth": 1363,
+      "width": 390,
+      "x": 479,
+      "y": 214.375
+    },
+    "state": {
+      "url": "https://747942f3-ali-gazal-site.aliicerikmedya.workers.dev/baseline-control?review=32",
+      "width": 390,
+      "height": 820,
+      "theme": "light",
+      "progress": "0.8003",
+      "directed": true,
+      "overflow": false,
+      "h1Fits": true,
+      "textFits": true,
+      "h1Visible": true,
+      "matrix": [
+        4.7689924240112305,
+        0,
+        0,
+        4.7689924240112305,
+        -4283.83447265625,
+        -1571.8701171875
+      ],
+      "center": {
+        "x": 171.50006103515625,
+        "y": 370.3599853515625
+      },
+      "coverage": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "sameTransform": true,
+      "maskCount": 1,
+      "bodyBackground": "radial-gradient(at 90% 5%, rgba(255, 145, 47, 0.16), rgba(0, 0, 0, 0) 608px) repeat scroll 0% 0% / auto padding-box border-box, repeating-linear-gradient(0deg, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 4px, rgba(36, 32, 25, 0.01) 4px, rgba(36, 32, 25, 0.01) 5px) repeat scroll 0% 0% / auto padding-box border-box, rgb(245, 240, 231) none repeat scroll 0% 0% / auto padding-box border-box",
+      "stageBackground": "rgb(245, 240, 231)",
+      "worldOpacity": "1",
+      "markerCount": 12,
+      "footnote": true,
+      "foreground": "0",
+      "questionClip": "inset(0px 5.13651%)",
+      "frame": {
+        "width": "315.56",
+        "height": "177.5025",
+        "opacity": "0"
+      },
+      "notes": 4,
+      "watchLinks": 0,
+      "errors": [],
+      "violations": [],
+      "metrics": {
+        "longTasks": [],
+        "shifts": [],
+        "lcp": [
+          {
+            "value": 0,
+            "duration": 0,
+            "start": 4264,
+            "hadRecentInput": false
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "before-390-light-100",
+    "box": {
+      "height": 820,
+      "viewportHeight": 936,
+      "viewportWidth": 1363,
+      "width": 390,
+      "x": 479,
+      "y": 214.375
+    },
+    "state": {
+      "url": "https://747942f3-ali-gazal-site.aliicerikmedya.workers.dev/baseline-control?review=32",
+      "width": 390,
+      "height": 820,
+      "theme": "light",
+      "progress": "1.0000",
+      "directed": true,
+      "overflow": false,
+      "h1Fits": true,
+      "textFits": true,
+      "h1Visible": true,
+      "matrix": [
+        4.7689924240112305,
+        0,
+        0,
+        4.7689924240112305,
+        -4283.83447265625,
+        -1571.8701171875
+      ],
+      "center": {
+        "x": 171.50006103515625,
+        "y": 370.3599853515625
+      },
+      "coverage": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "sameTransform": true,
+      "maskCount": 1,
+      "bodyBackground": "radial-gradient(at 90% 5%, rgba(255, 145, 47, 0.16), rgba(0, 0, 0, 0) 608px) repeat scroll 0% 0% / auto padding-box border-box, repeating-linear-gradient(0deg, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 4px, rgba(36, 32, 25, 0.01) 4px, rgba(36, 32, 25, 0.01) 5px) repeat scroll 0% 0% / auto padding-box border-box, rgb(245, 240, 231) none repeat scroll 0% 0% / auto padding-box border-box",
+      "stageBackground": "rgb(245, 240, 231)",
+      "worldOpacity": "1",
+      "markerCount": 12,
+      "footnote": true,
+      "foreground": "0",
+      "questionClip": "inset(0px 0%)",
+      "frame": {
+        "width": "315.56",
+        "height": "177.5025",
+        "opacity": "1"
+      },
+      "notes": 4,
+      "watchLinks": 0,
+      "errors": [],
+      "violations": [],
+      "metrics": {
+        "longTasks": [],
+        "shifts": [],
+        "lcp": [
+          {
+            "value": 0,
+            "duration": 0,
+            "start": 4264,
+            "hadRecentInput": false
+          },
+          {
+            "value": 0,
+            "duration": 0,
+            "start": 5592,
+            "hadRecentInput": false
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "after-390-light-20",
+    "box": {
+      "height": 820,
+      "viewportHeight": 936,
+      "viewportWidth": 1363,
+      "width": 390,
+      "x": 479,
+      "y": 214.375
+    },
+    "state": {
+      "url": "https://dece1234-ali-gazal-site.aliicerikmedya.workers.dev/kontrol-bende-mi?review=12",
+      "width": 390,
+      "height": 820,
+      "theme": "light",
+      "progress": "0.2002",
+      "directed": true,
+      "overflow": false,
+      "h1Fits": true,
+      "textFits": true,
+      "h1Visible": true,
+      "matrix": [
+        0.5141535059303117,
+        0,
+        0,
+        0.5141535059303117,
+        -255.68426240269844,
+        160.96687239307468
+      ],
+      "center": {
+        "x": 224.65322875976562,
+        "y": 370.3621520996094
+      },
+      "coverage": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "sameTransform": true,
+      "maskCount": 0,
+      "bodyBackground": "rgb(245, 240, 231) none repeat scroll 0% 0% / auto padding-box border-box",
+      "stageBackground": "rgb(245, 240, 231)",
+      "worldOpacity": "1",
+      "markerCount": 0,
+      "footnote": false,
+      "foreground": "1",
+      "questionClip": "inset(0px 50%)",
+      "frame": {
+        "width": "315.56",
+        "height": "177.5025",
+        "opacity": "0"
+      },
+      "notes": 4,
+      "watchLinks": 0,
+      "errors": [],
+      "violations": [],
+      "metrics": {
+        "longTasks": [],
+        "shifts": [],
+        "lcp": []
+      }
+    }
+  },
+  {
+    "name": "after-390-light-30",
+    "box": {
+      "height": 820,
+      "viewportHeight": 936,
+      "viewportWidth": 1363,
+      "width": 390,
+      "x": 479,
+      "y": 214.375
+    },
+    "state": {
+      "url": "https://dece1234-ali-gazal-site.aliicerikmedya.workers.dev/kontrol-bende-mi?review=12",
+      "width": 390,
+      "height": 820,
+      "theme": "light",
+      "progress": "0.2998",
+      "directed": true,
+      "overflow": false,
+      "h1Fits": true,
+      "textFits": true,
+      "h1Visible": true,
+      "matrix": [
+        1.7833921418640284,
+        0,
+        0,
+        1.7833921418640284,
+        -1485.9888601233827,
+        -355.94780407921735
+      ],
+      "center": {
+        "x": 180.10910034179688,
+        "y": 370.3603210449219
+      },
+      "coverage": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "sameTransform": true,
+      "maskCount": 0,
+      "bodyBackground": "rgb(245, 240, 231) none repeat scroll 0% 0% / auto padding-box border-box",
+      "stageBackground": "rgb(245, 240, 231)",
+      "worldOpacity": "1",
+      "markerCount": 0,
+      "footnote": false,
+      "foreground": "1",
+      "questionClip": "inset(0px 50%)",
+      "frame": {
+        "width": "315.56",
+        "height": "177.5025",
+        "opacity": "0"
+      },
+      "notes": 4,
+      "watchLinks": 0,
+      "errors": [],
+      "violations": [],
+      "metrics": {
+        "longTasks": [],
+        "shifts": [],
+        "lcp": [
+          {
+            "value": 0,
+            "duration": 0,
+            "start": 4312,
+            "hadRecentInput": false
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "after-390-light-52",
+    "box": {
+      "height": 820,
+      "viewportHeight": 936,
+      "viewportWidth": 1363,
+      "width": 390,
+      "x": 479,
+      "y": 214.375
+    },
+    "state": {
+      "url": "https://dece1234-ali-gazal-site.aliicerikmedya.workers.dev/kontrol-bende-mi?review=12",
+      "width": 390,
+      "height": 820,
+      "theme": "light",
+      "progress": "0.5204",
+      "directed": true,
+      "overflow": false,
+      "h1Fits": true,
+      "textFits": true,
+      "h1Visible": true,
+      "matrix": [
+        4.768992130750605,
+        0,
+        0,
+        4.768992130750605,
+        -4283.834218466252,
+        -1571.8700152898236
+      ],
+      "center": {
+        "x": 171.50001525878906,
+        "y": 370.3599853515625
+      },
+      "coverage": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "sameTransform": true,
+      "maskCount": 0,
+      "bodyBackground": "rgb(245, 240, 231) none repeat scroll 0% 0% / auto padding-box border-box",
+      "stageBackground": "rgb(245, 240, 231)",
+      "worldOpacity": "1",
+      "markerCount": 0,
+      "footnote": false,
+      "foreground": "0",
+      "questionClip": "inset(0px 50%)",
+      "frame": {
+        "width": "315.56",
+        "height": "177.5025",
+        "opacity": "0"
+      },
+      "notes": 4,
+      "watchLinks": 0,
+      "errors": [],
+      "violations": [],
+      "metrics": {
+        "longTasks": [],
+        "shifts": [],
+        "lcp": [
+          {
+            "value": 0,
+            "duration": 0,
+            "start": 4312,
+            "hadRecentInput": false
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "after-390-light-80",
+    "box": {
+      "height": 820,
+      "viewportHeight": 936,
+      "viewportWidth": 1363,
+      "width": 390,
+      "x": 479,
+      "y": 214.375
+    },
+    "state": {
+      "url": "https://dece1234-ali-gazal-site.aliicerikmedya.workers.dev/kontrol-bende-mi?review=12",
+      "width": 390,
+      "height": 820,
+      "theme": "light",
+      "progress": "0.8003",
+      "directed": true,
+      "overflow": false,
+      "h1Fits": true,
+      "textFits": true,
+      "h1Visible": true,
+      "matrix": [
+        4.768992130750605,
+        0,
+        0,
+        4.768992130750605,
+        -4283.834218466252,
+        -1571.8700152898236
+      ],
+      "center": {
+        "x": 171.50001525878906,
+        "y": 370.3599853515625
+      },
+      "coverage": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "sameTransform": true,
+      "maskCount": 0,
+      "bodyBackground": "rgb(245, 240, 231) none repeat scroll 0% 0% / auto padding-box border-box",
+      "stageBackground": "rgb(245, 240, 231)",
+      "worldOpacity": "0.0860794",
+      "markerCount": 0,
+      "footnote": false,
+      "foreground": "0",
+      "questionClip": "inset(0px 5.13651%)",
+      "frame": {
+        "width": "315.56",
+        "height": "177.5025",
+        "opacity": "0"
+      },
+      "notes": 4,
+      "watchLinks": 0,
+      "errors": [],
+      "violations": [],
+      "metrics": {
+        "longTasks": [],
+        "shifts": [],
+        "lcp": [
+          {
+            "value": 0,
+            "duration": 0,
+            "start": 4312,
+            "hadRecentInput": false
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "after-390-light-100",
+    "box": {
+      "height": 820,
+      "viewportHeight": 936,
+      "viewportWidth": 1363,
+      "width": 390,
+      "x": 479,
+      "y": 214.375
+    },
+    "state": {
+      "url": "https://dece1234-ali-gazal-site.aliicerikmedya.workers.dev/kontrol-bende-mi?review=12",
+      "width": 390,
+      "height": 820,
+      "theme": "light",
+      "progress": "1.0000",
+      "directed": true,
+      "overflow": false,
+      "h1Fits": true,
+      "textFits": true,
+      "h1Visible": true,
+      "matrix": [
+        4.768992130750605,
+        0,
+        0,
+        4.768992130750605,
+        -4283.834218466252,
+        -1571.8700152898236
+      ],
+      "center": {
+        "x": 171.50001525878906,
+        "y": 370.3599853515625
+      },
+      "coverage": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "sameTransform": true,
+      "maskCount": 0,
+      "bodyBackground": "rgb(245, 240, 231) none repeat scroll 0% 0% / auto padding-box border-box",
+      "stageBackground": "rgb(245, 240, 231)",
+      "worldOpacity": "0",
+      "markerCount": 0,
+      "footnote": false,
+      "foreground": "0",
+      "questionClip": "inset(0px 0%)",
+      "frame": {
+        "width": "315.56",
+        "height": "177.5025",
+        "opacity": "1"
+      },
+      "notes": 4,
+      "watchLinks": 0,
+      "errors": [],
+      "violations": [],
+      "metrics": {
+        "longTasks": [],
+        "shifts": [],
+        "lcp": [
+          {
+            "value": 0,
+            "duration": 0,
+            "start": 4312,
+            "hadRecentInput": false
+          },
+          {
+            "value": 0,
+            "duration": 0,
+            "start": 5600,
+            "hadRecentInput": false
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "sequence-390-light-18",
+    "box": {
+      "height": 820,
+      "viewportHeight": 936,
+      "viewportWidth": 1363,
+      "width": 390,
+      "x": 479,
+      "y": 214.375
+    },
+    "state": {
+      "url": "https://dece1234-ali-gazal-site.aliicerikmedya.workers.dev/kontrol-bende-mi?review=12",
+      "width": 390,
+      "height": 820,
+      "theme": "light",
+      "progress": "0.1801",
+      "directed": true,
+      "overflow": false,
+      "h1Fits": true,
+      "textFits": true,
+      "h1Visible": true,
+      "matrix": [
+        0.4176609879833157,
+        0,
+        0,
+        0.4176609879833157,
+        -156.3827843100338,
+        200.26502706236758
+      ],
+      "center": {
+        "x": 233.80853271484375,
+        "y": 370.362548828125
+      },
+      "coverage": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "sameTransform": true,
+      "maskCount": 0,
+      "bodyBackground": "rgb(245, 240, 231) none repeat scroll 0% 0% / auto padding-box border-box",
+      "stageBackground": "rgb(245, 240, 231)",
+      "worldOpacity": "1",
+      "markerCount": 0,
+      "footnote": false,
+      "foreground": "1",
+      "questionClip": "inset(0px 50%)",
+      "frame": {
+        "width": "315.56",
+        "height": "177.5025",
+        "opacity": "0"
+      },
+      "notes": 4,
+      "watchLinks": 0,
+      "errors": [],
+      "violations": [],
+      "metrics": {
+        "longTasks": [],
+        "shifts": [],
+        "lcp": [
+          {
+            "value": 0,
+            "duration": 0,
+            "start": 4312,
+            "hadRecentInput": false
+          },
+          {
+            "value": 0,
+            "duration": 0,
+            "start": 5600,
+            "hadRecentInput": false
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "sequence-390-light-20",
+    "box": {
+      "height": 820,
+      "viewportHeight": 936,
+      "viewportWidth": 1363,
+      "width": 390,
+      "x": 479,
+      "y": 214.375
+    },
+    "state": {
+      "url": "https://dece1234-ali-gazal-site.aliicerikmedya.workers.dev/kontrol-bende-mi?review=12",
+      "width": 390,
+      "height": 820,
+      "theme": "light",
+      "progress": "0.2002",
+      "directed": true,
+      "overflow": false,
+      "h1Fits": true,
+      "textFits": true,
+      "h1Visible": true,
+      "matrix": [
+        0.5141535059303117,
+        0,
+        0,
+        0.5141535059303117,
+        -255.68426240269844,
+        160.96687239307468
+      ],
+      "center": {
+        "x": 224.65322875976562,
+        "y": 370.3621520996094
+      },
+      "coverage": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "sameTransform": true,
+      "maskCount": 0,
+      "bodyBackground": "rgb(245, 240, 231) none repeat scroll 0% 0% / auto padding-box border-box",
+      "stageBackground": "rgb(245, 240, 231)",
+      "worldOpacity": "1",
+      "markerCount": 0,
+      "footnote": false,
+      "foreground": "1",
+      "questionClip": "inset(0px 50%)",
+      "frame": {
+        "width": "315.56",
+        "height": "177.5025",
+        "opacity": "0"
+      },
+      "notes": 4,
+      "watchLinks": 0,
+      "errors": [],
+      "violations": [],
+      "metrics": {
+        "longTasks": [],
+        "shifts": [],
+        "lcp": [
+          {
+            "value": 0,
+            "duration": 0,
+            "start": 4312,
+            "hadRecentInput": false
+          },
+          {
+            "value": 0,
+            "duration": 0,
+            "start": 5600,
+            "hadRecentInput": false
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "sequence-390-light-22",
+    "box": {
+      "height": 820,
+      "viewportHeight": 936,
+      "viewportWidth": 1363,
+      "width": 390,
+      "x": 479,
+      "y": 214.375
+    },
+    "state": {
+      "url": "https://dece1234-ali-gazal-site.aliicerikmedya.workers.dev/kontrol-bende-mi?review=12",
+      "width": 390,
+      "height": 820,
+      "theme": "light",
+      "progress": "0.2198",
+      "directed": true,
+      "overflow": false,
+      "h1Fits": true,
+      "textFits": true,
+      "h1Visible": true,
+      "matrix": [
+        0.6440024017999016,
+        0,
+        0,
+        0.6440024017999016,
+        -386.4638932345855,
+        108.08391402939617
+      ],
+      "center": {
+        "x": 215.1822967529297,
+        "y": 370.3617248535156
+      },
+      "coverage": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "sameTransform": true,
+      "maskCount": 0,
+      "bodyBackground": "rgb(245, 240, 231) none repeat scroll 0% 0% / auto padding-box border-box",
+      "stageBackground": "rgb(245, 240, 231)",
+      "worldOpacity": "1",
+      "markerCount": 0,
+      "footnote": false,
+      "foreground": "1",
+      "questionClip": "inset(0px 50%)",
+      "frame": {
+        "width": "315.56",
+        "height": "177.5025",
+        "opacity": "0"
+      },
+      "notes": 4,
+      "watchLinks": 0,
+      "errors": [],
+      "violations": [],
+      "metrics": {
+        "longTasks": [],
+        "shifts": [],
+        "lcp": [
+          {
+            "value": 0,
+            "duration": 0,
+            "start": 4312,
+            "hadRecentInput": false
+          },
+          {
+            "value": 0,
+            "duration": 0,
+            "start": 5600,
+            "hadRecentInput": false
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "sequence-390-light-24",
+    "box": {
+      "height": 820,
+      "viewportHeight": 936,
+      "viewportWidth": 1363,
+      "width": 390,
+      "x": 479,
+      "y": 214.375
+    },
+    "state": {
+      "url": "https://dece1234-ali-gazal-site.aliicerikmedya.workers.dev/kontrol-bende-mi?review=12",
+      "width": 390,
+      "height": 820,
+      "theme": "light",
+      "progress": "0.2399",
+      "directed": true,
+      "overflow": false,
+      "h1Fits": true,
+      "textFits": true,
+      "h1Visible": true,
+      "matrix": [
+        0.8268271531666163,
+        0,
+        0,
+        0.8268271531666163,
+        -567.1778674552862,
+        33.625985872947524
+      ],
+      "center": {
+        "x": 205.26864624023438,
+        "y": 370.36138916015625
+      },
+      "coverage": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "sameTransform": true,
+      "maskCount": 0,
+      "bodyBackground": "rgb(245, 240, 231) none repeat scroll 0% 0% / auto padding-box border-box",
+      "stageBackground": "rgb(245, 240, 231)",
+      "worldOpacity": "1",
+      "markerCount": 0,
+      "footnote": false,
+      "foreground": "1",
+      "questionClip": "inset(0px 50%)",
+      "frame": {
+        "width": "315.56",
+        "height": "177.5025",
+        "opacity": "0"
+      },
+      "notes": 4,
+      "watchLinks": 0,
+      "errors": [],
+      "violations": [],
+      "metrics": {
+        "longTasks": [],
+        "shifts": [],
+        "lcp": [
+          {
+            "value": 0,
+            "duration": 0,
+            "start": 4312,
+            "hadRecentInput": false
+          },
+          {
+            "value": 0,
+            "duration": 0,
+            "start": 5600,
+            "hadRecentInput": false
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "sequence-390-light-26",
+    "box": {
+      "height": 820,
+      "viewportHeight": 936,
+      "viewportWidth": 1363,
+      "width": 390,
+      "x": 479,
+      "y": 214.375
+    },
+    "state": {
+      "url": "https://dece1234-ali-gazal-site.aliicerikmedya.workers.dev/kontrol-bende-mi?review=12",
+      "width": 390,
+      "height": 820,
+      "theme": "light",
+      "progress": "0.2601",
+      "directed": true,
+      "overflow": false,
+      "h1Fits": true,
+      "textFits": true,
+      "h1Visible": true,
+      "matrix": [
+        1.0719403504748033,
+        0,
+        0,
+        1.0719403504748033,
+        -805.6997286078429,
+        -66.19978668730141
+      ],
+      "center": {
+        "x": 195.7388153076172,
+        "y": 370.3609619140625
+      },
+      "coverage": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "sameTransform": true,
+      "maskCount": 0,
+      "bodyBackground": "rgb(245, 240, 231) none repeat scroll 0% 0% / auto padding-box border-box",
+      "stageBackground": "rgb(245, 240, 231)",
+      "worldOpacity": "1",
+      "markerCount": 0,
+      "footnote": false,
+      "foreground": "1",
+      "questionClip": "inset(0px 50%)",
+      "frame": {
+        "width": "315.56",
+        "height": "177.5025",
+        "opacity": "0"
+      },
+      "notes": 4,
+      "watchLinks": 0,
+      "errors": [],
+      "violations": [],
+      "metrics": {
+        "longTasks": [],
+        "shifts": [],
+        "lcp": [
+          {
+            "value": 0,
+            "duration": 0,
+            "start": 4312,
+            "hadRecentInput": false
+          },
+          {
+            "value": 0,
+            "duration": 0,
+            "start": 5600,
+            "hadRecentInput": false
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "sequence-390-light-28",
+    "box": {
+      "height": 820,
+      "viewportHeight": 936,
+      "viewportWidth": 1363,
+      "width": 390,
+      "x": 479,
+      "y": 214.375
+    },
+    "state": {
+      "url": "https://dece1234-ali-gazal-site.aliicerikmedya.workers.dev/kontrol-bende-mi?review=12",
+      "width": 390,
+      "height": 820,
+      "theme": "light",
+      "progress": "0.2803",
+      "directed": true,
+      "overflow": false,
+      "h1Fits": true,
+      "textFits": true,
+      "h1Visible": true,
+      "matrix": [
+        1.3923583688805237,
+        0,
+        0,
+        1.3923583688805237,
+        -1113.6714170885432,
+        -196.69419576353948
+      ],
+      "center": {
+        "x": 187.11117553710938,
+        "y": 370.3606872558594
+      },
+      "coverage": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "sameTransform": true,
+      "maskCount": 0,
+      "bodyBackground": "rgb(245, 240, 231) none repeat scroll 0% 0% / auto padding-box border-box",
+      "stageBackground": "rgb(245, 240, 231)",
+      "worldOpacity": "1",
+      "markerCount": 0,
+      "footnote": false,
+      "foreground": "1",
+      "questionClip": "inset(0px 50%)",
+      "frame": {
+        "width": "315.56",
+        "height": "177.5025",
+        "opacity": "0"
+      },
+      "notes": 4,
+      "watchLinks": 0,
+      "errors": [],
+      "violations": [],
+      "metrics": {
+        "longTasks": [],
+        "shifts": [],
+        "lcp": [
+          {
+            "value": 0,
+            "duration": 0,
+            "start": 4312,
+            "hadRecentInput": false
+          },
+          {
+            "value": 0,
+            "duration": 0,
+            "start": 5600,
+            "hadRecentInput": false
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "sequence-390-light-30",
+    "box": {
+      "height": 820,
+      "viewportHeight": 936,
+      "viewportWidth": 1363,
+      "width": 390,
+      "x": 479,
+      "y": 214.375
+    },
+    "state": {
+      "url": "https://dece1234-ali-gazal-site.aliicerikmedya.workers.dev/kontrol-bende-mi?review=12",
+      "width": 390,
+      "height": 820,
+      "theme": "light",
+      "progress": "0.2998",
+      "directed": true,
+      "overflow": false,
+      "h1Fits": true,
+      "textFits": true,
+      "h1Visible": true,
+      "matrix": [
+        1.7833921418640284,
+        0,
+        0,
+        1.7833921418640284,
+        -1485.9888601233827,
+        -355.94780407921735
+      ],
+      "center": {
+        "x": 180.10910034179688,
+        "y": 370.3603210449219
+      },
+      "coverage": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "sameTransform": true,
+      "maskCount": 0,
+      "bodyBackground": "rgb(245, 240, 231) none repeat scroll 0% 0% / auto padding-box border-box",
+      "stageBackground": "rgb(245, 240, 231)",
+      "worldOpacity": "1",
+      "markerCount": 0,
+      "footnote": false,
+      "foreground": "1",
+      "questionClip": "inset(0px 50%)",
+      "frame": {
+        "width": "315.56",
+        "height": "177.5025",
+        "opacity": "0"
+      },
+      "notes": 4,
+      "watchLinks": 0,
+      "errors": [],
+      "violations": [],
+      "metrics": {
+        "longTasks": [],
+        "shifts": [],
+        "lcp": [
+          {
+            "value": 0,
+            "duration": 0,
+            "start": 4312,
+            "hadRecentInput": false
+          },
+          {
+            "value": 0,
+            "duration": 0,
+            "start": 5600,
+            "hadRecentInput": false
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "sequence-390-light-32",
+    "box": {
+      "height": 820,
+      "viewportHeight": 936,
+      "viewportWidth": 1363,
+      "width": 390,
+      "x": 479,
+      "y": 214.375
+    },
+    "state": {
+      "url": "https://dece1234-ali-gazal-site.aliicerikmedya.workers.dev/kontrol-bende-mi?review=12",
+      "width": 390,
+      "height": 820,
+      "theme": "light",
+      "progress": "0.3200",
+      "directed": true,
+      "overflow": false,
+      "h1Fits": true,
+      "textFits": true,
+      "h1Visible": true,
+      "matrix": [
+        2.2725423669699607,
+        0,
+        0,
+        2.2725423669699607,
+        -1948.306315350475,
+        -555.1604102183197
+      ],
+      "center": {
+        "x": 174.77032470703125,
+        "y": 370.3600769042969
+      },
+      "coverage": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "sameTransform": true,
+      "maskCount": 0,
+      "bodyBackground": "rgb(245, 240, 231) none repeat scroll 0% 0% / auto padding-box border-box",
+      "stageBackground": "rgb(245, 240, 231)",
+      "worldOpacity": "1",
+      "markerCount": 0,
+      "footnote": false,
+      "foreground": "1",
+      "questionClip": "inset(0px 50%)",
+      "frame": {
+        "width": "315.56",
+        "height": "177.5025",
+        "opacity": "0"
+      },
+      "notes": 4,
+      "watchLinks": 0,
+      "errors": [],
+      "violations": [],
+      "metrics": {
+        "longTasks": [],
+        "shifts": [],
+        "lcp": [
+          {
+            "value": 0,
+            "duration": 0,
+            "start": 4312,
+            "hadRecentInput": false
+          },
+          {
+            "value": 0,
+            "duration": 0,
+            "start": 5600,
+            "hadRecentInput": false
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "sequence-390-light-34",
+    "box": {
+      "height": 820,
+      "viewportHeight": 936,
+      "viewportWidth": 1363,
+      "width": 390,
+      "x": 479,
+      "y": 214.375
+    },
+    "state": {
+      "url": "https://dece1234-ali-gazal-site.aliicerikmedya.workers.dev/kontrol-bende-mi?review=12",
+      "width": 390,
+      "height": 820,
+      "theme": "light",
+      "progress": "0.3402",
+      "directed": true,
+      "overflow": false,
+      "h1Fits": true,
+      "textFits": true,
+      "h1Visible": true,
+      "matrix": [
+        2.8346585696315074,
+        0,
+        0,
+        2.8346585696315074,
+        -2476.3501727309704,
+        -784.0891832254702
+      ],
+      "center": {
+        "x": 171.8721466064453,
+        "y": 370.3599853515625
+      },
+      "coverage": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "sameTransform": true,
+      "maskCount": 0,
+      "bodyBackground": "rgb(245, 240, 231) none repeat scroll 0% 0% / auto padding-box border-box",
+      "stageBackground": "rgb(245, 240, 231)",
+      "worldOpacity": "1",
+      "markerCount": 0,
+      "footnote": false,
+      "foreground": "1",
+      "questionClip": "inset(0px 50%)",
+      "frame": {
+        "width": "315.56",
+        "height": "177.5025",
+        "opacity": "0"
+      },
+      "notes": 4,
+      "watchLinks": 0,
+      "errors": [],
+      "violations": [],
+      "metrics": {
+        "longTasks": [],
+        "shifts": [],
+        "lcp": [
+          {
+            "value": 0,
+            "duration": 0,
+            "start": 4312,
+            "hadRecentInput": false
+          },
+          {
+            "value": 0,
+            "duration": 0,
+            "start": 5600,
+            "hadRecentInput": false
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "sequence-390-light-36",
+    "box": {
+      "height": 820,
+      "viewportHeight": 936,
+      "viewportWidth": 1363,
+      "width": 390,
+      "x": 479,
+      "y": 214.375
+    },
+    "state": {
+      "url": "https://dece1234-ali-gazal-site.aliicerikmedya.workers.dev/kontrol-bende-mi?review=12",
+      "width": 390,
+      "height": 820,
+      "theme": "light",
+      "progress": "0.3603",
+      "directed": true,
+      "overflow": false,
+      "h1Fits": true,
+      "textFits": true,
+      "h1Visible": true,
+      "matrix": [
+        3.4340737552966103,
+        0,
+        0,
+        3.4340737552966103,
+        -3036.713825807733,
+        -1028.2082488496426
+      ],
+      "center": {
+        "x": 171.49998474121094,
+        "y": 370.3600158691406
+      },
+      "coverage": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "sameTransform": true,
+      "maskCount": 0,
+      "bodyBackground": "rgb(245, 240, 231) none repeat scroll 0% 0% / auto padding-box border-box",
+      "stageBackground": "rgb(245, 240, 231)",
+      "worldOpacity": "1",
+      "markerCount": 0,
+      "footnote": false,
+      "foreground": "1",
+      "questionClip": "inset(0px 50%)",
+      "frame": {
+        "width": "315.56",
+        "height": "177.5025",
+        "opacity": "0"
+      },
+      "notes": 4,
+      "watchLinks": 0,
+      "errors": [],
+      "violations": [],
+      "metrics": {
+        "longTasks": [],
+        "shifts": [],
+        "lcp": [
+          {
+            "value": 0,
+            "duration": 0,
+            "start": 4312,
+            "hadRecentInput": false
+          },
+          {
+            "value": 0,
+            "duration": 0,
+            "start": 5600,
+            "hadRecentInput": false
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "sequence-390-light-38",
+    "box": {
+      "height": 820,
+      "viewportHeight": 936,
+      "viewportWidth": 1363,
+      "width": 390,
+      "x": 479,
+      "y": 214.375
+    },
+    "state": {
+      "url": "https://dece1234-ali-gazal-site.aliicerikmedya.workers.dev/kontrol-bende-mi?review=12",
+      "width": 390,
+      "height": 820,
+      "theme": "light",
+      "progress": "0.3799",
+      "directed": true,
+      "overflow": false,
+      "h1Fits": true,
+      "textFits": true,
+      "h1Visible": true,
+      "matrix": [
+        3.9916474940413136,
+        0,
+        0,
+        3.9916474940413136,
+        -3557.615769208488,
+        -1255.2869831667108
+      ],
+      "center": {
+        "x": 171.5,
+        "y": 370.3599853515625
+      },
+      "coverage": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "sameTransform": true,
+      "maskCount": 0,
+      "bodyBackground": "rgb(245, 240, 231) none repeat scroll 0% 0% / auto padding-box border-box",
+      "stageBackground": "rgb(245, 240, 231)",
+      "worldOpacity": "1",
+      "markerCount": 0,
+      "footnote": false,
+      "foreground": "1",
+      "questionClip": "inset(0px 50%)",
+      "frame": {
+        "width": "315.56",
+        "height": "177.5025",
+        "opacity": "0"
+      },
+      "notes": 4,
+      "watchLinks": 0,
+      "errors": [],
+      "violations": [],
+      "metrics": {
+        "longTasks": [],
+        "shifts": [],
+        "lcp": [
+          {
+            "value": 0,
+            "duration": 0,
+            "start": 4312,
+            "hadRecentInput": false
+          },
+          {
+            "value": 0,
+            "duration": 0,
+            "start": 5600,
+            "hadRecentInput": false
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "sequence-390-light-40",
+    "box": {
+      "height": 820,
+      "viewportHeight": 936,
+      "viewportWidth": 1363,
+      "width": 390,
+      "x": 479,
+      "y": 214.375
+    },
+    "state": {
+      "url": "https://dece1234-ali-gazal-site.aliicerikmedya.workers.dev/kontrol-bende-mi?review=12",
+      "width": 390,
+      "height": 820,
+      "theme": "light",
+      "progress": "0.4000",
+      "directed": true,
+      "overflow": false,
+      "h1Fits": true,
+      "textFits": true,
+      "h1Visible": true,
+      "matrix": [
+        4.4624363342728515,
+        0,
+        0,
+        4.4624363342728515,
+        -3997.440721710427,
+        -1447.0214600643872
+      ],
+      "center": {
+        "x": 171.49998474121094,
+        "y": 370.3599853515625
+      },
+      "coverage": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "sameTransform": true,
+      "maskCount": 0,
+      "bodyBackground": "rgb(245, 240, 231) none repeat scroll 0% 0% / auto padding-box border-box",
+      "stageBackground": "rgb(245, 240, 231)",
+      "worldOpacity": "1",
+      "markerCount": 0,
+      "footnote": false,
+      "foreground": "1",
+      "questionClip": "inset(0px 50%)",
+      "frame": {
+        "width": "315.56",
+        "height": "177.5025",
+        "opacity": "0"
+      },
+      "notes": 4,
+      "watchLinks": 0,
+      "errors": [],
+      "violations": [],
+      "metrics": {
+        "longTasks": [],
+        "shifts": [],
+        "lcp": [
+          {
+            "value": 0,
+            "duration": 0,
+            "start": 4312,
+            "hadRecentInput": false
+          },
+          {
+            "value": 0,
+            "duration": 0,
+            "start": 5600,
+            "hadRecentInput": false
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "before-1440-dark-20",
+    "box": {
+      "height": 762.484375,
+      "viewportHeight": 936,
+      "viewportWidth": 1363,
+      "width": 1339,
+      "x": 4.5,
+      "y": 214.375
+    },
+    "state": {
+      "url": "https://747942f3-ali-gazal-site.aliicerikmedya.workers.dev/baseline-control?review=34",
+      "width": 1440,
+      "height": 820,
+      "theme": "dark",
+      "progress": "0.2003",
+      "directed": true,
+      "overflow": false,
+      "h1Fits": true,
+      "textFits": true,
+      "h1Visible": true,
+      "matrix": [
+        1.0633518695831299,
+        0,
+        0,
+        1.0633518695831299,
+        -298.89093017578125,
+        -62.69819641113281
+      ],
+      "center": {
+        "x": 694.5239868164062,
+        "y": 370.3647766113281
+      },
+      "coverage": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "sameTransform": true,
+      "maskCount": 1,
+      "bodyBackground": "radial-gradient(at 90% 5%, rgba(255, 134, 31, 0.17), rgba(0, 0, 0, 0) 608px) repeat scroll 0% 0% / auto padding-box border-box, repeating-linear-gradient(0deg, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 4px, rgba(255, 255, 255, 0.01) 4px, rgba(255, 255, 255, 0.01) 5px) repeat scroll 0% 0% / auto padding-box border-box, rgb(11, 11, 10) none repeat scroll 0% 0% / auto padding-box border-box",
+      "stageBackground": "rgb(11, 11, 10)",
+      "worldOpacity": "1",
+      "markerCount": 12,
+      "footnote": true,
+      "foreground": "1",
+      "questionClip": "inset(0px 50%)",
+      "frame": {
+        "width": "1000",
+        "height": "562.5",
+        "opacity": "0"
+      },
+      "notes": 4,
+      "watchLinks": 0,
+      "errors": [],
+      "violations": [],
+      "metrics": {
+        "longTasks": [],
+        "shifts": [],
+        "lcp": []
+      }
+    }
+  },
+  {
+    "name": "before-1440-dark-30",
+    "box": {
+      "height": 762.484375,
+      "viewportHeight": 936,
+      "viewportWidth": 1363,
+      "width": 1339,
+      "x": 4.5,
+      "y": 214.375
+    },
+    "state": {
+      "url": "https://747942f3-ali-gazal-site.aliicerikmedya.workers.dev/baseline-control?review=34",
+      "width": 1440,
+      "height": 820,
+      "theme": "dark",
+      "progress": "0.2999",
+      "directed": true,
+      "overflow": false,
+      "h1Fits": true,
+      "textFits": true,
+      "h1Visible": true,
+      "matrix": [
+        3.1705870628356934,
+        0,
+        0,
+        3.1705870628356934,
+        -2366.903076171875,
+        -920.8993530273438
+      ],
+      "center": {
+        "x": 595.1536254882812,
+        "y": 370.3607482910156
+      },
+      "coverage": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "sameTransform": true,
+      "maskCount": 1,
+      "bodyBackground": "radial-gradient(at 90% 5%, rgba(255, 134, 31, 0.17), rgba(0, 0, 0, 0) 608px) repeat scroll 0% 0% / auto padding-box border-box, repeating-linear-gradient(0deg, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 4px, rgba(255, 255, 255, 0.01) 4px, rgba(255, 255, 255, 0.01) 5px) repeat scroll 0% 0% / auto padding-box border-box, rgb(11, 11, 10) none repeat scroll 0% 0% / auto padding-box border-box",
+      "stageBackground": "rgb(11, 11, 10)",
+      "worldOpacity": "1",
+      "markerCount": 12,
+      "footnote": true,
+      "foreground": "1",
+      "questionClip": "inset(0px 50%)",
+      "frame": {
+        "width": "1000",
+        "height": "562.5",
+        "opacity": "0"
+      },
+      "notes": 4,
+      "watchLinks": 0,
+      "errors": [],
+      "violations": [],
+      "metrics": {
+        "longTasks": [],
+        "shifts": [],
+        "lcp": [
+          {
+            "value": 0,
+            "duration": 0,
+            "start": 4232,
+            "hadRecentInput": false
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "before-1440-dark-52",
+    "box": {
+      "height": 762.484375,
+      "viewportHeight": 936,
+      "viewportWidth": 1363,
+      "width": 1339,
+      "x": 4.5,
+      "y": 214.375
+    },
+    "state": {
+      "url": "https://747942f3-ali-gazal-site.aliicerikmedya.workers.dev/baseline-control?review=34",
+      "width": 1440,
+      "height": 820,
+      "theme": "dark",
+      "progress": "0.5199",
+      "directed": true,
+      "overflow": false,
+      "h1Fits": true,
+      "textFits": true,
+      "h1Visible": true,
+      "matrix": [
+        7.515320777893066,
+        0,
+        0,
+        7.515320777893066,
+        -6445.0361328125,
+        -2690.345703125
+      ],
+      "center": {
+        "x": 576,
+        "y": 370.3599548339844
+      },
+      "coverage": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "sameTransform": true,
+      "maskCount": 1,
+      "bodyBackground": "radial-gradient(at 90% 5%, rgba(255, 134, 31, 0.17), rgba(0, 0, 0, 0) 608px) repeat scroll 0% 0% / auto padding-box border-box, repeating-linear-gradient(0deg, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 4px, rgba(255, 255, 255, 0.01) 4px, rgba(255, 255, 255, 0.01) 5px) repeat scroll 0% 0% / auto padding-box border-box, rgb(11, 11, 10) none repeat scroll 0% 0% / auto padding-box border-box",
+      "stageBackground": "rgb(11, 11, 10)",
+      "worldOpacity": "1",
+      "markerCount": 12,
+      "footnote": true,
+      "foreground": "0",
+      "questionClip": "inset(0px 50%)",
+      "frame": {
+        "width": "1000",
+        "height": "562.5",
+        "opacity": "0"
+      },
+      "notes": 4,
+      "watchLinks": 0,
+      "errors": [],
+      "violations": [],
+      "metrics": {
+        "longTasks": [],
+        "shifts": [],
+        "lcp": [
+          {
+            "value": 0,
+            "duration": 0,
+            "start": 4232,
+            "hadRecentInput": false
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "before-1440-dark-80",
+    "box": {
+      "height": 762.484375,
+      "viewportHeight": 936,
+      "viewportWidth": 1363,
+      "width": 1339,
+      "x": 4.5,
+      "y": 214.375
+    },
+    "state": {
+      "url": "https://747942f3-ali-gazal-site.aliicerikmedya.workers.dev/baseline-control?review=34",
+      "width": 1440,
+      "height": 820,
+      "theme": "dark",
+      "progress": "0.8003",
+      "directed": true,
+      "overflow": false,
+      "h1Fits": true,
+      "textFits": true,
+      "h1Visible": true,
+      "matrix": [
+        7.515320777893066,
+        0,
+        0,
+        7.515320777893066,
+        -6445.0361328125,
+        -2690.345703125
+      ],
+      "center": {
+        "x": 576,
+        "y": 370.3599548339844
+      },
+      "coverage": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "sameTransform": true,
+      "maskCount": 1,
+      "bodyBackground": "radial-gradient(at 90% 5%, rgba(255, 134, 31, 0.17), rgba(0, 0, 0, 0) 608px) repeat scroll 0% 0% / auto padding-box border-box, repeating-linear-gradient(0deg, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 4px, rgba(255, 255, 255, 0.01) 4px, rgba(255, 255, 255, 0.01) 5px) repeat scroll 0% 0% / auto padding-box border-box, rgb(11, 11, 10) none repeat scroll 0% 0% / auto padding-box border-box",
+      "stageBackground": "rgb(11, 11, 10)",
+      "worldOpacity": "1",
+      "markerCount": 12,
+      "footnote": true,
+      "foreground": "0",
+      "questionClip": "inset(0px 5.1171%)",
+      "frame": {
+        "width": "1000",
+        "height": "562.5",
+        "opacity": "0"
+      },
+      "notes": 4,
+      "watchLinks": 0,
+      "errors": [],
+      "violations": [],
+      "metrics": {
+        "longTasks": [],
+        "shifts": [],
+        "lcp": [
+          {
+            "value": 0,
+            "duration": 0,
+            "start": 4232,
+            "hadRecentInput": false
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "before-1440-dark-100",
+    "box": {
+      "height": 762.484375,
+      "viewportHeight": 936,
+      "viewportWidth": 1363,
+      "width": 1339,
+      "x": 4.5,
+      "y": 214.375
+    },
+    "state": {
+      "url": "https://747942f3-ali-gazal-site.aliicerikmedya.workers.dev/baseline-control?review=34",
+      "width": 1440,
+      "height": 820,
+      "theme": "dark",
+      "progress": "1.0000",
+      "directed": true,
+      "overflow": false,
+      "h1Fits": true,
+      "textFits": true,
+      "h1Visible": true,
+      "matrix": [
+        7.515320777893066,
+        0,
+        0,
+        7.515320777893066,
+        -6445.0361328125,
+        -2690.345703125
+      ],
+      "center": {
+        "x": 576,
+        "y": 370.3599548339844
+      },
+      "coverage": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "sameTransform": true,
+      "maskCount": 1,
+      "bodyBackground": "radial-gradient(at 90% 5%, rgba(255, 134, 31, 0.17), rgba(0, 0, 0, 0) 608px) repeat scroll 0% 0% / auto padding-box border-box, repeating-linear-gradient(0deg, rgba(0, 0, 0, 0) 0px, rgba(0, 0, 0, 0) 4px, rgba(255, 255, 255, 0.01) 4px, rgba(255, 255, 255, 0.01) 5px) repeat scroll 0% 0% / auto padding-box border-box, rgb(11, 11, 10) none repeat scroll 0% 0% / auto padding-box border-box",
+      "stageBackground": "rgb(11, 11, 10)",
+      "worldOpacity": "1",
+      "markerCount": 12,
+      "footnote": true,
+      "foreground": "0",
+      "questionClip": "inset(0px 0%)",
+      "frame": {
+        "width": "1000",
+        "height": "562.5",
+        "opacity": "1"
+      },
+      "notes": 4,
+      "watchLinks": 0,
+      "errors": [],
+      "violations": [],
+      "metrics": {
+        "longTasks": [],
+        "shifts": [],
+        "lcp": [
+          {
+            "value": 0,
+            "duration": 0,
+            "start": 4232,
+            "hadRecentInput": false
+          },
+          {
+            "value": 0,
+            "duration": 0,
+            "start": 5520,
+            "hadRecentInput": false
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "after-1440-dark-20",
+    "box": {
+      "height": 762.484375,
+      "viewportHeight": 936,
+      "viewportWidth": 1363,
+      "width": 1339,
+      "x": 4.5,
+      "y": 214.375
+    },
+    "state": {
+      "url": "https://dece1234-ali-gazal-site.aliicerikmedya.workers.dev/kontrol-bende-mi?review=13",
+      "width": 1440,
+      "height": 820,
+      "theme": "dark",
+      "progress": "0.2003",
+      "directed": true,
+      "overflow": false,
+      "h1Fits": true,
+      "textFits": true,
+      "h1Visible": true,
+      "matrix": [
+        1.0633518320596247,
+        0,
+        0,
+        1.0633518320596247,
+        -298.89085583998553,
+        -62.698138738082605
+      ],
+      "center": {
+        "x": 694.5240478515625,
+        "y": 370.36480712890625
+      },
+      "coverage": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "sameTransform": true,
+      "maskCount": 0,
+      "bodyBackground": "rgb(11, 11, 10) none repeat scroll 0% 0% / auto padding-box border-box",
+      "stageBackground": "rgb(11, 11, 10)",
+      "worldOpacity": "1",
+      "markerCount": 0,
+      "footnote": false,
+      "foreground": "1",
+      "questionClip": "inset(0px 50%)",
+      "frame": {
+        "width": "1000",
+        "height": "562.5",
+        "opacity": "0"
+      },
+      "notes": 4,
+      "watchLinks": 0,
+      "errors": [],
+      "violations": [],
+      "metrics": {
+        "longTasks": [],
+        "shifts": [],
+        "lcp": []
+      }
+    }
+  },
+  {
+    "name": "after-1440-dark-30",
+    "box": {
+      "height": 762.484375,
+      "viewportHeight": 936,
+      "viewportWidth": 1363,
+      "width": 1339,
+      "x": 4.5,
+      "y": 214.375
+    },
+    "state": {
+      "url": "https://dece1234-ali-gazal-site.aliicerikmedya.workers.dev/kontrol-bende-mi?review=13",
+      "width": 1440,
+      "height": 820,
+      "theme": "dark",
+      "progress": "0.2999",
+      "directed": true,
+      "overflow": false,
+      "h1Fits": true,
+      "textFits": true,
+      "h1Visible": true,
+      "matrix": [
+        3.1705869069688255,
+        0,
+        0,
+        3.1705869069688255,
+        -2366.9029223278126,
+        -920.8992754402807
+      ],
+      "center": {
+        "x": 595.1536254882812,
+        "y": 370.36077880859375
+      },
+      "coverage": [
+        false,
+        false,
+        false,
+        false
+      ],
+      "sameTransform": true,
+      "maskCount": 0,
+      "bodyBackground": "rgb(11, 11, 10) none repeat scroll 0% 0% / auto padding-box border-box",
+      "stageBackground": "rgb(11, 11, 10)",
+      "worldOpacity": "1",
+      "markerCount": 0,
+      "footnote": false,
+      "foreground": "1",
+      "questionClip": "inset(0px 50%)",
+      "frame": {
+        "width": "1000",
+        "height": "562.5",
+        "opacity": "0"
+      },
+      "notes": 4,
+      "watchLinks": 0,
+      "errors": [],
+      "violations": [],
+      "metrics": {
+        "longTasks": [],
+        "shifts": [],
+        "lcp": [
+          {
+            "value": 0,
+            "duration": 0,
+            "start": 4252,
+            "hadRecentInput": false
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "after-1440-dark-52",
+    "box": {
+      "height": 762.484375,
+      "viewportHeight": 936,
+      "viewportWidth": 1363,
+      "width": 1339,
+      "x": 4.5,
+      "y": 214.375
+    },
+    "state": {
+      "url": "https://dece1234-ali-gazal-site.aliicerikmedya.workers.dev/kontrol-bende-mi?review=13",
+      "width": 1440,
+      "height": 820,
+      "theme": "dark",
+      "progress": "0.5199",
+      "directed": true,
+      "overflow": false,
+      "h1Fits": true,
+      "textFits": true,
+      "h1Visible": true,
+      "matrix": [
+        7.515321745422216,
+        0,
+        0,
+        7.515321745422216,
+        -6445.037057945861,
+        -2690.3461169226694
+      ],
+      "center": {
+        "x": 575.9999389648438,
+        "y": 370.3600158691406
+      },
+      "coverage": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "sameTransform": true,
+      "maskCount": 0,
+      "bodyBackground": "rgb(11, 11, 10) none repeat scroll 0% 0% / auto padding-box border-box",
+      "stageBackground": "rgb(11, 11, 10)",
+      "worldOpacity": "1",
+      "markerCount": 0,
+      "footnote": false,
+      "foreground": "0",
+      "questionClip": "inset(0px 50%)",
+      "frame": {
+        "width": "1000",
+        "height": "562.5",
+        "opacity": "0"
+      },
+      "notes": 4,
+      "watchLinks": 0,
+      "errors": [],
+      "violations": [],
+      "metrics": {
+        "longTasks": [],
+        "shifts": [],
+        "lcp": [
+          {
+            "value": 0,
+            "duration": 0,
+            "start": 4252,
+            "hadRecentInput": false
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "after-1440-dark-80",
+    "box": {
+      "height": 762.484375,
+      "viewportHeight": 936,
+      "viewportWidth": 1363,
+      "width": 1339,
+      "x": 4.5,
+      "y": 214.375
+    },
+    "state": {
+      "url": "https://dece1234-ali-gazal-site.aliicerikmedya.workers.dev/kontrol-bende-mi?review=13",
+      "width": 1440,
+      "height": 820,
+      "theme": "dark",
+      "progress": "0.8003",
+      "directed": true,
+      "overflow": false,
+      "h1Fits": true,
+      "textFits": true,
+      "h1Visible": true,
+      "matrix": [
+        7.515321745422216,
+        0,
+        0,
+        7.515321745422216,
+        -6445.037057945861,
+        -2690.3461169226694
+      ],
+      "center": {
+        "x": 575.9999389648438,
+        "y": 370.3600158691406
+      },
+      "coverage": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "sameTransform": true,
+      "maskCount": 0,
+      "bodyBackground": "rgb(11, 11, 10) none repeat scroll 0% 0% / auto padding-box border-box",
+      "stageBackground": "rgb(11, 11, 10)",
+      "worldOpacity": "0.0857513",
+      "markerCount": 0,
+      "footnote": false,
+      "foreground": "0",
+      "questionClip": "inset(0px 5.1171%)",
+      "frame": {
+        "width": "1000",
+        "height": "562.5",
+        "opacity": "0"
+      },
+      "notes": 4,
+      "watchLinks": 0,
+      "errors": [],
+      "violations": [],
+      "metrics": {
+        "longTasks": [],
+        "shifts": [],
+        "lcp": [
+          {
+            "value": 0,
+            "duration": 0,
+            "start": 4252,
+            "hadRecentInput": false
+          }
+        ]
+      }
+    }
+  },
+  {
+    "name": "after-1440-dark-100",
+    "box": {
+      "height": 762.484375,
+      "viewportHeight": 936,
+      "viewportWidth": 1363,
+      "width": 1339,
+      "x": 4.5,
+      "y": 214.375
+    },
+    "state": {
+      "url": "https://dece1234-ali-gazal-site.aliicerikmedya.workers.dev/kontrol-bende-mi?review=13",
+      "width": 1440,
+      "height": 820,
+      "theme": "dark",
+      "progress": "1.0000",
+      "directed": true,
+      "overflow": false,
+      "h1Fits": true,
+      "textFits": true,
+      "h1Visible": true,
+      "matrix": [
+        7.515321745422216,
+        0,
+        0,
+        7.515321745422216,
+        -6445.037057945861,
+        -2690.3461169226694
+      ],
+      "center": {
+        "x": 575.9999389648438,
+        "y": 370.3600158691406
+      },
+      "coverage": [
+        true,
+        true,
+        true,
+        true
+      ],
+      "sameTransform": true,
+      "maskCount": 0,
+      "bodyBackground": "rgb(11, 11, 10) none repeat scroll 0% 0% / auto padding-box border-box",
+      "stageBackground": "rgb(11, 11, 10)",
+      "worldOpacity": "0",
+      "markerCount": 0,
+      "footnote": false,
+      "foreground": "0",
+      "questionClip": "inset(0px 0%)",
+      "frame": {
+        "width": "1000",
+        "height": "562.5",
+        "opacity": "1"
+      },
+      "notes": 4,
+      "watchLinks": 0,
+      "errors": [],
+      "violations": [],
+      "metrics": {
+        "longTasks": [],
+        "shifts": [],
+        "lcp": [
+          {
+            "value": 0,
+            "duration": 0,
+            "start": 4252,
+            "hadRecentInput": false
+          },
+          {
+            "value": 0,
+            "duration": 0,
+            "start": 5484,
+            "hadRecentInput": false
+          }
+        ]
+      }
+    }
+  }
+]

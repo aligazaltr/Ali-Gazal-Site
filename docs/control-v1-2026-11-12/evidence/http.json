@@ -1,0 +1,328 @@
+{
+  "productPreview": "https://65ca165d-ali-gazal-site.aliicerikmedya.workers.dev",
+  "existing": {
+    "total": 33,
+    "failed": []
+  },
+  "new": {
+    "origin": "https://65ca165d-ali-gazal-site.aliicerikmedya.workers.dev",
+    "requests": [
+      {
+        "path": "/kontrol-bende-mi",
+        "requestedUrl": "https://65ca165d-ali-gazal-site.aliicerikmedya.workers.dev/kontrol-bende-mi",
+        "effectiveUrl": "https://65ca165d-ali-gazal-site.aliicerikmedya.workers.dev/kontrol-bende-mi",
+        "status": 200,
+        "curlExit": 0,
+        "error": null,
+        "headers": {
+          "content-type": "text/html",
+          "cache-control": "public, max-age=0, must-revalidate",
+          "x-robots-tag": "noindex",
+          "content-security-policy": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; worker-src 'none'",
+          "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=()",
+          "referrer-policy": "strict-origin-when-cross-origin",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "SAMEORIGIN"
+        },
+        "locations": [],
+        "bytes": 19450,
+        "sha256": "c8b585e7669581ed02a020276e8337eae452767721019a6745543451b48acfc2",
+        "sslVerifyResult": 0,
+        "nelPresent": true,
+        "setCookiePresent": false,
+        "checks": {
+          "reachable": true
+        },
+        "passed": true
+      },
+      {
+        "path": "/control-scene.js",
+        "requestedUrl": "https://65ca165d-ali-gazal-site.aliicerikmedya.workers.dev/control-scene.js",
+        "effectiveUrl": "https://65ca165d-ali-gazal-site.aliicerikmedya.workers.dev/control-scene.js",
+        "status": 200,
+        "curlExit": 0,
+        "error": null,
+        "headers": {
+          "content-type": "text/javascript",
+          "cache-control": "public, max-age=0, must-revalidate",
+          "x-robots-tag": "noindex",
+          "content-security-policy": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; worker-src 'none'",
+          "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=()",
+          "referrer-policy": "strict-origin-when-cross-origin",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "SAMEORIGIN"
+        },
+        "locations": [],
+        "bytes": 2204,
+        "sha256": "1b3e713c45312ae982182f11aa40b2ef057b7dae895d4412f5e6c58be0b197ce",
+        "sslVerifyResult": 0,
+        "nelPresent": true,
+        "setCookiePresent": false,
+        "checks": {
+          "reachable": true,
+          "exactAsset": true
+        },
+        "passed": true
+      },
+      {
+        "path": "/control-frames.js",
+        "requestedUrl": "https://65ca165d-ali-gazal-site.aliicerikmedya.workers.dev/control-frames.js",
+        "effectiveUrl": "https://65ca165d-ali-gazal-site.aliicerikmedya.workers.dev/control-frames.js",
+        "status": 200,
+        "curlExit": 0,
+        "error": null,
+        "headers": {
+          "content-type": "text/javascript",
+          "cache-control": "public, max-age=0, must-revalidate",
+          "x-robots-tag": "noindex",
+          "content-security-policy": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; worker-src 'none'",
+          "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=()",
+          "referrer-policy": "strict-origin-when-cross-origin",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "SAMEORIGIN"
+        },
+        "locations": [],
+        "bytes": 835,
+        "sha256": "ee333822b9a267663dccea9fbfdfd77798b7543b5240a856cc3ba6cccbed3d66",
+        "sslVerifyResult": 0,
+        "nelPresent": true,
+        "setCookiePresent": false,
+        "checks": {
+          "reachable": true,
+          "exactAsset": true
+        },
+        "passed": true
+      },
+      {
+        "path": "/control-scene.css",
+        "requestedUrl": "https://65ca165d-ali-gazal-site.aliicerikmedya.workers.dev/control-scene.css",
+        "effectiveUrl": "https://65ca165d-ali-gazal-site.aliicerikmedya.workers.dev/control-scene.css",
+        "status": 200,
+        "curlExit": 0,
+        "error": null,
+        "headers": {
+          "content-type": "text/css",
+          "cache-control": "public, max-age=0, must-revalidate",
+          "x-robots-tag": "noindex",
+          "content-security-policy": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; worker-src 'none'",
+          "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=()",
+          "referrer-policy": "strict-origin-when-cross-origin",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "SAMEORIGIN"
+        },
+        "locations": [],
+        "bytes": 9615,
+        "sha256": "531f9e7af75430290dd23a0e657937954ea978d497f2fefea35db2c19c1448f0",
+        "sslVerifyResult": 0,
+        "nelPresent": true,
+        "setCookiePresent": false,
+        "checks": {
+          "reachable": true,
+          "exactAsset": true
+        },
+        "passed": true
+      },
+      {
+        "path": "/kontrol-bende-mi-share.png",
+        "requestedUrl": "https://65ca165d-ali-gazal-site.aliicerikmedya.workers.dev/kontrol-bende-mi-share.png",
+        "effectiveUrl": "https://65ca165d-ali-gazal-site.aliicerikmedya.workers.dev/kontrol-bende-mi-share.png",
+        "status": 200,
+        "curlExit": 0,
+        "error": null,
+        "headers": {
+          "content-type": "image/png",
+          "cache-control": "public, max-age=0, must-revalidate",
+          "x-robots-tag": "noindex",
+          "content-security-policy": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; worker-src 'none'",
+          "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=()",
+          "referrer-policy": "strict-origin-when-cross-origin",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "SAMEORIGIN"
+        },
+        "locations": [],
+        "bytes": 33679,
+        "sha256": "bf54ec196837305c1ae7c7846be0f0ce8509a771e2156e3f8e09a5940afd1611",
+        "sslVerifyResult": 0,
+        "nelPresent": true,
+        "setCookiePresent": false,
+        "checks": {
+          "reachable": true,
+          "exactAsset": true
+        },
+        "passed": true
+      },
+      {
+        "path": "/control-qa",
+        "requestedUrl": "https://65ca165d-ali-gazal-site.aliicerikmedya.workers.dev/control-qa",
+        "effectiveUrl": "https://65ca165d-ali-gazal-site.aliicerikmedya.workers.dev/control-qa",
+        "status": 404,
+        "curlExit": 0,
+        "error": null,
+        "headers": {
+          "content-type": "text/html",
+          "cache-control": "public, max-age=0, must-revalidate",
+          "x-robots-tag": "noindex",
+          "content-security-policy": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; worker-src 'none'",
+          "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=()",
+          "referrer-policy": "strict-origin-when-cross-origin",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "SAMEORIGIN"
+        },
+        "locations": [],
+        "bytes": 2439,
+        "sha256": "e2ed1f10876ae30d1bf562ea46c17c37150aec5dcd1f95eac4c5ba9cdc84e7c4",
+        "sslVerifyResult": 0,
+        "nelPresent": true,
+        "setCookiePresent": false,
+        "checks": {
+          "reachable": false
+        },
+        "passed": true
+      },
+      {
+        "path": "/control-alternative",
+        "requestedUrl": "https://65ca165d-ali-gazal-site.aliicerikmedya.workers.dev/control-alternative",
+        "effectiveUrl": "https://65ca165d-ali-gazal-site.aliicerikmedya.workers.dev/control-alternative",
+        "status": 404,
+        "curlExit": 0,
+        "error": null,
+        "headers": {
+          "content-type": "text/html",
+          "cache-control": "public, max-age=0, must-revalidate",
+          "x-robots-tag": "noindex",
+          "content-security-policy": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; worker-src 'none'",
+          "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=()",
+          "referrer-policy": "strict-origin-when-cross-origin",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "SAMEORIGIN"
+        },
+        "locations": [],
+        "bytes": 2439,
+        "sha256": "e2ed1f10876ae30d1bf562ea46c17c37150aec5dcd1f95eac4c5ba9cdc84e7c4",
+        "sslVerifyResult": 0,
+        "nelPresent": true,
+        "setCookiePresent": false,
+        "checks": {
+          "reachable": false
+        },
+        "passed": true
+      },
+      {
+        "path": "/thumbnail-A.png",
+        "requestedUrl": "https://65ca165d-ali-gazal-site.aliicerikmedya.workers.dev/thumbnail-A.png",
+        "effectiveUrl": "https://65ca165d-ali-gazal-site.aliicerikmedya.workers.dev/thumbnail-A.png",
+        "status": 404,
+        "curlExit": 0,
+        "error": null,
+        "headers": {
+          "content-type": "text/html",
+          "cache-control": "public, max-age=0, must-revalidate",
+          "x-robots-tag": "noindex",
+          "content-security-policy": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; worker-src 'none'",
+          "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=()",
+          "referrer-policy": "strict-origin-when-cross-origin",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "SAMEORIGIN"
+        },
+        "locations": [],
+        "bytes": 2439,
+        "sha256": "e2ed1f10876ae30d1bf562ea46c17c37150aec5dcd1f95eac4c5ba9cdc84e7c4",
+        "sslVerifyResult": 0,
+        "nelPresent": true,
+        "setCookiePresent": false,
+        "checks": {
+          "reachable": false
+        },
+        "passed": true
+      },
+      {
+        "path": "/thumbnail-C.png",
+        "requestedUrl": "https://65ca165d-ali-gazal-site.aliicerikmedya.workers.dev/thumbnail-C.png",
+        "effectiveUrl": "https://65ca165d-ali-gazal-site.aliicerikmedya.workers.dev/thumbnail-C.png",
+        "status": 404,
+        "curlExit": 0,
+        "error": null,
+        "headers": {
+          "content-type": "text/html",
+          "cache-control": "public, max-age=0, must-revalidate",
+          "x-robots-tag": "noindex",
+          "content-security-policy": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; worker-src 'none'",
+          "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=()",
+          "referrer-policy": "strict-origin-when-cross-origin",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "SAMEORIGIN"
+        },
+        "locations": [],
+        "bytes": 2439,
+        "sha256": "e2ed1f10876ae30d1bf562ea46c17c37150aec5dcd1f95eac4c5ba9cdc84e7c4",
+        "sslVerifyResult": 0,
+        "nelPresent": true,
+        "setCookiePresent": false,
+        "checks": {
+          "reachable": false
+        },
+        "passed": true
+      },
+      {
+        "path": "/scripts/control-review/qa.js",
+        "requestedUrl": "https://65ca165d-ali-gazal-site.aliicerikmedya.workers.dev/scripts/control-review/qa.js",
+        "effectiveUrl": "https://65ca165d-ali-gazal-site.aliicerikmedya.workers.dev/scripts/control-review/qa.js",
+        "status": 404,
+        "curlExit": 0,
+        "error": null,
+        "headers": {
+          "content-type": "text/html",
+          "cache-control": "public, max-age=0, must-revalidate",
+          "x-robots-tag": "noindex",
+          "content-security-policy": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; worker-src 'none'",
+          "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=()",
+          "referrer-policy": "strict-origin-when-cross-origin",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "SAMEORIGIN"
+        },
+        "locations": [],
+        "bytes": 2439,
+        "sha256": "e2ed1f10876ae30d1bf562ea46c17c37150aec5dcd1f95eac4c5ba9cdc84e7c4",
+        "sslVerifyResult": 0,
+        "nelPresent": true,
+        "setCookiePresent": false,
+        "checks": {
+          "reachable": false,
+          "exactAsset": false
+        },
+        "passed": true
+      },
+      {
+        "path": "/docs/control-v1-2026-11-12/thumbnail-A.png",
+        "requestedUrl": "https://65ca165d-ali-gazal-site.aliicerikmedya.workers.dev/docs/control-v1-2026-11-12/thumbnail-A.png",
+        "effectiveUrl": "https://65ca165d-ali-gazal-site.aliicerikmedya.workers.dev/docs/control-v1-2026-11-12/thumbnail-A.png",
+        "status": 404,
+        "curlExit": 0,
+        "error": null,
+        "headers": {
+          "content-type": "text/html",
+          "cache-control": "public, max-age=0, must-revalidate",
+          "x-robots-tag": "noindex",
+          "content-security-policy": "default-src 'self'; base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; script-src 'self'; script-src-attr 'none'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self' data:; connect-src 'self'; worker-src 'none'",
+          "permissions-policy": "camera=(), microphone=(), geolocation=(), payment=()",
+          "referrer-policy": "strict-origin-when-cross-origin",
+          "x-content-type-options": "nosniff",
+          "x-frame-options": "SAMEORIGIN"
+        },
+        "locations": [],
+        "bytes": 2439,
+        "sha256": "e2ed1f10876ae30d1bf562ea46c17c37150aec5dcd1f95eac4c5ba9cdc84e7c4",
+        "sslVerifyResult": 0,
+        "nelPresent": true,
+        "setCookiePresent": false,
+        "checks": {
+          "reachable": false,
+          "exactAsset": false
+        },
+        "passed": true
+      }
+    ],
+    "total": 11,
+    "failed": []
+  }
+}

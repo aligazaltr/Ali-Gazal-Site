@@ -1,0 +1,182 @@
+{
+  "viewports": 7,
+  "themes": 2,
+  "cases": 14,
+  "states": 154,
+  "failed": 0,
+  "maxRecordedLongTaskMs": 53,
+  "errors": 0,
+  "cspViolations": 0,
+  "description": "Browser iframe emulation, actual CSS viewport sizes and native scroll. No physical Android or field Core Web Vitals claim.",
+  "observedLayoutShiftsDuringRun": [
+    {
+      "width": 320,
+      "theme": "dark",
+      "shifts": [
+        {
+          "value": 0.0009113967335548156,
+          "duration": 0,
+          "start": 10157.099999999627,
+          "hadRecentInput": false
+        }
+      ]
+    },
+    {
+      "width": 320,
+      "theme": "light",
+      "shifts": [
+        {
+          "value": 0.0009113967335548156,
+          "duration": 0,
+          "start": 10127,
+          "hadRecentInput": false
+        }
+      ]
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "shifts": [
+        {
+          "value": 0.0011664489198040787,
+          "duration": 0,
+          "start": 10159.700000000186,
+          "hadRecentInput": false
+        }
+      ]
+    },
+    {
+      "width": 360,
+      "theme": "light",
+      "shifts": [
+        {
+          "value": 0.0011664489198040787,
+          "duration": 0,
+          "start": 10136.19999999972,
+          "hadRecentInput": false
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "theme": "dark",
+      "shifts": [
+        {
+          "value": 0.0013781455913470326,
+          "duration": 0,
+          "start": 10229.299999999814,
+          "hadRecentInput": false
+        }
+      ]
+    },
+    {
+      "width": 390,
+      "theme": "light",
+      "shifts": [
+        {
+          "value": 0.0013781455913470326,
+          "duration": 0,
+          "start": 10126.5,
+          "hadRecentInput": false
+        }
+      ]
+    },
+    {
+      "width": 430,
+      "theme": "dark",
+      "shifts": [
+        {
+          "value": 0.00169278977048384,
+          "duration": 0,
+          "start": 10244.899999999907,
+          "hadRecentInput": false
+        }
+      ]
+    },
+    {
+      "width": 430,
+      "theme": "light",
+      "shifts": [
+        {
+          "value": 0.00169278977048384,
+          "duration": 0,
+          "start": 10135.899999999907,
+          "hadRecentInput": false
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "theme": "dark",
+      "shifts": [
+        {
+          "value": 0.004056581109209487,
+          "duration": 0,
+          "start": 10261.5,
+          "hadRecentInput": false
+        }
+      ]
+    },
+    {
+      "width": 768,
+      "theme": "light",
+      "shifts": [
+        {
+          "value": 0.004056581109209487,
+          "duration": 0,
+          "start": 10133.600000000093,
+          "hadRecentInput": false
+        }
+      ]
+    },
+    {
+      "width": 1024,
+      "theme": "dark",
+      "shifts": [
+        {
+          "value": 0.006102143515055501,
+          "duration": 0,
+          "start": 10229.100000000093,
+          "hadRecentInput": false
+        }
+      ]
+    },
+    {
+      "width": 1024,
+      "theme": "light",
+      "shifts": [
+        {
+          "value": 0.006102143515055501,
+          "duration": 0,
+          "start": 10129.600000000093,
+          "hadRecentInput": false
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "shifts": [
+        {
+          "value": 0.007333307435941828,
+          "duration": 0,
+          "start": 10278.399999999907,
+          "hadRecentInput": false
+        }
+      ]
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "shifts": [
+        {
+          "value": 0.007333307435941828,
+          "duration": 0,
+          "start": 10106.899999999907,
+          "hadRecentInput": false
+        }
+      ]
+    }
+  ],
+  "measurementNotes": "Layout-shift entries are accumulated during iframe scroll runs, not field CLS or a Lighthouse score. Raw matrices retain exact timings. Long-task maximum is the largest PerformanceObserver entry, not a frame-rate claim."
+}
