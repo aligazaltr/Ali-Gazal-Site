@@ -3,6 +3,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const siteData = require('../site-data.js');
+const { renderPayotScene } = require('./render-payot-scene.js');
 const { renderControlScene } = require('./render-control-scene.js');
 const { signature } = require('./render-scenes.js');
 const { renderMachiavelliScene, renderSceneCover } = require('./render-machiavelli-scene.js');
@@ -94,6 +95,9 @@ function renderHtml(html, data = siteData) {
     || !Number.isInteger(project.video.durationSeconds) || project.video.durationSeconds <= 0)) {
     throw new Error(`${id}: yayın için gerçek YouTube URL'si, başlık, tarih ve süre zorunlu`);
   }
+
+  html = html.replace(/(<!-- experience:payot-scene:start -->)[\s\S]*?(<!-- experience:payot-scene:end -->)/,
+    (_, start, end) => `${start}${renderPayotScene(project)}${end}`);
 
   html = html.replace(/(<!-- experience:control-scene:start -->)[\s\S]*?(<!-- experience:control-scene:end -->)/,
     (_, start, end) => `${start}${renderControlScene(project)}${end}`);
