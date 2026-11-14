@@ -7,18 +7,21 @@ const { renderHtml, validVideo } = require('./sync-site.js');
 const data = require('../site-data.js');
 const root = path.resolve(__dirname, '..');
 
-const { releaseFixture } = require('./release-fixture.js');
+const { releaseFixture, unpublishedFixture } = require('./release-fixture.js');
 
-test('current HTML is stable and preserves the unpublished video gate', () => {
+test('current HTML is stable and links the real published Machiavelli video', () => {
   for (const file of ['index.html', 'rehberler.html', 'machiavelli.html']) {
     const html = fs.readFileSync(path.join(root, file), 'utf8');
     assert.equal(renderHtml(html), html);
-    assert.match(html, /Deney tamamlandı · video hazırlanıyor/);
+    assert.match(html, /Deney tamamlandı · video yayında/);
     assert.equal((html.match(/<img class="project-cover"/g) || []).length, file === 'index.html' ? 2 : 1);
     if (file === 'index.html') {
       assert.match(html, /class="dossier-cover"[^>]*data-cover-priority="high"[^>]*>\s*<!-- project-cover:start --><img[^>]*loading="eager" fetchpriority="high"/);
     }
-    assert.doesNotMatch(html, /href="https:\/\/(?:www\.)?youtube\.com\/watch/);
+    if (file !== 'rehberler.html') assert.ok(html.includes('href="https://youtu.be/6MxLFTRudaQ"'));
+    const unpublished = renderHtml(html, unpublishedFixture());
+    assert.match(unpublished, /Deney tamamlandı · video hazırlanıyor/);
+    assert.doesNotMatch(unpublished, /href="https:\/\/(?:www\.)?(?:youtube\.com\/watch|youtu\.be\/)/);
   }
 });
 

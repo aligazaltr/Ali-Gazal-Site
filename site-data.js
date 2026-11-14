@@ -58,8 +58,8 @@ const AG_SITE_DATA = (() => {
           label: '7 gün · tamamlandı'
         },
         completedAt: '2026-09-27',
-        lastUpdated: '2026-09-27',
-        publishedAt: null,
+        lastUpdated: '2026-11-15',
+        publishedAt: '2026-11-15',
         searchable: true,
         seo: {
           title: 'Machiavelli / Prens Deneyi: 7 Günlük Sonuç | Ali Gazal',
@@ -98,10 +98,10 @@ const AG_SITE_DATA = (() => {
           }
         ],
         video: {
-          published: false,
-          url: '',
-          title: '',
-          durationSeconds: null,
+          published: true,
+          url: 'https://youtu.be/6MxLFTRudaQ',
+          title: "Machiavelli'nin 3 Fikrini 7 Gün Denedim: Ne İşe Yaradı?",
+          durationSeconds: 210,
           thumbnail: {
             src: 'machiavelli-prens-7-gun-kapak.jpg',
             alt: 'Ali Gazal ve Machiavelli’nin yer aldığı, “İşe yaradı mı?” ve “7 Gün” yazılı Machiavelli deneyi kapağı.',

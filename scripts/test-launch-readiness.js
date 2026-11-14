@@ -34,8 +34,8 @@ test('home social preview and Machiavelli use the unchanged final cover',()=>{
     assert.ok(html.includes(`property="og:image" content="https://aligazal.com/${data.projects.machiavelli.video.thumbnail.src}"`) || html.includes(`content="https://aligazal.com/${data.projects.machiavelli.video.thumbnail.src}"`));
     assert.match(html,/name="twitter:card" content="summary_large_image"/);
   }
-  assert.equal(data.projects.machiavelli.video.published,false);
-  assert.equal(data.projects.machiavelli.video.url,'');
+  assert.equal(data.projects.machiavelli.video.published,true);
+  assert.equal(data.projects.machiavelli.video.url,'https://youtu.be/6MxLFTRudaQ');
 });
 test('only JSON-LD can occur inline; no inline handlers or external active resources',()=>{
   for (const file of fs.readdirSync(root).filter(file=>file.endsWith('.html'))) {

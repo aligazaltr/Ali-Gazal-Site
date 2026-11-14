@@ -82,7 +82,7 @@ const AG_ARCHIVE_DATA = {
       "id": "machiavelli",
       "slug": "machiavelli",
       "title": "Machiavelli / Prens deneyi",
-      "statusLabel": "Deney tamamlandı · video hazırlanıyor",
+      "statusLabel": "Deney tamamlandı · video yayında",
       "bookId": "prens",
       "thumbnail": {
         "src": "machiavelli-prens-7-gun-kapak.jpg",
@@ -145,7 +145,20 @@ const AG_ARCHIVE_DATA = {
       "projectIds": [
         "machiavelli"
       ],
-      "videos": []
+      "videos": [
+        {
+          "projectId": "machiavelli",
+          "title": "Machiavelli'nin 3 Fikrini 7 Gün Denedim: Ne İşe Yaradı?",
+          "url": "https://youtu.be/6MxLFTRudaQ",
+          "seconds": null,
+          "thumbnail": {
+            "src": "machiavelli-prens-7-gun-kapak.jpg",
+            "alt": "Ali Gazal ve Machiavelli’nin yer aldığı, “İşe yaradı mı?” ve “7 Gün” yazılı Machiavelli deneyi kapağı.",
+            "width": 1280,
+            "height": 720
+          }
+        }
+      ]
     },
     {
       "id": "prens-02",
@@ -186,7 +199,20 @@ const AG_ARCHIVE_DATA = {
       "projectIds": [
         "machiavelli"
       ],
-      "videos": []
+      "videos": [
+        {
+          "projectId": "machiavelli",
+          "title": "Machiavelli'nin 3 Fikrini 7 Gün Denedim: Ne İşe Yaradı?",
+          "url": "https://youtu.be/6MxLFTRudaQ",
+          "seconds": null,
+          "thumbnail": {
+            "src": "machiavelli-prens-7-gun-kapak.jpg",
+            "alt": "Ali Gazal ve Machiavelli’nin yer aldığı, “İşe yaradı mı?” ve “7 Gün” yazılı Machiavelli deneyi kapağı.",
+            "width": 1280,
+            "height": 720
+          }
+        }
+      ]
     },
     {
       "id": "prens-03",
@@ -227,7 +253,20 @@ const AG_ARCHIVE_DATA = {
       "projectIds": [
         "machiavelli"
       ],
-      "videos": []
+      "videos": [
+        {
+          "projectId": "machiavelli",
+          "title": "Machiavelli'nin 3 Fikrini 7 Gün Denedim: Ne İşe Yaradı?",
+          "url": "https://youtu.be/6MxLFTRudaQ",
+          "seconds": null,
+          "thumbnail": {
+            "src": "machiavelli-prens-7-gun-kapak.jpg",
+            "alt": "Ali Gazal ve Machiavelli’nin yer aldığı, “İşe yaradı mı?” ve “7 Gün” yazılı Machiavelli deneyi kapağı.",
+            "width": 1280,
+            "height": 720
+          }
+        }
+      ]
     },
     {
       "id": "prens-04",
@@ -268,7 +307,20 @@ const AG_ARCHIVE_DATA = {
       "projectIds": [
         "machiavelli"
       ],
-      "videos": []
+      "videos": [
+        {
+          "projectId": "machiavelli",
+          "title": "Machiavelli'nin 3 Fikrini 7 Gün Denedim: Ne İşe Yaradı?",
+          "url": "https://youtu.be/6MxLFTRudaQ",
+          "seconds": null,
+          "thumbnail": {
+            "src": "machiavelli-prens-7-gun-kapak.jpg",
+            "alt": "Ali Gazal ve Machiavelli’nin yer aldığı, “İşe yaradı mı?” ve “7 Gün” yazılı Machiavelli deneyi kapağı.",
+            "width": 1280,
+            "height": 720
+          }
+        }
+      ]
     },
     {
       "id": "prens-05",
@@ -309,7 +361,20 @@ const AG_ARCHIVE_DATA = {
       "projectIds": [
         "machiavelli"
       ],
-      "videos": []
+      "videos": [
+        {
+          "projectId": "machiavelli",
+          "title": "Machiavelli'nin 3 Fikrini 7 Gün Denedim: Ne İşe Yaradı?",
+          "url": "https://youtu.be/6MxLFTRudaQ",
+          "seconds": null,
+          "thumbnail": {
+            "src": "machiavelli-prens-7-gun-kapak.jpg",
+            "alt": "Ali Gazal ve Machiavelli’nin yer aldığı, “İşe yaradı mı?” ve “7 Gün” yazılı Machiavelli deneyi kapağı.",
+            "width": 1280,
+            "height": 720
+          }
+        }
+      ]
     },
     {
       "id": "irade-terbiyesi-01",

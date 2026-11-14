@@ -20,4 +20,16 @@ function releaseFixture() {
   return sandbox.module.exports;
 }
 
-module.exports = { releaseFixture };
+function unpublishedFixture() {
+  const source = fs.readFileSync(path.join(root, 'site-data.js'), 'utf8');
+  const sandbox = { module: { exports: {} } };
+  const setup = `Object.assign(data.projects.machiavelli.video, {
+    published: false, url: '', title: '', durationSeconds: null, chapters: []
+  });
+    data.projects.machiavelli.publishedAt = null;
+    data.projects.machiavelli.features.videoTimeline = false;`;
+  vm.runInNewContext(source.replace('  // Publication copy', () => `${setup}\n  // Publication copy`), sandbox);
+  return sandbox.module.exports;
+}
+
+module.exports = { releaseFixture, unpublishedFixture };
