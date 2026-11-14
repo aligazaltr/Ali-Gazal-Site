@@ -1509,6 +1509,7 @@ tbody th {
 
 .video-cover {
   width: 100%;
+  height: auto;
   aspect-ratio: 16 / 9;
   margin-bottom: 1rem;
   object-fit: cover;
