@@ -4,6 +4,7 @@ const fs = require('node:fs');
 const vm = require('node:vm');
 const frames = require('../machiavelli-frames');
 const data = require('../site-data');
+const {unpublishedFixture} = require('./release-fixture');
 const {renderMachiavelliScene} = require('./render-machiavelli-scene');
 const geometry = {height:740,mobile:false,portraitWidth:460,portraitHeight:546,portraitLeft:600,portraitTop:74,filmWidth:760,filmLeft:200,filmTop:111};
 test('portrait and cover share the registered image coordinate system throughout the fade',()=>{
@@ -37,8 +38,9 @@ test('scroll sampling is finite, reversible, clamped and continuous at storyboar
   const middle=frames.sample(.52,geometry);frames.sample(.9,geometry);assert.deepEqual(frames.sample(.52,geometry),middle);
 });
 test('static composition contains the real cover, current status and a working research jump without fabricated video links', () => {
-  const html=renderMachiavelliScene(data.projects.machiavelli);
-  for(const value of ['MACHIAVELLI','PRENS',data.projects.machiavelli.video.thumbnail.src,data.projects.machiavelli.statusLabel,data.projects.machiavelli.dates.label,'href="#deney-asamasi"']) assert.ok(html.includes(value));
+  const project=unpublishedFixture().projects.machiavelli;
+  const html=renderMachiavelliScene(project);
+  for(const value of ['MACHIAVELLI','PRENS',project.video.thumbnail.src,project.statusLabel,project.dates.label,'href="#deney-asamasi"']) assert.ok(html.includes(value));
   assert.ok(!html.includes('youtube.com'));assert.ok(!/\shidden[\s>]/.test(html));
   assert.ok(html.includes('width="960" height="1140"'));assert.ok(html.includes('srcset='));
 });

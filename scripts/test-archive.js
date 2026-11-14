@@ -6,6 +6,7 @@ const core = require('../archive-core.js');
 const { publicData, validate, renderCard, renderPage, changes } = require('./build-archive.js');
 const source = require('../content/archive.json');
 const site = require('../site-data.js');
+const { unpublishedFixture } = require('./release-fixture.js');
 const clone = value => JSON.parse(JSON.stringify(value));
 
 // Entirely synthetic software fixtures. Never attributed to a real author.
@@ -100,7 +101,7 @@ test('all content kinds are labelled; translations require source text and credi
 test('unreleased video produces no watch link; only verified in-range timestamp is exported', () => {
   const data = fixture(); const entry = data.quotes.at(-1);
   entry.videoRefs = [{ projectId: 'machiavelli', seconds: 42, timestampVerified: true }];
-  assert.equal(publicData(data).entries.at(-1).videos.length, 0);
+  assert.equal(publicData(data, unpublishedFixture()).entries.at(-1).videos.length, 0);
   const released = clone(site); const project = released.projects.machiavelli;
   Object.assign(project.video, { published: true, url: 'https://www.youtube.com/watch?v=TESTFIXTURE', title: 'TEST VIDEO — not real', durationSeconds: 90 });
   project.publishedAt = '2026-10-19';

@@ -4,7 +4,7 @@ const fs = require('node:fs');
 const { youtubeUrl, validVideo, publishedUrl } = require('../video-links.js');
 const { renderHtml } = require('./sync-site.js');
 const { renderMachiavelliScene } = require('./render-machiavelli-scene.js');
-const { releaseFixture } = require('./release-fixture.js');
+const { releaseFixture, unpublishedFixture } = require('./release-fixture.js');
 const data = require('../site-data.js');
 test('a video destination requires a genuine video-shaped HTTPS URL and a nonempty title', () => {
   for (const url of ['https://www.youtube.com/watch?v=TESTFIXTURE', 'https://youtu.be/TESTFIXTURE', 'https://m.youtube.com/watch?v=TESTFIXTURE&t=15']) {
@@ -37,7 +37,7 @@ test('publication and withdrawal keep static home/scene links coherent without J
     const published=renderHtml(source,released);
     assert.match(published,/href="https:\/\/www.youtube.com\/watch\?v=TESTFIXTURE"/);
     assert.equal(renderHtml(published,released),published);
-    const withdrawn=renderHtml(published,data);
+    const withdrawn=renderHtml(published,unpublishedFixture());
     assert.doesNotMatch(withdrawn,/href="https:\/\/(?:www\.)?(?:youtube.com\/watch|youtu.be\/)/);
     assert.doesNotMatch(withdrawn,/data-published-cover/);
     assert.match(withdrawn,/href="(?:machiavelli.html|#deney-asamasi)"/);
@@ -54,6 +54,6 @@ test('published home has an explicit watch action and withdrawal removes it',()=
  const source=fs.readFileSync(require.resolve('../index.html'),'utf8');
  const html=renderHtml(source,releaseFixture());
  assert.match(html,/Videoyu YouTube’da izle/);assert.match(html,/class="dossier-link" href="machiavelli.html"/);
- assert.doesNotMatch(renderHtml(html,data),/Videoyu YouTube’da izle/);
- assert.equal(data.projects.machiavelli.video.published,false);assert.equal(data.projects.machiavelli.video.url,'');
+ assert.doesNotMatch(renderHtml(html,unpublishedFixture()),/Videoyu YouTube’da izle/);
+ assert.equal(data.projects.machiavelli.video.published,true);assert.equal(data.projects.machiavelli.video.url,'https://youtu.be/6MxLFTRudaQ');
 });
