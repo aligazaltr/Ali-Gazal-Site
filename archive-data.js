@@ -95,7 +95,7 @@ const AG_ARCHIVE_DATA = {
       "id": "irade-terbiyesi",
       "slug": "irade-terbiyesi",
       "title": "Jules Payot — İrade Terbiyesi",
-      "statusLabel": "Kitap okunuyor, araştırma devam ediyor.",
+      "statusLabel": "Kitap tamamlandı · 7 günlük deney devam ediyor",
       "bookId": "irade-terbiyesi",
       "thumbnail": {
         "src": "",

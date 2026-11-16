@@ -12,17 +12,18 @@ const home = fs.readFileSync(path.join(root, 'index.html'), 'utf8');
 function scenario(setup) {
   const source = fs.readFileSync(path.join(root, 'site-data.js'), 'utf8');
   const sandbox = { module: { exports: {} } };
-  vm.runInNewContext(source.replace('  // Publication copy', () => `${setup}\n  // Publication copy`), sandbox);
+  vm.runInNewContext(source.replace('  // Publication copy', () => `data.projects['irade-terbiyesi'].research.stages.forEach((stage, index) => { stage.status = index === 0 ? 'in-progress' : 'not-started'; });\n${setup}\n  // Publication copy`), sandbox);
   return sandbox.module.exports;
 }
 const payot = "data.projects['irade-terbiyesi']";
 
-test('Payot begins with four research stages, no experiment outcome or invented release', () => {
+test('Payot is testing three selected methods after completing research, without an invented outcome or release', () => {
   const project = data.projects['irade-terbiyesi'];
-  assert.equal(project.status, 'upcoming');
+  assert.equal(project.status, 'in-progress');
+  assert.equal(project.phase, 'testing');
   assert.equal(Object.values(data.projects).filter(p => p.status === 'active').length, 1);
-  assert.deepEqual(project.research.stages.map(stage => stage.status), ['in-progress', 'not-started', 'not-started', 'not-started']);
-  assert.equal(project.principles.length, 0);
+  assert.deepEqual(project.research.stages.map(stage => stage.status), ['completed', 'completed', 'completed', 'in-progress']);
+  assert.equal(project.principles.length, 3);
   assert.equal(project.result.published, false); assert.equal(project.result.summary, '');
   assert.equal(project.video.url, ''); assert.equal(project.video.published, false); assert.equal(project.publishedAt, null);
   assert.equal(renderHtml(page), page);
@@ -43,7 +44,7 @@ test('one central stage change updates detail and homepage without JavaScript', 
 
 test('invalid stage counts, out-of-order completion and premature production are rejected', () => {
   for (const change of [p => p.research.stages.push({...p.research.stages[0], id:'fifth'}),
-    p => {p.research.stages[2].status='completed';}, p => {p.research.stages[1].status='in-progress';},
+    p => {p.research.stages[1].status='not-started';}, p => {p.research.stages[1].status='in-progress';},
     p => {p.video.productionStatus='preparing';}, p => {p.video.published=true;}]) {
     const project = JSON.parse(JSON.stringify(data.projects['irade-terbiyesi'])); change(project);
     assert.throws(() => validateResearch(project));

@@ -49,13 +49,21 @@ function validateResearch(project) {
 function renderProjectPreview(project) {
   if (!project) throw new Error('Önizleme için proje bulunamadı');
   validateResearch(project);
-  const label = project.video.published ? 'VİDEO YAYINDA' : project.video.productionStatus === 'preparing' ? 'VİDEO HAZIRLIĞI' : 'SIRADAKİ PROJEMİZ';
+  const label = project.display.previewLabel;
   return `<div class="research-preview" data-project="${escape(project.id)}"><div><p class="eyebrow">${label}</p><p class="research-source">${escape(project.shortTitle)}</p><h2 id="siradaki-proje">${escape(project.title)}</h2><p class="research-description">${escape(project.summary)}</p><a class="text-link" href="${escape(project.slug)}.html">Araştırma dosyasını incele <span aria-hidden="true">→</span></a></div><aside class="research-preview-state" aria-label="Projenin güncel durumu"><p class="eyebrow">ŞİMDİ NEREDEYİZ?</p><p class="research-current">${escape(project.display.currentStage)}</p><p>${escape(project.statusLabel)}</p><p>${escape(project.research.publicationLabel)}</p><small>${escape(project.duration.label)} · ${escape(project.display.experimentState)}</small></aside></div>`;
 }
 
 function renderResearchStages(project) {
   validateResearch(project);
   return project.research.stages.map((stage, i) => `<li class="research-stage is-${stage.status}" data-research-stage="${escape(stage.id)}"${stage.status === 'in-progress' ? ' aria-current="step"' : ''}><span class="research-number" aria-hidden="true">${String(i + 1).padStart(2, '0')}</span><div><h3>${escape(stage.title)}</h3><p>${escape(stage.description)}</p><p class="research-goal"><strong>Hedef:</strong> ${escape(stage.goal)}</p></div><span class="research-state">${researchStates[stage.status]}</span></li>`).join('\n');
+}
+
+function renderResearchMethods(project) {
+  if (!Array.isArray(project.principles) || !project.principles.length) return '';
+  return '<ol class="principle-list">' + project.principles.map((method, index) =>
+    '<li data-research-method="' + escape(method.id) + '"><span aria-hidden="true">' +
+    String(index + 1).padStart(2, '0') + '</span><div><h3>' + escape(method.title) +
+    '</h3><p>' + escape(method.rule) + '</p></div></li>').join('') + '</ol>';
 }
 
 function renderStory(story) {
@@ -199,6 +207,18 @@ function renderHtml(html, data = siteData) {
     (_, start, end) => `${start}${timeline}${end}`);
   html = html.replace(/(<!-- project-preview:([a-z0-9-]+):start -->)[\s\S]*?(<!-- project-preview:\2:end -->)/g,
     (_, start, id, end) => `${start}${renderProjectPreview(data.projects[id])}${end}`);
+  html = html.replace(/(<!-- research-index:([a-z0-9-]+):start -->)[\s\S]*?(<!-- research-index:\2:end -->)/g,
+    (_, start, id, end) => {
+      const p = data.projects[id];
+      return start + '<div class="publication-row-heading"><span class="issue-number" aria-hidden="true">03</span><p>' +
+        escape(p.display.catalogLabel) + '</p><span>' + escape(p.display.experimentState) + '</span></div>' + end;
+    });
+  html = html.replace(/(<!-- project-overview:start -->)[\s\S]*?(<!-- project-overview:end -->)/,
+    (_, start, end) => start + '<p>Machiavelli deneyi tamamlandı; videosu ' +
+      (data.projects.machiavelli.video.published ? 'YouTube’da yayımlandı.' : 'hazırlanıyor.') + ' ' +
+      'İrade Terbiyesi: ' + escape(data.projects['irade-terbiyesi'].statusLabel) + '.</p>' + end);
+  html = html.replace(/(<!-- research-methods:start -->)[\s\S]*?(<!-- research-methods:end -->)/,
+    (_, start, end) => start + renderResearchMethods(project) + end);
   return html.replace(/(<!-- research-stages:start -->)[\s\S]*?(<!-- research-stages:end -->)/,
     (_, start, end) => `${start}${renderResearchStages(project)}${end}`);
 }

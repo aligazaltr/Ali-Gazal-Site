@@ -76,9 +76,10 @@ site-data.js içindeki phase alanı şu değerlerden birini alır:
 - reviewing  → İnceleniyor
 - published  → Video yayında
 
-Machiavelli şu anda reviewing / İnceleniyor durumundadır. Deney 27 Eylül
-2026'da tamamlandı; video henüz yayımlanmadı. Bu değer yalnız gerçek proje
-durumu değiştiğinde güncellenir; tarihe bakarak otomatik ilerletilmez.
+Machiavelli şu anda published / Video yayında durumundadır. Deney 27 Eylül
+2026'da tamamlandı; video 15 Kasım 2026'da yayımlandı:
+https://youtu.be/6MxLFTRudaQ . Bu değer yalnız doğrulanmış yayın bilgisiyle
+güncellenir; tarihe bakarak otomatik ilerletilmez.
 
 GELECEK ARAÇLAR
 
