@@ -1,0 +1,54 @@
+/* Project 03: an editorial binding. Global theme and other scenes are untouched. */
+.payot-scene{position:relative;margin:2rem 0 3rem;border-block:1px solid var(--line);isolation:isolate}
+.py-stage{position:relative;display:grid;grid-template-columns:1fr 1.4fr;align-items:center;gap:3rem;padding:5rem 1rem 6rem;overflow:hidden;min-height:620px}
+.py-shade,.py-orbit,.py-letters,.py-leaves,.py-axis,.py-measures{display:none}
+.py-meta{position:absolute;inset:1.5rem 0 auto;display:flex;justify-content:space-between;gap:1rem;font-size:.62rem;letter-spacing:.13em;z-index:5;color:var(--muted-strong)}
+.py-book{position:relative;width:var(--py-book-width,230px);height:auto;aspect-ratio:1/1.42;justify-self:center;color:#f1dec0;z-index:2;filter:drop-shadow(0 18px 16px #0002)}
+.py-cover{position:absolute;inset:0;background:radial-gradient(ellipse at 90% 0%,#a66b38,#513724 70%);border:1px solid #bc885c;border-left:9px solid #39271d;box-shadow:inset 3px 0 5px #0003,inset 0 0 0 7px #8f633f33}
+.py-pages{position:absolute;inset:5px -5px -4px 10px;background:repeating-linear-gradient(0deg,#ddc7a1 0 1px,#a38760 1px 2px);border:1px solid #806644;border-radius:0 3px 3px 0}
+.py-author,.py-static-title,.py-subtitle,.py-imprint,.py-book-mark{position:absolute;left:10%;right:10%;text-align:center}
+.py-author{top:12%;font-size:clamp(12px,1.3vw,17px);letter-spacing:.21em}
+.py-static-title{top:31%;font-size:var(--py-cover-size,34px);font-weight:850;letter-spacing:-.055em}
+.py-subtitle{top:46%;font-size:clamp(13px,1.6vw,20px);letter-spacing:.08em}
+.py-cover-rule{position:absolute;top:61%;left:28%;right:28%;height:1px;background:#dcb98288}
+.py-imprint{top:70%;font-family:var(--literary);font-style:italic;font-size:clamp(12px,1.3vw,16px);line-height:1.4;letter-spacing:.08em;color:#e4bd88}
+.py-book-mark{bottom:6%;font-size:8px;letter-spacing:.18em}
+.py-question{position:relative;z-index:3;max-width:100%;text-wrap:balance}
+.py-question h1{margin:1rem 0;max-width:none;font-size:clamp(2rem,4.3vw,4.2rem);line-height:1.04;letter-spacing:-.065em;font-weight:850}
+.py-question h1 em{font:400 1em/1.08 var(--literary);letter-spacing:-.055em;color:var(--orange)}
+.py-question>p:last-child{font-size:clamp(.8rem,1vw,1rem);line-height:1.6;color:var(--muted-strong);max-width:40ch}
+.py-kicker{font-size:.64rem;letter-spacing:.18em;color:var(--orange)}
+.py-plan{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);width:210px;text-align:center;z-index:3}
+.py-ticks{display:flex;justify-content:space-between;gap:14px;height:24px}
+.py-ticks i{width:1px;height:15px;background:var(--orange);position:relative;transform-origin:50% 100%}
+.py-ticks span{position:absolute;top:19px;left:50%;transform:translateX(-50%);font-size:7px;font-style:normal;color:var(--muted)}
+.py-plan p{margin:18px 0 0;font-size:7px;letter-spacing:.12em;color:var(--muted-strong)}
+.py-read{position:absolute;bottom:1rem;left:0;z-index:6;min-height:44px;display:inline-flex;align-items:center;gap:1rem;font-size:.68rem;color:var(--muted-strong);text-underline-offset:5px}
+.py-read:focus-visible{outline:2px solid var(--orange);outline-offset:3px}
+.research-opening .project-hero h2[data-project-field="title"]{font-size:clamp(2.3rem,4.7vw,4.8rem);line-height:1.1;letter-spacing:-.05em;max-width:15ch}
+.payot-scene.is-directed{height:var(--py-scene-height)}
+.is-directed .py-stage{position:sticky;top:12px;height:var(--py-height);min-height:0;display:block;padding:0}
+.is-directed .py-shade{display:block;position:absolute;inset:0;z-index:0;background:radial-gradient(ellipse at 70% 20%,#402b1c 0%,#13120f 45%,#0b0b0a 85%)}
+.is-directed .py-meta{mix-blend-mode:difference;color:#c6bbaa;inset:1.4rem 0 auto}
+.is-directed .py-orbit,.is-directed .py-letters,.is-directed .py-leaves{display:block;position:absolute;inset:0;z-index:2;pointer-events:none}
+.is-directed .py-orbit>span,.is-directed .py-letters>span,.is-directed .py-leaves>i{position:absolute;left:0;top:0;white-space:nowrap;transform-origin:50% 50%;will-change:transform,opacity}
+.is-directed .py-orbit>span{font-family:var(--literary);font-size:clamp(1.5rem,4.6vw,4.6rem);letter-spacing:-.045em;color:#bbaa91}
+.is-directed .py-orbit>span:nth-child(2n){font-family:var(--sans);font-weight:750;color:#706b61}
+.is-directed .py-letters{z-index:4}
+.is-directed .py-letters>span{font-size:var(--py-large-size);font-weight:850;line-height:1;color:var(--text);letter-spacing:-.055em}
+/* A changing ink tone links the dark mind to the warm binding in both themes. */
+.is-directed .py-letters>span{color:#f1dec0}
+.is-directed .py-leaves>i{background:linear-gradient(90deg,#9c734b,#e3cfaa 45%,#b69265);border-right:1px solid #725035;box-shadow:0 4px 10px #0001}
+.is-directed .py-axis{display:block;position:absolute;bottom:18%;left:0;right:0;text-align:center;font-size:.6rem;letter-spacing:.35em;color:#aa8b67}
+.is-directed .py-book,.is-directed .py-question,.is-directed .py-plan{position:absolute;left:0;top:0;bottom:auto;will-change:transform,opacity}
+.is-directed .py-book{height:calc(var(--py-book-width)*1.42)}
+.is-directed .py-static-title{visibility:hidden}
+.is-directed .py-question{width:48%;max-width:600px}
+.is-directed .py-plan{width:180px}
+.is-directed .py-measures{display:block;position:absolute;left:0;top:0;visibility:hidden;pointer-events:none;white-space:nowrap;font-weight:850;letter-spacing:-.055em;line-height:1}
+.py-measures b{font-weight:inherit}
+.py-measure-large{font-size:var(--py-large-size)}
+.py-measure-cover{font-size:var(--py-cover-size)}
+.is-directed .py-measure-large,.is-directed .py-measure-cover{display:block;width:max-content}
+@media(max-width:679px){.py-stage{display:flex;flex-direction:column;gap:3rem;padding:5rem .5rem 8rem}.py-book{flex:none}.py-question{text-align:center}.py-question h1{font-size:clamp(1.8rem,7.9vw,2.7rem)}.py-question>p:last-child{margin-inline:auto}.py-meta{font-size:.52rem;letter-spacing:.06em}.is-directed .py-question{width:95%}.is-directed .py-plan{width:155px}.py-plan{bottom:3rem}.is-directed .py-question h1{font-size:clamp(1.7rem,7.7vw,3rem)}.py-read{bottom:.4rem}.is-directed .py-question>p:last-child{font-size:.75rem}}
+@media(prefers-reduced-motion:reduce){.payot-scene.is-directed{height:auto}.is-directed .py-stage{position:relative;height:auto;min-height:620px}}
