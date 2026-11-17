@@ -5,6 +5,7 @@ const path = require('node:path');
 const siteData = require('../site-data.js');
 const { renderControlScene } = require('./render-control-scene.js');
 const { signature } = require('./render-scenes.js');
+const { renderHomepageScene } = require('./render-homepage-scene.js');
 const { renderMachiavelliScene, renderSceneCover } = require('./render-machiavelli-scene.js');
 const { validVideo, publishedUrl } = require('../video-links.js');
 const root = path.resolve(__dirname, '..');
@@ -86,6 +87,8 @@ function renderStory(story) {
 function renderHtml(html, data = siteData) {
   const id = html.match(/<html\b[^>]*data-project="([^"]+)"/)?.[1];
   if (!id) return html;
+  html = html.replace(/(<!-- homepage:scene:start -->)[\s\S]*?(<!-- homepage:scene:end -->)/,
+    (_, start, end) => start + renderHomepageScene(data) + end);
   html = html.replace(/(<!-- experience:intro:start -->)[\s\S]*?(<!-- experience:intro:end -->)/,
     (_, start, end) => `${start}<p class="cinema-words" aria-label="${escape(data.experience.intro.join(' '))}">${data.experience.intro.map(word => `<span class="word-window" aria-hidden="true"><span class="cinema-word">${escape(word)}</span></span>`).join('')}</p><p class="cinema-tagline">${escape(data.experience.tagline)}</p>${end}`);
   html = html.replace(/(<!-- experience:story:([a-z0-9-]+):start -->)[\s\S]*?(<!-- experience:story:\2:end -->)/,

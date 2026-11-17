@@ -1,0 +1,15 @@
+{
+  "base": "a1cc3a3504df5757eb4444215606f40e33fea76b",
+  "files": {
+    "site-data.js": "473816dce42e6666d6435a1ec4c0c2e854dccc1261d443093d3021c32c7f65ee",
+    "machiavelli.html": "2e1cfae9d42a01ada7703a87a047476c99b00fd0c404d5ff5502e1c9b3c73997",
+    "kontrol-bende-mi.html": "9572b8396ecee085a26382967eb5ac068fd4c1ba3a6aaa90f6698af505a757ae",
+    "irade-terbiyesi.html": "8448186b780b2620cb6854349c947eb1c02acbf953b9a1d95152aaeecaf26e80",
+    "styles.css": "cfd15d631a7b0b8c8b36ad10d7b759128ea31fe3cf1616d072941402a217e021",
+    "motion.js": "3c06448f988fc926abdc5a5af875cacb7281ee067d0c289a2534e743ce309dd7",
+    "motion.css": "c1be60c7561f7a36bad796a2c66674195e950f7ad56652575563bc0569dff65f",
+    "signature.css": "66de2f52d4b6dc17071600a5464ac1042813f1766c5b1a896c8209b688bfa333",
+    "_headers": "cfb793266d31ed00afdda938de937373440ba5b6132061018132c7fd081cb9f3"
+  },
+  "homepageAfterHero": "6d8c109e482c4963dfe5eec7cc0b8ff0c1830829a0e8c74a41e1201c8ae9ca02"
+}
