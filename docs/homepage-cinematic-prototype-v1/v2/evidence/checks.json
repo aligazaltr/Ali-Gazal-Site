@@ -1,0 +1,2494 @@
+[
+  {
+    "viewport": [
+      390,
+      844
+    ],
+    "theme": "dark",
+    "mode": "spatial",
+    "progress": "0.0000",
+    "scroll": 250,
+    "horizontalOverflow": false,
+    "title": {
+      "x": 20,
+      "y": 76.234375,
+      "width": 335,
+      "height": 193.9375,
+      "bottom": 270.171875,
+      "right": 355
+    },
+    "destination": {
+      "x": 36.47541046142578,
+      "y": 101.95338439941406,
+      "width": 302.0491943359375,
+      "height": 162.14012145996094,
+      "bottom": 264.093505859375,
+      "right": 338.5246047973633
+    },
+    "destinationVisible": "hidden",
+    "destinationOpacity": "0",
+    "research": {
+      "x": 36.47541046142578,
+      "y": 224.42135620117188,
+      "width": 149.0804443359375,
+      "height": 39.672149658203125,
+      "bottom": 264.093505859375,
+      "right": 185.55585479736328
+    },
+    "image": {
+      "x": 33.27394104003906,
+      "y": 405.8940124511719,
+      "width": 315.27850341796875,
+      "height": 190.83010864257812,
+      "bottom": 596.72412109375,
+      "right": 348.5524444580078
+    },
+    "imageLoaded": true,
+    "actions": [
+      {
+        "text": "Deneyleri keşfet →",
+        "href": "rehberler.html",
+        "rect": {
+          "x": 20,
+          "y": 700.8125,
+          "width": 155.234375,
+          "height": 48,
+          "bottom": 748.8125,
+          "right": 175.234375
+        },
+        "topElement": true
+      },
+      {
+        "text": "Son videoyu izle",
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "rect": {
+          "x": 189.234375,
+          "y": 702.8125,
+          "width": 126.078125,
+          "height": 44,
+          "bottom": 746.8125,
+          "right": 315.3125
+        },
+        "topElement": true
+      }
+    ],
+    "stage": {
+      "x": 0,
+      "y": 0.3125,
+      "width": 375,
+      "height": 843.6875,
+      "bottom": 844,
+      "right": 375
+    },
+    "name": "390-dark-000",
+    "clip": {
+      "height": 844,
+      "width": 390,
+      "x": 24,
+      "y": 76
+    }
+  },
+  {
+    "viewport": [
+      390,
+      844
+    ],
+    "theme": "dark",
+    "mode": "spatial",
+    "progress": "0.1503",
+    "scroll": 348,
+    "horizontalOverflow": false,
+    "title": {
+      "x": 20,
+      "y": 75.06224060058594,
+      "width": 309.39300537109375,
+      "height": 179.16246032714844,
+      "bottom": 254.22470092773438,
+      "right": 329.39300537109375
+    },
+    "destination": {
+      "x": 36.47541046142578,
+      "y": 101.67213439941406,
+      "width": 302.0491943359375,
+      "height": 162.14012145996094,
+      "bottom": 263.812255859375,
+      "right": 338.5246047973633
+    },
+    "destinationVisible": "hidden",
+    "destinationOpacity": "0",
+    "research": {
+      "x": 36.47541046142578,
+      "y": 224.14010620117188,
+      "width": 149.0804443359375,
+      "height": 39.672149658203125,
+      "bottom": 263.812255859375,
+      "right": 185.55585479736328
+    },
+    "image": {
+      "x": 33.27394104003906,
+      "y": 405.7509765625,
+      "width": 315.27850341796875,
+      "height": 190.83111572265625,
+      "bottom": 596.5820922851562,
+      "right": 348.5524444580078
+    },
+    "imageLoaded": true,
+    "actions": [
+      {
+        "text": "Deneyleri keşfet →",
+        "href": "rehberler.html",
+        "rect": {
+          "x": 20,
+          "y": 700.8125,
+          "width": 155.234375,
+          "height": 48,
+          "bottom": 748.8125,
+          "right": 175.234375
+        },
+        "topElement": true
+      },
+      {
+        "text": "Son videoyu izle",
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "rect": {
+          "x": 189.234375,
+          "y": 702.8125,
+          "width": 126.078125,
+          "height": 44,
+          "bottom": 746.8125,
+          "right": 315.3125
+        },
+        "topElement": true
+      }
+    ],
+    "stage": {
+      "x": 0,
+      "y": 0,
+      "width": 375,
+      "height": 844,
+      "bottom": 844,
+      "right": 375
+    },
+    "name": "390-dark-015",
+    "clip": {
+      "height": 844,
+      "width": 390,
+      "x": 24,
+      "y": 76
+    }
+  },
+  {
+    "viewport": [
+      390,
+      844
+    ],
+    "theme": "dark",
+    "mode": "spatial",
+    "progress": "0.2995",
+    "scroll": 445,
+    "horizontalOverflow": false,
+    "title": {
+      "x": 20,
+      "y": 74.1358413696289,
+      "width": 282.5372009277344,
+      "height": 163.79031372070312,
+      "bottom": 237.92615509033203,
+      "right": 302.5372009277344
+    },
+    "destination": {
+      "x": 36.47541046142578,
+      "y": 101.67213439941406,
+      "width": 302.0491943359375,
+      "height": 162.14012145996094,
+      "bottom": 263.812255859375,
+      "right": 338.5246047973633
+    },
+    "destinationVisible": "visible",
+    "destinationOpacity": "0.3649",
+    "research": {
+      "x": 36.47541046142578,
+      "y": 224.14010620117188,
+      "width": 149.0804443359375,
+      "height": 39.672149658203125,
+      "bottom": 263.812255859375,
+      "right": 185.55585479736328
+    },
+    "image": {
+      "x": 31.206754684448242,
+      "y": 401.806396484375,
+      "width": 314.1418151855469,
+      "height": 190.82476806640625,
+      "bottom": 592.6311645507812,
+      "right": 345.3485698699951
+    },
+    "imageLoaded": true,
+    "actions": [
+      {
+        "text": "Deneyleri keşfet →",
+        "href": "rehberler.html",
+        "rect": {
+          "x": 20,
+          "y": 700.8125,
+          "width": 155.234375,
+          "height": 48,
+          "bottom": 748.8125,
+          "right": 175.234375
+        },
+        "topElement": true
+      },
+      {
+        "text": "Son videoyu izle",
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "rect": {
+          "x": 189.234375,
+          "y": 702.8125,
+          "width": 126.078125,
+          "height": 44,
+          "bottom": 746.8125,
+          "right": 315.3125
+        },
+        "topElement": true
+      }
+    ],
+    "stage": {
+      "x": 0,
+      "y": 0,
+      "width": 375,
+      "height": 844,
+      "bottom": 844,
+      "right": 375
+    },
+    "name": "390-dark-030",
+    "clip": {
+      "height": 844,
+      "width": 390,
+      "x": 24,
+      "y": 76
+    }
+  },
+  {
+    "viewport": [
+      390,
+      844
+    ],
+    "theme": "dark",
+    "mode": "spatial",
+    "progress": "0.4503",
+    "scroll": 543,
+    "horizontalOverflow": false,
+    "title": {
+      "x": 20,
+      "y": 74.13581848144531,
+      "width": 282.53680419921875,
+      "height": 163.7900848388672,
+      "bottom": 237.9259033203125,
+      "right": 302.53680419921875
+    },
+    "destination": {
+      "x": 36.47541046142578,
+      "y": 101.67213439941406,
+      "width": 302.0491943359375,
+      "height": 162.14012145996094,
+      "bottom": 263.812255859375,
+      "right": 338.5246047973633
+    },
+    "destinationVisible": "visible",
+    "destinationOpacity": "1",
+    "research": {
+      "x": 36.47541046142578,
+      "y": 224.14010620117188,
+      "width": 149.0804443359375,
+      "height": 39.672149658203125,
+      "bottom": 263.812255859375,
+      "right": 185.55585479736328
+    },
+    "image": {
+      "x": 25.95378875732422,
+      "y": 388.37322998046875,
+      "width": 310.60711669921875,
+      "height": 190.2623291015625,
+      "bottom": 578.6355590820312,
+      "right": 336.56090545654297
+    },
+    "imageLoaded": true,
+    "actions": [
+      {
+        "text": "Deneyleri keşfet →",
+        "href": "rehberler.html",
+        "rect": {
+          "x": 20,
+          "y": 700.8125,
+          "width": 155.234375,
+          "height": 48,
+          "bottom": 748.8125,
+          "right": 175.234375
+        },
+        "topElement": true
+      },
+      {
+        "text": "Son videoyu izle",
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "rect": {
+          "x": 189.234375,
+          "y": 702.8125,
+          "width": 126.078125,
+          "height": 44,
+          "bottom": 746.8125,
+          "right": 315.3125
+        },
+        "topElement": true
+      }
+    ],
+    "stage": {
+      "x": 0,
+      "y": 0,
+      "width": 375,
+      "height": 844,
+      "bottom": 844,
+      "right": 375
+    },
+    "name": "390-dark-045",
+    "clip": {
+      "height": 844,
+      "width": 390,
+      "x": 24,
+      "y": 76
+    }
+  },
+  {
+    "viewport": [
+      390,
+      844
+    ],
+    "theme": "dark",
+    "mode": "spatial",
+    "progress": "0.5995",
+    "scroll": 640,
+    "horizontalOverflow": false,
+    "title": {
+      "x": 20,
+      "y": 74.13581848144531,
+      "width": 282.53680419921875,
+      "height": 163.7900848388672,
+      "bottom": 237.9259033203125,
+      "right": 302.53680419921875
+    },
+    "destination": {
+      "x": 36.13667678833008,
+      "y": 101.49030303955078,
+      "width": 302.72662353515625,
+      "height": 162.5037841796875,
+      "bottom": 263.9940872192383,
+      "right": 338.8633003234863
+    },
+    "destinationVisible": "visible",
+    "destinationOpacity": "1",
+    "research": {
+      "x": 36.13667678833008,
+      "y": 224.23297119140625,
+      "width": 149.41481018066406,
+      "height": 39.7611083984375,
+      "bottom": 263.99407958984375,
+      "right": 185.55148696899414
+    },
+    "image": {
+      "x": 26.5228214263916,
+      "y": 370.7133483886719,
+      "width": 308.84033203125,
+      "height": 187.79367065429688,
+      "bottom": 558.5070190429688,
+      "right": 335.3631534576416
+    },
+    "imageLoaded": true,
+    "actions": [
+      {
+        "text": "Deneyleri keşfet →",
+        "href": "rehberler.html",
+        "rect": {
+          "x": 20,
+          "y": 700.8125,
+          "width": 155.234375,
+          "height": 48,
+          "bottom": 748.8125,
+          "right": 175.234375
+        },
+        "topElement": true
+      },
+      {
+        "text": "Son videoyu izle",
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "rect": {
+          "x": 189.234375,
+          "y": 702.8125,
+          "width": 126.078125,
+          "height": 44,
+          "bottom": 746.8125,
+          "right": 315.3125
+        },
+        "topElement": true
+      }
+    ],
+    "stage": {
+      "x": 0,
+      "y": 0,
+      "width": 375,
+      "height": 844,
+      "bottom": 844,
+      "right": 375
+    },
+    "name": "390-dark-060",
+    "clip": {
+      "height": 844,
+      "width": 390,
+      "x": 24,
+      "y": 76
+    }
+  },
+  {
+    "viewport": [
+      390,
+      844
+    ],
+    "theme": "dark",
+    "mode": "spatial",
+    "progress": "0.7503",
+    "scroll": 738,
+    "horizontalOverflow": false,
+    "title": {
+      "x": 20,
+      "y": 74.13581848144531,
+      "width": 282.53680419921875,
+      "height": 163.7900848388672,
+      "bottom": 237.9259033203125,
+      "right": 302.53680419921875
+    },
+    "destination": {
+      "x": 30.300939559936523,
+      "y": 98.35767364501953,
+      "width": 314.39813232421875,
+      "height": 168.76904296875,
+      "bottom": 267.12671661376953,
+      "right": 344.6990718841553
+    },
+    "destinationVisible": "visible",
+    "destinationOpacity": "1",
+    "research": {
+      "x": 30.300939559936523,
+      "y": 225.83262634277344,
+      "width": 155.1754150390625,
+      "height": 41.29408264160156,
+      "bottom": 267.126708984375,
+      "right": 185.47635459899902
+    },
+    "image": {
+      "x": 32.3248405456543,
+      "y": 356.7320251464844,
+      "width": 309.0936584472656,
+      "height": 180.60714721679688,
+      "bottom": 537.3391723632812,
+      "right": 341.4184989929199
+    },
+    "imageLoaded": true,
+    "actions": [
+      {
+        "text": "Deneyleri keşfet →",
+        "href": "rehberler.html",
+        "rect": {
+          "x": 20,
+          "y": 700.8125,
+          "width": 155.234375,
+          "height": 48,
+          "bottom": 748.8125,
+          "right": 175.234375
+        },
+        "topElement": true
+      },
+      {
+        "text": "Son videoyu izle",
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "rect": {
+          "x": 189.234375,
+          "y": 702.8125,
+          "width": 126.078125,
+          "height": 44,
+          "bottom": 746.8125,
+          "right": 315.3125
+        },
+        "topElement": true
+      }
+    ],
+    "stage": {
+      "x": 0,
+      "y": 0,
+      "width": 375,
+      "height": 844,
+      "bottom": 844,
+      "right": 375
+    },
+    "name": "390-dark-075",
+    "clip": {
+      "height": 844,
+      "width": 390,
+      "x": 24,
+      "y": 76
+    }
+  },
+  {
+    "viewport": [
+      390,
+      844
+    ],
+    "theme": "dark",
+    "mode": "spatial",
+    "progress": "0.9995",
+    "scroll": 900,
+    "horizontalOverflow": false,
+    "title": {
+      "x": 20,
+      "y": 73.44831848144531,
+      "width": 282.53680419921875,
+      "height": 163.7900848388672,
+      "bottom": 237.2384033203125,
+      "right": 302.53680419921875
+    },
+    "destination": {
+      "x": 20.00006103515625,
+      "y": 92.14065551757812,
+      "width": 334.9998779296875,
+      "height": 179.82806396484375,
+      "bottom": 271.9687194824219,
+      "right": 354.99993896484375
+    },
+    "destinationVisible": "visible",
+    "destinationOpacity": "1",
+    "research": {
+      "x": 20.00006103515625,
+      "y": 227.96873474121094,
+      "width": 165.34368896484375,
+      "height": 43.99998474121094,
+      "bottom": 271.9687194824219,
+      "right": 185.34375
+    },
+    "image": {
+      "x": 34.26238250732422,
+      "y": 354.28704833984375,
+      "width": 306.4752197265625,
+      "height": 172.392333984375,
+      "bottom": 526.6793823242188,
+      "right": 340.7376022338867
+    },
+    "imageLoaded": true,
+    "actions": [
+      {
+        "text": "Deneyleri keşfet →",
+        "href": "rehberler.html",
+        "rect": {
+          "x": 20,
+          "y": 700.125,
+          "width": 155.234375,
+          "height": 48,
+          "bottom": 748.125,
+          "right": 175.234375
+        },
+        "topElement": true
+      },
+      {
+        "text": "Son videoyu izle",
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "rect": {
+          "x": 189.234375,
+          "y": 702.125,
+          "width": 126.078125,
+          "height": 44,
+          "bottom": 746.125,
+          "right": 315.3125
+        },
+        "topElement": true
+      }
+    ],
+    "stage": {
+      "x": 0,
+      "y": -0.6875,
+      "width": 375,
+      "height": 844,
+      "bottom": 843.3125,
+      "right": 375
+    },
+    "name": "390-dark-100",
+    "clip": {
+      "height": 844,
+      "width": 390,
+      "x": 24,
+      "y": 76
+    }
+  },
+  {
+    "viewport": [
+      390,
+      844
+    ],
+    "theme": "light",
+    "mode": "spatial",
+    "progress": "0.0000",
+    "scroll": 250,
+    "horizontalOverflow": false,
+    "title": {
+      "x": 20,
+      "y": 76.234375,
+      "width": 335,
+      "height": 193.9375,
+      "bottom": 270.171875,
+      "right": 355
+    },
+    "destination": {
+      "x": 36.47541046142578,
+      "y": 101.95338439941406,
+      "width": 302.0491943359375,
+      "height": 162.14012145996094,
+      "bottom": 264.093505859375,
+      "right": 338.5246047973633
+    },
+    "destinationVisible": "hidden",
+    "destinationOpacity": "0",
+    "research": {
+      "x": 36.47541046142578,
+      "y": 224.42135620117188,
+      "width": 149.0804443359375,
+      "height": 39.672149658203125,
+      "bottom": 264.093505859375,
+      "right": 185.55585479736328
+    },
+    "image": {
+      "x": 33.27394104003906,
+      "y": 405.8940124511719,
+      "width": 315.27850341796875,
+      "height": 190.83010864257812,
+      "bottom": 596.72412109375,
+      "right": 348.5524444580078
+    },
+    "imageLoaded": true,
+    "actions": [
+      {
+        "text": "Deneyleri keşfet →",
+        "href": "rehberler.html",
+        "rect": {
+          "x": 20,
+          "y": 700.8125,
+          "width": 155.234375,
+          "height": 48,
+          "bottom": 748.8125,
+          "right": 175.234375
+        },
+        "topElement": true
+      },
+      {
+        "text": "Son videoyu izle",
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "rect": {
+          "x": 189.234375,
+          "y": 702.8125,
+          "width": 126.078125,
+          "height": 44,
+          "bottom": 746.8125,
+          "right": 315.3125
+        },
+        "topElement": true
+      }
+    ],
+    "stage": {
+      "x": 0,
+      "y": 0.3125,
+      "width": 375,
+      "height": 843.6875,
+      "bottom": 844,
+      "right": 375
+    },
+    "name": "390-light-000",
+    "clip": {
+      "height": 844,
+      "width": 390,
+      "x": 24,
+      "y": 76
+    }
+  },
+  {
+    "viewport": [
+      390,
+      844
+    ],
+    "theme": "light",
+    "mode": "spatial",
+    "progress": "0.1503",
+    "scroll": 348,
+    "horizontalOverflow": false,
+    "title": {
+      "x": 20,
+      "y": 75.06224060058594,
+      "width": 309.39300537109375,
+      "height": 179.16246032714844,
+      "bottom": 254.22470092773438,
+      "right": 329.39300537109375
+    },
+    "destination": {
+      "x": 36.47541046142578,
+      "y": 101.67213439941406,
+      "width": 302.0491943359375,
+      "height": 162.14012145996094,
+      "bottom": 263.812255859375,
+      "right": 338.5246047973633
+    },
+    "destinationVisible": "hidden",
+    "destinationOpacity": "0",
+    "research": {
+      "x": 36.47541046142578,
+      "y": 224.14010620117188,
+      "width": 149.0804443359375,
+      "height": 39.672149658203125,
+      "bottom": 263.812255859375,
+      "right": 185.55585479736328
+    },
+    "image": {
+      "x": 33.27394104003906,
+      "y": 405.7509765625,
+      "width": 315.27850341796875,
+      "height": 190.83111572265625,
+      "bottom": 596.5820922851562,
+      "right": 348.5524444580078
+    },
+    "imageLoaded": true,
+    "actions": [
+      {
+        "text": "Deneyleri keşfet →",
+        "href": "rehberler.html",
+        "rect": {
+          "x": 20,
+          "y": 700.8125,
+          "width": 155.234375,
+          "height": 48,
+          "bottom": 748.8125,
+          "right": 175.234375
+        },
+        "topElement": true
+      },
+      {
+        "text": "Son videoyu izle",
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "rect": {
+          "x": 189.234375,
+          "y": 702.8125,
+          "width": 126.078125,
+          "height": 44,
+          "bottom": 746.8125,
+          "right": 315.3125
+        },
+        "topElement": true
+      }
+    ],
+    "stage": {
+      "x": 0,
+      "y": 0,
+      "width": 375,
+      "height": 844,
+      "bottom": 844,
+      "right": 375
+    },
+    "name": "390-light-015",
+    "clip": {
+      "height": 844,
+      "width": 390,
+      "x": 24,
+      "y": 76
+    }
+  },
+  {
+    "viewport": [
+      390,
+      844
+    ],
+    "theme": "light",
+    "mode": "spatial",
+    "progress": "0.2995",
+    "scroll": 445,
+    "horizontalOverflow": false,
+    "title": {
+      "x": 20,
+      "y": 74.1358413696289,
+      "width": 282.5372009277344,
+      "height": 163.79031372070312,
+      "bottom": 237.92615509033203,
+      "right": 302.5372009277344
+    },
+    "destination": {
+      "x": 36.47541046142578,
+      "y": 101.67213439941406,
+      "width": 302.0491943359375,
+      "height": 162.14012145996094,
+      "bottom": 263.812255859375,
+      "right": 338.5246047973633
+    },
+    "destinationVisible": "visible",
+    "destinationOpacity": "0.3649",
+    "research": {
+      "x": 36.47541046142578,
+      "y": 224.14010620117188,
+      "width": 149.0804443359375,
+      "height": 39.672149658203125,
+      "bottom": 263.812255859375,
+      "right": 185.55585479736328
+    },
+    "image": {
+      "x": 31.206754684448242,
+      "y": 401.806396484375,
+      "width": 314.1418151855469,
+      "height": 190.82476806640625,
+      "bottom": 592.6311645507812,
+      "right": 345.3485698699951
+    },
+    "imageLoaded": true,
+    "actions": [
+      {
+        "text": "Deneyleri keşfet →",
+        "href": "rehberler.html",
+        "rect": {
+          "x": 20,
+          "y": 700.8125,
+          "width": 155.234375,
+          "height": 48,
+          "bottom": 748.8125,
+          "right": 175.234375
+        },
+        "topElement": true
+      },
+      {
+        "text": "Son videoyu izle",
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "rect": {
+          "x": 189.234375,
+          "y": 702.8125,
+          "width": 126.078125,
+          "height": 44,
+          "bottom": 746.8125,
+          "right": 315.3125
+        },
+        "topElement": true
+      }
+    ],
+    "stage": {
+      "x": 0,
+      "y": 0,
+      "width": 375,
+      "height": 844,
+      "bottom": 844,
+      "right": 375
+    },
+    "name": "390-light-030",
+    "clip": {
+      "height": 844,
+      "width": 390,
+      "x": 24,
+      "y": 76
+    }
+  },
+  {
+    "viewport": [
+      390,
+      844
+    ],
+    "theme": "light",
+    "mode": "spatial",
+    "progress": "0.4503",
+    "scroll": 543,
+    "horizontalOverflow": false,
+    "title": {
+      "x": 20,
+      "y": 74.13581848144531,
+      "width": 282.53680419921875,
+      "height": 163.7900848388672,
+      "bottom": 237.9259033203125,
+      "right": 302.53680419921875
+    },
+    "destination": {
+      "x": 36.47541046142578,
+      "y": 101.67213439941406,
+      "width": 302.0491943359375,
+      "height": 162.14012145996094,
+      "bottom": 263.812255859375,
+      "right": 338.5246047973633
+    },
+    "destinationVisible": "visible",
+    "destinationOpacity": "1",
+    "research": {
+      "x": 36.47541046142578,
+      "y": 224.14010620117188,
+      "width": 149.0804443359375,
+      "height": 39.672149658203125,
+      "bottom": 263.812255859375,
+      "right": 185.55585479736328
+    },
+    "image": {
+      "x": 25.95378875732422,
+      "y": 388.37322998046875,
+      "width": 310.60711669921875,
+      "height": 190.2623291015625,
+      "bottom": 578.6355590820312,
+      "right": 336.56090545654297
+    },
+    "imageLoaded": true,
+    "actions": [
+      {
+        "text": "Deneyleri keşfet →",
+        "href": "rehberler.html",
+        "rect": {
+          "x": 20,
+          "y": 700.8125,
+          "width": 155.234375,
+          "height": 48,
+          "bottom": 748.8125,
+          "right": 175.234375
+        },
+        "topElement": true
+      },
+      {
+        "text": "Son videoyu izle",
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "rect": {
+          "x": 189.234375,
+          "y": 702.8125,
+          "width": 126.078125,
+          "height": 44,
+          "bottom": 746.8125,
+          "right": 315.3125
+        },
+        "topElement": true
+      }
+    ],
+    "stage": {
+      "x": 0,
+      "y": 0,
+      "width": 375,
+      "height": 844,
+      "bottom": 844,
+      "right": 375
+    },
+    "name": "390-light-045",
+    "clip": {
+      "height": 844,
+      "width": 390,
+      "x": 24,
+      "y": 76
+    }
+  },
+  {
+    "viewport": [
+      390,
+      844
+    ],
+    "theme": "light",
+    "mode": "spatial",
+    "progress": "0.5995",
+    "scroll": 640,
+    "horizontalOverflow": false,
+    "title": {
+      "x": 20,
+      "y": 74.13581848144531,
+      "width": 282.53680419921875,
+      "height": 163.7900848388672,
+      "bottom": 237.9259033203125,
+      "right": 302.53680419921875
+    },
+    "destination": {
+      "x": 36.13667678833008,
+      "y": 101.49030303955078,
+      "width": 302.72662353515625,
+      "height": 162.5037841796875,
+      "bottom": 263.9940872192383,
+      "right": 338.8633003234863
+    },
+    "destinationVisible": "visible",
+    "destinationOpacity": "1",
+    "research": {
+      "x": 36.13667678833008,
+      "y": 224.23297119140625,
+      "width": 149.41481018066406,
+      "height": 39.7611083984375,
+      "bottom": 263.99407958984375,
+      "right": 185.55148696899414
+    },
+    "image": {
+      "x": 26.5228214263916,
+      "y": 370.7133483886719,
+      "width": 308.84033203125,
+      "height": 187.79367065429688,
+      "bottom": 558.5070190429688,
+      "right": 335.3631534576416
+    },
+    "imageLoaded": true,
+    "actions": [
+      {
+        "text": "Deneyleri keşfet →",
+        "href": "rehberler.html",
+        "rect": {
+          "x": 20,
+          "y": 700.8125,
+          "width": 155.234375,
+          "height": 48,
+          "bottom": 748.8125,
+          "right": 175.234375
+        },
+        "topElement": true
+      },
+      {
+        "text": "Son videoyu izle",
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "rect": {
+          "x": 189.234375,
+          "y": 702.8125,
+          "width": 126.078125,
+          "height": 44,
+          "bottom": 746.8125,
+          "right": 315.3125
+        },
+        "topElement": true
+      }
+    ],
+    "stage": {
+      "x": 0,
+      "y": 0,
+      "width": 375,
+      "height": 844,
+      "bottom": 844,
+      "right": 375
+    },
+    "name": "390-light-060",
+    "clip": {
+      "height": 844,
+      "width": 390,
+      "x": 24,
+      "y": 76
+    }
+  },
+  {
+    "viewport": [
+      390,
+      844
+    ],
+    "theme": "light",
+    "mode": "spatial",
+    "progress": "0.7503",
+    "scroll": 738,
+    "horizontalOverflow": false,
+    "title": {
+      "x": 20,
+      "y": 74.13581848144531,
+      "width": 282.53680419921875,
+      "height": 163.7900848388672,
+      "bottom": 237.9259033203125,
+      "right": 302.53680419921875
+    },
+    "destination": {
+      "x": 30.300939559936523,
+      "y": 98.35767364501953,
+      "width": 314.39813232421875,
+      "height": 168.76904296875,
+      "bottom": 267.12671661376953,
+      "right": 344.6990718841553
+    },
+    "destinationVisible": "visible",
+    "destinationOpacity": "1",
+    "research": {
+      "x": 30.300939559936523,
+      "y": 225.83262634277344,
+      "width": 155.1754150390625,
+      "height": 41.29408264160156,
+      "bottom": 267.126708984375,
+      "right": 185.47635459899902
+    },
+    "image": {
+      "x": 32.3248405456543,
+      "y": 356.7320251464844,
+      "width": 309.0936584472656,
+      "height": 180.60714721679688,
+      "bottom": 537.3391723632812,
+      "right": 341.4184989929199
+    },
+    "imageLoaded": true,
+    "actions": [
+      {
+        "text": "Deneyleri keşfet →",
+        "href": "rehberler.html",
+        "rect": {
+          "x": 20,
+          "y": 700.8125,
+          "width": 155.234375,
+          "height": 48,
+          "bottom": 748.8125,
+          "right": 175.234375
+        },
+        "topElement": true
+      },
+      {
+        "text": "Son videoyu izle",
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "rect": {
+          "x": 189.234375,
+          "y": 702.8125,
+          "width": 126.078125,
+          "height": 44,
+          "bottom": 746.8125,
+          "right": 315.3125
+        },
+        "topElement": true
+      }
+    ],
+    "stage": {
+      "x": 0,
+      "y": 0,
+      "width": 375,
+      "height": 844,
+      "bottom": 844,
+      "right": 375
+    },
+    "name": "390-light-075",
+    "clip": {
+      "height": 844,
+      "width": 390,
+      "x": 24,
+      "y": 76
+    }
+  },
+  {
+    "viewport": [
+      390,
+      844
+    ],
+    "theme": "light",
+    "mode": "spatial",
+    "progress": "0.9995",
+    "scroll": 900,
+    "horizontalOverflow": false,
+    "title": {
+      "x": 20,
+      "y": 73.44831848144531,
+      "width": 282.53680419921875,
+      "height": 163.7900848388672,
+      "bottom": 237.2384033203125,
+      "right": 302.53680419921875
+    },
+    "destination": {
+      "x": 20.00006103515625,
+      "y": 92.14065551757812,
+      "width": 334.9998779296875,
+      "height": 179.82806396484375,
+      "bottom": 271.9687194824219,
+      "right": 354.99993896484375
+    },
+    "destinationVisible": "visible",
+    "destinationOpacity": "1",
+    "research": {
+      "x": 20.00006103515625,
+      "y": 227.96873474121094,
+      "width": 165.34368896484375,
+      "height": 43.99998474121094,
+      "bottom": 271.9687194824219,
+      "right": 185.34375
+    },
+    "image": {
+      "x": 34.26238250732422,
+      "y": 354.28704833984375,
+      "width": 306.4752197265625,
+      "height": 172.392333984375,
+      "bottom": 526.6793823242188,
+      "right": 340.7376022338867
+    },
+    "imageLoaded": true,
+    "actions": [
+      {
+        "text": "Deneyleri keşfet →",
+        "href": "rehberler.html",
+        "rect": {
+          "x": 20,
+          "y": 700.125,
+          "width": 155.234375,
+          "height": 48,
+          "bottom": 748.125,
+          "right": 175.234375
+        },
+        "topElement": true
+      },
+      {
+        "text": "Son videoyu izle",
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "rect": {
+          "x": 189.234375,
+          "y": 702.125,
+          "width": 126.078125,
+          "height": 44,
+          "bottom": 746.125,
+          "right": 315.3125
+        },
+        "topElement": true
+      }
+    ],
+    "stage": {
+      "x": 0,
+      "y": -0.6875,
+      "width": 375,
+      "height": 844,
+      "bottom": 843.3125,
+      "right": 375
+    },
+    "name": "390-light-100",
+    "clip": {
+      "height": 844,
+      "width": 390,
+      "x": 24,
+      "y": 76
+    }
+  },
+  {
+    "viewport": [
+      1440,
+      900
+    ],
+    "theme": "dark",
+    "mode": "spatial",
+    "progress": "0.0000",
+    "scroll": 141,
+    "horizontalOverflow": false,
+    "title": {
+      "x": 96,
+      "y": 117.15625,
+      "width": 720,
+      "height": 340.171875,
+      "bottom": 457.328125,
+      "right": 816
+    },
+    "destination": {
+      "x": 115.18032836914062,
+      "y": 272.4556884765625,
+      "width": 351.63934326171875,
+      "height": 207.729248046875,
+      "bottom": 480.1849365234375,
+      "right": 466.8196716308594
+    },
+    "destinationVisible": "hidden",
+    "destinationOpacity": "0",
+    "research": {
+      "x": 115.18032836914062,
+      "y": 440.5128173828125,
+      "width": 161.54840087890625,
+      "height": 39.672119140625,
+      "bottom": 480.1849365234375,
+      "right": 276.7287292480469
+    },
+    "image": {
+      "x": 616.6373901367188,
+      "y": 244.85287475585938,
+      "width": 802.1165161132812,
+      "height": 474.0565490722656,
+      "bottom": 718.909423828125,
+      "right": 1418.75390625
+    },
+    "imageLoaded": true,
+    "actions": [
+      {
+        "text": "Deneyleri keşfet →",
+        "href": "rehberler.html",
+        "rect": {
+          "x": 96,
+          "y": 818.921875,
+          "width": 185.140625,
+          "height": 51.078125,
+          "bottom": 870,
+          "right": 281.140625
+        },
+        "topElement": true
+      },
+      {
+        "text": "Son videoyu izle",
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "rect": {
+          "x": 305.140625,
+          "y": 822.453125,
+          "width": 140.140625,
+          "height": 44,
+          "bottom": 866.453125,
+          "right": 445.28125
+        },
+        "topElement": true
+      }
+    ],
+    "stage": {
+      "x": 0,
+      "y": 0.1875,
+      "width": 1425,
+      "height": 899.8125,
+      "bottom": 900,
+      "right": 1425
+    },
+    "name": "1440-dark-000",
+    "clip": {
+      "height": 756,
+      "width": 1209.5999755859375,
+      "x": 24,
+      "y": 76
+    }
+  },
+  {
+    "viewport": [
+      1440,
+      900
+    ],
+    "theme": "dark",
+    "mode": "spatial",
+    "progress": "0.1503",
+    "scroll": 284,
+    "horizontalOverflow": false,
+    "title": {
+      "x": 77.48743438720703,
+      "y": 120.58277893066406,
+      "width": 681.5714111328125,
+      "height": 322.7972412109375,
+      "bottom": 443.38002014160156,
+      "right": 759.0588455200195
+    },
+    "destination": {
+      "x": 115.18032836914062,
+      "y": 272.3306884765625,
+      "width": 351.63934326171875,
+      "height": 207.729248046875,
+      "bottom": 480.0599365234375,
+      "right": 466.8196716308594
+    },
+    "destinationVisible": "hidden",
+    "destinationOpacity": "0",
+    "research": {
+      "x": 115.18032836914062,
+      "y": 440.3878173828125,
+      "width": 161.54840087890625,
+      "height": 39.672119140625,
+      "bottom": 480.0599365234375,
+      "right": 276.7287292480469
+    },
+    "image": {
+      "x": 616.6373901367188,
+      "y": 244.75804138183594,
+      "width": 802.1165161132812,
+      "height": 474.05780029296875,
+      "bottom": 718.8158416748047,
+      "right": 1418.75390625
+    },
+    "imageLoaded": true,
+    "actions": [
+      {
+        "text": "Deneyleri keşfet →",
+        "href": "rehberler.html",
+        "rect": {
+          "x": 96,
+          "y": 818.921875,
+          "width": 185.140625,
+          "height": 51.078125,
+          "bottom": 870,
+          "right": 281.140625
+        },
+        "topElement": true
+      },
+      {
+        "text": "Son videoyu izle",
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "rect": {
+          "x": 305.140625,
+          "y": 822.453125,
+          "width": 140.140625,
+          "height": 44,
+          "bottom": 866.453125,
+          "right": 445.28125
+        },
+        "topElement": true
+      }
+    ],
+    "stage": {
+      "x": 0,
+      "y": 0,
+      "width": 1425,
+      "height": 900,
+      "bottom": 900,
+      "right": 1425
+    },
+    "name": "1440-dark-015",
+    "clip": {
+      "height": 756,
+      "width": 1209.5999755859375,
+      "x": 24,
+      "y": 76
+    }
+  },
+  {
+    "viewport": [
+      1440,
+      900
+    ],
+    "theme": "dark",
+    "mode": "spatial",
+    "progress": "0.2998",
+    "scroll": 426,
+    "horizontalOverflow": false,
+    "title": {
+      "x": 58.50007247924805,
+      "y": 124.54268646240234,
+      "width": 635.2637329101562,
+      "height": 303.6623229980469,
+      "bottom": 428.2050094604492,
+      "right": 693.7638053894043
+    },
+    "destination": {
+      "x": 115.18032836914062,
+      "y": 272.3306884765625,
+      "width": 351.63934326171875,
+      "height": 207.729248046875,
+      "bottom": 480.0599365234375,
+      "right": 466.8196716308594
+    },
+    "destinationVisible": "visible",
+    "destinationOpacity": "0.3673",
+    "research": {
+      "x": 115.18032836914062,
+      "y": 440.3878173828125,
+      "width": 161.54840087890625,
+      "height": 39.672119140625,
+      "bottom": 480.0599365234375,
+      "right": 276.7287292480469
+    },
+    "image": {
+      "x": 608.9002685546875,
+      "y": 245.42584228515625,
+      "width": 796.6981201171875,
+      "height": 474.33111572265625,
+      "bottom": 719.7569580078125,
+      "right": 1405.598388671875
+    },
+    "imageLoaded": true,
+    "actions": [
+      {
+        "text": "Deneyleri keşfet →",
+        "href": "rehberler.html",
+        "rect": {
+          "x": 96,
+          "y": 818.921875,
+          "width": 185.140625,
+          "height": 51.078125,
+          "bottom": 870,
+          "right": 281.140625
+        },
+        "topElement": true
+      },
+      {
+        "text": "Son videoyu izle",
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "rect": {
+          "x": 305.140625,
+          "y": 822.453125,
+          "width": 140.140625,
+          "height": 44,
+          "bottom": 866.453125,
+          "right": 445.28125
+        },
+        "topElement": true
+      }
+    ],
+    "stage": {
+      "x": 0,
+      "y": 0,
+      "width": 1425,
+      "height": 900,
+      "bottom": 900,
+      "right": 1425
+    },
+    "name": "1440-dark-030",
+    "clip": {
+      "height": 756,
+      "width": 1209.5999755859375,
+      "x": 24,
+      "y": 76
+    }
+  },
+  {
+    "viewport": [
+      1440,
+      900
+    ],
+    "theme": "dark",
+    "mode": "spatial",
+    "progress": "0.4503",
+    "scroll": 569,
+    "horizontalOverflow": false,
+    "title": {
+      "x": 58.5,
+      "y": 124.54273223876953,
+      "width": 635.2635498046875,
+      "height": 303.6622619628906,
+      "bottom": 428.20499420166016,
+      "right": 693.7635498046875
+    },
+    "destination": {
+      "x": 115.18032836914062,
+      "y": 272.3306884765625,
+      "width": 351.63934326171875,
+      "height": 207.729248046875,
+      "bottom": 480.0599365234375,
+      "right": 466.8196716308594
+    },
+    "destinationVisible": "visible",
+    "destinationOpacity": "1",
+    "research": {
+      "x": 115.18032836914062,
+      "y": 440.3878173828125,
+      "width": 161.54840087890625,
+      "height": 39.672119140625,
+      "bottom": 480.0599365234375,
+      "right": 276.7287292480469
+    },
+    "image": {
+      "x": 591.0154418945312,
+      "y": 238.52005004882812,
+      "width": 777.2243041992188,
+      "height": 481.7842712402344,
+      "bottom": 720.3043212890625,
+      "right": 1368.23974609375
+    },
+    "imageLoaded": true,
+    "actions": [
+      {
+        "text": "Deneyleri keşfet →",
+        "href": "rehberler.html",
+        "rect": {
+          "x": 96,
+          "y": 818.921875,
+          "width": 185.140625,
+          "height": 51.078125,
+          "bottom": 870,
+          "right": 281.140625
+        },
+        "topElement": true
+      },
+      {
+        "text": "Son videoyu izle",
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "rect": {
+          "x": 305.140625,
+          "y": 822.453125,
+          "width": 140.140625,
+          "height": 44,
+          "bottom": 866.453125,
+          "right": 445.28125
+        },
+        "topElement": true
+      }
+    ],
+    "stage": {
+      "x": 0,
+      "y": 0,
+      "width": 1425,
+      "height": 900,
+      "bottom": 900,
+      "right": 1425
+    },
+    "name": "1440-dark-045",
+    "clip": {
+      "height": 756,
+      "width": 1209.5999755859375,
+      "x": 24,
+      "y": 76
+    }
+  },
+  {
+    "viewport": [
+      1440,
+      900
+    ],
+    "theme": "dark",
+    "mode": "spatial",
+    "progress": "0.5998",
+    "scroll": 711,
+    "horizontalOverflow": false,
+    "title": {
+      "x": 58.5,
+      "y": 124.54273223876953,
+      "width": 635.2635498046875,
+      "height": 303.6622619628906,
+      "bottom": 428.20499420166016,
+      "right": 693.7635498046875
+    },
+    "destination": {
+      "x": 114.78047180175781,
+      "y": 272.094482421875,
+      "width": 352.4390869140625,
+      "height": 208.20166015625,
+      "bottom": 480.296142578125,
+      "right": 467.2195587158203
+    },
+    "destinationVisible": "visible",
+    "destinationOpacity": "1",
+    "research": {
+      "x": 114.78047180175781,
+      "y": 440.5337829589844,
+      "width": 161.9158172607422,
+      "height": 39.762359619140625,
+      "bottom": 480.296142578125,
+      "right": 276.6962890625
+    },
+    "image": {
+      "x": 598.6876831054688,
+      "y": 227.80445861816406,
+      "width": 786.3427124023438,
+      "height": 483.534912109375,
+      "bottom": 711.3393707275391,
+      "right": 1385.0303955078125
+    },
+    "imageLoaded": true,
+    "actions": [
+      {
+        "text": "Deneyleri keşfet →",
+        "href": "rehberler.html",
+        "rect": {
+          "x": 96,
+          "y": 818.921875,
+          "width": 185.140625,
+          "height": 51.078125,
+          "bottom": 870,
+          "right": 281.140625
+        },
+        "topElement": true
+      },
+      {
+        "text": "Son videoyu izle",
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "rect": {
+          "x": 305.140625,
+          "y": 822.453125,
+          "width": 140.140625,
+          "height": 44,
+          "bottom": 866.453125,
+          "right": 445.28125
+        },
+        "topElement": true
+      }
+    ],
+    "stage": {
+      "x": 0,
+      "y": 0,
+      "width": 1425,
+      "height": 900,
+      "bottom": 900,
+      "right": 1425
+    },
+    "name": "1440-dark-060",
+    "clip": {
+      "height": 756,
+      "width": 1209.5999755859375,
+      "x": 24,
+      "y": 76
+    }
+  },
+  {
+    "viewport": [
+      1440,
+      900
+    ],
+    "theme": "dark",
+    "mode": "spatial",
+    "progress": "0.7503",
+    "scroll": 854,
+    "horizontalOverflow": false,
+    "title": {
+      "x": 58.5,
+      "y": 124.54273223876953,
+      "width": 635.2635498046875,
+      "height": 303.6622619628906,
+      "bottom": 428.20499420166016,
+      "right": 693.7635498046875
+    },
+    "destination": {
+      "x": 107.98960876464844,
+      "y": 268.0827941894531,
+      "width": 366.020751953125,
+      "height": 216.22503662109375,
+      "bottom": 484.3078308105469,
+      "right": 474.01036071777344
+    },
+    "destinationVisible": "visible",
+    "destinationOpacity": "1",
+    "research": {
+      "x": 107.98960876464844,
+      "y": 443.01318359375,
+      "width": 168.1554718017578,
+      "height": 41.294647216796875,
+      "bottom": 484.3078308105469,
+      "right": 276.14508056640625
+    },
+    "image": {
+      "x": 631.0135498046875,
+      "y": 220.89414978027344,
+      "width": 805.2879638671875,
+      "height": 460.12567138671875,
+      "bottom": 681.0198211669922,
+      "right": 1436.301513671875
+    },
+    "imageLoaded": true,
+    "actions": [
+      {
+        "text": "Deneyleri keşfet →",
+        "href": "rehberler.html",
+        "rect": {
+          "x": 96,
+          "y": 818.921875,
+          "width": 185.140625,
+          "height": 51.078125,
+          "bottom": 870,
+          "right": 281.140625
+        },
+        "topElement": true
+      },
+      {
+        "text": "Son videoyu izle",
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "rect": {
+          "x": 305.140625,
+          "y": 822.453125,
+          "width": 140.140625,
+          "height": 44,
+          "bottom": 866.453125,
+          "right": 445.28125
+        },
+        "topElement": true
+      }
+    ],
+    "stage": {
+      "x": 0,
+      "y": 0,
+      "width": 1425,
+      "height": 900,
+      "bottom": 900,
+      "right": 1425
+    },
+    "name": "1440-dark-075",
+    "clip": {
+      "height": 756,
+      "width": 1209.5999755859375,
+      "x": 24,
+      "y": 76
+    }
+  },
+  {
+    "viewport": [
+      1440,
+      900
+    ],
+    "theme": "dark",
+    "mode": "spatial",
+    "progress": "0.9998",
+    "scroll": 1091,
+    "horizontalOverflow": false,
+    "title": {
+      "x": 58.5,
+      "y": 123.73023223876953,
+      "width": 635.2635498046875,
+      "height": 303.6622619628906,
+      "bottom": 427.39249420166016,
+      "right": 693.7635498046875
+    },
+    "destination": {
+      "x": 96.00001525878906,
+      "y": 260.1875,
+      "width": 389.99993896484375,
+      "height": 230.390625,
+      "bottom": 490.578125,
+      "right": 485.9999542236328
+    },
+    "destinationVisible": "visible",
+    "destinationOpacity": "1",
+    "research": {
+      "x": 96.00001525878906,
+      "y": 446.578125,
+      "width": 179.17185974121094,
+      "height": 44,
+      "bottom": 490.578125,
+      "right": 275.171875
+    },
+    "image": {
+      "x": 645.807373046875,
+      "y": 217.84896850585938,
+      "width": 767.43017578125,
+      "height": 431.6785583496094,
+      "bottom": 649.5275268554688,
+      "right": 1413.237548828125
+    },
+    "imageLoaded": true,
+    "actions": [
+      {
+        "text": "Deneyleri keşfet →",
+        "href": "rehberler.html",
+        "rect": {
+          "x": 96,
+          "y": 818.109375,
+          "width": 185.140625,
+          "height": 51.078125,
+          "bottom": 869.1875,
+          "right": 281.140625
+        },
+        "topElement": true
+      },
+      {
+        "text": "Son videoyu izle",
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "rect": {
+          "x": 305.140625,
+          "y": 821.640625,
+          "width": 140.140625,
+          "height": 44,
+          "bottom": 865.640625,
+          "right": 445.28125
+        },
+        "topElement": true
+      }
+    ],
+    "stage": {
+      "x": 0,
+      "y": -0.8125,
+      "width": 1425,
+      "height": 900,
+      "bottom": 899.1875,
+      "right": 1425
+    },
+    "name": "1440-dark-100",
+    "clip": {
+      "height": 756,
+      "width": 1209.5999755859375,
+      "x": 24,
+      "y": 76
+    }
+  },
+  {
+    "viewport": [
+      1440,
+      900
+    ],
+    "theme": "light",
+    "mode": "spatial",
+    "progress": "0.0000",
+    "scroll": 141,
+    "horizontalOverflow": false,
+    "title": {
+      "x": 96,
+      "y": 117.15625,
+      "width": 720,
+      "height": 340.171875,
+      "bottom": 457.328125,
+      "right": 816
+    },
+    "destination": {
+      "x": 115.18032836914062,
+      "y": 272.4556884765625,
+      "width": 351.63934326171875,
+      "height": 207.729248046875,
+      "bottom": 480.1849365234375,
+      "right": 466.8196716308594
+    },
+    "destinationVisible": "hidden",
+    "destinationOpacity": "0",
+    "research": {
+      "x": 115.18032836914062,
+      "y": 440.5128173828125,
+      "width": 161.54840087890625,
+      "height": 39.672119140625,
+      "bottom": 480.1849365234375,
+      "right": 276.7287292480469
+    },
+    "image": {
+      "x": 616.6373901367188,
+      "y": 244.85287475585938,
+      "width": 802.1165161132812,
+      "height": 474.0565490722656,
+      "bottom": 718.909423828125,
+      "right": 1418.75390625
+    },
+    "imageLoaded": true,
+    "actions": [
+      {
+        "text": "Deneyleri keşfet →",
+        "href": "rehberler.html",
+        "rect": {
+          "x": 96,
+          "y": 818.921875,
+          "width": 185.140625,
+          "height": 51.078125,
+          "bottom": 870,
+          "right": 281.140625
+        },
+        "topElement": true
+      },
+      {
+        "text": "Son videoyu izle",
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "rect": {
+          "x": 305.140625,
+          "y": 822.453125,
+          "width": 140.140625,
+          "height": 44,
+          "bottom": 866.453125,
+          "right": 445.28125
+        },
+        "topElement": true
+      }
+    ],
+    "stage": {
+      "x": 0,
+      "y": 0.1875,
+      "width": 1425,
+      "height": 899.8125,
+      "bottom": 900,
+      "right": 1425
+    },
+    "name": "1440-light-000",
+    "clip": {
+      "height": 756,
+      "width": 1209.5999755859375,
+      "x": 24,
+      "y": 76
+    }
+  },
+  {
+    "viewport": [
+      1440,
+      900
+    ],
+    "theme": "light",
+    "mode": "spatial",
+    "progress": "0.1503",
+    "scroll": 284,
+    "horizontalOverflow": false,
+    "title": {
+      "x": 77.48743438720703,
+      "y": 120.58277893066406,
+      "width": 681.5714111328125,
+      "height": 322.7972412109375,
+      "bottom": 443.38002014160156,
+      "right": 759.0588455200195
+    },
+    "destination": {
+      "x": 115.18032836914062,
+      "y": 272.3306884765625,
+      "width": 351.63934326171875,
+      "height": 207.729248046875,
+      "bottom": 480.0599365234375,
+      "right": 466.8196716308594
+    },
+    "destinationVisible": "hidden",
+    "destinationOpacity": "0",
+    "research": {
+      "x": 115.18032836914062,
+      "y": 440.3878173828125,
+      "width": 161.54840087890625,
+      "height": 39.672119140625,
+      "bottom": 480.0599365234375,
+      "right": 276.7287292480469
+    },
+    "image": {
+      "x": 616.6373901367188,
+      "y": 244.75804138183594,
+      "width": 802.1165161132812,
+      "height": 474.05780029296875,
+      "bottom": 718.8158416748047,
+      "right": 1418.75390625
+    },
+    "imageLoaded": true,
+    "actions": [
+      {
+        "text": "Deneyleri keşfet →",
+        "href": "rehberler.html",
+        "rect": {
+          "x": 96,
+          "y": 818.921875,
+          "width": 185.140625,
+          "height": 51.078125,
+          "bottom": 870,
+          "right": 281.140625
+        },
+        "topElement": true
+      },
+      {
+        "text": "Son videoyu izle",
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "rect": {
+          "x": 305.140625,
+          "y": 822.453125,
+          "width": 140.140625,
+          "height": 44,
+          "bottom": 866.453125,
+          "right": 445.28125
+        },
+        "topElement": true
+      }
+    ],
+    "stage": {
+      "x": 0,
+      "y": 0,
+      "width": 1425,
+      "height": 900,
+      "bottom": 900,
+      "right": 1425
+    },
+    "name": "1440-light-015",
+    "clip": {
+      "height": 756,
+      "width": 1209.5999755859375,
+      "x": 24,
+      "y": 76
+    }
+  },
+  {
+    "viewport": [
+      1440,
+      900
+    ],
+    "theme": "light",
+    "mode": "spatial",
+    "progress": "0.2998",
+    "scroll": 426,
+    "horizontalOverflow": false,
+    "title": {
+      "x": 58.50007247924805,
+      "y": 124.54268646240234,
+      "width": 635.2637329101562,
+      "height": 303.6623229980469,
+      "bottom": 428.2050094604492,
+      "right": 693.7638053894043
+    },
+    "destination": {
+      "x": 115.18032836914062,
+      "y": 272.3306884765625,
+      "width": 351.63934326171875,
+      "height": 207.729248046875,
+      "bottom": 480.0599365234375,
+      "right": 466.8196716308594
+    },
+    "destinationVisible": "visible",
+    "destinationOpacity": "0.3673",
+    "research": {
+      "x": 115.18032836914062,
+      "y": 440.3878173828125,
+      "width": 161.54840087890625,
+      "height": 39.672119140625,
+      "bottom": 480.0599365234375,
+      "right": 276.7287292480469
+    },
+    "image": {
+      "x": 608.9002685546875,
+      "y": 245.42584228515625,
+      "width": 796.6981201171875,
+      "height": 474.33111572265625,
+      "bottom": 719.7569580078125,
+      "right": 1405.598388671875
+    },
+    "imageLoaded": true,
+    "actions": [
+      {
+        "text": "Deneyleri keşfet →",
+        "href": "rehberler.html",
+        "rect": {
+          "x": 96,
+          "y": 818.921875,
+          "width": 185.140625,
+          "height": 51.078125,
+          "bottom": 870,
+          "right": 281.140625
+        },
+        "topElement": true
+      },
+      {
+        "text": "Son videoyu izle",
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "rect": {
+          "x": 305.140625,
+          "y": 822.453125,
+          "width": 140.140625,
+          "height": 44,
+          "bottom": 866.453125,
+          "right": 445.28125
+        },
+        "topElement": true
+      }
+    ],
+    "stage": {
+      "x": 0,
+      "y": 0,
+      "width": 1425,
+      "height": 900,
+      "bottom": 900,
+      "right": 1425
+    },
+    "name": "1440-light-030",
+    "clip": {
+      "height": 756,
+      "width": 1209.5999755859375,
+      "x": 24,
+      "y": 76
+    }
+  },
+  {
+    "viewport": [
+      1440,
+      900
+    ],
+    "theme": "light",
+    "mode": "spatial",
+    "progress": "0.4503",
+    "scroll": 569,
+    "horizontalOverflow": false,
+    "title": {
+      "x": 58.5,
+      "y": 124.54273223876953,
+      "width": 635.2635498046875,
+      "height": 303.6622619628906,
+      "bottom": 428.20499420166016,
+      "right": 693.7635498046875
+    },
+    "destination": {
+      "x": 115.18032836914062,
+      "y": 272.3306884765625,
+      "width": 351.63934326171875,
+      "height": 207.729248046875,
+      "bottom": 480.0599365234375,
+      "right": 466.8196716308594
+    },
+    "destinationVisible": "visible",
+    "destinationOpacity": "1",
+    "research": {
+      "x": 115.18032836914062,
+      "y": 440.3878173828125,
+      "width": 161.54840087890625,
+      "height": 39.672119140625,
+      "bottom": 480.0599365234375,
+      "right": 276.7287292480469
+    },
+    "image": {
+      "x": 591.0154418945312,
+      "y": 238.52005004882812,
+      "width": 777.2243041992188,
+      "height": 481.7842712402344,
+      "bottom": 720.3043212890625,
+      "right": 1368.23974609375
+    },
+    "imageLoaded": true,
+    "actions": [
+      {
+        "text": "Deneyleri keşfet →",
+        "href": "rehberler.html",
+        "rect": {
+          "x": 96,
+          "y": 818.921875,
+          "width": 185.140625,
+          "height": 51.078125,
+          "bottom": 870,
+          "right": 281.140625
+        },
+        "topElement": true
+      },
+      {
+        "text": "Son videoyu izle",
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "rect": {
+          "x": 305.140625,
+          "y": 822.453125,
+          "width": 140.140625,
+          "height": 44,
+          "bottom": 866.453125,
+          "right": 445.28125
+        },
+        "topElement": true
+      }
+    ],
+    "stage": {
+      "x": 0,
+      "y": 0,
+      "width": 1425,
+      "height": 900,
+      "bottom": 900,
+      "right": 1425
+    },
+    "name": "1440-light-045",
+    "clip": {
+      "height": 756,
+      "width": 1209.5999755859375,
+      "x": 24,
+      "y": 76
+    }
+  },
+  {
+    "viewport": [
+      1440,
+      900
+    ],
+    "theme": "light",
+    "mode": "spatial",
+    "progress": "0.5998",
+    "scroll": 711,
+    "horizontalOverflow": false,
+    "title": {
+      "x": 58.5,
+      "y": 124.54273223876953,
+      "width": 635.2635498046875,
+      "height": 303.6622619628906,
+      "bottom": 428.20499420166016,
+      "right": 693.7635498046875
+    },
+    "destination": {
+      "x": 114.78047180175781,
+      "y": 272.094482421875,
+      "width": 352.4390869140625,
+      "height": 208.20166015625,
+      "bottom": 480.296142578125,
+      "right": 467.2195587158203
+    },
+    "destinationVisible": "visible",
+    "destinationOpacity": "1",
+    "research": {
+      "x": 114.78047180175781,
+      "y": 440.5337829589844,
+      "width": 161.9158172607422,
+      "height": 39.762359619140625,
+      "bottom": 480.296142578125,
+      "right": 276.6962890625
+    },
+    "image": {
+      "x": 598.6876831054688,
+      "y": 227.80445861816406,
+      "width": 786.3427124023438,
+      "height": 483.534912109375,
+      "bottom": 711.3393707275391,
+      "right": 1385.0303955078125
+    },
+    "imageLoaded": true,
+    "actions": [
+      {
+        "text": "Deneyleri keşfet →",
+        "href": "rehberler.html",
+        "rect": {
+          "x": 96,
+          "y": 818.921875,
+          "width": 185.140625,
+          "height": 51.078125,
+          "bottom": 870,
+          "right": 281.140625
+        },
+        "topElement": true
+      },
+      {
+        "text": "Son videoyu izle",
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "rect": {
+          "x": 305.140625,
+          "y": 822.453125,
+          "width": 140.140625,
+          "height": 44,
+          "bottom": 866.453125,
+          "right": 445.28125
+        },
+        "topElement": true
+      }
+    ],
+    "stage": {
+      "x": 0,
+      "y": 0,
+      "width": 1425,
+      "height": 900,
+      "bottom": 900,
+      "right": 1425
+    },
+    "name": "1440-light-060",
+    "clip": {
+      "height": 756,
+      "width": 1209.5999755859375,
+      "x": 24,
+      "y": 76
+    }
+  },
+  {
+    "viewport": [
+      1440,
+      900
+    ],
+    "theme": "light",
+    "mode": "spatial",
+    "progress": "0.7503",
+    "scroll": 854,
+    "horizontalOverflow": false,
+    "title": {
+      "x": 58.5,
+      "y": 124.54273223876953,
+      "width": 635.2635498046875,
+      "height": 303.6622619628906,
+      "bottom": 428.20499420166016,
+      "right": 693.7635498046875
+    },
+    "destination": {
+      "x": 107.98960876464844,
+      "y": 268.0827941894531,
+      "width": 366.020751953125,
+      "height": 216.22503662109375,
+      "bottom": 484.3078308105469,
+      "right": 474.01036071777344
+    },
+    "destinationVisible": "visible",
+    "destinationOpacity": "1",
+    "research": {
+      "x": 107.98960876464844,
+      "y": 443.01318359375,
+      "width": 168.1554718017578,
+      "height": 41.294647216796875,
+      "bottom": 484.3078308105469,
+      "right": 276.14508056640625
+    },
+    "image": {
+      "x": 631.0135498046875,
+      "y": 220.89414978027344,
+      "width": 805.2879638671875,
+      "height": 460.12567138671875,
+      "bottom": 681.0198211669922,
+      "right": 1436.301513671875
+    },
+    "imageLoaded": true,
+    "actions": [
+      {
+        "text": "Deneyleri keşfet →",
+        "href": "rehberler.html",
+        "rect": {
+          "x": 96,
+          "y": 818.921875,
+          "width": 185.140625,
+          "height": 51.078125,
+          "bottom": 870,
+          "right": 281.140625
+        },
+        "topElement": true
+      },
+      {
+        "text": "Son videoyu izle",
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "rect": {
+          "x": 305.140625,
+          "y": 822.453125,
+          "width": 140.140625,
+          "height": 44,
+          "bottom": 866.453125,
+          "right": 445.28125
+        },
+        "topElement": true
+      }
+    ],
+    "stage": {
+      "x": 0,
+      "y": 0,
+      "width": 1425,
+      "height": 900,
+      "bottom": 900,
+      "right": 1425
+    },
+    "name": "1440-light-075",
+    "clip": {
+      "height": 756,
+      "width": 1209.5999755859375,
+      "x": 24,
+      "y": 76
+    }
+  },
+  {
+    "viewport": [
+      1440,
+      900
+    ],
+    "theme": "light",
+    "mode": "spatial",
+    "progress": "0.9998",
+    "scroll": 1091,
+    "horizontalOverflow": false,
+    "title": {
+      "x": 58.5,
+      "y": 123.73023223876953,
+      "width": 635.2635498046875,
+      "height": 303.6622619628906,
+      "bottom": 427.39249420166016,
+      "right": 693.7635498046875
+    },
+    "destination": {
+      "x": 96.00001525878906,
+      "y": 260.1875,
+      "width": 389.99993896484375,
+      "height": 230.390625,
+      "bottom": 490.578125,
+      "right": 485.9999542236328
+    },
+    "destinationVisible": "visible",
+    "destinationOpacity": "1",
+    "research": {
+      "x": 96.00001525878906,
+      "y": 446.578125,
+      "width": 179.17185974121094,
+      "height": 44,
+      "bottom": 490.578125,
+      "right": 275.171875
+    },
+    "image": {
+      "x": 645.807373046875,
+      "y": 217.84896850585938,
+      "width": 767.43017578125,
+      "height": 431.6785583496094,
+      "bottom": 649.5275268554688,
+      "right": 1413.237548828125
+    },
+    "imageLoaded": true,
+    "actions": [
+      {
+        "text": "Deneyleri keşfet →",
+        "href": "rehberler.html",
+        "rect": {
+          "x": 96,
+          "y": 818.109375,
+          "width": 185.140625,
+          "height": 51.078125,
+          "bottom": 869.1875,
+          "right": 281.140625
+        },
+        "topElement": true
+      },
+      {
+        "text": "Son videoyu izle",
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "rect": {
+          "x": 305.140625,
+          "y": 821.640625,
+          "width": 140.140625,
+          "height": 44,
+          "bottom": 865.640625,
+          "right": 445.28125
+        },
+        "topElement": true
+      }
+    ],
+    "stage": {
+      "x": 0,
+      "y": -0.8125,
+      "width": 1425,
+      "height": 900,
+      "bottom": 899.1875,
+      "right": 1425
+    },
+    "name": "1440-light-100",
+    "clip": {
+      "height": 756,
+      "width": 1209.5999755859375,
+      "x": 24,
+      "y": 76
+    }
+  }
+]

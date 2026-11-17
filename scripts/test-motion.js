@@ -70,12 +70,12 @@ test('page backgrounding does not leave pending discovery content or animation b
   f.document.hidden = true; f.listeners.visibilitychange(); await flush();
   assert.equal(content, 'new'); assert.equal(f.calls[0].animation.cancelled, true);
 });
-test('static cinematic slogan and three full scenes survive without JavaScript', () => {
+test('static homepage question and three full scenes survive without JavaScript', () => {
   const data = require('../site-data.js');
   const html = fs.readFileSync(require.resolve('../index.html'), 'utf8');
   const { renderHtml } = require('./sync-site.js');
   assert.equal(renderHtml(html), html);
-  for (const word of data.experience.intro) assert.ok(html.includes(word));
+  for (const text of ['id="hp-question"', 'Bir fikir.', 'Gerçekten işe', 'yarar mı?', 'Fikirleri gerçek hayatta test ediyorum.']) assert.ok(html.includes(text));
   for (const scene of data.experience.stories.method.scenes) {
     assert.ok(html.includes(`id="hikaye-${scene.id}"`));
     assert.ok(html.includes(scene.title)); assert.ok(html.includes(scene.description));

@@ -53,7 +53,7 @@ test('malformed published data fails the static build instead of shipping an uns
 test('published home has an explicit watch action and withdrawal removes it',()=>{
  const source=fs.readFileSync(require.resolve('../index.html'),'utf8');
  const html=renderHtml(source,releaseFixture());
- assert.match(html,/Videoyu YouTube’da izle/);assert.match(html,/class="dossier-link" href="machiavelli.html"/);
- assert.doesNotMatch(renderHtml(html,unpublishedFixture()),/Videoyu YouTube’da izle/);
+ assert.match(html,/Son videoyu izle/);assert.match(html,/href="machiavelli.html"/);
+ assert.doesNotMatch(renderHtml(html,unpublishedFixture()),/Son videoyu izle/);
  assert.equal(data.projects.machiavelli.video.published,true);assert.equal(data.projects.machiavelli.video.url,'https://youtu.be/6MxLFTRudaQ');
 });
