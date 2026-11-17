@@ -1,5 +1,15 @@
 # İrade Terbiyesi — proje sunumu
 
+## Güncel durum — 16 Kasım 2026 referansı
+
+Okuma, yöntem seçimi ve modern bilimsel inceleme tamamlandı. Seçilen üç yöntem
+16–22 Kasım arasında deneniyor. Video/sonuç yayımlanmadı; çekim veya kurgu
+başlamış sayılmıyor. Güncel uygulama notu ve sonraki aşamalar:
+[Proje durumları — Aşama A](project-status-publication-sync-v1/STAGE_A.md).
+Payot Cinematic V1 / PR #20 ayrı taslaktır ve bu güncellemeye dahil değildir.
+
+## İlk sunumun tarihsel bağlamı
+
 PR #9'un birleştiği `6691fee` ana dalı üzerine, ayrı dalda eklendi. Mevcut
 statik mimari, Machiavelli prodüksiyonu, final kapak ve 15 düşüncelik arşiv korunur.
 Yeni video prodüksiyonu veya bilimsel literatür araştırması başlatılmadı.
@@ -13,7 +23,8 @@ Yeni video prodüksiyonu veya bilimsel literatür araştırması başlatılmadı
 - Mevcut beş Payot düşüncesinden proje dosyasına dönüş; aynı alıntı verisi kullanılır.
 
 Yeni kapak, sahte video, sayfa/okuma yüzdesi, sonuç veya kesinleşmemiş ilke yok.
-Güncel okuma durumu kullanıcının talimatına göre yalnız **Kitap okunuyor.**
+İlk sunumda okuma durumu **Kitap okunuyor.** olarak kaydedilmişti;
+güncel durum yukarıdaki tamamlanan araştırma ve devam eden uygulama kaydıdır.
 Özel günlük notları veya kişisel ölçümler kamuya aktarılmadı.
 
 ## Tek merkezden güncelleme
@@ -22,7 +33,7 @@ Kayıt: `site-data.js → projects['irade-terbiyesi']`.
 
 1. Dört araştırma aşaması `research.stages` içinde bulunur. Her aşamanın
    `status` değeri `not-started`, `in-progress` veya `completed` olur.
-   Şu anda ilk aşama `in-progress`, diğer üçü `not-started`.
+   16 Kasım referansında ilk üç aşama `completed`, deney aşaması `in-progress`.
 2. İlerlerken biten aşamayı `completed`, başlayan sonraki aşamayı `in-progress`
    yap. Görünen güncel aşama ve kısa durum aynı kayıttan türetilir; yüzde hesaplanmaz.
 3. Yeni doğrulanmış bilgiler geldikçe aşamanın `description`/`goal`, projenin

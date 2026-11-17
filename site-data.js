@@ -37,7 +37,7 @@ const AG_SITE_DATA = (() => {
         shortTitle: 'Machiavelli / Prens deneyi',
         summary: 'Üç düşünce yedi takvim günü boyunca gerçek karar anlarında etik biçimde sınandı; sonuç olumlu fakat kısmi.',
         status: 'active',
-        statusLabel: 'Deney tamamlandı · video hazırlanıyor',
+        statusLabel: '',
         phase: 'reviewing',
         dates: {
           plannedStart: '2026-09-21',
@@ -69,16 +69,7 @@ const AG_SITE_DATA = (() => {
           homeLead: 'Machiavelli’nin üç ilkesini yedi gün denedim. Uygulayabildiklerim ve zorlandığım anlar bu dosyada.',
           dossierSummary: 'Yedi günlük denemeden dört anonim kayıt ve kısa sonuç.',
           archiveHeading: 'Machiavelli’den uyarlanan üç ilkenin yedi günlük notları.',
-          homeHeading: 'Deney tamamlandı, video hazırlanıyor.',
-          homeCardHeading: 'Üç düşüncenin yedi günlük sonucu incelendi.',
-          homeCardState: 'Kısa sonuç ve kayıt sınırları yayımlandı; video henüz hazırlanıyor.',
-          homeSharingDescription: 'Gerçek hayat deneyleri, yöntem ve kanıt sınırları. Machiavelli / Prens deneyi tamamlandı; video hazırlanıyor.',
-          projectLeadState: 'Deney tamamlandı; video hazırlanıyor.',
-          coverCaption: 'Final kapak · Video hazırlanıyor',
-          phaseSummary: 'Güncel aşama: İnceleniyor. Video henüz yayımlanmış sayılmıyor.',
-          truthState: 'Yedi takvim günlük deney tamamlandı. Aşağıdaki sonuç ve kayıtlar öz-bildirim sınırlarıyla yayımlandı; ayrıntılı hikâye videoya bırakıldı. Video henüz yayımlanmadı.',
-          videoPanelTitle: 'Video henüz yayımlanmadı.',
-          videoPanelDescription: 'Deney tamamlandı. Ana çekim ve kurgu sonrasında yalnızca gerçek YouTube bağlantısı eklenecek.'
+          homeCardHeading: 'Üç düşüncenin yedi günlük sonucu incelendi.'
         },
         principles: [
           {
@@ -188,7 +179,7 @@ const AG_SITE_DATA = (() => {
         },
         sharing: {
           title: 'Machiavelli’nin üç düşüncesini 7 gün denedim | Ali Gazal',
-          description: 'Yedi günlük deney tamamlandı. En güçlü sonuç fiilî gerçeğe bakma ilkesiydi; diğer iki ilke etkili oldu ancak kurallar her olayda eksiksiz uygulanmadı. Video hazırlanıyor.',
+          description: '',
           image: 'machiavelli-prens-7-gun-kapak.jpg'
         }
       },
@@ -225,51 +216,154 @@ const AG_SITE_DATA = (() => {
         sharing: { title: 'Kontrol Bende mi? | Ali Gazal', description: '60 günlük kişisel davranış deneyi devam ediyor. Yöntem ve değerlendirme sınırları.', image: 'kontrol-bende-mi-share.png', imageAlt: 'Kontrol Bende mi? — 60 Günlük Davranış Deneyi. Deney devam ediyor.' }
       },
       'irade-terbiyesi': {
-        id: 'irade-terbiyesi',
-        slug: 'irade-terbiyesi',
-        title: 'İrade gerçekten eğitilebilir mi?',
-        shortTitle: 'Jules Payot — İrade Terbiyesi',
-        summary: 'İrade doğuştan gelen değişmez bir özellik mi, yoksa bilinçli çalışmalarla geliştirilebilir mi? Jules Payot’nun İrade Terbiyesi kitabındaki düşünceleri inceliyoruz. Okuma sonrasında yöntemleri modern araştırmalarla karşılaştırıp seçilen ilkeleri gerçek hayatta test etmeyi planlıyoruz.',
-        status: 'upcoming',
-        statusLabel: '',
-        phase: 'preparing',
-        topics: ['kitap', 'irade', 'disiplin', 'alışkanlık', 'araştırma', 'gerçek hayat deneyi'],
-        searchable: true,
-        source: { authorId: 'jules-payot', bookId: 'irade-terbiyesi', author: 'Jules Payot', title: 'İrade Terbiyesi', label: 'Jules Payot · İrade Terbiyesi' },
-        duration: { value: 7, unit: 'gün', label: '7 gün · planlanan uygulama' },
-        completedAt: null,
-        lastUpdated: '2026-10-19',
-        publishedAt: null,
-        research: {
-          question: 'Jules Payot’nun yaklaşık 130 yıllık yöntemleri günümüzde gerçekten işe yarıyor mu?',
-          contentType: 'Kitap araştırması + modern bilim incelemesi + gerçek hayat deneyi',
-          videoLabel: 'Üçüncü ana video projesi · araştırma aşamasında',
-          publicationLabel: 'Yayın tarihi henüz belirlenmedi.',
-          readingLabel: 'Kitap okunuyor.',
-          stages: [
-            { id: 'okuma', title: 'Kitabı okuma ve inceleme', status: 'in-progress', activeLabel: 'Kitap okunuyor, araştırma devam ediyor.',
-              description: 'İrade Terbiyesi’ni yeniden okuyarak irade, alışkanlık, disiplin ve davranış kontrolü hakkındaki fikirleri inceliyoruz. Önemli görüşleri ve uygulanabilir olabilecek yöntemleri not ediyoruz.',
-              goal: 'Kitabı anlamak ve araştırmaya değer fikirleri belirlemek. Okuma tamamlanmadan nihai deney ilkeleri seçilmeyecek.' },
-            { id: 'ilkeler', title: 'Uygulanabilir ilkeleri belirleme', status: 'not-started', activeLabel: 'İlke seçimi yapılıyor.',
-              description: 'Kitap tamamlandıktan sonra bir ilke havuzu oluşturacağız. Yöntemleri uygulanabilirlik, ölçülebilirlik, gerçek hayatla ilişkisi, araştırma değeri ve birbirinden bağımsız olması açısından değerlendireceğiz.',
-              goal: 'Mümkünse üç ana ilke seçmek. İlke sayısı ve hangi yöntemlerin deneneceği henüz kesinleşmedi.' },
-            { id: 'bilim', title: 'Modern bilimsel araştırma', status: 'not-started', activeLabel: 'Modern bilimsel inceleme yapılıyor.',
-              description: 'Seçilen yöntemleri modern psikoloji ve davranış bilimi araştırmalarıyla karşılaştıracağız. Destekleyen bulguları, çelişen sonuçları ve kanıtın yetersiz kaldığı noktaları ayrı ayrı değerlendireceğiz.',
-              goal: 'Kitaptaki görüşleri sorgulamadan kabul etmek yerine, mevcut bilimsel bulgular ışığında değerlendirmek.' },
-            { id: 'deney', title: '7 günlük gerçek hayat deneyi', status: 'not-started', activeLabel: '7 günlük kişisel uygulama sürüyor.',
-              description: 'Araştırma sonunda seçilen ilkeleri yedi gün boyunca günlük hayatta uygulamayı planlıyoruz. Önce yöntemleri, günlük davranış hedeflerini, başlangıç ölçümlerini, başarı ve başarısızlık kriterlerini, kayıt ve değerlendirme kurallarını belirleyeceğiz.',
-              goal: 'Yöntemlerin bu kişinin hayatında ne ölçüde uygulanabilir ve faydalı olduğunu araştırmak. Sonuç olumlu, olumsuz veya belirsiz olabilir.' }
+        "id": "irade-terbiyesi",
+        "slug": "irade-terbiyesi",
+        "title": "İrade gerçekten eğitilebilir mi?",
+        "shortTitle": "Jules Payot — İrade Terbiyesi",
+        "summary": "Kitabı tamamladım. Üç yöntemi seçtim. Şimdi yedi gün boyunca gerçek hayatımda test ediyorum.",
+        "status": "in-progress",
+        "statusLabel": "",
+        "phase": "testing",
+        "topics": [
+          "kitap",
+          "irade",
+          "disiplin",
+          "alışkanlık",
+          "araştırma",
+          "gerçek hayat deneyi"
+        ],
+        "searchable": true,
+        "source": {
+          "authorId": "jules-payot",
+          "bookId": "irade-terbiyesi",
+          "author": "Jules Payot",
+          "title": "İrade Terbiyesi",
+          "label": "Jules Payot · İrade Terbiyesi"
+        },
+        "duration": {
+          "value": 7,
+          "unit": "gün",
+          "label": "7 gün · planlanan uygulama süresi"
+        },
+        "completedAt": null,
+        "lastUpdated": "2026-11-16",
+        "publishedAt": null,
+        "research": {
+          "question": "Jules Payot’nun yaklaşık 130 yıllık yöntemleri günümüzde gerçekten işe yarıyor mu?",
+          "contentType": "Kitap araştırması + modern bilim incelemesi + gerçek hayat deneyi",
+          "videoLabel": "Üçüncü ana video projesi · deney devam ediyor",
+          "publicationLabel": "Video yayın tarihi henüz kesinleşmedi.",
+          "readingLabel": "",
+          "stages": [
+            {
+              "id": "okuma",
+              "title": "Kitabı okuma ve inceleme",
+              "status": "completed",
+              "activeLabel": "Kitap okunuyor, araştırma devam ediyor.",
+              "description": "İrade Terbiyesi okuması tamamlandı. İrade, dikkat, çalışma ve davranış kontrolü hakkındaki düşünceler incelendi.",
+              "goal": "Kitabı anlamak ve araştırmaya değer fikirleri belirlemek. Bu aşamanın tamamlanması, seçilen yöntemlerin işe yaradığını göstermez."
+            },
+            {
+              "id": "ilkeler",
+              "title": "Uygulanabilir ilkeleri belirleme",
+              "status": "completed",
+              "activeLabel": "İlke seçimi yapılıyor.",
+              "description": "Uygulama için üç yöntem seçildi: düşünceyi somut karara dönüştürmek, başlamadan ortamı hazırlamak ve yorgunluğu hesaba katarak dinlenmeyi planlamak.",
+              "goal": "Seçilen yöntemleri günlük hayatta uygulanabilir ve kaydedilebilir davranışlara çevirmek. Yöntem seçimi, başarılı deney sonucu anlamına gelmez."
+            },
+            {
+              "id": "bilim",
+              "title": "Modern bilimsel araştırma",
+              "status": "completed",
+              "activeLabel": "Modern bilimsel inceleme yapılıyor.",
+              "description": "Seçilen yöntemlerin modern bilimsel incelemesi tamamlandı. Bu sayfa henüz araştırmanın bütün kaynaklarını ve bulgularını içermiyor; kaynakların kamuya açık sunumu ayrıca doğrulanıp hazırlanacak.",
+              "goal": "Kitaptaki düşünceleri bilimsel bulgularla eleştirel biçimde karşılaştırmak. İncelemenin tamamlanması, yöntemlerin kesin olarak etkili olduğuna dair bir iddia değildir."
+            },
+            {
+              "id": "deney",
+              "title": "7 günlük gerçek hayat deneyi",
+              "status": "in-progress",
+              "activeLabel": "Kitap tamamlandı · 7 günlük deney devam ediyor",
+              "description": "Seçilen üç yöntem 16–22 Kasım 2026 arasında gerçek hayatta uygulanıyor. Somut eylem kararları, ortam hazırlığı, planlanan dinlenme ve gerçekleşen çalışmalar kaydediliyor.",
+              "goal": "Yöntemlerin bu kişinin hayatında ne ölçüde uygulanabilir ve faydalı olduğunu değerlendirmek. Olumlu, olumsuz ve belirsiz bulgular deney sonrasında ayrılacak."
+            }
           ]
         },
-        seo: { title: 'İrade gerçekten eğitilebilir mi? | Jules Payot — Ali Gazal', description: 'Jules Payot’nun İrade Terbiyesi kitabından kişisel uygulamaya: dört araştırma aşaması, güncel okuma durumu ve planlanan 7 günlük deney. Deney henüz başlamadı.' },
-        display: { currentStage: '', phaseSummary: '', videoPanelTitle: 'Yayın tarihi henüz belirlenmedi.', videoPanelDescription: 'Araştırma ve deneyden sonra video hazırlanacak. Henüz bir yayın tarihi veya yayımlanmış video bağlantısı yok.' },
-        principles: [],
-        video: { published: false, productionStatus: 'not-started', url: '', title: '', durationSeconds: null, thumbnail: { src: '', alt: '', width: 1280, height: 720 }, chapters: [] },
-        result: { published: false, summary: '', limitations: [] },
-        evidence: { published: false, entries: [] },
-        tryIt: { enabled: false, durationDays: 7, storageVersion: 1, rules: [], guide: '' },
-        features: { evidenceLedger: false, videoTimeline: false, tryIt: false },
-        sharing: { title: 'İrade gerçekten eğitilebilir mi? | Ali Gazal', description: '', image: '' }
+        "seo": {
+          "title": "İrade gerçekten eğitilebilir mi? | Jules Payot — Ali Gazal",
+          "description": "İrade Terbiyesi okuması, yöntem seçimi ve modern bilimsel inceleme tamamlandı. Üç kişisel yöntem 16–22 Kasım 2026 boyunca deneniyor; sonuçlar henüz yayımlanmadı."
+        },
+        "display": {
+          "currentStage": "",
+          "phaseSummary": "",
+          "videoPanelTitle": "Deney devam ediyor; video henüz yayımlanmadı.",
+          "videoPanelDescription": "Yedi günlük uygulama sürüyor. Video üretimi deney sonrasındaki değerlendirmeye bağlı olarak planlanıyor; kesinleşmiş yayın tarihi yok."
+        },
+        "principles": [
+          {
+            "id": "somut-karar",
+            "sourceNumber": 1,
+            "title": "Düşünceyi somut karara dönüştür",
+            "rule": "Önemli bir iş için somut eylemi, başlangıç zamanını ve beklenen küçük çıktıyı belirle."
+          },
+          {
+            "id": "ortami-hazirla",
+            "sourceNumber": 2,
+            "title": "Başlamadan ortamı hazırla",
+            "rule": "Seçilen işe başlamadan gerekli araçları hazırla ve gereksiz dikkat dağıtıcıları azalt."
+          },
+          {
+            "id": "dinlenmeyi-planla",
+            "sourceNumber": 12,
+            "title": "Yorgunluğu hesaba kat, dinlenmeyi planla",
+            "rule": "Planlı kişisel çalışma öncesinde yaklaşık 10 dakika sakin dinlen. Gerçek dinlenme süresini ve enerji durumunu kaydet."
+          }
+        ],
+        "video": {
+          "published": false,
+          "productionStatus": "not-started",
+          "url": "",
+          "title": "",
+          "durationSeconds": null,
+          "thumbnail": {
+            "src": "",
+            "alt": "",
+            "width": 1280,
+            "height": 720
+          },
+          "chapters": []
+        },
+        "result": {
+          "published": false,
+          "summary": "",
+          "limitations": []
+        },
+        "evidence": {
+          "published": false,
+          "entries": []
+        },
+        "tryIt": {
+          "enabled": false,
+          "durationDays": 7,
+          "storageVersion": 1,
+          "rules": [],
+          "guide": ""
+        },
+        "features": {
+          "evidenceLedger": false,
+          "videoTimeline": false,
+          "tryIt": false
+        },
+        "sharing": {
+          "title": "İrade gerçekten eğitilebilir mi? | Ali Gazal",
+          "description": "",
+          "image": ""
+        },
+        "dates": {
+          "plannedStart": "2026-11-16",
+          "plannedEnd": "2026-11-22",
+          "label": "16–22 Kasım 2026 · 7 günlük uygulama"
+        }
       }
     }
   };
@@ -317,6 +411,11 @@ const AG_SITE_DATA = (() => {
         project.research.publicationLabel = 'Video yayımlandı.';
         project.research.videoLabel = 'Üçüncü ana video projesi · yayımlandı';
       }
+      project.display.previewLabel = project.video.published ? 'VİDEO YAYINDA'
+        : project.video.productionStatus === 'preparing' ? 'VİDEO HAZIRLIĞI'
+        : project.phase === 'testing' ? 'DENEY DEVAM EDİYOR' : 'ARAŞTIRMA DOSYASI';
+      project.display.catalogLabel = project.phase === 'testing' ? 'Devam eden deney'
+        : project.video.published ? 'Video yayında' : project.phase === 'reviewing' ? 'Değerlendirme' : 'Araştırma';
       project.sharing.title = project.seo.title;
       project.sharing.description = project.seo.description;
       return;
@@ -336,6 +435,20 @@ const AG_SITE_DATA = (() => {
         truthState: 'Yedi takvim günlük deney tamamlandı. Aşağıdaki sonuç ve kayıtlar öz-bildirim sınırlarıyla yayımlandı; ayrıntılı hikâye YouTube videosunda.',
         videoPanelTitle: project.video.title,
         videoPanelDescription: 'Video YouTube’da yayımlandı. Deneyin hikâyesini kanaldaki videoda izleyebilirsin.'
+      });
+    } else {
+      project.phase = 'reviewing';
+      project.statusLabel = 'Deney tamamlandı · video hazırlanıyor';
+      Object.assign(project.display, {
+        homeHeading: 'Deney tamamlandı, video hazırlanıyor.',
+        homeCardState: 'Kısa sonuç ve kayıt sınırları yayımlandı; video henüz hazırlanıyor.',
+        homeSharingDescription: 'Gerçek hayat deneyleri, yöntem ve kanıt sınırları. Machiavelli / Prens deneyi tamamlandı; video hazırlanıyor.',
+        projectLeadState: 'Deney tamamlandı; video hazırlanıyor.',
+        coverCaption: 'Final kapak · Video hazırlanıyor',
+        phaseSummary: 'Güncel aşama: İnceleniyor. Video henüz yayımlanmış sayılmıyor.',
+        truthState: 'Yedi takvim günlük deney tamamlandı. Aşağıdaki sonuç ve kayıtlar öz-bildirim sınırlarıyla yayımlandı; ayrıntılı hikâye videoya bırakıldı. Video henüz yayımlanmadı.',
+        videoPanelTitle: 'Video henüz yayımlanmadı.',
+        videoPanelDescription: 'Deney tamamlandı. Yalnızca gerçek YouTube bağlantısı yayımlandığında eklenecek.'
       });
     }
     project.seo.description += project.video.published

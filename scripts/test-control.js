@@ -7,7 +7,7 @@ test('Project 02 is ongoing; dates do not turn a chosen horizon into an outcome'
  assert.equal((Date.parse(control.dates.plannedEnd)-Date.parse(control.dates.plannedStart))/864e5+1,60);
  assert.deepEqual(data.projectOrder,['machiavelli','kontrol-bende-mi','irade-terbiyesi']);
  const index=fs.readFileSync(path.join(root,'rehberler.html'),'utf8');assert.ok(index.indexOf('control-index-title')<index.indexOf('id="siradaki-proje"'));
- assert.match(index,/03<\/span><p>Sıradaki araştırma/);assert.match(index,/href="kontrol-bende-mi.html"/);
+ assert.match(index,/03<\/span><p>Devam eden deney/);assert.match(index,/href="kontrol-bende-mi.html"/);
  for(const p of [control,data.projects['irade-terbiyesi']])assert.equal(p.video.published,false);
 });
 test('new project public schema is restricted and contains no diary/result/release data',()=>{
