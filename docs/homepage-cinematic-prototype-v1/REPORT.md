@@ -1,5 +1,8 @@
 # Aşama 2 - Bir Fikrin Yolculuğu
 
+> Bu, kullanıcı tarafından görsel açıdan reddedilen V1 tesliminin tarihî raporudur.
+> Teknik test sonuçları görsel onay değildir. Güncel düzeltme: [Aşama 2.1 / V2](v2/REPORT.md).
+
 Temel sürüm: `a1cc3a3504df5757eb4444215606f40e33fea76b`.
 Dal: `feature/homepage-cinematic-prototype-v1`.
 Kapsam: Sahne 01, Sahne 02 ve Sahne 03'e çalışan geçiş kanıtı.

@@ -7,26 +7,23 @@
   function sample(progress,geometry={}) {
     const p=clamp(Number(progress)||0), mobile=!!geometry.mobile;
     const w=geometry.width||1440,h=geometry.height||800;
-    const open=ramp(p,.08,.64), approach=ramp(p,.40,1), retreat=ramp(p,0,.40);
-    const camera=approach*(mobile?580:780);
+    const depart=ramp(p,.02,.30), approach=ramp(p,.18,.86), settle=ramp(p,.56,1);
+    const orbit=approach===1?0:Math.sin(approach*Math.PI);
+    const camera=approach*(mobile?170:290);
     return {
       progress:p,camera,
-      titleX:-ramp(p,.06,.36)*(mobile?35:145),titleY:-ramp(p,.06,.36)*55,
-      titleZ:-ramp(p,.06,.36)*340,titleRotate:ramp(p,.06,.36)*-18,
-      titleOpacity:1-ramp(p,.12,.34),
-      wingX:mix(mobile?8:18,mobile?w*.50:w*.54,open),
-      wingZ:mix(-470,mobile?280:410,open),wingRotate:mix(4,54,open),
-      wingOpacity:mix(.09,.72,ramp(p,.05,.26))*(1-ramp(p,.63,.9)),
-      decisionZ:-920,decisionY:mix(20,-h*.25,approach),
-      decisionOpacity:ramp(p,.18,.37)*(1-ramp(p,.58,.78)),
-      mediaX:mix(mobile?0:w*.20,0,ramp(p,.05,.82)),
-      mediaY:mix(mobile?h*.06:h*.04,mobile?h*.04:-h*.04,approach),
-      mediaZ:mix(-80,mobile?-640:-900,retreat),
-      mediaRotateY:mix(mobile?-8:-16,0,approach),
-      mediaRotateZ:mix(mobile?2:3,0,approach),
-      mediaScale:mix(1,mobile?1.02:1.08,approach),
-      destinationOpacity:ramp(p,.74,.94),
-      groundRotate:mix(65,78,approach),light:mix(.3,.86,ramp(p,.08,.7))
+      cameraX:-orbit*w*(mobile?.025:.045),cameraYaw:orbit*(mobile?2:4),
+      titleX:-depart*(mobile?0:45),titleY:-depart*(mobile?20:12),
+      titleZ:-depart*220,titleRotate:-depart*(mobile?3:7),
+      titleOpacity:1-ramp(p,.04,.23),
+      mediaX:mix(mobile?0:w*.20,mobile?0:w*.18,approach),
+      mediaY:mix(mobile?h*.06:h*.04,mobile?-h*.025:0,approach),
+      mediaZ:-80,
+      mediaRotateY:mix(mobile?-8:-16,0,settle)-orbit*(mobile?5:12),
+      mediaRotateZ:mix(mobile?2:3,0,settle),
+      mediaScale:mix(1,mobile?.84:.77,approach),
+      destinationOpacity:ramp(p,.23,.40),destinationZ:mix(-120,0,settle),
+      light:mix(.35,.55,approach)
     };
   }
   return Object.freeze({sample,clamp});
