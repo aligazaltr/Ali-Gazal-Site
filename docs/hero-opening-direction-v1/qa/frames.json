@@ -1,0 +1,2487 @@
+[
+  {
+    "width": 1440,
+    "height": 900,
+    "theme": "dark",
+    "mode": "perspective",
+    "seconds": "0.000",
+    "progress": "0.0000",
+    "canvas": [
+      1425,
+      900
+    ],
+    "loaded": true,
+    "scroll": 0,
+    "overflow": false,
+    "title": {
+      "x": 75.13968658447266,
+      "y": 234.99649047851562,
+      "width": 562.2205810546875,
+      "height": 241.59725952148438,
+      "right": 637.3602676391602,
+      "bottom": 476.59375
+    },
+    "media": {
+      "x": 894.96875,
+      "y": 288.09375,
+      "width": 240.671875,
+      "height": 314.78125,
+      "right": 1135.640625,
+      "bottom": 602.875
+    },
+    "research": {
+      "x": 103.41666412353516,
+      "y": 245.1171875,
+      "width": 394.16668701171875,
+      "height": 244.578125,
+      "right": 497.5833511352539,
+      "bottom": 489.6953125
+    },
+    "coverAvailable": true,
+    "researchVisible": false,
+    "actions": [
+      {
+        "href": "rehberler.html",
+        "x": 85.5,
+        "y": 775.203125,
+        "width": 169.984375,
+        "height": 48.796875,
+        "right": 255.484375,
+        "bottom": 824,
+        "hit": true
+      },
+      {
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "x": 279.484375,
+        "y": 777.59375,
+        "width": 127.359375,
+        "height": 44,
+        "right": 406.84375,
+        "bottom": 821.59375,
+        "hit": true
+      }
+    ],
+    "clip": {
+      "height": 801,
+      "width": 1281.5999755859375,
+      "x": 20,
+      "y": 65
+    },
+    "file": "final-1440-dark-0s.jpg",
+    "label": "0s"
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "theme": "dark",
+    "mode": "perspective",
+    "seconds": "1.000",
+    "progress": "0.0000",
+    "canvas": [
+      1425,
+      900
+    ],
+    "loaded": true,
+    "scroll": 0,
+    "overflow": false,
+    "title": {
+      "x": 79.64917755126953,
+      "y": 229.18333435058594,
+      "width": 553.20166015625,
+      "height": 239.71278381347656,
+      "right": 632.8508377075195,
+      "bottom": 468.8961181640625
+    },
+    "media": {
+      "x": 881.765625,
+      "y": 288.421875,
+      "width": 267.0625,
+      "height": 314.125,
+      "right": 1148.828125,
+      "bottom": 602.546875
+    },
+    "research": {
+      "x": 103.41666412353516,
+      "y": 245.1171875,
+      "width": 394.16668701171875,
+      "height": 244.578125,
+      "right": 497.5833511352539,
+      "bottom": 489.6953125
+    },
+    "coverAvailable": true,
+    "researchVisible": false,
+    "actions": [
+      {
+        "href": "rehberler.html",
+        "x": 85.5,
+        "y": 775.203125,
+        "width": 169.984375,
+        "height": 48.796875,
+        "right": 255.484375,
+        "bottom": 824,
+        "hit": true
+      },
+      {
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "x": 279.484375,
+        "y": 777.59375,
+        "width": 127.359375,
+        "height": 44,
+        "right": 406.84375,
+        "bottom": 821.59375,
+        "hit": true
+      }
+    ],
+    "clip": {
+      "height": 801,
+      "width": 1281.5999755859375,
+      "x": 20,
+      "y": 65
+    },
+    "file": "final-1440-dark-1s.jpg",
+    "label": "1s"
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "theme": "dark",
+    "mode": "perspective",
+    "seconds": "2.500",
+    "progress": "0.0000",
+    "canvas": [
+      1425,
+      900
+    ],
+    "loaded": true,
+    "scroll": 0,
+    "overflow": false,
+    "title": {
+      "x": 85.5,
+      "y": 223,
+      "width": 541.5,
+      "height": 235.59375,
+      "right": 627,
+      "bottom": 458.59375
+    },
+    "media": {
+      "x": 810.90625,
+      "y": 290.078125,
+      "width": 408.78125,
+      "height": 310.8125,
+      "right": 1219.6875,
+      "bottom": 600.890625
+    },
+    "research": {
+      "x": 103.41666412353516,
+      "y": 245.1171875,
+      "width": 394.16668701171875,
+      "height": 244.578125,
+      "right": 497.5833511352539,
+      "bottom": 489.6953125
+    },
+    "coverAvailable": true,
+    "researchVisible": false,
+    "actions": [
+      {
+        "href": "rehberler.html",
+        "x": 85.5,
+        "y": 775.203125,
+        "width": 169.984375,
+        "height": 48.796875,
+        "right": 255.484375,
+        "bottom": 824,
+        "hit": true
+      },
+      {
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "x": 279.484375,
+        "y": 777.59375,
+        "width": 127.359375,
+        "height": 44,
+        "right": 406.84375,
+        "bottom": 821.59375,
+        "hit": true
+      }
+    ],
+    "clip": {
+      "height": 801,
+      "width": 1281.5999755859375,
+      "x": 20,
+      "y": 65
+    },
+    "file": "final-1440-dark-2.5s.jpg",
+    "label": "2.5s"
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "theme": "dark",
+    "mode": "perspective",
+    "seconds": "4.000",
+    "progress": "0.0000",
+    "canvas": [
+      1425,
+      900
+    ],
+    "loaded": true,
+    "scroll": 0,
+    "overflow": false,
+    "title": {
+      "x": 85.5,
+      "y": 223,
+      "width": 541.5,
+      "height": 235.59375,
+      "right": 627,
+      "bottom": 458.59375
+    },
+    "media": {
+      "x": 755.28125,
+      "y": 284.40625,
+      "width": 520.046875,
+      "height": 322.171875,
+      "right": 1275.328125,
+      "bottom": 606.578125
+    },
+    "research": {
+      "x": 103.41666412353516,
+      "y": 245.1171875,
+      "width": 394.16668701171875,
+      "height": 244.578125,
+      "right": 497.5833511352539,
+      "bottom": 489.6953125
+    },
+    "coverAvailable": true,
+    "researchVisible": false,
+    "actions": [
+      {
+        "href": "rehberler.html",
+        "x": 85.5,
+        "y": 775.203125,
+        "width": 169.984375,
+        "height": 48.796875,
+        "right": 255.484375,
+        "bottom": 824,
+        "hit": true
+      },
+      {
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "x": 279.484375,
+        "y": 777.59375,
+        "width": 127.359375,
+        "height": 44,
+        "right": 406.84375,
+        "bottom": 821.59375,
+        "hit": true
+      }
+    ],
+    "clip": {
+      "height": 801,
+      "width": 1281.5999755859375,
+      "x": 20,
+      "y": 65
+    },
+    "file": "final-1440-dark-4s.jpg",
+    "label": "4s"
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "theme": "dark",
+    "mode": "perspective",
+    "seconds": "6.000",
+    "progress": "0.0000",
+    "canvas": [
+      1425,
+      900
+    ],
+    "loaded": true,
+    "scroll": 0,
+    "overflow": false,
+    "title": {
+      "x": 85.5,
+      "y": 223,
+      "width": 541.5,
+      "height": 235.59375,
+      "right": 627,
+      "bottom": 458.59375
+    },
+    "media": {
+      "x": 749.515625,
+      "y": 283.65625,
+      "width": 531.578125,
+      "height": 323.65625,
+      "right": 1281.09375,
+      "bottom": 607.3125
+    },
+    "research": {
+      "x": 103.41666412353516,
+      "y": 245.1171875,
+      "width": 394.16668701171875,
+      "height": 244.578125,
+      "right": 497.5833511352539,
+      "bottom": 489.6953125
+    },
+    "coverAvailable": true,
+    "researchVisible": false,
+    "actions": [
+      {
+        "href": "rehberler.html",
+        "x": 85.5,
+        "y": 775.203125,
+        "width": 169.984375,
+        "height": 48.796875,
+        "right": 255.484375,
+        "bottom": 824,
+        "hit": true
+      },
+      {
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "x": 279.484375,
+        "y": 777.59375,
+        "width": 127.359375,
+        "height": 44,
+        "right": 406.84375,
+        "bottom": 821.59375,
+        "hit": true
+      }
+    ],
+    "clip": {
+      "height": 801,
+      "width": 1281.5999755859375,
+      "x": 20,
+      "y": 65
+    },
+    "file": "final-1440-dark-6s.jpg",
+    "label": "6s"
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "theme": "dark",
+    "mode": "perspective",
+    "seconds": "6.000",
+    "progress": "0.5806",
+    "canvas": [
+      1425,
+      900
+    ],
+    "loaded": true,
+    "scroll": 360,
+    "overflow": false,
+    "title": {
+      "x": 110.43570709228516,
+      "y": 216.0687713623047,
+      "width": 491.6285705566406,
+      "height": 213.89588928222656,
+      "right": 602.0642776489258,
+      "bottom": 429.96466064453125
+    },
+    "media": {
+      "x": 731.5625,
+      "y": 286.328125,
+      "width": 567.46875,
+      "height": 318.328125,
+      "right": 1299.03125,
+      "bottom": 604.65625
+    },
+    "research": {
+      "x": 92.09851837158203,
+      "y": 238.09434509277344,
+      "width": 416.802978515625,
+      "height": 258.62384033203125,
+      "right": 508.90149688720703,
+      "bottom": 496.7181854248047
+    },
+    "coverAvailable": true,
+    "researchVisible": true,
+    "actions": [
+      {
+        "href": "rehberler.html",
+        "x": 85.5,
+        "y": 791.203125,
+        "width": 169.984375,
+        "height": 48.796875,
+        "right": 255.484375,
+        "bottom": 840,
+        "hit": true
+      },
+      {
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "x": 279.484375,
+        "y": 793.59375,
+        "width": 127.359375,
+        "height": 44,
+        "right": 406.84375,
+        "bottom": 837.59375,
+        "hit": true
+      }
+    ],
+    "clip": {
+      "height": 801,
+      "width": 1281.5999755859375,
+      "x": 20,
+      "y": 65
+    },
+    "file": "final-1440-dark-Scroll.jpg",
+    "label": "Scroll"
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "theme": "dark",
+    "mode": "perspective",
+    "seconds": "6.000",
+    "progress": "1.0000",
+    "canvas": [
+      1425,
+      900
+    ],
+    "loaded": true,
+    "scroll": 620,
+    "overflow": false,
+    "title": {
+      "x": 123.57421875,
+      "y": 212.416748046875,
+      "width": 465.3515625,
+      "height": 202.46337890625,
+      "right": 588.92578125,
+      "bottom": 414.880126953125
+    },
+    "media": {
+      "x": 730.46875,
+      "y": 275.84375,
+      "width": 569.671875,
+      "height": 339.296875,
+      "right": 1300.140625,
+      "bottom": 615.140625
+    },
+    "research": {
+      "x": 85.5,
+      "y": 234,
+      "width": 430,
+      "height": 266.8125,
+      "right": 515.5,
+      "bottom": 500.8125
+    },
+    "coverAvailable": true,
+    "researchVisible": true,
+    "actions": [
+      {
+        "href": "rehberler.html",
+        "x": 85.5,
+        "y": 791.203125,
+        "width": 169.984375,
+        "height": 48.796875,
+        "right": 255.484375,
+        "bottom": 840,
+        "hit": true
+      },
+      {
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "x": 279.484375,
+        "y": 793.59375,
+        "width": 127.359375,
+        "height": 44,
+        "right": 406.84375,
+        "bottom": 837.59375,
+        "hit": true
+      }
+    ],
+    "clip": {
+      "height": 801,
+      "width": 1281.5999755859375,
+      "x": 20,
+      "y": 65
+    },
+    "file": "final-1440-dark-End.jpg",
+    "label": "End"
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "theme": "light",
+    "mode": "perspective",
+    "seconds": "0.000",
+    "progress": "0.0000",
+    "canvas": [
+      1425,
+      900
+    ],
+    "loaded": true,
+    "scroll": 0,
+    "overflow": false,
+    "title": {
+      "x": 75.13968658447266,
+      "y": 234.99649047851562,
+      "width": 562.2205810546875,
+      "height": 241.59725952148438,
+      "right": 637.3602676391602,
+      "bottom": 476.59375
+    },
+    "media": {
+      "x": 894.96875,
+      "y": 288.09375,
+      "width": 240.671875,
+      "height": 314.78125,
+      "right": 1135.640625,
+      "bottom": 602.875
+    },
+    "research": {
+      "x": 103.41666412353516,
+      "y": 245.1171875,
+      "width": 394.16668701171875,
+      "height": 244.578125,
+      "right": 497.5833511352539,
+      "bottom": 489.6953125
+    },
+    "coverAvailable": true,
+    "researchVisible": false,
+    "actions": [
+      {
+        "href": "rehberler.html",
+        "x": 85.5,
+        "y": 775.203125,
+        "width": 169.984375,
+        "height": 48.796875,
+        "right": 255.484375,
+        "bottom": 824,
+        "hit": true
+      },
+      {
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "x": 279.484375,
+        "y": 777.59375,
+        "width": 127.359375,
+        "height": 44,
+        "right": 406.84375,
+        "bottom": 821.59375,
+        "hit": true
+      }
+    ],
+    "clip": {
+      "height": 801,
+      "width": 1281.5999755859375,
+      "x": 20,
+      "y": 65
+    },
+    "file": "final-1440-light-0s.jpg",
+    "label": "0s"
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "theme": "light",
+    "mode": "perspective",
+    "seconds": "1.000",
+    "progress": "0.0000",
+    "canvas": [
+      1425,
+      900
+    ],
+    "loaded": true,
+    "scroll": 0,
+    "overflow": false,
+    "title": {
+      "x": 79.64917755126953,
+      "y": 229.18333435058594,
+      "width": 553.20166015625,
+      "height": 239.71278381347656,
+      "right": 632.8508377075195,
+      "bottom": 468.8961181640625
+    },
+    "media": {
+      "x": 881.765625,
+      "y": 288.421875,
+      "width": 267.0625,
+      "height": 314.125,
+      "right": 1148.828125,
+      "bottom": 602.546875
+    },
+    "research": {
+      "x": 103.41666412353516,
+      "y": 245.1171875,
+      "width": 394.16668701171875,
+      "height": 244.578125,
+      "right": 497.5833511352539,
+      "bottom": 489.6953125
+    },
+    "coverAvailable": true,
+    "researchVisible": false,
+    "actions": [
+      {
+        "href": "rehberler.html",
+        "x": 85.5,
+        "y": 775.203125,
+        "width": 169.984375,
+        "height": 48.796875,
+        "right": 255.484375,
+        "bottom": 824,
+        "hit": true
+      },
+      {
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "x": 279.484375,
+        "y": 777.59375,
+        "width": 127.359375,
+        "height": 44,
+        "right": 406.84375,
+        "bottom": 821.59375,
+        "hit": true
+      }
+    ],
+    "clip": {
+      "height": 801,
+      "width": 1281.5999755859375,
+      "x": 20,
+      "y": 65
+    },
+    "file": "final-1440-light-1s.jpg",
+    "label": "1s"
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "theme": "light",
+    "mode": "perspective",
+    "seconds": "2.500",
+    "progress": "0.0000",
+    "canvas": [
+      1425,
+      900
+    ],
+    "loaded": true,
+    "scroll": 0,
+    "overflow": false,
+    "title": {
+      "x": 85.5,
+      "y": 223,
+      "width": 541.5,
+      "height": 235.59375,
+      "right": 627,
+      "bottom": 458.59375
+    },
+    "media": {
+      "x": 810.90625,
+      "y": 290.078125,
+      "width": 408.78125,
+      "height": 310.8125,
+      "right": 1219.6875,
+      "bottom": 600.890625
+    },
+    "research": {
+      "x": 103.41666412353516,
+      "y": 245.1171875,
+      "width": 394.16668701171875,
+      "height": 244.578125,
+      "right": 497.5833511352539,
+      "bottom": 489.6953125
+    },
+    "coverAvailable": true,
+    "researchVisible": false,
+    "actions": [
+      {
+        "href": "rehberler.html",
+        "x": 85.5,
+        "y": 775.203125,
+        "width": 169.984375,
+        "height": 48.796875,
+        "right": 255.484375,
+        "bottom": 824,
+        "hit": true
+      },
+      {
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "x": 279.484375,
+        "y": 777.59375,
+        "width": 127.359375,
+        "height": 44,
+        "right": 406.84375,
+        "bottom": 821.59375,
+        "hit": true
+      }
+    ],
+    "clip": {
+      "height": 801,
+      "width": 1281.5999755859375,
+      "x": 20,
+      "y": 65
+    },
+    "file": "final-1440-light-2.5s.jpg",
+    "label": "2.5s"
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "theme": "light",
+    "mode": "perspective",
+    "seconds": "4.000",
+    "progress": "0.0000",
+    "canvas": [
+      1425,
+      900
+    ],
+    "loaded": true,
+    "scroll": 0,
+    "overflow": false,
+    "title": {
+      "x": 85.5,
+      "y": 223,
+      "width": 541.5,
+      "height": 235.59375,
+      "right": 627,
+      "bottom": 458.59375
+    },
+    "media": {
+      "x": 755.28125,
+      "y": 284.40625,
+      "width": 520.046875,
+      "height": 322.171875,
+      "right": 1275.328125,
+      "bottom": 606.578125
+    },
+    "research": {
+      "x": 103.41666412353516,
+      "y": 245.1171875,
+      "width": 394.16668701171875,
+      "height": 244.578125,
+      "right": 497.5833511352539,
+      "bottom": 489.6953125
+    },
+    "coverAvailable": true,
+    "researchVisible": false,
+    "actions": [
+      {
+        "href": "rehberler.html",
+        "x": 85.5,
+        "y": 775.203125,
+        "width": 169.984375,
+        "height": 48.796875,
+        "right": 255.484375,
+        "bottom": 824,
+        "hit": true
+      },
+      {
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "x": 279.484375,
+        "y": 777.59375,
+        "width": 127.359375,
+        "height": 44,
+        "right": 406.84375,
+        "bottom": 821.59375,
+        "hit": true
+      }
+    ],
+    "clip": {
+      "height": 801,
+      "width": 1281.5999755859375,
+      "x": 20,
+      "y": 65
+    },
+    "file": "final-1440-light-4s.jpg",
+    "label": "4s"
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "theme": "light",
+    "mode": "perspective",
+    "seconds": "6.000",
+    "progress": "0.0000",
+    "canvas": [
+      1425,
+      900
+    ],
+    "loaded": true,
+    "scroll": 0,
+    "overflow": false,
+    "title": {
+      "x": 85.5,
+      "y": 223,
+      "width": 541.5,
+      "height": 235.59375,
+      "right": 627,
+      "bottom": 458.59375
+    },
+    "media": {
+      "x": 749.515625,
+      "y": 283.65625,
+      "width": 531.578125,
+      "height": 323.65625,
+      "right": 1281.09375,
+      "bottom": 607.3125
+    },
+    "research": {
+      "x": 103.41666412353516,
+      "y": 245.1171875,
+      "width": 394.16668701171875,
+      "height": 244.578125,
+      "right": 497.5833511352539,
+      "bottom": 489.6953125
+    },
+    "coverAvailable": true,
+    "researchVisible": false,
+    "actions": [
+      {
+        "href": "rehberler.html",
+        "x": 85.5,
+        "y": 775.203125,
+        "width": 169.984375,
+        "height": 48.796875,
+        "right": 255.484375,
+        "bottom": 824,
+        "hit": true
+      },
+      {
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "x": 279.484375,
+        "y": 777.59375,
+        "width": 127.359375,
+        "height": 44,
+        "right": 406.84375,
+        "bottom": 821.59375,
+        "hit": true
+      }
+    ],
+    "clip": {
+      "height": 801,
+      "width": 1281.5999755859375,
+      "x": 20,
+      "y": 65
+    },
+    "file": "final-1440-light-6s.jpg",
+    "label": "6s"
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "theme": "light",
+    "mode": "perspective",
+    "seconds": "6.000",
+    "progress": "0.5806",
+    "canvas": [
+      1425,
+      900
+    ],
+    "loaded": true,
+    "scroll": 360,
+    "overflow": false,
+    "title": {
+      "x": 110.43570709228516,
+      "y": 216.0687713623047,
+      "width": 491.6285705566406,
+      "height": 213.89588928222656,
+      "right": 602.0642776489258,
+      "bottom": 429.96466064453125
+    },
+    "media": {
+      "x": 731.5625,
+      "y": 286.328125,
+      "width": 567.46875,
+      "height": 318.328125,
+      "right": 1299.03125,
+      "bottom": 604.65625
+    },
+    "research": {
+      "x": 92.09851837158203,
+      "y": 238.09434509277344,
+      "width": 416.802978515625,
+      "height": 258.62384033203125,
+      "right": 508.90149688720703,
+      "bottom": 496.7181854248047
+    },
+    "coverAvailable": true,
+    "researchVisible": true,
+    "actions": [
+      {
+        "href": "rehberler.html",
+        "x": 85.5,
+        "y": 791.203125,
+        "width": 169.984375,
+        "height": 48.796875,
+        "right": 255.484375,
+        "bottom": 840,
+        "hit": true
+      },
+      {
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "x": 279.484375,
+        "y": 793.59375,
+        "width": 127.359375,
+        "height": 44,
+        "right": 406.84375,
+        "bottom": 837.59375,
+        "hit": true
+      }
+    ],
+    "clip": {
+      "height": 801,
+      "width": 1281.5999755859375,
+      "x": 20,
+      "y": 65
+    },
+    "file": "final-1440-light-Scroll.jpg",
+    "label": "Scroll"
+  },
+  {
+    "width": 1440,
+    "height": 900,
+    "theme": "light",
+    "mode": "perspective",
+    "seconds": "6.000",
+    "progress": "1.0000",
+    "canvas": [
+      1425,
+      900
+    ],
+    "loaded": true,
+    "scroll": 620,
+    "overflow": false,
+    "title": {
+      "x": 123.57421875,
+      "y": 212.416748046875,
+      "width": 465.3515625,
+      "height": 202.46337890625,
+      "right": 588.92578125,
+      "bottom": 414.880126953125
+    },
+    "media": {
+      "x": 730.46875,
+      "y": 275.84375,
+      "width": 569.671875,
+      "height": 339.296875,
+      "right": 1300.140625,
+      "bottom": 615.140625
+    },
+    "research": {
+      "x": 85.5,
+      "y": 234,
+      "width": 430,
+      "height": 266.8125,
+      "right": 515.5,
+      "bottom": 500.8125
+    },
+    "coverAvailable": true,
+    "researchVisible": true,
+    "actions": [
+      {
+        "href": "rehberler.html",
+        "x": 85.5,
+        "y": 791.203125,
+        "width": 169.984375,
+        "height": 48.796875,
+        "right": 255.484375,
+        "bottom": 840,
+        "hit": true
+      },
+      {
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "x": 279.484375,
+        "y": 793.59375,
+        "width": 127.359375,
+        "height": 44,
+        "right": 406.84375,
+        "bottom": 837.59375,
+        "hit": true
+      }
+    ],
+    "clip": {
+      "height": 801,
+      "width": 1281.5999755859375,
+      "x": 20,
+      "y": 65
+    },
+    "file": "final-1440-light-End.jpg",
+    "label": "End"
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "theme": "dark",
+    "mode": "perspective",
+    "seconds": "0.000",
+    "progress": "0.0000",
+    "canvas": [
+      375,
+      844
+    ],
+    "loaded": true,
+    "scroll": 0,
+    "overflow": false,
+    "title": {
+      "x": 16.781478881835938,
+      "y": 148.46217346191406,
+      "width": 341.43707275390625,
+      "height": 121.31907653808594,
+      "right": 358.2185516357422,
+      "bottom": 269.78125
+    },
+    "media": {
+      "x": 82.75,
+      "y": 383.125,
+      "width": 209.46875,
+      "height": 162.125,
+      "right": 292.21875,
+      "bottom": 545.25
+    },
+    "research": {
+      "x": 33.72786331176758,
+      "y": 117.75130462646484,
+      "width": 302.01300048828125,
+      "height": 176.71612548828125,
+      "right": 335.7408638000488,
+      "bottom": 294.4674301147461
+    },
+    "coverAvailable": true,
+    "researchVisible": false,
+    "actions": [
+      {
+        "href": "rehberler.html",
+        "x": 20,
+        "y": 730,
+        "width": 148.296875,
+        "height": 48,
+        "right": 168.296875,
+        "bottom": 778,
+        "hit": true
+      },
+      {
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "x": 186.296875,
+        "y": 732,
+        "width": 111.4375,
+        "height": 44,
+        "right": 297.734375,
+        "bottom": 776,
+        "hit": true
+      }
+    ],
+    "clip": {
+      "height": 844,
+      "width": 390,
+      "x": 20,
+      "y": 65
+    },
+    "file": "final-390-dark-0s.jpg",
+    "label": "0s"
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "theme": "dark",
+    "mode": "perspective",
+    "seconds": "1.000",
+    "progress": "0.0000",
+    "canvas": [
+      375,
+      844
+    ],
+    "loaded": true,
+    "scroll": 0,
+    "overflow": false,
+    "title": {
+      "x": 18.16775894165039,
+      "y": 140.74176025390625,
+      "width": 338.66448974609375,
+      "height": 121.34185791015625,
+      "right": 356.83224868774414,
+      "bottom": 262.0836181640625
+    },
+    "media": {
+      "x": 79.28125,
+      "y": 383.25,
+      "width": 216.40625,
+      "height": 161.890625,
+      "right": 295.6875,
+      "bottom": 545.140625
+    },
+    "research": {
+      "x": 33.72786331176758,
+      "y": 117.75130462646484,
+      "width": 302.01300048828125,
+      "height": 176.71612548828125,
+      "right": 335.7408638000488,
+      "bottom": 294.4674301147461
+    },
+    "coverAvailable": true,
+    "researchVisible": false,
+    "actions": [
+      {
+        "href": "rehberler.html",
+        "x": 20,
+        "y": 730,
+        "width": 148.296875,
+        "height": 48,
+        "right": 168.296875,
+        "bottom": 778,
+        "hit": true
+      },
+      {
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "x": 186.296875,
+        "y": 732,
+        "width": 111.4375,
+        "height": 44,
+        "right": 297.734375,
+        "bottom": 776,
+        "hit": true
+      }
+    ],
+    "clip": {
+      "height": 844,
+      "width": 390,
+      "x": 20,
+      "y": 65
+    },
+    "file": "final-390-dark-1s.jpg",
+    "label": "1s"
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "theme": "dark",
+    "mode": "perspective",
+    "seconds": "2.500",
+    "progress": "0.0000",
+    "canvas": [
+      375,
+      844
+    ],
+    "loaded": true,
+    "scroll": 0,
+    "overflow": false,
+    "title": {
+      "x": 20,
+      "y": 131.265625,
+      "width": 335,
+      "height": 120.515625,
+      "right": 355,
+      "bottom": 251.78125
+    },
+    "media": {
+      "x": 61.515625,
+      "y": 383.5,
+      "width": 251.953125,
+      "height": 161.375,
+      "right": 313.46875,
+      "bottom": 544.875
+    },
+    "research": {
+      "x": 33.72786331176758,
+      "y": 117.75130462646484,
+      "width": 302.01300048828125,
+      "height": 176.71612548828125,
+      "right": 335.7408638000488,
+      "bottom": 294.4674301147461
+    },
+    "coverAvailable": true,
+    "researchVisible": false,
+    "actions": [
+      {
+        "href": "rehberler.html",
+        "x": 20,
+        "y": 730,
+        "width": 148.296875,
+        "height": 48,
+        "right": 168.296875,
+        "bottom": 778,
+        "hit": true
+      },
+      {
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "x": 186.296875,
+        "y": 732,
+        "width": 111.4375,
+        "height": 44,
+        "right": 297.734375,
+        "bottom": 776,
+        "hit": true
+      }
+    ],
+    "clip": {
+      "height": 844,
+      "width": 390,
+      "x": 20,
+      "y": 65
+    },
+    "file": "final-390-dark-2.5s.jpg",
+    "label": "2.5s"
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "theme": "dark",
+    "mode": "perspective",
+    "seconds": "4.000",
+    "progress": "0.0000",
+    "canvas": [
+      375,
+      844
+    ],
+    "loaded": true,
+    "scroll": 0,
+    "overflow": false,
+    "title": {
+      "x": 20,
+      "y": 131.265625,
+      "width": 335,
+      "height": 120.515625,
+      "right": 355,
+      "bottom": 251.78125
+    },
+    "media": {
+      "x": 48.171875,
+      "y": 382.84375,
+      "width": 278.625,
+      "height": 162.6875,
+      "right": 326.796875,
+      "bottom": 545.53125
+    },
+    "research": {
+      "x": 33.72786331176758,
+      "y": 117.75130462646484,
+      "width": 302.01300048828125,
+      "height": 176.71612548828125,
+      "right": 335.7408638000488,
+      "bottom": 294.4674301147461
+    },
+    "coverAvailable": true,
+    "researchVisible": false,
+    "actions": [
+      {
+        "href": "rehberler.html",
+        "x": 20,
+        "y": 730,
+        "width": 148.296875,
+        "height": 48,
+        "right": 168.296875,
+        "bottom": 778,
+        "hit": true
+      },
+      {
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "x": 186.296875,
+        "y": 732,
+        "width": 111.4375,
+        "height": 44,
+        "right": 297.734375,
+        "bottom": 776,
+        "hit": true
+      }
+    ],
+    "clip": {
+      "height": 844,
+      "width": 390,
+      "x": 20,
+      "y": 65
+    },
+    "file": "final-390-dark-4s.jpg",
+    "label": "4s"
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "theme": "dark",
+    "mode": "perspective",
+    "seconds": "6.000",
+    "progress": "0.0000",
+    "canvas": [
+      375,
+      844
+    ],
+    "loaded": true,
+    "scroll": 0,
+    "overflow": false,
+    "title": {
+      "x": 20,
+      "y": 131.265625,
+      "width": 335,
+      "height": 120.515625,
+      "right": 355,
+      "bottom": 251.78125
+    },
+    "media": {
+      "x": 46.796875,
+      "y": 382.6875,
+      "width": 281.375,
+      "height": 163,
+      "right": 328.171875,
+      "bottom": 545.6875
+    },
+    "research": {
+      "x": 33.72786331176758,
+      "y": 117.75130462646484,
+      "width": 302.01300048828125,
+      "height": 176.71612548828125,
+      "right": 335.7408638000488,
+      "bottom": 294.4674301147461
+    },
+    "coverAvailable": true,
+    "researchVisible": false,
+    "actions": [
+      {
+        "href": "rehberler.html",
+        "x": 20,
+        "y": 730,
+        "width": 148.296875,
+        "height": 48,
+        "right": 168.296875,
+        "bottom": 778,
+        "hit": true
+      },
+      {
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "x": 186.296875,
+        "y": 732,
+        "width": 111.4375,
+        "height": 44,
+        "right": 297.734375,
+        "bottom": 776,
+        "hit": true
+      }
+    ],
+    "clip": {
+      "height": 844,
+      "width": 390,
+      "x": 20,
+      "y": 65
+    },
+    "file": "final-390-dark-6s.jpg",
+    "label": "6s"
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "theme": "dark",
+    "mode": "perspective",
+    "seconds": "6.000",
+    "progress": "0.5791",
+    "canvas": [
+      375,
+      844
+    ],
+    "loaded": true,
+    "scroll": 249,
+    "overflow": false,
+    "title": {
+      "x": 27.200267791748047,
+      "y": 125.20484161376953,
+      "width": 320.5994873046875,
+      "height": 115.3350601196289,
+      "right": 347.79975509643555,
+      "bottom": 240.53990173339844
+    },
+    "media": {
+      "x": 39.734375,
+      "y": 381.4375,
+      "width": 295.5,
+      "height": 165.5,
+      "right": 335.234375,
+      "bottom": 546.9375
+    },
+    "research": {
+      "x": 25.1834659576416,
+      "y": 112.75173950195312,
+      "width": 319.101806640625,
+      "height": 186.71527099609375,
+      "right": 344.2852725982666,
+      "bottom": 299.4670104980469
+    },
+    "coverAvailable": true,
+    "researchVisible": true,
+    "actions": [
+      {
+        "href": "rehberler.html",
+        "x": 20,
+        "y": 746,
+        "width": 148.296875,
+        "height": 48,
+        "right": 168.296875,
+        "bottom": 794,
+        "hit": true
+      },
+      {
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "x": 186.296875,
+        "y": 748,
+        "width": 111.4375,
+        "height": 44,
+        "right": 297.734375,
+        "bottom": 792,
+        "hit": true
+      }
+    ],
+    "clip": {
+      "height": 844,
+      "width": 390,
+      "x": 20,
+      "y": 65
+    },
+    "file": "final-390-dark-Scroll.jpg",
+    "label": "Scroll"
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "theme": "dark",
+    "mode": "perspective",
+    "seconds": "6.000",
+    "progress": "1.0000",
+    "canvas": [
+      375,
+      844
+    ],
+    "loaded": true,
+    "scroll": 430,
+    "overflow": false,
+    "title": {
+      "x": 31.355932235717773,
+      "y": 121.70683288574219,
+      "width": 312.28814697265625,
+      "height": 112.34507751464844,
+      "right": 343.644079208374,
+      "bottom": 234.05191040039062
+    },
+    "media": {
+      "x": 37.328125,
+      "y": 378.375,
+      "width": 300.328125,
+      "height": 171.625,
+      "right": 337.65625,
+      "bottom": 550
+    },
+    "research": {
+      "x": 20,
+      "y": 109.71875,
+      "width": 329.46875,
+      "height": 192.78125,
+      "right": 349.46875,
+      "bottom": 302.5
+    },
+    "coverAvailable": true,
+    "researchVisible": true,
+    "actions": [
+      {
+        "href": "rehberler.html",
+        "x": 20,
+        "y": 746,
+        "width": 148.296875,
+        "height": 48,
+        "right": 168.296875,
+        "bottom": 794,
+        "hit": true
+      },
+      {
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "x": 186.296875,
+        "y": 748,
+        "width": 111.4375,
+        "height": 44,
+        "right": 297.734375,
+        "bottom": 792,
+        "hit": true
+      }
+    ],
+    "clip": {
+      "height": 844,
+      "width": 390,
+      "x": 20,
+      "y": 65
+    },
+    "file": "final-390-dark-End.jpg",
+    "label": "End"
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "theme": "light",
+    "mode": "perspective",
+    "seconds": "0.000",
+    "progress": "0.0000",
+    "canvas": [
+      375,
+      844
+    ],
+    "loaded": true,
+    "scroll": 0,
+    "overflow": false,
+    "title": {
+      "x": 16.781478881835938,
+      "y": 148.46217346191406,
+      "width": 341.43707275390625,
+      "height": 121.31907653808594,
+      "right": 358.2185516357422,
+      "bottom": 269.78125
+    },
+    "media": {
+      "x": 82.75,
+      "y": 383.125,
+      "width": 209.46875,
+      "height": 162.125,
+      "right": 292.21875,
+      "bottom": 545.25
+    },
+    "research": {
+      "x": 33.72786331176758,
+      "y": 117.75130462646484,
+      "width": 302.01300048828125,
+      "height": 176.71612548828125,
+      "right": 335.7408638000488,
+      "bottom": 294.4674301147461
+    },
+    "coverAvailable": true,
+    "researchVisible": false,
+    "actions": [
+      {
+        "href": "rehberler.html",
+        "x": 20,
+        "y": 730,
+        "width": 148.296875,
+        "height": 48,
+        "right": 168.296875,
+        "bottom": 778,
+        "hit": true
+      },
+      {
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "x": 186.296875,
+        "y": 732,
+        "width": 111.4375,
+        "height": 44,
+        "right": 297.734375,
+        "bottom": 776,
+        "hit": true
+      }
+    ],
+    "clip": {
+      "height": 844,
+      "width": 390,
+      "x": 20,
+      "y": 65
+    },
+    "file": "final-390-light-0s.jpg",
+    "label": "0s"
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "theme": "light",
+    "mode": "perspective",
+    "seconds": "1.000",
+    "progress": "0.0000",
+    "canvas": [
+      375,
+      844
+    ],
+    "loaded": true,
+    "scroll": 0,
+    "overflow": false,
+    "title": {
+      "x": 18.16775894165039,
+      "y": 140.74176025390625,
+      "width": 338.66448974609375,
+      "height": 121.34185791015625,
+      "right": 356.83224868774414,
+      "bottom": 262.0836181640625
+    },
+    "media": {
+      "x": 79.28125,
+      "y": 383.25,
+      "width": 216.40625,
+      "height": 161.890625,
+      "right": 295.6875,
+      "bottom": 545.140625
+    },
+    "research": {
+      "x": 33.72786331176758,
+      "y": 117.75130462646484,
+      "width": 302.01300048828125,
+      "height": 176.71612548828125,
+      "right": 335.7408638000488,
+      "bottom": 294.4674301147461
+    },
+    "coverAvailable": true,
+    "researchVisible": false,
+    "actions": [
+      {
+        "href": "rehberler.html",
+        "x": 20,
+        "y": 730,
+        "width": 148.296875,
+        "height": 48,
+        "right": 168.296875,
+        "bottom": 778,
+        "hit": true
+      },
+      {
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "x": 186.296875,
+        "y": 732,
+        "width": 111.4375,
+        "height": 44,
+        "right": 297.734375,
+        "bottom": 776,
+        "hit": true
+      }
+    ],
+    "clip": {
+      "height": 844,
+      "width": 390,
+      "x": 20,
+      "y": 65
+    },
+    "file": "final-390-light-1s.jpg",
+    "label": "1s"
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "theme": "light",
+    "mode": "perspective",
+    "seconds": "2.500",
+    "progress": "0.0000",
+    "canvas": [
+      375,
+      844
+    ],
+    "loaded": true,
+    "scroll": 0,
+    "overflow": false,
+    "title": {
+      "x": 20,
+      "y": 131.265625,
+      "width": 335,
+      "height": 120.515625,
+      "right": 355,
+      "bottom": 251.78125
+    },
+    "media": {
+      "x": 61.515625,
+      "y": 383.5,
+      "width": 251.953125,
+      "height": 161.375,
+      "right": 313.46875,
+      "bottom": 544.875
+    },
+    "research": {
+      "x": 33.72786331176758,
+      "y": 117.75130462646484,
+      "width": 302.01300048828125,
+      "height": 176.71612548828125,
+      "right": 335.7408638000488,
+      "bottom": 294.4674301147461
+    },
+    "coverAvailable": true,
+    "researchVisible": false,
+    "actions": [
+      {
+        "href": "rehberler.html",
+        "x": 20,
+        "y": 730,
+        "width": 148.296875,
+        "height": 48,
+        "right": 168.296875,
+        "bottom": 778,
+        "hit": true
+      },
+      {
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "x": 186.296875,
+        "y": 732,
+        "width": 111.4375,
+        "height": 44,
+        "right": 297.734375,
+        "bottom": 776,
+        "hit": true
+      }
+    ],
+    "clip": {
+      "height": 844,
+      "width": 390,
+      "x": 20,
+      "y": 65
+    },
+    "file": "final-390-light-2.5s.jpg",
+    "label": "2.5s"
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "theme": "light",
+    "mode": "perspective",
+    "seconds": "4.000",
+    "progress": "0.0000",
+    "canvas": [
+      375,
+      844
+    ],
+    "loaded": true,
+    "scroll": 0,
+    "overflow": false,
+    "title": {
+      "x": 20,
+      "y": 131.265625,
+      "width": 335,
+      "height": 120.515625,
+      "right": 355,
+      "bottom": 251.78125
+    },
+    "media": {
+      "x": 48.171875,
+      "y": 382.84375,
+      "width": 278.625,
+      "height": 162.6875,
+      "right": 326.796875,
+      "bottom": 545.53125
+    },
+    "research": {
+      "x": 33.72786331176758,
+      "y": 117.75130462646484,
+      "width": 302.01300048828125,
+      "height": 176.71612548828125,
+      "right": 335.7408638000488,
+      "bottom": 294.4674301147461
+    },
+    "coverAvailable": true,
+    "researchVisible": false,
+    "actions": [
+      {
+        "href": "rehberler.html",
+        "x": 20,
+        "y": 730,
+        "width": 148.296875,
+        "height": 48,
+        "right": 168.296875,
+        "bottom": 778,
+        "hit": true
+      },
+      {
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "x": 186.296875,
+        "y": 732,
+        "width": 111.4375,
+        "height": 44,
+        "right": 297.734375,
+        "bottom": 776,
+        "hit": true
+      }
+    ],
+    "clip": {
+      "height": 844,
+      "width": 390,
+      "x": 20,
+      "y": 65
+    },
+    "file": "final-390-light-4s.jpg",
+    "label": "4s"
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "theme": "light",
+    "mode": "perspective",
+    "seconds": "6.000",
+    "progress": "0.0000",
+    "canvas": [
+      375,
+      844
+    ],
+    "loaded": true,
+    "scroll": 0,
+    "overflow": false,
+    "title": {
+      "x": 20,
+      "y": 131.265625,
+      "width": 335,
+      "height": 120.515625,
+      "right": 355,
+      "bottom": 251.78125
+    },
+    "media": {
+      "x": 46.796875,
+      "y": 382.6875,
+      "width": 281.375,
+      "height": 163,
+      "right": 328.171875,
+      "bottom": 545.6875
+    },
+    "research": {
+      "x": 33.72786331176758,
+      "y": 117.75130462646484,
+      "width": 302.01300048828125,
+      "height": 176.71612548828125,
+      "right": 335.7408638000488,
+      "bottom": 294.4674301147461
+    },
+    "coverAvailable": true,
+    "researchVisible": false,
+    "actions": [
+      {
+        "href": "rehberler.html",
+        "x": 20,
+        "y": 730,
+        "width": 148.296875,
+        "height": 48,
+        "right": 168.296875,
+        "bottom": 778,
+        "hit": true
+      },
+      {
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "x": 186.296875,
+        "y": 732,
+        "width": 111.4375,
+        "height": 44,
+        "right": 297.734375,
+        "bottom": 776,
+        "hit": true
+      }
+    ],
+    "clip": {
+      "height": 844,
+      "width": 390,
+      "x": 20,
+      "y": 65
+    },
+    "file": "final-390-light-6s.jpg",
+    "label": "6s"
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "theme": "light",
+    "mode": "perspective",
+    "seconds": "6.000",
+    "progress": "0.5791",
+    "canvas": [
+      375,
+      844
+    ],
+    "loaded": true,
+    "scroll": 249,
+    "overflow": false,
+    "title": {
+      "x": 27.200267791748047,
+      "y": 125.20484161376953,
+      "width": 320.5994873046875,
+      "height": 115.3350601196289,
+      "right": 347.79975509643555,
+      "bottom": 240.53990173339844
+    },
+    "media": {
+      "x": 39.734375,
+      "y": 381.4375,
+      "width": 295.5,
+      "height": 165.5,
+      "right": 335.234375,
+      "bottom": 546.9375
+    },
+    "research": {
+      "x": 25.1834659576416,
+      "y": 112.75173950195312,
+      "width": 319.101806640625,
+      "height": 186.71527099609375,
+      "right": 344.2852725982666,
+      "bottom": 299.4670104980469
+    },
+    "coverAvailable": true,
+    "researchVisible": true,
+    "actions": [
+      {
+        "href": "rehberler.html",
+        "x": 20,
+        "y": 746,
+        "width": 148.296875,
+        "height": 48,
+        "right": 168.296875,
+        "bottom": 794,
+        "hit": true
+      },
+      {
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "x": 186.296875,
+        "y": 748,
+        "width": 111.4375,
+        "height": 44,
+        "right": 297.734375,
+        "bottom": 792,
+        "hit": true
+      }
+    ],
+    "clip": {
+      "height": 844,
+      "width": 390,
+      "x": 20,
+      "y": 65
+    },
+    "file": "final-390-light-Scroll.jpg",
+    "label": "Scroll"
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "theme": "light",
+    "mode": "perspective",
+    "seconds": "6.000",
+    "progress": "1.0000",
+    "canvas": [
+      375,
+      844
+    ],
+    "loaded": true,
+    "scroll": 430,
+    "overflow": false,
+    "title": {
+      "x": 31.355932235717773,
+      "y": 121.70683288574219,
+      "width": 312.28814697265625,
+      "height": 112.34507751464844,
+      "right": 343.644079208374,
+      "bottom": 234.05191040039062
+    },
+    "media": {
+      "x": 37.328125,
+      "y": 378.375,
+      "width": 300.328125,
+      "height": 171.625,
+      "right": 337.65625,
+      "bottom": 550
+    },
+    "research": {
+      "x": 20,
+      "y": 109.71875,
+      "width": 329.46875,
+      "height": 192.78125,
+      "right": 349.46875,
+      "bottom": 302.5
+    },
+    "coverAvailable": true,
+    "researchVisible": true,
+    "actions": [
+      {
+        "href": "rehberler.html",
+        "x": 20,
+        "y": 746,
+        "width": 148.296875,
+        "height": 48,
+        "right": 168.296875,
+        "bottom": 794,
+        "hit": true
+      },
+      {
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "x": 186.296875,
+        "y": 748,
+        "width": 111.4375,
+        "height": 44,
+        "right": 297.734375,
+        "bottom": 792,
+        "hit": true
+      }
+    ],
+    "clip": {
+      "height": 844,
+      "width": 390,
+      "x": 20,
+      "y": 65
+    },
+    "file": "final-390-light-End.jpg",
+    "label": "End"
+  },
+  {
+    "width": 360,
+    "height": 844,
+    "theme": "dark",
+    "mode": "perspective",
+    "seconds": "0.000",
+    "progress": "0.0000",
+    "canvas": [
+      345,
+      844
+    ],
+    "loaded": true,
+    "scroll": 0,
+    "overflow": false,
+    "title": {
+      "x": 13.16075611114502,
+      "y": 148.62693786621094,
+      "width": 318.678466796875,
+      "height": 114.54493713378906,
+      "right": 331.83922290802,
+      "bottom": 263.171875
+    },
+    "media": {
+      "x": 76.0625,
+      "y": 389.53125,
+      "width": 192.84375,
+      "height": 149.328125,
+      "right": 268.90625,
+      "bottom": 538.859375
+    },
+    "research": {
+      "x": 29.04166603088379,
+      "y": 117.75130462646484,
+      "width": 286.91668701171875,
+      "height": 176.71612548828125,
+      "right": 315.95835304260254,
+      "bottom": 294.4674301147461
+    },
+    "coverAvailable": true,
+    "researchVisible": false,
+    "actions": [
+      {
+        "href": "rehberler.html",
+        "x": 16,
+        "y": 730,
+        "width": 132.46875,
+        "height": 48,
+        "right": 148.46875,
+        "bottom": 778,
+        "hit": true
+      },
+      {
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "x": 161.46875,
+        "y": 732,
+        "width": 101.859375,
+        "height": 44,
+        "right": 263.328125,
+        "bottom": 776,
+        "hit": true
+      }
+    ],
+    "clip": {
+      "height": 844,
+      "width": 360,
+      "x": 20,
+      "y": 65
+    },
+    "file": "final-360-dark-0s.jpg",
+    "label": "0s"
+  },
+  {
+    "width": 360,
+    "height": 844,
+    "theme": "dark",
+    "mode": "perspective",
+    "seconds": "1.000",
+    "progress": "0.0000",
+    "canvas": [
+      345,
+      844
+    ],
+    "loaded": true,
+    "scroll": 0,
+    "overflow": false,
+    "title": {
+      "x": 14.382941246032715,
+      "y": 140.8558349609375,
+      "width": 316.234130859375,
+      "height": 114.618408203125,
+      "right": 330.6170721054077,
+      "bottom": 255.4742431640625
+    },
+    "media": {
+      "x": 72.875,
+      "y": 389.625,
+      "width": 199.234375,
+      "height": 149.125,
+      "right": 272.109375,
+      "bottom": 538.75
+    },
+    "research": {
+      "x": 29.04166603088379,
+      "y": 117.75130462646484,
+      "width": 286.91668701171875,
+      "height": 176.71612548828125,
+      "right": 315.95835304260254,
+      "bottom": 294.4674301147461
+    },
+    "coverAvailable": true,
+    "researchVisible": false,
+    "actions": [
+      {
+        "href": "rehberler.html",
+        "x": 16,
+        "y": 730,
+        "width": 132.46875,
+        "height": 48,
+        "right": 148.46875,
+        "bottom": 778,
+        "hit": true
+      },
+      {
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "x": 161.46875,
+        "y": 732,
+        "width": 101.859375,
+        "height": 44,
+        "right": 263.328125,
+        "bottom": 776,
+        "hit": true
+      }
+    ],
+    "clip": {
+      "height": 844,
+      "width": 360,
+      "x": 20,
+      "y": 65
+    },
+    "file": "final-360-dark-1s.jpg",
+    "label": "1s"
+  },
+  {
+    "width": 360,
+    "height": 844,
+    "theme": "dark",
+    "mode": "perspective",
+    "seconds": "2.500",
+    "progress": "0.0000",
+    "canvas": [
+      345,
+      844
+    ],
+    "loaded": true,
+    "scroll": 0,
+    "overflow": false,
+    "title": {
+      "x": 16,
+      "y": 131.265625,
+      "width": 313,
+      "height": 113.90625,
+      "right": 329,
+      "bottom": 245.171875
+    },
+    "media": {
+      "x": 56.484375,
+      "y": 389.84375,
+      "width": 232.015625,
+      "height": 148.6875,
+      "right": 288.5,
+      "bottom": 538.53125
+    },
+    "research": {
+      "x": 29.04166603088379,
+      "y": 117.75130462646484,
+      "width": 286.91668701171875,
+      "height": 176.71612548828125,
+      "right": 315.95835304260254,
+      "bottom": 294.4674301147461
+    },
+    "coverAvailable": true,
+    "researchVisible": false,
+    "actions": [
+      {
+        "href": "rehberler.html",
+        "x": 16,
+        "y": 730,
+        "width": 132.46875,
+        "height": 48,
+        "right": 148.46875,
+        "bottom": 778,
+        "hit": true
+      },
+      {
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "x": 161.46875,
+        "y": 732,
+        "width": 101.859375,
+        "height": 44,
+        "right": 263.328125,
+        "bottom": 776,
+        "hit": true
+      }
+    ],
+    "clip": {
+      "height": 844,
+      "width": 360,
+      "x": 20,
+      "y": 65
+    },
+    "file": "final-360-dark-2.5s.jpg",
+    "label": "2.5s"
+  },
+  {
+    "width": 360,
+    "height": 844,
+    "theme": "dark",
+    "mode": "perspective",
+    "seconds": "4.000",
+    "progress": "0.0000",
+    "canvas": [
+      345,
+      844
+    ],
+    "loaded": true,
+    "scroll": 0,
+    "overflow": false,
+    "title": {
+      "x": 16,
+      "y": 131.265625,
+      "width": 313,
+      "height": 113.90625,
+      "right": 329,
+      "bottom": 245.171875
+    },
+    "media": {
+      "x": 44.171875,
+      "y": 389.234375,
+      "width": 256.640625,
+      "height": 149.90625,
+      "right": 300.8125,
+      "bottom": 539.140625
+    },
+    "research": {
+      "x": 29.04166603088379,
+      "y": 117.75130462646484,
+      "width": 286.91668701171875,
+      "height": 176.71612548828125,
+      "right": 315.95835304260254,
+      "bottom": 294.4674301147461
+    },
+    "coverAvailable": true,
+    "researchVisible": false,
+    "actions": [
+      {
+        "href": "rehberler.html",
+        "x": 16,
+        "y": 730,
+        "width": 132.46875,
+        "height": 48,
+        "right": 148.46875,
+        "bottom": 778,
+        "hit": true
+      },
+      {
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "x": 161.46875,
+        "y": 732,
+        "width": 101.859375,
+        "height": 44,
+        "right": 263.328125,
+        "bottom": 776,
+        "hit": true
+      }
+    ],
+    "clip": {
+      "height": 844,
+      "width": 360,
+      "x": 20,
+      "y": 65
+    },
+    "file": "final-360-dark-4s.jpg",
+    "label": "4s"
+  },
+  {
+    "width": 360,
+    "height": 844,
+    "theme": "dark",
+    "mode": "perspective",
+    "seconds": "6.000",
+    "progress": "0.0000",
+    "canvas": [
+      345,
+      844
+    ],
+    "loaded": true,
+    "scroll": 0,
+    "overflow": false,
+    "title": {
+      "x": 16,
+      "y": 131.265625,
+      "width": 313,
+      "height": 113.90625,
+      "right": 329,
+      "bottom": 245.171875
+    },
+    "media": {
+      "x": 42.90625,
+      "y": 389.09375,
+      "width": 259.171875,
+      "height": 150.203125,
+      "right": 302.078125,
+      "bottom": 539.296875
+    },
+    "research": {
+      "x": 29.04166603088379,
+      "y": 117.75130462646484,
+      "width": 286.91668701171875,
+      "height": 176.71612548828125,
+      "right": 315.95835304260254,
+      "bottom": 294.4674301147461
+    },
+    "coverAvailable": true,
+    "researchVisible": false,
+    "actions": [
+      {
+        "href": "rehberler.html",
+        "x": 16,
+        "y": 730,
+        "width": 132.46875,
+        "height": 48,
+        "right": 148.46875,
+        "bottom": 778,
+        "hit": true
+      },
+      {
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "x": 161.46875,
+        "y": 732,
+        "width": 101.859375,
+        "height": 44,
+        "right": 263.328125,
+        "bottom": 776,
+        "hit": true
+      }
+    ],
+    "clip": {
+      "height": 844,
+      "width": 360,
+      "x": 20,
+      "y": 65
+    },
+    "file": "final-360-dark-6s.jpg",
+    "label": "6s"
+  },
+  {
+    "width": 360,
+    "height": 844,
+    "theme": "dark",
+    "mode": "perspective",
+    "seconds": "6.000",
+    "progress": "0.5791",
+    "canvas": [
+      345,
+      844
+    ],
+    "loaded": true,
+    "scroll": 249,
+    "overflow": false,
+    "title": {
+      "x": 22.727413177490234,
+      "y": 125.03692626953125,
+      "width": 299.545166015625,
+      "height": 109.00979614257812,
+      "right": 322.27257919311523,
+      "bottom": 234.04672241210938
+    },
+    "media": {
+      "x": 36.375,
+      "y": 387.9375,
+      "width": 272.21875,
+      "height": 152.5,
+      "right": 308.59375,
+      "bottom": 540.4375
+    },
+    "research": {
+      "x": 20.924365997314453,
+      "y": 112.75173950195312,
+      "width": 303.1512451171875,
+      "height": 186.71527099609375,
+      "right": 324.07561111450195,
+      "bottom": 299.4670104980469
+    },
+    "coverAvailable": true,
+    "researchVisible": true,
+    "actions": [
+      {
+        "href": "rehberler.html",
+        "x": 16,
+        "y": 746,
+        "width": 132.46875,
+        "height": 48,
+        "right": 148.46875,
+        "bottom": 794,
+        "hit": true
+      },
+      {
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "x": 161.46875,
+        "y": 748,
+        "width": 101.859375,
+        "height": 44,
+        "right": 263.328125,
+        "bottom": 792,
+        "hit": true
+      }
+    ],
+    "clip": {
+      "height": 844,
+      "width": 360,
+      "x": 20,
+      "y": 65
+    },
+    "file": "final-360-dark-Scroll.jpg",
+    "label": "Scroll"
+  },
+  {
+    "width": 360,
+    "height": 844,
+    "theme": "dark",
+    "mode": "perspective",
+    "seconds": "6.000",
+    "progress": "1.0000",
+    "canvas": [
+      345,
+      844
+    ],
+    "loaded": true,
+    "scroll": 430,
+    "overflow": false,
+    "title": {
+      "x": 26.610170364379883,
+      "y": 121.44200134277344,
+      "width": 291.7796630859375,
+      "height": 106.18379211425781,
+      "right": 318.3898334503174,
+      "bottom": 227.62579345703125
+    },
+    "media": {
+      "x": 34.15625,
+      "y": 385.203125,
+      "width": 276.671875,
+      "height": 157.984375,
+      "right": 310.828125,
+      "bottom": 543.1875
+    },
+    "research": {
+      "x": 16,
+      "y": 109.71875,
+      "width": 313,
+      "height": 192.78125,
+      "right": 329,
+      "bottom": 302.5
+    },
+    "coverAvailable": true,
+    "researchVisible": true,
+    "actions": [
+      {
+        "href": "rehberler.html",
+        "x": 16,
+        "y": 746,
+        "width": 132.46875,
+        "height": 48,
+        "right": 148.46875,
+        "bottom": 794,
+        "hit": true
+      },
+      {
+        "href": "https://youtu.be/6MxLFTRudaQ",
+        "x": 161.46875,
+        "y": 748,
+        "width": 101.859375,
+        "height": 44,
+        "right": 263.328125,
+        "bottom": 792,
+        "hit": true
+      }
+    ],
+    "clip": {
+      "height": 844,
+      "width": 360,
+      "x": 20,
+      "y": 65
+    },
+    "file": "final-360-dark-End.jpg",
+    "label": "End"
+  }
+]
