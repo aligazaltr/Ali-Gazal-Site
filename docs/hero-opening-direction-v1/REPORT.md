@@ -1,4 +1,7 @@
 # Hero Opening Direction V1
+
+> İlk sürümün tasarım raporu. Güncel Chromium incelemesi ve düzeltme için [görsel denetim raporuna](qa/REPORT.md) bakın.
+
 ## İzole açılış denemesi — görsel onay verilmedi
 
 Temel main: a1cc3a3504df5757eb4444215606f40e33fea76b.

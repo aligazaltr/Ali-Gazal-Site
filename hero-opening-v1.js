@@ -6,6 +6,8 @@
   const reduced=window.matchMedia('(prefers-reduced-motion: reduce)');
   const stage=root.querySelector('.ho-stage'),canvas=root.querySelector('.ho-canvas'),image=root.querySelector('.ho-media img');
   const copy=root.querySelector('.ho-copy'),detail=root.querySelector('.ho-continuation');
+  const sceneCanvas=root.querySelector('.ho-scene-canvas');
+  const useStaticArt=()=>root.classList.add('ho-image-missing');
   const skip=root.querySelector('.ho-skip'),replay=root.querySelector('.ho-replay');
   const project=window.AG_SITE_DATA?.projects?.machiavelli;
   if(project&&window.AG_VIDEO_LINKS){
@@ -16,10 +18,12 @@
     }
     if(!url)root.querySelector('.ho-watch').textContent='Deney dosyasını incele';
   }
+  if(image.complete&&!image.naturalWidth)useStaticArt();
+  image.addEventListener('error',useStaticArt,{once:true});
   const readable=()=>parseFloat(getComputedStyle(document.documentElement).fontSize)<=20;
   if(reduced.matches||navigator.connection?.saveData||!readable()||window.innerHeight<700)return;
   let gl,program,texture,meshes=[],uniforms,geometry,raf=0,seconds=0,last=0,lastDraw=0;
-  let visible=true,alive=false,travel=1,start=0,observer,themeObserver;
+  let visible=true,alive=false,travel=1,start=0,observer,themeObserver,context2d=null;
   function cancelFrame(){if(raf)window.cancelAnimationFrame(raf);raf=0;last=0;}
   function release(){
     if(!gl||gl.isContextLost())return;
@@ -29,10 +33,11 @@
     meshes=[];texture=null;program=null;
   }
   function fallback(){
-    alive=false;cancelFrame();root.classList.remove('ho-live');root.dataset.heroMode='static';
+    alive=false;cancelFrame();root.classList.remove('ho-live','ho-perspective');root.dataset.heroMode='static';
     stage.removeAttribute('style');copy.style.removeProperty('visibility');detail.style.removeProperty('visibility');
     detail.inert=false;skip.hidden=true;replay.hidden=true;
-    observer?.disconnect();themeObserver?.disconnect();release();canvas.width=1;canvas.height=1;
+    observer?.disconnect();themeObserver?.disconnect();release();
+    canvas.width=1;canvas.height=1;sceneCanvas.width=1;sceneCanvas.height=1;
   }
   const vertex=String.raw`
     attribute vec3 aPosition;
@@ -122,7 +127,7 @@
   }
   function setupGPU(){
     gl=canvas.getContext('webgl',{alpha:false,antialias:true,depth:true,stencil:false,preserveDrawingBuffer:false,powerPreference:'low-power'});
-    if(!gl)throw Error('No WebGL');
+    if(!gl)return false;
     const v=shader(gl.VERTEX_SHADER,vertex),f=shader(gl.FRAGMENT_SHADER,fragment);
     program=gl.createProgram();if(!program)throw Error('Program allocation');
     gl.attachShader(program,v);gl.attachShader(program,f);gl.linkProgram(program);
@@ -148,6 +153,98 @@
     mesh(quad(M.coverCorners,[0,0,1]),1,[1,1,1]);
     gl.enable(gl.DEPTH_TEST);gl.depthFunc(gl.LEQUAL);gl.enable(gl.CULL_FACE);gl.cullFace(gl.BACK);
     gl.enableVertexAttribArray(position);gl.enableVertexAttribArray(normal);gl.enableVertexAttribArray(uv);
+    return true;
+  }
+  // Project the same object through the same camera without requiring a GPU.
+  // The photo stays an HTML image: its homogeneous transform preserves the
+  // whole texture without tiling, cropping or triangle seams.
+  const projectedMeshes=[
+    {faces:box(6.6,.24,1.9,0,-1.87,-.08),color:[48,43,38]},
+    {faces:box(6.05,3.5,.30,0,0,-.06),color:[50,46,42]},
+    {faces:box(6.05,.027,.33,0,1.746,-.055),color:[155,99,54]}
+  ];
+  function screenPoint(point,state){
+    const [x,y,z,w]=M.transform(state.vp,point);
+    return [
+      (x+(1+state.offset[0])*w)*geometry.width/2,
+      (-y+(1-state.offset[1])*w)*geometry.height/2,z,w
+    ];
+  }
+  // Keep the caption below the projected pedestal, even at the oblique start.
+  function captionGap(state){
+    const pedestal=[[-3.3,-1.99,.87],[3.3,-1.99,.87],[-3.3,-1.99,-1.03],[3.3,-1.99,-1.03]];
+    const lowest=Math.max(...pedestal.map(point=>{
+      const [,y,,w]=screenPoint(point,state);
+      return y/w;
+    }));
+    const coverBottom=(1-state.bounds.bottom)*geometry.height/2;
+    return Math.max(14,Math.ceil(lowest-coverBottom)+12);
+  }
+  function paintPerspective(state,palette){
+    const ctx=context2d,{width,height}=geometry;
+    ctx.setTransform(sceneCanvas.width/width,0,0,sceneCanvas.height/height,0,0);
+    ctx.clearRect(0,0,width,height);
+    const ground=screenPoint([0,-1.99,.4],state);
+    const gx=ground[0]/ground[3],gy=ground[1]/ground[3];
+    ctx.save();ctx.translate(gx,gy);ctx.scale(1,.29);
+    const radius=(state.bounds.right-state.bounds.left)*width*.37;
+    const pool=ctx.createRadialGradient(0,0,0,0,0,radius);
+    pool.addColorStop(0,'rgba(230,128,49,'+(palette.light?.20:.27)*(.48+.52*state.reveal)+')');
+    pool.addColorStop(1,'rgba(230,128,49,0)');
+    ctx.fillStyle=pool;ctx.fillRect(-radius,-radius,radius*2,radius*2);
+    ctx.restore();
+    ctx.save();ctx.translate(gx,gy);ctx.scale(1,.14);
+    const shadow=ctx.createRadialGradient(0,0,0,0,0,radius*.75);
+    shadow.addColorStop(0,'rgba(12,8,5,.65)');shadow.addColorStop(1,'rgba(12,8,5,0)');
+    ctx.fillStyle=shadow;ctx.fillRect(-radius,-radius,radius*2,radius*2);ctx.restore();
+
+    const visibleFaces=[];
+    for(const mesh of projectedMeshes){
+      for(let i=0;i<mesh.faces.length;i+=48){
+        const raw=[0,8,16,40].map(offset=>mesh.faces.slice(i+offset,i+offset+3));
+        const normal=mesh.faces.slice(i+3,i+6);
+        const towardEye=normal.reduce((sum,n,k)=>sum+n*(state.eye[k]-raw[0][k]),0);
+        if(towardEye<=0)continue;
+        const verts=raw.map(v=>screenPoint(v,state));
+        const depth=verts.reduce((sum,v)=>sum+v[3],0)/4;
+        const light=normal[1]*.29+normal[0]*.11+normal[2]*.08;
+        const level=.59+light+state.reveal*.36+(palette.light?.14:0);
+        visibleFaces.push({verts,depth,fill:'rgb('+mesh.color.map(c=>Math.round(c*level)).join(',')+')'});
+      }
+    }
+    visibleFaces.sort((a,b)=>b.depth-a.depth);
+    for(const face of visibleFaces){
+      ctx.beginPath();
+      face.verts.forEach(([x,y,,w],i)=>i?ctx.lineTo(x/w,y/w):ctx.moveTo(x/w,y/w));
+      ctx.closePath();ctx.fillStyle=face.fill;ctx.fill();
+    }
+
+    const x=(state.bounds.left+1)*width/2,y=(1-state.bounds.top)*height/2;
+    const [topLeft,topRight,bottomLeft]=[3,2,0].map(index=>{
+      const [px,py,,w]=screenPoint(M.coverCorners[index],state);
+      return [px-x*w,py-y*w,w];
+    });
+    const dx=topRight.map((v,i)=>(v-topLeft[i])/320);
+    const dy=bottomLeft.map((v,i)=>(v-topLeft[i])/180);
+    const matrix=[dx[0],dx[1],0,dx[2],dy[0],dy[1],0,dy[2],0,0,1,0,topLeft[0],topLeft[1],0,topLeft[2]];
+    stage.style.setProperty('--ho-photo-matrix','matrix3d('+matrix.map(x=>x.toFixed(7)).join(',')+')');
+    stage.style.setProperty('--ho-exposure',String(.24+.76*M.ramp(state.reveal,0,.88)));
+    stage.style.setProperty('--ho-light-sweep',String((1-state.reveal)*M.ramp(state.reveal,0,.32)));
+    stage.style.setProperty('--ho-light-position',(-35+state.reveal*170)+'%');
+  }
+  function startPerspective(){
+    release();
+    context2d=sceneCanvas.getContext('2d');
+    if(!context2d)return false;
+    root.classList.add('ho-perspective');
+    return true;
+  }
+  function loseContext(event){
+    event.preventDefault();
+    if(!alive||context2d)return;
+    if(!startPerspective()){fallback();return;}
+    root.dataset.heroMode='perspective';
+    resize();render();
   }
   function theme(){
     const name=document.documentElement.dataset.theme;
@@ -161,31 +258,36 @@
     if(geometry.fit>48){fallback();return;}
     const pixelCap=geometry.mobile?1250000:2100000;
     const dpr=Math.min(window.devicePixelRatio||1,geometry.mobile?1.5:1.75,Math.sqrt(pixelCap/(geometry.width*geometry.height)));
-    canvas.width=Math.max(1,Math.round(geometry.width*dpr));canvas.height=Math.max(1,Math.round(geometry.height*dpr));
-    gl.viewport(0,0,canvas.width,canvas.height);
+    const buffer=context2d?sceneCanvas:canvas;
+    const scale=context2d?Math.min(dpr,1.2):dpr;
+    buffer.width=Math.max(1,Math.round(geometry.width*scale));buffer.height=Math.max(1,Math.round(geometry.height*scale));
+    if(!context2d)gl.viewport(0,0,canvas.width,canvas.height);
     start=window.scrollY+root.getBoundingClientRect().top;
     travel=Math.max(1,root.offsetHeight-stage.clientHeight);
     request();
   }
   function render(){
-    if(!alive||!geometry||gl.isContextLost())return;
+    if(!alive||!geometry||(!context2d&&gl.isContextLost()))return;
     const progress=M.clamp((window.scrollY-start)/travel),s=M.sample(seconds,progress,geometry),palette=theme();
-    gl.clearColor(...palette.bg,1);gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);
-    gl.uniformMatrix4fv(uniforms.VP,false,new Float32Array(s.vp));
-    gl.uniform2fv(uniforms.Offset,new Float32Array(s.offset));gl.uniform3fv(uniforms.Eye,new Float32Array(s.eye));
-    gl.uniform3fv(uniforms.Bg,new Float32Array(palette.bg));gl.uniform1f(uniforms.Light,palette.light?1:0);
-    gl.uniform1f(uniforms.Reveal,s.reveal);gl.uniform1f(uniforms.Key,s.key);
-    for(const item of meshes){
-      gl.bindBuffer(gl.ARRAY_BUFFER,item.buffer);
-      gl.vertexAttribPointer(uniforms.position,3,gl.FLOAT,false,32,0);
-      gl.vertexAttribPointer(uniforms.normal,3,gl.FLOAT,false,32,12);
-      gl.vertexAttribPointer(uniforms.uv,2,gl.FLOAT,false,32,24);
-      gl.uniform1f(uniforms.Kind,item.kind);gl.uniform3fv(uniforms.Color,new Float32Array(item.color));
-      gl.drawArrays(gl.TRIANGLES,0,item.count);
+    if(context2d)paintPerspective(s,palette);
+    else{
+      gl.clearColor(...palette.bg,1);gl.clear(gl.COLOR_BUFFER_BIT|gl.DEPTH_BUFFER_BIT);
+      gl.uniformMatrix4fv(uniforms.VP,false,new Float32Array(s.vp));
+      gl.uniform2fv(uniforms.Offset,new Float32Array(s.offset));gl.uniform3fv(uniforms.Eye,new Float32Array(s.eye));
+      gl.uniform3fv(uniforms.Bg,new Float32Array(palette.bg));gl.uniform1f(uniforms.Light,palette.light?1:0);
+      gl.uniform1f(uniforms.Reveal,s.reveal);gl.uniform1f(uniforms.Key,s.key);
+      for(const item of meshes){
+        gl.bindBuffer(gl.ARRAY_BUFFER,item.buffer);
+        gl.vertexAttribPointer(uniforms.position,3,gl.FLOAT,false,32,0);
+        gl.vertexAttribPointer(uniforms.normal,3,gl.FLOAT,false,32,12);
+        gl.vertexAttribPointer(uniforms.uv,2,gl.FLOAT,false,32,24);
+        gl.uniform1f(uniforms.Kind,item.kind);gl.uniform3fv(uniforms.Color,new Float32Array(item.color));
+        gl.drawArrays(gl.TRIANGLES,0,item.count);
+      }
     }
     const values={
       '--ho-title-reveal':s.titleReveal,'--ho-title-y':s.titleLift+'px','--ho-title-z':s.titleDepth+'px',
-      '--ho-title-opacity':s.titleOpacity,'--ho-detail':s.detailReveal,'--ho-continuation':s.continuation,
+      '--ho-caption-gap':captionGap(s)+'px','--ho-title-opacity':s.titleOpacity,'--ho-detail':s.detailReveal,'--ho-continuation':s.continuation,
       '--ho-media-left':((s.bounds.left+1)*50)+'%','--ho-media-top':((1-s.bounds.top)*50)+'%',
       '--ho-media-width':((s.bounds.right-s.bounds.left)*50)+'%','--ho-media-height':((s.bounds.top-s.bounds.bottom)*50)+'%'
     };
@@ -198,9 +300,9 @@
   }
   function frame(now){
     raf=0;if(!alive||!visible||document.hidden){last=0;return;}
-    if(last)seconds=Math.min(6,seconds+Math.min(now-last,80)/1000);
+    if(last)seconds=Math.min(6,seconds+(now-last)/1000);
     last=now;
-    if(!lastDraw||now-lastDraw>=(geometry.mobile?1000/30:1000/60)-1||seconds>=6){render();lastDraw=now;}
+    if(!lastDraw||now-lastDraw>=((context2d||geometry.mobile)?1000/30:1000/60)-1||seconds>=6){render();lastDraw=now;}
     if(seconds<6)request();else last=0;
   }
   function request(){if(alive&&visible&&!document.hidden&&!raf)raf=window.requestAnimationFrame(frame);}
@@ -208,30 +310,39 @@
   function init(){
     if(alive||!image.complete||!image.naturalWidth)return;
     try{
-      setupGPU();alive=true;
-      root.classList.add('ho-live');root.dataset.heroMode='webgl';
+      if(!setupGPU()&&!startPerspective())return;
+    }catch(error){
+      console.warn('Hero: WebGL setup failed, trying the perspective renderer.',error);
+      if(!startPerspective())return;
+    }
+    try{
+      alive=true;
+      root.classList.add('ho-live');
+      root.dataset.heroMode=context2d?'perspective':'webgl';
       resize();if(!alive)return;
       if(window.scrollY>start+4)seconds=6;
       render();
-      if(gl.getError()!==gl.NO_ERROR)throw Error('First frame WebGL validation');
+      if(!context2d&&gl.getError()!==gl.NO_ERROR){
+        if(!startPerspective())throw Error('First frame WebGL validation');
+        root.dataset.heroMode='perspective';resize();render();
+      }
       request();
-    }catch(error){console.warn('Hero direction: static fallback.',error);fallback();}
+    }catch(error){console.warn('Hero: static fallback.',error);fallback();}
   }
-  canvas.addEventListener('webglcontextlost',event=>{event.preventDefault();fallback();});
+  canvas.addEventListener('webglcontextlost',loseContext);
   image.addEventListener('error',fallback,{once:true});
   if(image.complete)init();else image.addEventListener('load',init,{once:true});
-  window.addEventListener('scroll',()=>{
-    if(!alive)return;
-    if(window.scrollY>start+4)seconds=6;
-    request();
-  },{passive:true});
+  window.addEventListener('scroll',request,{passive:true});
   window.addEventListener('resize',resize,{passive:true});
   window.addEventListener('orientationchange',resize,{passive:true});
   window.addEventListener('pageshow',()=>{if(alive)resize();});
   window.addEventListener('pagehide',event=>{cancelFrame();if(!event.persisted)fallback();});
   document.addEventListener('visibilitychange',()=>{cancelFrame();if(!document.hidden)request();});
   reduced.addEventListener?.('change',()=>{if(reduced.matches)fallback();});
-  skip.addEventListener('click',finishIntro);
+  skip.addEventListener('click',()=>{
+    finishIntro();
+    if(document.activeElement===skip)root.querySelector('.ho-actions a').focus({preventScroll:true});
+  });
   replay.addEventListener('click',()=>{if(!alive||window.scrollY>start+4)return;seconds=0;last=0;lastDraw=0;request();});
   root.addEventListener('focusin',event=>{if(event.target.closest('a'))finishIntro();});
   if('IntersectionObserver' in window){

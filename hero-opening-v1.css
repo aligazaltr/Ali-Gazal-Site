@@ -36,7 +36,7 @@
 .ho-live .ho-canvas{display:block;}
 .ho-live .ho-header{position:absolute;top:22px;left:6%;right:6%;}
 .ho-live .ho-copy{position:absolute;top:20%;left:6%;width:38%;margin:0;transform:perspective(1100px) translate3d(0,var(--ho-title-y,0px),var(--ho-title-z,0px));opacity:var(--ho-title-opacity,1);pointer-events:none;}
-.ho-live .ho-copy h1{clip-path:inset(calc((1 - var(--ho-title-reveal,1))*100%) 0 0 0);transform:perspective(1000px) rotateX(calc((1 - var(--ho-title-reveal,1))*-9deg));transform-origin:center bottom;}
+.ho-live .ho-copy h1{opacity:var(--ho-title-reveal,1);transform:perspective(1000px) rotateX(calc((1 - var(--ho-title-reveal,1))*-9deg));transform-origin:center bottom;}
 .ho-live .ho-promise{opacity:var(--ho-detail,1);}
 .ho-live .ho-media{position:absolute;left:var(--ho-media-left,46%);top:var(--ho-media-top,28%);width:var(--ho-media-width,50%);height:var(--ho-media-height,40%);margin:0;max-width:none;}
 .ho-live .ho-cover-link{position:absolute;inset:0;}
@@ -60,3 +60,66 @@
 @media(max-width:360px){.ho-header nav{gap:16px;font-size:.8rem;}.ho-live .ho-header,.ho-live .ho-copy,.ho-live .ho-bottom,.ho-live .ho-continuation{left:16px;right:16px;}.ho-actions{gap:13px;}.ho-actions .button{padding:11px 13px;font-size:.8rem;}.ho-watch{font-size:.8rem;}.ho-promise{font-size:.95rem;}.ho-preview-label{font-size:.6875rem;}.ho-controls button{font-size:.8rem;}}
 @media(prefers-reduced-motion:reduce){.ho-scene{scroll-behavior:auto;}.ho-scroll{display:none;}}
 @media print{.ho-scene{height:auto!important;}.ho-stage{position:static!important;height:auto!important;}.ho-canvas,.ho-controls{display:none!important;}.ho-header,.ho-copy,.ho-media,.ho-bottom,.ho-continuation{position:relative!important;inset:auto!important;width:auto!important;transform:none!important;opacity:1!important;visibility:visible!important;}.ho-media{height:auto!important;}.ho-media img{position:static!important;height:auto!important;opacity:1!important;}.ho-cover-link{position:static!important;}.ho-media figcaption{position:static!important;opacity:1!important;}.ho-copy h1{clip-path:none!important;}}
+
+/* Compact, readable composition when motion or both renderers are unavailable. */
+.ho-stage {
+  display: grid;
+  gap: 30px clamp(24px, 5vw, 78px);
+  grid-template-columns: minmax(0, .84fr) minmax(0, 1.16fr);
+  background: radial-gradient(ellipse at 72% 54%, var(--orange-soft), transparent 51%), var(--ho-bg);
+}
+.ho-header, .ho-continuation, .ho-bottom { grid-column: 1 / -1; }
+.ho-copy { align-self: center; margin: 30px 0 0; }
+.ho-media { align-self: center; margin: 30px 0 0; }
+.ho-bottom { grid-row: 3; margin: 0; }
+.ho-continuation { grid-row: 4; margin: 0; }
+.ho-light-sweep, .ho-live .ho-scene-canvas { display: none; }
+.ho-live .ho-stage { display: block; }
+.ho-live .ho-copy { margin: 0; }
+.ho-live .ho-media { margin: 0; }
+.ho-live .ho-media figcaption { margin-top: var(--ho-caption-gap, 34px); }
+.ho-live .ho-cover-link:focus-visible { outline-offset: 9px; }
+.ho-live.ho-perspective .ho-canvas { display: none; }
+.ho-live.ho-perspective .ho-scene-canvas { display: block; }
+.ho-live.ho-perspective .ho-media img,
+.ho-live.ho-perspective .ho-light-sweep {
+  display: block;
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 320px;
+  max-width: none;
+  height: 180px;
+  transform-origin: left top;
+  transform: var(--ho-photo-matrix, none);
+  pointer-events: none;
+}
+.ho-live.ho-perspective .ho-media img { opacity: 1; filter: brightness(var(--ho-exposure, 1)); }
+.ho-live.ho-perspective .ho-light-sweep {
+  opacity: var(--ho-light-sweep, 0);
+  background: linear-gradient(115deg, transparent 44%, rgba(255, 197, 132, .35) 50%, transparent 56%);
+  background-size: 200% 100%;
+  background-position: var(--ho-light-position, 50%) 50%;
+}
+.ho-image-missing .ho-cover-link {
+  aspect-ratio: 16 / 9;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--line);
+  text-align: center;
+}
+.ho-image-missing .ho-cover-link::before { content: "Machiavelli / Prens"; font-family: var(--literary); }
+.ho-image-missing .ho-media img { display: none; }
+
+@media(max-width:1000px) {
+  .ho-stage { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  .ho-copy, .ho-media { margin: 0; }
+  .ho-bottom, .ho-continuation { grid-row: auto; }
+  .ho-bottom { margin: 0; }
+  .ho-live .ho-copy { top: max(88px, 12%); }
+  .ho-live .ho-continuation { top: 13%; }
+}
+@media print {
+  .ho-stage { display: block; }
+  .ho-live.ho-perspective .ho-media img { width: 100%; filter: none; }
+  .ho-light-sweep { display: none !important; }
+}

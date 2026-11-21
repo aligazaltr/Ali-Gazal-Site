@@ -43,7 +43,7 @@
   function layout(width,height){
     width=Math.max(280,Number(width)||390);height=Math.max(480,Number(height)||844);
     const mobile=width<=1000,aspect=width/height;
-    const safe=mobile?{left:.06,right:.94,top:.41,bottom:.73}:{left:.46,right:.965,top:.245,bottom:.745};
+    const safe=mobile?{left:.06,right:.94,top:.39,bottom:.71}:{left:.46,right:.965,top:.245,bottom:.745};
     const maxWidth=(safe.right-safe.left)*2*.94,maxHeight=(safe.bottom-safe.top)*2*.94;
     let fit=72;
     for(let d=6;d<=72;d+=.125){
@@ -66,10 +66,10 @@
     const target=[g.safe.left+g.safe.right-1,1-g.safe.top-g.safe.bottom];
     const offset=[target[0]-center[0],target[1]-center[1]];
     return {t,p,eye:c.eye,vp:c.vp,offset,bounds:projectedBounds(c.vp,offset),yaw,pitch,distance,
-      titleReveal:ramp(t,.65,2.2),titleLift:mix(18,0,ramp(t,.65,2.2))-scroll*(g.mobile?15:32),
+      titleReveal:ramp(t,.30,1.85),titleLift:mix(18,0,ramp(t,.30,1.85))-scroll*(g.mobile?15:32),
       titleDepth:-scroll*(g.mobile?80:180),titleOpacity:1-ramp(p,.16,.43),
-      reveal:ramp(t,1.7,4.4),key:mix(.08,1,ramp(t,.2,4.2)),
-      detailReveal:ramp(t,4,5.8),continuation:ramp(p,.47,.78)};
+      reveal:ramp(t,1.1,3.95),key:mix(.08,1,ramp(t,.2,4.2)),
+      detailReveal:ramp(t,3.3,5.4),continuation:ramp(p,.43,.68)};
   }
   return Object.freeze({clamp,ease,ramp,mix,multiply,lookAt,perspective,transform,projectedBounds,coverCorners,layout,sample});
 });
