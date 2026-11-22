@@ -12,3 +12,12 @@
 | Mahalle medyası, Machiavelli kapağı ve portresi, Kontrol proje görseli, Payot defteri | Mevcut depo materyalleri. Bu geliştirme bunlar için yeni bir kullanım hakkı iddia etmez. |
 
 Yeni sahneler proje için ImageGen ile üretilmiş temsili illüstrasyonlardır. Üçüncü taraf stok görseli, ücretli varlık veya deney kaydı kullanılmadı. Üretilen sahneler gerçek kişisel mekânların veya deney bulgularının görsel kaydı olarak sunulmaz.
+
+## Arşiv açılışı
+
+Özgün kaynak 1536 × 1024 PNG illüstrasyondur. Ana sayfada onun 1080 × 720 WebP sürümü özgün kadrajıyla kullanılır. Aynı mekânın geniş ve portre kadrajları bu kaynakla hazırlanmış yeni illüstrasyonlardır.
+
+- `night-room*.webp` statik açılış görüntüleridir.
+- `night-rear*.webp` mimariyi, `night-foreground*.webp` kitapları ve üzerlerinde durdukları taşı ayrı düzlemlere taşır. Dal, özgün görselin zeytin yapraklarından ayrıldı. Işık ve derinlik kaydırma ve giriş hareketlerine bağlandı.
+- `living-reading-room*.webp`, `living-gallery.webp` ve `living-writers-desk.webp` ilgili sayfaların farklı kadrajlarıdır.
+- `living-idea.webp` ve önceki mahalle medyası depo geçmişinde bulunur. Yeni önizlemede dağıtım listesinde yer almaz.

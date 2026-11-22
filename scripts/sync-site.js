@@ -95,7 +95,7 @@ function renderResearchMethods(project) {
 }
 
 const methodArtwork = {
-  fikir: 'living-idea.webp',
+  fikir: 'thought-library-illustration.webp',
   deney: 'living-experiment.webp',
   sonuc: 'living-result.webp'
 };
