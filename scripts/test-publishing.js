@@ -17,7 +17,7 @@ test('current HTML is stable and links the real published Machiavelli video', ()
     assert.equal((html.match(/<img class="project-cover"/g) || []).length, 1);
     if (file === 'index.html') {
       assert.match(html, /id="gercek-deneyler"[\s\S]*?<img class="project-cover"[^>]*loading="lazy"/);
-      assert.doesNotMatch(html.match(/<section class="neighborhood-hero"[\s\S]*?<\/section>/)[0], /project-cover|youtu\.be/);
+      assert.doesNotMatch(html.match(/<section class="world-hero"[\s\S]*?<\/section>/)[0], /project-cover|youtu\.be/);
     }
     if (file !== 'rehberler.html') assert.ok(html.includes('href="https://youtu.be/6MxLFTRudaQ"'));
     const unpublished = renderHtml(html, unpublishedFixture());

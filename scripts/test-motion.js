@@ -81,16 +81,24 @@ test('page backgrounding does not leave pending discovery content or animation b
   f.document.hidden = true; f.listeners.visibilitychange(); await flush();
   assert.equal(content, 'new'); assert.equal(f.calls[0].animation.cancelled, true);
 });
-test('evergreen hero and three full scenes survive without JavaScript', () => {
+test('archive hero, imagery and three full scenes survive without JavaScript', () => {
   const data = require('../site-data.js');
   const html = fs.readFileSync(require.resolve('../index.html'), 'utf8');
   const { renderHtml } = require('./sync-site.js');
   assert.equal(renderHtml(html), html);
-  const hero = html.match(/<section class="neighborhood-hero"[\s\S]*?<\/section>/)[0];
-  assert.match(hero, /Bir fikir gerçekten<\/span><\/span> <span><span>işe yarar mı\?/);
+  const hero = html.match(/<section class="world-hero"[\s\S]*?<\/section>/)[0];
+  assert.match(hero, /Bir fikir gerçekten<\/span><span>işe yarar mı\?/);
   assert.match(hero, /Fikirleri gerçek hayatta test ediyorum/);
   assert.match(hero, /href="#gercek-deneyler"/);
-  assert.doesNotMatch(hero, /machiavelli|youtu\.be|youtube|project-cover/i);
+  assert.doesNotMatch(hero, /machiavelli|youtu\.be|youtube|project-cover|neighborhood/i);
+  assert.match(hero, /src="night-room.webp"/);
+  assert.match(hero, /srcset="night-room-mobile.webp"/);
+  assert.match(hero, /data-world-plane="desk"/);
+  assert.match(hero, /data-world-plane="branch"/);
+  const archive = fs.readFileSync(require.resolve('../dusunce-arsivi.html'), 'utf8');
+  const discovery = archive.match(/<section class="discovery-stage"[\s\S]*?<\/section>/)[0];
+  assert.match(discovery, /Bazen yeni bir soru, beklemediğin bir cümleden doğar/);
+  assert.doesNotMatch(discovery, /<img|living-idea.webp/);
   for (const scene of data.experience.stories.method.scenes) {
     assert.ok(html.includes(`id="hikaye-${scene.id}"`));
     assert.ok(html.includes(scene.title)); assert.ok(html.includes(scene.description));
