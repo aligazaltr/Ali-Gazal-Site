@@ -54,7 +54,7 @@
   align-items: center;
   padding-block: clamp(4rem, 11vh, 8rem);
 }
-.neighborhood-copy { max-width: 43rem; padding-block-end: 1.8rem; }
+.neighborhood-copy { max-width: 48rem; padding-block-end: 1.8rem; }
 .neighborhood-copy h1 {
   margin: 0 0 1.55rem;
   color: inherit;
@@ -182,7 +182,7 @@
 @media (max-width: 45rem) {
   .neighborhood-hero {
     min-block-size: max(34rem, calc(100svh - 6.5rem));
-    --film-shade: linear-gradient(180deg, rgb(245 238 225 / .91), rgb(245 238 225 / .74) 35%, transparent 74%);
+    --film-shade: linear-gradient(180deg, rgb(245 238 225 / .84), rgb(245 238 225 / .68) 35%, transparent 74%);
   }
   :root[data-theme="dark"] .neighborhood-hero {
     --film-shade: linear-gradient(180deg, rgb(17 16 13 / .94), rgb(17 16 13 / .76) 35%, transparent 77%);
