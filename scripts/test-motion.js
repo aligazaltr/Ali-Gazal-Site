@@ -87,7 +87,7 @@ test('archive hero, imagery and three full scenes survive without JavaScript', (
   const { renderHtml } = require('./sync-site.js');
   assert.equal(renderHtml(html), html);
   const hero = html.match(/<section class="world-hero"[\s\S]*?<\/section>/)[0];
-  assert.match(hero, /Bir fikir gerçekten<\/span><span>işe yarar mı\?/);
+  assert.match(hero, /Bir fikir gerçekten<\/span>\s+<span data-world-word>işe yarar mı\?/);
   assert.match(hero, /Fikirleri gerçek hayatta test ediyorum/);
   assert.match(hero, /href="#gercek-deneyler"/);
   assert.doesNotMatch(hero, /machiavelli|youtu\.be|youtube|project-cover|neighborhood/i);
@@ -98,7 +98,9 @@ test('archive hero, imagery and three full scenes survive without JavaScript', (
   const archive = fs.readFileSync(require.resolve('../dusunce-arsivi.html'), 'utf8');
   const discovery = archive.match(/<section class="discovery-stage"[\s\S]*?<\/section>/)[0];
   assert.match(discovery, /Bazen yeni bir soru, beklemediğin bir cümleden doğar/);
-  assert.doesNotMatch(discovery, /<img|living-idea.webp/);
+  assert.match(discovery, /src="discovery-folios.webp"/);
+  assert.doesNotMatch(discovery, /discovery-stationery|living-idea.webp/);
+  assert.match(html, /class="story-travel-light"/);
   for (const scene of data.experience.stories.method.scenes) {
     assert.ok(html.includes(`id="hikaye-${scene.id}"`));
     assert.ok(html.includes(scene.title)); assert.ok(html.includes(scene.description));

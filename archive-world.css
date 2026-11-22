@@ -6,6 +6,7 @@
   --world-glint: light-dark(#fff8e6, #ebba7d);
   --world-paper: #f2dfbd;
   --world-paper-ink: #412c1e;
+  --world-ground: light-dark(#ebddc5, #241c14);
   --world-edge: light-dark(#9b724e4a, #bd956440);
 }
 
@@ -71,10 +72,23 @@ body {
     transparent 72%);
 }
 
-.world-hero {
-  min-height: clamp(34rem, 79svh, 52rem);
-  border-block-end: 1px solid var(--world-edge);
+.world-hero { min-height: clamp(34rem, 79svh, 52rem); }
+.world-hero .world-panorama { transform-origin: 85% 43%; }
+.world-hero .world-foreground { transform-origin: 80% 63%; }
+
+.world-hero::before,
+.world-masthead::before {
+  content: '';
+  position: absolute;
+  inset: auto 0 0;
+  height: clamp(1.3rem, 5vw, 4.4rem);
+  z-index: 0;
+  background: linear-gradient(0deg, var(--world-ground), transparent);
+  pointer-events: none;
 }
+
+.world-hero-inner { position: relative; z-index: 1; }
+
 
 .world-hero .world-camera { inset: -2% 0 -3%; }
 
@@ -82,7 +96,7 @@ body {
   position: absolute;
   top: -1%;
   right: -1%;
-  width: clamp(8rem, 21vw, 22rem);
+  width: clamp(8.5rem, 23vw, 24rem);
   height: auto;
   transform-origin: right top;
   filter: drop-shadow(0 4px 8px #1f160d48);
@@ -146,23 +160,42 @@ body {
   cursor: pointer;
 }
 
+.world-home,
+.world-paged,
+.world-archive {
+  background:
+    radial-gradient(ellipse 85% 48rem at 95% 23rem, var(--world-shadow), transparent),
+    linear-gradient(174deg, var(--world-ground) 0%, var(--bg) 58%, var(--world-plaster));
+}
+
 .world-alcove {
   background:
-    linear-gradient(113deg, transparent 29%, var(--world-shadow) 29.5% 36%, transparent 36.7%),
-    linear-gradient(0deg, var(--bg), var(--world-plaster) 69%, var(--world-desk));
-  border-block-end: 1px solid var(--world-edge);
+    linear-gradient(116deg, transparent 20%, var(--world-shadow) 31%, transparent 58%),
+    linear-gradient(0deg, transparent, var(--world-ground));
 }
 
 .world-alcove-inner {
   display: grid;
-  grid-template-columns: minmax(0, 1.15fr) minmax(0, .85fr);
+  grid-template-columns: minmax(0, 1.36fr) minmax(0, .78fr);
   align-items: center;
-  gap: clamp(1.4rem, 6vw, 5.4rem);
-  padding-block: clamp(2rem, 6vw, 5.5rem);
+  gap: clamp(1.2rem, 4.5vw, 4.25rem);
+  padding-block: clamp(1.2rem, 4vw, 3.7rem) clamp(1.7rem, 4.5vw, 4rem);
 }
 
 .world-reference { margin: 0; }
-.world-reference img { width: 100%; height: auto; box-shadow: 0 1.25rem 3.5rem var(--world-shadow); border-radius: 2px; }
+.world-reference img {
+  width: 100%;
+  height: auto;
+  mask-image:
+    linear-gradient(90deg, transparent, black 4%, black 96%, transparent),
+    linear-gradient(0deg, transparent, black 4%, black 96%, transparent);
+  mask-composite: intersect;
+}
+.world-home .home-experiments,
+.world-home .home-method { margin-block: 0; padding-block: clamp(1.8rem, 5.3vw, 4.5rem); }
+.world-home .home-experiments { border-block: 1px solid var(--world-edge); }
+.world-home .home-author { margin-block: 0; padding-block: 1.3rem clamp(2rem,4vw,3.5rem); }
+
 .world-alcove-copy h2 { margin-bottom: .7rem; font: 400 clamp(2.3rem, 5.1vw, 5rem)/1.05 var(--literary); letter-spacing: -.055em; text-wrap: balance; }
 .world-alcove-copy p { max-width: 39ch; color: var(--muted-strong); }
 
@@ -170,9 +203,8 @@ body {
   display: grid;
   align-items: center;
   min-height: clamp(22rem, 41vw, 37rem);
-  margin: 0 0 clamp(2.75rem, 6vw, 5.75rem);
+  margin: 0;
   padding: clamp(1.8rem, 6.5vw, 5.25rem) max(1rem, calc((100% - var(--shell))/2));
-  border-bottom: 1px solid var(--world-edge);
 }
 
 .world-archive, .world-paged { padding-top: 0; }
@@ -184,7 +216,19 @@ body {
 
 .world-archive .world-masthead .world-panorama { object-position: 68% 53%; }
 .world-archive .world-head-copy h1 { font-size: clamp(3.4rem, 6.5vw, 6.1rem); }
-.world-reading-desk { position: relative; }
+.world-reading-desk,
+.world-paged .world-content {
+  position: relative;
+  padding-block-start: clamp(1.65rem, 4.8vw, 3.9rem);
+}
+
+.world-archive .world-masthead::before,
+.world-paged .world-masthead::before {
+  opacity: .96;
+  height: clamp(1.7rem, 6vw, 5.5rem);
+}
+
+.world-paged .world-content .author-letter { padding-block-start: .65rem; }
 .world-reading-desk .archive-browser { scroll-margin-top: 1.8rem; }
 
 .world-archive .archive-filters {
@@ -209,7 +253,7 @@ body {
 
 .world-archive .discovery-stage .discovery-heading {
   display: grid;
-  grid-template-columns: minmax(0, 1.4fr) minmax(8rem, .6fr);
+  grid-template-columns: minmax(0,1.06fr) minmax(0,1fr);
   gap: clamp(1rem, 4vw, 3.5rem);
   align-items: center;
 }
@@ -222,22 +266,17 @@ body {
 .world-archive .discovery-stage :focus-visible { outline-color: #ffe3a8; }
 .world-archive .discovery-card { color: var(--text); }
 
-.discovery-stationery {
-  aspect-ratio: 1.24;
-  width: min(100%, 18rem);
-  justify-self: center;
-  display: grid;
-  place-items: center;
-  transform: rotate(-7deg);
-  border-radius: 2px;
-  box-shadow: 1.1rem 1.3rem 2.3rem #20120880, .38rem .48rem 0 #a3805c, .66rem .8rem 0 #513928;
-  border: 1px solid #b78e64;
-  background:
-    linear-gradient(145deg, #fff1d9, #dcc099);
-  color: #94673e;
+.discovery-illustration {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: contain;
+  mask-image:
+    linear-gradient(90deg, transparent, black 9%, black 91%, transparent),
+    linear-gradient(0deg, transparent, black 9%, black 91%, transparent);
+  mask-composite: intersect;
 }
-
-.discovery-stationery span { font: 400 clamp(4.5rem, 12vw, 11rem)/.95 var(--literary); transform: translateY(.13em); }
 
 .world-archive .archive-results {
   background: linear-gradient(90deg, transparent, var(--world-shadow), transparent);
@@ -287,8 +326,8 @@ body {
       color-mix(in srgb, var(--world-plaster) 66%, transparent) 50%,
       transparent 70%);
   }
-  .world-branch { width: clamp(5.8rem, 28vw, 9rem); }
-  .world-alcove-inner { grid-template-columns: minmax(0, 1fr); padding-block: 1.5rem 2.5rem; }
+  .world-branch { width: clamp(6rem, 31vw, 9.5rem); }
+  .world-alcove-inner { grid-template-columns: minmax(0, 1fr); padding-block: .55rem 1.8rem; }
   .world-masthead { align-items: end; padding-block: clamp(12rem, 46vw, 17rem) 1.6rem; min-height: 28rem; }
   .world-masthead .world-panorama,
   .world-masthead .world-panorama img { object-position: 63% 5%; }
@@ -296,7 +335,7 @@ body {
   .world-archive .world-head-copy h1 { font-size: clamp(2.65rem, 12vw, 4.6rem); }
   .world-archive .discovery-stage .discovery-heading { grid-template-columns: minmax(0,1fr); }
   .world-archive .discovery-copy h3 { max-width: 14ch; }
-  .discovery-stationery { display: none; }
+  .discovery-illustration { max-width: 29rem; margin-inline: auto; }
   .world-archive .archive-filters { padding: .8rem; }
 }
 

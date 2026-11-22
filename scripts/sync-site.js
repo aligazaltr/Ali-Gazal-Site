@@ -95,7 +95,7 @@ function renderResearchMethods(project) {
 }
 
 const methodArtwork = {
-  fikir: 'thought-library-illustration.webp',
+  fikir: 'story-reading-table.webp',
   deney: 'living-experiment.webp',
   sonuc: 'living-result.webp'
 };
@@ -110,17 +110,20 @@ function renderMethodArt(scene, className, index) {
 function renderStory(story) {
   if (!story || story.scenes.length < 3) throw new Error('Hikâye için en az üç gerçek sahne gerekli');
   const first = story.scenes[0];
-  return `<header class="home-section-heading"><h2 id="hikaye-baslik">${escape(story.title)}</h2></header>
+  return `<header class="home-section-heading"><h2 id="hikaye-baslik" data-world-reveal>${escape(story.title)}</h2></header>
   <div class="story-layout" data-story data-scene="0">
     <div class="story-visual" aria-hidden="true">
-      <div class="story-gallery">${story.scenes.map((scene, i) => renderMethodArt(scene, 'story-plate', i)).join('')}</div>
+      <div class="story-gallery">
+        ${story.scenes.map((scene, i) => renderMethodArt(scene, 'story-plate', i)).join('')}
+        <span class="story-travel-light"></span>
+      </div>
       <div class="story-overlay">
         ${signature()}
         <p class="story-counter"><span data-story-number>01</span> / ${String(story.scenes.length).padStart(2, '0')}</p>
         <p class="story-word" data-story-label>${escape(first.label)}</p>
       </div>
     </div>
-    <div class="story-scenes">${story.scenes.map((scene, i) => `<article class="story-scene" data-story-scene id="hikaye-${escape(scene.id)}">${renderMethodArt(scene, 'story-local-plate')}<div class="story-scene-heading"><p class="eyebrow"><span class="scene-number">${String(i + 1).padStart(2, '0')}</span> <span class="scene-label">${escape(scene.label)}</span></p></div><div class="reveal-mask"><h3>${escape(scene.title)}</h3></div><p class="scene-description">${escape(scene.description)}</p><p class="story-note">${escape(scene.note)}</p></article>`).join('')}</div>
+    <div class="story-scenes">${story.scenes.map((scene, i) => `<article class="story-scene" data-story-scene id="hikaye-${escape(scene.id)}"><div class="story-local-window">${renderMethodArt(scene, 'story-local-plate')}</div><div class="story-scene-heading"><p class="eyebrow"><span class="scene-number">${String(i + 1).padStart(2, '0')}</span> <span class="scene-label">${escape(scene.label)}</span></p></div><div class="reveal-mask"><h3>${escape(scene.title)}</h3></div><p class="scene-description">${escape(scene.description)}</p><p class="story-note">${escape(scene.note)}</p></article>`).join('')}</div>
   </div>`;
 }
 

@@ -92,6 +92,29 @@
     document.querySelectorAll('[data-reveal], .section-heading, .process-card, .principle-list > li, .evidence-card, .result-panel, .prose-section, .research-stage, .thought-card, .archive-reading-note, .article-section > h2, .project-card > .project-cover, .project-copy > *, .project-status, .phase-heading, .phase-track > li, .research-preview h2, .research-preview-state, .research-boundary')
       .forEach(element => { if (!seen.has(element) && !element.hidden) observer.observe(element); });
   }
+  function travelBetweenScenes(stage, from, to) {
+    const direction = Math.sign(to - from);
+    const outgoing = stage.querySelector(`[data-story-plate="${from}"]`);
+    const incoming = stage.querySelector(`[data-story-plate="${to}"]`);
+    const light = stage.querySelector('.story-travel-light');
+    const edge = direction > 0 ? 'inset(0 0 0 96%)' : 'inset(0 96% 0 0)';
+    const easing = 'cubic-bezier(.24,.64,.25,1)';
+    const finish = 'perspective(950px) translate3d(0,0,0) rotateY(0) scale(1)';
+    animate(outgoing, [
+      {opacity:1, transform:finish},
+      {opacity:.85, transform:`perspective(950px) translate3d(${-direction * 15}%,0,-42px) rotateY(${direction * 7}deg) scale(1.09)`}
+    ], {duration:850, easing});
+    animate(incoming, [
+      {opacity:1, clipPath:edge, transform:`perspective(950px) translate3d(${direction * 9}%,0,-32px) rotateY(${-direction * 5}deg) scale(1.13)`},
+      {opacity:1, clipPath:'inset(0)', transform:finish}
+    ], {duration:850, easing});
+    animate(light, [
+      {opacity:0, transform:`translateX(${direction * 72}%)`},
+      {opacity:.7, offset:.47},
+      {opacity:0, transform:`translateX(${-direction * 65}%)`}
+    ], {duration:850, easing});
+  }
+
   function setupStories() {
     storyCleanups.splice(0).forEach(cleanup => cleanup());
     if (!('IntersectionObserver' in window)) return;
@@ -110,7 +133,10 @@
             if (seen.has(scene)) return;
             seen.add(scene);
             scene.classList.add('is-active');
-            enter(scene.querySelector('.story-local-plate'), 0, true);
+            animate(scene.querySelector('.story-local-plate'), [
+              {transform:'translate3d(12px,16px,0) scale(1.1)', clipPath:'inset(0 0 17% 0)'},
+              {transform:'translate3d(0,0,0) scale(1)', clipPath:'inset(0)'}
+            ], {duration:730});
             enter(scene.querySelector('.scene-label'), 70);
             enter(scene.querySelector('h3'), 120);
           });
@@ -138,11 +164,14 @@
         if (!current) return;
         const next = scenes.indexOf(current);
         if (next === selected) return;
+        const previous = selected;
         selected = next;
 
+        if (stage) cancelTree(stage);
         story.dataset.scene = String(next);
         const signature = stage?.querySelector('.ag-signature');
         if (signature) signature.dataset.signatureState = String(next);
+        if (stage && previous >= 0) travelBetweenScenes(stage, previous, next);
         scenes.forEach(scene => scene.classList.toggle('is-active', scene === current));
         story.querySelector('[data-story-number]').textContent = String(next + 1).padStart(2, '0');
         const label = story.querySelector('[data-story-label]');

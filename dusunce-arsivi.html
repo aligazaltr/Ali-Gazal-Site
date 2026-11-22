@@ -72,15 +72,15 @@
         </picture>
       </div>
       <div class="site-shell world-head-copy archive-intro-copy">
-        <h1>Düşünce Arşivi</h1>
-        <p class="lead">Kitaplardan seçtiğim düşünceleri kaynakları, yorumları ve gerçek hayat deneyleriyle birlikte oku.</p>
-        <a class="world-quiet" href="#arsiv">Düşüncelerde ara <span aria-hidden="true">↓</span></a>
+        <h1 data-world-word>Düşünce Arşivi</h1>
+        <p class="lead" data-world-word>Kitaplardan seçtiğim düşünceleri kaynakları, yorumları ve gerçek hayat deneyleriyle birlikte oku.</p>
+        <a class="world-quiet" href="#arsiv" data-world-word>Düşüncelerde ara <span aria-hidden="true">↓</span></a>
       </div>
     </header>
 
     <div class="site-shell world-reading-desk">
     <section id="arsiv" class="archive-browser" aria-labelledby="arsiv-baslik">
-      <h2 id="arsiv-baslik">Düşüncelerde ara</h2>
+      <h2 id="arsiv-baslik" data-world-reveal>Düşüncelerde ara</h2>
       <form class="archive-filters" data-archive-filters role="search" aria-label="Düşünce arşivinde ara" hidden>
         <label class="archive-search" for="archive-query"><span class="archive-search-label">Düşünce ara</span><input id="archive-query" name="q" type="search" maxlength="200" placeholder="Bir kelime, yazar veya konu…" autocomplete="off"></label>
         <div class="archive-filter-row">
@@ -94,11 +94,11 @@
       <section class="discovery-stage" data-archive-discovery hidden aria-labelledby="kesif-baslik">
         <header class="discovery-heading">
           <div class="discovery-copy">
-            <h3 id="kesif-baslik">Bazen yeni bir soru, beklemediğin bir cümleden doğar.</h3>
+            <h3 id="kesif-baslik" data-world-reveal>Bazen yeni bir soru, beklemediğin bir cümleden doğar.</h3>
             <button class="archive-random" type="button" data-random-thought disabled aria-describedby="random-hint" aria-controls="kesfedilen-dusunce">Rastgele bir düşünce keşfet <span aria-hidden="true">↝</span></button>
             <p id="random-hint" data-random-hint>Doğrulanmış ilk düşünce yayımlandığında açılacak.</p>
           </div>
-          <div class="discovery-stationery" aria-hidden="true"><span>“</span></div>
+          <img class="discovery-illustration" src="discovery-folios.webp" width="900" height="600" loading="lazy" decoding="async" alt="">
         </header>
       </section>
       <p id="archive-feedback" class="archive-feedback" role="status" aria-live="polite" aria-atomic="true"></p>
