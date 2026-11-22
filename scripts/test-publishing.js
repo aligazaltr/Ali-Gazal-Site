@@ -14,11 +14,12 @@ test('current HTML is stable and links the real published Machiavelli video', ()
     const html = fs.readFileSync(path.join(root, file), 'utf8');
     assert.equal(renderHtml(html), html);
     assert.match(html, /Deney tamamlandı · video yayında/);
-    assert.equal((html.match(/<img class="project-cover"/g) || []).length, file === 'index.html' ? 2 : 1);
+    assert.equal((html.match(/<img class="project-cover"/g) || []).length, 1);
     if (file === 'index.html') {
-      assert.match(html, /class="dossier-cover"[^>]*data-cover-priority="high"[^>]*>\s*<!-- project-cover:start --><img[^>]*loading="eager" fetchpriority="high"/);
+      assert.match(html, /id="gercek-deneyler"[\s\S]*?<img class="project-cover"[^>]*loading="lazy"/);
+      assert.doesNotMatch(html.match(/<section class="neighborhood-hero"[\s\S]*?<\/section>/)[0], /project-cover|youtu\.be/);
     }
-    if (file !== 'rehberler.html') assert.ok(html.includes('href="https://youtu.be/6MxLFTRudaQ"'));
+    assert.ok(html.includes('href="https://youtu.be/6MxLFTRudaQ"'));
     const unpublished = renderHtml(html, unpublishedFixture());
     assert.match(unpublished, /Deney tamamlandı · video hazırlanıyor/);
     assert.doesNotMatch(unpublished, /href="https:\/\/(?:www\.)?(?:youtube\.com\/watch|youtu\.be\/)/);

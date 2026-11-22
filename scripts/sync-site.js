@@ -53,6 +53,40 @@ function renderProjectPreview(project) {
   return `<div class="research-preview" data-project="${escape(project.id)}"><div><p class="eyebrow">${label}</p><p class="research-source">${escape(project.shortTitle)}</p><h2 id="siradaki-proje">${escape(project.title)}</h2><p class="research-description">${escape(project.summary)}</p><a class="text-link" href="${escape(project.slug)}.html">Araştırma dosyasını incele <span aria-hidden="true">→</span></a></div><aside class="research-preview-state" aria-label="Projenin güncel durumu"><p class="eyebrow">ŞİMDİ NEREDEYİZ?</p><p class="research-current">${escape(project.display.currentStage)}</p><p>${escape(project.statusLabel)}</p><p>${escape(project.research.publicationLabel)}</p><small>${escape(project.duration.label)} · ${escape(project.display.experimentState)}</small></aside></div>`;
 }
 
+function renderExperimentEntries(projects, anchorPrefix = '') {
+  return projects.map(project => {
+    const url = publishedUrl(project.video);
+    const thumbnail = project.video.thumbnail;
+    const label = project.id === 'irade-terbiyesi' ? 'İrade' : project.duration.value || project.shortTitle;
+    const art = url && thumbnail?.src
+      ? '<div class="experiment-visual experiment-visual--film"><img class="project-cover" src="' + escape(thumbnail.src) + '" alt="' +
+        escape(thumbnail.alt) + '" width="' + thumbnail.width + '" height="' + thumbnail.height + '" loading="lazy" decoding="async"></div>'
+      : '<div class="experiment-visual' + (project.id === 'irade-terbiyesi' ? ' experiment-visual--book' : '') +
+        '" aria-hidden="true"><strong>' + escape(label) + '</strong></div>';
+    const anchor = anchorPrefix ? ` id="${anchorPrefix}${escape(project.slug)}"` : '';
+    return `<article class="experiment-entry"${anchor}>
+        ${art}
+        <div class="experiment-copy"><p class="experiment-status">${escape(project.statusLabel)}</p><h3>${escape(project.shortTitle)}</h3><p>${escape(project.summary)}</p>
+          <p class="experiment-duration">${escape(project.duration.label)}</p>
+          <div class="experiment-links"><a class="neighborhood-link" href="${escape(project.slug)}.html">Deneyi incele</a>${url ? `<a class="neighborhood-link" href="${escape(url)}" target="_blank" rel="noopener noreferrer">Videoyu YouTube’da izle</a>` : ''}</div>
+        </div>
+      </article>`;
+  }).join('\n      ');
+}
+
+const collectionAnchors = {
+  machiavelli: 'machiavelli-dosyasi',
+  'kontrol-bende-mi': 'kontrol-dosyasi',
+  'irade-terbiyesi': 'irade-dosyasi'
+};
+
+function renderCollectionNav(projects) {
+  return projects.map(project => {
+    const anchor = collectionAnchors[project.id] || `deney-${project.slug}`;
+    return `<a href="#${escape(anchor)}"><span>${escape(project.shortTitle)}</span><small>${escape(project.duration.label)}</small><i aria-hidden="true">↓</i></a>`;
+  }).join('\n        ');
+}
+
 function renderResearchStages(project) {
   validateResearch(project);
   return project.research.stages.map((stage, i) => `<li class="research-stage is-${stage.status}" data-research-stage="${escape(stage.id)}"${stage.status === 'in-progress' ? ' aria-current="step"' : ''}><span class="research-number" aria-hidden="true">${String(i + 1).padStart(2, '0')}</span><div><h3>${escape(stage.title)}</h3><p>${escape(stage.description)}</p><p class="research-goal"><strong>Hedef:</strong> ${escape(stage.goal)}</p></div><span class="research-state">${researchStates[stage.status]}</span></li>`).join('\n');
@@ -219,6 +253,15 @@ function renderHtml(html, data = siteData) {
       'İrade Terbiyesi: ' + escape(data.projects['irade-terbiyesi'].statusLabel) + '.</p>' + end);
   html = html.replace(/(<!-- research-methods:start -->)[\s\S]*?(<!-- research-methods:end -->)/,
     (_, start, end) => start + renderResearchMethods(project) + end);
+  html = html.replace(/(<!-- home-experiments:start -->)[\s\S]*?(<!-- home-experiments:end -->)/,
+    (_, start, end) => `${start}\n      ${renderExperimentEntries(Object.values(data.projects))}\n      ${end}`);
+  html = html.replace(/(<!-- collection-nav:start -->)[\s\S]*?(<!-- collection-nav:end -->)/,
+    (_, start, end) => `${start}\n        ${renderCollectionNav(Object.values(data.projects))}\n        ${end}`);
+  html = html.replace(/(<!-- collection-more:start -->)[\s\S]*?(<!-- collection-more:end -->)/,
+    (_, start, end) => {
+      const extra = Object.values(data.projects).filter(p => !Object.hasOwn(collectionAnchors, p.id));
+      return start + (extra.length ? `<div class="collection-more">${renderExperimentEntries(extra, 'deney-')}</div>` : '') + end;
+    });
   return html.replace(/(<!-- research-stages:start -->)[\s\S]*?(<!-- research-stages:end -->)/,
     (_, start, end) => `${start}${renderResearchStages(project)}${end}`);
 }

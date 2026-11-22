@@ -14,10 +14,11 @@ for(const width of [320,360,390,430,768,1024,1440])test(`actual counter covers $
  }
  const end=F.sample(1,g);assert.equal(end.foreground,0);assert.equal(end.question,1);assert.ok(Math.abs(end.frame.width/end.frame.height-16/9)<1e-10);assert.equal(end.frame.opacity,1);
 });
-test('dossier after entrance and protected project content are identical to rollback point',()=>{
+test('reviewed dossier layout and protected project assets match their recorded hashes',()=>{
  const s=fs.readFileSync('kontrol-bende-mi.html','utf8');
  const expected=require('./portal-review/protected-hashes.json');
  assert.equal(hash(s.slice(s.indexOf('<p class="control-caption"'))),expected.dossier);
+ assert.equal(hash(s.match(/<!-- experience:control-scene:start -->[\s\S]*?<!-- experience:control-scene:end -->/)[0]),expected.scene);
  for(const [p,h] of Object.entries(expected.files))assert.equal(hash(fs.readFileSync(p)),h,p);
 });
 test('static scene is complete, semantic and does not invent a video',()=>{
