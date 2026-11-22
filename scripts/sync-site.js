@@ -94,19 +94,33 @@ function renderResearchMethods(project) {
     '</h3><p>' + escape(method.rule) + '</p></div></li>').join('') + '</ol>';
 }
 
+const methodArtwork = {
+  fikir: 'living-idea.webp',
+  deney: 'living-experiment.webp',
+  sonuc: 'living-result.webp'
+};
+
+function renderMethodArt(scene, className, index) {
+  const source = methodArtwork[scene.id];
+  if (!source) return '';
+  const plane = index === undefined ? '' : ` data-story-plate="${index}"`;
+  return `<img class="${className}"${plane} src="${source}" alt="" width="900" height="600" loading="lazy" decoding="async">`;
+}
+
 function renderStory(story) {
   if (!story || story.scenes.length < 3) throw new Error('Hikâye için en az üç gerçek sahne gerekli');
   const first = story.scenes[0];
   return `<header class="home-section-heading"><h2 id="hikaye-baslik">${escape(story.title)}</h2></header>
   <div class="story-layout" data-story data-scene="0">
     <div class="story-visual" aria-hidden="true">
-      <p class="story-counter"><span data-story-number>01</span> / ${String(story.scenes.length).padStart(2, '0')}</p>
-      ${signature()}
-      <div class="story-word-window"><span class="story-word-exit"></span><p class="story-word" data-story-label>${escape(first.label)}</p></div>
-      <p class="story-caption" data-story-caption>${escape(first.title)}</p>
-      <p class="story-description" data-story-description>${escape(first.description)}</p>
+      <div class="story-gallery">${story.scenes.map((scene, i) => renderMethodArt(scene, 'story-plate', i)).join('')}</div>
+      <div class="story-overlay">
+        ${signature()}
+        <p class="story-counter"><span data-story-number>01</span> / ${String(story.scenes.length).padStart(2, '0')}</p>
+        <p class="story-word" data-story-label>${escape(first.label)}</p>
+      </div>
     </div>
-    <div class="story-scenes">${story.scenes.map((scene, i) => `<article class="story-scene" data-story-scene id="hikaye-${escape(scene.id)}"><div class="story-scene-heading"><p class="eyebrow"><span class="scene-number">${String(i + 1).padStart(2, '0')}</span> <span class="scene-label">${escape(scene.label)}</span></p>${signature(i, true)}</div><div class="reveal-mask"><h3>${escape(scene.title)}</h3></div><p class="scene-description">${escape(scene.description)}</p><p class="story-note">${escape(scene.note)}</p></article>`).join('')}</div>
+    <div class="story-scenes">${story.scenes.map((scene, i) => `<article class="story-scene" data-story-scene id="hikaye-${escape(scene.id)}">${renderMethodArt(scene, 'story-local-plate')}<div class="story-scene-heading"><p class="eyebrow"><span class="scene-number">${String(i + 1).padStart(2, '0')}</span> <span class="scene-label">${escape(scene.label)}</span></p></div><div class="reveal-mask"><h3>${escape(scene.title)}</h3></div><p class="scene-description">${escape(scene.description)}</p><p class="story-note">${escape(scene.note)}</p></article>`).join('')}</div>
   </div>`;
 }
 
@@ -119,7 +133,7 @@ function renderHtml(html, data = siteData) {
     (_, start, key, end) => `${start}${renderStory(data.experience.stories[key])}${end}`);
   html = html.replace(/(<!-- control:index:start -->)[\s\S]*?(<!-- control:index:end -->)/, (_, start, end) => {
     const c = data.projects['kontrol-bende-mi'];
-    return start + `<section class="control-index" aria-labelledby="control-index-title"><div class="publication-row-heading"><span class="issue-number" aria-hidden="true">02</span><p>Kontrol / Zaman / Karar</p><span>${escape(c.statusLabel)}</span></div><div class="control-index-layout"><div><p class="eyebrow">60 GÜNLÜK DAVRANIŞ DENEYİ</p><h2 id="control-index-title">${escape(c.title)}</h2><p>${escape(c.summary)}</p><a class="text-link" href="kontrol-bende-mi.html">Deney dosyasını oku <svg class="editorial-arrow" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div><div class="control-index-art" aria-hidden="true"><span>60</span><div>${Array.from({length:60},(_,i)=>`<i style="--i:${i};--h:${24+(i*17%61)}%"></i>`).join('')}</div><small>BİR KARAR. ALTMIŞ GÜN.</small></div></div></section>` + end;
+    return start + `<section class="control-index" aria-labelledby="control-index-title"><div class="publication-row-heading"><span class="issue-number" aria-hidden="true">02</span><p>Kontrol / Zaman / Karar</p><span>${escape(c.statusLabel)}</span></div><div class="control-index-layout"><div><p class="eyebrow">60 GÜNLÜK DAVRANIŞ DENEYİ</p><h2 id="control-index-title">${escape(c.title)}</h2><p>${escape(c.summary)}</p><a class="text-link" href="kontrol-bende-mi.html">Deney dosyasını oku <svg class="editorial-arrow" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" focusable="false"><path d="M5 19 19 5M5 5h14v14" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div><img class="living-control-cover" src="kontrol-bende-mi-share.png" alt="" width="1280" height="720" loading="lazy" decoding="async"></div></section>` + end;
   });
   const project = data.projects[id];
   if (!project) throw new Error(`Bilinmeyen proje: ${id}`);

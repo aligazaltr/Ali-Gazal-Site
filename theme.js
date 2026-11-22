@@ -30,7 +30,7 @@
     theme = next;
     root.dataset.theme = theme;
     const color = document.querySelector('meta[name="theme-color"]');
-    if (color) color.content = theme === 'light' ? '#f5f0e7' : '#0b0b0a';
+    if (color) color.content = theme === 'light' ? '#f4ebdb' : '#191713';
 
     const button = document.querySelector('[data-theme-toggle]');
     if (!button) return;

@@ -87,13 +87,6 @@
         { duration: compact?.matches ? 520 : 660, delay: fromRest ? i * 25 : 0, fill: 'backwards' });
     });
   }
-  function revealSignature(scene) {
-    const signature = scene.querySelector('.local-signature');
-    if (!signature) return;
-    const state = signature.dataset.signatureState;
-    if (state !== '0') signature.dataset.signatureState = String(Number(state) - 1);
-    morph(signature, () => { signature.dataset.signatureState = state; }, state === '0');
-  }
   function refresh() {
     if (!observer) return;
     document.querySelectorAll('[data-reveal], .section-heading, .process-card, .principle-list > li, .evidence-card, .result-panel, .prose-section, .research-stage, .thought-card, .archive-reading-note, .article-section > h2, .project-card > .project-cover, .project-copy > *, .project-status, .phase-heading, .phase-track > li, .research-preview h2, .research-preview-state, .research-boundary')
@@ -117,52 +110,68 @@
             if (seen.has(scene)) return;
             seen.add(scene);
             scene.classList.add('is-active');
-            enter(scene.querySelector('.scene-number'));
-            enter(scene.querySelector('.scene-label'), 80);
-            enter(scene.querySelector('h3'), 130);
-            enter(scene.querySelector('.scene-description'), 190);
-            revealSignature(scene);
+            enter(scene.querySelector('.story-local-plate'), 0, true);
+            enter(scene.querySelector('.scene-label'), 70);
+            enter(scene.querySelector('h3'), 120);
           });
         }, { threshold: .15 });
         scenes.forEach(scene => watcher.observe(scene));
         storyCleanups.push(() => watcher.disconnect());
         return;
       }
-      const intersecting = new Set();
       let selected = -1;
-      const watcher = new IntersectionObserver(entries => {
-        entries.forEach(entry => { if (entry.isIntersecting) intersecting.add(entry.target); else intersecting.delete(entry.target); });
-        const current = [...intersecting].sort((a, b) => Math.abs(a.getBoundingClientRect().top - window.innerHeight * .3) - Math.abs(b.getBoundingClientRect().top - window.innerHeight * .3))[0];
+      let frame = 0;
+      const activeScenes = new Set();
+
+      function selectScene() {
+        if (frame) window.cancelAnimationFrame(frame);
+        frame = 0;
+        if (!activeScenes.size || document.hidden) return;
+        const focusLine = window.innerHeight * .43;
+        const visible = [...activeScenes].flatMap(scene => {
+          const bounds = scene.getBoundingClientRect();
+          const heading = scene.querySelector('h3').getBoundingClientRect();
+          if (bounds.bottom <= 0 || bounds.top >= window.innerHeight || heading.bottom <= 0 || heading.top >= window.innerHeight) return [];
+          return [{ scene, distance: Math.abs((heading.top + heading.bottom) / 2 - focusLine) }];
+        });
+        const current = visible.sort((a, b) => a.distance - b.distance)[0]?.scene;
         if (!current) return;
         const next = scenes.indexOf(current);
         if (next === selected) return;
         selected = next;
-        morph(stage, () => {
-          story.dataset.scene = String(next);
-          const signature = stage?.querySelector?.('.ag-signature');
-          if (signature) signature.dataset.signatureState = String(next);
-        });
+
+        story.dataset.scene = String(next);
+        const signature = stage?.querySelector('.ag-signature');
+        if (signature) signature.dataset.signatureState = String(next);
         scenes.forEach(scene => scene.classList.toggle('is-active', scene === current));
         story.querySelector('[data-story-number]').textContent = String(next + 1).padStart(2, '0');
         const label = story.querySelector('[data-story-label]');
-        const outgoing = story.querySelector('.story-word-exit');
-        if (outgoing) outgoing.textContent = label.textContent;
         label.textContent = current.querySelector('.scene-label').textContent;
-        story.querySelector('[data-story-caption]').textContent = current.querySelector('h3').textContent;
-        story.querySelector('[data-story-description]').textContent = current.querySelector('.scene-description').textContent;
-        if (onScreen(stage)) {
-          // A single editorial drum: the previous word leaves the same mask the next enters.
-          animate(outgoing, [{ transform: 'translateY(0) scale(1)', opacity: 1 }, { transform: 'translateY(-115%) scale(.94)', opacity: 0 }], { duration: 620 });
-          animate(label, [{ transform: 'translateY(115%) scale(1.08)', opacity: .65 }, { transform: 'translateY(0) scale(1)', opacity: 1 }], { duration: 660 });
-        }
-        if (!seen.has(current)) { seen.add(current); enter(current.querySelector('h3')); }
-      }, { rootMargin: '-25% 0px -35% 0px', threshold: [0, .2, .6] });
-      scenes.forEach(scene => watcher.observe(scene));
-      const visibility = new IntersectionObserver(entries => {
-        entries.forEach(entry => { if (!entry.isIntersecting) cancelTree(stage); });
+        animate(label, [
+          { transform: 'translateY(12px)', opacity: .3 },
+          { transform: 'translateY(0)', opacity: 1 }
+        ], { duration: 360 });
+      }
+
+      function schedule() {
+        if (activeScenes.size && !frame && !document.hidden) frame = window.requestAnimationFrame(selectScene);
+      }
+
+      const watcher = new IntersectionObserver(entries => {
+        entries.forEach(entry => entry.isIntersecting ? activeScenes.add(entry.target) : activeScenes.delete(entry.target));
+        selectScene();
       }, { threshold: 0 });
-      if (stage) visibility.observe(stage);
-      storyCleanups.push(() => { watcher.disconnect(); visibility.disconnect(); });
+      scenes.forEach(scene => watcher.observe(scene));
+      window.addEventListener('scroll', schedule, { passive: true });
+      window.addEventListener('resize', schedule, { passive: true });
+      document.addEventListener('visibilitychange', schedule);
+      storyCleanups.push(() => {
+        if (frame) window.cancelAnimationFrame(frame);
+        watcher.disconnect();
+        window.removeEventListener('scroll', schedule);
+        window.removeEventListener('resize', schedule);
+        document.removeEventListener('visibilitychange', schedule);
+      });
     });
   }
   // Only visible connection tracks receive a frame, and only after scroll/resize.
