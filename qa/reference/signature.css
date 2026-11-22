@@ -1,0 +1,73 @@
+/* 4.1 — the AG signature joins the opening, the question and its outcome. */
+.word-window { display:block; overflow:clip; padding-block:.09em; margin-block:-.09em; transform-origin:left center; }
+.cinema-word { transform-origin:left bottom; }
+.word-window:nth-child(2) .cinema-word { color:var(--orange); }
+.word-window:nth-child(4) .cinema-word { font-family:var(--literary); font-weight:400; font-style:italic; letter-spacing:-.055em; }
+.journey-bridge { position:relative; }
+.journey-bridge::after { content:''; position:absolute; inset:0 auto auto 0; width:4.5rem; height:1px; background:var(--orange); }
+.story-section > .story-arrival { position:relative; padding-top:3.3rem; }
+.journey-trace { position:absolute; top:-1px; left:0; height:2.5rem; width:1px; background:var(--orange); transform-origin:top; }
+.story-arrival h2 { text-wrap:balance; }
+.story-visual { overflow:clip; border:0; border-radius:0; background:none; padding-inline:0; }
+.ag-signature { position:relative; margin:1.5rem auto 2.2rem; width:min(100%,23rem); aspect-ratio:1; overflow:clip; }
+.signature-rings { position:absolute; inset:12%; }
+.signature-ring { position:absolute; inset:0; border:1px solid var(--orange-line); border-radius:50%; transform-origin:center; }
+.ring-outer { transform:rotate(-25deg) scale(1,.84); }
+.ring-middle { transform:rotate(25deg) scale(.76,1); border-color:var(--line-strong); }
+.ring-inner { transform:scale(.48); border-color:var(--orange); opacity:.65; }
+.signature-mark { position:absolute; inset:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:.4rem; font:italic clamp(2.6rem,5vw,4.5rem)/1 var(--literary); letter-spacing:-.08em; color:var(--text); }
+.signature-mark span { width:1.2rem; height:1px; background:var(--orange); }
+[data-signature-state="1"] .ring-outer { transform:translateX(-17%) rotate(-32deg) scale(.8,.91); }
+[data-signature-state="1"] .ring-middle { transform:translateX(17%) rotate(32deg) scale(.8,.91); }
+[data-signature-state="1"] .ring-inner { transform:rotate(90deg) scale(.62,.8); opacity:.8; }
+[data-signature-state="1"] .signature-mark { transform:scale(.94); }
+[data-signature-state="2"] .ring-outer { transform:rotate(0deg) scale(.98); }
+[data-signature-state="2"] .ring-middle { transform:rotate(0deg) scale(.82); }
+[data-signature-state="2"] .ring-inner { transform:scale(.66); opacity:1; }
+[data-signature-state="2"] .signature-mark { transform:scale(1.08); }
+.local-signature { display:none; }
+.project-title-source .reveal-mask, .project-name-reveal { display:block; }
+.research-stage { position:relative; }
+.research-stage:not(:last-child)::after { content:''; position:absolute; left:1.25rem; bottom:-1.2rem; height:1.2rem; width:1px; background:var(--orange-line); }
+@media (max-width:56rem) {
+  .story-scene-heading { align-items:center; gap:1rem; }
+  .local-signature { display:block; width:min(52%,13rem); flex-shrink:0; margin:0; }
+  .local-signature .signature-mark { font-size:clamp(2.2rem,6vw,3.2rem); }
+}
+@media (min-width:56.01rem) and (max-height:740px) {
+  .story-visual { top:1rem; padding-block:1rem; }
+  .ag-signature { width:14rem; margin-block:.7rem 1rem; }
+  .story-word { font-size:3rem; margin-bottom:.6rem; }
+  .story-caption { font-size:1.2rem; min-height:0; }
+  .story-description { font-size:.8rem; min-height:0; }
+}
+@media (min-width:56.01rem) and (max-height:560px) { .story-visual { position:relative; top:0; } .story-scene { min-height:0; } }
+/* The story's existing words become the large transition. No additional scroll section. */
+.story-word-window { position:relative; overflow:clip; padding-block:.1em; margin-block:0 .8rem; font-size:clamp(4.5rem,8.5vw,8rem); font-weight:850; letter-spacing:-.075em; line-height:1; }
+.story-word-window .story-word, .story-word-exit { margin:0; font:inherit; letter-spacing:inherit; line-height:inherit; transform-origin:left center; }
+.story-word-exit { position:absolute; inset:.1em 0 auto; opacity:0; pointer-events:none; }
+/* One cover, one opening. Research records continue below in their existing sections. */
+.machiavelli-opening { display:block; padding-top:1rem; }
+.machiavelli-opening .hero-meta { font-size:.65rem; letter-spacing:.12em; }
+.machiavelli-opening .project-hero h1 { max-width:none; font-size:clamp(2.25rem,10.6vw,9.7rem); line-height:.94; letter-spacing:-.075em; margin:1.8rem 0 2.5rem; }
+.machiavelli-title-main { display:block; padding-block:.09em; }
+.machiavelli-subtitle { display:block; font:italic .57em/1.15 var(--literary); color:var(--orange); letter-spacing:-.045em; padding-bottom:.06em; }
+.machiavelli-opening .project-feature-cover { border:0; border-radius:0; box-shadow:none; background:none; }
+.opening-cover-track { max-width:65rem; margin-inline:auto; }
+.cover-travel { transform-origin:center top; }
+.machiavelli-opening .project-feature-cover figcaption { padding:.8rem 0; border-top:0; background:none; font-weight:400; font-size:.7rem; }
+.opening-context { display:grid; grid-template-columns:1fr 1fr; gap:clamp(1.5rem,5vw,5rem); margin-block:2rem 3rem; padding-top:1.5rem; border-top:1px solid var(--line); }
+.opening-question { font-size:clamp(1.7rem,3vw,2.75rem); font-weight:750; line-height:1.12; letter-spacing:-.04em; }
+.opening-question em { font-family:var(--literary); font-weight:400; }
+.opening-context .lead { font-size:1rem; color:var(--muted-strong); margin:0; }
+@media (max-width:56rem) {
+  .story-scene-heading .scene-number { font-size:2.8rem; }
+  .story-scene-heading .scene-label { font-size:clamp(1.6rem,7.7vw,3.7rem); letter-spacing:-.06em; line-height:1; color:var(--text); font-weight:800; }
+  .machiavelli-opening .project-hero h1 { font-size:10.4vw; margin-block:1.3rem 1.8rem; }
+  .opening-context { grid-template-columns:1fr; gap:1rem; margin-block:1.4rem 2rem; }
+}
+@media (min-width:56.01rem) and (max-height:740px) {
+  .story-word-window { font-size:clamp(4rem,7vw,6rem); }
+  .story-caption { margin-bottom:.4rem; }
+  .story-ticks { margin-top:.8rem; }
+}
