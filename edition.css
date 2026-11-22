@@ -241,6 +241,12 @@ body[data-edition] {
 .collection-pair .publication-row-heading > :last-child { grid-column: 2; text-align: start; }
 .collection-pair .control-index-art { order: -1; width: 100%; min-height: 7.5rem; aspect-ratio: 3 / 1; }
 .collection-pair .control-index-art > span { font-size: clamp(3.5rem, 8vw, 7.1rem); }
+.collection-pair .control-index-art > div,
+.control-page #surec .control-duration {
+  display: grid;
+  grid-template-columns: repeat(60, minmax(0, 1fr));
+  gap: min(2px, .3vw);
+}
 .collection-pair .research-preview-state {
   order: -1;
   min-height: 7.5rem;
@@ -568,6 +574,9 @@ body[data-edition] {
   [data-edition="archive"] .archive-shelf ul { grid-template-columns: 1fr; }
   [data-edition="archive"] .archive-shelf li { padding: .7rem .9rem; }
   [data-edition="archive"] .archive-desk .archive-filter-row { grid-template-columns: minmax(0, 1fr); }
+  [data-edition="archive"] .archive-desk .discovery-stage { padding: .8rem 1rem; }
+  [data-edition="archive"] .archive-desk .discovery-heading :is(.eyebrow, h3),
+  [data-edition="archive"] .archive-desk .discovery-invite { display: none; }
   .about-manifesto { min-height: 12rem; }
   [data-edition="about"] .author-method-list li { grid-template-columns: 1.75rem minmax(0, 1fr); gap: .6rem; }
   [data-edition="about"] .author-method-list li p { grid-column: 2; }
