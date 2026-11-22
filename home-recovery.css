@@ -112,7 +112,7 @@
 
 .story-gallery {
   position: relative;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 1.5;
 }
 
 .story-plate {
@@ -143,6 +143,8 @@
 }
 
 .story-overlay .ag-signature { align-self: start; width: 3.5rem; margin: 0; color: inherit; }
+.story-overlay .signature-mark { color: inherit; font-size: 1.5rem; gap: .2rem; }
+.story-overlay .signature-mark span { width: .7rem; }
 .story-overlay .story-counter { justify-self: end; color: inherit; margin: 0; }
 .story-overlay .story-counter span { color: inherit; }
 .story-overlay .story-word {
