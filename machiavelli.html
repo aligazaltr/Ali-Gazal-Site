@@ -41,8 +41,9 @@
   <script src="machiavelli-scene.js" defer></script>
   <link rel="stylesheet" href="editorial-v6.css">
   <link rel="stylesheet" href="neighborhood.css">
+  <link rel="stylesheet" href="edition.css">
 </head>
-<body class="mc-page v6-dossier" data-project="machiavelli" data-long-page>
+<body data-edition="prens" class="mc-page v6-dossier" data-project="machiavelli" data-long-page>
   <a class="skip-link" href="#icerik">İçeriğe geç</a>
   <div class="reading-progress" data-reading-progress hidden aria-hidden="true"><span></span></div>
 
@@ -97,6 +98,8 @@
     <div class="mc-measure" aria-hidden="true"><span></span></div>
   </div>
 </section><!-- experience:machiavelli-scene:end -->
+      <div class="dossier-masthead" id="deney-asamasi"><p>ARAŞTIRMA DOSYASI</p><p>MACHIAVELLI / PRENS</p></div>
+      <div class="prens-lead">
       <div class="machiavelli-opening">
         <div class="opening-context">
           <p class="opening-question">Üç düşünce.<br><em>Gerçek hayatta ne değişti?</em></p>
@@ -104,9 +107,7 @@
         </div>
       </div>
 
-      <p class="mc-source-note">Portre, video kapağındaki dijital Machiavelli tasvirinden uyarlanmıştır.</p>
 
-      <div class="dossier-masthead" id="deney-asamasi"><p>ARAŞTIRMA DOSYASI</p><p>MACHIAVELLI / PRENS</p></div>
           <section class="article-section reflection result-editorial" aria-labelledby="sonuc" data-result-panel>
             <p class="eyebrow">FİNAL SONUÇ</p>
             <h2 id="sonuc" data-result-title>Deneyin kısa sonucu</h2>
@@ -127,6 +128,8 @@
               </ul>
             </div></details>
           </section>
+      </div>
+      <p class="mc-source-note">Portre, video kapağındaki dijital Machiavelli tasvirinden uyarlanmıştır.</p>
       <div class="project-facts" aria-label="Proje bilgileri">
         <div>
           <span>Durum</span>
@@ -182,10 +185,6 @@
         <p class="last-updated">Son güncelleme: <time data-project-date="lastUpdated" datetime="2026-11-15">15 Kasım 2026</time></p>
       </details>
 
-      <nav class="page-toc" aria-labelledby="sayfa-icindekiler">
-        <strong id="sayfa-icindekiler">Bu sayfada</strong>
-        <ul><li><a href="#sonuc">Bulgu ve sınırları</a></li><li><a href="#soru">Deney sorusu</a></li><li><a href="#kurallar">Üç ilke</a></li><li><a href="#kanit-defteri">Kayıtlar</a></li></ul>
-      </nav>
 
       <div class="share-tools">
         <button class="button secondary" type="button" data-share-project hidden>Bu projeyi paylaş</button>
@@ -195,7 +194,23 @@
 
       <div data-try-it></div>
 
-      <div class="article-layout">
+      <div class="article-layout prens-dossier">
+        <aside class="prens-rail">
+      <nav class="page-toc" aria-labelledby="sayfa-icindekiler">
+        <strong id="sayfa-icindekiler">Bu sayfada</strong>
+        <ul><li><a href="#sonuc">Bulgu ve sınırları</a></li><li><a href="#soru">Deney sorusu</a></li><li><a href="#kurallar">Üç ilke</a></li><li><a href="#kanit-defteri">Kayıtlar</a></li></ul>
+      </nav>
+        <div class="prens-video">
+          <div class="aside-card" data-video-panel>
+            <!-- video-panel:start -->
+            <p class="eyebrow">VİDEO YAYINDA</p>
+            <h2>Machiavelli'nin 3 Fikrini 7 Gün Denedim: Ne İşe Yaradı?</h2>
+            <p>Video YouTube’da yayımlandı. Deneyin hikâyesini kanaldaki videoda izleyebilirsin.</p>
+            <a class="button primary" href="https://youtu.be/6MxLFTRudaQ" target="_blank" rel="noopener noreferrer">YouTube’da videoyu izle ↗</a>
+            <!-- video-panel:end -->
+          </div>
+        </div>
+        </aside>
         <div class="article-main">
           <section class="article-section" aria-labelledby="problem">
             <p class="eyebrow">İZLEYİCİNİN SORUSU</p>
@@ -318,16 +333,6 @@
           </section>
         </div>
 
-        <aside class="article-aside" aria-label="Proje bağlantıları">
-          <div class="aside-card" data-video-panel>
-            <!-- video-panel:start -->
-            <p class="eyebrow">VİDEO YAYINDA</p>
-            <h2>Machiavelli'nin 3 Fikrini 7 Gün Denedim: Ne İşe Yaradı?</h2>
-            <p>Video YouTube’da yayımlandı. Deneyin hikâyesini kanaldaki videoda izleyebilirsin.</p>
-            <a class="button primary" href="https://youtu.be/6MxLFTRudaQ" target="_blank" rel="noopener noreferrer">YouTube’da videoyu izle ↗</a>
-            <!-- video-panel:end -->
-          </div>
-        </aside>
       </div>
       <section class="archive-project-bridge" aria-labelledby="ilgili-dusunceler">
         <p class="eyebrow">KİTAPTAN DÜŞÜNCEYE</p><h2 id="ilgili-dusunceler">Prens’in düşüncelerini kaynaklarıyla incele.</h2>
@@ -342,6 +347,11 @@
   <footer class="site-footer">
     <div class="site-shell footer-inner">
       <p>© 2026 Ali Gazal</p>
+      <nav class="edition-footer-nav" aria-label="Alt menü">
+        <a href="rehberler.html">Projeler</a>
+        <a href="dusunce-arsivi.html">Düşünce Arşivi</a>
+        <a href="hakkimda.html">Hakkımda</a>
+      </nav>
       <a href="rehberler.html">Tüm projeler <span aria-hidden="true">→</span></a>
     </div>
   </footer>

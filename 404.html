@@ -16,14 +16,14 @@
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="motion.css">
   <link rel="stylesheet" href="signature.css">
+  <link rel="stylesheet" href="edition.css">
 </head>
-<body>
+<body data-edition="missing">
   <a class="skip-link" href="#icerik">İçeriğe geç</a>
   <header class="site-header">
     <div class="site-shell header-inner">
       <a class="brand" href="index.html" aria-label="Ali Gazal ana sayfa">
-        <span class="brand-mark" aria-hidden="true">AG</span>
-        <span>Ali Gazal</span>
+        <span>ALİ GAZAL TR</span>
       </a>
       <nav aria-label="Ana menü">
         <a href="index.html">Ana sayfa</a>
@@ -38,6 +38,8 @@
     </div>
   </header>
   <main id="icerik" class="page site-shell narrow-page">
+    <div class="fallback-spread">
+    <p class="fallback-mark" aria-hidden="true">404</p>
     <header class="page-intro">
       <p class="eyebrow">404 · SAYFA BULUNAMADI</p>
       <h1>Aradığın sayfa burada yok.</h1>
@@ -47,10 +49,16 @@
         <a class="button secondary" href="index.html">Ana sayfa</a>
       </div>
     </header>
+    </div>
   </main>
   <footer class="site-footer">
     <div class="site-shell footer-inner">
       <p>© 2026 Ali Gazal</p>
+      <nav class="edition-footer-nav" aria-label="Alt menü">
+        <a href="rehberler.html">Projeler</a>
+        <a href="dusunce-arsivi.html">Düşünce Arşivi</a>
+        <a href="hakkimda.html">Hakkımda</a>
+      </nav>
       <a href="https://www.youtube.com/@aligazaltr" target="_blank" rel="noopener noreferrer">YouTube <span aria-hidden="true">↗</span></a>
     </div>
   </footer>

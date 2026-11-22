@@ -19,7 +19,7 @@ test('current HTML is stable and links the real published Machiavelli video', ()
       assert.match(html, /id="gercek-deneyler"[\s\S]*?<img class="project-cover"[^>]*loading="lazy"/);
       assert.doesNotMatch(html.match(/<section class="neighborhood-hero"[\s\S]*?<\/section>/)[0], /project-cover|youtu\.be/);
     }
-    if (file !== 'rehberler.html') assert.ok(html.includes('href="https://youtu.be/6MxLFTRudaQ"'));
+    assert.ok(html.includes('href="https://youtu.be/6MxLFTRudaQ"'));
     const unpublished = renderHtml(html, unpublishedFixture());
     assert.match(unpublished, /Deney tamamlandı · video hazırlanıyor/);
     assert.doesNotMatch(unpublished, /href="https:\/\/(?:www\.)?(?:youtube\.com\/watch|youtu\.be\/)/);

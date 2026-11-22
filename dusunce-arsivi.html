@@ -31,8 +31,9 @@
   <link rel="stylesheet" href="motion.css">
   <link rel="stylesheet" href="signature.css">
   <link rel="stylesheet" href="neighborhood.css">
+  <link rel="stylesheet" href="edition.css">
 </head>
-<body>
+<body data-edition="archive">
   <a class="skip-link" href="#icerik">İçeriğe geç</a>
 
   <header class="site-header">
@@ -61,10 +62,10 @@
 
 
   <main id="icerik" class="archive-page site-shell archive-editorial">
-    <header class="archive-intro">
+    <header class="archive-intro archive-library">
       <div>
         <p class="eyebrow">KİTAPLAR · KAYNAKLAR · GERÇEK HAYAT</p>
-        <h1 data-reveal="title">Düşünce<br><em>Arşivi.</em></h1>
+        <h1 data-reveal="title">Düşünce <em>Arşivi</em></h1>
         <p class="archive-deck">Bir cümlenin ötesine bak.</p>
         <p class="lead">Kitaplardan gelen düşünceler, kaynakları ve kendi yorumlarımız. Okuduklarımızla gerçek hayat deneyleri arasında bir bağ.</p>
         <a class="archive-jump" href="#arsiv">Arşivi keşfet <span aria-hidden="true">↓</span></a>
@@ -84,6 +85,8 @@
     <section id="arsiv" class="archive-browser" aria-labelledby="arsiv-baslik">
       <div class="archive-section-heading"><div><p class="eyebrow">BUL · OKU · DÜŞÜN</p><h2 id="arsiv-baslik">Aklındaki düşüncenin peşinden.</h2></div></div>
       <p class="archive-help">İlk seçki: üç kitaptan 15 düşünce. Türkçe metinler, kaynakları kontrol edilmiş kısa pasajların bu arşiv için hazırlanmış serbest çevirileridir. <a href="#yayin-ilkesi">Çeviri ve yorum yaklaşımımız</a>.</p>
+      <div class="archive-reading-room">
+      <aside class="archive-desk" aria-label="Arama ve keşif">
       <form class="archive-filters" data-archive-filters role="search" aria-label="Düşünce arşivinde ara" hidden>
         <label class="archive-search" for="archive-query"><span>Düşünce ara</span><input id="archive-query" name="q" type="search" maxlength="200" placeholder="Bir kelime, yazar veya konu…" autocomplete="off" aria-describedby="archive-search-help"></label>
         <p id="archive-search-help" class="archive-help">Metinlerde, yazarlarda, kitaplarda, etiketlerde ve yorumlarda ara.</p>
@@ -94,11 +97,6 @@
           <button class="archive-reset" type="button" data-reset-archive>Filtreleri temizle</button>
         </div>
       </form>
-      <noscript><p class="archive-help">Yayımlanmış bütün düşünceler aşağıda okunabilir. Arama ve filtreler için JavaScript gerekir; tarayıcının sayfada bul özelliğini de kullanabilirsin.</p></noscript>
-      <div class="archive-toolbar">
-        <p id="archive-count" role="status" aria-live="polite" aria-atomic="true"><!-- archive:count:start -->15 düşünce<!-- archive:count:end --></p>
-
-      </div>
       <section class="discovery-stage" data-archive-discovery hidden aria-labelledby="kesif-baslik">
         <header class="discovery-heading">
           <p class="eyebrow">BİR SAYFA AÇ</p>
@@ -108,6 +106,13 @@
         </header>
         <p class="discovery-invite">Bazen yeni bir soru,<br>beklemediğin bir cümleden doğar.</p>
       </section>
+      </aside>
+      <div class="archive-reading-list">
+      <noscript><p class="archive-help">Yayımlanmış bütün düşünceler aşağıda okunabilir. Arama ve filtreler için JavaScript gerekir; tarayıcının sayfada bul özelliğini de kullanabilirsin.</p></noscript>
+      <div class="archive-toolbar">
+        <p id="archive-count" role="status" aria-live="polite" aria-atomic="true"><!-- archive:count:start -->15 düşünce<!-- archive:count:end --></p>
+
+      </div>
       <p id="archive-feedback" class="archive-feedback" role="status" aria-live="polite" aria-atomic="true"></p>
       <div class="archive-results"><!-- archive:cards:start --><article class="thought-card" id="dusunce-prens-01" data-archive-entry="prens-01" tabindex="-1" aria-labelledby="baslik-prens-01">
   <p class="thought-kind">Serbest çeviri</p>
@@ -319,6 +324,8 @@
     </div></details>
   <div class="thought-actions"><button type="button" data-entry-action="copy-text" hidden>Metni kopyala</button><button type="button" data-entry-action="copy-link" hidden>Bağlantıyı kopyala</button><button type="button" data-entry-action="share" hidden>Paylaş ↗</button></div>
 </article><!-- archive:cards:end --></div>
+      </div>
+      </div>
       <div id="archive-empty" hidden>
         <span class="empty-mark" aria-hidden="true">“</span>
         <div><h2>İlk düşünceler, kaynaklarıyla birlikte hazırlanıyor.</h2><p>Machiavelli, Jules Payot ve Marcus Aurelius’tan seçkiler; birebir metinleri, baskı bilgileri ve kullanım koşulları kontrol edildikten sonra burada yer alacak.</p><a href="#yayin-ilkesi">Arşivin yayın yaklaşımı <span aria-hidden="true">↓</span></a></div>
@@ -337,6 +344,11 @@
   <footer class="site-footer">
     <div class="site-shell footer-inner">
       <p>© 2026 Ali Gazal</p>
+      <nav class="edition-footer-nav" aria-label="Alt menü">
+        <a href="rehberler.html">Projeler</a>
+        <a href="dusunce-arsivi.html">Düşünce Arşivi</a>
+        <a href="hakkimda.html">Hakkımda</a>
+      </nav>
       <a href="https://www.youtube.com/@aligazaltr" target="_blank" rel="noopener noreferrer">YouTube <span aria-hidden="true">↗</span></a>
     </div>
   </footer>
