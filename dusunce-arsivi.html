@@ -60,33 +60,20 @@
   </aside>
 
 
-  <main id="icerik" class="archive-page site-shell archive-editorial">
+  <main id="icerik" class="archive-page site-shell">
     <header class="archive-intro">
-      <div>
-        <p class="eyebrow">KİTAPLAR · KAYNAKLAR · GERÇEK HAYAT</p>
-        <h1 data-reveal="title">Düşünce<br><em>Arşivi.</em></h1>
-        <p class="archive-deck">Bir cümlenin ötesine bak.</p>
-        <p class="lead">Kitaplardan gelen düşünceler, kaynakları ve kendi yorumlarımız. Okuduklarımızla gerçek hayat deneyleri arasında bir bağ.</p>
-        <a class="archive-jump" href="#arsiv">Arşivi keşfet <span aria-hidden="true">↓</span></a>
+      <div class="archive-intro-copy">
+        <h1>Düşünce Arşivi</h1>
+        <p class="lead">Kitaplardan seçtiğim düşünceleri kaynakları, yorumları ve gerçek hayat deneyleriyle birlikte oku.</p>
+        <a class="archive-jump" href="#arsiv">Düşüncelerde ara <span aria-hidden="true">↓</span></a>
       </div>
-      <div class="archive-reading-note" aria-label="Okuma yaklaşımımız">
-        <p class="eyebrow">OKUMADAN HAYATA</p>
-        <p class="reading-statement">Bir söz.<br>Bir bağlam.<br><em>Yeni bir soru.</em></p>
-        <p>Yazarın ne söylediğini, bizim ne düşündüğümüzü ve hayatta neyi deneyebileceğimizi ayrı ayrı ele alıyoruz.</p>
-      </div>
+      <img class="archive-intro-art" src="thought-library-illustration.webp" alt="" width="1080" height="720" fetchpriority="high">
     </header>
 
-    <section class="archive-shelf" aria-labelledby="kitaplik-baslik">
-      <div class="archive-section-label"><h2 id="kitaplik-baslik">Okuma rafı</h2><p>İlk üç kaynak</p></div>
-      <ul><!-- archive:shelf:start --><li><span class="shelf-author">Niccolò Machiavelli</span><h3><a href="dusunce-arsivi.html?kitap=prens#arsiv" data-archive-filter-link>Prens</a></h3><p>Güç, kararlar ve gerçek hayat</p><span class="shelf-state">5 düşünce</span></li><li><span class="shelf-author">Jules Payot</span><h3><a href="dusunce-arsivi.html?kitap=irade-terbiyesi#arsiv" data-archive-filter-link>İrade Terbiyesi</a></h3><p>İrade, dikkat ve çalışma</p><span class="shelf-state">5 düşünce</span></li><li><span class="shelf-author">Marcus Aurelius</span><h3><a href="dusunce-arsivi.html?kitap=kendime-dusunceler#arsiv" data-archive-filter-link>Kendime Düşünceler</a></h3><p>Yaşam, yargılar ve insan</p><span class="shelf-state">5 düşünce</span></li><!-- archive:shelf:end --></ul>
-    </section>
-
     <section id="arsiv" class="archive-browser" aria-labelledby="arsiv-baslik">
-      <div class="archive-section-heading"><div><p class="eyebrow">BUL · OKU · DÜŞÜN</p><h2 id="arsiv-baslik">Aklındaki düşüncenin peşinden.</h2></div></div>
-      <p class="archive-help">İlk seçki: üç kitaptan 15 düşünce. Türkçe metinler, kaynakları kontrol edilmiş kısa pasajların bu arşiv için hazırlanmış serbest çevirileridir. <a href="#yayin-ilkesi">Çeviri ve yorum yaklaşımımız</a>.</p>
+      <h2 id="arsiv-baslik">Düşüncelerde ara</h2>
       <form class="archive-filters" data-archive-filters role="search" aria-label="Düşünce arşivinde ara" hidden>
-        <label class="archive-search" for="archive-query"><span>Düşünce ara</span><input id="archive-query" name="q" type="search" maxlength="200" placeholder="Bir kelime, yazar veya konu…" autocomplete="off" aria-describedby="archive-search-help"></label>
-        <p id="archive-search-help" class="archive-help">Metinlerde, yazarlarda, kitaplarda, etiketlerde ve yorumlarda ara.</p>
+        <label class="archive-search" for="archive-query"><span class="archive-search-label">Düşünce ara</span><input id="archive-query" name="q" type="search" maxlength="200" placeholder="Bir kelime, yazar veya konu…" autocomplete="off"></label>
         <div class="archive-filter-row">
           <label for="archive-author">Yazar<select name="yazar" id="archive-author"><!-- archive:authors:start --><option value="">Tüm yazarlar</option><option value="machiavelli">Niccolò Machiavelli</option><option value="jules-payot">Jules Payot</option><option value="marcus-aurelius">Marcus Aurelius</option><!-- archive:authors:end --></select></label>
           <label for="archive-book">Kitap<select name="kitap" id="archive-book"><!-- archive:books:start --><option value="">Tüm kitaplar</option><option value="prens">Prens</option><option value="irade-terbiyesi">İrade Terbiyesi</option><option value="kendime-dusunceler">Kendime Düşünceler</option><!-- archive:books:end --></select></label>
@@ -95,20 +82,25 @@
         </div>
       </form>
       <noscript><p class="archive-help">Yayımlanmış bütün düşünceler aşağıda okunabilir. Arama ve filtreler için JavaScript gerekir; tarayıcının sayfada bul özelliğini de kullanabilirsin.</p></noscript>
+      <section class="discovery-stage" data-archive-discovery hidden aria-labelledby="kesif-baslik">
+        <header class="discovery-heading">
+          <div>
+            <h3 id="kesif-baslik">Bir düşünceyle karşılaş.</h3>
+            <p id="random-hint" data-random-hint>Doğrulanmış ilk düşünce yayımlandığında açılacak.</p>
+          </div>
+          <button class="archive-random" type="button" data-random-thought disabled aria-describedby="random-hint" aria-controls="kesfedilen-dusunce">Rastgele bir düşünce keşfet <span aria-hidden="true">↝</span></button>
+        </header>
+      </section>
+      <p id="archive-feedback" class="archive-feedback" role="status" aria-live="polite" aria-atomic="true"></p>
+    <section class="archive-shelf" aria-labelledby="kitaplik-baslik">
+      <div class="archive-section-label"><h2 id="kitaplik-baslik">Okuma rafı</h2></div>
+      <ul><!-- archive:shelf:start --><li><span class="shelf-author">Niccolò Machiavelli</span><h3><a href="dusunce-arsivi.html?kitap=prens#arsiv" data-archive-filter-link>Prens</a></h3><p>Güç, kararlar ve gerçek hayat</p><span class="shelf-state">5 düşünce</span></li><li><span class="shelf-author">Jules Payot</span><h3><a href="dusunce-arsivi.html?kitap=irade-terbiyesi#arsiv" data-archive-filter-link>İrade Terbiyesi</a></h3><p>İrade, dikkat ve çalışma</p><span class="shelf-state">5 düşünce</span></li><li><span class="shelf-author">Marcus Aurelius</span><h3><a href="dusunce-arsivi.html?kitap=kendime-dusunceler#arsiv" data-archive-filter-link>Kendime Düşünceler</a></h3><p>Yaşam, yargılar ve insan</p><span class="shelf-state">5 düşünce</span></li><!-- archive:shelf:end --></ul>
+    </section>
+
       <div class="archive-toolbar">
         <p id="archive-count" role="status" aria-live="polite" aria-atomic="true"><!-- archive:count:start -->15 düşünce<!-- archive:count:end --></p>
 
       </div>
-      <section class="discovery-stage" data-archive-discovery hidden aria-labelledby="kesif-baslik">
-        <header class="discovery-heading">
-          <p class="eyebrow">BİR SAYFA AÇ</p>
-          <h3 id="kesif-baslik">Bir düşünceyle<br><em>karşılaş.</em></h3>
-          <button class="archive-random" type="button" data-random-thought disabled aria-describedby="random-hint" aria-controls="kesfedilen-dusunce"><span aria-hidden="true">↝</span> Rastgele bir düşünce keşfet</button>
-          <p id="random-hint" data-random-hint>Doğrulanmış ilk düşünce yayımlandığında açılacak.</p>
-        </header>
-        <p class="discovery-invite">Bazen yeni bir soru,<br>beklemediğin bir cümleden doğar.</p>
-      </section>
-      <p id="archive-feedback" class="archive-feedback" role="status" aria-live="polite" aria-atomic="true"></p>
       <div class="archive-results"><!-- archive:cards:start --><article class="thought-card" id="dusunce-prens-01" data-archive-entry="prens-01" tabindex="-1" aria-labelledby="baslik-prens-01">
   <p class="thought-kind">Serbest çeviri</p>
   <p class="thought-text">Bir şeyin hayal edilen hâlinden çok, fiilî gerçeğinin peşinden gitmeyi daha uygun buldum.</p>
@@ -329,6 +321,7 @@
 
     <section class="archive-principles" id="yayin-ilkesi" aria-labelledby="yayin-ilkesi-baslik">
       <div class="archive-section-label"><h2 id="yayin-ilkesi-baslik">Bu arşivi nasıl okuyoruz?</h2><p>Metin ve yorum birbirinden ayrı.</p></div>
+      <p class="archive-help">İlk seçki: üç kitaptan 15 düşünce. Türkçe metinler, kaynakları kontrol edilmiş kısa pasajların bu arşiv için hazırlanmış serbest çevirileridir.</p>
       <p class="archive-help">Bu seçkide Machiavelli İtalyanca, Payot Fransızca kaynak metinden; Marcus Aurelius ise George Long’un İngilizce çevirisi üzerinden Türkçeye aktarıldı. Serbest çeviriler ve editoryal açıklamalar yapay zekâ desteğiyle hazırlandı. Kullanılan pasajı, baskıyı ve konumunu her düşüncenin kaynak bölümünde inceleyebilirsin. Bunlar yayımlanmış Türkçe baskılardan birebir alıntılar değildir.</p>
       <div class="archive-principle-grid"><section><h3>Kaynağıyla.</h3><p>Yazar, eser ve kullanılan baskı belirtilir. Doğrulanmamış bir söz, alıntı olarak yayımlanmaz.</p></section><section><h3>Bağlamıyla.</h3><p>Doğrudan alıntı, serbest çeviri ve parafraz açıkça etiketlenir. Bir cümle, kitabın bütünü yerine geçmez.</p></section><section><h3>Yorumuyla.</h3><p>Kendi çıkarımlarımızı ayrı yazarız. Bir düşünceyi uygularken sınırlarını ve eleştirilebilecek yanlarını da sorarız.</p></section></div>
     </section>
