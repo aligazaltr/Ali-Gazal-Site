@@ -1,4 +1,6 @@
 /* The reading room uses the same paper, ink and accent tokens as the site. */
+.archive-site { background: var(--bg); }
+
 .archive-page { padding-block: clamp(2.25rem, 5vw, 4.85rem) 4rem; }
 .archive-intro {
   display: grid;

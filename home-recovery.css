@@ -1,4 +1,6 @@
 /* The chapter layouts start below the existing film. */
+.neighborhood-home { background: var(--bg); }
+
 .home-experiments,
 .home-method,
 .home-library {
@@ -102,6 +104,7 @@
 .home-method .story-visual {
   padding: clamp(1.4rem, 3.8vw, 3rem);
   background: var(--bg-raised);
+  border: 0;
   border-radius: 4px;
 }
 
