@@ -3,18 +3,29 @@
   const preference = window.matchMedia('(prefers-reduced-motion: reduce)');
   const portraits = window.matchMedia('(max-width: 43rem)');
   const savesData = navigator.connection?.saveData;
+  const cameraEase = 'cubic-bezier(.25,.2,.3,.88)';
+  const textEase = 'cubic-bezier(.19,.7,.26,1)';
+  const textFrames = [
+    {transform:'translateY(.4em)', clipPath:'inset(0 -5% 92% -5%)', opacity:.12},
+    {transform:'translateY(.14em)', clipPath:'inset(-18% -5% 38% -5%)', opacity:.72, offset:.44},
+    {transform:'translateY(0)', clipPath:'inset(-20% -5% -24% -5%)', opacity:1}
+  ];
+  const revealText = (element, delay = 0) => element.animate(textFrames, {
+    duration: 760, delay, easing:textEase, fill:'backwards'
+  });
+
   const motion = {
     room: {
-      wide: ['scale(1.025) translate(-.3%, .1%)', 'scale(1.115) translate(-1.9%, .8%)'],
-      narrow: ['scale(1.025)', 'scale(1.105) translate(-1.2%, 1.25%)']
+      wide: ['scale(1.025) translate(-.3%, .1%)', 'scale(1.125) translate(-2.8%, 1.45%)'],
+      narrow: ['scale(1.025)', 'scale(1.105) translate(-1.9%, 1.45%)']
     },
     desk: {
       wide: ['scale(1.025) translate(-.3%, .1%)', 'scale(1.155) translate(-2.1%, 1.35%)'],
       narrow: ['scale(1.025)', 'scale(1.135) translate(-1.55%, 1.45%)']
     },
     branch: {
-      wide: ['translate(-19%, 9%) rotate(-7deg) scale(.84)', 'translate(-2%, -1%) rotate(1deg) scale(1.07)'],
-      narrow: ['translate(-22%, 6%) rotate(-8deg) scale(.86)', 'translate(-2%, -2%) rotate(0deg) scale(1.07)']
+      wide: ['translate(-6%, -5%) rotate(-9deg) scale(.84)', 'translate(-17%, 6%) rotate(-1deg) scale(1.075)', 'translate(-13%, 3%) rotate(-2.5deg) scale(1.09)'],
+      narrow: ['translate(-8%, -4%) rotate(-8deg) scale(.85)', 'translate(-16%, 5%) rotate(-1deg) scale(1.065)', 'translate(-13%, 2%) rotate(-2deg) scale(1.08)']
     },
     sun: {
       wide: ['translateX(-11%) scale(.92)', 'translateX(4%) scale(1.1)'],
@@ -26,6 +37,7 @@
     const planes = [...scene.querySelectorAll('[data-world-plane]')];
     const button = scene.querySelector('[data-world-toggle]');
     const layers = [...scene.querySelectorAll('.world-parallax img')];
+    const words = [...scene.querySelectorAll('[data-world-word]')];
     let layered = false;
     let decoding;
     let animations = [];
@@ -59,18 +71,21 @@
 
     function makeAnimations() {
       const direction = portraits.matches ? 'narrow' : 'wide';
-      const duration = button ? 5350 : 3400;
-      return planes.filter(plane => !plane.closest('.world-parallax') || layered).map(plane => {
-        const [start, end] = motion[plane.dataset.worldPlane][direction];
-        const frames = [{transform:start}, {transform:end}];
-        if (plane.dataset.worldPlane === 'sun') {
+      const duration = button ? 4900 : 3400;
+      const camera = planes.filter(plane => !plane.closest('.world-parallax') || layered).map(plane => {
+        const kind = plane.dataset.worldPlane;
+        const transforms = motion[kind][direction];
+        const frames = transforms.map(transform => ({transform}));
+        if (kind === 'branch') frames[1].offset = .68;
+        if (kind === 'sun') {
           frames[0].opacity = .15;
           frames[1].opacity = .45;
         }
-        const animation = plane.animate(frames, {duration, easing:'cubic-bezier(.18,.58,.24,1)',fill:'both'});
-        animation.addEventListener('finish', updateButton);
-        return animation;
+        return plane.animate(frames, {duration, easing:cameraEase, fill:'both'});
       });
+      const sequence = [...camera, ...words.map((word, i) => revealText(word, (button ? 270 : 95) + 105 * i))];
+      sequence.forEach(animation => animation.addEventListener('finish', updateButton));
+      return sequence;
     }
 
     function synchronize() {
@@ -88,7 +103,7 @@
             layered = true;
             const currentTime = animations[0]?.currentTime ?? 0;
             animations.forEach(item => item.cancel());
-            animations = makeAnimations();
+            animations = active() ? makeAnimations() : [];
             animations.forEach(item => { item.currentTime = currentTime; });
             synchronize();
           }).catch(() => {});
@@ -102,6 +117,13 @@
       }
       updateButton();
     }
+
+    scene.addEventListener('focusin', event => {
+      animations.forEach(item => {
+        const target = item.effect?.target;
+        if (target?.hasAttribute('data-world-word') && target.contains(event.target)) item.finish();
+      });
+    });
 
     button?.addEventListener('click', () => {
       const ended = animations.every(item => item.playState === 'finished');
@@ -128,4 +150,20 @@
     });
     updateButton();
   }
+
+  const pageReveals = new Set();
+  const reader = new IntersectionObserver(entries => {
+    for (const entry of entries) {
+      if (!entry.isIntersecting) continue;
+      reader.unobserve(entry.target);
+      if (preference.matches || savesData || document.hidden) continue;
+      const animation = revealText(entry.target);
+      pageReveals.add(animation);
+      animation.finished.catch(() => {}).finally(() => pageReveals.delete(animation));
+    }
+  }, {threshold:.24});
+  document.querySelectorAll('[data-world-reveal]').forEach(heading => reader.observe(heading));
+  preference.addEventListener('change', () => {
+    if (preference.matches) pageReveals.forEach(animation => animation.cancel());
+  });
 })();
