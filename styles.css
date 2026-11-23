@@ -1,96 +1,40 @@
 :root {
-  color-scheme: dark;
-  --bg: #0b0b0a;
-  --bg-raised: #121210;
-  --surface: #171714;
-  --surface-strong: #1e1d19;
-  --text: #f6f2ea;
-  --muted: #aaa69e;
-  --muted-strong: #d1ccc3;
-  --line: rgba(246, 242, 234, 0.13);
-  --line-strong: rgba(246, 242, 234, 0.23);
-  --orange: #ff861f;
-  --orange-soft: rgba(255, 134, 31, 0.12);
-  --orange-line: rgba(255, 134, 31, 0.36);
-  --button-bg: #ff861f;
-  --button-hover: #ffa148;
-  --button-text: #160b03;
-  --status-text: #ffad69;
-  --header-bg: rgba(11, 11, 10, 0.88);
-  --glow: rgba(255, 134, 31, 0.08);
-  --note-wash: rgba(255, 134, 31, 0.17);
-  --note-rule: rgba(255, 255, 255, 0.035);
-  --paper-line: rgba(255, 255, 255, 0.012);
-  --card-wash: rgba(255, 134, 31, 0.07);
-  --watermark: rgba(255, 134, 31, 0.07);
-  --index: rgba(255, 134, 31, 0.55);
-  --shadow-raised: 0 1.1rem 2.6rem rgba(0, 0, 0, 0.24);
+  color-scheme: light dark;
+  --bg: light-dark(#f4ebdb, #191713);
+  --bg-raised: light-dark(#eadcc5, #23201a);
+  --surface: light-dark(#fcf5e8, #28231c);
+  --surface-strong: light-dark(#eaddc7, #322b22);
+  --text: light-dark(#2a2119, #f5eddf);
+  --muted: light-dark(#655747, #b9ad9d);
+  --muted-strong: light-dark(#493b2e, #dfd3c2);
+  --line: light-dark(rgba(75,52,30,.19), rgba(232,216,191,.17));
+  --line-strong: light-dark(rgba(75,52,30,.42), rgba(232,216,191,.36));
+  --orange: light-dark(#884919, #ecae72);
+  --orange-soft: light-dark(rgba(136,73,25,.1), rgba(236,174,114,.13));
+  --orange-line: light-dark(rgba(136,73,25,.53), rgba(236,174,114,.48));
+  --button-bg: light-dark(#75401f, #e5a975);
+  --button-hover: light-dark(#5b3018, #f1bd92);
+  --button-text: light-dark(#fff9ed, #21170f);
+  --status-text: light-dark(#78441f, #f1b888);
+  --header-bg: light-dark(rgba(244,235,219,.96), rgba(25,23,19,.96));
+  --glow: light-dark(rgba(178,112,58,.12), rgba(234,173,116,.1));
+  --note-wash: light-dark(rgba(169,110,57,.14), rgba(234,173,116,.13));
+  --note-rule: light-dark(rgba(58,39,24,.075), rgba(240,223,201,.04));
+  --paper-line: light-dark(rgba(58,39,24,.012), rgba(240,223,201,.013));
+  --card-wash: light-dark(rgba(166,111,62,.11), rgba(234,173,116,.09));
+  --watermark: light-dark(rgba(136,73,25,.1), rgba(236,174,114,.1));
+  --index: light-dark(rgba(136,73,25,.77), rgba(236,174,114,.6));
+  --shadow-raised: 0 1.1rem 2.6rem light-dark(rgba(61,40,19,.14), rgba(0,0,0,.28));
+  --art-ink: #fff4e2;
+  --art-shade: #2c241b;
   --shell: 72rem;
   --radius: 0.45rem;
   --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
   --literary: Georgia, "Times New Roman", serif;
 }
 
-/* A saved choice wins. With scripts disabled, the system preference still works. */
-:root[data-theme="light"] {
-  color-scheme: light;
-  --bg: #f5f0e7;
-  --bg-raised: #eee8dd;
-  --surface: #f3ede3;
-  --surface-strong: #f6efe3;
-  --text: #242019;
-  --muted: #625d54;
-  --muted-strong: #474138;
-  --line: rgba(53, 40, 23, 0.17);
-  --line-strong: rgba(53, 40, 23, 0.32);
-  --orange: #974000;
-  --orange-soft: rgba(161, 69, 0, 0.1);
-  --orange-line: rgba(151, 64, 0, 0.38);
-  --button-bg: #ff912f;
-  --button-hover: #ffac62;
-  --button-text: #241207;
-  --status-text: #813600;
-  --header-bg: rgba(245, 240, 231, 0.9);
-  --glow: rgba(255, 145, 47, 0.12);
-  --note-wash: rgba(255, 145, 47, 0.16);
-  --note-rule: rgba(36, 32, 25, 0.055);
-  --paper-line: rgba(36, 32, 25, 0.012);
-  --card-wash: rgba(255, 145, 47, 0.1);
-  --watermark: rgba(151, 64, 0, 0.1);
-  --index: rgba(151, 64, 0, 0.74);
-  --shadow-raised: 0 1.1rem 2.6rem rgba(64, 42, 18, 0.12);
-}
-
-@media (prefers-color-scheme: light) {
-  :root:not([data-theme]) {
-    color-scheme: light;
-    --bg: #f5f0e7;
-    --bg-raised: #eee8dd;
-    --surface: #f3ede3;
-    --surface-strong: #f6efe3;
-    --text: #242019;
-    --muted: #625d54;
-    --muted-strong: #474138;
-    --line: rgba(53, 40, 23, 0.17);
-    --line-strong: rgba(53, 40, 23, 0.32);
-    --orange: #974000;
-    --orange-soft: rgba(161, 69, 0, 0.1);
-    --orange-line: rgba(151, 64, 0, 0.38);
-    --button-bg: #ff912f;
-    --button-hover: #ffac62;
-    --button-text: #241207;
-    --status-text: #813600;
-    --header-bg: rgba(245, 240, 231, 0.9);
-    --glow: rgba(255, 145, 47, 0.12);
-    --note-wash: rgba(255, 145, 47, 0.16);
-    --note-rule: rgba(36, 32, 25, 0.055);
-  --paper-line: rgba(36, 32, 25, 0.012);
-    --card-wash: rgba(255, 145, 47, 0.1);
-    --watermark: rgba(151, 64, 0, 0.1);
-    --index: rgba(151, 64, 0, 0.74);
-    --shadow-raised: 0 1.1rem 2.6rem rgba(64, 42, 18, 0.12);
-  }
-}
+:root[data-theme="light"] { color-scheme: light; }
+:root[data-theme="dark"] { color-scheme: dark; }
 
 *,
 *::before,
@@ -109,10 +53,7 @@ html {
 
 body {
   margin: 0;
-  background:
-    radial-gradient(ellipse at 90% 5%, var(--note-wash), transparent 38rem),
-    repeating-linear-gradient(0deg, transparent 0 4px, var(--paper-line) 4px 5px),
-    var(--bg);
+  background: var(--bg);
   color: var(--text);
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 1rem;

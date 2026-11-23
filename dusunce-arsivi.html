@@ -31,6 +31,7 @@
   <link rel="stylesheet" href="motion.css">
   <link rel="stylesheet" href="signature.css">
   <link rel="stylesheet" href="neighborhood.css">
+  <link rel="stylesheet" href="living-archive.css">
 </head>
 <body class="archive-site">
   <a class="skip-link" href="#icerik">İçeriğe geç</a>
@@ -67,7 +68,7 @@
         <p class="lead">Kitaplardan seçtiğim düşünceleri kaynakları, yorumları ve gerçek hayat deneyleriyle birlikte oku.</p>
         <a class="archive-jump" href="#arsiv">Düşüncelerde ara <span aria-hidden="true">↓</span></a>
       </div>
-      <img class="archive-intro-art" src="thought-library-illustration.webp" alt="" width="1080" height="720" fetchpriority="high">
+      <img class="archive-intro-art" src="living-reading-room.webp" srcset="living-reading-room-600.webp 600w, living-reading-room.webp 1080w" sizes="(max-width: 43rem) calc(100vw - 2rem), 40vw" alt="" width="1080" height="720" fetchpriority="high" decoding="async">
     </header>
 
     <section id="arsiv" class="archive-browser" aria-labelledby="arsiv-baslik">
@@ -84,11 +85,12 @@
       <noscript><p class="archive-help">Yayımlanmış bütün düşünceler aşağıda okunabilir. Arama ve filtreler için JavaScript gerekir; tarayıcının sayfada bul özelliğini de kullanabilirsin.</p></noscript>
       <section class="discovery-stage" data-archive-discovery hidden aria-labelledby="kesif-baslik">
         <header class="discovery-heading">
-          <div>
-            <h3 id="kesif-baslik">Bir düşünceyle karşılaş.</h3>
+          <div class="discovery-copy">
+            <h3 id="kesif-baslik">Bazen yeni bir soru, beklemediğin bir cümleden doğar.</h3>
+            <button class="archive-random" type="button" data-random-thought disabled aria-describedby="random-hint" aria-controls="kesfedilen-dusunce">Rastgele bir düşünce keşfet <span aria-hidden="true">↝</span></button>
             <p id="random-hint" data-random-hint>Doğrulanmış ilk düşünce yayımlandığında açılacak.</p>
           </div>
-          <button class="archive-random" type="button" data-random-thought disabled aria-describedby="random-hint" aria-controls="kesfedilen-dusunce">Rastgele bir düşünce keşfet <span aria-hidden="true">↝</span></button>
+          <img src="living-idea.webp" class="discovery-art" alt="" width="900" height="600" loading="lazy" decoding="async">
         </header>
       </section>
       <p id="archive-feedback" class="archive-feedback" role="status" aria-live="polite" aria-atomic="true"></p>

@@ -14,7 +14,11 @@ function fixture(reduced = false, animationSupport = true, mobile = false) {
     const animation = { finished, finish, cancel: () => { animation.cancelled = true; reject(new Error('cancelled')); } };
     calls.push({ element: this, frames, options, animation }); return animation;
   };
-  const document = { hidden: false, querySelectorAll: () => [], addEventListener: (name, callback) => { listeners[name] = callback; } };
+  const document = {
+    hidden: false, querySelectorAll: () => [],
+    addEventListener: (name, callback) => { listeners[name] = callback; },
+    removeEventListener: () => {}
+  };
   const compact = { matches: mobile, addEventListener: (_, callback) => { listeners.compact = callback; } };
   const observers = [];
   class IntersectionObserver {
@@ -23,7 +27,14 @@ function fixture(reduced = false, animationSupport = true, mobile = false) {
     unobserve(target) { this.targets = this.targets.filter(item => item !== target); }
     disconnect() { this.disconnected = true; this.targets = []; }
   }
-  const window = { matchMedia: q => q.includes('reduced') ? preference : compact, IntersectionObserver, innerWidth: mobile ? 390 : 1440, innerHeight: 800 };
+  const window = {
+    matchMedia: q => q.includes('reduced') ? preference : compact,
+    IntersectionObserver, innerWidth: mobile ? 390 : 1440, innerHeight: 800,
+    addEventListener: (name, callback) => { listeners[name] = callback; },
+    removeEventListener: () => {},
+    requestAnimationFrame: callback => { listeners.frame = callback; return 1; },
+    cancelAnimationFrame: () => {}
+  };
   vm.runInNewContext(source, { window, document, Element, IntersectionObserver, Map, WeakSet, Set });
   const element = Object.assign(new Element(), { hidden: false, getClientRects: () => [{}], contains: () => false });
   return { api: window.AG_MOTION, calls, element, preference, listeners, document, window, compact, observers, Element };
@@ -95,11 +106,12 @@ function storyFixture(mobile) {
     getClientRects: () => [{}], getBoundingClientRect: () => ({ top: 160, bottom: 500, left: 20, right: 300 }), contains: () => false
   });
   const scenes = ['FİKİR', 'DENEY', 'SONUÇ'].map((label, i) => {
-    const scene = node(''); const children = { '.scene-number': node(String(i + 1)), '.scene-label': node(label), h3: node(label + ' başlık'), '.scene-description': node(label + ' açıklama'), '.scene-glyph': node('') };
+    const scene = node(''); const children = { '.story-local-plate': node(String(i + 1)), '.scene-label': node(label), h3: node(label + ' başlık') };
     scene.querySelector = selector => children[selector]; scene.children = children; return scene;
   });
   const stage = node('');
-  const parts = { '.story-visual': stage, '.story-word': node('FİKİR'), '[data-story-number]': node('01'), '[data-story-label]': node('FİKİR'), '[data-story-caption]': node(''), '[data-story-description]': node('') };
+  stage.querySelector = () => null;
+  const parts = { '.story-visual': stage, '[data-story-number]': node('01'), '[data-story-label]': node('FİKİR') };
   const story = node(''); story.querySelectorAll = () => scenes; story.querySelector = selector => parts[selector];
   f.document.querySelectorAll = selector => selector === '[data-story]' ? [story] : [];
   f.api.init(); return { ...f, story, scenes, parts };
@@ -109,22 +121,46 @@ test('mobile scenes reveal their own content without updating or animating the h
   f.observers[0].callback([{ target: f.scenes[1], isIntersecting: true }]);
   assert.equal(f.story.dataset.storyMode, 'local');
   assert.equal(f.parts['[data-story-number]'].textContent, '01');
-  assert.ok(f.calls.some(call => call.element === f.scenes[1].children['.scene-number']));
+  assert.ok(f.calls.some(call => call.element === f.scenes[1].children['.story-local-plate']));
   assert.ok(f.calls.some(call => call.element === f.scenes[1].children.h3));
   assert.ok(!f.calls.some(call => Object.values(f.parts).includes(call.element)));
   const count = f.calls.length;
   f.observers[0].callback([{ target: f.scenes[1], isIntersecting: false }, { target: f.scenes[1], isIntersecting: true }]);
   assert.equal(f.calls.length, count, 'scene plays once');
 });
-test('desktop sticky story still changes number, label, title and description', () => {
+test('desktop stage follows visible questions in both scroll directions', () => {
   const f = storyFixture(false);
-  f.observers[0].callback([{ target: f.scenes[2], isIntersecting: true }]);
+  const [idea, experiment, result] = f.scenes;
+  const observer = f.observers[0];
+  const box = (element, top, bottom) => { element.getBoundingClientRect = () => ({ top, bottom, left: 20, right: 300 }); };
+  box(idea.children.h3, 320, 370);
+  box(experiment.children.h3, 825, 875);
+  observer.callback([{ target: idea, isIntersecting: true }, { target: experiment, isIntersecting: true }]);
   assert.equal(f.story.dataset.storyMode, 'sticky');
+  assert.equal(f.story.dataset.scene, '0');
+  assert.equal(f.parts['[data-story-label]'].textContent, 'FİKİR');
+
+  box(idea, -175, -25);
+  box(experiment.children.h3, 320, 370);
+  f.listeners.scroll();
+  f.listeners.frame();
+  assert.equal(f.story.dataset.scene, '1');
+  assert.equal(f.parts['[data-story-label]'].textContent, 'DENEY');
+
+  box(experiment, -175, 5);
+  box(experiment.children.h3, -90, -40);
+  observer.callback([{ target: result, isIntersecting: true }]);
   assert.equal(f.story.dataset.scene, '2');
   assert.equal(f.parts['[data-story-number]'].textContent, '03');
   assert.equal(f.parts['[data-story-label]'].textContent, 'SONUÇ');
-  assert.equal(f.parts['[data-story-caption]'].textContent, 'SONUÇ başlık');
-  assert.equal(f.parts['[data-story-description]'].textContent, 'SONUÇ açıklama');
+
+  box(result, 805, 1000);
+  box(experiment, 160, 500);
+  box(experiment.children.h3, 320, 370);
+  f.listeners.scroll();
+  f.listeners.frame();
+  assert.equal(f.story.dataset.scene, '1');
+  assert.equal(f.parts['[data-story-label]'].textContent, 'DENEY');
 });
 test('breakpoint changes disconnect the old story controller', () => {
   const f = storyFixture(false); f.compact.matches = true; f.listeners.compact();
