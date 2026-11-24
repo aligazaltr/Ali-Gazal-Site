@@ -40,6 +40,8 @@
   <link rel="stylesheet" href="home-recovery.css">
   <link rel="stylesheet" href="archive-world.css">
   <script src="archive-world.js" defer></script>
+  <link rel="stylesheet" href="home-journey.css">
+  <script src="home-journey.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#icerik">İçeriğe geç</a>
@@ -70,7 +72,7 @@
 
 
   <main id="icerik" class="world-home">
-    <section class="world-hero" data-world-scene aria-labelledby="library-title">
+<div class="journey" data-journey id="fikirden-deneye"><div class="journey-stage"><section class="world-hero" data-journey-scene="0" data-world-scene aria-labelledby="library-title">
       <div class="world-camera" aria-hidden="true">
         <div class="world-panorama" data-world-plane="room">
           <picture>
@@ -102,21 +104,21 @@
         </div>
         <button class="world-motion-toggle" type="button" data-world-toggle hidden>Hareketi durdur</button>
       </div>
-    </section>
-
-    <section id="yasayan-arsiv" class="world-alcove" aria-labelledby="dusunce-daveti">
-      <div class="world-alcove-inner site-shell">
-        <figure class="world-reference">
-          <img src="thought-library-illustration.webp" width="1080" height="720" alt="Taş bir pervazda üst üste duran üç eski kitap, aralarındaki not ve kemerin yanındaki zeytin yaprakları" loading="lazy" decoding="async">
-        </figure>
-        <div class="world-alcove-copy">
-          <h2 id="dusunce-daveti" data-world-reveal>Düşünce Arşivi</h2>
-          <p>Kitaplardan seçilmiş düşünceleri kaynakları ve yorumlarıyla oku. Bir yazar, kitap veya konuyla başla.</p>
-          <a class="world-quiet" href="dusunce-arsivi.html#arsiv">Arşivi keşfet <span aria-hidden="true">→</span></a>
-        </div>
-      </div>
-    </section>
-
+    </section><section class="journey-scene journey-room" data-journey-scene="1" id="hikaye-fikir" aria-labelledby="journey-title-1">
+  <div class="journey-landscape" aria-hidden="true"><img src="story-reading-table.webp" alt="" width="900" height="600" decoding="async"></div>
+  <div class="journey-shade" aria-hidden="true"></div>
+  <div class="journey-copy site-shell"><p class="journey-label">FİKİR</p><h2 id="journey-title-1">Bir fikir ne kadar güçlü olabilir?</h2><p>Bir düşünceyi anlamak için önce onun ne iddia ettiğini araştırıyorum.</p><p class="journey-note">Kaynağı oku. İddiayı anla. Soruyu belirle.</p></div>
+</section><section class="journey-scene journey-room" data-journey-scene="2" id="hikaye-deney" aria-labelledby="journey-title-2">
+  <div class="journey-landscape" aria-hidden="true"><img src="journey-courtyard.webp" alt="" width="1672" height="941" decoding="async"></div>
+  <div class="journey-shade" aria-hidden="true"></div>
+  <div class="journey-copy site-shell"><p class="journey-label">DENEY</p><h2 id="journey-title-2">Peki gerçek hayatta ne oluyor?</h2><p>Fikirleri yalnızca okumuyor, gerçek koşullarda test ediyorum.</p><p class="journey-note">Uygula. Zorlandığın anları kaydet. Değişimi izle.</p></div>
+</section><section class="journey-scene journey-room" data-journey-scene="3" id="hikaye-sonuc" aria-labelledby="journey-title-3">
+  <div class="journey-landscape" aria-hidden="true"><img src="living-result.webp" alt="" width="900" height="600" decoding="async"></div>
+  <div class="journey-shade" aria-hidden="true"></div>
+  <div class="journey-copy site-shell"><p class="journey-label">SONUÇ</p><h2 id="journey-title-3">Gerçekten işe yaradı mı?</h2><p>Başarıları, başarısızlıkları ve sınırları olduğu gibi paylaşıyorum.</p><p class="journey-note">Sonucu, kanıtları ve eksikleri birlikte değerlendir.</p></div>
+</section><section class="journey-scene journey-room" data-journey-scene="4" aria-labelledby="journey-discover">
+<div class="journey-landscape" aria-hidden="true"><img src="living-gallery.webp" alt="" width="1080" height="720" decoding="async"></div><div class="journey-shade" aria-hidden="true"></div>
+<div class="journey-copy site-shell"><p class="journey-label">KEŞFET</p><h2 id="journey-discover">Şimdi, gerçek hayata.</h2><p>Deneyleri, kaynakları ve dürüst kayıtları keşfet.</p><div class="world-actions"><a class="world-action" href="#gercek-deneyler">Deneyleri keşfet ↓</a><a class="world-quiet" href="dusunce-arsivi.html">Düşünce Arşivi →</a></div></div></section><img class="journey-near-leaves" src="night-branch.webp" width="171" height="198" alt="" aria-hidden="true"><div class="journey-light" aria-hidden="true"></div><nav class="journey-wayfinder" aria-label="Yolculuk sahneleri"><a href="#library-title" aria-current="step">Giriş</a><a href="#hikaye-fikir">Fikir</a><a href="#hikaye-deney">Deney</a><a href="#hikaye-sonuc">Sonuç</a><a href="#journey-discover">Keşfet</a></nav><a class="journey-skip" href="#gercek-deneyler">Deneylere geç ↘</a></div></div>
     <section id="gercek-deneyler" class="site-shell home-experiments" aria-labelledby="proje-baslik">
       <header class="home-section-heading">
         <h2 id="proje-baslik" data-world-reveal>Gerçek deneyler</h2>
@@ -162,22 +164,17 @@
       </div>
     </section>
 
-    <section id="fikirden-deneye" class="site-shell home-method" aria-labelledby="hikaye-baslik">
-      <!-- experience:story:method:start --><header class="home-section-heading"><h2 id="hikaye-baslik" data-world-reveal>Bir fikir. Gerçek hayat. Dürüst bir sonuç.</h2></header>
-  <div class="story-layout" data-story data-scene="0">
-    <div class="story-visual" aria-hidden="true">
-      <div class="story-gallery">
-        <img class="story-plate" data-story-plate="0" src="story-reading-table.webp" alt="" width="900" height="600" loading="lazy" decoding="async"><img class="story-plate" data-story-plate="1" src="living-experiment.webp" alt="" width="900" height="600" loading="lazy" decoding="async"><img class="story-plate" data-story-plate="2" src="living-result.webp" alt="" width="900" height="600" loading="lazy" decoding="async">
-        <span class="story-travel-light"></span>
+    <section id="yasayan-arsiv" class="world-alcove" aria-labelledby="dusunce-daveti">
+      <div class="world-alcove-inner site-shell">
+        <figure class="world-reference">
+          <img src="thought-library-illustration.webp" width="1080" height="720" alt="Taş bir pervazda üst üste duran üç eski kitap, aralarındaki not ve kemerin yanındaki zeytin yaprakları" loading="lazy" decoding="async">
+        </figure>
+        <div class="world-alcove-copy">
+          <h2 id="dusunce-daveti" data-world-reveal>Düşünce Arşivi</h2>
+          <p>Kitaplardan seçilmiş düşünceleri kaynakları ve yorumlarıyla oku. Bir yazar, kitap veya konuyla başla.</p>
+          <a class="world-quiet" href="dusunce-arsivi.html#arsiv">Arşivi keşfet <span aria-hidden="true">→</span></a>
+        </div>
       </div>
-      <div class="story-overlay">
-        <div class="ag-signature" data-signature-state="0" aria-hidden="true"><div class="signature-rings"><i class="signature-ring ring-outer" data-morph></i><i class="signature-ring ring-middle" data-morph></i><i class="signature-ring ring-inner" data-morph></i><span class="signature-mark" data-morph>AG<span></span></span></div></div>
-        <p class="story-counter"><span data-story-number>01</span> / 03</p>
-        <p class="story-word" data-story-label>FİKİR</p>
-      </div>
-    </div>
-    <div class="story-scenes"><article class="story-scene" data-story-scene id="hikaye-fikir"><div class="story-local-window"><img class="story-local-plate" src="story-reading-table.webp" alt="" width="900" height="600" loading="lazy" decoding="async"></div><div class="story-scene-heading"><p class="eyebrow"><span class="scene-number">01</span> <span class="scene-label">FİKİR</span></p></div><div class="reveal-mask"><h3>Bir fikir ne kadar güçlü olabilir?</h3></div><p class="scene-description">Bir düşünceyi anlamak için önce onun ne iddia ettiğini araştırıyorum.</p><p class="story-note">Kaynağı oku. İddiayı anla. Soruyu belirle.</p></article><article class="story-scene" data-story-scene id="hikaye-deney"><div class="story-local-window"><img class="story-local-plate" src="living-experiment.webp" alt="" width="900" height="600" loading="lazy" decoding="async"></div><div class="story-scene-heading"><p class="eyebrow"><span class="scene-number">02</span> <span class="scene-label">DENEY</span></p></div><div class="reveal-mask"><h3>Peki gerçek hayatta ne oluyor?</h3></div><p class="scene-description">Fikirleri yalnızca okumuyor, gerçek koşullarda test ediyorum.</p><p class="story-note">Uygula. Zorlandığın anları kaydet. Değişimi izle.</p></article><article class="story-scene" data-story-scene id="hikaye-sonuc"><div class="story-local-window"><img class="story-local-plate" src="living-result.webp" alt="" width="900" height="600" loading="lazy" decoding="async"></div><div class="story-scene-heading"><p class="eyebrow"><span class="scene-number">03</span> <span class="scene-label">SONUÇ</span></p></div><div class="reveal-mask"><h3>Gerçekten işe yaradı mı?</h3></div><p class="scene-description">Başarıları, başarısızlıkları ve sınırları olduğu gibi paylaşıyorum.</p><p class="story-note">Sonucu, kanıtları ve eksikleri birlikte değerlendir.</p></article></div>
-  </div><!-- experience:story:method:end -->
     </section>
 
     <section class="site-shell home-author" aria-labelledby="yaklasim-baslik">

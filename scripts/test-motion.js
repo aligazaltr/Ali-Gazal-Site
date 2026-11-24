@@ -100,12 +100,12 @@ test('archive hero, imagery and three full scenes survive without JavaScript', (
   assert.match(discovery, /Bazen yeni bir soru, beklemediğin bir cümleden doğar/);
   assert.match(discovery, /src="discovery-folios.webp"/);
   assert.doesNotMatch(discovery, /discovery-stationery|living-idea.webp/);
-  assert.match(html, /class="story-travel-light"/);
+  assert.match(html, /class="journey-light"/);
   for (const scene of data.experience.stories.method.scenes) {
     assert.ok(html.includes(`id="hikaye-${scene.id}"`));
     assert.ok(html.includes(scene.title)); assert.ok(html.includes(scene.description));
   }
-  assert.equal((html.match(/data-story-scene/g) || []).length, 3);
+  assert.equal((html.match(/data-journey-scene=/g) || []).length, 5);
   assert.ok(!html.includes('three.js'));
 });
 
@@ -205,7 +205,7 @@ test('off-screen and reduced-motion morphs commit meaning without scheduling vis
 test('signature replaces paper compositions while research facts remain in the document', () => {
   const html = fs.readFileSync(require.resolve('../index.html'), 'utf8');
   const research = fs.readFileSync(require.resolve('../machiavelli.html'), 'utf8');
-  assert.ok(html.includes('ag-signature')); assert.ok(!html.includes('folio-leaf'));
+  assert.ok(html.includes('journey-wayfinder')); assert.ok(!html.includes('folio-leaf'));
   assert.ok(!research.includes('case-study')); assert.ok(!research.includes('case-record-rail'));
   for (const id of ['kurallar', 'kanit-defteri', 'sonuc']) assert.ok(research.includes(`id="${id}"`));
   assert.ok(research.replace(/\s+/g, ' ').includes(require('../site-data.js').projects.machiavelli.result.summary));
