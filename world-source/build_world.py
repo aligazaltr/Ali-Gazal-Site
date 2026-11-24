@@ -148,11 +148,12 @@ for ya,yb,name in [(-8,-52,'UpperRiver'),(-52,-140,'LowerRiver')]:
 verts=[];faces=[]
 for j in range(25):
  t=j/24
- for k in range(33):verts.append((river_x(-52)+(k/32-.5)*10.5,-51.8-.8*math.sin(t*math.pi/2),3-1.85*t+.045*math.sin(k*2+t*10)))
+ for k in range(33):verts.append((river_x(-52)+(k/32-.5)*10.5,-52-.8*math.sin(t*math.pi/2),3-1.85*t))
 for j in range(24):
  for k in range(32):
   a=j*33+k;faces.append((a,a+1,a+34,a+33))
 fall=mesh('Waterfall',verts,faces,water)
+for polygon in fall.data.polygons:polygon.use_smooth=True
 # River edge rocks vary smoothly in size and angle.
 for j in range(90):
  y=random.uniform(-120,-9);side=random.choice([-1,1]);x=river_x(y)+side*random.uniform(5.2,7.8);z=river_z(y)

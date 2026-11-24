@@ -4,6 +4,7 @@ import { cameraPose } from './world-camera.js';
 
 export async function createLivingWorld(canvas, onProgress=()=>{}) {
  const renderer=new THREE.WebGLRenderer({canvas,antialias:true,alpha:false,powerPreference:'high-performance'});
+ renderer.debug.onShaderError=()=>{throw new Error('3D shader compilation failed');};
  renderer.outputColorSpace=THREE.SRGBColorSpace;
  renderer.toneMapping=THREE.ACESFilmicToneMapping;
  renderer.toneMappingExposure=1.05;
@@ -40,7 +41,7 @@ export async function createLivingWorld(canvas, onProgress=()=>{}) {
   for(const material of Array.isArray(object.material)?object.material:[object.material]) {
    material.envMapIntensity=.7;
    if(material.map)material.map.anisotropy=Math.min(8,renderer.capabilities.getMaxAnisotropy());
-   if(/River water/.test(material.name))waterMaterials.add(material);
+   if(/River water|Aerated falling water/.test(material.name))waterMaterials.add(material);
    if(/Olive leaf/.test(material.name)){leafMaterials.add(material);material.side=THREE.DoubleSide;}
   }
  });

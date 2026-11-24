@@ -19,4 +19,12 @@ try{
   if(overview){world.camera.position.set(70,95,65);world.camera.lookAt(0,0,45);world.renderer.render(world.scene,world.camera);}
   requestAnimationFrame(loop);
  }requestAnimationFrame(loop);
-}catch(error){status.textContent='3D ortam açılamadı. '+error.message;}
+ }catch(error){
+ canvas.hidden=true;
+ const video=document.createElement('video');video.id='review-film';video.src='world-film.mp4';video.poster='world-poster.webp';video.muted=true;video.playsInline=true;video.preload='auto';document.body.append(video);
+ const image=document.createElement('img');image.id='review-overview';image.src='world-overview.webp';image.alt='Aynı üç boyutlu dünya ve altın çizgiyle kamera rotası';image.hidden=true;document.body.append(image);
+ status.textContent='Bu tarayıcıda WebGL açılamadı. Aynı 3D ortamın render edilmiş kamera filmi kullanılabilir.';
+ document.querySelector('#play').onclick=()=>{image.hidden=true;video.currentTime=0;video.play().catch(()=>{});};
+ const button=document.querySelector('#record');button.textContent='Render edilmiş kamera filmini indir';button.onclick=()=>{const link=document.createElement('a');link.href='world-film.mp4';link.download='Ali_Gazal_3D_Kamera_Yolculugu.mp4';link.click();};
+ document.querySelector('#overview').onclick=()=>{video.pause();image.hidden=!image.hidden;};
+}
