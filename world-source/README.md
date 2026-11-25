@@ -1,20 +1,39 @@
-# Living World source
+# Living World · continued quality pass
 
-The geometry, procedural colour maps and camera route are authored in `build_world.py`. They share one Blender Z-up coordinate system in metres. The camera crosses the physical room opening at Y=0. Both river sections meet the waterfall at Y=-52. The route remains in the same scene for the final elevated view.
+This continues the world at PR #33 / `7072ef582e1b8cf5db8699f3d406bbc8267a5b61`. The room, physical arch at Y=0, valley, river, terrace, bridge and waterfall remain in the same Blender Z-up coordinate system, in metres. No photographs or AI environment images are used in the film.
 
-Recreate with Blender 4.3.2 and its bundled NumPy.
+## Exact scene
+
+`living-world-refined.blend` is a compressed native Blender 4.3.2 file. It includes packed textures and original page artwork. Open it directly in Blender; no external download is required. `authored-page.png` is an original essay texture, not a scanned third-party book.
+
+The refinement source is `refine_world.py`. To rebuild from the original geometry:
 
 ```sh
-blender -b --python world-source/build_world.py -- /absolute/output
-blender -b --python world-source/render_film.py -- /absolute/output/living-world.blend /absolute/frames 0 360
-python3 world-source/denoise_film.py /absolute/frames /absolute/clean 360
-ffmpeg -framerate 12 -i /absolute/clean/%04d.png -c:v libx264 -preset slow -crf 22 -g 1 -pix_fmt yuv420p -movflags +faststart world-film.mp4
+blender -b --python world-source/build_world.py -- /absolute/base-world
+blender -b --python world-source/refine_world.py -- /absolute/base-world/living-world.blend /absolute/refined-world
 ```
 
-The film is 960×540 at 12 rendered frames per second for 30 seconds. OpenImageDenoise removes Monte Carlo noise, with no replacement of scene content. Install the external processing dependencies from PyPI with `python3 -m pip install oidn==0.2.1 Pillow numpy`. Built-in Blender denoising is disabled because the execution environment's Blender build lacks OpenImageDenoise.
+For this continuation the preserved `living-world-final.blend` from the preceding authoring session was the input. Refinement does not clear the world or replace it with a new scene.
 
-`world-camera.js` samples the same authoring camera coordinates for the optional real-time Three.js review. Blender Z-up converts to browser Y-up as `[x,z,-y]`. The intro ends at camera progress 0.18. The film maps this point to 4.9 seconds and the remainder to 30 seconds.
+## Camera and production
 
-For the compact optional WebGL model, optimize the GLB with `@gltf-transform/cli@4.2.1`, using quantization, WebP textures, no simplification and no palette merging. Gzip the output into `world-model.bin`. The browser decompresses this standard gzip stream without WebAssembly. Three.js 0.180.0 is self-hosted with its MIT license in `THREE-LICENSE.txt`. No external model or photographic environment is embedded.
+`render_quality_film.py` renders 720 distinct 1920×1080 frames at 24 fps, over 30 seconds. Both position and look target now use nonuniform cubic Hermite interpolation, preserving continuous velocity at the authored waypoints. `world-camera.js` uses the same stops and interpolation for geometry review. The first 4.9 seconds end at route progress .18. The rest of the same route ends at 30 seconds. Water normals, water geometry, falling-water turbulence, olive movement and sunlight change over time.
 
-The scene is a procedural 3D prototype. Terrain, foliage and water still need visual refinement to meet the requested near-photorealistic standard. The cloud test browser reports WebGL disabled, so real-time GPU rendering is unverified there. The pre-rendered camera film uses the actual Blender scene and provides the browser-compatible path.
+```sh
+blender -b --python world-source/render_quality_film.py -- /absolute/refined-world/living-world-refined.blend /absolute/raw 0 720 1920 1080 4 24
+python3 world-source/denoise_quality_film.py /absolute/raw /absolute/clean 0 720
+python3 world-source/grade_quality_film.py /absolute/clean /absolute/graded 0 720 24
+ffmpeg -framerate 24 -i /absolute/graded/%04d.png -c:v libx264 -preset slow -crf 19 -g 6 -bf 0 -pix_fmt yuv420p -movflags +faststart world-film.mp4
+```
+
+The rendering environment has CPU rendering and no usable GPU. The review film uses 4 Cycles samples per pixel, geometry/albedo-guided OpenImageDenoise in linear HDR, followed by a fixed ACES display transform and continuous exposure grade. This is a substantial resolution and cadence increase over the previous 960×540 / 12 fps film, but it is still a procedural visual prototype. Low sample counts and denoising limit fine foliage, reflections and temporal stability. Photorealistic acceptance must be judged from the delivered motion, separately from automated test results. High sample still checks are not represented as the sample count of the complete film.
+
+Processing dependencies: `OpenEXR`, `oidn==0.2.1`, NumPy and Pillow. `--discard-raw` optionally removes scratch EXR frames after validated denoising. To resume an interrupted render whose EXRs have been discarded, set `WORLD_CLEAN_DIR` to the completed clean PNG directory. This avoids re-rendering completed frames; it never interpolates or duplicates them.
+
+## Browser
+
+The homepage prioritizes the authored Blender film on every device. The optional Three.js geometry inspection remains separate in `world-review.html`. This avoids replacing the higher-quality film with a simpler model just because WebGL happens to be available. GPU failure does not block the homepage.
+
+`world-home.js` binds the automatic opening to the film clock, then maps real document scroll anchors to the same media timeline. `canplay` is idempotent, including after seeks. If a preview proxy ignores byte-range requests, the same film is fully buffered into a local media object before cinematic control is enabled. CSP permits same-origin media and local media objects; script and connection policies are otherwise preserved. Reduced motion, JavaScript failure and media failure retain readable HTML and the authored 3D poster. No physical Android test is claimed.
+
+The original build and render scripts remain for provenance. Three.js 0.180.0 remains self-hosted under the MIT license in `THREE-LICENSE.txt`. The refined native source is excluded from web deployment by the release allowlist. Main and production are outside this work's scope.
