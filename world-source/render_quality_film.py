@@ -16,6 +16,7 @@ if engine=='CYCLES':
  s.cycles.use_light_tree=True
 else:s.eevee.taa_render_samples=samples
 s.render.threads_mode='FIXED';s.render.threads=9
+s.render.use_persistent_data=True
 s.camera.animation_data_clear()
 path=json.load(open(os.path.join(os.path.dirname(source),'world-camera.json')))['path']
 def sample(t,key):

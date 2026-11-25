@@ -9,7 +9,9 @@ from PIL import Image
 source,target=map(Path,sys.argv[1:3]);start,end=map(int,sys.argv[3:5]);target.mkdir(parents=True,exist_ok=True)
 lib=getattr(oidn,'__lib_oidn')
 lib.oidnSetDevice1i.argtypes=[ctypes.c_void_p,ctypes.c_char_p,ctypes.c_int]
+lib.oidnSetDevice1i.restype=None
 lib.oidnSetFilter1b.argtypes=[ctypes.c_void_p,ctypes.c_char_p,ctypes.c_bool]
+lib.oidnSetFilter1b.restype=None
 device=oidn.NewDevice();lib.oidnSetDevice1i(device,b'numThreads',2);oidn.CommitDevice(device)
 def read_channels(channels,suffix,axes='RGB'):
  return np.ascontiguousarray(np.stack([channels[next(k for k in channels if k.endswith('.'+suffix+'.'+axis))].pixels for axis in axes],axis=-1),dtype=np.float32)
