@@ -96,3 +96,10 @@ test('the reverse-intro mapping is continuous at its first river activation afte
  f.context.scrollY=1009;f.events.scroll();f.tick();const before=f.video.currentTime;
  f.context.scrollY=1011;f.events.scroll();f.tick();assert.ok(Math.abs(f.video.currentTime-before)<.1);
 });
+
+test('gesture recovery after a reverse journey keeps the automatic handoff at the outside camera', async () => {
+ const f=fixture();f.video.play=()=>Promise.reject(new Error('autoplay'));await f.videoEvents.canplay();
+ f.context.scrollY=6000;f.events.scroll();f.tick();f.context.scrollY=0;f.events.scroll();f.tick();
+ f.video.play=function(){this.paused=false;return Promise.resolve()};await f.events.play();
+ f.video.currentTime=4.94;f.tick();assert.equal(f.video.currentTime,4.9);assert.equal(f.video.paused,true);
+});

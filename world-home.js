@@ -144,6 +144,7 @@
     measure();
     startY = scrollY;
     automatic = document.querySelector('.world-hero').getBoundingClientRect().bottom > innerHeight * .3;
+    if (automatic) fullRoute = false;
     handoffTime = introEnd; handoffMap = introEnd;
     skip.hidden = !automatic;
     if (play) play.hidden = true;
@@ -165,7 +166,7 @@
   });
   play?.addEventListener('click', async () => {
     if (preference.matches) return;
-    video.currentTime = 0; automatic = true; startY = scrollY;
+    video.currentTime = 0; automatic = true; fullRoute = false; startY = scrollY;
     play.hidden = true; skip.hidden = false;
     try { await video.play(); schedule(); }
     catch { takeControl(); play.hidden = false; }
