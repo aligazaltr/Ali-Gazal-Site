@@ -76,3 +76,10 @@ test('a preview without range seeking buffers the same authored film once', asyn
  await f.videoEvents.loadeddata();assert.equal(f.body.dataset.worldPlayback,'film');
  await f.videoEvents.canplay();assert.equal(fetched,1);
 });
+
+test('initial fragment is measured again after the taller cinematic layout is enabled', async () => {
+ const f=fixture();f.context.location={hash:'#hikaye-sonuc'};
+ f.context.document.getElementById=id=>({getBoundingClientRect:()=>({top:6900-f.context.scrollY}),closest:()=>true});
+ f.context.scrollTo=({top})=>{f.context.scrollY=top};
+ await f.videoEvents.canplay();f.tick();assert.ok(f.video.currentTime>23);assert.equal(f.video.paused,true);
+});
