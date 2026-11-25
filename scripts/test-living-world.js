@@ -39,3 +39,13 @@ test('camera position and view direction remain continuous across every region b
   assert.deepEqual(cameraPose(-1), cameraPose(0));
   assert.deepEqual(cameraPose(2), cameraPose(1));
 });
+
+test('camera velocity is continuous without stopping at every authored waypoint', async () => {
+ const {cameraPose,cameraStops}=await camera;const h=.00001;
+ for(const [t] of cameraStops.slice(1,-1)){
+  const a=cameraPose(t-h).position,b=cameraPose(t).position,c=cameraPose(t+h).position;
+  const left=b.map((v,i)=>(v-a[i])/h),right=c.map((v,i)=>(v-b[i])/h);
+  assert.ok(distance(left,right)<.15,'no velocity jump at '+t);
+  assert.ok(Math.hypot(...left)>10,'camera keeps travelling at '+t);
+ }
+});
