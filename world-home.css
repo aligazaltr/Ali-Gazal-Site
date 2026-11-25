@@ -18,7 +18,7 @@ body[data-world-playback] .world-hero::before,
 body[data-world-playback] .world-hero [data-world-toggle] { display: none; }
 body[data-world-playback] :is(.world-intro-skip, .world-intro-play) { position: absolute; right: 0; bottom: 3rem; padding: .65rem 1rem; background: var(--bg); color: light-dark(#30251b,#fff0d8); border: 1px solid var(--world-edge); cursor: pointer; }
 body[data-world-playback] .world-river { display: flex; min-height: 90svh; flex-direction: column; justify-content: center; align-items: start; padding-block: 4rem; }
-.world-river h2 { max-width: 10ch; font: 850 clamp(3.2rem,7vw,7rem)/1.02 var(--sans); letter-spacing: -.06em; }
+.world-river h2 { max-width: 10ch; font: 850 clamp(3.2rem,7vw,7rem)/1.02 var(--sans,system-ui,sans-serif); letter-spacing: -.06em; }
 .world-river > p:last-child { max-width: 29ch; font-size: 1.15rem; }
 body[data-world-playback] .home-experiments { padding-block: 6rem; min-height: 120svh; }
 body[data-world-playback] .home-experiment { background: light-dark(#f3e7d3e6,#201c16e6); --text: light-dark(#30251b,#fff0d8); --muted-strong: light-dark(#554530,#eee0c8); --accent: light-dark(#79502c,#edbb78); padding: 1.3rem; border-radius: .3rem; backdrop-filter: blur(5px); }
@@ -29,7 +29,7 @@ body[data-world-playback] .story-visual,
 body[data-world-playback] .story-local-window { display: none; }
 body[data-world-playback] .story-scenes { display: block; }
 body[data-world-playback] .story-scene { min-height: 110svh; display: flex; flex-direction: column; justify-content: center; max-width: 34rem; padding-block: 5rem; border: 0; }
-body[data-world-playback] .story-scene h3 { font: 850 clamp(3rem,6vw,6rem)/1.04 var(--sans); letter-spacing: -.045em; max-width: 11ch; }
+body[data-world-playback] .story-scene h3 { font: 850 clamp(3rem,6vw,6rem)/1.04 var(--sans,system-ui,sans-serif); letter-spacing: -.045em; max-width: 11ch; }
 body[data-world-playback] .story-scene .scene-description { font-size: 1.12rem; max-width: 30ch; }
 body[data-world-playback] .world-process { display: flex; align-items: center; gap: 1.3rem; position: sticky; top: 1.5rem; z-index: 3; width: fit-content; padding: .7rem 1rem; color: #fff0d8; background: #251e18ce; border-radius: .2rem; }
 .world-process span { font: 400 1.7rem/1 var(--literary); }

@@ -6,7 +6,9 @@ const sections = {intro:'.world-hero',river:'.world-river',projects:'#gercek-den
 frame.width=params.get('size')==='mobile'?390:1440;
 frame.height=params.get('size')==='mobile'?844:900;
 localStorage.setItem('ag-theme',params.get('theme')||'dark');
-frame.src='./';
+const mode=params.get('mode');
+if(mode==='nojs') frame.setAttribute('sandbox','allow-same-origin');
+frame.src=mode==='reduced'?'./?qa-reduced=1':mode==='deep'?'./#hikaye-sonuc':'./';
 const results=[];
 const sleep=ms=>new Promise(resolve=>setTimeout(resolve,ms));
 const wait=async(test,ms=18000)=>{const start=performance.now();while(!test()){if(performance.now()-start>ms)throw Error('timeout');await sleep(80);}};
@@ -14,7 +16,26 @@ function note(name,pass,detail){results.push({name,pass,detail});document.queryS
 frame.onload=async()=>{
  const w=frame.contentWindow,d=w.document,v=d.querySelector('#world-film');
  try{
-  await wait(()=>d.body.dataset.worldPlayback==='film');
+  if(mode==='nojs'||mode==='reduced'){
+    await sleep(1200);note(mode+' readable fallback',!d.body.dataset.worldPlayback&&d.querySelector('h1').getBoundingClientRect().height>0);
+    note(mode+' project links',['machiavelli.html','kontrol-bende-mi.html','irade-terbiyesi.html'].every(href=>!!d.querySelector('#gercek-deneyler a[href="'+href+'"]')));
+    document.body.dataset.completed='';status.textContent='Fallback checks complete';return;
+   }
+   await wait(()=>d.body.dataset.worldPlayback==='film');
+   if(mode==='early'){
+    await wait(()=>v.currentTime>.7);const before=v.currentTime;w.scrollTo(0,w.scrollY+180);await sleep(150);const after=v.currentTime;
+    note('early gesture preserves current camera',Math.abs(after-before)<.3,{before,after});
+    w.scrollTo(0,w.scrollY+900);await sleep(700);note('scroll continues after early gesture',v.currentTime>after,v.currentTime);
+    document.body.dataset.completed='';status.textContent='Early-input checks complete';return;
+   }
+   if(mode==='deep'){
+    await sleep(1000);note('deep link avoids intro replay',v.paused&&v.currentTime>23,{time:v.currentTime,paused:v.paused});
+    document.body.dataset.completed='';status.textContent='Deep-link checks complete';return;
+   }
+   if(mode==='error'){
+    v.dispatchEvent(new Event('error'));await sleep(200);note('media error restores readable page',!d.body.dataset.worldPlayback&&d.querySelector('h1').getBoundingClientRect().height>0);
+    document.body.dataset.completed='';status.textContent='Media-error checks complete';return;
+   }
   const section=params.get('section')||'intro';
   if(section!=='intro'){
    d.querySelector('.world-intro-skip').click();
@@ -37,4 +58,16 @@ frame.onload=async()=>{
    document.body.dataset.completed='';status.textContent=results.every(r=>r.pass)?'Tüm tarayıcı kontrolleri geçti':'Başarısız kontrol var';
   }
  }catch(error){note('browser readiness',false,error.message);status.textContent=error.message;document.body.dataset.completed='';}
+};
+
+const capture=document.querySelector('#capture');
+capture.onclick=async()=>{
+ try{
+  const stream=await navigator.mediaDevices.getDisplayMedia({video:{frameRate:24,displaySurface:'browser'},audio:false,preferCurrentTab:true});
+  const recorder=new MediaRecorder(stream,{mimeType:'video/webm',videoBitsPerSecond:5000000}),chunks=[];
+  recorder.ondataavailable=e=>{if(e.data.size)chunks.push(e.data)};
+  recorder.onstop=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob(chunks,{type:'video/webm'}));a.download='Ali_Gazal_Browser_Recording.webm';a.click();stream.getTracks().forEach(t=>t.stop());capture.textContent='Kayıt tamamlandı'};
+  recorder.start();capture.textContent='Kaydı bitir';capture.onclick=()=>recorder.stop();
+  frame.contentWindow.location.reload();setTimeout(()=>{if(recorder.state==='recording')recorder.stop()},45000);
+ }catch(error){status.textContent='Ekran kaydı açılamadı: '+error.message}
 };
