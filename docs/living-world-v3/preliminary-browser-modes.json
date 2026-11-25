@@ -1,0 +1,22 @@
+[
+  {
+    "mode": "reduced",
+    "results": "[\n  {\n    \"name\": \"reduced readable fallback\",\n    \"pass\": true\n  },\n  {\n    \"name\": \"reduced project links\",\n    \"pass\": true\n  }\n]"
+  },
+  {
+    "mode": "nojs",
+    "results": "[\n  {\n    \"name\": \"nojs readable fallback\",\n    \"pass\": true\n  },\n  {\n    \"name\": \"nojs project links\",\n    \"pass\": true\n  }\n]"
+  },
+  {
+    "mode": "early",
+    "results": "[\n  {\n    \"name\": \"early gesture preserves current camera\",\n    \"pass\": true,\n    \"detail\": {\n      \"before\": 0.7267,\n      \"after\": 0.8816\n    }\n  },\n  {\n    \"name\": \"scroll continues after early gesture\",\n    \"pass\": true,\n    \"detail\": 1.5856\n  }\n]"
+  },
+  {
+    "mode": "deep",
+    "results": "[\n  {\n    \"name\": \"deep link avoids intro replay\",\n    \"pass\": false,\n    \"detail\": {\n      \"time\": 13.178881,\n      \"paused\": true\n    }\n  }\n]"
+  },
+  {
+    "mode": "error",
+    "results": "[\n  {\n    \"name\": \"media error restores readable page\",\n    \"pass\": true\n  }\n]"
+  }
+]

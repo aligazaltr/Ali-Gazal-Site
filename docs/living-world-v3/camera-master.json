@@ -1,0 +1,26 @@
+{
+  "file": "camera-master-1080p.mp4",
+  "bytes": 22765577,
+  "sha256": "ef8f59999300e342ee944d15e96ed01e23958cd2e45a03f8b2ea395c4b99a900",
+  "delivery_bitrate_cap": "6 Mbit/s",
+  "native_resolution": [
+    1920,
+    1080
+  ],
+  "native_fps": 24,
+  "duration_seconds": 30,
+  "rendered_frames": 720,
+  "parts": [
+    {
+      "name": "camera-master.part01",
+      "bytes": 11400000,
+      "sha256": "85671e70006039ccee4b60e14ba19c2d36db00565e2b9b7e594747994fac57b4"
+    },
+    {
+      "name": "camera-master.part02",
+      "bytes": 11365577,
+      "sha256": "93bc8a0509a5678740cbee22f88754e2ed2c5b2fefd4275a54958150d6f0eee1"
+    }
+  ],
+  "note": "Lossless binary split for the 16 MiB connector envelope. Reassemble with restore-camera-master.py. No video re-encoding at reassembly."
+}
