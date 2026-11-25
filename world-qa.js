@@ -3,8 +3,8 @@ const params = new URLSearchParams(location.search);
 const frame = document.querySelector('iframe');
 const status = document.querySelector('#status');
 const sections = {intro:'.world-hero',river:'.world-river',projects:'#gercek-deneyler',fikir:'#hikaye-fikir',deney:'#hikaye-deney',sonuc:'#hikaye-sonuc',archive:'#yasayan-arsiv'};
-frame.width=params.get('size')==='mobile'?390:1440;
-frame.height=params.get('size')==='mobile'?844:900;
+frame.width=params.get('size')==='mobile'?390:params.get('size')==='record'?1280:1440;
+frame.height=params.get('size')==='mobile'?844:params.get('size')==='record'?720:900;
 localStorage.setItem('ag-theme',params.get('theme')||'dark');
 const mode=params.get('mode');
 if(mode==='nojs') frame.setAttribute('sandbox','allow-same-origin');
@@ -36,7 +36,15 @@ frame.onload=async()=>{
     v.dispatchEvent(new Event('error'));await sleep(200);note('media error restores readable page',!d.body.dataset.worldPlayback&&d.querySelector('h1').getBoundingClientRect().height>0);
     document.body.dataset.completed='';status.textContent='Media-error checks complete';return;
    }
-  const section=params.get('section')||'intro';
+  if(params.has('tape')){
+    document.body.classList.add('tape');document.body.dataset.recording='';
+    await wait(()=>v.paused&&v.currentTime>=4.88);await sleep(500);
+    const max=d.documentElement.scrollHeight-w.innerHeight;
+    const animate=(from,to,milliseconds)=>new Promise(resolve=>{const start=performance.now();const tick=now=>{const u=Math.min(1,(now-start)/milliseconds);w.scrollTo({top:from+(to-from)*u,behavior:'instant'});if(u<1)requestAnimationFrame(tick);else resolve()};requestAnimationFrame(tick)});
+    await animate(w.scrollY,max,24000);await sleep(1200);await animate(max,max*.55,5000);await sleep(800);
+    document.body.dataset.completed='';status.textContent='Actual browser journey recorded';return;
+   }
+   const section=params.get('section')||'intro';
   if(section!=='intro'){
    d.querySelector('.world-intro-skip').click();
    w.scrollTo({top:w.scrollY+d.querySelector(sections[section]).getBoundingClientRect().top-w.innerHeight*.13,behavior:'instant'});
