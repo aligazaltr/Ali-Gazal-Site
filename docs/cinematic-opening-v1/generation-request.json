@@ -1,0 +1,24 @@
+{
+  "job_id": "8caa7a82-da1b-4be0-a7d4-5be228ab830d",
+  "quote_ref": "quote:BF0tbCHNJWAMLLlDRWcmNQ",
+  "quoted_credits": 0,
+  "source_motion": "Existing original Blender route; first 10 seconds, no third-party film used as generated content",
+  "params": {
+    "model": "hf_mult_motion_control",
+    "resolution": "480p",
+    "count": 1,
+    "duration": 10,
+    "use_free_gens": true,
+    "medias": [
+      {
+        "role": "image",
+        "value": "4a34e55b-c123-4e3a-a9cb-d2714b23cc5a"
+      },
+      {
+        "role": "video",
+        "value": "70150e5b-a616-4507-aa91-c9125df188c4"
+      }
+    ],
+    "prompt": "Create one continuous photorealistic architectural camera journey, using the reference image as the visual identity and starting composition, and the source video ONLY as the camera-motion guide. Preserve the reference's carved limestone arches, three antique books on a walnut table, recessed bookshelf, olive leaves and natural sunlight. Replace ALL of the simplistic source-video materials, foliage and geometry with realistic weathered stone, subtle dust in directional daylight, detailed leather, flowing blue-green water and dense natural Mediterranean trees. First 0-4.8 seconds: slow forward-right camera movement past the books and foreground olive leaves toward the large RIGHT-HAND EXTERIOR arch, never into the central bookshelf alcove. Then pass THROUGH that open exterior arch into the same sunlit stone courtyard. 5-10 seconds: widen the river valley with classical stone architecture and follow the flowing river toward a small stone bridge. True perspective parallax, smooth physically plausible camera, stable stonework, stable books, realistic wind in leaves and continuous water motion. Keep opening left wall visually calm for later HTML headline; generate absolutely no text. No cuts, no crossfades, no circular portal, no geometric morphing, no digital photo zoom, no black frames, no people, no logo, no music."
+  }
+}

@@ -13,7 +13,7 @@
   const riverCopy = document.querySelector('.river-copy');
   let automatic = true, suspended = false, started = false, pending = 0;
   let handoffTime = introEnd, handoffY = 0, target = 0, objectURL;
-  let previousY = scrollY, direction = 1;
+  let previousY = scrollY, direction = 1, introTimer;
   const end = () => Math.max(introEnd, (film.duration || 10) - .08);
   const clamp = (v, a = 0, b = 1) => Math.max(a, Math.min(b, v));
   const span = () => Math.max(1, journey.offsetHeight - innerHeight);
@@ -50,8 +50,17 @@
     if (automatic && !suspended) schedule();
   }
   function schedule() { if (!pending) pending = requestAnimationFrame(paint); }
+  function watchIntro() {
+    clearTimeout(introTimer);
+    if (!automatic || suspended || !started) return;
+    const remaining = introEnd - film.currentTime;
+    if (remaining <= .02) {
+      film.pause(); film.currentTime = introEnd; handoff(); schedule();
+    } else introTimer = setTimeout(watchIntro, Math.min(200, remaining * 1000));
+  }
   function handoff() {
     if (!automatic) return;
+    clearTimeout(introTimer);
     automatic = false; handoffTime = film.currentTime; handoffY = scrollY;
     film.pause(); skip.hidden = true;
   }
@@ -78,7 +87,7 @@
       if (scrollY > 4) { automatic = false; handoffTime = introEnd; handoffY = 0; }
       else {
         skip.hidden = false;
-        try { await film.play(); } catch (_) { automatic = false; suspended = true; play.hidden = false; skip.hidden = true; }
+        try { await film.play(); watchIntro(); } catch (_) { automatic = false; suspended = true; play.hidden = false; skip.hidden = true; }
       }
       schedule();
     } catch (_) { started = false; failure(); }
@@ -87,7 +96,7 @@
     if (!started) { suspended = false; await start(); return; }
     film.currentTime = 0; automatic = true; suspended = false; handoffY = scrollY;
     play.hidden = true; skip.hidden = false; pause.hidden = false;
-    try { await film.play(); schedule(); } catch (_) { failure(); }
+    try { await film.play(); watchIntro(); schedule(); } catch (_) { failure(); }
   });
   skip.addEventListener('click', () => { film.currentTime = introEnd; handoff(); schedule(); });
   pause.addEventListener('click', () => {
@@ -95,6 +104,7 @@
     pause.textContent = suspended ? 'Hareketi sürdür' : 'Hareketi durdur'; schedule();
   });
   film.addEventListener('seeked', schedule);
+  film.addEventListener('timeupdate', watchIntro);
   film.addEventListener('error', () => { if (started) failure(); });
   addEventListener('scroll', schedule, {passive:true});
   addEventListener('resize', schedule);

@@ -1,0 +1,154 @@
+[
+  {
+    "name": "1440 media ready",
+    "pass": true,
+    "detail": {
+      "width": 854,
+      "height": 480
+    }
+  },
+  {
+    "name": "1440 autoplay progresses",
+    "pass": false,
+    "detail": {
+      "from": 3.1363,
+      "to": 0.8695
+    }
+  },
+  {
+    "name": "1440 automatic handoff",
+    "pass": false,
+    "detail": {
+      "time": 5.0353,
+      "paused": false
+    }
+  },
+  {
+    "name": "1440 scroll reaches exterior",
+    "pass": false,
+    "detail": {
+      "time": 7.210716
+    }
+  },
+  {
+    "name": "1440 reverse returns to books",
+    "pass": true,
+    "detail": {
+      "time": 0
+    }
+  },
+  {
+    "name": "1440 no horizontal overflow",
+    "pass": true,
+    "detail": {
+      "scrollWidth": 1425,
+      "viewport": 1440
+    }
+  },
+  {
+    "name": "1440 HTML headline present",
+    "pass": true,
+    "detail": {}
+  },
+  {
+    "name": "1440 headline fits viewport",
+    "pass": true,
+    "detail": {
+      "left": 100.796875,
+      "right": 678.9375,
+      "bottom": 484.15625
+    }
+  },
+  {
+    "name": "1440 theme toggles",
+    "pass": true,
+    "detail": {
+      "theme": "dark"
+    }
+  },
+  {
+    "name": "1440 navigation preserved",
+    "pass": true,
+    "detail": [
+      "rehberler.html",
+      "dusunce-arsivi.html",
+      "hakkimda.html"
+    ]
+  },
+  {
+    "name": "390 media ready",
+    "pass": true,
+    "detail": {
+      "width": 854,
+      "height": 480
+    }
+  },
+  {
+    "name": "390 autoplay progresses",
+    "pass": true,
+    "detail": {
+      "from": 0,
+      "to": 0.793
+    }
+  },
+  {
+    "name": "390 automatic handoff",
+    "pass": false,
+    "detail": {
+      "time": 5.0536,
+      "paused": false
+    }
+  },
+  {
+    "name": "390 scroll reaches exterior",
+    "pass": true,
+    "detail": {
+      "time": 9.550121
+    }
+  },
+  {
+    "name": "390 reverse returns to books",
+    "pass": true,
+    "detail": {
+      "time": 0
+    }
+  },
+  {
+    "name": "390 no horizontal overflow",
+    "pass": true,
+    "detail": {
+      "scrollWidth": 375,
+      "viewport": 390
+    }
+  },
+  {
+    "name": "390 HTML headline present",
+    "pass": true,
+    "detail": {}
+  },
+  {
+    "name": "390 headline fits viewport",
+    "pass": true,
+    "detail": {
+      "left": 27.296875,
+      "right": 286.546875,
+      "bottom": 367.484375
+    }
+  },
+  {
+    "name": "390 theme toggles",
+    "pass": true,
+    "detail": {
+      "theme": "light"
+    }
+  },
+  {
+    "name": "390 navigation preserved",
+    "pass": true,
+    "detail": [
+      "rehberler.html",
+      "dusunce-arsivi.html",
+      "hakkimda.html"
+    ]
+  }
+]

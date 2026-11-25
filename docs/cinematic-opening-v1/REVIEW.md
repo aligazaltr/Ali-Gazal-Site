@@ -20,6 +20,6 @@ Bu bir nihai yüksek çözünürlüklü teslim değildir: 480p büyük ekranlard
 
 ## Kontroller
 
-108 mevcut Node testi ve statik site kontrolleri geçti. Yeni dosyalar için yayın izin listesine yalnızca beş öğe eklendi; bu nedenle koruma fixture'ında yalnızca `.assetsignore` hash'i güncellendi. Machiavelli, Control, Projeler, Düşünce Arşivi, Hakkımda ve proje verilerinin içerikleri değişmedi. Tarayıcı kontrolleri ve çalışan önizleme doğrulaması henüz bekleniyor; ayrı kanıt dosyasında güncellenecek.
+108 mevcut Node testi ve statik site kontrolleri geçti. Yeni dosyalar için yayın izin listesine yalnızca yedi öğe eklendi; bu nedenle koruma fixture'ında yalnızca `.assetsignore` hash'i güncellendi. Machiavelli, Control, Projeler, Düşünce Arşivi, Hakkımda ve proje verilerinin içerikleri değişmedi. Tarayıcı kontrolleri ve çalışan önizleme doğrulaması henüz bekleniyor; ayrı kanıt dosyasında güncellenecek.
 
 Main'e merge ve production yayını yok. İlk yolculuğun ötesine geçilmedi.

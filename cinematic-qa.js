@@ -20,17 +20,19 @@
     try {
       for(const width of [1440,390]) {
         view.style.width=width+'px';view.style.height=(width===390?844:900)+'px';
-        view.src='cinematic-opening.html?qa='+Date.now();
+        await new Promise(resolve=>{view.addEventListener('load',resolve,{once:true});view.src='cinematic-opening.html?qa='+Date.now();});
         const deadline=Date.now()+25000;
         while(Date.now()<deadline && (!doc()?.body?.classList.contains('ready') || film()?.readyState<2))await sleep(100);
         add(width+' media ready',film()?.videoWidth===854 && doc().body.classList.contains('ready'),{width:film()?.videoWidth,height:film()?.videoHeight});
         const t=film().currentTime;await sleep(1200);add(width+' autoplay progresses',film().currentTime>t+.5,{from:t,to:film().currentTime});
-        while(film().currentTime<4.78 && Date.now()<deadline)await sleep(100);
-        await sleep(250);add(width+' automatic handoff',film().paused && Math.abs(film().currentTime-4.8)<.08,{time:film().currentTime,paused:film().paused});
+        while((!film().paused || film().currentTime<4.78) && Date.now()<deadline)await sleep(100);
+        add(width+' automatic handoff',film().paused && Math.abs(film().currentTime-4.8)<.08,{time:film().currentTime,paused:film().paused});
         const viewport=view.contentWindow.innerHeight;
-        for(const fraction of [.35,.85,1.4]){seek(viewport*fraction);await sleep(550);}
+        for(const fraction of [.35,.85,1.4]){seek(viewport*fraction);await sleep(850);}
+        const seekDeadline=Date.now()+2500;while(film().currentTime<9 && Date.now()<seekDeadline)await sleep(100);
         add(width+' scroll reaches exterior',film().currentTime>9,{time:film().currentTime});
-        for(const fraction of [.8,.3,0]){seek(viewport*fraction);await sleep(550);}
+        for(const fraction of [.8,.3,0]){seek(viewport*fraction);await sleep(850);}
+        const reverseDeadline=Date.now()+2500;while(film().currentTime>.1 && Date.now()<reverseDeadline)await sleep(100);
         add(width+' reverse returns to books',film().currentTime<.1,{time:film().currentTime});
         add(width+' no horizontal overflow',doc().documentElement.scrollWidth<=view.contentWindow.innerWidth,{scrollWidth:doc().documentElement.scrollWidth,viewport:width});
         add(width+' HTML headline present',doc().querySelector('h1').textContent.replace(/\s+/g,' ').includes('Bir fikir gerçekten'),{});

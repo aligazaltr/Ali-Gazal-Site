@@ -1,0 +1,92 @@
+[
+  {
+    "path": "index.html",
+    "unchanged": true,
+    "git_blob": "4c9f1d20799f986a4f11a93243a5f3b4ae2990fa"
+  },
+  {
+    "path": "machiavelli.html",
+    "unchanged": true,
+    "git_blob": "fb91a9e86d22f825ab5255466ffa33b080ca21e8"
+  },
+  {
+    "path": "machiavelli-scene.js",
+    "unchanged": true,
+    "git_blob": "0c9df9aa3d7ce16c4089c804f7faf9a6ed9b8972"
+  },
+  {
+    "path": "machiavelli-scene.css",
+    "unchanged": true,
+    "git_blob": "e7e49697c2a4066cda2bd5d8619bdca1b3cb2af8"
+  },
+  {
+    "path": "machiavelli-frames.js",
+    "unchanged": true,
+    "git_blob": "32de18258089146614afa2cc56ae9f0ea3623d6d"
+  },
+  {
+    "path": "kontrol-bende-mi.html",
+    "unchanged": true,
+    "git_blob": "6d3a73f40efb6023855af85c229b6bb3c7c0f62f"
+  },
+  {
+    "path": "control-scene.js",
+    "unchanged": true,
+    "git_blob": "55c5ad130ccc443cb326143402508e316374781b"
+  },
+  {
+    "path": "control-scene.css",
+    "unchanged": true,
+    "git_blob": "679a343fe4eef9976836ec61a8d9bb6671c0edfd"
+  },
+  {
+    "path": "control-frames.js",
+    "unchanged": true,
+    "git_blob": "dfc9f4154bba5e48f9629bea3f7fe9ec836e16ee"
+  },
+  {
+    "path": "rehberler.html",
+    "unchanged": true,
+    "git_blob": "c8aa9a8f82dcaaf6f0d126b6bf2bb0078f358340"
+  },
+  {
+    "path": "dusunce-arsivi.html",
+    "unchanged": true,
+    "git_blob": "ebbc292850585c85ef94050cd87be8a37398a8ad"
+  },
+  {
+    "path": "hakkimda.html",
+    "unchanged": true,
+    "git_blob": "c6e11fbfaf5302b80a3bf4d9a41630b698b4f4b3"
+  },
+  {
+    "path": "site-data.js",
+    "unchanged": true,
+    "git_blob": "38a3839cee78516f486677dbefa4633f247b8949"
+  },
+  {
+    "path": "archive-data.js",
+    "unchanged": true,
+    "git_blob": "85d98fbaeb116f11768926bd5c6a14bd291bf378"
+  },
+  {
+    "path": "archive-core.js",
+    "unchanged": true,
+    "git_blob": "ae117ac028c03fa305302f6a00020f2e436dedd8"
+  },
+  {
+    "path": "archive.js",
+    "unchanged": true,
+    "git_blob": "d52a1ba138f53e963939e59d2acf838ae3f29f3a"
+  },
+  {
+    "path": "world-source/living-world-refined.blend",
+    "unchanged": true,
+    "git_blob": "eebfac0ddef5bc51febaec51e4611c2b08aa76df"
+  },
+  {
+    "path": "world-film.mp4",
+    "unchanged": true,
+    "git_blob": "dbf2023ab8b70e65f4d08c49ac1976de59853f33"
+  }
+]
