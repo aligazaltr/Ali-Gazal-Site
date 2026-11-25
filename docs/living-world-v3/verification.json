@@ -1,0 +1,26 @@
+{
+  "node_tests": {
+    "passed": 108,
+    "failed": 0
+  },
+  "browser_checks": {
+    "passed": 72,
+    "failed": 0,
+    "matrix": "browser-results.json"
+  },
+  "static_checks": [
+    "check-site",
+    "sync-site --check",
+    "sync-seo --check",
+    "build-archive --check"
+  ],
+  "protected_file_hashes": {
+    "checked": 17,
+    "mismatches": 0
+  },
+  "main_unchanged": "a1cc3a3504df5757eb4444215606f40e33fea76b",
+  "media_feature_commit": "895f5697e7290c4367952b5ec47788de047814da",
+  "browser_capture_qa_commit": "05743f6a0dc3da2763d9fab35965096611c062a1",
+  "physical_android_test": false,
+  "photorealistic_acceptance": false
+}

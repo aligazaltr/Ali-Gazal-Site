@@ -40,3 +40,5 @@ The homepage prioritizes the authored Blender film on every device. The optional
 The original build and render scripts remain for provenance. Three.js 0.180.0 remains self-hosted under the MIT license in `THREE-LICENSE.txt`. The refined native source is excluded from web deployment by the release allowlist. Main and production are outside this work's scope.
 
 The preview encode caps delivery bitrate at 3 Mbit/s to fit the GitHub connector request envelope (base64 inside a 16 MiB request). Native resolution and distinct rendered frame count are retained. The Blender source supports higher-sample re-renders. No frame interpolation or AI upscaling is used.
+
+A separate 6 Mbit/s camera master is preserved losslessly in `docs/living-world-v3/camera-master.part01` and `.part02`. Run `python3 docs/living-world-v3/restore-camera-master.py` to verify all part checksums and restore `camera-master-1080p.mp4`; its metadata is in `camera-master.json`. The standalone master and preview contain the same native frames, with different delivery compression.
