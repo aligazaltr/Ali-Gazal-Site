@@ -24,7 +24,7 @@ For this continuation the preserved `living-world-final.blend` from the precedin
 blender -b --python world-source/render_quality_film.py -- /absolute/refined-world/living-world-refined.blend /absolute/raw 0 720 1920 1080 4 24
 python3 world-source/denoise_quality_film.py /absolute/raw /absolute/clean 0 720
 python3 world-source/grade_quality_film.py /absolute/clean /absolute/graded 0 720 24
-ffmpeg -framerate 24 -i /absolute/graded/%04d.png -c:v libx264 -preset slow -crf 19 -maxrate 6M -bufsize 6M -g 6 -bf 0 -pix_fmt yuv420p -movflags +faststart world-film.mp4
+ffmpeg -framerate 24 -i /absolute/graded/%04d.png -c:v libx264 -preset slow -crf 19 -maxrate 3M -bufsize 3M -g 6 -bf 0 -pix_fmt yuv420p -movflags +faststart world-film.mp4
 ```
 
 The rendering environment has CPU rendering and no usable GPU. The review film uses 4 Cycles samples per pixel, geometry/albedo-guided OpenImageDenoise in linear HDR, followed by a fixed ACES display transform and continuous exposure grade. This is a substantial resolution and cadence increase over the previous 960×540 / 12 fps film, but it is still a procedural visual prototype. Low sample counts and denoising limit fine foliage, reflections and temporal stability. Photorealistic acceptance must be judged from the delivered motion, separately from automated test results. High sample still checks are not represented as the sample count of the complete film.
@@ -39,4 +39,4 @@ The homepage prioritizes the authored Blender film on every device. The optional
 
 The original build and render scripts remain for provenance. Three.js 0.180.0 remains self-hosted under the MIT license in `THREE-LICENSE.txt`. The refined native source is excluded from web deployment by the release allowlist. Main and production are outside this work's scope.
 
-The preview encode caps delivery bitrate at 6 Mbit/s to fit the static host per-file limit. Native resolution and distinct rendered frame count are retained. The Blender source supports higher-sample re-renders. No frame interpolation or AI upscaling is used.
+The preview encode caps delivery bitrate at 3 Mbit/s to fit the GitHub connector request envelope (base64 inside a 16 MiB request). Native resolution and distinct rendered frame count are retained. The Blender source supports higher-sample re-renders. No frame interpolation or AI upscaling is used.
