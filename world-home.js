@@ -4,6 +4,7 @@
   const preference = matchMedia('(prefers-reduced-motion: reduce)');
   const skip = document.querySelector('.world-intro-skip');
   const play = document.querySelector('.world-intro-play');
+  const loading = document.querySelector('.world-loading');
   const concept = document.querySelector('[data-world-concept]');
   const introEnd = 4.9;
   let enabled = false, starting = false, automatic = true, frame = 0;
@@ -81,6 +82,7 @@
     document.body.removeAttribute('data-world-playback');
     skip.hidden = true;
     if (play) play.hidden = true;
+    if (loading) loading.hidden = true;
   }
   function animateTitle() {
     document.querySelectorAll('.world-hero [data-world-word]').forEach((word, index) => {
@@ -100,6 +102,7 @@
     // media object has a reliable seek table on those connections as well.
     if (!mediaPrepared && video.seekable && (!video.seekable.length || video.seekable.end(video.seekable.length - 1) < duration() - .5)) {
       try {
+        if (loading) loading.hidden = false;
         const response = await fetch(video.currentSrc || 'world-film.mp4');
         if (!response.ok) throw new Error('media download failed');
         const blob = await response.blob();
@@ -113,6 +116,7 @@
       } catch { fallback(); return; }
     }
     mediaPrepared = true;
+    if (loading) loading.hidden = true;
     video.muted = true;
     video.playsInline = true;
     document.body.dataset.worldPlayback = 'film';
