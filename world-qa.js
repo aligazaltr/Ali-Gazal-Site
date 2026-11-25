@@ -52,6 +52,7 @@ frame.onload=async()=>{
   document.body.dataset.ready='';
   document.body.dataset.view=w.innerWidth+'x'+w.innerHeight;
   if(params.has('run')){
+   if(params.has('hd')) note('native HD film decoded',v.videoWidth===1920&&v.videoHeight===1080&&Math.abs(v.duration-30)<.1,{width:v.videoWidth,height:v.videoHeight,duration:v.duration});
    const first=v.currentTime;await sleep(1100);note('intro actions fit first viewport',d.querySelector('.world-hero .world-actions').getBoundingClientRect().bottom<=w.innerHeight,{bottom:d.querySelector('.world-hero .world-actions').getBoundingClientRect().bottom,viewport:w.innerHeight});note('automatic camera advances',v.currentTime>first+.1,{first,after:v.currentTime});
    await wait(()=>v.paused&&v.currentTime>=4.88);
    note('intro hands over at 4.9s',Math.abs(v.currentTime-4.9)<.06,v.currentTime);
@@ -76,7 +77,7 @@ capture.onclick=async()=>{
   const recorder=new MediaRecorder(stream,{mimeType:'video/webm',videoBitsPerSecond:5000000}),chunks=[];
   recorder.ondataavailable=e=>{if(e.data.size)chunks.push(e.data)};
   recorder.onstop=()=>{const a=document.createElement('a');a.href=URL.createObjectURL(new Blob(chunks,{type:'video/webm'}));a.download='Ali_Gazal_Browser_Recording.webm';a.click();stream.getTracks().forEach(t=>t.stop());capture.textContent='Kayıt tamamlandı'};
-  recorder.start();capture.textContent='Kaydı bitir';capture.onclick=()=>recorder.stop();
+  params.set('tape','1');recorder.start();capture.textContent='Kaydı bitir';capture.onclick=()=>recorder.stop();
   frame.contentWindow.location.reload();setTimeout(()=>{if(recorder.state==='recording')recorder.stop()},45000);
  }catch(error){status.textContent='Ekran kaydı açılamadı: '+error.message}
 };
