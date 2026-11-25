@@ -3,43 +3,23 @@
   if (!video) return;
   const preference = matchMedia('(prefers-reduced-motion: reduce)');
   const skip = document.querySelector('.world-intro-skip');
+  const play = document.querySelector('.world-intro-play');
   const concept = document.querySelector('[data-world-concept]');
   const introEnd = 4.9;
-  const canvas = document.querySelector('#world-canvas');
-  let runtimeWorld = null;
-  let gpuFailed = false;
-  const worldReady = typeof WebGLRenderingContext !== 'undefined' && !preference.matches
-    ? import('./world-renderer.js').then(module => module.createLivingWorld(canvas)).catch(() => null)
-    : Promise.resolve(null);
-  canvas?.addEventListener('webglcontextlost', event => {
-    event.preventDefault();
-    runtimeWorld?.dispose();
-    runtimeWorld = null;
-    gpuFailed = true;
-    canvas.hidden = true;
-    if (enabled) document.body.dataset.worldPlayback = 'film';
-    schedule();
-  });
-  let automatic = true;
-  let enabled = false;
-  let frame = 0;
-  let startY = scrollY;
-  let handoffTime = introEnd;
-  let handoffMap = introEnd;
-  let desired = 0;
-  let anchors = [];
+  let enabled = false, starting = false, automatic = true, frame = 0;
+  let startY = scrollY, handoffTime = introEnd, handoffMap = introEnd;
+  let desired = 0, anchors = [], scenes = [];
   const duration = () => Number.isFinite(video.duration) ? video.duration : 30;
 
   function mappedTime() {
+    if (!anchors.length) return introEnd;
     const position = scrollY;
     let index = anchors.findIndex((point, i) => i < anchors.length - 1 && position <= anchors[i + 1].y);
     if (index < 0) return duration() - .1;
-    const a = anchors[index];
-    const b = anchors[index + 1];
+    const a = anchors[index], b = anchors[index + 1];
     const fraction = Math.max(0, Math.min(1, (position - a.y) / Math.max(1, b.y - a.y)));
     return a.time + (b.time - a.time) * fraction;
   }
-
   function measure() {
     const points = [
       ['.world-hero', introEnd], ['.world-river', 9.3],
@@ -51,18 +31,18 @@
       y: scrollY + document.querySelector(selector).getBoundingClientRect().top - innerHeight * .13,
       time
     }));
+    scenes = [...document.querySelectorAll('[data-story-scene]')];
     schedule();
   }
-
   function takeControl() {
     if (!automatic) return;
     automatic = false;
     handoffTime = video.currentTime;
     handoffMap = mappedTime();
+    desired = handoffTime;
     video.pause();
     skip.hidden = true;
   }
-
   function paint() {
     frame = 0;
     if (!enabled || document.hidden) return;
@@ -72,7 +52,8 @@
       video.currentTime = introEnd;
       automatic = false;
       handoffTime = introEnd;
-      handoffMap = introEnd;
+      handoffMap = mappedTime();
+      desired = introEnd;
       skip.hidden = true;
     }
     if (!automatic) {
@@ -81,88 +62,84 @@
         ? handoffTime * Math.max(0, mapped / Math.max(.01, handoffMap))
         : handoffTime + (duration() - handoffTime) * (mapped - handoffMap) / Math.max(.01, duration() - handoffMap);
       desired = Math.max(0, Math.min(duration() - .08, desired));
-      if (!video.seeking && Math.abs(video.currentTime - desired) > .035) video.currentTime = desired;
+      // Never enqueue a new seek while a previous decode is in flight.
+      // seeked schedules the latest scroll target, including rapid reversal.
+      if (!video.seeking && Math.abs(video.currentTime - desired) > 1 / 48) video.currentTime = desired;
     }
     document.body.dataset.worldTime = video.currentTime.toFixed(2);
-    const scenes = [...document.querySelectorAll('[data-story-scene]')];
-    const current = scenes.reduce((nearest, scene) => Math.abs(scene.getBoundingClientRect().top - innerHeight * .2) < Math.abs(nearest.getBoundingClientRect().top - innerHeight * .2) ? scene : nearest);
-    concept.textContent = current.querySelector('.scene-label').textContent;
-    if (runtimeWorld) {
-      const seconds = automatic ? video.currentTime : desired;
-      const progress = seconds < introEnd ? .18 * seconds / introEnd : .18 + .82 * (seconds - introEnd) / (duration() - introEnd);
-      try { runtimeWorld.draw(progress, performance.now() / 1000); }
-      catch {
-        runtimeWorld.dispose();
-        runtimeWorld = null;
-        gpuFailed = true;
-        canvas.hidden = true;
-        document.body.dataset.worldPlayback = 'film';
-      }
+    if (concept && scenes.length) {
+      const current = scenes.reduce((nearest, scene) => Math.abs(scene.getBoundingClientRect().top - innerHeight * .2) < Math.abs(nearest.getBoundingClientRect().top - innerHeight * .2) ? scene : nearest);
+      concept.textContent = current.querySelector('.scene-label').textContent;
     }
-    if (automatic || runtimeWorld) schedule();
+    if (automatic) schedule();
   }
-
-  function schedule() {
-    if (!frame) frame = requestAnimationFrame(paint);
-  }
-
+  function schedule() { if (!frame) frame = requestAnimationFrame(paint); }
   function fallback() {
-    enabled = false;
-    automatic = false;
+    enabled = false; starting = false; automatic = false;
     video.pause();
     document.body.removeAttribute('data-world-playback');
     skip.hidden = true;
+    if (play) play.hidden = true;
   }
-
+  function animateTitle() {
+    document.querySelectorAll('.world-hero [data-world-word]').forEach((word, index) => {
+      word.getAnimations?.().forEach(animation => animation.cancel());
+      word.animate?.([
+        {opacity: 0, transform: 'translateY(.45em)', clipPath: 'inset(0 -5% 100%)'},
+        {opacity: 1, transform: 'translateY(0)', clipPath: 'inset(-20% -5% -25%)'}
+      ], {duration: 850, delay: 200 + index * 130, fill: 'backwards', easing: 'cubic-bezier(.2,.7,.25,1)'});
+    });
+  }
   async function begin() {
-    if (preference.matches) return;
-    const candidate = await worldReady;
-    runtimeWorld = gpuFailed ? null : candidate;
-    if (preference.matches) return;
+    // canplay is also fired after seeking. Re-entering here used to reset the
+    // handoff continuously and could leave the site stuck on the first frame.
+    if (enabled || starting || preference.matches) return;
+    starting = true;
+    video.muted = true;
+    video.playsInline = true;
+    document.body.dataset.worldPlayback = 'film';
     enabled = true;
-    document.body.dataset.worldPlayback = runtimeWorld ? 'webgl' : 'film';
-    if (runtimeWorld) canvas.hidden = false;
-    startY = scrollY;
-    automatic = scrollY < scrollY + document.querySelector('.world-hero').getBoundingClientRect().bottom - innerHeight * .3;
-    handoffTime = introEnd;
-    handoffMap = introEnd;
     measure();
+    startY = scrollY;
+    automatic = document.querySelector('.world-hero').getBoundingClientRect().bottom > innerHeight * .3;
+    handoffTime = introEnd; handoffMap = introEnd;
     skip.hidden = !automatic;
+    if (play) play.hidden = true;
     if (automatic) {
-      document.querySelectorAll('.world-hero [data-world-word]').forEach((word, index) => {
-        word.getAnimations?.().forEach(animation => animation.cancel());
-        word.animate?.([
-          {opacity: 0, transform: 'translateY(.45em)', clipPath: 'inset(0 -5% 100%)'},
-          {opacity: 1, transform: 'translateY(0)', clipPath: 'inset(-20% -5% -25%)'}
-        ], {duration: 850, delay: 200 + index * 130, fill: 'backwards', easing: 'cubic-bezier(.2,.7,.25,1)'});
-      });
+      animateTitle();
       try { await video.play(); }
-      catch { takeControl(); }
+      catch {
+        takeControl();
+        if (play) play.hidden = false;
+      }
     } else video.pause();
+    starting = false;
     schedule();
   }
   skip.addEventListener('click', () => {
-    video.pause();
-    video.currentTime = introEnd;
-    automatic = false;
-    handoffTime = introEnd;
-    handoffMap = mappedTime();
-    skip.hidden = true;
-    schedule();
+    video.pause(); video.currentTime = introEnd; automatic = false;
+    handoffTime = introEnd; handoffMap = mappedTime(); desired = introEnd;
+    skip.hidden = true; if (play) play.hidden = true; schedule();
   });
-  video.addEventListener('canplay', () => { if (!enabled && !preference.matches) begin(); });
+  play?.addEventListener('click', async () => {
+    if (preference.matches) return;
+    video.currentTime = 0; automatic = true; startY = scrollY;
+    play.hidden = true; skip.hidden = false;
+    try { await video.play(); schedule(); }
+    catch { takeControl(); play.hidden = false; }
+  });
+  video.addEventListener('loadeddata', begin);
+  video.addEventListener('canplay', begin);
   video.addEventListener('seeked', schedule);
+  video.addEventListener('timeupdate', schedule);
   video.addEventListener('error', fallback);
   addEventListener('scroll', schedule, {passive: true});
   addEventListener('resize', measure, {passive: true});
   addEventListener('load', measure, {once: true});
   addEventListener('pageshow', () => {
-    if (enabled && scrollY > scrollY + document.querySelector('.world-hero').getBoundingClientRect().bottom) {
-      automatic = false;
-      handoffTime = introEnd;
-      handoffMap = introEnd;
-      skip.hidden = true;
-      measure();
+    if (enabled && document.querySelector('.world-hero').getBoundingClientRect().bottom < 0) {
+      automatic = false; handoffTime = introEnd; handoffMap = introEnd;
+      skip.hidden = true; measure();
     }
   });
   document.addEventListener('visibilitychange', () => {
@@ -172,8 +149,9 @@
   });
   preference.addEventListener('change', () => {
     if (preference.matches) fallback();
-    else if (video.readyState >= 3) begin();
+    else if (video.readyState >= 2) begin();
     else { video.preload = 'auto'; video.load(); }
   });
   if (preference.matches) video.preload = 'none';
+  else if (video.readyState >= 2) begin();
 })();

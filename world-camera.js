@@ -16,8 +16,12 @@ export function cameraPose(progress) {
  const t = Math.min(1,Math.max(0,progress));
  const index = Math.min(cameraStops.length-2, cameraStops.findIndex((stop,i)=>i<cameraStops.length-1&&t<=cameraStops[i+1][0]));
  const a=cameraStops[index], b=cameraStops[index+1];
- let u=(t-a[0])/(b[0]-a[0]); u=u*u*(3-2*u);
- const interpolate=key=>a[key].map((value,i)=>value+(b[key][i]-value)*u);
+ const dt=b[0]-a[0], u=(t-a[0])/dt;
+ const slope=(k,key,axis)=>k===0||k===cameraStops.length-1 ? 0 :
+   (cameraStops[k+1][key][axis]-cameraStops[k-1][key][axis])/(cameraStops[k+1][0]-cameraStops[k-1][0]);
+ const interpolate=key=>a[key].map((value,axis)=>
+   (2*u**3-3*u*u+1)*value+(u**3-2*u*u+u)*dt*slope(index,key,axis)+
+   (-2*u**3+3*u*u)*b[key][axis]+(u**3-u*u)*dt*slope(index+1,key,axis));
  const convert=point=>[point[0],point[2],-point[1]];
  return {position:convert(interpolate(1)),target:convert(interpolate(2))};
 }
