@@ -7,6 +7,7 @@
   const concept = document.querySelector('[data-world-concept]');
   const introEnd = 4.9;
   let enabled = false, starting = false, automatic = true, frame = 0;
+  let mediaPrepared = false, mediaURL = null;
   let startY = scrollY, handoffTime = introEnd, handoffMap = introEnd;
   let desired = 0, anchors = [], scenes = [];
   const duration = () => Number.isFinite(video.duration) ? video.duration : 30;
@@ -95,6 +96,23 @@
     // handoff continuously and could leave the site stuck on the first frame.
     if (enabled || starting || preference.matches) return;
     starting = true;
+    // Some static preview proxies ignore byte ranges. A fully received local
+    // media object has a reliable seek table on those connections as well.
+    if (!mediaPrepared && video.seekable && (!video.seekable.length || video.seekable.end(video.seekable.length - 1) < duration() - .5)) {
+      try {
+        const response = await fetch(video.currentSrc || 'world-film.mp4');
+        if (!response.ok) throw new Error('media download failed');
+        const blob = await response.blob();
+        if (preference.matches) { starting = false; return; }
+        mediaURL = URL.createObjectURL(blob);
+        mediaPrepared = true;
+        starting = false;
+        video.src = mediaURL;
+        video.load();
+        return;
+      } catch { fallback(); return; }
+    }
+    mediaPrepared = true;
     video.muted = true;
     video.playsInline = true;
     document.body.dataset.worldPlayback = 'film';
@@ -152,6 +170,7 @@
     else if (video.readyState >= 2) begin();
     else { video.preload = 'auto'; video.load(); }
   });
+  addEventListener('pagehide', event => { if (!event.persisted && mediaURL) URL.revokeObjectURL(mediaURL); });
   if (preference.matches) video.preload = 'none';
   else if (video.readyState >= 2) begin();
 })();

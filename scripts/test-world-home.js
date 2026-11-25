@@ -65,3 +65,14 @@ test('an autoplay rejection provides an explicit gesture recovery', async () => 
  f.video.play=function(){this.paused=false;return Promise.resolve()};await f.events.play();
  assert.equal(f.play.hidden,true);assert.equal(f.video.paused,false);
 });
+
+test('a preview without range seeking buffers the same authored film once', async () => {
+ const f=fixture();let fetched=0;
+ f.video.seekable={length:1,end:()=>0};f.video.currentSrc='https://preview.test/world-film.mp4';
+ f.context.fetch=async url=>{assert.equal(url,f.video.currentSrc);fetched++;return {ok:true,blob:async()=>({})}};
+ f.context.URL={createObjectURL:()=> 'blob:local-camera',revokeObjectURL(){}};
+ await f.videoEvents.canplay();assert.equal(f.video.src,'blob:local-camera');assert.equal(fetched,1);
+ assert.equal(f.body.dataset.worldPlayback,undefined);
+ await f.videoEvents.loadeddata();assert.equal(f.body.dataset.worldPlayback,'film');
+ await f.videoEvents.canplay();assert.equal(fetched,1);
+});

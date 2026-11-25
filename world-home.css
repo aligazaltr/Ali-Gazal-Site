@@ -76,3 +76,5 @@ body[data-world-playback] .site-footer { position: relative; z-index: 2; }
  body[data-world-playback] .world-screen::after { background: linear-gradient(0deg,#101814dd 0%,#10181477 47%,#10181420 85%); }
  body[data-world-playback] .world-intro-play { right: 1rem; }
 }
+
+body[data-world-playback] .preview-notice { background: var(--world-plaster); box-shadow: 0 0 0 100vmax var(--world-plaster); clip-path: inset(0 -100vmax); }
