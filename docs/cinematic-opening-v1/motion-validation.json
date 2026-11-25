@@ -1,0 +1,9 @@
+{
+  "decoded_frames": 241,
+  "distinct_decoded_frames": 241,
+  "black_segments": [],
+  "blackdetect_pixel_threshold": 0.08,
+  "blackdetect_min_duration": 0.04,
+  "interpolation": false,
+  "upscale": false
+}

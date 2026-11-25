@@ -1,11 +1,11 @@
 {
-  "stage": "web_preview_verification",
+  "stage": "delivered_first_journey",
   "generation_job": "8caa7a82-da1b-4be0-a7d4-5be228ab830d",
-  "status": "motion_completed",
+  "status": "complete_for_visual_review",
   "branch": "feature/cinematic-opening-v1",
   "base_commit": "915145ce20802287ccf7a7489917b71c9ea5d90b",
   "production_permission": false,
-  "preview_integration": "Isolated opening files prepared; deployment/browser verification pending",
+  "preview_integration": "Verified working immutable preview",
   "charged_credits": 0,
   "purchase": false,
   "native_resolution": "854x480",
@@ -19,5 +19,31 @@
   "node_tests": {
     "passed": 108,
     "failed": 0
-  }
+  },
+  "verified_preview": "https://759dfdb5-ali-gazal-site.aliicerikmedya.workers.dev/cinematic-opening",
+  "preview_initial": "https://759dfdb5-ali-gazal-site.aliicerikmedya.workers.dev/cinematic-opening",
+  "latest_code_commit": "be7db66dbf1106b69765b16323d2783094eb9408",
+  "main_unchanged": "a1cc3a3504df5757eb4444215606f40e33fea76b",
+  "pr33_unchanged": "915145ce20802287ccf7a7489917b71c9ea5d90b",
+  "unchanged_protected_files": 18,
+  "free_runs_used": 1,
+  "account_resets_used": 0,
+  "remaining_paid_credit_balance": 10,
+  "preview_url": "https://3e523ca5-ali-gazal-site.aliicerikmedya.workers.dev/cinematic-opening",
+  "tested_commit": "be7db66dbf1106b69765b16323d2783094eb9408",
+  "browser_checks": {
+    "passed": 20,
+    "failed": 0,
+    "widths": [
+      1440,
+      390
+    ],
+    "physical_mobile_device": false
+  },
+  "main_sha": "a1cc3a3504df5757eb4444215606f40e33fea76b",
+  "pr33_head_unchanged": "915145ce20802287ccf7a7489917b71c9ea5d90b",
+  "human_visual_approval": false,
+  "stop_reason": "First opening and window-to-river approach only; waiting for user visual review",
+  "reset_used": false,
+  "remaining_credits": 10
 }
