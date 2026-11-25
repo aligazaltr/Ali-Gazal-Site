@@ -10,8 +10,8 @@ body[data-world-playback] .site-header,
 body[data-world-playback] .preview-notice { position: relative; z-index: 5; }
 body[data-world-playback] .world-home > section { background: transparent; border: 0; }
 body[data-world-playback] .world-home::before { content: ''; position: absolute; inset: 0; pointer-events: none; z-index: -1; background: linear-gradient(90deg, #1d1913bd, #1d191370 31%, transparent 72%); }
-body[data-world-playback] .world-hero { min-height: 100svh; overflow: visible; }
-body[data-world-playback] .world-hero-inner { min-height: 100svh; align-items: center; padding-block: 4rem; }
+body[data-world-playback] .world-hero { min-height: calc(100svh - var(--world-top-space, 0px)); overflow: visible; }
+body[data-world-playback] .world-hero-inner { min-height: calc(100svh - var(--world-top-space, 0px)); align-items: center; padding-block: 4rem; }
 body[data-world-playback] .world-hero .world-camera,
 body[data-world-playback] .world-hero::after,
 body[data-world-playback] .world-hero::before,

@@ -23,6 +23,10 @@
     return a.time + (b.time - a.time) * fraction;
   }
   function measure() {
+    // The header and preview bar share the first viewport with the opening.
+    // Reserve their actual height so mobile actions stay within that viewport.
+    const heroTop = scrollY + document.querySelector('.world-hero').getBoundingClientRect().top;
+    document.querySelector('.world-home')?.style?.setProperty('--world-top-space', Math.max(0, heroTop) + 'px');
     const points = [
       ['.world-hero', introEnd], ['.world-river', 9.3],
       ['#gercek-deneyler', 12.7], ['#hikaye-fikir', 16.2],
@@ -121,6 +125,7 @@
     video.playsInline = true;
     document.body.dataset.worldPlayback = 'film';
     enabled = true;
+    measure();
     // The enhanced sections are taller than the static fallback. Re-anchor an
     // initial fragment after enabling that layout, before mapping the camera.
     const fragment = typeof location === 'object' ? location.hash : '';
