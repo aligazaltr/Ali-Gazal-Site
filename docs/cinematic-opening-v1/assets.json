@@ -1,0 +1,31 @@
+{
+  "source": "Previously generated original alternatives; no new alternatives generated in this run.",
+  "alternatives": [
+    {
+      "alternative": 1,
+      "source": "exec-88802b50-f467-491d-b811-f775dfe5e967.png",
+      "sha256": "e45b8066ff1dc7adb88f4ab75f3ee6d01dc51782dbe1c4a804149ccbe3a99a64",
+      "selected": false
+    },
+    {
+      "alternative": 2,
+      "source": "exec-f902e80d-cf76-4ab9-8ec3-594369b87b45.png",
+      "sha256": "d5e0a933ace1d11ae0e700c089659705eda75bcb42b3536d4dc7667175c2357f",
+      "selected": true
+    },
+    {
+      "alternative": 3,
+      "source": "exec-c565a56f-78db-4235-866c-4e8c09c400c4.png",
+      "sha256": "2582bda76e81032942b2dc4b04938429fcb113507ff99230ac097a311d71d06f",
+      "selected": false
+    }
+  ],
+  "storyboard": "Five concept keyframes; not a geometric or motion proof.",
+  "generation_job": "8caa7a82-da1b-4be0-a7d4-5be228ab830d",
+  "motion_source": "Existing authored Blender world film, first 10 seconds",
+  "motion_source_commit": "915145ce20802287ccf7a7489917b71c9ea5d90b",
+  "model": "hf_mult_motion_control",
+  "quoted_credit_cost": 0,
+  "output_resolution_requested": "480p",
+  "use_free_gens": true
+}

@@ -1,0 +1,23 @@
+{
+  "stage": "web_preview_verification",
+  "generation_job": "8caa7a82-da1b-4be0-a7d4-5be228ab830d",
+  "status": "motion_completed",
+  "branch": "feature/cinematic-opening-v1",
+  "base_commit": "915145ce20802287ccf7a7489917b71c9ea5d90b",
+  "production_permission": false,
+  "preview_integration": "Isolated opening files prepared; deployment/browser verification pending",
+  "charged_credits": 0,
+  "purchase": false,
+  "native_resolution": "854x480",
+  "duration_seconds": 10.041667,
+  "visual_limitations": [
+    "480p only; not a final HD master",
+    "Some AI texture/geometry instability; no exact reconstructible 3D scene",
+    "Courtyard/river approach rather than a complete wide river valley",
+    "Water stops with the scroll-controlled video"
+  ],
+  "node_tests": {
+    "passed": 108,
+    "failed": 0
+  }
+}

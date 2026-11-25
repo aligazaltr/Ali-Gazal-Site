@@ -1,0 +1,19 @@
+{
+  "programs": [],
+  "stream_groups": [],
+  "streams": [
+    {
+      "codec_name": "h264",
+      "width": 854,
+      "height": 480,
+      "r_frame_rate": "24/1",
+      "nb_read_frames": "241"
+    }
+  ],
+  "format": {
+    "duration": "10.041667",
+    "size": "5468994"
+  },
+  "sha256": "a7cf551a3c6fedb82e23bd254579d5bf0fe8067736e25da1d25de1f7f30be539",
+  "method": "Higgsfield Genjutsu motion transfer, 0-credit free run. Existing Blender first 10 seconds as motion guide, selected original reference image for appearance. H.264 intraframe-friendly web encode; no upscale or frame interpolation."
+}
