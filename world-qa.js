@@ -52,7 +52,7 @@ frame.onload=async()=>{
   document.body.dataset.ready='';
   document.body.dataset.view=w.innerWidth+'x'+w.innerHeight;
   if(params.has('run')){
-   const first=v.currentTime;await sleep(1100);note('automatic camera advances',v.currentTime>first+.1,{first,after:v.currentTime});
+   const first=v.currentTime;await sleep(1100);note('intro actions fit first viewport',d.querySelector('.world-hero .world-actions').getBoundingClientRect().bottom<=w.innerHeight,{bottom:d.querySelector('.world-hero .world-actions').getBoundingClientRect().bottom,viewport:w.innerHeight});note('automatic camera advances',v.currentTime>first+.1,{first,after:v.currentTime});
    await wait(()=>v.paused&&v.currentTime>=4.88);
    note('intro hands over at 4.9s',Math.abs(v.currentTime-4.9)<.06,v.currentTime);
    for(const key of ['river','projects','fikir','deney','sonuc','archive','projects']){
