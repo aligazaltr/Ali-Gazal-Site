@@ -1,0 +1,26 @@
+[
+  {
+    "file": "desktop-dark.jpg",
+    "theme": "dark",
+    "width": 1280,
+    "height": 720
+  },
+  {
+    "file": "desktop-light.jpg",
+    "theme": "light",
+    "width": 1280,
+    "height": 720
+  },
+  {
+    "file": "mobile-dark.jpg",
+    "theme": "dark",
+    "width": 390,
+    "height": 844
+  },
+  {
+    "file": "mobile-light.jpg",
+    "theme": "light",
+    "width": 390,
+    "height": 844
+  }
+]

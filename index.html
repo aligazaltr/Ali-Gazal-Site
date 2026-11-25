@@ -40,6 +40,8 @@
   <link rel="stylesheet" href="home-recovery.css">
   <link rel="stylesheet" href="archive-world.css">
   <script src="archive-world.js" defer></script>
+  <link rel="stylesheet" href="world-home.css">
+  <script src="world-home.js" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#icerik">İçeriğe geç</a>
@@ -70,7 +72,8 @@
 
 
   <main id="icerik" class="world-home">
-    <section class="world-hero" data-world-scene aria-labelledby="library-title">
+    <div class="world-screen" aria-hidden="true"><video id="world-film" muted playsinline preload="auto" poster="world-poster.webp"><source src="world-film.mp4" type="video/mp4" media="(prefers-reduced-motion: no-preference)"></video></div>
+    <section class="world-hero" aria-labelledby="library-title">
       <div class="world-camera" aria-hidden="true">
         <div class="world-panorama" data-world-plane="room">
           <picture>
@@ -100,23 +103,14 @@
             <a class="world-quiet" href="#gercek-deneyler">Deneyleri keşfet <span aria-hidden="true">↓</span></a>
           </div>
         </div>
+        <p class="world-loading" role="status" hidden>Yolculuk hazırlanıyor…</p>
+        <button class="world-intro-play" type="button" hidden>Yolculuğu başlat</button>
+        <button class="world-intro-skip" type="button" hidden>Açılışı atla</button>
         <button class="world-motion-toggle" type="button" data-world-toggle hidden>Hareketi durdur</button>
       </div>
     </section>
 
-    <section id="yasayan-arsiv" class="world-alcove" aria-labelledby="dusunce-daveti">
-      <div class="world-alcove-inner site-shell">
-        <figure class="world-reference">
-          <img src="thought-library-illustration.webp" width="1080" height="720" alt="Taş bir pervazda üst üste duran üç eski kitap, aralarındaki not ve kemerin yanındaki zeytin yaprakları" loading="lazy" decoding="async">
-        </figure>
-        <div class="world-alcove-copy">
-          <h2 id="dusunce-daveti" data-world-reveal>Düşünce Arşivi</h2>
-          <p>Kitaplardan seçilmiş düşünceleri kaynakları ve yorumlarıyla oku. Bir yazar, kitap veya konuyla başla.</p>
-          <a class="world-quiet" href="dusunce-arsivi.html#arsiv">Arşivi keşfet <span aria-hidden="true">→</span></a>
-        </div>
-      </div>
-    </section>
-
+    <section class="world-river site-shell" aria-labelledby="river-title"><p class="eyebrow">DÜŞÜNCEDEN HAYATA</p><h2 id="river-title">Bir fikrin izinden.</h2><p>Kitapta başlayan bir soru, gerçek hayatta neyi değiştirir?</p></section>
     <section id="gercek-deneyler" class="site-shell home-experiments" aria-labelledby="proje-baslik">
       <header class="home-section-heading">
         <h2 id="proje-baslik" data-world-reveal>Gerçek deneyler</h2>
@@ -163,6 +157,7 @@
     </section>
 
     <section id="fikirden-deneye" class="site-shell home-method" aria-labelledby="hikaye-baslik">
+      <div class="world-process" aria-hidden="true"><span>AG</span><strong data-world-concept>FİKİR</strong></div>
       <!-- experience:story:method:start --><header class="home-section-heading"><h2 id="hikaye-baslik" data-world-reveal>Bir fikir. Gerçek hayat. Dürüst bir sonuç.</h2></header>
   <div class="story-layout" data-story data-scene="0">
     <div class="story-visual" aria-hidden="true">
@@ -178,6 +173,19 @@
     </div>
     <div class="story-scenes"><article class="story-scene" data-story-scene id="hikaye-fikir"><div class="story-local-window"><img class="story-local-plate" src="story-reading-table.webp" alt="" width="900" height="600" loading="lazy" decoding="async"></div><div class="story-scene-heading"><p class="eyebrow"><span class="scene-number">01</span> <span class="scene-label">FİKİR</span></p></div><div class="reveal-mask"><h3>Bir fikir ne kadar güçlü olabilir?</h3></div><p class="scene-description">Bir düşünceyi anlamak için önce onun ne iddia ettiğini araştırıyorum.</p><p class="story-note">Kaynağı oku. İddiayı anla. Soruyu belirle.</p></article><article class="story-scene" data-story-scene id="hikaye-deney"><div class="story-local-window"><img class="story-local-plate" src="living-experiment.webp" alt="" width="900" height="600" loading="lazy" decoding="async"></div><div class="story-scene-heading"><p class="eyebrow"><span class="scene-number">02</span> <span class="scene-label">DENEY</span></p></div><div class="reveal-mask"><h3>Peki gerçek hayatta ne oluyor?</h3></div><p class="scene-description">Fikirleri yalnızca okumuyor, gerçek koşullarda test ediyorum.</p><p class="story-note">Uygula. Zorlandığın anları kaydet. Değişimi izle.</p></article><article class="story-scene" data-story-scene id="hikaye-sonuc"><div class="story-local-window"><img class="story-local-plate" src="living-result.webp" alt="" width="900" height="600" loading="lazy" decoding="async"></div><div class="story-scene-heading"><p class="eyebrow"><span class="scene-number">03</span> <span class="scene-label">SONUÇ</span></p></div><div class="reveal-mask"><h3>Gerçekten işe yaradı mı?</h3></div><p class="scene-description">Başarıları, başarısızlıkları ve sınırları olduğu gibi paylaşıyorum.</p><p class="story-note">Sonucu, kanıtları ve eksikleri birlikte değerlendir.</p></article></div>
   </div><!-- experience:story:method:end -->
+    </section>
+
+    <section id="yasayan-arsiv" class="world-alcove" aria-labelledby="dusunce-daveti">
+      <div class="world-alcove-inner site-shell">
+        <figure class="world-reference">
+          <img src="thought-library-illustration.webp" width="1080" height="720" alt="Taş bir pervazda üst üste duran üç eski kitap, aralarındaki not ve kemerin yanındaki zeytin yaprakları" loading="lazy" decoding="async">
+        </figure>
+        <div class="world-alcove-copy">
+          <h2 id="dusunce-daveti" data-world-reveal>Düşünce Arşivi</h2>
+          <p>Kitaplardan seçilmiş düşünceleri kaynakları ve yorumlarıyla oku. Bir yazar, kitap veya konuyla başla.</p>
+          <a class="world-quiet" href="dusunce-arsivi.html#arsiv">Arşivi keşfet <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
     </section>
 
     <section class="site-shell home-author" aria-labelledby="yaklasim-baslik">

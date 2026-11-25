@@ -1,0 +1,29 @@
+{
+  "kind": "actual Chrome tab screen recording",
+  "source": "getDisplayMedia + MediaRecorder",
+  "source_capture": "variable refresh, requested 24 fps",
+  "crop": [
+    1280,
+    720,
+    0,
+    0
+  ],
+  "delivery_probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "width": 1280,
+        "height": 720,
+        "r_frame_rate": "24/1",
+        "nb_frames": "1093"
+      }
+    ],
+    "format": {
+      "duration": "45.541667",
+      "size": "8195152"
+    }
+  },
+  "sha256": "1d86b765994fd8d9d8657aafda98ebd98e53e47f0acaaf53e31c3492b30a1303",
+  "qa_commit": "05743f6a0dc3da2763d9fab35965096611c062a1"
+}
