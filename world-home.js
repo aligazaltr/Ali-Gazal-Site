@@ -117,6 +117,16 @@
     video.playsInline = true;
     document.body.dataset.worldPlayback = 'film';
     enabled = true;
+    // The enhanced sections are taller than the static fallback. Re-anchor an
+    // initial fragment after enabling that layout, before mapping the camera.
+    const fragment = typeof location === 'object' ? location.hash : '';
+    if (fragment && fragment !== '#icerik') {
+      let target;
+      try { target = document.getElementById(decodeURIComponent(fragment.slice(1))); } catch {}
+      if (target?.closest('.world-home')) {
+        scrollTo({top: scrollY + target.getBoundingClientRect().top - innerHeight * .13, behavior: 'instant'});
+      }
+    }
     measure();
     startY = scrollY;
     automatic = document.querySelector('.world-hero').getBoundingClientRect().bottom > innerHeight * .3;
