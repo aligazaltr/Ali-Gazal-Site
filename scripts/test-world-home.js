@@ -83,3 +83,16 @@ test('initial fragment is measured again after the taller cinematic layout is en
  f.context.scrollTo=({top})=>{f.context.scrollY=top};
  await f.videoEvents.canplay();f.tick();assert.ok(f.video.currentTime>23);assert.equal(f.video.paused,true);
 });
+
+test('after the first descent, reversing to the top returns to the original book camera', async () => {
+ const f=fixture();await f.videoEvents.canplay();f.video.currentTime=4.94;f.tick();
+ f.context.scrollY=6000;f.events.scroll();f.tick();assert.ok(f.video.currentTime>15);
+ f.context.scrollY=0;f.events.scroll();f.tick();assert.equal(f.video.currentTime,0);
+ f.context.scrollY=3000;f.events.scroll();f.tick();assert.ok(f.video.currentTime>4.9);
+});
+test('the reverse-intro mapping is continuous at its first river activation after early input', async () => {
+ const f=fixture();await f.videoEvents.canplay();f.video.currentTime=1.75;
+ f.context.scrollY=500;f.events.scroll();f.tick();
+ f.context.scrollY=1009;f.events.scroll();f.tick();const before=f.video.currentTime;
+ f.context.scrollY=1011;f.events.scroll();f.tick();assert.ok(Math.abs(f.video.currentTime-before)<.1);
+});

@@ -62,6 +62,7 @@ frame.onload=async()=>{
    const before=v.currentTime;v.dispatchEvent(new Event('canplay'));await sleep(250);note('canplay does not reset camera',Math.abs(v.currentTime-before)<.05,{before,after:v.currentTime});
    const time=v.currentTime;d.querySelector('[data-theme-toggle]').click();await sleep(250);note('theme preserves camera',Math.abs(v.currentTime-time)<.05,d.documentElement.dataset.theme);
    note('film is visible',getComputedStyle(v).display!=='none'&&v.videoWidth>0,{width:v.videoWidth,height:v.videoHeight});
+   w.scrollTo({top:0,behavior:'instant'});await sleep(700);note('reverse returns to the original books',v.currentTime<.1,v.currentTime);
    note('all projects remain linked',['machiavelli.html','kontrol-bende-mi.html','irade-terbiyesi.html'].every(href=>!!d.querySelector('#gercek-deneyler a[href="'+href+'"]')));
    document.body.dataset.completed='';status.textContent=results.every(r=>r.pass)?'Tüm tarayıcı kontrolleri geçti':'Başarısız kontrol var';
   }

@@ -10,7 +10,7 @@
   let enabled = false, starting = false, automatic = true, frame = 0;
   let mediaPrepared = false, mediaURL = null;
   let startY = scrollY, handoffTime = introEnd, handoffMap = introEnd;
-  let desired = 0, anchors = [], scenes = [];
+  let desired = 0, anchors = [], scenes = [], fullRoute = false;
   const duration = () => Number.isFinite(video.duration) ? video.duration : 30;
 
   function mappedTime() {
@@ -20,7 +20,8 @@
     if (index < 0) return duration() - .1;
     const a = anchors[index], b = anchors[index + 1];
     const fraction = Math.max(0, Math.min(1, (position - a.y) / Math.max(1, b.y - a.y)));
-    return a.time + (b.time - a.time) * fraction;
+    const from = fullRoute && index === 0 ? 0 : a.time;
+    return from + (b.time - from) * fraction;
   }
   function measure() {
     // The header and preview bar share the first viewport with the opening.
@@ -63,6 +64,10 @@
       skip.hidden = true;
     }
     if (!automatic) {
+      // Once the river is reached, reversing the journey can return all the
+      // way to the books. Both maps meet at the same river frame, so the
+      // first forward handoff stays continuous and never jumps backwards.
+      if (anchors[1] && scrollY >= anchors[1].y) fullRoute = true;
       const mapped = mappedTime();
       desired = mapped <= handoffMap
         ? handoffTime * Math.max(0, mapped / Math.max(.01, handoffMap))
