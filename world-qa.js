@@ -2,6 +2,7 @@
 const params = new URLSearchParams(location.search);
 const frame = document.querySelector('iframe');
 const status = document.querySelector('#status');
+const expectedTimes={river:9.3,projects:12.7,fikir:16.2,deney:19.4,sonuc:23.6,archive:29.9};
 const sections = {intro:'.world-hero',river:'.world-river',projects:'#gercek-deneyler',fikir:'#hikaye-fikir',deney:'#hikaye-deney',sonuc:'#hikaye-sonuc',archive:'#yasayan-arsiv'};
 frame.width=params.get('size')==='mobile'?390:params.get('size')==='record'?1280:1440;
 frame.height=params.get('size')==='mobile'?844:params.get('size')==='record'?720:900;
@@ -58,7 +59,7 @@ frame.onload=async()=>{
    note('intro hands over at 4.9s',Math.abs(v.currentTime-4.9)<.06,v.currentTime);
    for(const key of ['river','projects','fikir','deney','sonuc','archive','projects']){
     const target=d.querySelector(sections[key]);w.scrollTo({top:w.scrollY+target.getBoundingClientRect().top-w.innerHeight*.13,behavior:'instant'});
-    await sleep(850);note(key+' camera seek',v.currentTime>4.9,{time:v.currentTime,overflow:Math.max(0,d.documentElement.scrollWidth-w.innerWidth)});
+    await sleep(850);note(key+' camera seek',Math.abs(v.currentTime-expectedTimes[key])<.18&&d.documentElement.scrollWidth<=w.innerWidth,{time:v.currentTime,expected:expectedTimes[key],overflow:Math.max(0,d.documentElement.scrollWidth-w.innerWidth)});
    }
    const before=v.currentTime;v.dispatchEvent(new Event('canplay'));await sleep(250);note('canplay does not reset camera',Math.abs(v.currentTime-before)<.05,{before,after:v.currentTime});
    const time=v.currentTime;d.querySelector('[data-theme-toggle]').click();await sleep(250);note('theme preserves camera',Math.abs(v.currentTime-time)<.05,d.documentElement.dataset.theme);
