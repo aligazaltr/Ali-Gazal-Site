@@ -1,0 +1,39 @@
+{
+  "source_commit": "7072ef582e1b8cf5db8699f3d406bbc8267a5b61",
+  "render_engine": "Blender 4.3.2 / Cycles CPU",
+  "native_resolution": [
+    1920,
+    1080
+  ],
+  "rendered_frames": 720,
+  "native_fps": 24,
+  "duration_seconds": 30,
+  "cycles_samples": 4,
+  "delivery_bitrate_cap": "3 Mbit/s",
+  "denoiser": "OpenImageDenoise with linear HDR, normal and albedo guides",
+  "camera_interpolation": "nonuniform cubic Hermite, continuous velocity",
+  "frame_interpolation": false,
+  "ai_upscaling": false,
+  "delivery_probe": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "width": 1920,
+        "height": 1080,
+        "r_frame_rate": "24/1",
+        "nb_frames": "720"
+      }
+    ],
+    "format": {
+      "duration": "30.000000",
+      "size": "11376430"
+    }
+  },
+  "sha256": "06feafa2fdcf7bec428e968402e4474f3d2d95929cc484c3787bcd3cf46a7458",
+  "known_visual_limits": [
+    "procedural vegetation and architecture",
+    "low sample count and denoising",
+    "not accepted as photorealistic final art"
+  ]
+}
