@@ -40,7 +40,7 @@ body[data-world-playback] .world-reference { display: none; }
 body[data-world-playback] .world-alcove-copy { max-width: 36rem; padding-block: 6rem; }
 body[data-world-playback] .home-author { padding-block: 4rem 6rem; }
 @media(max-width:43rem) {
- .world-screen video { object-position: 57% 50%; }
+ .world-screen video { object-position: 20% 50%; }
  body[data-world-playback] .world-home::before { background: linear-gradient(90deg,#211b14b8,#211b1463 72%,transparent); }
  body[data-world-playback] .world-hero-inner { align-items: end; padding-block: 3rem 8rem; }
  body[data-world-playback] .world-hero h1 { font-size: clamp(2.6rem,10.5vw,4rem); }
@@ -80,3 +80,8 @@ body[data-world-playback] .site-footer { position: relative; z-index: 2; }
 body[data-world-playback] .preview-notice { background: var(--world-plaster); box-shadow: 0 0 0 100vmax var(--world-plaster); clip-path: inset(0 -100vmax); }
 
 .world-loading { position: absolute; bottom: 3rem; left: 0; margin: 0; padding: .55rem .85rem; font-size: .82rem; color: var(--text); background: var(--bg); border: 1px solid var(--line); border-radius: 3px; }
+
+/* Keep the primary action and its arrow readable over both cinematic themes. */
+body[data-world-playback] .world-hero .world-action { background: #edbb78; color: #271a10; }
+body[data-world-playback] .world-hero .world-action:hover { background: #f5cc93; }
+body[data-world-playback] .world-quiet span { color: #edbb78; }
