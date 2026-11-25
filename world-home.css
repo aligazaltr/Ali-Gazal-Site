@@ -3,7 +3,7 @@
 .world-home .world-hero [data-world-toggle] { display: none; }
 /* Scoped enhancement. The authored page is fully readable before media loads. */
 .world-screen, .world-river, .world-process { display: none; }
-body[data-world-playback] .world-home { position: relative; isolation: isolate; background: transparent; --text: #fff0d8; --muted-strong: #eee0c8; --accent: #edbb78; color: #fff0d8; }
+body[data-world-playback] .world-home { position: relative; isolation: isolate; background: transparent; --text: #fff0d8; --muted-strong: #eee0c8; --muted: #ded1b8; --accent: #edbb78; color: #fff0d8; }
 body[data-world-playback] .world-screen { display: block; position: fixed; inset: 0; z-index: -2; overflow: hidden; background: #32251c; }
 .world-screen video { width: 100%; height: 100%; object-fit: cover; object-position: 56% 50%; }
 body[data-world-playback] .site-header,
@@ -21,7 +21,7 @@ body[data-world-playback] .world-river { display: flex; min-height: 90svh; flex-
 .world-river h2 { max-width: 10ch; font: 850 clamp(3.2rem,7vw,7rem)/1.02 var(--sans,system-ui,sans-serif); letter-spacing: -.06em; }
 .world-river > p:last-child { max-width: 29ch; font-size: 1.15rem; }
 body[data-world-playback] .home-experiments { padding-block: 6rem; min-height: 120svh; }
-body[data-world-playback] .home-experiment { background: light-dark(#f3e7d3e6,#201c16e6); --text: light-dark(#30251b,#fff0d8); --muted-strong: light-dark(#554530,#eee0c8); --accent: light-dark(#79502c,#edbb78); padding: 1.3rem; border-radius: .3rem; backdrop-filter: blur(5px); }
+body[data-world-playback] .home-experiment { background: light-dark(#f3e7d3e6,#201c16e6); --text: light-dark(#30251b,#fff0d8); --muted-strong: light-dark(#554530,#eee0c8); --muted: light-dark(#655747,#b9ad9d); --accent: light-dark(#79502c,#edbb78); padding: 1.3rem; border-radius: .3rem; backdrop-filter: blur(5px); }
 body[data-world-playback] .home-experiment-art { margin: 0 0 1rem; }
 body[data-world-playback] .home-method { padding-block: 4rem; }
 body[data-world-playback] .story-layout { display: block; }
