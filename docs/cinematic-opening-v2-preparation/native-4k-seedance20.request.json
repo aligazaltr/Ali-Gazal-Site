@@ -1,0 +1,26 @@
+{
+  "status": "PREPARATION_ONLY_DO_NOT_SUBMIT_WITHOUT_NEW_USER_APPROVAL",
+  "params": {
+    "model": "seedance_2_0",
+    "mode": "std",
+    "resolution": "4k",
+    "duration": 10,
+    "aspect_ratio": "16:9",
+    "bitrate_mode": "high",
+    "genre": "auto",
+    "generate_audio": false,
+    "count": 1,
+    "use_unlim": false,
+    "medias": [
+      {
+        "role": "start_image",
+        "value": "4a34e55b-c123-4e3a-a9cb-d2714b23cc5a"
+      },
+      {
+        "role": "video",
+        "value": "70150e5b-a616-4507-aa91-c9125df188c4"
+      }
+    ],
+    "prompt": "Create one continuous photorealistic architectural camera journey, using the reference image as the visual identity and starting composition, and the source video ONLY as the camera-motion guide. Preserve the reference's carved limestone arches, three antique books on a walnut table, recessed bookshelf, olive leaves and natural sunlight. Replace ALL of the simplistic source-video materials, foliage and geometry with realistic weathered stone, subtle dust in directional daylight, detailed leather, flowing blue-green water and dense natural Mediterranean trees. First 0-4.8 seconds: slow forward-right camera movement past the books and foreground olive leaves toward the large RIGHT-HAND EXTERIOR arch, never into the central bookshelf alcove. Then pass THROUGH that open exterior arch into the same sunlit stone courtyard. 5-10 seconds: widen the river valley with classical stone architecture and follow the flowing river toward a small stone bridge. True perspective parallax, smooth physically plausible camera, stable stonework, stable books, realistic wind in leaves and continuous water motion. Keep opening left wall visually calm for later HTML headline; generate absolutely no text. No cuts, no crossfades, no circular portal, no geometric morphing, no digital photo zoom, no black frames, no people, no logo, no music.\nPreservation constraint for this high-resolution remake: keep the already approved composition, material palette, room and courtyard identity, three books and the same continuous camera path. Do not redesign the scene or introduce extra architectural elements. High-resolution detail only; no change of style, story, framing or camera rhythm."
+  }
+}

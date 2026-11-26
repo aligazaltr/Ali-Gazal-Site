@@ -1,0 +1,368 @@
+[
+  {
+    "path": "cinematic-film.mp4",
+    "bytes": 5468994,
+    "sha256": "a7cf551a3c6fedb82e23bd254579d5bf0fe8067736e25da1d25de1f7f30be539",
+    "git_blob": "66eed76072a3254ad5a3b94296b8edf897716c1d"
+  },
+  {
+    "path": "cinematic-opening.css",
+    "bytes": 6346,
+    "sha256": "41d3a5540f01a5acdbcfa3cdc854d848e150b2df1aef2e5d192eb686431c37cc",
+    "git_blob": "bcbcac2004f22f95a7b224f568fc68d010cf64b1"
+  },
+  {
+    "path": "cinematic-opening.html",
+    "bytes": 3081,
+    "sha256": "8df2b72c69294f370b96bfef294da9461fa22bbbac8a4b04c35711e42e8480ff",
+    "git_blob": "51f729f94fa856a0b26aaf6927ca741bf593a955"
+  },
+  {
+    "path": "cinematic-opening.js",
+    "bytes": 6299,
+    "sha256": "0e550f22bb4ef643f312ed8be621774ae5e6737b9afca6911e510019032adb80",
+    "git_blob": "db0dfd7ebb66eb2e0b1424830a192b795bd857a5"
+  },
+  {
+    "path": "cinematic-poster.webp",
+    "bytes": 94072,
+    "sha256": "d83d1a62562c12986c9addeb97a12150685908ed48dd56e7ed9dc4d39534cb6d",
+    "git_blob": "74c56d61a3fce94568380ff32eddea4036b706ad"
+  },
+  {
+    "path": "cinematic-qa.html",
+    "bytes": 1478,
+    "sha256": "9214212e6ee3c535d9e85d3acd8d329c324be995c77bebe95ae9518c91041133",
+    "git_blob": "9b098c9ae43aba8dd7e8962c473427a1477686db"
+  },
+  {
+    "path": "cinematic-qa.js",
+    "bytes": 4260,
+    "sha256": "a6d75ffa31fe083e2e83837cd2eb77db9f6fd390c7e84dd0f58a28753669408f",
+    "git_blob": "b5f81240a003a3fd0111d7d59f145c8594d3eb30"
+  },
+  {
+    "path": "docs/cinematic-opening-v1/REVIEW.md",
+    "bytes": 3859,
+    "sha256": "5123bdfea13a21ec96bc797857b2915d3cd6b6b8b240766cccc602b43e0ade04",
+    "git_blob": "fca8746faa7413386f95e467dde3805ebc9b4319"
+  },
+  {
+    "path": "docs/cinematic-opening-v1/alternative-1.webp",
+    "bytes": 598494,
+    "sha256": "426f12040ea2b3e399c1c0c0468b48f997e4becc9285dbc47c330f92e76c1ace",
+    "git_blob": "98342de22be7b2ef0b89a8a662f9b9f2a8b7dc7a"
+  },
+  {
+    "path": "docs/cinematic-opening-v1/alternative-2.webp",
+    "bytes": 536268,
+    "sha256": "3ae0a6140bbfbdcd13e5b585f494bf6fec81b61d075a32d1caed727a55c17584",
+    "git_blob": "07f76d95e2089d7233425394fe101476a015bd5f"
+  },
+  {
+    "path": "docs/cinematic-opening-v1/alternative-3.webp",
+    "bytes": 522676,
+    "sha256": "20904f13507171ed0338ec93a29a20388aeff5d326f494000209b81e1823852d",
+    "git_blob": "a7a5c679ca5d17063c8a9e3258dfde8a7cc4668e"
+  },
+  {
+    "path": "docs/cinematic-opening-v1/alternatives.webp",
+    "bytes": 144370,
+    "sha256": "ac988d52be6197284176f65bebff1eedb1887ab49309b06274b5fb243db144b5",
+    "git_blob": "86676b3b958981a63e599e1085c405be14dadcec"
+  },
+  {
+    "path": "docs/cinematic-opening-v1/assets.json",
+    "bytes": 1170,
+    "sha256": "6d8428cd787a1aa440b01aa1fae562a3f02c9aa3bab7e980e5dbd10591a73d9b",
+    "git_blob": "d37672d648e4e3dfd56f353121a2c361d3ea40c1"
+  },
+  {
+    "path": "docs/cinematic-opening-v1/browser-checks.json",
+    "bytes": 3005,
+    "sha256": "5fba2a5c3d0fa02d22a45f4fc6151f2ce0f0bd9449d1101456afa9026284771f",
+    "git_blob": "5c57ab12a495f778f9a5474a36f7541669cfcf26"
+  },
+  {
+    "path": "docs/cinematic-opening-v1/desktop-opening-dark.jpg",
+    "bytes": 113994,
+    "sha256": "a0fc833be08bdf206aefcc945b638b341280034da8ef55e9f0e335f594928f95",
+    "git_blob": "ec6e6eded0cfb73d9b4bf32ba69afe951474d188"
+  },
+  {
+    "path": "docs/cinematic-opening-v1/desktop-river-light.jpg",
+    "bytes": 119162,
+    "sha256": "a4aa1a4b8bf13383410b855db5897af48c6f50a54de230ca7251852b52303e9b",
+    "git_blob": "c515156e34f600d79d3abac1d49db649c2674770"
+  },
+  {
+    "path": "docs/cinematic-opening-v1/film-metadata.json",
+    "bytes": 600,
+    "sha256": "ce2d4ac9b75df4ff2906dc31979b5025c39ceaf37629a3be57ba2f69a856ab5b",
+    "git_blob": "a66ea0c9eb113236e5804d5ad65a7a653ea94206"
+  },
+  {
+    "path": "docs/cinematic-opening-v1/generated-motion-original.mp4",
+    "bytes": 11405522,
+    "sha256": "fca1d4f1360ac100e35f2e4c0f0ffe1221e0d9a84e788d8e7f467d1c9e2acbf5",
+    "git_blob": "4c2c16a50bf48e19511913f21a5982480e87f092"
+  },
+  {
+    "path": "docs/cinematic-opening-v1/generation-request.json",
+    "bytes": 1960,
+    "sha256": "36d0d3677f2f29bc63eeeef148531ece4085089a1205aaa8cd98608cb3448f88",
+    "git_blob": "9a299b6d36917f7640811c5adc030add610192bd"
+  },
+  {
+    "path": "docs/cinematic-opening-v1/mobile-opening-dark.jpg",
+    "bytes": 60985,
+    "sha256": "6c2d21f1b3fa21ca4ef064f73016288f4481c0b28dac0cad4cbb9484ddf455b9",
+    "git_blob": "008cadb1a908d001270d404efc602400b1e646f2"
+  },
+  {
+    "path": "docs/cinematic-opening-v1/mobile-opening-light.jpg",
+    "bytes": 62102,
+    "sha256": "3d10ce5456ce723a6c8d7b712cfb79ea13d1429d6d82d303c1948ac12ce127c2",
+    "git_blob": "7393f928bdf7c6a31fc8bb590749647d33a1ef9e"
+  },
+  {
+    "path": "docs/cinematic-opening-v1/motion-contact.webp",
+    "bytes": 122376,
+    "sha256": "d45731ccbb7dce3de0e1be0717309aa7bf5747bccd93662a8f5bf4fd9760ca5a",
+    "git_blob": "b6f4b818c7f778a10fcfb1e1386f6d8c8f982193"
+  },
+  {
+    "path": "docs/cinematic-opening-v1/motion-validation.json",
+    "bytes": 207,
+    "sha256": "edd6b721cc55ac0ac433e21bb4ba2692b570ce987e7c681bc72827fcbad278ef",
+    "git_blob": "e7eab87d47518cffc886f6626b80a710bc5837fc"
+  },
+  {
+    "path": "docs/cinematic-opening-v1/node-tests.txt",
+    "bytes": 10425,
+    "sha256": "fa244bd90ede213502e378651ea5863115a05bf8b3a63043bbe0e73a7f1203d6",
+    "git_blob": "5b56ed32fb48401a8323afd39de5d5e24dc1fbdc"
+  },
+  {
+    "path": "docs/cinematic-opening-v1/preliminary-browser-checks.json",
+    "bytes": 2541,
+    "sha256": "9c60ffaefaed07b816cbe328221bf7e9ef2b368619020fa157de899d06c58eb4",
+    "git_blob": "eb448ad69a10b767bca4bc166e9cec4c242a5c21"
+  },
+  {
+    "path": "docs/cinematic-opening-v1/production-state.json",
+    "bytes": 1927,
+    "sha256": "b12c13190ef3654eb8d4842612c3325fe21e2cc71178cc9c12ed4cbbb32c4509",
+    "git_blob": "d5659f9129c2c2495d665df3fe5f0427058788f5"
+  },
+  {
+    "path": "docs/cinematic-opening-v1/protected-files.json",
+    "bytes": 2239,
+    "sha256": "da17241a653907e1433c2d873526220b8a69128a216055846030bd008d552d98",
+    "git_blob": "9ec7b12a2201368ab58e79bb13b30631682114ab"
+  },
+  {
+    "path": "docs/cinematic-opening-v1/selected.webp",
+    "bytes": 602156,
+    "sha256": "672c9220942a38e10ede6561972e07e0c504da67de6030c99f6c3d1197d94ee0",
+    "git_blob": "f86afb02a1c48ef8d3233176a133cc3cb50d4caf"
+  },
+  {
+    "path": "docs/cinematic-opening-v1/storyboard-1.webp",
+    "bytes": 468964,
+    "sha256": "6cb2bea71eeb77bf3a67370e5f06714056a968d95751ba4766d4f2024083a155",
+    "git_blob": "bfebdc26d0f8a4e325d640a2ad501dbc53b9a8bb"
+  },
+  {
+    "path": "docs/cinematic-opening-v1/storyboard-2.webp",
+    "bytes": 106502,
+    "sha256": "c9dc77a00eba0029f3994b20c78c81bc940b1c7e6e2edf1902929d4a5c5678e9",
+    "git_blob": "ddb18c6f5e211c59705c001b99689323472697dd"
+  },
+  {
+    "path": "docs/cinematic-opening-v1/storyboard-3.webp",
+    "bytes": 151476,
+    "sha256": "f26009d47681deb2b7d315f76a102c254d448a4410b435c0ef9fd409ba0931a6",
+    "git_blob": "45b70548d4d445994684da1f95a66d5535c5dd32"
+  },
+  {
+    "path": "docs/cinematic-opening-v1/storyboard-4.webp",
+    "bytes": 174430,
+    "sha256": "08443663fb98a6c6151ac773d4ba84ba4cd572bfc928c98f9e9db68330bdb2cd",
+    "git_blob": "fc3d2c545e6d27a04fba2807d9dc283ffd3e7593"
+  },
+  {
+    "path": "docs/cinematic-opening-v1/storyboard-5.webp",
+    "bytes": 180300,
+    "sha256": "fa29086a4ee122f3f2ddc1206ee589bf3b45f829434eeb54897e7132560b39c3",
+    "git_blob": "a196092c26100abb38484c12e849c0d286f29448"
+  },
+  {
+    "path": "docs/cinematic-opening-v1/storyboard.webp",
+    "bytes": 528996,
+    "sha256": "b63b3f7a87b55ad5ae15b4ece4718fa486aec9abe5e4c8dd9acda81be74111ac",
+    "git_blob": "874900791a1eedc923d361d02164638c1990761a"
+  },
+  {
+    "path": "world-source/README.md",
+    "bytes": 5246,
+    "sha256": "0954590b5fdbb1ff1d55de629ca2b88f1ae025d87a58877f7ee440d0e2c49432",
+    "git_blob": "321f947930960f054d6164e6f2c8ab0c3ee02ea0"
+  },
+  {
+    "path": "world-source/THREE-LICENSE.txt",
+    "bytes": 1081,
+    "sha256": "bfe119ea4fd413f5f7ca3fcd63adb0c4a073ed39daa2fe7d3e6b769e21272601",
+    "git_blob": "cf781430404b0ae0ba7d8dea3457a3515dd7c9b9"
+  },
+  {
+    "path": "world-source/authored-page.png",
+    "bytes": 184393,
+    "sha256": "f50f7b0171ce957a7ebb5d18055d3c99e9932ba6de8addfb92b3a347bbdae7e5",
+    "git_blob": "aacea452d7ff9e1fce6471b0e5b89a53e37ae28f"
+  },
+  {
+    "path": "world-source/bake_camera_route.py",
+    "bytes": 1785,
+    "sha256": "84293308d8e111f0f4a22c3f3c1f1bc9e48163c68f1f8fb197df046bfca33cab",
+    "git_blob": "211ac43352d26c7219fef2e1839f155677319554"
+  },
+  {
+    "path": "world-source/build_world.py",
+    "bytes": 16305,
+    "sha256": "85ea3e061828b87d2fa56c4269363f6c6739e2bb820c7aae251332008e9b56bd",
+    "git_blob": "30b81e2c11d1741cbb948b9f41293ffb03740821"
+  },
+  {
+    "path": "world-source/denoise_film.py",
+    "bytes": 1031,
+    "sha256": "984a3c94ef35aabe3508edbae7f5bc0071a1bc2761ca05d095bf2c50683bd116",
+    "git_blob": "ed560a72604359f2691772459d19343613cb1010"
+  },
+  {
+    "path": "world-source/denoise_frame.py",
+    "bytes": 601,
+    "sha256": "360b8e8d4df875052a5469d9fc4f4e1ee9918bc0200f568627a9e2377afe2e9d",
+    "git_blob": "1f266510965628216d979571f262b198d100e842"
+  },
+  {
+    "path": "world-source/denoise_quality_film.py",
+    "bytes": 2360,
+    "sha256": "aaa3e98cf9f396746984c5995bf9b7591f6544373074130370d2204017e7a58a",
+    "git_blob": "d0a290bbb8068bc57f25cbce12086ea97e74f90a"
+  },
+  {
+    "path": "world-source/export_scene_manifest.py",
+    "bytes": 1350,
+    "sha256": "7741c7ff4e1a63608f5f4cc55575fcb01df9168222ca105a6917396deed78dd6",
+    "git_blob": "98e4defa580d3bf41e4ac9ef780c252a7a520106"
+  },
+  {
+    "path": "world-source/finish_quality_film.py",
+    "bytes": 2966,
+    "sha256": "62e2880081ac67096ab12e9983d9db2798d16566fd2f288ed9b56225b290eb9c",
+    "git_blob": "ca8e651298b8cd360995387bc8604d4563f0803b"
+  },
+  {
+    "path": "world-source/grade_quality_film.py",
+    "bytes": 1124,
+    "sha256": "524555f183bfa36e9c4f7c66e9db7f380f5e96636ce9d6934000605f9d74ece1",
+    "git_blob": "3d2f2e8ca8814ef336245912f745311370880a23"
+  },
+  {
+    "path": "world-source/living-world-refined.blend",
+    "bytes": 6881471,
+    "sha256": "6e56b7b43b744b11fabf0a44870ff81642e670fb209523fca10b735cabd776b9",
+    "git_blob": "eebfac0ddef5bc51febaec51e4611c2b08aa76df"
+  },
+  {
+    "path": "world-source/refine_world.py",
+    "bytes": 14664,
+    "sha256": "eef0cfbee3c876abeff7d69579c7d39656977eb0e24dc4c109058dc834666d53",
+    "git_blob": "3eb4473d4b98d84fa5254ced779ed19a17b00e5f"
+  },
+  {
+    "path": "world-source/render_film.py",
+    "bytes": 4899,
+    "sha256": "ee3308389187b3a8aa40331a3d0010624ed6743d2d6dc3546d208ac31cbc026c",
+    "git_blob": "07b143ba5c25fefda6bd9872df0b7a06ef5e57ae"
+  },
+  {
+    "path": "world-source/render_overview.py",
+    "bytes": 1571,
+    "sha256": "6f6207811a5a2a37b97aac8a2199a43825c7790bdbdcd0682864a82dd5505018",
+    "git_blob": "57e9bed6790c5f380a8e1859ce5a32400f5645d9"
+  },
+  {
+    "path": "world-source/render_quality_film.py",
+    "bytes": 3965,
+    "sha256": "03577dcba458c21182a7df6615996755bba46128c2bb5771a42e120810808c0d",
+    "git_blob": "d2ea377492d6d6e1416528056f8ee9571b912608"
+  },
+  {
+    "path": "world-source/world-camera.json",
+    "bytes": 1801,
+    "sha256": "fed1045dccea2c24ad0e04cb96f571cb754ed8c2eae19acea21deb672e4f3820",
+    "git_blob": "27808011bf068e0fbc74a96a438533b9c66dc6cb"
+  },
+  {
+    "path": "docs/cinematic-opening-v2-preparation/inputs/approved-reference-original.png",
+    "bytes": 2967591,
+    "sha256": "d5e0a933ace1d11ae0e700c089659705eda75bcb42b3536d4dc7667175c2357f",
+    "role": "preserved original production input"
+  },
+  {
+    "path": "docs/cinematic-opening-v2-preparation/inputs/camera-guide-10s.mp4",
+    "bytes": 8339246,
+    "sha256": "97e5134dab08fcc6b1d7a6e0d5908567f5defcb6d679959ca218bf69b2103e8d",
+    "role": "preserved original production input"
+  },
+  {
+    "path": "docs/cinematic-opening-v2-preparation/inputs/original-generation-request.json",
+    "bytes": 1960,
+    "sha256": "36d0d3677f2f29bc63eeeef148531ece4085089a1205aaa8cd98608cb3448f88",
+    "role": "preserved original production input"
+  },
+  {
+    "path": "theme.js",
+    "bytes": 3142,
+    "sha256": "f11cdd6042aedb2cfdcec9c6939aec40c9ba97b9b5fb6d7ac4c6e405ab78d28e",
+    "git_blob": "aabc3fa83e6437639af0808b3d7836f7299b5603"
+  },
+  {
+    "path": "favicon.svg",
+    "bytes": 275,
+    "sha256": "f49156f32a496139852e959366b3534d13ed7b65cfb94de5621f0b1e4b103a58",
+    "git_blob": "11e48eb12b0f1cc0afbeb4328e68fa5fdbacba62"
+  },
+  {
+    "path": ".assetsignore",
+    "bytes": 1764,
+    "sha256": "805a3917ba100206f5a826e128ea61f4b55fe5eaa54b93d034345f97c7d9508a",
+    "git_blob": "6463cde97473d2f8c05c826ea876c136626308cc"
+  },
+  {
+    "path": "_headers",
+    "bytes": 665,
+    "sha256": "0d96ee8995e10ec2e47c647419d60575fe5eab910150ab979a56f104a75d3674",
+    "git_blob": "48a17f9b713ad1fe4e78297f4baeae5399c87e8d"
+  },
+  {
+    "path": "wrangler.jsonc",
+    "bytes": 401,
+    "sha256": "49156e8b8d75ba711e766d1dc4322e4b59419d6742494ed2b34af3a4f72e3afd",
+    "git_blob": "2041aa63b9012daed62e048e605cb9df68819b4b"
+  },
+  {
+    "path": "PRODUCT.md",
+    "bytes": 1690,
+    "sha256": "615f2c8b112f7f8b02f4f03e8072b63fa64164edcea4290ada652a1eb6cb3916",
+    "git_blob": "2a0df639a883944c694ea8efe2589247f37e84be"
+  },
+  {
+    "path": "DESIGN.md",
+    "bytes": 3114,
+    "sha256": "a0b0f5a7432183852bd1b08b21fc8ffe64ad36695b534d224f3747c94b793d26",
+    "git_blob": "504cc19104b3e17778f8a0447f61b6bb55fd39ed"
+  }
+]

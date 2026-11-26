@@ -1,0 +1,190 @@
+{
+  "timestamp": "2026-11-26",
+  "source_job": "8caa7a82-da1b-4be0-a7d4-5be228ab830d",
+  "source_duration_seconds": 10.041667,
+  "credits_spent": 0,
+  "submitted_jobs": 0,
+  "quotes": [
+    {
+      "version": "standard",
+      "duration": 10,
+      "params": {
+        "model": "bytedance_video_upscale",
+        "resolution": "4k",
+        "fps": 24,
+        "preset": "aigc",
+        "model_version": "standard",
+        "duration": 10,
+        "count": 1,
+        "use_unlim": false,
+        "medias": [
+          {
+            "role": "video",
+            "value": "8caa7a82-da1b-4be0-a7d4-5be228ab830d"
+          }
+        ]
+      },
+      "result": {
+        "cost": {
+          "credits": 8,
+          "credits_exact": 8
+        },
+        "adjustments": {
+          "medias[0].role": {
+            "requested": "video",
+            "used": "video_references",
+            "reason": "Bytedance Video Upscale backend expects schema-key media roles"
+          }
+        },
+        "quote_ref": "quote:3YG6ceyZrCYJ1GlDRCsLig"
+      }
+    },
+    {
+      "version": "standard",
+      "duration": 11,
+      "params": {
+        "model": "bytedance_video_upscale",
+        "resolution": "4k",
+        "fps": 24,
+        "preset": "aigc",
+        "model_version": "standard",
+        "duration": 11,
+        "count": 1,
+        "use_unlim": false,
+        "medias": [
+          {
+            "role": "video",
+            "value": "8caa7a82-da1b-4be0-a7d4-5be228ab830d"
+          }
+        ]
+      },
+      "result": {
+        "cost": {
+          "credits": 8.8,
+          "credits_exact": 8.8
+        },
+        "adjustments": {
+          "medias[0].role": {
+            "requested": "video",
+            "used": "video_references",
+            "reason": "Bytedance Video Upscale backend expects schema-key media roles"
+          }
+        },
+        "quote_ref": "quote:1qzbEzKyT30AFJWc6Mfv9Q"
+      }
+    },
+    {
+      "version": "pro",
+      "duration": 10,
+      "params": {
+        "model": "bytedance_video_upscale",
+        "resolution": "4k",
+        "fps": 24,
+        "preset": "aigc",
+        "model_version": "pro",
+        "duration": 10,
+        "count": 1,
+        "use_unlim": false,
+        "medias": [
+          {
+            "role": "video",
+            "value": "8caa7a82-da1b-4be0-a7d4-5be228ab830d"
+          }
+        ]
+      },
+      "result": {
+        "cost": {
+          "credits": 75,
+          "credits_exact": 75
+        },
+        "adjustments": {
+          "medias[0].role": {
+            "requested": "video",
+            "used": "video_references",
+            "reason": "Bytedance Video Upscale backend expects schema-key media roles"
+          }
+        },
+        "quote_ref": "quote:kzCcM1OnfgH1YWuLrPPItA"
+      }
+    },
+    {
+      "version": "pro",
+      "duration": 11,
+      "params": {
+        "model": "bytedance_video_upscale",
+        "resolution": "4k",
+        "fps": 24,
+        "preset": "aigc",
+        "model_version": "pro",
+        "duration": 11,
+        "count": 1,
+        "use_unlim": false,
+        "medias": [
+          {
+            "role": "video",
+            "value": "8caa7a82-da1b-4be0-a7d4-5be228ab830d"
+          }
+        ]
+      },
+      "result": {
+        "cost": {
+          "credits": 82.5,
+          "credits_exact": 82.5
+        },
+        "adjustments": {
+          "medias[0].role": {
+            "requested": "video",
+            "used": "video_references",
+            "reason": "Bytedance Video Upscale backend expects schema-key media roles"
+          }
+        },
+        "quote_ref": "quote:PGkJLU-t7HP7BDE-V72OsA"
+      }
+    }
+  ],
+  "native": {
+    "params": {
+      "model": "seedance_2_0",
+      "mode": "std",
+      "resolution": "4k",
+      "duration": 10,
+      "aspect_ratio": "16:9",
+      "bitrate_mode": "high",
+      "genre": "auto",
+      "generate_audio": false,
+      "count": 1,
+      "use_unlim": false,
+      "medias": [
+        {
+          "role": "start_image",
+          "value": "4a34e55b-c123-4e3a-a9cb-d2714b23cc5a"
+        },
+        {
+          "role": "video",
+          "value": "70150e5b-a616-4507-aa91-c9125df188c4"
+        }
+      ],
+      "prompt": "Create one continuous photorealistic architectural camera journey, using the reference image as the visual identity and starting composition, and the source video ONLY as the camera-motion guide. Preserve the reference's carved limestone arches, three antique books on a walnut table, recessed bookshelf, olive leaves and natural sunlight. Replace ALL of the simplistic source-video materials, foliage and geometry with realistic weathered stone, subtle dust in directional daylight, detailed leather, flowing blue-green water and dense natural Mediterranean trees. First 0-4.8 seconds: slow forward-right camera movement past the books and foreground olive leaves toward the large RIGHT-HAND EXTERIOR arch, never into the central bookshelf alcove. Then pass THROUGH that open exterior arch into the same sunlit stone courtyard. 5-10 seconds: widen the river valley with classical stone architecture and follow the flowing river toward a small stone bridge. True perspective parallax, smooth physically plausible camera, stable stonework, stable books, realistic wind in leaves and continuous water motion. Keep opening left wall visually calm for later HTML headline; generate absolutely no text. No cuts, no crossfades, no circular portal, no geometric morphing, no digital photo zoom, no black frames, no people, no logo, no music.\nPreservation constraint for this high-resolution remake: keep the already approved composition, material palette, room and courtyard identity, three books and the same continuous camera path. Do not redesign the scene or introduce extra architectural elements. High-resolution detail only; no change of style, story, framing or camera rhythm."
+    },
+    "result": {
+      "cost": {
+        "credits": 220,
+        "credits_exact": 220
+      },
+      "adjustments": {
+        "medias[1].role": {
+          "requested": "video",
+          "used": "video_references",
+          "reason": "Seedance 2.0 backend expects schema-key media roles"
+        }
+      },
+      "quote_ref": "quote:WN-gijLFgY87PBZoa5_4cA"
+    }
+  },
+  "cautions": [
+    "The quote endpoint defaults to 5 seconds when duration is omitted, even for this 10.041667-second source. The 4 and 37.5 credit responses without duration are not full-film quotes.",
+    "Duration is integer in the quote endpoint. 10s and conservative 11s quotes are both recorded. 11s figures are a budgeting allowance, not a confirmed invoice for 241 frames.",
+    "Quote success does not validate subscription entitlement or generation readiness.",
+    "Public upscaler help mentions 30/60 fps while the connected catalog accepts fps=24; final output fps/framecount must be verified if generation is later approved."
+  ]
+}

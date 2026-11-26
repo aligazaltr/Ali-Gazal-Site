@@ -1,0 +1,18 @@
+{
+  "checked_date": "2026-11-26",
+  "url": "https://3e523ca5-ali-gazal-site.aliicerikmedya.workers.dev/cinematic-film.mp4",
+  "normal_status": 200,
+  "content_type": "video/mp4",
+  "bytes": 5468994,
+  "sha256": "a7cf551a3c6fedb82e23bd254579d5bf0fe8067736e25da1d25de1f7f30be539",
+  "matches_committed_web_file": true,
+  "range_request": "bytes=0-1023",
+  "range_status": 200,
+  "range_body_bytes": 5468994,
+  "range_body_sha256": "a7cf551a3c6fedb82e23bd254579d5bf0fe8067736e25da1d25de1f7f30be539",
+  "accept_ranges_present": false,
+  "content_range_present": false,
+  "content_encoding_present": false,
+  "cdn_transcoding_observed": false,
+  "verification_route": "Read-only fetch in connected media sandbox; initial local preview fetch was denied and did not establish a website failure."
+}

@@ -1,0 +1,18 @@
+{
+  "status": "PREPARATION_ONLY_DO_NOT_SUBMIT_WITHOUT_NEW_USER_APPROVAL",
+  "params": {
+    "model": "bytedance_video_upscale",
+    "resolution": "4k",
+    "fps": 24,
+    "preset": "aigc",
+    "model_version": "pro",
+    "count": 1,
+    "use_unlim": false,
+    "medias": [
+      {
+        "role": "video",
+        "value": "8caa7a82-da1b-4be0-a7d4-5be228ab830d"
+      }
+    ]
+  }
+}

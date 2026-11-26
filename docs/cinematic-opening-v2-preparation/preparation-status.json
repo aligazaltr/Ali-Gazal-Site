@@ -1,0 +1,34 @@
+{
+  "checked_date": "2026-11-26",
+  "base_branch": "feature/cinematic-opening-v1",
+  "base_sha": "0a487e7cb524f9ec659ea7374da49f54a98da0c8",
+  "main_sha": "a1cc3a3504df5757eb4444215606f40e33fea76b",
+  "pr33_head": "915145ce20802287ccf7a7489917b71c9ea5d90b",
+  "original_job": {
+    "jobs": [
+      {
+        "index": 0,
+        "job_id": "8caa7a82-da1b-4be0-a7d4-5be228ab830d",
+        "status": "completed",
+        "type": "video",
+        "model": "hf_mult_motion_control",
+        "result_url": "https://d8j0ntlcm91z4.cloudfront.net/user_3Jn7h2Ol7BOSeAjF9ToYAnGUJnF/hf_20261125_214405_8caa7a82-da1b-4be0-a7d4-5be228ab830d.mp4"
+      }
+    ],
+    "summary": {
+      "total": 1,
+      "completed": 1,
+      "failed": 0,
+      "active": 0,
+      "errors": 0
+    },
+    "all_terminal": true
+  },
+  "balance_before_and_after": 10,
+  "plan_on_connected_account": "free",
+  "new_generation_jobs_submitted": 0,
+  "credits_spent": 0,
+  "subscriptions_started": 0,
+  "website_files_changed": 0,
+  "approval_required_before_generation": true
+}
