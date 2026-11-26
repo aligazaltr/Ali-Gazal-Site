@@ -45,7 +45,7 @@ CSS `object-fit:cover` kullanıyor; masaüstünde `object-position:60%`, mobilde
 
 ## 3. Kamera korunarak 4K upscale — önerilen yol
 
-Girdi **ham üretim job'ı** olmalı; yeniden sıkıştırılmış web dosyası kullanılmamalı. Hazır istekler: `upscale-standard.json` ve `upscale-pro.json`.
+Girdi **ham üretim job'ı** olmalı; yeniden sıkıştırılmış web dosyası kullanılmamalı. Hazır istekler: `upscale-standard.request.json` ve `upscale-pro.request.json`.
 
 ```json
 {"model":"bytedance_video_upscale","resolution":"4k","fps":24,"preset":"aigc","model_version":"standard","count":1,"use_unlim":false,"medias":[{"role":"video","value":"8caa7a82-da1b-4be0-a7d4-5be228ab830d"}]}
@@ -59,7 +59,7 @@ Topaz Starlight Precise/Proteus ve FLUX.3 Precise de araştırıldı. Bağlı ge
 
 ## 4. Aynı referanslarla native 4K alternatif
 
-`native-4k-seedance20.json`: **Seedance 2.0**, `mode=std`, `resolution=4k`, `duration=10`, `aspect_ratio=16:9`, `bitrate_mode=high`, `generate_audio=false`, `count=1`. İlk görsel ve orijinal kamera kılavuzu aynı kimliklerle bağlandı. Asıl prompt korunup yalnızca onaylı tasarımın değiştirilmemesi yönünde bir koruma cümlesi eklendi. Genre seçilmedi; model varsayılanı `auto`.
+`native-4k-seedance20.request.json`: **Seedance 2.0**, `mode=std`, `resolution=4k`, `duration=10`, `aspect_ratio=16:9`, `bitrate_mode=high`, `generate_audio=false`, `count=1`. İlk görsel ve orijinal kamera kılavuzu aynı kimliklerle bağlandı. Asıl prompt korunup yalnızca onaylı tasarımın değiştirilmemesi yönünde bir koruma cümlesi eklendi. Genre seçilmedi; model varsayılanı `auto`.
 
 Sağlayıcının resmî model tablosu Seedance 2.0 yolunu native 4K olarak listeliyor. Bağlı katalog bu modu doğruluyor; **Plus veya üzeri** plan istiyor. Seedance 2.5'in bağlı kataloğunda 4K seçeneği görünse de resmî API/yardım belgelerinde 1080p sınırı bulunuyor; native 4K için buna dayanarak söz verilmiyor.
 
