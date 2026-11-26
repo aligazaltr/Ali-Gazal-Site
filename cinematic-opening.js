@@ -69,19 +69,52 @@
     loading.textContent = 'Yolculuk yüklenemedi. Görseli inceleyebilir veya deneylere geçebilirsin.';
     loading.hidden = false; play.hidden = false; pause.hidden = true; skip.hidden = true;
   }
+  // Keep the approved timeline; the local V1 film remains a recovery source.
+  const filmSources = [
+    {url: 'https://d2ol7oe51mr4n9.cloudfront.net/user_3Jn7h2Ol7BOSeAjF9ToYAnGUJnF/a198dd73-2faf-4c6c-8b55-4d131761d5e4.mp4', quality: '2160p'},
+    {url: 'cinematic-film.mp4', quality: '480p'}
+  ];
+  async function loadFilm() {
+    for (const source of filmSources) {
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), 30000);
+      try {
+        const response = await fetch(source.url, {signal: controller.signal});
+        if (!response.ok) throw new Error('Film unavailable');
+        const blob = await response.blob();
+        clearTimeout(timeout);
+        if (objectURL) URL.revokeObjectURL(objectURL);
+        objectURL = URL.createObjectURL(blob);
+        await new Promise((resolve, reject) => {
+          const timer = setTimeout(() => finish(new Error('Film decoding timed out')), 15000);
+          const ready = () => finish();
+          const error = () => finish(new Error('Film decoding failed'));
+          function finish(problem) {
+            clearTimeout(timer);
+            film.removeEventListener('loadeddata', ready);
+            film.removeEventListener('error', error);
+            problem ? reject(problem) : resolve();
+          }
+          film.addEventListener('loadeddata', ready, {once:true});
+          film.addEventListener('error', error, {once:true});
+          film.src = objectURL; film.load();
+        });
+        document.body.dataset.mediaQuality = source.quality;
+        return;
+      } catch (_) {
+        clearTimeout(timeout);
+        controller.abort();
+        if (objectURL) { URL.revokeObjectURL(objectURL); objectURL = undefined; }
+      }
+    }
+    throw new Error('No playable film source');
+  }
   async function start() {
     if (started || preference.matches) return;
     try {
-      // Some preview servers do not implement byte ranges. A complete local
-      // Blob gives forward/reverse seeking the same source bytes on both hosts.
-      const response = await fetch('cinematic-film.mp4');
-      if (!response.ok) throw new Error('Film unavailable');
-      objectURL = URL.createObjectURL(await response.blob());
-      await new Promise((resolve, reject) => {
-        film.addEventListener('loadeddata', resolve, {once:true});
-        film.addEventListener('error', reject, {once:true});
-        film.src = objectURL; film.load();
-      });
+      // Buffer once so the same forward/reverse timeline also works on preview
+      // hosts without byte-range support.
+      await loadFilm();
       started = true; document.body.classList.add('ready'); loading.hidden = true;
       suspended = false; pause.hidden = false;
       if (scrollY > 4) { automatic = false; handoffTime = introEnd; handoffY = 0; }
