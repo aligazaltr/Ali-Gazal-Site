@@ -1,0 +1,41 @@
+{
+  "checked_date": "2026-11-27",
+  "tested_commit": "d99a1e0ec6798ab40e5ca72cb56e4c4680582fa9",
+  "preview": "https://feature-cinematic-opening-v2-preparation-ali-gazal-site.aliicerikmedya.workers.dev/cinematic-opening",
+  "browser": "Chrome via connected browser",
+  "physical_android": false,
+  "checks": {
+    "actual_video": {
+      "width": 3840,
+      "height": 2160,
+      "duration_seconds": 10.041667,
+      "quality": "2160p"
+    },
+    "automatic_progress_seconds": 0.6006,
+    "automatic_handoff": {
+      "time": 4.8,
+      "paused": true
+    },
+    "desktop": {
+      "width": 1280,
+      "height": 720,
+      "forward_time": 8.241111,
+      "reverse_time": 0,
+      "horizontal_overflow": false
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "forward_time": 6.641111,
+      "reverse_settled_time": 0,
+      "horizontal_overflow": false,
+      "heading_fits": true
+    },
+    "theme_toggle": "light then restored dark, 2160p source retained",
+    "page_errors": []
+  },
+  "notes": [
+    "Reverse seek is asynchronous; immediate mobile observation still showed 6.641111 seconds, subsequent settled observation confirmed 0 seconds.",
+    "Existing water-pause and physical-device limitations remain."
+  ]
+}

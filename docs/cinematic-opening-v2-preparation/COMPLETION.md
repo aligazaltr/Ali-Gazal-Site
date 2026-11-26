@@ -23,7 +23,10 @@ CSP connect-src adds exactly the confirmed media file URL, not an entire externa
 
 ## Validation
 Static data/archive/SEO/site checks passed. 112/112 Node tests passed, including HD success, network failure recovery, decoder recovery, and explicit failure handling.
-Actual deployed-browser verification is the remaining delivery check; no physical Android verification is claimed.
+Deployed Chrome verification passed at 1280×720 and 390×844: actual decoded 3840×2160 film, automatic progress and 4.8 s handoff, forward seeking, settled reverse return to 0, no horizontal overflow, mobile headline fit, light/dark toggle, and no captured page errors. See browser-verification.json. No physical Android verification is claimed.
+
+Verified preview: https://feature-cinematic-opening-v2-preparation-ali-gazal-site.aliicerikmedya.workers.dev/cinematic-opening
+Tested application commit: d99a1e0ec6798ab40e5ca72cb56e4c4680582fa9.
 
 ## Scope
 Only this first ten-second journey is completed for high-resolution review. The rest of the homepage narrative remains future work. Water still stops when scroll-controlled footage pauses. No visual redesign, new paid generation, subscription, or production publication.
